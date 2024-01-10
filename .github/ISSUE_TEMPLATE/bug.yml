@@ -1,0 +1,55 @@
+name: Bug Report
+description: File a bug report to help us improve
+title: "[Bug]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report!
+  - type: input
+    id: contact
+    attributes:
+      label: Contact Details
+      description: How can we get in touch with you if we need more info?
+      placeholder: ex. email@example.com
+    validations:
+      required: false
+  - type: dropdown
+    id: software
+    attributes:
+      label: Software
+      description: What software are you referring to?
+      options:
+        - Desktop Application
+        - VS Code
+        - JetBrains
+        - Chrome
+        - Edge
+        - Microsoft Teams
+        - JupyterLab
+        - Obsidian
+        - GitHub
+      default: 0
+    validations:
+      required: true
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating System
+      description: What operating system are you using?
+      options:
+        - macOS
+        - Windows
+        - Linux
+      default: 0
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.
+      description: Also tell us, what did you expect to happen?
+      placeholder: Tell us what you see!
+      value: "A bug happened!"
+    validations:
+      required: true
