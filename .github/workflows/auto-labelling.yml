@@ -31,7 +31,7 @@ jobs:
           uses: actions/checkout@v2
   
         - name: Run labeling script
-          run: node .github/scripts/label-issue.js
+          run: node .github/scripts/add_labels.js
           env:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
             ISSUE_NUMBER: ${{ github.event.issue.number }}
