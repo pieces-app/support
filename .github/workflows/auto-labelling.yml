@@ -1,0 +1,37 @@
+name: Add Labels to new issues
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  label_issue_with_type:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Label bug reports
+        uses: actions/labeler@v3
+        with:
+          repo-token: "${{ secrets.GITHUB_TOKEN }}"
+          configuration-path: .github/labeler.yml
+  label_issue_with_triage:
+      runs-on: ubuntu-latest
+      permissions:
+        issues: write
+      steps:
+        - run: gh issue edit "$NUMBER" --add-label "$LABELS"
+          env:
+            GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            GH_REPO: ${{ github.repository }}
+            NUMBER: ${{ github.event.issue.number }}
+            LABELS: Needs triage
+  label_with_software:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Checkout code
+          uses: actions/checkout@v2
+  
+        - name: Run labeling script
+          run: node .github/scripts/label-issue.js
+          env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            ISSUE_NUMBER: ${{ github.event.issue.number }}
