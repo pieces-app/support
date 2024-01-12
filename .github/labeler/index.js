@@ -15,11 +15,11 @@ async function run() {
   const labels = [];
 
   let software;
-  if (issueBodyLines[0] === '### Software') software = issueBodyLines[2];
+  if (issueBodyLines[0] === '### Software') software = issueBodyLines[2].toLowerCase();
   if (software) labels.push(`app:${software}`);
 
   let os;
-  if (issueBodyLines[4] === '### Operating System') os = issueBodyLines[6];
+  if (issueBodyLines[4] === '### Operating System') os = issueBodyLines[6].toLowerCase();
   if (os) labels.push(`os:${os}`);
 
   if (labels.length) await octokit.issues.addLabels({

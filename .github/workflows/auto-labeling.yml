@@ -16,7 +16,7 @@ jobs:
             GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
             GH_REPO: ${{ github.repository }}
             NUMBER: ${{ github.event.issue.number }}
-            LABELS: status:Needs triage
+            LABELS: status:needs triage
   label_with_software:
       runs-on: ubuntu-latest
       steps:
