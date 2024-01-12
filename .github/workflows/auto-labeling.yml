@@ -5,14 +5,7 @@ on:
     types: [opened]
 
 jobs:
-  # label_issue_with_type:
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - name: Label bug reports
-  #       uses: actions/labeler@v3
-  #       with:
-  #         repo-token: "${{ secrets.GITHUB_TOKEN }}"
-  #         configuration-path: .github/labeler.yml
+  # https://github.com/actions/labeler in order to automatically add labels according to the template used i.e: bug, enhancement
   label_issue_with_triage:
       runs-on: ubuntu-latest
       permissions:
@@ -23,15 +16,18 @@ jobs:
             GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
             GH_REPO: ${{ github.repository }}
             NUMBER: ${{ github.event.issue.number }}
-            LABELS: Needs triage
+            LABELS: status:Needs triage
   label_with_software:
       runs-on: ubuntu-latest
       steps:
         - name: Checkout code
           uses: actions/checkout@v2
-  
+
+        - name: Setup labeling script
+          run: cd .github/labeler && npm install
+
         - name: Run labeling script
-          run: node .github/scripts/add_labels.js
+          run: node .github/labeler/index.js
           env:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
             ISSUE_NUMBER: ${{ github.event.issue.number }}
