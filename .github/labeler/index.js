@@ -20,7 +20,7 @@ async function run() {
 
   // Handle multiple software choices
   if (issueBodyLines[0] === '### Software') {
-    const softwareChoices = issueBodyLines[2].split(',').map(s => s.trim().toLowerCase());
+    const softwareChoices = issueBodyLines[2].split(', ').map(s => s.toLowerCase());
     softwareChoices.forEach(software => {
       if (software) labels.push(`app:${software}`);
     });
