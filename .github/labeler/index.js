@@ -14,9 +14,17 @@ async function run() {
 
   const labels = [];
 
-  let software;
-  if (issueBodyLines[0] === '### Software') software = issueBodyLines[2].toLowerCase();
-  if (software) labels.push(`app:${software}`);
+  // let software;
+  // if (issueBodyLines[0] === '### Software') software = issueBodyLines[2].toLowerCase();
+  // if (software) labels.push(`app:${software}`);
+
+  // Handle multiple software choices
+  if (issueBodyLines[0] === '### Software') {
+    const softwareChoices = issueBodyLines[2].split(',').map(s => s.trim().toLowerCase());
+    softwareChoices.forEach(software => {
+      if (software) labels.push(`app:${software}`);
+    });
+  }
 
   let os;
   if (issueBodyLines[4] === '### Operating System') os = issueBodyLines[6].toLowerCase();
