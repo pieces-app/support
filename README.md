@@ -1,11 +1,12 @@
 # Welcome to Pieces for Developers Support & Discussions!
-**Pieces is an AI-enabled productivity tool designed to help developers manage the chaos of their workflow through intelligent code snippet management, contextualized copilot interactions, and proactive surfacing of useful materials.**
 
-Pieces has a native desktop application on macOS, Windows, and Linux that integrates across your browser, IDE, and collaboration software. Minimize context switching, streamline your workflow, and elevate your overall development experience while maintaining the privacy and security of your work with a completely offline approach to AI.
+## Get Support
+- Running into issues with any of the Pieces products? Browse through open or closed issues, or document a new issue and the team will jump in to help you out. View our issues [here](https://github.com/pieces-app/support/issues).
 
-https://github.com/Sophyia7/.github/assets/55861512/1c17a3d3-2f24-4d18-b122-ff6144b44d12
+## Join the Discussion
+- Participate in conversations around new features, new requests, or ideas that others have shared around Pieces for Developers Products on our [discussion board](https://github.com/pieces-app/support/discussions).
 
-## Explore Pieces for Developers
+## Not a Pieces user? Explore Pieces for Developers
 - [Download the Desktop App Here](https://docs.pieces.app/installation-getting-started/what-am-i-installing)
 - Learn more about Pieces for Developers through the [Pieces Website](https://pieces.app/).
 - Look at our [extensive documentation](http://docs.pieces.app) to get the most out of Pieces.
@@ -28,7 +29,6 @@ Save, enrich, share, generate, reference, and reuse code in your browser, IDE, a
 
 ## Get Involved
 - Join our [Discord server](https://discord.gg/getpieces) and chat with the community.
-- Participate in conversations around new features, new requests, or ideas that others have shared around Pieces for Developers Products on our [discussion board](https://github.com/pieces-app/support/discussions).
 - Leave us a review via [G2](https://www.g2.com/products/pieces-for-developers/reviews#reviews), or [buy us a coffee](https://www.buymeacoffee.com/getpieces).
 
 ## Get Involved with Open Source by Pieces (OSP)
