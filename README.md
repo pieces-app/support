@@ -37,7 +37,7 @@ Save, enrich, share, generate, reference, and reuse code in your browser, IDE, a
 - Join our lively open-source discussions in our [Discord community](https://discord.gg/getpieces).
 - Rewatch our [AMA](https://www.youtube.com/watch?v=0AmuWaFoTdY) about Open Source by Pieces.
 - Read our [introductory article](https://code.pieces.app/blog/introducing-open-source-by-pieces) about Open Source by Pieces.
-- Star our Open Source by Pieces (OSP) [main repo](https://code.pieces.app/blog/introducing-open-source-by-pieces).
+- Star our Open Source by Pieces (OSP) [main repo](https://github.com/pieces-app/opensource).
 - Get Involved in one of our open-source projects:
     - [Example Typescript Playground](https://github.com/pieces-app/example-typescript) - Learn about the SDK + contribute
     - [Drag & Drop Intellij Plugin](https://github.com/pieces-app/IntelliJ-Drag-and-Drop-List) - Adding DnD functionality to any plugin
