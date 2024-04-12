@@ -19,7 +19,7 @@ async function run() {
         owner: 'pieces-app',
         repo: 'support',
         issue_number: issue.number,
-        body: 'This issue is stale because 3 days has passed with no response from the author. Remove stale label or have the author comment or else this issue will be closed in 4 days from today.'
+        body: 'This issue is stale because 3 days has passed with no response from the author. Remove the stale label or have the author comment or else this issue will be closed in 4 days from today.'
       });
 
       // Removes the `stale` label, sends a comment, and closes the issue
@@ -35,7 +35,7 @@ async function run() {
           owner: 'pieces-app',
           repo: 'support',
           issue_number: issue.number,
-          body: 'This issue was closed because it has been stale for 7 days with response from the author.'
+          body: 'This issue was closed because it has been stale for 7 days without response from the author.'
         });
 
         await octokit.issues.update({
