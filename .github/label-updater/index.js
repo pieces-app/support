@@ -29,6 +29,7 @@ async function run() {
   const user = await octokit.users.getByUsername({
     username: comment.data.user.login
   });
+
   // If the issue is labeled `status:needs triage` and the user commenting is a Pieces team member
   if (issueLabels.includes('status:needs triage') && user.data.email && user.data.email.endsWith('@pieces.app')) {
     console.log('The user is a Pieces team member');
