@@ -1,0 +1,24 @@
+name: Updated Labels on Issues
+
+on:
+  issue_comment:
+    types: [created]
+
+jobs:
+  update_issue_labels:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup labeling script
+        run: cd .github/label-updater && npm install
+
+      - name: Run labeling script
+        run: node .github/label-updater/index.js
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          COMMENT_ID: ${{ github.event.comment.id }}
