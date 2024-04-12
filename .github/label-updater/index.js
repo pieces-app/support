@@ -67,6 +67,17 @@ async function run() {
       issue_number,
       labels: ['status:user responded']
     });
+  // If the issue has the label `stale` and the user commenting is the author of the issue
+  } else if (issueLabels.includes('stale') && author === user.data.login) {
+    console.log('The user is the author of the stale issue');
+
+    // Remove the `stale` label
+    await octokit.issues.removeLabel({
+      owner: 'pieces-app',
+      repo: 'support',
+      issue_number,
+      name: 'stale'
+    });
   }
 }
 

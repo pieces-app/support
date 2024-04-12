@@ -1,0 +1,79 @@
+#name: Stale Issue Checker
+#
+## Run every day at midnight
+#on:
+#  schedule:
+#    - cron: 0 0 * * *
+#
+#jobs:
+#  stale-checker:
+#    runs-on: ubuntu-latest
+#    steps:
+#      - name: Fetch issues
+#        id: issues
+#        uses: octokit/request-action@v2.x
+#        with:
+#          route: GET /repos/{owner}/{repo}/issues
+#          owner: ${{ github.repository_owner }}
+#          repo: ${{ github.repository }}
+#        env:
+#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#
+#      - name: Filter issues
+#        id: filtered
+#        run: |
+#          const issues = JSON.parse('${{ steps.issues.outputs.data }}');
+#          const filtered = issues.filter(issue => issue.labels.some(label => label.name === 'status:waiting on user response'));
+#          console.log(`Found ${filtered.length} issues with the 'status:waiting on user response' label.`);
+#          console.log(filtered.map(issue => issue.number).join('\n'));
+#        shell: node
+#
+#      - uses: actions/stale@v9
+#        if: steps.filtered.outputs.length > 0
+#        with:
+#          stale-issue-message: 'This issue is stale because it has been open 30 days with no activity. Remove stale label or comment or this will be closed in 3 days.'
+#          close-issue-message: 'This issue was closed because it has been stalled for 5 days with no activity.'
+#          days-before-issue-stale: 4
+#          days-before-issue-close: 7
+
+name: Stale Issue Checker
+
+on:
+  schedule:
+    - cron: 0 0 * * *
+
+jobs:
+  stale-checker:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup labeling script
+        run: cd .github/labeler && npm install
+
+      - name: Fetch issues
+        id: issues
+        uses: octokit/request-action@v2.x
+        with:
+          route: GET /repos/{owner}/{repo}/issues
+          owner: ${{ github.repository_owner }}
+          repo: ${{ github.repository }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Filter issues
+        id: filtered
+        run: |
+          const issues = JSON.parse('${{ steps.issues.outputs.data }}');
+          const filtered = issues.filter(issue => issue.state === 'open' && issue.labels.some(label => label.name === 'status:waiting on user response'));
+          console.log(`Found ${filtered.length} open issues with the 'status:waiting on user response' label.`);
+          console.log(filtered.map(issue => issue.number).join('\n'));
+          return filtered;
+        shell: node
+
+      - name: Run stale issue checker
+        run: node .github/stale-issue-checker/index.js
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ISSUES: ${{ steps.filtered.outputs.result }}

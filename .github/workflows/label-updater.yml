@@ -5,7 +5,7 @@ on:
     types: [created]
 
 jobs:
-  update_issue_labels:
+  issue_label_updater:
     runs-on: ubuntu-latest
     permissions:
       issues: write
@@ -16,7 +16,7 @@ jobs:
       - name: Setup labeling script
         run: cd .github/label-updater && npm install
 
-      - name: Run labeling script
+      - name: Run issue label updater script
         run: node .github/label-updater/index.js
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
