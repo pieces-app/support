@@ -19,8 +19,8 @@ jobs:
         uses: octokit/request-action@v2.x
         with:
           route: GET /repos/{owner}/{repo}/issues
-          owner: ${{ github.repository_owner }}
-          repo: ${{ github.repository }}
+          owner: pieces-app
+          repo: support
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
