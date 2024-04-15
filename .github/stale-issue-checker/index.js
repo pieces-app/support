@@ -1,9 +1,14 @@
 const { Octokit } = require("@octokit/rest");
 const auth = process.env.GITHUB_TOKEN;
-const openIssuesWaitingOnUserResponse = process.env.OPEN_ISSUES;
+const rawIssues = process.env.ISSUES;
 const octokit = new Octokit({ auth });
 
 async function run() {
+  const issues = JSON.parse(rawIssues);
+  const openIssuesWaitingOnUserResponse = issues.filter(issue => issue.state === 'open' && issue.labels.some(label => label.name === 'status:waiting on user response'));
+  console.log(`Found ${openIssuesWaitingOnUserResponse.length} open issues with the 'status:waiting on user response' label.`);
+  console.log(openIssuesWaitingOnUserResponse.map(issue => issue.number).join('\n'));
+
   for (const issue of openIssuesWaitingOnUserResponse) {
     const isStale = checkIfStale(issue);
 
