@@ -28,4 +28,4 @@ jobs:
         run: node .github/stale-issue-checker/index.js
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          ISSUES: ${{  steps.issues.outputs.data }}
+          ISSUES: ${{ steps.issues.outputs.data }}
