@@ -31,7 +31,7 @@ async function run() {
   if (os) labels.push(`os:${os}`);
 
   // Check if Early Access Program checkbox is checked
-  if (issueBody.includes('- [x] Yes, this is related to an Early Access Program feature.')) {
+  if (issueBody.includes('- [X] Yes, this is related to an Early Access Program feature.\n')) {
     labels.push('eap');
   }
 
