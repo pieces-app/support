@@ -30,6 +30,11 @@ async function run() {
   if (issueBodyLines[4] === '### Operating System') os = issueBodyLines[6].toLowerCase();
   if (os) labels.push(`os:${os}`);
 
+  // Check if Early Access Program checkbox is checked
+  if (issueBody.includes('- [x] Yes, this is related to an Early Access Program feature.')) {
+    labels.push('Early Access Program');
+  }
+
   if (labels.length) await octokit.issues.addLabels({
     owner: 'pieces-app',
     repo: 'support',
