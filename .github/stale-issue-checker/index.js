@@ -1,15 +1,64 @@
 const { Octokit } = require("@octokit/rest");
 const auth = process.env.GITHUB_TOKEN;
-const rawIssues = process.env.ISSUES;
 const octokit = new Octokit({ auth });
 
-async function run() {
-  const issues = JSON.parse(rawIssues);
-  const openIssuesWaitingOnUserResponse = issues.filter(issue => issue.state === 'open' && issue.labels.some(label => label.name === 'status:waiting on user response'));
-  console.log(`Found ${openIssuesWaitingOnUserResponse.length} open issues with the 'status:waiting on user response' label.`);
-  console.log(openIssuesWaitingOnUserResponse.map(issue => issue.number).join('\n'));
+async function getPaginatedData(url) {
+  const nextPattern = /(?<=<)([\S]*)(?=>; rel="Next")/i;
+  let pagesRemaining = true;
+  let data = [];
 
-  for (const issue of openIssuesWaitingOnUserResponse) {
+  while (pagesRemaining) {
+    const response = await octokit.request(`GET ${url}`, {
+      per_page: 100,
+      headers: {
+        "X-GitHub-Api-Version":
+          "2022-11-28",
+      },
+    });
+
+    const parsedData = parseData(response.data)
+    data = [...data, ...parsedData];
+
+    const linkHeader = response.headers.link;
+
+    pagesRemaining = linkHeader && linkHeader.includes(`rel=\"next\"`);
+
+    if (pagesRemaining) {
+      url = linkHeader.match(nextPattern)[0];
+    }
+  }
+
+  return data;
+}
+
+function parseData(data) {
+  // If the data is an array, return that
+  if (Array.isArray(data)) {
+    return data
+  }
+
+  // Some endpoints respond with 204 No Content instead of empty array
+  //   when there is no data. In that case, return an empty array.
+  if (!data) {
+    return []
+  }
+
+  // Otherwise, the array of items that we want is in an object
+  // Delete keys that don't include the array of items
+  delete data.incomplete_results;
+  delete data.repository_selection;
+  delete data.total_count;
+  // Pull out the array of items
+  const namespaceKey = Object.keys(data)[0];
+  data = data[namespaceKey];
+
+  return data;
+}
+
+async function run() {
+  const issues = await getPaginatedData('/repos/pieces-app/support/issues');
+
+  for (const issue of issues) {
     const isStale = checkIfStale(issue);
 
     if (isStale) {
