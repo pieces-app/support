@@ -32,7 +32,7 @@ async function run() {
 
   // Check if Early Access Program checkbox is checked
   if (issueBody.includes('- [x] Yes, this is related to an Early Access Program feature.')) {
-    labels.push('early access program');
+    labels.push('eap');
   }
 
   if (labels.length) await octokit.issues.addLabels({
