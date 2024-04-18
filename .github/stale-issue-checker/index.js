@@ -1,8 +1,17 @@
+/**
+ * This script automates the process of marking issues as stale and closing them if necessary
+ * in a GitHub repository using the Octokit REST API client.
+ */
 const { Octokit } = require("@octokit/rest");
 const auth = process.env.GITHUB_TOKEN;
 const octokit = new Octokit({ auth });
 
-async function getPaginatedData(url) {
+/**
+ * Asynchronously fetches paginated data from a GitHub API endpoint.
+ * @param {string} url - The GitHub API endpoint URL.
+ * @returns {Promise<Array>} A promise that resolves to an array of data from all pages.
+ */
+const getPaginatedData = async (url) => {
   const nextPattern = /(?<=<)([\S]*)(?=>; rel="Next")/i;
   let pagesRemaining = true;
   let data = [];
@@ -30,7 +39,12 @@ async function getPaginatedData(url) {
   return data;
 }
 
-function parseData(data) {
+/**
+ * Parses the data returned by the GitHub API, handling different response formats.
+ * @param {Object|Array} data - The data returned by the GitHub API.
+ * @returns {Array} The parsed data as an array.
+ */
+const parseData = (data) => {
   // If the data is an array, return that
   if (Array.isArray(data)) {
     return data
@@ -48,7 +62,10 @@ function parseData(data) {
   return data[namespaceKey]
 }
 
-async function run() {
+/**
+ * Main function to run the script. It fetches issues, checks if they are stale, and handles them accordingly.
+ */
+const run = async () => {
   const issues = await getPaginatedData('/repos/pieces-app/support/issues');
 
   for (const issue of issues) {
@@ -96,19 +113,27 @@ async function run() {
   }
 }
 
-// Should be stale if the most recent comment is 3 or more days old
+/**
+ * Determines if an issue should be marked as stale.
+ * @param {Object} issue - The issue to check.
+ * @returns {boolean} True if the issue is stale, false otherwise.
+ */
 const checkIfStale = (issue) => {
   const lastCommentDate = new Date(issue.comments[issue.comments.length - 1].created_at);
   const daysSinceLastComment = (new Date() - lastCommentDate) / (1000 * 60 * 60 * 24);
   return daysSinceLastComment >= 3;
 }
 
-// Should close if the issue is stale and the most recent comment is 4 or more days old
-// This is the case because this bot will send a comment and add the `stale` label to the issue when the issue is marked as stale
+/**
+ * Determines if a stale issue should be closed.
+ * @param {Object} issue - The issue to check.
+ * @returns {boolean} True if the issue should be closed, false otherwise.
+ */
 const shouldClose = (issue) => {
   const lastCommentDate = new Date(issue.comments[issue.comments.length - 1].created_at);
   const daysSinceLastComment = (new Date() - lastCommentDate) / (1000 * 60 * 60 * 24);
   return daysSinceLastComment >= 4;
 }
 
+// Run the script
 run().catch(err => console.error(err));
