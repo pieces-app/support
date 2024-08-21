@@ -26,6 +26,9 @@ Save, enrich, share, generate, reference, and reuse code in your browser, IDE, a
 - [Obsidian Plugin](https://obsidian.md/plugins?id=pieces-for-developers)
 - [JupyterLab Extension](https://docs.pieces.app/extensions-plugins/jupyterlab)
 - [Microsoft Teams App](https://docs.pieces.app/extensions-plugins/teams)
+- [Raycast Extension](https://docs.pieces.app/extensions-plugins/raycast)
+- [Sublime Text Plugin](https://docs.pieces.app/extensions-plugins/sublime)
+- [Pieces CLI](https://docs.pieces.app/extensions-plugins/cli/)
 
 ## Get Involved
 - Join our [Discord server](https://discord.gg/getpieces) and chat with the community.
