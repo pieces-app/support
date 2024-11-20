@@ -1,0 +1,56 @@
+name: Run Support Triage Bot
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  issues: write
+  contents: read
+
+jobs:
+  run-private-script:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Set up Python 3.9
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+
+    - name: Setup SSH
+      run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.ACTIONS_SSH_MM }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
+
+    - name: Checkout Private Repository
+      uses: actions/checkout@v3
+      with:
+        repository: pieces-app/support_triage_bot
+        token: ${{ secrets.ACTIONS_SSH_MM }}
+        path: support_triage_bot
+
+    - name: Install Dependencies
+      run: |
+        pip install -r support_triage_bot/requirements.txt
+
+    - name: Run Python Script
+      env:
+        SUPPORT_BOT_APP_ID: ${{ secrets.SUPPORT_BOT_APP_ID }}
+        SUPPORT_BOT_INSTALLATION_ID: ${{ secrets.SUPPORT_BOT_INSTALLATION_ID }}
+        SUPPORT_BOT_PRIVATE_KEY: ${{ secrets.SUPPORT_BOT_PRIVATE_KEY }}
+        SUPPORT_TRIAGE_BOT: ${{ secrets.SUPPORT_TRIAGE_BOT }}
+      run: |
+        python support_triage_bot/main.py ${{ github.repository }} ${{ github.event.issue.number }}
+
+    - name: Always clean up resources
+      if: always()
+      run: |
+        rm -rf ~/.ssh
+        rm -rf support_triage_bot
+        unset SUPPORT_BOT_APP_ID
+        unset SUPPORT_BOT_INSTALLATION_ID
+        unset SUPPORT_BOT_PRIVATE_KEY
+        unset SUPPORT_TRIAGE_BOT
