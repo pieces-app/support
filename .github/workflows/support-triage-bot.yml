@@ -14,7 +14,7 @@ jobs:
 
     steps:
     - name: Set up Python 3.9
-      uses: actions/setup-python@v4
+      uses: actions/setup-python@v5
       with:
         python-version: '3.9'
 
@@ -26,7 +26,7 @@ jobs:
           ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
 
     - name: Checkout Private Repository
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
       with:
         repository: pieces-app/support_triage_bot
         token: ${{ secrets.ACTIONS_SSH_MM }}
