@@ -43,7 +43,7 @@ jobs:
         SUPPORT_BOT_PRIVATE_KEY: ${{ secrets.SUPPORT_BOT_PRIVATE_KEY }}
         SUPPORT_TRIAGE_BOT: ${{ secrets.SUPPORT_TRIAGE_BOT }}
       run: |
-        python support_triage_bot/main.py ${{ github.repository }} ${{ github.event.issue.number }}
+        python support_triage_bot/main.py process ${{ github.repository }} ${{ github.event.issue.number }}
 
     - name: Always clean up resources
       if: always()
