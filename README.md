@@ -22,6 +22,7 @@ Save, enrich, share, generate, reference, and reuse code in your browser, IDE, a
 - [Firefox Addon](https://addons.mozilla.org/en-US/firefox/addon/pieces-save-code-from-the-web/)
 - [Jetbrains Plugin](https://plugins.jetbrains.com/plugin/17328-pieces--save-search-share--reuse-code-snippets)
 - [VS Code Extension](https://marketplace.visualstudio.com/items?itemName=MeshIntelligentTechnologiesInc.pieces-vscode)
+- [Visual Studio Extension](https://marketplace.visualstudio.com/items?itemName=MeshIntelligentTechnologiesInc.PiecesVisualStudio)
 - [Azure Data Studio](https://builds.pieces.app/stages/staging/plugin_vscode/ads-vsix/download)
 - [Obsidian Plugin](https://obsidian.md/plugins?id=pieces-for-developers)
 - [JupyterLab Extension](https://docs.pieces.app/extensions-plugins/jupyterlab)
