@@ -18,18 +18,18 @@ jobs:
       with:
         python-version: '3.9'
 
-    - name: Setup SSH
-      run: |
-          mkdir -p ~/.ssh
-          echo "${{ secrets.ACTIONS_SSH_MM }}" > ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
-          ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
+    # - name: Setup SSH
+    #   run: |
+    #       mkdir -p ~/.ssh
+    #       echo "${{ secrets.ACTIONS_SSH_MM }}" > ~/.ssh/id_rsa
+    #       chmod 600 ~/.ssh/id_rsa
+    #       ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
 
     - name: Checkout Private Repository
       uses: actions/checkout@v4
       with:
         repository: pieces-app/support_triage_bot
-        token: ${{ secrets.ACTIONS_SSH_MM }}
+        token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
         path: support_triage_bot
 
     - name: Install Dependencies
