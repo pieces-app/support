@@ -18,23 +18,16 @@ jobs:
       with:
         python-version: '3.9'
 
-    # - name: Setup SSH
-    #   run: |
-    #       mkdir -p ~/.ssh
-    #       echo "${{ secrets.ACTIONS_SSH_MM }}" > ~/.ssh/id_rsa
-    #       chmod 600 ~/.ssh/id_rsa
-    #       ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
-
     - name: Checkout Private Repository
       uses: actions/checkout@v4
       with:
-        repository: pieces-app/support_triage_bot
+        repository: pieces-app/support_automation
         token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
-        path: support_triage_bot
+        path: support_automation
 
     - name: Install Dependencies
       run: |
-        pip install -r support_triage_bot/requirements.txt
+        pip install -r support_automation/requirements.txt
 
     - name: Run Python Script
       env:
@@ -43,13 +36,13 @@ jobs:
         SUPPORT_BOT_PRIVATE_KEY: ${{ secrets.SUPPORT_BOT_PRIVATE_KEY }}
         SUPPORT_TRIAGE_BOT: ${{ secrets.SUPPORT_TRIAGE_BOT }}
       run: |
-        python support_triage_bot/main.py process ${{ github.repository }} ${{ github.event.issue.number }}
+        python support_automation/triage_bot/main.py process ${{ github.repository }} ${{ github.event.issue.number }}
 
     - name: Always clean up resources
       if: always()
       run: |
         rm -rf ~/.ssh
-        rm -rf support_triage_bot
+        rm -rf support_automation
         unset SUPPORT_BOT_APP_ID
         unset SUPPORT_BOT_INSTALLATION_ID
         unset SUPPORT_BOT_PRIVATE_KEY
