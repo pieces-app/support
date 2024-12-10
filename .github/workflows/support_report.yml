@@ -43,7 +43,7 @@ jobs:
         SUPPORT_BOT_PRIVATE_KEY: ${{ secrets.SUPPORT_BOT_PRIVATE_KEY }}
         SUPPORT_TRIAGE_BOT: ${{ secrets.SUPPORT_TRIAGE_BOT }}
       run: |
-        python support_automation/triage_bot/main.py report ${{ github.repository }}
+        python support_automation/triage_bot/main.py report ${{ github.repository }} daily
         if [ ! -d "support/reports" ]; then
           mkdir -p support/reports
         fi
