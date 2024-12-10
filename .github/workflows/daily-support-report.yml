@@ -49,6 +49,7 @@ jobs:
         SUPPORT_TRIAGE_BOT: ${{ secrets.SUPPORT_TRIAGE_BOT }}
       run: |
         python support_automation/triage_bot/main.py report ${{ github.repository }} daily
+        python support_automation/triage_bot/main.py report ${{ github.repository }} weekly
         if [ ! -d "support/reports" ]; then
           mkdir -p support/reports
         fi
