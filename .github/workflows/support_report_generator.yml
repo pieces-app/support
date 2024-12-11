@@ -1,0 +1,79 @@
+name: Support Report Generator
+
+on:
+  schedule:
+    - cron: '0 */8 * * *'  # Runs every 8 hours (three times a day)
+
+permissions:
+  issues: write
+  contents: write
+
+jobs:
+  run-private-script:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Support Repository
+      uses: actions/checkout@v4
+      with:
+        repository: pieces-app/support
+        token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+        path: support
+
+    - name: Checkout Private Repository
+      uses: actions/checkout@v4
+      with:
+        repository: pieces-app/support_automation
+        token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+        path: support_automation
+
+    - name: Set up Python 3.9
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.9'
+
+    - name: Install Dependencies
+      run: |
+        pip install -r support_automation/requirements.txt
+
+    - name: Get Monday Date
+      id: monday_date
+      run: |
+        echo "MONDAY_DATE=$(date -d 'monday this week' +'%Y-%m-%d')" >> $GITHUB_ENV
+
+    - name: Run Python Script
+      env:
+        SUPPORT_BOT_APP_ID: ${{ secrets.SUPPORT_BOT_APP_ID }}
+        SUPPORT_BOT_INSTALLATION_ID: ${{ secrets.SUPPORT_BOT_INSTALLATION_ID }}
+        SUPPORT_BOT_PRIVATE_KEY: ${{ secrets.SUPPORT_BOT_PRIVATE_KEY }}
+        SUPPORT_TRIAGE_BOT: ${{ secrets.SUPPORT_TRIAGE_BOT }}
+      run: |
+        python support_automation/triage_bot/main.py report ${{ github.repository }} daily
+        python support_automation/triage_bot/main.py report ${{ github.repository }} weekly
+        if [ ! -d "support/reports" ]; then
+          mkdir -p support/reports
+        fi
+        mv support_automation/reports/* support/reports/
+  
+    - name: Commit and Push Changes
+      run: |
+        cd support
+        git config --global user.name 'github-actions[bot]'
+        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+        BRANCH_NAME="report_${MONDAY_DATE}"
+        git fetch origin
+        git checkout -B $BRANCH_NAME
+        git add reports/
+        git commit -m "Add support triage report for $(date +'%Y-%m-%d') [skip ci]"
+        git push -u origin $BRANCH_NAME
+
+    - name: Always clean up resources
+      if: always()
+      run: |
+        rm -rf ~/.ssh
+        rm -rf support_automation
+        rm -rf support
+        unset SUPPORT_BOT_APP_ID
+        unset SUPPORT_BOT_INSTALLATION_ID
+        unset SUPPORT_BOT_PRIVATE_KEY
+        unset SUPPORT_TRIAGE_BOT
