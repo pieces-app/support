@@ -72,6 +72,7 @@ jobs:
       env:
         GH_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
       run: |
+        cd support
         BRANCH_NAME="report_${MONDAY_DATE}"
         # Check if PR already exists
         PR_EXISTS=$(gh pr list --head $BRANCH_NAME --json number -q '.[0].number')
