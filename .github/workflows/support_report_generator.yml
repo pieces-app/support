@@ -67,6 +67,22 @@ jobs:
         git commit -m "Add support triage report for $(date +'%Y-%m-%d') [skip ci]"
         git push -u origin $BRANCH_NAME
 
+    - name: Create Pull Request
+      env:
+        GH_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+      run: |
+        BRANCH_NAME="report_${MONDAY_DATE}"
+        # Check if PR already exists
+        PR_EXISTS=$(gh pr list --head $BRANCH_NAME --json number -q '.[0].number')
+        if [ -z "$PR_EXISTS" ]; then
+          # Create new PR if none exists
+          gh pr create \
+            --title "Support Triage Report for $(date +'%Y-%m-%d')" \
+            --body "Automated support triage report generation for $(date +'%Y-%m-%d')" \
+            --base main \
+            --head $BRANCH_NAME
+        fi
+
     - name: Always clean up resources
       if: always()
       run: |
