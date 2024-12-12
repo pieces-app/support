@@ -20,6 +20,7 @@ jobs:
         repository: pieces-app/support
         token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
         path: support
+        fetch-depth: 0  # Fetch all history for all branches
 
     - name: Checkout Private Repository
       uses: actions/checkout@v4
@@ -27,6 +28,7 @@ jobs:
         repository: pieces-app/support_automation
         token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
         path: support_automation
+        fetch-depth: 0
 
     - name: Set up Python 3.10
       uses: actions/setup-python@v5
@@ -42,6 +44,24 @@ jobs:
       run: |
         echo "MONDAY_DATE=$(date -d 'monday this week' +'%Y-%m-%d')" >> $GITHUB_ENV
 
+    - name: Configure Git
+      run: |
+        cd support
+        git config --global user.name 'github-actions[bot]'
+        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+
+    - name: Checkout or Create Report Branch
+      run: |
+        cd support
+        BRANCH_NAME="report_${MONDAY_DATE}"
+        git fetch origin
+        if git show-ref --verify --quiet refs/heads/$BRANCH_NAME; then
+          git checkout $BRANCH_NAME
+          git pull origin $BRANCH_NAME
+        else
+          git checkout -b $BRANCH_NAME
+        fi
+
     - name: Run Python Script
       env:
         SUPPORT_BOT_APP_ID: ${{ secrets.SUPPORT_BOT_APP_ID }}
@@ -55,18 +75,12 @@ jobs:
           mkdir -p support/reports
         fi
         mv support_automation/reports/* support/reports/
-  
+
     - name: Commit and Push Changes
       run: |
         cd support
-        git config --global user.name 'github-actions[bot]'
-        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-        BRANCH_NAME="report_${MONDAY_DATE}"
-        git fetch origin
-        git checkout -B $BRANCH_NAME
-        git pull origin $BRANCH_NAME || true
-        git add reports/
-        git commit -m "Add support triage report for $(date +'%Y-%m-%d') [skip ci]"
+        git add -A
+        git commit -m "Add support triage report for $(date +'%Y-%m-%d') [skip ci]" || echo "No changes to commit"
         git push -u origin $BRANCH_NAME
 
     - name: Create Pull Request
