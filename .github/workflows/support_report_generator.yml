@@ -77,7 +77,11 @@ jobs:
         if [ ! -d "support/reports" ]; then
           mkdir -p support/reports
         fi
-        rsync -a support_automation/reports/ support/reports/
+        # Use cp instead of rsync, with the -n option to not overwrite existing files unless newer
+        cp -rn support_automation/reports/* support/reports/ 2>/dev/null || true
+        # Then copy with update flag to only overwrite if source is newer
+        cp -ru support_automation/reports/* support/reports/
+      
 
     - name: Commit and Push Changes
       run: |
