@@ -55,12 +55,15 @@ jobs:
         cd support
         BRANCH_NAME="report_${MONDAY_DATE}"
         git fetch origin
-        if git show-ref --verify --quiet refs/heads/$BRANCH_NAME; then
+        if git show-ref --verify --quiet refs/remotes/origin/$BRANCH_NAME; then
+          # If the branch exists on remote, check it out and pull the latest changes
           git checkout $BRANCH_NAME
           git pull origin $BRANCH_NAME
         else
-          git checkout -b $BRANCH_NAME
+          # If the branch does not exist, create it from main (or your default branch)
+          git checkout -b $BRANCH_NAME main
         fi
+        echo "BRANCH_NAME=$BRANCH_NAME" >> $GITHUB_ENV
 
     - name: Run Python Script
       env:
@@ -81,13 +84,24 @@ jobs:
         cd support
         git add -A
         git commit -m "Add support triage report for $(date +'%Y-%m-%d') [skip ci]" || echo "No changes to commit"
-        git push -u origin $BRANCH_NAME
+        # Push changes and set upstream if not already set
+        git push --set-upstream origin $BRANCH_NAME
 
     - name: Create Pull Request
       env:
         GH_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
       run: |
         cd support
+        # Ensure GH CLI is installed
+        if ! command -v gh &> /dev/null
+        then
+          echo "GH CLI not found, installing..."
+          sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key C99B11DEB97541F0
+          sudo apt-add-repository https://cli.github.com/packages
+          sudo apt update
+          sudo apt install gh -y
+        fi
+        gh auth login --with-token <<< "${{ secrets.PERSONAL_ACCESS_TOKEN }}"
         BRANCH_NAME="report_${MONDAY_DATE}"
         # Check if PR already exists
         PR_EXISTS=$(gh pr list --head $BRANCH_NAME --json number -q '.[0].number')
@@ -98,6 +112,8 @@ jobs:
             --body "Automated support triage report generation for $(date +'%Y-%m-%d')" \
             --base main \
             --head $BRANCH_NAME
+        else
+          echo "Pull Request already exists for branch $BRANCH_NAME."
         fi
 
     - name: Always clean up resources
