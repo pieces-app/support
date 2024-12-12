@@ -77,7 +77,7 @@ jobs:
         if [ ! -d "support/reports" ]; then
           mkdir -p support/reports
         fi
-        mv support_automation/reports/* support/reports/
+        rsync -a support_automation/reports/ support/reports/
 
     - name: Commit and Push Changes
       run: |
