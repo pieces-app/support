@@ -50,7 +50,7 @@ jobs:
         git config --global user.name 'github-actions[bot]'
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
 
-    - name: Checkout or Create Report Branch
+    - name: Checkout or Create Support Repo Branch
       run: |
         cd support
         BRANCH_NAME="report_${MONDAY_DATE}"
@@ -65,7 +65,22 @@ jobs:
         fi
         echo "BRANCH_NAME=$BRANCH_NAME" >> $GITHUB_ENV
 
-    - name: Run Python Script
+    - name: Checkout or Create Support Automation Repo Branch
+      run: |
+        cd support_automation
+        BRANCH_NAME="report_${MONDAY_DATE}"
+        git fetch origin
+        if git show-ref --verify --quiet refs/remotes/origin/$BRANCH_NAME; then
+          # If the branch exists on remote, check it out and pull the latest changes
+          git checkout $BRANCH_NAME
+          git pull origin $BRANCH_NAME
+        else
+          # If the branch does not exist, create it from main (or your default branch)
+          git checkout -b $BRANCH_NAME main
+        fi
+        echo "BRANCH_NAME=$BRANCH_NAME" >> $GITHUB_ENV
+
+    - name: Run Daily Report Script
       env:
         SUPPORT_BOT_APP_ID: ${{ secrets.SUPPORT_BOT_APP_ID }}
         SUPPORT_BOT_INSTALLATION_ID: ${{ secrets.SUPPORT_BOT_INSTALLATION_ID }}
@@ -73,17 +88,53 @@ jobs:
         SUPPORT_TRIAGE_BOT: ${{ secrets.SUPPORT_TRIAGE_BOT }}
       run: |
         python support_automation/triage_bot/main.py report ${{ github.repository }} daily
+
+    - name: Run Weekly Report Script
+      env:
+        SUPPORT_BOT_APP_ID: ${{ secrets.SUPPORT_BOT_APP_ID }}
+        SUPPORT_BOT_INSTALLATION_ID: ${{ secrets.SUPPORT_BOT_INSTALLATION_ID }}
+        SUPPORT_BOT_PRIVATE_KEY: ${{ secrets.SUPPORT_BOT_PRIVATE_KEY }}
+        SUPPORT_TRIAGE_BOT: ${{ secrets.SUPPORT_TRIAGE_BOT }}
+      run: |
         python support_automation/triage_bot/main.py report ${{ github.repository }} weekly
+
+    - name: Commit and Push Changes to Support Automation Repo
+      run: |
+        cd support_automation
+        git add -A
+        git commit -m "Add support triage report for $(date +'%Y-%m-%d') [skip ci]" || echo "No changes to commit"
+        # Push changes and set upstream if not already set
+        git push --set-upstream origin $BRANCH_NAME
+
+    - name: Create Pull Request for Support Automation Repo
+      env:
+        GH_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+      run: |
+        cd support_automation
+        BRANCH_NAME="report_${MONDAY_DATE}"
+        # Check if PR already exists
+        PR_EXISTS=$(gh pr list --head $BRANCH_NAME --json number -q '.[0].number')
+        if [ -z "$PR_EXISTS" ]; then
+          # Create new PR if none exists
+          gh pr create \
+            --title "Support Triage Report for $(date +'%Y-%m-%d')" \
+            --body "Automated support triage report generation for $(date +'%Y-%m-%d')" \
+            --base main \
+            --head $BRANCH_NAME
+        else
+          echo "Pull Request already exists for branch $BRANCH_NAME."
+        fi
+
+    - name: Copy Reports to Support Repo
+      run: |
         if [ ! -d "support/reports" ]; then
           mkdir -p support/reports
         fi
-        # Use cp instead of rsync, with the -n option to not overwrite existing files unless newer
+        # Copy daily reports
         cp -rn support_automation/reports/* support/reports/ 2>/dev/null || true
-        # Then copy with update flag to only overwrite if source is newer
         cp -ru support_automation/reports/* support/reports/
-      
 
-    - name: Commit and Push Changes
+    - name: Commit and Push Changes to Support Repo
       run: |
         cd support
         git add -A
@@ -91,7 +142,7 @@ jobs:
         # Push changes and set upstream if not already set
         git push --set-upstream origin $BRANCH_NAME
 
-    - name: Create Pull Request
+    - name: Create Pull Request for Support Repo
       env:
         GH_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
       run: |
