@@ -1,5 +1,5 @@
 # Support Ticket Report
-- Generated: 2024-12-12 17:59:31
+- Generated: 2024-12-12 18:04:17
 - Period: 2024-12-09 to 2024-12-12
 
 ## Summary
@@ -17,58 +17,59 @@
 | [#504](https://github.com/pieces-app/support/issues/504) | Personalizing during installation broken on macOS 12.7.6 | 3.92 |
 
 ## Common Issues
-### 1. Pieces for Developers UI Bugs
-Users report UI glitches and loading errors within the Pieces for Developers application, particularly with the Copilot and Demo Chat features. Issues involve mysterious icons, unresponsive loading screens, and context errors. Proposed solutions involve bug investigation, replication attempts, and fixes planned for upcoming PiecesOS releases.
+### 1. Onboarding Issues in Pieces Desktop Application
+Users are experiencing issues with the onboarding process in the Pieces desktop app, including blank chat history, failure to generate demo chats and pieces, and 'Context Exceeded' errors. These problems seem to persist even after restarting the app or deleting local data. Proposed solutions involve investigating the root cause and potential fixes in upcoming releases.
+
+**Related Issues:**
+- [#499](https://github.com/pieces-app/support/issues/499): Demo Chat are stuck loading
+- [#501](https://github.com/pieces-app/support/issues/501): Onboarding doesn't generate pieces nor demo chats
+- [#505](https://github.com/pieces-app/support/issues/505): PFD Onboarding: Context exceeded" error on first short message
+
+### 2. Pieces OS Copilot Display and Functionality Issues
+Users report problems with Pieces OS Copilot, including unexpected icons appearing in the corners and Copilot not responding to prompts. These issues appear across different operating systems. The Pieces team acknowledges these as known issues, attributing some to duplicates, and assures users of upcoming fixes in future releases.
 
 **Related Issues:**
 - [#509](https://github.com/pieces-app/support/issues/509): [Obsidian]
-- [#499](https://github.com/pieces-app/support/issues/499): Demo Chat are stuck loading
+- [#502](https://github.com/pieces-app/support/issues/502): Not generating the response
 - [#505](https://github.com/pieces-app/support/issues/505): PFD Onboarding: Context exceeded" error on first short message
 
-### 2. Pieces Onboarding Issues on macOS
-Users are experiencing issues with the Pieces onboarding process on macOS, including blank onboarding screens, errors generating demo data, and "Context Exceeded" errors. These issues appear to be related to database and configuration errors. Solutions include waiting for the next Pieces release, manually deleting problematic folders, and providing detailed system information for troubleshooting.
+### 3. Pieces Onboarding Issues on macOS
+Users are experiencing various issues during the Pieces onboarding process on macOS, including interface bugs that prevent progression, failure to generate pieces and demo chats, and "Context exceeded" errors with Copilot. Proposed solutions involve ensuring window resizability, fixing permission errors, and addressing WebSocket response failures.
 
 **Related Issues:**
 - [#504](https://github.com/pieces-app/support/issues/504): Personalizing during installation broken on macOS 12.7.6
 - [#501](https://github.com/pieces-app/support/issues/501): Onboarding doesn't generate pieces nor demo chats
 - [#505](https://github.com/pieces-app/support/issues/505): PFD Onboarding: Context exceeded" error on first short message
 
-### 3. Claude LLM Context Exceeded Error
-Users are experiencing "Context exceeded" errors when using the Claude LLM, particularly during onboarding and with short messages. This issue is known and linked to issue #487. A fix is expected in the next Pieces OS release.
+### 4. Claude LLM Context Exceeded Error
+Users are experiencing "Context exceeded" errors when interacting with the Claude LLM, even with short messages. This issue appears across different operating systems and Pieces OS versions. The problem is linked to Copilot and its WebSocket responses. A fix is expected in the next Pieces OS release.
 
 **Related Issues:**
 - [#508](https://github.com/pieces-app/support/issues/508): Message exceeded the context limit for claude LLM Issue
-- [#505](https://github.com/pieces-app/support/issues/505): PFD Onboarding: Context exceeded" error on first short message
 - [#502](https://github.com/pieces-app/support/issues/502): Not generating the response
+- [#505](https://github.com/pieces-app/support/issues/505): PFD Onboarding: Context exceeded" error on first short message
 
-### 4. Pieces OS and VS Code Extension Issues
-Users report various issues with Pieces OS and its VS Code extension, including slow performance, UI freezes, and failure to launch. These issues may stem from plugin conflicts, version incompatibility, or network configuration problems. Solutions involve updating to the latest versions, checking network settings, and collaborating with Pieces support for debugging.
-
-**Related Issues:**
-- [#271](https://github.com/pieces-app/support/issues/271): Pasting in VS Code causes delay
-- [#428](https://github.com/pieces-app/support/issues/428): VSCODE Extension, Pieces Copilot line wrapping setting location or settings.json options??
-- [#474](https://github.com/pieces-app/support/issues/474): Pieces OS apparently stuck - VS extension not working
-
-### 5. Pieces OS Conflicts with Firefox and Visual Studio
-Users report conflicts between Pieces OS and Firefox, with Firefox instances getting stuck under the Pieces OS process. Additionally, there are reported issues with the Pieces OS Visual Studio extension, causing it to malfunction or fail to launch. Proposed solutions include disabling the WorkStream Pattern Engine in Pieces OS and updating to the latest Pieces OS and Visual Studio extension versions.
+### 5. Pieces Desktop App Issues
+Users report various issues with the Pieces Desktop App on Windows, including white screens and connection problems.  Suggested solutions include reinstalling the app, providing logs to support, and sharing specific files/folders that trigger the issues. The Pieces team is actively investigating these problems.
 
 **Related Issues:**
-- [#267](https://github.com/pieces-app/support/issues/267): FireFox not functioning properly under WorkStream Pattern Engine
-- [#474](https://github.com/pieces-app/support/issues/474): Pieces OS apparently stuck - VS extension not working
-- [#503](https://github.com/pieces-app/support/issues/503): Something went wrong with processing
+- [#258](https://github.com/pieces-app/support/issues/258): White screen on Windows 11
+- [#456](https://github.com/pieces-app/support/issues/456): Not Working
+- [#507](https://github.com/pieces-app/support/issues/507): Pieces for Developers app keeps crashing continuously on attempts to upload files and folder and needs restart on my windows 11 laptop
 
 
 ## Recommendations
-- **Prioritize UI/UX Improvements for Pieces for Developers:** The high frequency of "Pieces for Developers UI Bugs" suggests a need to prioritize UI/UX improvements in upcoming releases. Focus on resolving glitches, loading errors, and confusing UI elements related to Copilot and Demo Chat.
-- **Investigate and Resolve macOS Onboarding Issues:** Address the recurring "Pieces Onboarding Issues on macOS."  This includes blank screens, demo data errors, and "Context Exceeded" errors. Ensure onboarding is smooth to avoid frustrating new users.
-- **Provide Clearer Communication and Workarounds for Claude LLM Context Errors:** The "Claude LLM Context Exceeded Error" is a known issue. Improve support documentation and messaging to acknowledge the issue, explain its cause, and offer potential workarounds while waiting for the fix in the next release.
-- **Address Pieces OS and VS Code Extension Conflicts:** Investigate and resolve the reported conflicts between Pieces OS and Firefox and Visual Studio. This includes Firefox instances getting stuck and the VS Code extension malfunctioning. Compatibility issues can be detrimental to user experience.
-- **Analyze and Improve Performance Bottlenecks:** Several reports mention slow performance, UI freezes, and crashes. Conduct thorough performance testing and optimization, particularly for resource-intensive operations like pasting code and handling large files.
-- **Review and Update Support Documentation:** Ensure support documentation and FAQs are up-to-date with information on common issues, workarounds, and troubleshooting steps. This will empower users to self-resolve problems and reduce support ticket volume.
-- **Gather Detailed System Information:** When users encounter errors, especially related to specific software or OS versions, ensure the support system gathers detailed system information (OS version, Pieces OS version, browser version, etc.) to aid in faster diagnosis and resolution.
-- **Consider a Bug Bounty Program:** To incentivize community involvement in identifying and reporting bugs, consider implementing a bug bounty program. This can help uncover and address issues more quickly.
+- **Prioritize Onboarding Issues:** The most frequent and active tickets revolve around onboarding problems across macOS and the desktop app. Focus on resolving these issues to ensure a smooth initial user experience.
+- **Investigate and Fix Copilot Errors:** Many users report issues with Pieces OS Copilot, including display glitches and "Context exceeded" errors. Address these problems to improve Copilot's reliability and functionality.
+- **Address Windows Desktop App Problems:** Users experience white screens and crashes on the Windows desktop app. Prioritize resolving these issues to ensure stability and functionality on Windows.
+- **Improve Error Messaging:** Vague error messages like "Something went wrong with processing" frustrate users. Provide more specific error messages to help users understand and potentially resolve issues themselves.
+- **Gather More Information on Tricky Issues:** For issues like file/folder uploads causing crashes, request specific files/folders from users to reproduce and debug effectively.
+- **Consider User Interface Improvements:** Issues related to window resizing and button visibility on smaller screens highlight the need for UI improvements to accommodate various screen sizes and resolutions.
+- **Review and Update Documentation:** Ensure that documentation and support resources are up-to-date, especially regarding onboarding, Copilot usage, and troubleshooting common errors.
+- **Monitor and Analyze Ticket Trends:** Regularly analyze support ticket data to identify recurring issues, emerging trends, and areas for improvement in the software or support processes.
 
 ## Daily Reports
 Here are the daily reports for this week:
 
+- [report_180049](daily/2024-12-12/report_180049.md)
 - [report_175555](daily/2024-12-12/report_175555.md)
