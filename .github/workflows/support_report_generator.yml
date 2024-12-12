@@ -62,11 +62,27 @@ jobs:
         git config --global user.name 'github-actions[bot]'
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
         BRANCH_NAME="report_${MONDAY_DATE}"
+        
+        # Fetch and checkout the branch
         git fetch origin
         git checkout -B $BRANCH_NAME origin/$BRANCH_NAME || git checkout -b $BRANCH_NAME
+    
+        # Stash changes to avoid overwriting issues
+        git stash --include-untracked
+        
+        # Add changes and commit
         git add reports/
         git commit -m "Add support triage report for $(date +'%Y-%m-%d') [skip ci]" || echo "No changes to commit"
+        
+        # Pull with rebase and apply stashed changes
         git pull --rebase origin $BRANCH_NAME
+        git stash pop || echo "No stashed changes to apply"
+    
+        # Handle merge conflicts automatically or manually
+        git mergetool || echo "No merge conflicts to resolve"
+        git rebase --continue || echo "No rebase needed"
+    
+        # Push changes to the remote repository
         git push -u origin $BRANCH_NAME
 
     - name: Create Pull Request
