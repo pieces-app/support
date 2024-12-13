@@ -1,11 +1,11 @@
 # Support Ticket Report
-- Generated: 2024-12-12 21:07:40
-- Period: 2024-12-09 to 2024-12-12
+- Generated: 2024-12-13 05:06:10
+- Period: 2024-12-09 to 2024-12-13
 
 ## Summary
-- **Total Tickets:** 20
+- **Total Tickets:** 21
 - **Resolved:** 6
-- **Open:** 14
+- **Open:** 15
 
 ## 5 Most Active Tickets
 | Issue # | Title | Activity Level |
@@ -17,58 +17,56 @@
 | [#504](https://github.com/pieces-app/support/issues/504) | Personalizing during installation broken on macOS 12.7.6 | 3.92 |
 
 ## Common Issues
-### 1. Pieces OS and Plugin UI/Functionality Issues
-Users report various issues with Pieces OS and plugin functionality, including UI glitches like misplaced icons, onboarding problems on smaller screens, and toolbar launch failures. Solutions involve bug fixes, plugin updates, and ongoing investigation by the Pieces team to address root causes.
+### 1. Pieces OS 10.1.15 Bugs
+Users are reporting various bugs with Pieces OS 10.1.15, including issues with the right tray icons appearing when resizing, demo chats getting stuck loading after skipping onboarding, and Copilot not generating responses. Troubleshooting steps vary depending on the specific problem, and some issues are still under investigation by the Pieces team.
 
 **Related Issues:**
 - [#509](https://github.com/pieces-app/support/issues/509): [Obsidian]
-- [#504](https://github.com/pieces-app/support/issues/504): Personalizing during installation broken on macOS 12.7.6
-- [#474](https://github.com/pieces-app/support/issues/474): Pieces OS apparently stuck - VS extension not working
+- [#499](https://github.com/pieces-app/support/issues/499): Demo Chat are stuck loading
+- [#502](https://github.com/pieces-app/support/issues/502): Not generating the response
 
-### 2. Pieces Onboarding and Data Loading Issues
-Users experience issues with Pieces onboarding, including blank demo chats, failure to generate pieces during onboarding, and "context exceeded" errors. These issues may stem from data loading problems or conflicts with existing user data after application resets. Solutions involve investigating data handling during onboarding, ensuring proper data deletion during resets, and addressing potential context limitations.
+### 2. Pieces Onboarding and Demo Issues
+Users are experiencing issues with Pieces onboarding, including blank demo chats, failure to generate onboarding pieces, and 'Context Exceeded' errors. These issues may stem from incomplete resets, skipping onboarding steps, or problems with specific model versions. Solutions include deleting all related folders upon reset, ensuring complete onboarding, and waiting for upcoming releases with fixes.
 
 **Related Issues:**
-- [#499](https://github.com/pieces-app/support/issues/499): Demo Chat are stuck loading
 - [#501](https://github.com/pieces-app/support/issues/501): Onboarding doesn't generate pieces nor demo chats
+- [#499](https://github.com/pieces-app/support/issues/499): Demo Chat are stuck loading
 - [#505](https://github.com/pieces-app/support/issues/505): PFD Onboarding: Context exceeded" error on first short message
 
-### 3. Pieces OS Integration Conflicts on Windows
-Users report conflicts between Pieces OS and other applications, particularly Firefox and Visual Studio, on Windows. Issues include browser hijacking, unresponsive UI, and white screens. Proposed solutions involve disabling conflicting features, reinstalling software, and ongoing debugging with the development team.
-
-**Related Issues:**
-- [#267](https://github.com/pieces-app/support/issues/267): FireFox not functioning properly under WorkStream Pattern Engine
-- [#474](https://github.com/pieces-app/support/issues/474): Pieces OS apparently stuck - VS extension not working
-- [#258](https://github.com/pieces-app/support/issues/258): White screen on Windows 11
-
-### 4. Claude LLM Context Exceeded Error
-Users are encountering "Context exceeded" errors when using the Claude LLM in the Pieces desktop app across different operating systems. This issue appears to be related to a recent update and is expected to be resolved in the next release. As a workaround, users can try reducing the length of their messages or using a different LLM like Gemini.
+### 3. Claude LLM Context Exceeded Error
+Users are experiencing "Context exceeded" errors when using the Claude LLM in the Pieces desktop application on Linux and macOS. This issue occurs even with short messages and during onboarding. The problem is linked to a known issue and is expected to be resolved in an upcoming Pieces OS release.
 
 **Related Issues:**
 - [#508](https://github.com/pieces-app/support/issues/508): Message exceeded the context limit for claude LLM Issue
 - [#505](https://github.com/pieces-app/support/issues/505): PFD Onboarding: Context exceeded" error on first short message
-- [#500](https://github.com/pieces-app/support/issues/500): I'am sorry Something went wrong with processing. please wait a few seconds and try again or contact support@pieces.app
+- [#502](https://github.com/pieces-app/support/issues/502): Not generating the response
 
-### 5. Pieces OS Toolbar and Application Connectivity Issues
-Users are experiencing difficulties launching the Pieces OS toolbar from various sources, including the desktop app and Visual Studio. This is often accompanied by error messages such as "Sentry Error Event" and "Route not found." Proposed solutions include checking for updates, sending logs to support, and a hotfix release (version 3.0.1) for the Visual Studio plugin.
+### 4. Pieces OS Failing to Launch or Connect
+Users are reporting that Pieces OS is getting stuck on "Connecting..." or failing to launch entirely. This issue appears to affect both the desktop application and VS Code extension. Proposed solutions include checking for updates, ensuring Pieces OS is allowed through the firewall, and verifying Pieces OS is running. Further investigation and logs may be required for specific cases.
 
 **Related Issues:**
 - [#526](https://github.com/pieces-app/support/issues/526): Can't turn on long term memory engine
+- [#456](https://github.com/pieces-app/support/issues/456): Not Working
 - [#474](https://github.com/pieces-app/support/issues/474): Pieces OS apparently stuck - VS extension not working
+
+### 5. Pieces Desktop App Crashing and White Screen Issues
+Users report Pieces Desktop App crashing, failing to load, or encountering a white screen on Windows 11. Proposed solutions include reinstalling the app, sharing application data, and troubleshooting live with developers. However, the issue persists for some users. Developers are actively investigating and seeking user logs for debugging.
+
+**Related Issues:**
+- [#258](https://github.com/pieces-app/support/issues/258): White screen on Windows 11
+- [#507](https://github.com/pieces-app/support/issues/507): Pieces for Developers app keeps crashing continuously on attempts to upload files and folder and needs restart on my windows 11 laptop
 - [#456](https://github.com/pieces-app/support/issues/456): Not Working
 
 
 ## Recommendations
-- **Prioritize resolving Pieces OS and plugin UI/functionality issues:** These issues are causing user frustration and hindering adoption. Focus on bug fixes, plugin updates, and addressing root causes.
-- **Investigate and resolve onboarding and data loading issues:** Ensure a smooth onboarding experience by addressing blank demo chats, piece generation failures, and "context exceeded" errors. Thoroughly test data handling during onboarding and application resets.
-- **Address Pieces OS integration conflicts on Windows:** Investigate and resolve conflicts with Firefox, Visual Studio, and other applications. Consider disabling conflicting features, providing clear instructions for reinstallation, and collaborating with affected users for debugging.
-- **Provide clear communication and workarounds for the Claude LLM context exceeded error:** Acknowledge the issue, explain its cause, and offer temporary solutions like using shorter messages or alternative LLMs. Update users on the expected resolution timeline.
-- **Improve communication and transparency regarding toolbar and application connectivity issues:** Acknowledge the issues users are facing with the Pieces OS toolbar and provide regular updates on the progress of fixes. Offer clear troubleshooting steps and workarounds while the issues are being addressed.
-- **Proactively monitor and address issues with high activity levels:** Keep track of tickets with high activity levels, as they indicate ongoing problems and user frustration. Prioritize resolving these issues to improve user satisfaction.
-- **Gather more detailed information about user issues:** Encourage users to provide specific details, steps to reproduce, and relevant logs when reporting issues. This will help in faster diagnosis and resolution.
-- **Consider implementing a system for identifying and merging duplicate tickets:** This will help in streamlining support operations and avoid redundant efforts.
-- **Improve the onboarding experience for new users:** Provide clear instructions, helpful tips, and address common pain points to ensure a smooth transition for new users.
-- **Continue gathering user feedback to identify and address emerging issues:** Regularly collect feedback from users to understand their pain points and prioritize improvements based on their needs.
+- **Prioritize resolving Pieces OS 10.1.15 bugs:** This version has the most reported issues, impacting user experience across multiple features (right tray icons, demo chats, Copilot responses).
+- **Investigate and address onboarding issues:** Problems with onboarding, including blank demo chats and 'Context Exceeded' errors, are causing user frustration early on. Resolving these will improve user adoption and satisfaction.
+- **Provide clear workarounds for Claude LLM context errors:** While a fix is planned, offer users temporary solutions like using alternative LLMs or breaking down prompts.
+- **Improve Pieces OS stability and launch process:** Address issues with Pieces OS getting stuck on "Connecting..." or failing to launch, especially for the desktop app and VS Code extension. This may involve investigating firewall conflicts, update processes, and providing clearer error messages.
+- **Gather more information on Desktop App crashes:** Request detailed logs from users experiencing crashes and white screens on Windows 11 to help developers identify the root cause and implement a fix.
+- **Review and update documentation:** Ensure troubleshooting steps for common issues are up-to-date and easy to find. This includes information on resetting Pieces, resolving firewall issues, and understanding onboarding processes.
+- **Consider creating a dedicated FAQ for Pieces OS 10.1.15:** Given the number of issues reported, a dedicated FAQ section can centralize troubleshooting information and reduce support ticket volume.
+- **Monitor and analyze ticket trends:** Regularly analyze support tickets to identify recurring issues and prioritize development efforts based on user impact and frequency.
 
 ## Daily Reports
 Here are the daily reports for this week:
