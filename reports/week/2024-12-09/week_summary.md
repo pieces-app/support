@@ -1,5 +1,5 @@
 # Support Ticket Report
-- Generated: 2024-12-14 13:09:41
+- Generated: 2024-12-14 21:05:32
 - Period: 2024-12-09 to 2024-12-14
 
 ## Summary
@@ -10,65 +10,62 @@
 ## 5 Most Active Tickets
 | Issue # | Title | Activity Level |
 |---------|-------|----------------|
-| [#474](https://github.com/pieces-app/support/issues/474) | Pieces OS apparently stuck - VS extension not working | 5.12 |
-| [#509](https://github.com/pieces-app/support/issues/509) | [Obsidian] | 4.74 |
-| [#499](https://github.com/pieces-app/support/issues/499) | Demo Chat are stuck loading | 4.21 |
-| [#258](https://github.com/pieces-app/support/issues/258) | White screen on Windows 11 | 3.79 |
-| [#526](https://github.com/pieces-app/support/issues/526) | Can't turn on long term memory engine | 3.50 |
+| [#474](https://github.com/pieces-app/support/issues/474) | Pieces OS apparently stuck - VS extension not working | 5.05 |
+| [#499](https://github.com/pieces-app/support/issues/499) | Demo Chat are stuck loading | 4.05 |
+| [#258](https://github.com/pieces-app/support/issues/258) | White screen on Windows 11 | 3.52 |
+| [#509](https://github.com/pieces-app/support/issues/509) | [Obsidian] | 3.48 |
+| [#504](https://github.com/pieces-app/support/issues/504) | Personalizing during installation broken on macOS 12.7.6 | 3.47 |
 
 ## Common Issues
-### 1. Pieces for Developers and Obsidian Integration Issues
-Users are experiencing issues with Pieces for Developers and its integration with Obsidian, including disappearing chat history on restart, loading errors in demo chats, and context errors with Copilot. Troubleshooting steps often involve checking for conflicting plugins, reinstalling Pieces, and ensuring compatibility with the latest Obsidian and Pieces OS versions.
+### 1. Pieces for Developers UI/UX Issues
+Users report issues with Pieces for Developers UI, including unresponsive demo chats after skipping onboarding, mysterious icons appearing when resizing the right tray in Obsidian, and onboarding screen elements being cut off on smaller screens. Solutions involve ensuring onboarding can be skipped without issues, investigating and resolving icon display glitches, and making the onboarding window resizable.
 
 **Related Issues:**
 - [#509](https://github.com/pieces-app/support/issues/509): [Obsidian]
 - [#499](https://github.com/pieces-app/support/issues/499): Demo Chat are stuck loading
-- [#505](https://github.com/pieces-app/support/issues/505): PFD Onboarding: Context exceeded" error on first short message
+- [#504](https://github.com/pieces-app/support/issues/504): Personalizing during installation broken on macOS 12.7.6
 
-### 2. Pieces OS launch and functionality issues
-Users are experiencing problems with Pieces OS getting stuck, failing to launch, and encountering errors during operation.  This appears related to Visual Studio Extension integration and potential OS conflicts. Proposed solutions include upgrading to the latest Pieces OS and VS Extension versions, checking for OS errors, and contacting support for further assistance.
+### 2. Pieces OS and VS Extension Functionality Issues
+Users are experiencing problems with Pieces OS and its VS Code extension, including failure to launch, unresponsiveness, and processing errors.  Solutions include updating to the latest Pieces OS and extension versions, checking log files for errors, and ensuring Pieces OS is running.  Some issues are persistent and under investigation by the Pieces team.
 
 **Related Issues:**
 - [#526](https://github.com/pieces-app/support/issues/526): Can't turn on long term memory engine
 - [#474](https://github.com/pieces-app/support/issues/474): Pieces OS apparently stuck - VS extension not working
 - [#503](https://github.com/pieces-app/support/issues/503): Something went wrong with processing
 
-### 3. Onboarding Issues in Pieces OS for macOS
-Users reported various issues with the onboarding process on macOS, including interface problems on smaller screens, errors like "Context exceeded" with initial messages, and failure to generate pieces or demo chats after resetting the application. Solutions involved resizing the onboarding window, addressing cloud service permissions, and ensuring complete data deletion before restarting.
+### 3. Pieces OS Onboarding and Chat Issues
+Users report issues with Pieces OS onboarding process, including snippets and demo chats not generating, and chat history being wiped after restart.  This appears to be related to permission errors when calling GPT Inference Service.  Solutions include fixing access permissions and potential fixes in future Pieces OS releases.
 
 **Related Issues:**
-- [#504](https://github.com/pieces-app/support/issues/504): Personalizing during installation broken on macOS 12.7.6
-- [#505](https://github.com/pieces-app/support/issues/505): PFD Onboarding: Context exceeded" error on first short message
 - [#501](https://github.com/pieces-app/support/issues/501): Onboarding doesn't generate pieces nor demo chats
+- [#499](https://github.com/pieces-app/support/issues/499): Demo Chat are stuck loading
+- [#505](https://github.com/pieces-app/support/issues/505): PFD Onboarding: Context exceeded" error on first short message
 
-### 4. Pieces OS Integration Issues with VS Code
-Users report various issues with Pieces OS integration in VS Code, including pasting delays, lack of line-wrapping settings, and problems enabling the long-term memory engine. Proposed solutions involve bug fixes, feature implementations, and troubleshooting steps.
-
-**Related Issues:**
-- [#271](https://github.com/pieces-app/support/issues/271): Pasting in VS Code causes delay
-- [#428](https://github.com/pieces-app/support/issues/428): VSCODE Extension, Pieces Copilot line wrapping setting location or settings.json options??
-- [#526](https://github.com/pieces-app/support/issues/526): Can't turn on long term memory engine
-
-### 5. Pieces Desktop App Crashes/White Screen
-Users report Pieces Desktop App on Windows crashing or encountering a white screen on launch. This issue persists across different versions. Proposed solutions include upgrading to the latest version, sharing logs with support, and live debugging sessions with developers to identify the root cause.
+### 4. Pieces Desktop Application Bugs
+Users are reporting various bugs with the Pieces Desktop application, including scrolling issues in chat, processing errors, and demo chat loading failures.  Suggested solutions include checking for duplicate issues, providing detailed bug reports, and contacting support. The Pieces team is actively investigating and addressing these issues.
 
 **Related Issues:**
-- [#258](https://github.com/pieces-app/support/issues/258): White screen on Windows 11
-- [#507](https://github.com/pieces-app/support/issues/507): Pieces for Developers app keeps crashing continuously on attempts to upload files and folder and needs restart on my windows 11 laptop
-- [#456](https://github.com/pieces-app/support/issues/456): Not Working
+- [#226](https://github.com/pieces-app/support/issues/226): Pieces Desktop does not scroll when answering
+- [#500](https://github.com/pieces-app/support/issues/500): I'am sorry Something went wrong with processing. please wait a few seconds and try again or contact support@pieces.app
+- [#499](https://github.com/pieces-app/support/issues/499): Demo Chat are stuck loading
+
+### 5. Firefox Integration Issues with Pieces OS
+Users are experiencing problems with Firefox integration on Pieces OS, particularly on Windows.  Issues include Firefox not launching correctly from Pieces OS, conflicts with existing Firefox instances, and errors when opening links.  Potential solutions involve ensuring Firefox runs as an independent process and addressing conflicts with Pieces OS services.
+
+**Related Issues:**
+- [#391](https://github.com/pieces-app/support/issues/391): "Open Copilot in browser" causes error with Firefox
+- [#267](https://github.com/pieces-app/support/issues/267): FireFox not functioning properly under WorkStream Pattern Engine
+- [#474](https://github.com/pieces-app/support/issues/474): Pieces OS apparently stuck - VS extension not working
 
 
 ## Recommendations
-- **Prioritize resolving Pieces OS launch and functionality issues:** These issues are causing significant disruption to users and hindering their ability to use Pieces effectively.
-- **Investigate and address the root causes of Pieces Desktop App crashes and white screen errors:** These issues are persistent and frustrating for users, impacting their overall experience.
-- **Improve onboarding experience on macOS:** Address interface problems on smaller screens and ensure a smooth onboarding process for new users.
-- **Enhance Pieces OS integration with VS Code:** Address pasting delays, implement line-wrapping settings, and ensure the long-term memory engine functions reliably.
-- **Provide clear and concise troubleshooting steps for common issues related to Pieces for Developers and Obsidian integration:** This will empower users to resolve issues independently and reduce support ticket volume.
-- **Consider creating a dedicated FAQ or knowledge base article addressing the top 3 common issues:** This will provide users with easy access to solutions and reduce the need for them to contact support.
-- **Monitor the most active tickets closely and proactively reach out to users experiencing those issues:** This will demonstrate a commitment to resolving critical issues and improve user satisfaction.
-- **Gather more detailed information about the files and folders involved in Pieces for Developers crashes:** This will help developers reproduce the issue and identify the root cause more effectively.
-- **Investigate the possibility of keybinding conflicts in the VS Code extension:** This could be contributing to pasting delays and other performance issues.
-- **Consider conducting user testing to identify and address any usability issues in the onboarding process and VS Code integration:** This will help ensure a smooth and intuitive experience for all users.
+- **Prioritize resolution of Firefox integration issues:** The data shows a recurring and unresolved issue with Firefox integration on Pieces OS, impacting user experience on Windows. Resolving this should be a priority.
+- **Investigate and address Pieces OS onboarding and chat problems:** Multiple users have reported issues with onboarding snippets, demo chats, and chat history. This seems linked to permission errors with the GPT Inference Service and requires immediate attention.
+- **Improve Pieces OS and VS Code extension stability:** Issues like Pieces OS getting stuck, VS extension not working, and processing errors point to stability concerns. Focus on identifying and resolving the root causes of these issues.
+- **Address Pieces for Developers UI/UX issues:** Users have reported specific UI/UX problems, such as unresponsive demo chats and display glitches. Prioritize these fixes to improve user experience.
+- **Review and update documentation for common issues:** Ensure that support documentation and FAQs address the common issues identified, including clear steps for troubleshooting and resolving them.
+- **Gather more detailed user feedback:** Encourage users to provide detailed bug reports, including system information, steps to reproduce the issue, and screenshots. This will aid in faster diagnosis and resolution.
+- **Consider a bug bash event:** Organize a focused bug bash event with internal teams to uncover and address the issues identified in the report and improve overall product quality.
 
 ## Daily Reports
 Here are the daily reports for this week:
