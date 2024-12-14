@@ -1,5 +1,5 @@
 # Support Ticket Report
-- Generated: 2024-12-14 05:05:49
+- Generated: 2024-12-14 13:09:41
 - Period: 2024-12-09 to 2024-12-14
 
 ## Summary
@@ -10,47 +10,47 @@
 ## 5 Most Active Tickets
 | Issue # | Title | Activity Level |
 |---------|-------|----------------|
-| [#474](https://github.com/pieces-app/support/issues/474) | Pieces OS apparently stuck - VS extension not working | 5.58 |
+| [#474](https://github.com/pieces-app/support/issues/474) | Pieces OS apparently stuck - VS extension not working | 5.12 |
 | [#509](https://github.com/pieces-app/support/issues/509) | [Obsidian] | 4.74 |
 | [#499](https://github.com/pieces-app/support/issues/499) | Demo Chat are stuck loading | 4.21 |
 | [#258](https://github.com/pieces-app/support/issues/258) | White screen on Windows 11 | 3.79 |
-| [#504](https://github.com/pieces-app/support/issues/504) | Personalizing during installation broken on macOS 12.7.6 | 3.67 |
+| [#526](https://github.com/pieces-app/support/issues/526) | Can't turn on long term memory engine | 3.50 |
 
 ## Common Issues
-### 1. Pieces OS and Plugin Integration Issues
-Users report Pieces OS not launching or interacting properly with plugins, particularly in Visual Studio and Obsidian. Issues include unresponsive icons, loading errors, and missing features. Troubleshooting involved checking for updates, examining log files, and debugging OS compatibility and network connectivity.
+### 1. Pieces for Developers and Obsidian Integration Issues
+Users are experiencing issues with Pieces for Developers and its integration with Obsidian, including disappearing chat history on restart, loading errors in demo chats, and context errors with Copilot. Troubleshooting steps often involve checking for conflicting plugins, reinstalling Pieces, and ensuring compatibility with the latest Obsidian and Pieces OS versions.
 
 **Related Issues:**
 - [#509](https://github.com/pieces-app/support/issues/509): [Obsidian]
 - [#499](https://github.com/pieces-app/support/issues/499): Demo Chat are stuck loading
-- [#474](https://github.com/pieces-app/support/issues/474): Pieces OS apparently stuck - VS extension not working
+- [#505](https://github.com/pieces-app/support/issues/505): PFD Onboarding: Context exceeded" error on first short message
 
-### 2. Pieces OS stuck and not working
-Users are experiencing issues with Pieces OS getting stuck, the system tray icon not responding, and the VS Code extension not working. This appears to be related to issues with webview port selection and potential conflicts with system configurations. Solutions include updating Pieces OS, checking firewall settings, and ensuring IPv6 compatibility.
+### 2. Pieces OS launch and functionality issues
+Users are experiencing problems with Pieces OS getting stuck, failing to launch, and encountering errors during operation.  This appears related to Visual Studio Extension integration and potential OS conflicts. Proposed solutions include upgrading to the latest Pieces OS and VS Extension versions, checking for OS errors, and contacting support for further assistance.
 
 **Related Issues:**
 - [#526](https://github.com/pieces-app/support/issues/526): Can't turn on long term memory engine
 - [#474](https://github.com/pieces-app/support/issues/474): Pieces OS apparently stuck - VS extension not working
 - [#503](https://github.com/pieces-app/support/issues/503): Something went wrong with processing
 
-### 3. Pieces OS Onboarding Bugs
-Users are experiencing various bugs during the onboarding process, including UI elements being cut off-screen, onboarding snippets and conversations not generating, and "Context exceeded" errors. Proposed solutions involve UI resizing options, investigating data generation issues, and addressing errors related to specific user actions and cloud services.
+### 3. Onboarding Issues in Pieces OS for macOS
+Users reported various issues with the onboarding process on macOS, including interface problems on smaller screens, errors like "Context exceeded" with initial messages, and failure to generate pieces or demo chats after resetting the application. Solutions involved resizing the onboarding window, addressing cloud service permissions, and ensuring complete data deletion before restarting.
 
 **Related Issues:**
 - [#504](https://github.com/pieces-app/support/issues/504): Personalizing during installation broken on macOS 12.7.6
-- [#501](https://github.com/pieces-app/support/issues/501): Onboarding doesn't generate pieces nor demo chats
 - [#505](https://github.com/pieces-app/support/issues/505): PFD Onboarding: Context exceeded" error on first short message
+- [#501](https://github.com/pieces-app/support/issues/501): Onboarding doesn't generate pieces nor demo chats
 
-### 4. Claude LLM Context Exceeded Error
-Users are experiencing "Context exceeded" errors with Claude LLM, particularly on first use or with short messages. This issue is a known bug and is expected to be resolved in the next Pieces OS release, slated for late December 2024 or early January 2025.
+### 4. Pieces OS Integration Issues with VS Code
+Users report various issues with Pieces OS integration in VS Code, including pasting delays, lack of line-wrapping settings, and problems enabling the long-term memory engine. Proposed solutions involve bug fixes, feature implementations, and troubleshooting steps.
 
 **Related Issues:**
-- [#508](https://github.com/pieces-app/support/issues/508): Message exceeded the context limit for claude LLM Issue
-- [#505](https://github.com/pieces-app/support/issues/505): PFD Onboarding: Context exceeded" error on first short message
-- [#502](https://github.com/pieces-app/support/issues/502): Not generating the response
+- [#271](https://github.com/pieces-app/support/issues/271): Pasting in VS Code causes delay
+- [#428](https://github.com/pieces-app/support/issues/428): VSCODE Extension, Pieces Copilot line wrapping setting location or settings.json options??
+- [#526](https://github.com/pieces-app/support/issues/526): Can't turn on long term memory engine
 
-### 5. Pieces Desktop App on Windows: White Screen and Crashes
-Users report white screens or crashes with the Pieces Desktop App on Windows, especially after recent updates. Reinstallation often doesn't resolve the issue. The Pieces team is actively investigating, requesting user logs and local folder information for troubleshooting.  They've suggested live troubleshooting sessions and are working towards a solution.
+### 5. Pieces Desktop App Crashes/White Screen
+Users report Pieces Desktop App on Windows crashing or encountering a white screen on launch. This issue persists across different versions. Proposed solutions include upgrading to the latest version, sharing logs with support, and live debugging sessions with developers to identify the root cause.
 
 **Related Issues:**
 - [#258](https://github.com/pieces-app/support/issues/258): White screen on Windows 11
@@ -59,14 +59,16 @@ Users report white screens or crashes with the Pieces Desktop App on Windows, es
 
 
 ## Recommendations
-- **Address Pieces OS and Plugin Integration Issues:** Prioritize resolving the bugs and compatibility issues between Pieces OS and plugins like Visual Studio and Obsidian. This will improve user experience and reduce the influx of related support tickets.
-- **Improve Pieces OS Stability:** Investigate and address the root causes of Pieces OS getting stuck, system tray icon unresponsiveness, and VS Code extension issues. This may involve focusing on webview port selection, system configuration conflicts, and improving error handling.
-- **Resolve Claude LLM Context Exceeded Error:** Address the "Context exceeded" error with Claude LLM, particularly on first use or with short messages. This is a known issue and should be prioritized for the next Pieces OS release.
-- **Investigate and Resolve Windows Desktop App Issues:** Allocate resources to investigate and fix the white screen crashes and other issues reported by Windows users, especially after recent updates. Gather user logs and local folder information for efficient troubleshooting.
-- **Address Onboarding Bugs:** Debug and resolve the UI and functionality issues during the onboarding process. This includes UI elements being cut off-screen, onboarding snippets and conversations not generating, and "Context exceeded" errors. 
-- **Gather More User Data:** When appropriate, request users to provide more detailed information about their system configuration, Pieces OS version, and steps to reproduce the issue. This will help in faster debugging and resolution.
-- **Proactive Communication:**  Keep users informed about the status of known issues and expected resolution timelines. This can be done through release notes, in-app notifications, or a dedicated page on the Pieces website.
-- **Live Troubleshooting Sessions:** Continue offering live troubleshooting sessions for complex issues that require deeper investigation. This personalized approach can significantly improve user satisfaction and provide valuable insights for the development team.
+- **Prioritize resolving Pieces OS launch and functionality issues:** These issues are causing significant disruption to users and hindering their ability to use Pieces effectively.
+- **Investigate and address the root causes of Pieces Desktop App crashes and white screen errors:** These issues are persistent and frustrating for users, impacting their overall experience.
+- **Improve onboarding experience on macOS:** Address interface problems on smaller screens and ensure a smooth onboarding process for new users.
+- **Enhance Pieces OS integration with VS Code:** Address pasting delays, implement line-wrapping settings, and ensure the long-term memory engine functions reliably.
+- **Provide clear and concise troubleshooting steps for common issues related to Pieces for Developers and Obsidian integration:** This will empower users to resolve issues independently and reduce support ticket volume.
+- **Consider creating a dedicated FAQ or knowledge base article addressing the top 3 common issues:** This will provide users with easy access to solutions and reduce the need for them to contact support.
+- **Monitor the most active tickets closely and proactively reach out to users experiencing those issues:** This will demonstrate a commitment to resolving critical issues and improve user satisfaction.
+- **Gather more detailed information about the files and folders involved in Pieces for Developers crashes:** This will help developers reproduce the issue and identify the root cause more effectively.
+- **Investigate the possibility of keybinding conflicts in the VS Code extension:** This could be contributing to pasting delays and other performance issues.
+- **Consider conducting user testing to identify and address any usability issues in the onboarding process and VS Code integration:** This will help ensure a smooth and intuitive experience for all users.
 
 ## Daily Reports
 Here are the daily reports for this week:
