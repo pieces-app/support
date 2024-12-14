@@ -2,7 +2,7 @@
   "success": true,
   "date_range": {
     "start": "2024-12-09T00:00:00+00:00",
-    "end": "2024-12-13T21:03:09.262445+00:00"
+    "end": "2024-12-14T05:03:11.608241+00:00"
   },
   "summary": {
     "total_tickets": 21,
@@ -11,21 +11,21 @@
   },
   "ticket_breakdown": [
     {
-      "category": "invalid",
-      "received": 1,
-      "resolved": 0,
-      "pending": 1
+      "category": "bug",
+      "received": 6,
+      "resolved": 2,
+      "pending": 4
     },
     {
       "category": "os:windows",
-      "received": 4,
+      "received": 5,
       "resolved": 2,
-      "pending": 2
+      "pending": 3
     },
     {
-      "category": "on the roadmap",
-      "received": 2,
-      "resolved": 0,
+      "category": "status:new",
+      "received": 3,
+      "resolved": 1,
       "pending": 2
     },
     {
@@ -33,12 +33,6 @@
       "received": 14,
       "resolved": 5,
       "pending": 9
-    },
-    {
-      "category": "P1",
-      "received": 1,
-      "resolved": 0,
-      "pending": 1
     },
     {
       "category": "app:pieces os",
@@ -53,16 +47,28 @@
       "pending": 2
     },
     {
-      "category": "app:pieces copilot module",
+      "category": "invalid",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "on the roadmap",
       "received": 2,
       "resolved": 0,
       "pending": 2
     },
     {
-      "category": "bug",
-      "received": 5,
-      "resolved": 2,
-      "pending": 3
+      "category": "P1",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:pieces copilot module",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
     },
     {
       "category": "duplicate",
@@ -123,19 +129,13 @@
       "received": 2,
       "resolved": 2,
       "pending": 0
-    },
-    {
-      "category": "status:new",
-      "received": 2,
-      "resolved": 1,
-      "pending": 1
     }
   ],
   "most_active_tickets": [
     {
       "number": 474,
       "title": "Pieces OS apparently stuck - VS extension not working",
-      "activity_level": 5.24
+      "activity_level": 5.58
     },
     {
       "number": 509,
@@ -156,6 +156,11 @@
       "number": 504,
       "title": "Personalizing during installation broken on macOS 12.7.6",
       "activity_level": 3.67
+    },
+    {
+      "number": 526,
+      "title": "Can't turn on long term memory engine",
+      "activity_level": 3.5
     },
     {
       "number": 501,
@@ -193,19 +198,14 @@
       "activity_level": 2.71
     },
     {
-      "number": 526,
-      "title": "Can't turn on long term memory engine",
-      "activity_level": 2.5
+      "number": 503,
+      "title": "Something went wrong with processing",
+      "activity_level": 2.68
     },
     {
       "number": 272,
       "title": "Crash on clicking on \"Discover Integrations\"",
       "activity_level": 2.22
-    },
-    {
-      "number": 503,
-      "title": "Something went wrong with processing",
-      "activity_level": 2.21
     },
     {
       "number": 502,
@@ -215,7 +215,7 @@
     {
       "number": 267,
       "title": "FireFox not functioning properly under WorkStream Pattern Engine",
-      "activity_level": 2.02
+      "activity_level": 2.01
     },
     {
       "number": 428,
@@ -225,7 +225,7 @@
     {
       "number": 456,
       "title": "Not Working",
-      "activity_level": 1.4
+      "activity_level": 1.7
     },
     {
       "number": 385,
@@ -240,142 +240,140 @@
   ],
   "common_issues": [
     {
-      "title": "Pieces macOS App UI and Feature Issues",
-      "description": "Users report UI glitches, broken features, and loading errors in the Pieces macOS app. Issues include unresponsive elements, off-screen buttons during onboarding, and blank chat windows. Solutions involve bug fixes, UI adjustments for smaller screens, and investigating potential data loading problems.",
+      "title": "Pieces OS and Plugin Integration Issues",
+      "description": "Users report Pieces OS not launching or interacting properly with plugins, particularly in Visual Studio and Obsidian. Issues include unresponsive icons, loading errors, and missing features. Troubleshooting involved checking for updates, examining log files, and debugging OS compatibility and network connectivity.",
       "frequency": 3,
       "related_issues": [
         {
           "id": 509,
           "title": "[Obsidian]",
-          "text": "[Obsidian]\n### Software\n\nObsidian\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n10.1.15\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWhen resizing the right tray, two mysterious icons appear in upper left and lower right\n\nOccurs in both Copilot and Snippets tabs\n\nConfirmed this only happens when Pieces is active in the right tray, not when other plugins are active in the right tray.\n\nhttps://github.com/user-attachments/assets/830457d3-4dfc-44fa-a0dc-3f50ab7ea906\n\n\nObsidian version \n1.7.7\n\nSystem\n```\nModel Name: MacBook Pro\nModel Identifier: MacBookPro18,2\nChip: Apple M1 Max\nTotal Number of Cores: 10 (8 performance and 2 efficiency)\nMemory: 64 GB\nSystem Firmware Version: 10151.101.3\nOS Loader Version: 10151.101.3\n```\n\n\n\n\n\n\n## Summary of GitHub Issue Conversation\n\n**Issue:** The user (@claire-at-pieces) reported an issue with icons appearing in the corner of the copilot.\n\n**Key points raised:**\n\n* User cannot see a video posted by the bot.\n* User is experiencing icons appearing in the corner of the copilot.\n\n**Problems identified:**\n\n* User is concerned about the icons appearing in the copilot.\n* User is unable to view the video for assistance.\n\n**Solutions proposed/implemented:**\n\n* The support bot automatically routes the issue to the relevant Pieces team member.\n* The support team member (@mason-at-pieces) identifies the issue as a known feature and explains its purpose.\n\n**Current status/outcome:**\n\n* The user acknowledges the response and thanks the support team member.\n* The issue appears to be resolved.\n\n**Additional details:**\n\n* The support team member provides helpful resources for future reference.\n* The issue involves the Pieces software.",
+          "text": "[Obsidian]\n### Software\n\nObsidian\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n10.1.15\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWhen resizing the right tray, two mysterious icons appear in upper left and lower right\n\nOccurs in both Copilot and Snippets tabs\n\nConfirmed this only happens when Pieces is active in the right tray, not when other plugins are active in the right tray.\n\nhttps://github.com/user-attachments/assets/830457d3-4dfc-44fa-a0dc-3f50ab7ea906\n\n\nObsidian version \n1.7.7\n\nSystem\n```\nModel Name: MacBook Pro\nModel Identifier: MacBookPro18,2\nChip: Apple M1 Max\nTotal Number of Cores: 10 (8 performance and 2 efficiency)\nMemory: 64 GB\nSystem Firmware Version: 10151.101.3\nOS Loader Version: 10151.101.3\n```\n\n\n\n\n\n\n## GitHub issue conversation summary:\n\n**Key points raised:**\n\n* User `claire-at-pieces` reported an issue with video not showing in Pieces.\n\n**Problems identified:**\n\n* Missing video in the Pieces interface.\n\n**Solutions proposed/implemented:**\n\n* Mason from the Pieces team confirmed that the two icons in the corner of the copilot are expected behavior to indicate its location on the screen.\n\n**Current status/outcome:**\n\n* The user confirmed that the explanation resolved the issue.",
           "activity_level": 4.74
         },
         {
           "id": 499,
           "title": "Demo Chat are stuck loading",
-          "text": "Demo Chat are stuck loading\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n10.1.15\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI set up a demo instance of pieces in a VM to test a bug report, for that purpose I skipped the onboarding completely, since then the demo chats are loading:\n![Image](https://github.com/user-attachments/assets/e4c5b430-b6ad-4a90-a256-b410fcae09e5)\n\nLogs:\npOS: [log-12062024.txt](https://github.com/user-attachments/files/18041156/log-12062024.txt)\nPfD: [log-12062024.txt](https://github.com/user-attachments/files/18041159/log-12062024.txt)\n\npieces are loaded and annotated correctly:\n![Image](https://github.com/user-attachments/assets/fbba8dfd-5872-4ee4-a9e3-31a9a55f0518)\n\n## Summary of GitHub Issue Conversation\n\n**Key Points:**\n\n* User (@hra42) reports empty chats after restarting pOS and PfD.\n* User confirms chats function normally aside from being empty.\n* User is using a macOS VM in Parallels on an MBP 2023.\n\n**Problems:**\n\n* Demo conversations are not loading correctly.\n* This issue likely stems from a failure during the creation of demo conversations.\n\n**Solutions:**\n\n* Developer (@mack-at-pieces) plans to investigate the issue further.\n* User is requested to provide additional information about the VM setup and configuration.\n\n**Current Status:**\n\n* The issue is under investigation.\n* No solution has been implemented yet.\n\n**Outcome:**\n\n* The outcome is currently unknown.\n\n**Additional Notes:**\n\n* The user is using resources like `brew` to install and run Pieces.\n* The user has reviewed similar issues for reference.\n\nI hope this concise summary effectively captures the key points of the conversation. Please let me know if you have any other questions.",
+          "text": "Demo Chat are stuck loading\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n10.1.15\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI set up a demo instance of pieces in a VM to test a bug report, for that purpose I skipped the onboarding completely, since then the demo chats are loading:\n![Image](https://github.com/user-attachments/assets/e4c5b430-b6ad-4a90-a256-b410fcae09e5)\n\nLogs:\npOS: [log-12062024.txt](https://github.com/user-attachments/files/18041156/log-12062024.txt)\nPfD: [log-12062024.txt](https://github.com/user-attachments/files/18041159/log-12062024.txt)\n\npieces are loaded and annotated correctly:\n![Image](https://github.com/user-attachments/assets/fbba8dfd-5872-4ee4-a9e3-31a9a55f0518)\n\n## Summary of GitHub Issue Conversation\n\n**Key points raised:**\n\n* User hra42 reports that their chat history in Pieces is empty after restarting the pOS and PfD.\n* The issue only appears after a restart.\n* Chat functionality seems to be working correctly after the restart.\n\n**Problems identified:**\n\n* Chat history disappears after restarting pOS and PfD.\n* The root cause of the problem is unclear.\n\n**Solutions proposed/implemented:**\n\n* Mack-at-pieces, a Pieces team member, will investigate the issue further.\n* The user is requested to provide additional information about their VM setup.\n\n**Current status/outcome:**\n\n* The issue is under investigation.\n\n**Additional notes:**\n\n* The user was provided with links to helpful resources.\n* The conversation took place between December 6, 2024 and December 9, 2024.",
           "activity_level": 4.21
-        },
-        {
-          "id": 504,
-          "title": "Personalizing during installation broken on macOS 12.7.6",
-          "text": "Personalizing during installation broken on macOS 12.7.6\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n3.2.4\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nAfter installing, I get a screen to personalize my experience, but there's no way to continue after that:\n\n![Image](https://github.com/user-attachments/assets/1aa336e7-b02d-4b6c-8bcc-899cd4dc9679)\n\n## Summary of GitHub Issue Conversation:\n\n**Key Points:**\n\n* User (@killerog) reported an interface bug preventing them from proceeding on a small screen (11-inch MacBook Air).\n* The issue appears to be due to Pieces not handling window resizing during onboarding.\n* User was able to bypass the issue by tabbing and guessing the location of a hidden \"next\" button.\n\n**Problems:**\n\n* Interface element (likely a \"next\" button) positioned off-screen on smaller displays, blocking progress.\n* Pieces does not account for window resizing during onboarding, causing layout issues on small screens.\n\n**Solutions:**\n\n* **Proposed:** User suggested implementing window resizing during onboarding.\n* **Implemented:** Pieces developers confirmed a fix will be included in the next release, allowing window resizing during onboarding.\n\n**Current Status/Outcome:**\n\n* Issue marked as a duplicate of #470.\n* Fix confirmed for upcoming release.\n* Developers requested additional details on user's display size and resolution. \n\n**Additional Notes:**\n\n* User provided a workaround using the tab key to navigate past the off-screen element. \n* Developers acknowledged the issue and thanked the user for reporting it.",
-          "activity_level": 3.67
-        }
-      ]
-    },
-    {
-      "title": "Pieces OS and VS Code Integration Issues",
-      "description": "Users report delays, errors, and integration problems between Pieces OS and VS Code. This includes the OS getting stuck, extensions not working, and pasting delays. Troubleshooting involved updating the VS Code extension and Pieces OS, checking for conflicts, and examining log files. However, some users still face unresolved issues requiring further debugging and investigation by the Pieces team.",
-      "frequency": 3,
-      "related_issues": [
-        {
-          "id": 271,
-          "title": "Pasting in VS Code causes delay",
-          "text": "Pasting in VS Code causes delay\n### Software\r\n\r\nVS Code\r\n\r\n### Operating System / Platform\r\n\r\nWindows\r\n\r\n### Your Pieces OS Version\r\n\r\n9.0.7\r\n\r\n### Early Access Program\r\n\r\n- [ ] Yes, this is related to an Early Access Program feature.\r\n\r\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\r\n\r\nSometimes I notice pasting in VS Code causes a delay of around 2-5 seconds. When I disable Pieces it no longer occurs. Specifically, it is pasting anywhere within the code, not necessarily inside the chat assistant. If it happens frequently, I am forced to turn off pieces, otherwise workflow is significantly disrupted.\nError generating summary: 503 recvmsg:Connection reset by peer",
-          "activity_level": 2.82
         },
         {
           "id": 474,
           "title": "Pieces OS apparently stuck - VS extension not working",
-          "text": "Pieces OS apparently stuck - VS extension not working\n### Software\n\nPieces OS, Visual Studio\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n10.1.14.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nHi, I have just installed Pieces on my Windows 11 laptop and I'm experiencing some problems, specifically with Pieces OS and the Visual Studio extension.\nSomehow, the desktop app works fine.\n\nPieces OS seems stuck in the system tray. Every time I click it, a \"Sentry Error Event\" appears in the log file and the application doesn't do anything.\nAt the same time, the Visual Studio extension shows a window saying that Pieces OS is not running. If I click on the launch button, a \"route not found\" message appears for a moment and then the \"Pieces OS is not running\" message comes back.\n\nI checked for updates on the Pieces Suite app, but there are no update.\n\nI'm attaching the log file and the response of the http://localhost:1000/applications url. I tried navigating manually to the url opened by the launch button in Visual Studio [(url)](http://localhost:1000/?application=%7B%22name%22%3A%22VISUAL_STUDIO%22%2C%22platform%22%3A%22WINDOWS%22%2C%22privacy%22%3A%22OPEN%22%2C%22capabilities%22%3A%22BLENDED%22%2C%22mechanism%22%3A%22MANUAL%22%2C%22schema%22%3A%7B%22semantic%22%3A%22MAJOR_0_MINOR_0_PATCH_1%22%2C%22migration%22%3A0%7D%2C%22id%22%3A%229ab3c1de-0625-408e-8d42-8e2c48e11d0c%22%2C%22version%22%3A%223.0.0%22%2C%22onboarded%22%3Afalse%2C%22automaticUnload%22%3Afalse%7D&capabilities=1048575&theme=%7B%22darkMode%22%3Atrue%2C%22scaffoldBackgroundColor%22%3A-14737633%2C%22primary%22%3A-328966%2C%22secondary%22%3A-14737633%2C%22onPrimary%22%3A-10724260%2C%22onSecondary%22%3A-328966%2C%22primaryContainer%22%3A-13421773%2C%22surface%22%3A-13750738%2C%22onSurface%22%3A-328966%2C%22error%22%3A-934979%2C%22onError%22%3A-1%7D) and the response is \"Route not found\".\n\nThank you in advance.\n\n[log-11252024.txt](https://github.com/user-attachments/files/17903747/log-11252024.txt)\n[applications.txt](https://github.com/user-attachments/files/17903752/applications.txt)\n\n## Summary of GitHub Issue Conversation\n\n**Key Points Raised:**\n\n* Andrea3i reported that the OS toolbar is not launching, and they tried various launch methods.\n* sam-p-at-pieces suspected the issue was related to the Visual Studio plugin.\n* robert-at-pieces identified the problem as an issue with the Visual Studio plugin and Pieces OS versions.\n\n**Problems:**\n\n* OS toolbar not launching.\n* Pieces OS restarting on its own.\n* New log file shows issues with applets.\n\n**Solutions:**\n\n* Visual Studio plugin version 3.0.1 released to resolve UI thread hang.\n* Pieces OS version 10.1.15 released to change how ports are chosen for tool window integrations.\n\n**Current Status/Outcome:**\n\n* Solutions have not resolved Andrea3i's issues.\n* Further debugging scheduled to identify the root cause.\n* OS error code retrieval necessary for diagnosis.\n* Potential problems include lack of IPv6 support, firewall restrictions, account permission/group policy restrictions.\n\n**Next Steps:**\n\n* Andrea3i needs to schedule debugging time with engineers.\n* Troubleshooting will involve running a utility to retrieve OS error code.\n* Outcome will likely provide insights into the root cause and lead to a definitive solution.",
-          "activity_level": 5.24
-        },
-        {
-          "id": 500,
-          "title": "I'am sorry Something went wrong with processing. please wait a few seconds and try again or contact support@pieces.app",
-          "text": "I'am sorry Something went wrong with processing. please wait a few seconds and try again or contact support@pieces.app\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n10.1.15\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nthe ChatGpt does not work but with other Gemini works I had faced this before also after trying different solutions  I formatted my laptop by installing new windows, and it worked for 4 days after that, with the same issue please fix this issue. end semester exams are near we need ChatGPT\n\nyes Gemini works but it sucks ChatGPT is best \n\n **please fix this issue**\n\nThank You \n### pieces information\n![Image](https://github.com/user-attachments/assets/e95be432-efd0-42e6-b789-2aac6b6dab35)\n\n### The Bug/ issue\n![Image](https://github.com/user-attachments/assets/49aa784e-24b1-46dc-b182-a7d3484ba42b)\n\n## Summary of GitHub Issue\n\n**Key points raised:**\n\n* User, Kiran-Jadhav200, is experiencing the \"Something went wrong with the processing\" error when using the Pieces App.\n* hra42 suggests this issue might be a duplicate of #471.\n\n**Problems identified:**\n\n* The Pieces App is throwing an error message, preventing the user from using the app effectively.\n\n**Solutions proposed/implemented:**\n\n* hra42 suggests pasting a specific URL into a browser while the PiecesOS is running to gather information about the issue.\n* Mark closes the issue as a duplicate, implying that a solution for the original issue (#471) might also resolve this issue.\n\n**Current status/outcome:**\n\n* The issue is closed, relying on the solution for the duplicate issue (#471).\n\n**Additional notes:**\n\n* The user did not provide any information about the specific steps taken that led to the error. \n* The user did not receive any response after sending the requested information to mark@pieces.app.",
-          "activity_level": 2.84
+          "text": "Pieces OS apparently stuck - VS extension not working\n### Software\n\nPieces OS, Visual Studio\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n10.1.14.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nHi, I have just installed Pieces on my Windows 11 laptop and I'm experiencing some problems, specifically with Pieces OS and the Visual Studio extension.\nSomehow, the desktop app works fine.\n\nPieces OS seems stuck in the system tray. Every time I click it, a \"Sentry Error Event\" appears in the log file and the application doesn't do anything.\nAt the same time, the Visual Studio extension shows a window saying that Pieces OS is not running. If I click on the launch button, a \"route not found\" message appears for a moment and then the \"Pieces OS is not running\" message comes back.\n\nI checked for updates on the Pieces Suite app, but there are no update.\n\nI'm attaching the log file and the response of the http://localhost:1000/applications url. I tried navigating manually to the url opened by the launch button in Visual Studio [(url)](http://localhost:1000/?application=%7B%22name%22%3A%22VISUAL_STUDIO%22%2C%22platform%22%3A%22WINDOWS%22%2C%22privacy%22%3A%22OPEN%22%2C%22capabilities%22%3A%22BLENDED%22%2C%22mechanism%22%3A%22MANUAL%22%2C%22schema%22%3A%7B%22semantic%22%3A%22MAJOR_0_MINOR_0_PATCH_1%22%2C%22migration%22%3A0%7D%2C%22id%22%3A%229ab3c1de-0625-408e-8d42-8e2c48e11d0c%22%2C%22version%22%3A%223.0.0%22%2C%22onboarded%22%3Afalse%2C%22automaticUnload%22%3Afalse%7D&capabilities=1048575&theme=%7B%22darkMode%22%3Atrue%2C%22scaffoldBackgroundColor%22%3A-14737633%2C%22primary%22%3A-328966%2C%22secondary%22%3A-14737633%2C%22onPrimary%22%3A-10724260%2C%22onSecondary%22%3A-328966%2C%22primaryContainer%22%3A-13421773%2C%22surface%22%3A-13750738%2C%22onSurface%22%3A-328966%2C%22error%22%3A-934979%2C%22onError%22%3A-1%7D) and the response is \"Route not found\".\n\nThank you in advance.\n\n[log-11252024.txt](https://github.com/user-attachments/files/17903747/log-11252024.txt)\n[applications.txt](https://github.com/user-attachments/files/17903752/applications.txt)\n\n## Summary of GitHub Issue Conversation\n\n**Problem:** The user (@Andrea3i) is experiencing issues with the Pieces OS toolbar not launching, regardless of how it's initiated: through Visual Studio, the desktop app, or automatic launch.\n\n**Key Points:**\n\n* User reported the issue with two Sentry links.\n* @sam-p-at-pieces asked @robert-at-pieces for insights.\n* @robert-at-pieces identified potential issues with both Visual Studio plugin and Pieces OS.\n* @robert-at-pieces suggested a P0 fix for the Visual Studio plugin and a Pieces OS update.\n* @Andrea3i reported the issue persists after updates, including the system tray icon not responding and Pieces OS restarting unexpectedly.\n* @mark-at-pieces suggested scheduling time for further debugging.\n* @robert-at-pieces provided more context on the issue, including the need to identify the underlying OS error code.\n* Possible causes include lack of IPv6 support, firewall restrictions, permission issues, etc.\n\n**Solutions:**\n\n* P0 fix for the Visual Studio plugin released.\n* Update to Pieces OS with changes to webview port selection released.\n* Further debugging scheduled to identify the root cause by running a specific utility.\n\n**Current Status:**\n\n* The issue persists after initial fixes.\n* Debugging scheduled to identify the OS error code.\n\n**Outcome:**\n\n* Pending further investigation and resolution.",
+          "activity_level": 5.58
         }
       ]
     },
     {
-      "title": "Onboarding Issues in Pieces OS",
-      "description": "Users are experiencing issues with the onboarding process in Pieces OS, including blank demo chats, failure to generate onboarding snippets, and 'Context Exceeded' errors. These issues seem to occur due to incomplete resets or conflicts with existing data. Solutions involve ensuring both the database and the 'com.pieces.pfd' folder are deleted during a reset and waiting for bug fixes in upcoming releases.",
+      "title": "Pieces OS stuck and not working",
+      "description": "Users are experiencing issues with Pieces OS getting stuck, the system tray icon not responding, and the VS Code extension not working. This appears to be related to issues with webview port selection and potential conflicts with system configurations. Solutions include updating Pieces OS, checking firewall settings, and ensuring IPv6 compatibility.",
       "frequency": 3,
       "related_issues": [
         {
-          "id": 501,
-          "title": "Onboarding doesn't generate pieces nor demo chats",
-          "text": "Onboarding doesn't generate pieces nor demo chats\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n15.1.15\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWhen I reset pieces (deleting the com.pieces.os and com.pieces.pfd folder) and restart the onboarding with the following parameters:\n```\n language: Go,  \n persona: Engineering Leader,  \n experience: 3-5,  \n developer Types: DB Eng, System Admin, Network Eng, DevOps, ML Eng, Back-End\n```\n\nThe onboarding didn't generate any pieces nor demo chats:\n![Image](https://github.com/user-attachments/assets/43e7a826-7635-47cd-b2fe-f2cc7ed4a676)\n![Image](https://github.com/user-attachments/assets/ffb71d2f-6f6d-41c4-84a1-3d85773c3525)\n\nThe demo prompts doesn't reflect my choices either:\n![Image](https://github.com/user-attachments/assets/5d52c78b-f151-4aca-88e6-f4fc0b7fa128)\n\nLogs:\npOS: [log-12072024.txt](https://github.com/user-attachments/files/18047726/log-12072024.txt)\nPfD: [log-12072024.txt](https://github.com/user-attachments/files/18047725/log-12072024.txt)\n\n## GitHub Issue Conversation Summary\n\n**Key Points:**\n\n* User @hra42 reported an issue with the onboarding process.\n* The issue involved skipping the generation of onboarding snippets and conversations.\n* The user had deleted their local database but not the `com.pieces.pfd` folder.\n\n**Problems Identified:**\n\n* A bug was identified where deleting the local database but not the `com.pieces.pfd` folder would cause the onboarding process to skip generating snippets and conversations.\n* Additionally, the user encountered a `PERMISSION_DENIED` error with the cloud services.\n\n**Solutions Proposed/Implemented:**\n\n* The user was advised to delete both the local database and the `com.pieces.pfd` folder.\n* The `PERMISSION_DENIED` error was investigated and likely resolved by the Pieces team.\n\n**Current Status/Outcome:**\n\n* The issue appears to be resolved, but further confirmation is needed from the user.\n\n**Additional Notes:**\n\n* The issue was identified and addressed within two days.\n* The Pieces team provided helpful resources and support to the user.",
-          "activity_level": 3.47
+          "id": 526,
+          "title": "Can't turn on long term memory engine",
+          "text": "Can't turn on long term memory engine\n### Software\n\nDesktop Application, Pieces OS, VS Code\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n10.1.15\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\ni keep clicking on the button but the ltm engine wont turn on\n![Image](https://github.com/user-attachments/assets/d91ee8ce-b8e1-4f28-9785-02d488d88775)\n\n## GitHub Issue Conversation Summary\n\n**Key points raised:**\n\n* User is experiencing issues with Pieces OS being stuck and the VS extension not working.\n\n**Problems identified:**\n\n* The user's issue seems to be similar to other reported issues with Pieces OS getting stuck.\n\n**Solutions proposed/implemented:**\n\n* The support bot provided links to related issues and helpful resources, suggesting the user check these before further engagement.\n\n**Current status/outcome:**\n\n* The issue was automatically triaged and routed to the proper Pieces team member for further follow-up within 24 hours.\n* No solution implemented yet.\n\n**Additional notes:**\n\n* The issue was created on December 13, 2024.\n\nI hope this concise summary is helpful. Please let me know if you have any other questions.",
+          "activity_level": 3.5
         },
         {
-          "id": 499,
-          "title": "Demo Chat are stuck loading",
-          "text": "Demo Chat are stuck loading\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n10.1.15\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI set up a demo instance of pieces in a VM to test a bug report, for that purpose I skipped the onboarding completely, since then the demo chats are loading:\n![Image](https://github.com/user-attachments/assets/e4c5b430-b6ad-4a90-a256-b410fcae09e5)\n\nLogs:\npOS: [log-12062024.txt](https://github.com/user-attachments/files/18041156/log-12062024.txt)\nPfD: [log-12062024.txt](https://github.com/user-attachments/files/18041159/log-12062024.txt)\n\npieces are loaded and annotated correctly:\n![Image](https://github.com/user-attachments/assets/fbba8dfd-5872-4ee4-a9e3-31a9a55f0518)\n\n## Summary of GitHub Issue Conversation\n\n**Key Points:**\n\n* User (@hra42) reports empty chats after restarting pOS and PfD.\n* User confirms chats function normally aside from being empty.\n* User is using a macOS VM in Parallels on an MBP 2023.\n\n**Problems:**\n\n* Demo conversations are not loading correctly.\n* This issue likely stems from a failure during the creation of demo conversations.\n\n**Solutions:**\n\n* Developer (@mack-at-pieces) plans to investigate the issue further.\n* User is requested to provide additional information about the VM setup and configuration.\n\n**Current Status:**\n\n* The issue is under investigation.\n* No solution has been implemented yet.\n\n**Outcome:**\n\n* The outcome is currently unknown.\n\n**Additional Notes:**\n\n* The user is using resources like `brew` to install and run Pieces.\n* The user has reviewed similar issues for reference.\n\nI hope this concise summary effectively captures the key points of the conversation. Please let me know if you have any other questions.",
-          "activity_level": 4.21
+          "id": 474,
+          "title": "Pieces OS apparently stuck - VS extension not working",
+          "text": "Pieces OS apparently stuck - VS extension not working\n### Software\n\nPieces OS, Visual Studio\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n10.1.14.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nHi, I have just installed Pieces on my Windows 11 laptop and I'm experiencing some problems, specifically with Pieces OS and the Visual Studio extension.\nSomehow, the desktop app works fine.\n\nPieces OS seems stuck in the system tray. Every time I click it, a \"Sentry Error Event\" appears in the log file and the application doesn't do anything.\nAt the same time, the Visual Studio extension shows a window saying that Pieces OS is not running. If I click on the launch button, a \"route not found\" message appears for a moment and then the \"Pieces OS is not running\" message comes back.\n\nI checked for updates on the Pieces Suite app, but there are no update.\n\nI'm attaching the log file and the response of the http://localhost:1000/applications url. I tried navigating manually to the url opened by the launch button in Visual Studio [(url)](http://localhost:1000/?application=%7B%22name%22%3A%22VISUAL_STUDIO%22%2C%22platform%22%3A%22WINDOWS%22%2C%22privacy%22%3A%22OPEN%22%2C%22capabilities%22%3A%22BLENDED%22%2C%22mechanism%22%3A%22MANUAL%22%2C%22schema%22%3A%7B%22semantic%22%3A%22MAJOR_0_MINOR_0_PATCH_1%22%2C%22migration%22%3A0%7D%2C%22id%22%3A%229ab3c1de-0625-408e-8d42-8e2c48e11d0c%22%2C%22version%22%3A%223.0.0%22%2C%22onboarded%22%3Afalse%2C%22automaticUnload%22%3Afalse%7D&capabilities=1048575&theme=%7B%22darkMode%22%3Atrue%2C%22scaffoldBackgroundColor%22%3A-14737633%2C%22primary%22%3A-328966%2C%22secondary%22%3A-14737633%2C%22onPrimary%22%3A-10724260%2C%22onSecondary%22%3A-328966%2C%22primaryContainer%22%3A-13421773%2C%22surface%22%3A-13750738%2C%22onSurface%22%3A-328966%2C%22error%22%3A-934979%2C%22onError%22%3A-1%7D) and the response is \"Route not found\".\n\nThank you in advance.\n\n[log-11252024.txt](https://github.com/user-attachments/files/17903747/log-11252024.txt)\n[applications.txt](https://github.com/user-attachments/files/17903752/applications.txt)\n\n## Summary of GitHub Issue Conversation\n\n**Problem:** The user (@Andrea3i) is experiencing issues with the Pieces OS toolbar not launching, regardless of how it's initiated: through Visual Studio, the desktop app, or automatic launch.\n\n**Key Points:**\n\n* User reported the issue with two Sentry links.\n* @sam-p-at-pieces asked @robert-at-pieces for insights.\n* @robert-at-pieces identified potential issues with both Visual Studio plugin and Pieces OS.\n* @robert-at-pieces suggested a P0 fix for the Visual Studio plugin and a Pieces OS update.\n* @Andrea3i reported the issue persists after updates, including the system tray icon not responding and Pieces OS restarting unexpectedly.\n* @mark-at-pieces suggested scheduling time for further debugging.\n* @robert-at-pieces provided more context on the issue, including the need to identify the underlying OS error code.\n* Possible causes include lack of IPv6 support, firewall restrictions, permission issues, etc.\n\n**Solutions:**\n\n* P0 fix for the Visual Studio plugin released.\n* Update to Pieces OS with changes to webview port selection released.\n* Further debugging scheduled to identify the root cause by running a specific utility.\n\n**Current Status:**\n\n* The issue persists after initial fixes.\n* Debugging scheduled to identify the OS error code.\n\n**Outcome:**\n\n* Pending further investigation and resolution.",
+          "activity_level": 5.58
+        },
+        {
+          "id": 503,
+          "title": "Something went wrong with processing",
+          "text": "Something went wrong with processing\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nPieces OS 10.1.15\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nAny answer gives an error. This problem is the second day.\n![Image](https://github.com/user-attachments/assets/e237c726-ab1e-4c81-9c2e-706b2aee0675)\n\n## GitHub Issue Conversation Summary\n\n**Key Points:**\n\n* User @AndreyPLtn reported an issue with Pieces OS and the Visual Studio extension.\n* The issue was automatically triaged and routed to the Pieces team.\n* Related issues and resources were suggested to the user.\n* @mark-at-pieces suggested the issue might be a duplicate of another one.\n\n**Problems Identified:**\n\n* Unhandled exception and processing errors in Pieces OS and Visual Studio extension.\n\n**Solutions Proposed/Implemented:**\n\n* Investigate the issue and provide a resolution.\n* The user was directed to another issue that might be related.\n\n**Current Status/Outcome:**\n\n* The issue is being reviewed. The user was directed to another issue for potential solutions.\n\n**Additional Notes:**\n\n* There is no information available on the outcome of the linked issue or any further updates on this issue.",
+          "activity_level": 2.68
+        }
+      ]
+    },
+    {
+      "title": "Pieces OS Onboarding Bugs",
+      "description": "Users are experiencing various bugs during the onboarding process, including UI elements being cut off-screen, onboarding snippets and conversations not generating, and \"Context exceeded\" errors. Proposed solutions involve UI resizing options, investigating data generation issues, and addressing errors related to specific user actions and cloud services.",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 504,
+          "title": "Personalizing during installation broken on macOS 12.7.6",
+          "text": "Personalizing during installation broken on macOS 12.7.6\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n3.2.4\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nAfter installing, I get a screen to personalize my experience, but there's no way to continue after that:\n\n![Image](https://github.com/user-attachments/assets/1aa336e7-b02d-4b6c-8bcc-899cd4dc9679)\n\n## Summary of GitHub Issue Conversation\n\n**Key points:**\n\n* This is a bug report about a UI element being cut off screen on Macbook Air 11 inch.\n* User was able to bypass the issue by tabbing through the elements.\n* This appears to be a duplicate of issue #470.\n\n**Problems identified:**\n\n* UI element positioned off-screen for users with smaller displays.\n* User interface is not resizable during onboarding process.\n\n**Solutions proposed/implemented:**\n\n* Next release will allow for window resizing during onboarding.\n\n**Current status/outcome:**\n\n* Issue has been acknowledged and a solution is planned for the next release.\n* The user's system display size & resolution is requested for further investigation.\n\n**Additional notes:**\n\n* This is an interface bug likely related to the lack of display size considerations for smaller devices.\n* It can be bypassed by tabbing through the elements, however this is not an ideal solution.\n\n## Overall, the issue has been identified, acknowledged, and a fix is planned for a future release. The user's input has helped to identify the problem and prioritize a solution.",
+          "activity_level": 3.67
+        },
+        {
+          "id": 501,
+          "title": "Onboarding doesn't generate pieces nor demo chats",
+          "text": "Onboarding doesn't generate pieces nor demo chats\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n15.1.15\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWhen I reset pieces (deleting the com.pieces.os and com.pieces.pfd folder) and restart the onboarding with the following parameters:\n```\n language: Go,  \n persona: Engineering Leader,  \n experience: 3-5,  \n developer Types: DB Eng, System Admin, Network Eng, DevOps, ML Eng, Back-End\n```\n\nThe onboarding didn't generate any pieces nor demo chats:\n![Image](https://github.com/user-attachments/assets/43e7a826-7635-47cd-b2fe-f2cc7ed4a676)\n![Image](https://github.com/user-attachments/assets/ffb71d2f-6f6d-41c4-84a1-3d85773c3525)\n\nThe demo prompts doesn't reflect my choices either:\n![Image](https://github.com/user-attachments/assets/5d52c78b-f151-4aca-88e6-f4fc0b7fa128)\n\nLogs:\npOS: [log-12072024.txt](https://github.com/user-attachments/files/18047726/log-12072024.txt)\nPfD: [log-12072024.txt](https://github.com/user-attachments/files/18047725/log-12072024.txt)\n\n## GitHub Issue Summary\n\n**Key points raised:**\n\n* User @hra42 experienced a bug where onboarding snippets and conversations were not generated after deleting the local database and completing onboarding.\n* @mark-at-pieces identified a potential bug related to existing users with specific folder deletion and onboarding steps.\n\n**Problems identified:**\n\n* Onboarding snippets and conversations were not generated for users who followed specific steps after deleting the local database.\n* A PERMISSION_DENIED error occurred with cloud services.\n\n**Solutions proposed/implemented:**\n\n* Investigate the cause of the bug and implement a fix.\n* Address the PERMISSION_DENIED error.\n\n**Current status/outcome:**\n\n* The issue is currently under investigation. \n\n**Additional notes:**\n\n* @mark-at-pieces and @mack-at-pieces are collaborating on the investigation and resolution. \n\n***",
+          "activity_level": 3.47
         },
         {
           "id": 505,
           "title": "PFD Onboarding: Context exceeded\" error on first short message",
-          "text": "PFD Onboarding: Context exceeded\" error on first short message\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n10.1.15\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nOn first use of PFD v. 3.2.4 after completing the install wizard, I get a \"Context exceeded\" error with a short message to copilot in empty chat using (using default model `Claude Sonnet 3.5`) \n\nRepro \n1. fresh install of PDF on MacOS\n2. complete wizard with defaults\n3. in chat opened on load, ask default model Claude Sonnet 3.5 \"Yo world\"\n\nMay be related to #487 , but creating separate issue as it relates to onboarding\n\nhttps://github.com/user-attachments/assets/481c3e22-5e84-436d-b81a-4f8bfdc88083\n\n## GitHub Issue Conversation Summary\n\n**Key Points:**\n\n* User (@claire-at-pieces) reported an issue.\n* The issue was automatically triaged and assigned to a Pieces team member.\n* User was directed to related issues and helpful resources.\n* @mark-at-pieces identified the issue as a duplicate of another issue.\n* The issue will be resolved in the next PiecesOS release.\n\n**Problems Identified:**\n\n* The user encountered an issue and needed assistance.\n\n**Solutions Proposed/Implemented:**\n\n* The issue was identified as a duplicate and marked as resolved.\n\n**Current Status/Outcome:**\n\n* The issue is closed and will be fixed in the next PiecesOS release.\n\n**Additional Notes:**\n\n* The user was provided with links to related issues, documentation, and a YouTube channel.",
+          "text": "PFD Onboarding: Context exceeded\" error on first short message\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n10.1.15\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nOn first use of PFD v. 3.2.4 after completing the install wizard, I get a \"Context exceeded\" error with a short message to copilot in empty chat using (using default model `Claude Sonnet 3.5`) \n\nRepro \n1. fresh install of PDF on MacOS\n2. complete wizard with defaults\n3. in chat opened on load, ask default model Claude Sonnet 3.5 \"Yo world\"\n\nMay be related to #487 , but creating separate issue as it relates to onboarding\n\nhttps://github.com/user-attachments/assets/481c3e22-5e84-436d-b81a-4f8bfdc88083\n\n## GitHub Issue Conversation Summary\n\n**Key Points:**\n\n* User claire-at-pieces reported an issue with Copilot.\n* The issue was automatically triaged and routed to the Pieces team.\n* mark-at-pieces identified the issue as a duplicate of another reported issue.\n* The issue will be resolved in the next release of PiecesOS.\n\n**Problems Identified:**\n\n* Copilot was experiencing issues.\n\n**Solutions Proposed/Implemented:**\n\n* The issue will be fixed in the next release of PiecesOS.\n\n**Current Status/Outcome:**\n\n* The issue is identified and will be fixed in a future release.",
           "activity_level": 3.03
         }
       ]
     },
     {
-      "title": "Pieces OS and VS Code Extension Connection Issues",
-      "description": "Users report Pieces OS failing to launch or connect with the VS Code extension. This might manifest as a stuck loading screen or error messages. Troubleshooting steps include checking for updates, examining log files, and ensuring Pieces OS is running. Solutions involve updating the VS Code extension or Pieces OS to the latest version.",
+      "title": "Claude LLM Context Exceeded Error",
+      "description": "Users are experiencing \"Context exceeded\" errors with Claude LLM, particularly on first use or with short messages. This issue is a known bug and is expected to be resolved in the next Pieces OS release, slated for late December 2024 or early January 2025.",
       "frequency": 3,
       "related_issues": [
         {
-          "id": 526,
-          "title": "Can't turn on long term memory engine",
-          "text": "Can't turn on long term memory engine\n### Software\n\nDesktop Application, Pieces OS, VS Code\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n10.1.15\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\ni keep clicking on the button but the ltm engine wont turn on\n![Image](https://github.com/user-attachments/assets/d91ee8ce-b8e1-4f28-9785-02d488d88775)\n\nNo comments found on this issue.",
-          "activity_level": 2.5
+          "id": 508,
+          "title": "Message exceeded the context limit for claude LLM Issue",
+          "text": "Message exceeded the context limit for claude LLM Issue\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nLinux\n\n### Your Pieces OS Version\n\nPieces OS 10.1.15\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n![Image](https://github.com/user-attachments/assets/262696c2-c641-4337-9966-abdc4fb18739)\nI'm getting this error every time I try to use the Claude LLM. What's the problem?\n## Conversation Summary:\n\n**Key Points:**\n\n* The user reported an issue with getting a \"PFD Onboarding: Context exceeded\" error on first short message.\n* Support bot responded with potential solutions and helpful resources.\n* Mark, a member of the Pieces team, identified this issue as a duplicate of https://github.com/pieces-app/support/issues/487 and closed the issue.\n* The issue should be resolved in the next release (late December 2024 or early January 2025).\n\n**Problems Identified:**\n\n* User encountered a \"PFD Onboarding: Context exceeded\" error on first short message.\n\n**Solutions Proposed/Implemented:**\n\n* Mark closed the issue as a duplicate and mentioned it would be resolved in the next release.\n\n**Current Status/Outcome:**\n\n* Issue closed as a duplicate.\n* Fix expected in late December 2024 or early January 2025 release.",
+          "activity_level": 3.01
         },
         {
-          "id": 474,
-          "title": "Pieces OS apparently stuck - VS extension not working",
-          "text": "Pieces OS apparently stuck - VS extension not working\n### Software\n\nPieces OS, Visual Studio\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n10.1.14.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nHi, I have just installed Pieces on my Windows 11 laptop and I'm experiencing some problems, specifically with Pieces OS and the Visual Studio extension.\nSomehow, the desktop app works fine.\n\nPieces OS seems stuck in the system tray. Every time I click it, a \"Sentry Error Event\" appears in the log file and the application doesn't do anything.\nAt the same time, the Visual Studio extension shows a window saying that Pieces OS is not running. If I click on the launch button, a \"route not found\" message appears for a moment and then the \"Pieces OS is not running\" message comes back.\n\nI checked for updates on the Pieces Suite app, but there are no update.\n\nI'm attaching the log file and the response of the http://localhost:1000/applications url. I tried navigating manually to the url opened by the launch button in Visual Studio [(url)](http://localhost:1000/?application=%7B%22name%22%3A%22VISUAL_STUDIO%22%2C%22platform%22%3A%22WINDOWS%22%2C%22privacy%22%3A%22OPEN%22%2C%22capabilities%22%3A%22BLENDED%22%2C%22mechanism%22%3A%22MANUAL%22%2C%22schema%22%3A%7B%22semantic%22%3A%22MAJOR_0_MINOR_0_PATCH_1%22%2C%22migration%22%3A0%7D%2C%22id%22%3A%229ab3c1de-0625-408e-8d42-8e2c48e11d0c%22%2C%22version%22%3A%223.0.0%22%2C%22onboarded%22%3Afalse%2C%22automaticUnload%22%3Afalse%7D&capabilities=1048575&theme=%7B%22darkMode%22%3Atrue%2C%22scaffoldBackgroundColor%22%3A-14737633%2C%22primary%22%3A-328966%2C%22secondary%22%3A-14737633%2C%22onPrimary%22%3A-10724260%2C%22onSecondary%22%3A-328966%2C%22primaryContainer%22%3A-13421773%2C%22surface%22%3A-13750738%2C%22onSurface%22%3A-328966%2C%22error%22%3A-934979%2C%22onError%22%3A-1%7D) and the response is \"Route not found\".\n\nThank you in advance.\n\n[log-11252024.txt](https://github.com/user-attachments/files/17903747/log-11252024.txt)\n[applications.txt](https://github.com/user-attachments/files/17903752/applications.txt)\n\n## Summary of GitHub Issue Conversation\n\n**Key Points Raised:**\n\n* Andrea3i reported that the OS toolbar is not launching, and they tried various launch methods.\n* sam-p-at-pieces suspected the issue was related to the Visual Studio plugin.\n* robert-at-pieces identified the problem as an issue with the Visual Studio plugin and Pieces OS versions.\n\n**Problems:**\n\n* OS toolbar not launching.\n* Pieces OS restarting on its own.\n* New log file shows issues with applets.\n\n**Solutions:**\n\n* Visual Studio plugin version 3.0.1 released to resolve UI thread hang.\n* Pieces OS version 10.1.15 released to change how ports are chosen for tool window integrations.\n\n**Current Status/Outcome:**\n\n* Solutions have not resolved Andrea3i's issues.\n* Further debugging scheduled to identify the root cause.\n* OS error code retrieval necessary for diagnosis.\n* Potential problems include lack of IPv6 support, firewall restrictions, account permission/group policy restrictions.\n\n**Next Steps:**\n\n* Andrea3i needs to schedule debugging time with engineers.\n* Troubleshooting will involve running a utility to retrieve OS error code.\n* Outcome will likely provide insights into the root cause and lead to a definitive solution.",
-          "activity_level": 5.24
+          "id": 505,
+          "title": "PFD Onboarding: Context exceeded\" error on first short message",
+          "text": "PFD Onboarding: Context exceeded\" error on first short message\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n10.1.15\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nOn first use of PFD v. 3.2.4 after completing the install wizard, I get a \"Context exceeded\" error with a short message to copilot in empty chat using (using default model `Claude Sonnet 3.5`) \n\nRepro \n1. fresh install of PDF on MacOS\n2. complete wizard with defaults\n3. in chat opened on load, ask default model Claude Sonnet 3.5 \"Yo world\"\n\nMay be related to #487 , but creating separate issue as it relates to onboarding\n\nhttps://github.com/user-attachments/assets/481c3e22-5e84-436d-b81a-4f8bfdc88083\n\n## GitHub Issue Conversation Summary\n\n**Key Points:**\n\n* User claire-at-pieces reported an issue with Copilot.\n* The issue was automatically triaged and routed to the Pieces team.\n* mark-at-pieces identified the issue as a duplicate of another reported issue.\n* The issue will be resolved in the next release of PiecesOS.\n\n**Problems Identified:**\n\n* Copilot was experiencing issues.\n\n**Solutions Proposed/Implemented:**\n\n* The issue will be fixed in the next release of PiecesOS.\n\n**Current Status/Outcome:**\n\n* The issue is identified and will be fixed in a future release.",
+          "activity_level": 3.03
         },
         {
-          "id": 456,
-          "title": "Not Working",
-          "text": "Not Working\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nLatest \n\n### Early Access Program\n\n- [X] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n![image](https://github.com/user-attachments/assets/99814116-7444-4cb0-8666-86b81dd9f580)\r\nIts Keep on showing connecting and its not getting connected and it gets stck\n## Summary of GitHub Issue Conversation:\n\n**Key Points:**\n\n* User @Ganesh-2-4 experienced an issue.\n* Rosie from Pieces support team requests logs for investigation.\n\n**Problems Identified:**\n\n* The issue experienced by @Ganesh-2-4 is not specified.\n* No details are provided about the nature or severity of the problem.\n\n**Solutions Proposed/Implemented:**\n\n* Rosie suggests sending logs to the Pieces support team for further analysis.\n\n**Current Status/Outcome:**\n\n* It is unclear whether @Ganesh-2-4 responded or provided the requested logs.\n* The resolution of the issue remains unknown.\n\n**Additional Notes:**\n\n* The conversation only includes one message from the support team. \n* More information is needed to fully understand the issue and its resolution.",
-          "activity_level": 1.4
+          "id": 502,
+          "title": "Not generating the response",
+          "text": "Not generating the response\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nLinux\n\n### Your Pieces OS Version\n\n10.1.15\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nThe model is not producing the desired responses when I provide a prompt for a specific task. I have included a screenshot of the error below; please refer to that link for further details.\n[Image](https://github.com/user-attachments/assets/945cb420-c4fc-40bf-9415-5239f6e85e90)\n\n## GitHub Issue Conversation Summary\n\n**Key Points:**\n\n* User (@dhruv465) reported a problem with Copilot Chats not working (likely similar to other reported issues).\n\n**Problems Identified:**\n\n* User experiencing issues with Copilot Chats.\n\n**Solutions Proposed/Implemented:**\n\n* Pieces support bot directed user to potentially helpful resources:\n    * Related issues on Copilot Chats\n    * Existing Issues\n    * Documentation\n    * YouTube Channel\n* @mark-at-pieces suggested the issue might be a duplicate of another reported problem (https://github.com/pieces-app/support/issues/471) and advised the user to follow that conversation for updates.\n\n**Current Status/Outcome:**\n\n* User was advised to check another thread for potential solution, current status of that thread unknown.\n\n**Concise Summary:**\n\n@dhruv465 reported Copilot Chat issues, directed to resources and potentially related thread (https://github.com/pieces-app/support/issues/471) for further assistance. Current status and resolution are unclear.",
+          "activity_level": 2.21
         }
       ]
     },
     {
-      "title": "UI glitches and unexpected behavior in Pieces OS",
-      "description": "Users report various UI issues across Pieces OS integrations, including unexpected icons, line-wrapping problems, and unresponsive buttons. These issues may stem from software bugs or unintended feature interactions. Solutions involve bug fixes, UI/UX improvements, and clearer feature documentation.",
+      "title": "Pieces Desktop App on Windows: White Screen and Crashes",
+      "description": "Users report white screens or crashes with the Pieces Desktop App on Windows, especially after recent updates. Reinstallation often doesn't resolve the issue. The Pieces team is actively investigating, requesting user logs and local folder information for troubleshooting.  They've suggested live troubleshooting sessions and are working towards a solution.",
       "frequency": 3,
       "related_issues": [
         {
-          "id": 428,
-          "title": "VSCODE Extension, Pieces Copilot line wrapping setting location or settings.json options??",
-          "text": "VSCODE Extension, Pieces Copilot line wrapping setting location or settings.json options??\n### Software\n\nVS Code\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n10.1.10\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nMy Pieces Copilot side bar works fine but I haven't been able to find a setting to wrap lines especially in the responses code blocks.\r\nIs there a setting for Pieces extension to wrap all text Markdown and Code Blocks??\r\n\r\nSee below, markdown text is wrapped but code block text isn't which for myself isn't ideal?\r\n![image](https://github.com/user-attachments/assets/eec00284-7ad3-4895-9969-d66488120d76)\r\n\n## Summary of GitHub Issue Conversation:\n\n**Key Points:**\n\n* User johnkennyuk requested the ability to wrap code blocks within the Pieces OS terminal.\n* This feature would be beneficial for creating multi-line shell scripts.\n\n**Problems Identified:**\n\n* Current terminal does not allow wrapping of code blocks.\n* This limits functionality and readability of complex scripts.\n\n**Solutions Proposed/Implemented:**\n\n* caleb-at-pieces confirmed the feature request is valid and will be added to the project board.\n* Implementation is expected in a future release of Pieces OS.\n\n**Current Status/Outcome:**\n\n* Feature is currently under development.\n* No specific release date is provided.\n\n**Additional Notes:**\n\n* The conversation only covers the initial request and confirmation. \n* No further updates or discussions are included in the provided snippet.",
-          "activity_level": 1.78
+          "id": 258,
+          "title": "White screen on Windows 11",
+          "text": "White screen on Windows 11\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n9.0.6\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nInstalled it yesterday and it was fine until it's a permanently blank screen today when I launch the Pieces Desktop app.\r\n\r\nI reinstalled the entire suite multiple times and it's still the same.\r\n\r\n![image](https://github.com/pieces-app/support/assets/33184869/bfba2d65-0393-4ef6-b8f9-dc958201fe5d)\r\n\n## Summary of GitHub Issue Conversation:\n\n**Key Points:**\n* Users experiencing a white screen when using Pieces Desktop App.\n* Issue persists despite sharing local folder information with developer.\n\n**Problems Identified:**\n* White screen in Pieces Desktop App.\n* Issue not resolved for multiple users.\n* User frustration and potential loss of users.\n\n**Solutions Proposed/Implemented:**\n* Developer requests additional information from users (local folder).\n* Developer suggests re-installing latest version (3.1.0).\n* Developer offers live troubleshooting sessions.\n\n**Current Status/Outcome:**\n* Issue not fully resolved, but developer actively engaging with users for further troubleshooting.\n* Unclear if proposed solutions have been successful for all users.\n* Frustration among users continues.\n\n**Additional Notes:**\n* Latest comment from user criticizes technical stack choice.",
+          "activity_level": 3.79
         },
         {
-          "id": 526,
-          "title": "Can't turn on long term memory engine",
-          "text": "Can't turn on long term memory engine\n### Software\n\nDesktop Application, Pieces OS, VS Code\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n10.1.15\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\ni keep clicking on the button but the ltm engine wont turn on\n![Image](https://github.com/user-attachments/assets/d91ee8ce-b8e1-4f28-9785-02d488d88775)\n\nNo comments found on this issue.",
-          "activity_level": 2.5
+          "id": 507,
+          "title": "Pieces for Developers app keeps crashing continuously on attempts to upload files and folder and needs restart on my windows 11 laptop",
+          "text": "Pieces for Developers app keeps crashing continuously on attempts to upload files and folder and needs restart on my windows 11 laptop\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n10.1.15\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nPieces for Developers app keeps crashing continuously on attempts to upload files and folder and needs restart on my windows 11 laptop\n## GitHub Issue Conversation Summary\n\n**Issue:** PiecesOS crashes when starting Pieces for Devs Desktop App on Windows 11.\n\n**Key points raised:**\n\n* User (@omkar-4) reported the issue.\n* Pieces support bot triaged the issue and suggested potential solutions.\n* User has not provided additional information.\n* Pieces support team member (@mark-at-pieces) followed up and requested additional information (files and folders causing issue) to investigate further.\n\n**Problems identified:**\n\n* Pieces for Devs Desktop App crashes when starting on Windows 11.\n* Issue appears to be related to specific files or folders used with the Pieces Copilot.\n\n**Solutions proposed/implemented:**\n\n* Pieces support bot suggested related issues and resources.\n* @mark-at-pieces requested relevant files and folders for further investigation.\n\n**Current status/outcome:**\n\n* User has not yet responded to request for additional information.\n* Issue remains open and unresolved.\n\n**Additional notes:**\n\n* Lack of user response is delaying progress.\n* Issue may be difficult to reproduce due to specific files/folders involved.\n\n**Action needed:**\n\n* User needs to provide requested files and folders to facilitate further troubleshooting and resolution.",
+          "activity_level": 2.71
         },
         {
-          "id": 509,
-          "title": "[Obsidian]",
-          "text": "[Obsidian]\n### Software\n\nObsidian\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n10.1.15\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWhen resizing the right tray, two mysterious icons appear in upper left and lower right\n\nOccurs in both Copilot and Snippets tabs\n\nConfirmed this only happens when Pieces is active in the right tray, not when other plugins are active in the right tray.\n\nhttps://github.com/user-attachments/assets/830457d3-4dfc-44fa-a0dc-3f50ab7ea906\n\n\nObsidian version \n1.7.7\n\nSystem\n```\nModel Name: MacBook Pro\nModel Identifier: MacBookPro18,2\nChip: Apple M1 Max\nTotal Number of Cores: 10 (8 performance and 2 efficiency)\nMemory: 64 GB\nSystem Firmware Version: 10151.101.3\nOS Loader Version: 10151.101.3\n```\n\n\n\n\n\n\n## Summary of GitHub Issue Conversation\n\n**Issue:** The user (@claire-at-pieces) reported an issue with icons appearing in the corner of the copilot.\n\n**Key points raised:**\n\n* User cannot see a video posted by the bot.\n* User is experiencing icons appearing in the corner of the copilot.\n\n**Problems identified:**\n\n* User is concerned about the icons appearing in the copilot.\n* User is unable to view the video for assistance.\n\n**Solutions proposed/implemented:**\n\n* The support bot automatically routes the issue to the relevant Pieces team member.\n* The support team member (@mason-at-pieces) identifies the issue as a known feature and explains its purpose.\n\n**Current status/outcome:**\n\n* The user acknowledges the response and thanks the support team member.\n* The issue appears to be resolved.\n\n**Additional details:**\n\n* The support team member provides helpful resources for future reference.\n* The issue involves the Pieces software.",
-          "activity_level": 4.74
+          "id": 456,
+          "title": "Not Working",
+          "text": "Not Working\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nLatest \n\n### Early Access Program\n\n- [X] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n![image](https://github.com/user-attachments/assets/99814116-7444-4cb0-8666-86b81dd9f580)\r\nIts Keep on showing connecting and its not getting connected and it gets stck\n## Summary of GitHub Issue Conversation\n\n**Key Points Raised:**\n\n* User \"@Ganesh-2-4\" encountered an issue with the \"Pieces\" application.\n* The issue was not further specified in the conversation excerpt provided.\n\n**Problems Identified:**\n\n* The exact nature of the problem experienced by the user remains unclear.\n\n**Solutions Proposed/Implemented:**\n\n* Rosie, a representative from Pieces, requested the user to send their logs for analysis. This suggests that the Pieces team is investigating the issue and will likely provide a solution based on the log analysis.\n\n**Current Status/Outcome:**\n\n* The conversation ends with the user being asked to submit their logs. The outcome of the investigation and the resolution of the issue are not provided in the excerpt.\n\n**Additional Notes:**\n\n* The conversation took place on November 14, 2024. \n* The user was instructed to send their logs to support@pieces.app.",
+          "activity_level": 1.7
         }
       ]
     }
   ],
   "recommendations": [
-    "**Prioritize resolving issues related to Pieces OS and VS Code integration:**  This integration point appears particularly troublesome for users. Focus development efforts on stability and performance improvements here.",
-    "**Investigate and address onboarding issues:** A smooth onboarding experience is crucial for new users. Resolve issues related to blank demo chats, snippet generation, and context errors.",
-    "**Improve UI/UX consistency and address glitches:** UI glitches detract from the user experience. Dedicate resources to thorough testing and resolution of UI-related issues across all platforms and integrations.",
-    "**Enhance documentation for troubleshooting common issues:** Provide clear and concise troubleshooting steps for common problems like connection issues, UI glitches, and onboarding errors.",
-    "**Consider developing a more robust system for handling onboarding data:**  Explore options for ensuring a clean reset of user data and preventing conflicts during onboarding.",
-    "**Gather more detailed error information:**  Implement better logging and error reporting to help developers diagnose and resolve issues more effectively, especially for issues like the 'Context Exceeded' error.",
-    "**Improve communication with users experiencing persistent issues:**  Offer more personalized support and guidance to users facing unresolved problems, such as scheduling debugging sessions with engineers.",
-    "**Analyze the root causes of frequent crashes:**  Investigate and address the underlying causes of crashes reported in tickets like #507 to prevent similar issues in the future.",
-    "**Review and update the VS Code extension documentation:**  Ensure the documentation clearly explains how to connect the extension with Pieces OS and troubleshoot common connection problems.",
-    "**Consider implementing a system for automatically detecting and resolving conflicts:**  Explore solutions that can automatically identify and resolve conflicts between Pieces OS, the VS Code extension, and other integrated applications."
+    "**Address Pieces OS and Plugin Integration Issues:** Prioritize resolving the bugs and compatibility issues between Pieces OS and plugins like Visual Studio and Obsidian. This will improve user experience and reduce the influx of related support tickets.",
+    "**Improve Pieces OS Stability:** Investigate and address the root causes of Pieces OS getting stuck, system tray icon unresponsiveness, and VS Code extension issues. This may involve focusing on webview port selection, system configuration conflicts, and improving error handling.",
+    "**Resolve Claude LLM Context Exceeded Error:** Address the \"Context exceeded\" error with Claude LLM, particularly on first use or with short messages. This is a known issue and should be prioritized for the next Pieces OS release.",
+    "**Investigate and Resolve Windows Desktop App Issues:** Allocate resources to investigate and fix the white screen crashes and other issues reported by Windows users, especially after recent updates. Gather user logs and local folder information for efficient troubleshooting.",
+    "**Address Onboarding Bugs:** Debug and resolve the UI and functionality issues during the onboarding process. This includes UI elements being cut off-screen, onboarding snippets and conversations not generating, and \"Context exceeded\" errors. ",
+    "**Gather More User Data:** When appropriate, request users to provide more detailed information about their system configuration, Pieces OS version, and steps to reproduce the issue. This will help in faster debugging and resolution.",
+    "**Proactive Communication:**  Keep users informed about the status of known issues and expected resolution timelines. This can be done through release notes, in-app notifications, or a dedicated page on the Pieces website.",
+    "**Live Troubleshooting Sessions:** Continue offering live troubleshooting sessions for complex issues that require deeper investigation. This personalized approach can significantly improve user satisfaction and provide valuable insights for the development team."
   ],
   "message": "Daily support report generated successfully."
 }
