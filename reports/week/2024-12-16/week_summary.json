@@ -2,34 +2,58 @@
   "success": true,
   "date_range": {
     "start": "2024-12-16T00:00:00+00:00",
-    "end": "2024-12-16T13:10:44.793028+00:00"
+    "end": "2024-12-16T21:03:42.691638+00:00"
   },
   "summary": {
-    "total_tickets": 1,
+    "total_tickets": 3,
     "resolved_tickets": 0,
-    "open_tickets": 1
+    "open_tickets": 3
   },
   "ticket_breakdown": [
     {
       "category": "bug",
+      "received": 3,
+      "resolved": 0,
+      "pending": 3
+    },
+    {
+      "category": "os:windows",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:new",
       "received": 1,
       "resolved": 0,
       "pending": 1
     },
     {
       "category": "app:desktop application",
+      "received": 3,
+      "resolved": 0,
+      "pending": 3
+    },
+    {
+      "category": "app:pieces os",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "app:vs code",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:pieces copilot module",
       "received": 1,
       "resolved": 0,
       "pending": 1
     },
     {
       "category": "os:linux",
-      "received": 1,
-      "resolved": 0,
-      "pending": 1
-    },
-    {
-      "category": "app:pieces os",
       "received": 1,
       "resolved": 0,
       "pending": 1
@@ -43,31 +67,54 @@
   ],
   "most_active_tickets": [
     {
+      "number": 471,
+      "title": "I\u00b4m sorry. Something went wrong with processing. Please wait a few seconds and try again, or contact support@pieces.app",
+      "activity_level": 17.77
+    },
+    {
       "number": 527,
       "title": "Manually downloading a LLM",
-      "activity_level": 5.68
+      "activity_level": 5.5
+    },
+    {
+      "number": 526,
+      "title": "Can't turn on long term memory engine",
+      "activity_level": 4.63
     }
   ],
   "common_issues": [
     {
-      "title": "Pieces app fails to recognize manually downloaded LLMs",
-      "description": "Users are experiencing issues with the Pieces app not recognizing manually downloaded LLMs due to unstable network connections. The app attempts to download the entire model at once, causing failures and restarts. Manually downloading and placing the model in the designated location doesn't resolve the issue, as the app still initiates a fresh download. Editing the models.db file to reflect the download status has also proven ineffective.",
-      "frequency": 1,
+      "title": "Pieces OS: Issues with LTM Engine and Model Downloads",
+      "description": "Users report difficulties enabling the Long Term Memory (LTM) engine and downloading/importing local LLM models. Workarounds include restarting, switching modes, and manual model downloads. Developers are investigating LTM issues and implementing improved download infrastructure to address partial download failures and import difficulties.",
+      "frequency": 3,
       "related_issues": [
+        {
+          "id": 526,
+          "title": "Can't turn on long term memory engine",
+          "text": "Can't turn on long term memory engine\n### Software\n\nDesktop Application, Pieces OS, VS Code\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n10.1.15\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\ni keep clicking on the button but the ltm engine wont turn on\n![Image](https://github.com/user-attachments/assets/d91ee8ce-b8e1-4f28-9785-02d488d88775)\n\n## Summary of GitHub Issue Conversation:\n\n**Key Points Raised:**\n\n* User (@sh02sahil) encountered an issue with starting the LTM engine in Pieces OS.\n* User attempted restarting and switching between local and cloud modes, but the issue persisted.\n\n**Problems Identified:**\n\n* User unable to start LTM engine despite troubleshooting attempts.\n* Possible issue with local mode or cloud mode affecting LTM engine functionality.\n\n**Solutions Proposed/Implemented:**\n\n* Pieces support bot suggested checking related issues and resources.\n* @mason-at-pieces requested confirmation of restarting and local mode usage.\n\n**Current Status/Outcome:**\n\n* No clear resolution identified. Conversation requires further investigation by @mason-at-pieces.",
+          "activity_level": 4.63
+        },
         {
           "id": 527,
           "title": "Manually downloading a LLM",
-          "text": "Manually downloading a LLM\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nLinux\n\n### Your Pieces OS Version\n\nLatest\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI am attempting to install Pieces with a local LLM. Unfortunately, I have an unstable network connection (which is why I want a local model in the first place.) I am trying to get Mistral-7B.\n\nI found that Pieces wants to download the whole model (4 GB) all at once. If it fails for whatever reason, it restarts from the beginning.  This is annoying and it makes downloading virtually impossible, because my network connection does not stay long enough to pull 4GB in one go.\n\nI have figured out where the file is being downloaded to and from, and managed to download it manually with wget. Now the problem is that Pieces refuses to recognize it. Even if I put it in the right place, the Pieces app stil shows the Download button in the UI, and clicking Download truncates the file to zero and starts the download from the beginning.\n\nI tried to edit models.db and change \"downloaded\" to true in the relevant line, but it has no effect.\n\nIs there anything else I could do?\n## Summary of GitHub Issue Conversation:\n\n**Key Points:**\n\n* User (@ekuznetsov139) encountered an issue when trying to import a manually downloaded LLM into Pieces app.\n* The problem is likely related to the way Pieces handles downloaded models and the integration process.\n\n**Problems Identified:**\n\n* Inability to import manually downloaded models.\n\n**Solutions Proposed/Implemented:**\n\n* No solutions explicitly proposed, but the author suggested consulting with @mark-at-pieces for further assistance.\n\n**Current Status/Outcome:**\n\n* Pieces Support Bot responded and triaged the issue to the relevant team.\n* User is advised to wait for a follow-up within 24 hours.\n* User provided with links to related issues, resources, and documentation.\n\n**Additional Notes:**\n\n* This issue seems related to previous reported problems with downloading and processing LLMs in the Pieces app.\n\n**Overall:**\n\nThe user reported an issue that requires further investigation by the Pieces team. No immediate solutions have been implemented, but the user will receive a follow-up within 24 hours.",
-          "activity_level": 5.68
+          "text": "Manually downloading a LLM\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nLinux\n\n### Your Pieces OS Version\n\nLatest\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI am attempting to install Pieces with a local LLM. Unfortunately, I have an unstable network connection (which is why I want a local model in the first place.) I am trying to get Mistral-7B.\n\nI found that Pieces wants to download the whole model (4 GB) all at once. If it fails for whatever reason, it restarts from the beginning.  This is annoying and it makes downloading virtually impossible, because my network connection does not stay long enough to pull 4GB in one go.\n\nI have figured out where the file is being downloaded to and from, and managed to download it manually with wget. Now the problem is that Pieces refuses to recognize it. Even if I put it in the right place, the Pieces app stil shows the Download button in the UI, and clicking Download truncates the file to zero and starts the download from the beginning.\n\nI tried to edit models.db and change \"downloaded\" to true in the relevant line, but it has no effect.\n\nIs there anything else I could do?\n## Summary of GitHub Issue Conversation\n\n**Key Points:**\n\n* User is unable to import a downloaded LLM model.\n* Pieces automatically deletes partially downloaded models due to potential corruption.\n* New infrastructure will include the ability to restart failed downloads.\n\n**Problems Identified:**\n\n* Unable to import manually downloaded models.\n* Partial downloads are deleted, requiring full download again.\n\n**Solutions Proposed/Implemented:**\n\n* Check directory structure and add \"download_success.txt\" file.\n* Wait for new release with improved download infrastructure.\n\n**Current Status/Outcome:**\n\n* Issue is not yet resolved, but a new release with a fix is expected.\n* User is advised to wait for the new release.",
+          "activity_level": 5.5
+        },
+        {
+          "id": 471,
+          "title": "I\u00b4m sorry. Something went wrong with processing. Please wait a few seconds and try again, or contact support@pieces.app",
+          "text": "I\u00b4m sorry. Something went wrong with processing. Please wait a few seconds and try again, or contact support@pieces.app\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n10.1.13\n\n### Early Access Program\n\n- [x] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n[com.pieces.pfd.zip](https://github.com/user-attachments/files/17891327/com.pieces.pfd.zip)\n![Image](https://github.com/user-attachments/assets/c9a6f930-4d30-41ad-8d70-b81d9c3f7e6f)\n![Image](https://github.com/user-attachments/assets/99d91958-8fb7-4f27-9efa-9d628127e90f)\n![Image](https://github.com/user-attachments/assets/8d1c630b-816c-488d-87f9-202a86d63820)\n![Image](https://github.com/user-attachments/assets/8e8278a0-eca0-4b4e-bcaa-a5b195da5562)\n\n## Summary of GitHub Conversation:\n\n**Key Points:**\n\n* Multiple users experiencing an error message and limited functionality with the cloud-based PiecesOS Copilot tool.\n* Users suspected a VPN being the culprit and contacted the development team for support.\n* The issue was identified as rate limiting implemented by PiecesOS.\n* This rate limiting would be addressed in the long term by requiring user authentication.\n\n**Proposed/Implemented Solutions:**\n\n* The development team offered manual removal of user limits upon receiving information about their system and IP address through email or scheduling a Google Meet.\n* An option to paste `http://localhost:1000/applications` to view required information and email it to the development team was also provided.\n\n**Current Status:**\n\n* The bug on the server causing the overrate limiting issue was resolved on December 04, 2024.\n* Users who continue to encounter the error are required to follow the outlined procedure to have their rate limit adjusted.\n\n\n**Additionally:**\n\n* The issue sparked collaborative efforts between the developer and contributors on Discord.\n* An offer for closer collaboration was extended to active contributor hra42.\n\n## Conclusion:\n\nThe rate limiting issue with the PiecesOS Copilot tool seems resolved, with a clear workaround available until the implementation of user authentication. Although a call with the developer was mentioned as an option, the latest communication emphasizes using the email option instead.",
+          "activity_level": 17.77
         }
       ]
     }
   ],
   "recommendations": [
-    "Investigate why the Pieces app fails to recognize manually downloaded LLMs, especially in cases of unstable network connections.",
-    "Improve the Pieces app's download manager to handle interruptions and resume downloads seamlessly.",
-    "Update the Pieces app's documentation to include a clear step-by-step guide on manually downloading and installing LLMs.",
-    "Consider implementing a feature allowing users to specify the download location for LLMs within the Pieces app."
+    "**Prioritize LTM Engine and Model Download Issues:** The most frequent issue revolves around the LTM engine and model downloads. Focus development efforts on resolving these issues to improve user experience.",
+    "**Improve Model Download Infrastructure:** Investigate and implement more robust download infrastructure to handle unstable network connections and allow for resuming interrupted downloads.",
+    "**Enhance Local Model Import Process:** Simplify the process of importing manually downloaded models to provide users with alternative options during network instability.",
+    "**Consider User Authentication:** Implement user authentication to manage rate limiting effectively and prevent unintended service disruptions.",
+    "**Monitor and Address Ticket Activity:** Continuously monitor ticket activity levels to identify and prioritize emerging issues or trends. "
   ],
   "message": "Daily support report generated successfully."
 }
