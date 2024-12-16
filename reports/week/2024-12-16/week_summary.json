@@ -1,0 +1,81 @@
+{
+  "success": true,
+  "date_range": {
+    "start": "2024-12-16T00:00:00+00:00",
+    "end": "2024-12-16T05:03:54.329792+00:00"
+  },
+  "summary": {
+    "total_tickets": 1,
+    "resolved_tickets": 0,
+    "open_tickets": 1
+  },
+  "ticket_breakdown": [
+    {
+      "category": "bug",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:desktop application",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "os:linux",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:pieces os",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:triaged",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    }
+  ],
+  "most_active_tickets": [
+    {
+      "number": 527,
+      "title": "Manually downloading a LLM",
+      "activity_level": 5.68
+    }
+  ],
+  "common_issues": [
+    {
+      "title": "Local LLM download fails due to network issues",
+      "description": "Users with unstable network connections experience difficulties downloading large LLM files. Download restarts from the beginning upon interruption. Manual download and import are not supported, causing user frustration. Improved download management and local file integration are crucial for resolving this.",
+      "frequency": 1,
+      "related_issues": [
+        {
+          "id": 527,
+          "title": "Manually downloading a LLM",
+          "text": "Manually downloading a LLM\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nLinux\n\n### Your Pieces OS Version\n\nLatest\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI am attempting to install Pieces with a local LLM. Unfortunately, I have an unstable network connection (which is why I want a local model in the first place.) I am trying to get Mistral-7B.\n\nI found that Pieces wants to download the whole model (4 GB) all at once. If it fails for whatever reason, it restarts from the beginning.  This is annoying and it makes downloading virtually impossible, because my network connection does not stay long enough to pull 4GB in one go.\n\nI have figured out where the file is being downloaded to and from, and managed to download it manually with wget. Now the problem is that Pieces refuses to recognize it. Even if I put it in the right place, the Pieces app stil shows the Download button in the UI, and clicking Download truncates the file to zero and starts the download from the beginning.\n\nI tried to edit models.db and change \"downloaded\" to true in the relevant line, but it has no effect.\n\nIs there anything else I could do?\n## Summary of GitHub Issue Conversation\n\n**Key Points:**\n\n* User is unable to import a model they downloaded manually.\n* Issue seems related to how Pieces integrates downloaded models instead of just the raw model itself.\n\n**Problems Identified:**\n\n* Manual model import functionality is not available.\n* User is stuck with downloaded model that they cannot use.\n\n**Proposed/Implemented Solutions:**\n\n* No solutions explicitly proposed in the conversation.\n* User is directed to potentially helpful resources and similar issues.\n\n**Current Status/Outcome:**\n\n* Issue is being routed to the relevant Pieces team member for further investigation.\n* User is expected to receive a follow-up within 24 hours.\n\n**Additional Notes:**\n\n* Conversation primarily consists of initial reporting and automatic response from the Pieces support bot.\n* Specific details about the downloaded model or the attempted import process are missing.\n\n**Overall:**\n\nThis conversation highlights a user's difficulty with importing a downloaded model in Pieces. The issue remains unresolved and requires further investigation by the Pieces team.",
+          "activity_level": 5.68
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    "**Improve download management:** Implement a robust download manager that supports resuming interrupted downloads for large LLM files. This will prevent users from restarting downloads from scratch due to unstable network connections.",
+    "**Allow manual LLM import:** Provide functionality for users to manually download LLM files and import them into the application. This will empower users with limited or unreliable internet access to utilize local LLMs.",
+    "**Enhance user guidance:** Offer clear instructions and documentation on how to troubleshoot LLM download issues. Include information about system requirements, network connectivity, and alternative download methods.",
+    "**Investigate and address the root cause of download failures:** Analyze logs and user reports to identify the specific reasons behind download interruptions. Address any underlying issues with the download server, file integrity checks, or network communication protocols.",
+    "**Consider offering smaller LLM packages:** Explore the possibility of providing smaller LLM packages or model compression techniques to reduce download sizes and improve accessibility for users with bandwidth constraints.",
+    "**Improve communication about download progress:** Provide users with more detailed and transparent progress indicators during LLM downloads. This will help manage expectations and reduce frustration caused by perceived slow or stalled downloads.",
+    "**Prioritize resolving the 'Local LLM download fails' issue:** Given its frequency and impact on user experience, allocate resources to investigate and resolve the reported issue with local LLM downloads as a top priority.",
+    "**Gather more data on network conditions:** Collect anonymized data on users' network conditions during LLM downloads to better understand the prevalence and impact of unstable connections. This information can guide future development and optimization efforts.",
+    "**Explore alternative delivery mechanisms:** Investigate alternative LLM delivery mechanisms, such as peer-to-peer distribution or content delivery networks (CDNs), to improve download speeds and reliability.",
+    "**Provide a fallback mechanism for failed downloads:** Implement a fallback mechanism that automatically attempts alternative download sources or methods if the initial download fails. This can improve the user experience by reducing manual intervention and troubleshooting steps.",
+    "**Test download functionality across different network environments:** Conduct thorough testing of the LLM download process across various network conditions, including low bandwidth, high latency, and intermittent connections. This will help identify and address potential issues before they impact users.",
+    "**Monitor support channels for emerging issues:** Regularly monitor support channels, such as forums and social media, for any emerging trends or reports related to LLM downloads. This proactive approach can help identify and address potential issues before they become widespread."
+  ],
+  "message": "Daily support report generated successfully."
+}
