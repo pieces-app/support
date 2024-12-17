@@ -1,5 +1,5 @@
 # Support Ticket Report
-- Generated: 2024-12-17 05:04:07
+- Generated: 2024-12-17 13:11:34
 - Period: 2024-12-16 to 2024-12-17
 
 ## Summary
@@ -11,44 +11,45 @@
 | Issue # | Title | Activity Level |
 |---------|-------|----------------|
 | [#471](https://github.com/pieces-app/support/issues/471) | I´m sorry. Something went wrong with processing. Please wait a few seconds and try again, or contact support@pieces.app | 17.55 |
+| [#526](https://github.com/pieces-app/support/issues/526) | Can't turn on long term memory engine | 6.06 |
 | [#527](https://github.com/pieces-app/support/issues/527) | Manually downloading a LLM | 5.50 |
-| [#526](https://github.com/pieces-app/support/issues/526) | Can't turn on long term memory engine | 5.34 |
 | [#528](https://github.com/pieces-app/support/issues/528) | I can't use any GPT models other than 'GPT-4o Mini' | 3.15 |
-| [#507](https://github.com/pieces-app/support/issues/507) | Pieces for Developers app keeps crashing continuously on attempts to upload files and folder and needs restart on my windows 11 laptop | 2.84 |
+| [#507](https://github.com/pieces-app/support/issues/507) | Pieces for Developers app keeps crashing continuously on attempts to upload files and folder and needs restart on my windows 11 laptop | 2.71 |
 
 ## Common Issues
-### 1. Pieces OS: Users encounter errors using GPT models
-Users are experiencing errors and "Something went wrong" messages when attempting to use GPT models within the Pieces OS desktop application. The issue appears to be related to rate limiting and potential bugs in the Long Term Memory (LTM) engine. Temporary solutions include contacting support for rate limit increases and restarting the application. A permanent fix involving user authentication for cloud processing is expected in a future release.
+### 1. PiecesOS Processing Errors and Crashes
+Users are reporting processing errors ("Something went wrong with processing...") and application crashes when uploading files. These issues appear related to recent rate limiting changes and potential file incompatibilities. Temporary solutions involve manual exemptions and app restarts. Developers are working on long-term fixes, including improved error messages and authentication for cloud processing.
 
 **Related Issues:**
-- [#528](https://github.com/pieces-app/support/issues/528): I can't use any GPT models other than 'GPT-4o Mini'
 - [#471](https://github.com/pieces-app/support/issues/471): I´m sorry. Something went wrong with processing. Please wait a few seconds and try again, or contact support@pieces.app
-- [#526](https://github.com/pieces-app/support/issues/526): Can't turn on long term memory engine
-
-### 2. PiecesOS Crashes and Errors
-Users are experiencing crashes and errors with the PiecesOS desktop app, particularly with the Copilot and LTM engine features.  Issues include app crashes when uploading files, rate limiting errors, and failure to turn on the LTM engine. Proposed solutions involve bug fixes, user authentication for cloud processing, and restarting the app or waiting for updates.
-
-**Related Issues:**
 - [#507](https://github.com/pieces-app/support/issues/507): Pieces for Developers app keeps crashing continuously on attempts to upload files and folder and needs restart on my windows 11 laptop
-- [#471](https://github.com/pieces-app/support/issues/471): I´m sorry. Something went wrong with processing. Please wait a few seconds and try again, or contact support@pieces.app
-- [#526](https://github.com/pieces-app/support/issues/526): Can't turn on long term memory engine
+- [#528](https://github.com/pieces-app/support/issues/528): I can't use any GPT models other than 'GPT-4o Mini'
 
-### 3. Pieces OS users encounter issues with features
-Users are experiencing issues with specific features in Pieces OS, including difficulties downloading and utilizing local LLM models, enabling the long-term memory engine, and accessing certain GPT models. Proposed solutions involve workarounds like manually placing files and restarting the application, as well as waiting for upcoming releases with bug fixes.
+### 2. Pieces OS users report issues with LLM engine
+Users are experiencing difficulties with the LLM engine in Pieces OS, including problems downloading and activating local models, as well as enabling the long-term memory feature. Troubleshooting steps include restarting the application, checking network connectivity, and ensuring software is up-to-date. The Pieces team is actively working on solutions and recommends users update to the latest version for potential fixes.
 
 **Related Issues:**
 - [#527](https://github.com/pieces-app/support/issues/527): Manually downloading a LLM
 - [#528](https://github.com/pieces-app/support/issues/528): I can't use any GPT models other than 'GPT-4o Mini'
 - [#526](https://github.com/pieces-app/support/issues/526): Can't turn on long term memory engine
 
+### 3. Pieces OS 10.1.15 Bugs and Issues
+Multiple users report issues with Pieces OS 10.1.15, including LTM engine activation failures and app crashes.  Updating to the latest release or version 11.0.0, if available, is recommended.  Contact support if issues persist.
+
+**Related Issues:**
+- [#526](https://github.com/pieces-app/support/issues/526): Can't turn on long term memory engine
+- [#528](https://github.com/pieces-app/support/issues/528): I can't use any GPT models other than 'GPT-4o Mini'
+- [#507](https://github.com/pieces-app/support/issues/507): Pieces for Developers app keeps crashing continuously on attempts to upload files and folder and needs restart on my windows 11 laptop
+
 
 ## Recommendations
-- **Prioritize bug fixes related to GPT model errors and LTM engine issues within the Pieces OS desktop application.** The most frequent support tickets indicate these are major pain points for users.
-- **Improve communication around rate limiting.** Provide clearer error messages and explore options for user-controlled rate limit increases or authentication for cloud processing.
-- **Create documentation or FAQs addressing common issues.** This should include workarounds for manually downloading LLMs, enabling the LTM engine, and troubleshooting GPT model errors.
-- **Investigate and address the app crashes reported by users, particularly when uploading files.** This may require further debugging and testing to reproduce and fix the issue.
-- **Consider implementing a more robust download manager for LLM models.** Allow for resuming interrupted downloads to improve user experience, especially for those with unstable connections.
+- **Prioritize 'PiecesOS Processing Errors and Crashes'**: This issue has the highest frequency and a very active ticket (#471). Focus on implementing the long-term fixes for rate limiting and file incompatibilities to reduce its occurrence.
+- **Improve LLM Engine Stability and Usability**: Address the difficulties users face with the LLM engine, particularly downloading/activating local models and enabling long-term memory. This will resolve issues like those in tickets #527, #528, and #526.
+- **Enhance Error Messages and Troubleshooting**: Provide clearer error messages to users, especially for processing errors and LLM issues. Offer more detailed troubleshooting steps in the app and potentially through a dedicated knowledge base.
+- **Gather More Data on Crashes**:  Ticket #507 highlights the need for more information to reproduce and debug crashes. Explore ways to collect more detailed crash reports from the desktop application.
+- **Proactive Communication**:  Consider a communication to users acknowledging the recent issues and outlining the steps being taken to address them. This can help manage expectations and reduce support ticket volume.
 
 ## Daily Reports
 Here are the daily reports for this week:
 
+- [report_131026](daily/2024-12-17/report_131026.md)
