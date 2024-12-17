@@ -2,40 +2,64 @@
   "success": true,
   "date_range": {
     "start": "2024-12-16T00:00:00+00:00",
-    "end": "2024-12-17T13:10:43.351633+00:00"
+    "end": "2024-12-17T21:07:03.532510+00:00"
   },
   "summary": {
-    "total_tickets": 5,
+    "total_tickets": 9,
     "resolved_tickets": 0,
-    "open_tickets": 5
+    "open_tickets": 9
   },
   "ticket_breakdown": [
     {
       "category": "bug",
+      "received": 8,
+      "resolved": 0,
+      "pending": 8
+    },
+    {
+      "category": "status:new",
       "received": 4,
       "resolved": 0,
       "pending": 4
     },
     {
-      "category": "os:windows",
+      "category": "app:jetbrains",
       "received": 2,
       "resolved": 0,
       "pending": 2
     },
     {
-      "category": "app:desktop application",
+      "category": "os:linux",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "app:pieces os",
+      "received": 6,
+      "resolved": 0,
+      "pending": 6
+    },
+    {
+      "category": "os:windows",
       "received": 5,
       "resolved": 0,
       "pending": 5
     },
     {
-      "category": "app:pieces os",
-      "received": 4,
+      "category": "app:desktop application",
+      "received": 7,
       "resolved": 0,
-      "pending": 4
+      "pending": 7
     },
     {
       "category": "app:vs code",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "app:visual studio",
       "received": 1,
       "resolved": 0,
       "pending": 1
@@ -53,18 +77,6 @@
       "pending": 2
     },
     {
-      "category": "app:jetbrains",
-      "received": 1,
-      "resolved": 0,
-      "pending": 1
-    },
-    {
-      "category": "os:linux",
-      "received": 1,
-      "resolved": 0,
-      "pending": 1
-    },
-    {
       "category": "app:pieces copilot module",
       "received": 1,
       "resolved": 0,
@@ -78,19 +90,39 @@
       "activity_level": 17.55
     },
     {
+      "number": 530,
+      "title": "Vscode and PHPStorm plugins stopped working after Pieces OS update",
+      "activity_level": 6.62
+    },
+    {
       "number": 526,
       "title": "Can't turn on long term memory engine",
-      "activity_level": 6.06
+      "activity_level": 5.67
     },
     {
       "number": 527,
       "title": "Manually downloading a LLM",
-      "activity_level": 5.5
+      "activity_level": 4.74
+    },
+    {
+      "number": 534,
+      "title": "Pieces os says: port already in use if i start phpstorm with pieces plugin",
+      "activity_level": 4.42
+    },
+    {
+      "number": 533,
+      "title": "Taskbar is not able to be  used while accessing pieces",
+      "activity_level": 4.42
+    },
+    {
+      "number": 531,
+      "title": "Pieces Desktop App - Lost Connection to PiecesOS",
+      "activity_level": 4.42
     },
     {
       "number": 528,
       "title": "I can't use any GPT models other than 'GPT-4o Mini'",
-      "activity_level": 3.15
+      "activity_level": 4.42
     },
     {
       "number": 507,
@@ -100,87 +132,115 @@
   ],
   "common_issues": [
     {
-      "title": "PiecesOS Processing Errors and Crashes",
-      "description": "Users are reporting processing errors (\"Something went wrong with processing...\") and application crashes when uploading files. These issues appear related to recent rate limiting changes and potential file incompatibilities. Temporary solutions involve manual exemptions and app restarts. Developers are working on long-term fixes, including improved error messages and authentication for cloud processing.",
+      "title": "Pieces OS Processing Errors",
+      "description": "Users report processing errors in Pieces OS, primarily related to cloud features like GPT models and LTM engine.  Suggested workarounds include restarting, checking for updates, and contacting support. The Pieces team is actively investigating and implementing solutions, including rate limit adjustments and authentication for cloud processing.",
       "frequency": 3,
       "related_issues": [
         {
+          "id": 528,
+          "title": "I can't use any GPT models other than 'GPT-4o Mini'",
+          "text": "I can't use any GPT models other than 'GPT-4o Mini'\n### Software\n\nDesktop Application, JetBrains, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n10.1.15\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n\"I'm sorry. Something went wrong with processing. Please wait a few seconds and try again, or contact support@pieces.app\"\n\nIf the model is 4o Mini, everything works fine.\n## GitHub Issue Conversation Summary\n\n**Key Points Raised:**\n\n- User reported an issue with Copilot processing.\n- The message \"I'm sorry. Something went wrong with processing. Please wait a few minutes and try again.\" is displayed.\n\n**Problems Identified:**\n\n- Copilot is experiencing processing errors.\n- The issue may be related to similar reported incidents.\n\n**Solutions Proposed/Implemented:**\n\n- The Pieces support bot triaged the issue and routed it to the appropriate team member.\n- Related issues are suggested for reference.\n- User is advised to consult additional resources while awaiting a follow-up.\n\n**Current Status/Outcome:**\n\n- The issue is being investigated by the Pieces team.\n- No resolution has been implemented yet.\n- User is awaiting a response from the support team.",
+          "activity_level": 4.42
+        },
+        {
           "id": 471,
           "title": "I\u00b4m sorry. Something went wrong with processing. Please wait a few seconds and try again, or contact support@pieces.app",
-          "text": "I\u00b4m sorry. Something went wrong with processing. Please wait a few seconds and try again, or contact support@pieces.app\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n10.1.13\n\n### Early Access Program\n\n- [x] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n[com.pieces.pfd.zip](https://github.com/user-attachments/files/17891327/com.pieces.pfd.zip)\n![Image](https://github.com/user-attachments/assets/c9a6f930-4d30-41ad-8d70-b81d9c3f7e6f)\n![Image](https://github.com/user-attachments/assets/99d91958-8fb7-4f27-9efa-9d628127e90f)\n![Image](https://github.com/user-attachments/assets/8d1c630b-816c-488d-87f9-202a86d63820)\n![Image](https://github.com/user-attachments/assets/8e8278a0-eca0-4b4e-bcaa-a5b195da5562)\n\n## Summary of GitHub Issue: Rate Limiting in PiecesOS \n**Key Points Raised:**\n* Users experiencing error messages related to processing.\n* Issue began after recent rate limiting changes in PiecesOS. \n\n**Problems Identified:**\n* Rate limiting causing unnecessary restrictions for legitimate users. \n* Lack of clear error messages leading to user confusion.\n* No readily available solutions for non-technical users. \n\n**Solutions Proposed/Implemented:**\n* Manual exemption from rate limiting for affected users through contact with developer.\n* Upgraded error message with infrastructure update planned.\n* Authentication requirement for cloud processing in the future. \n\n**Current Status/Outcome:**\n* Issue mostly resolved with manual adjustments.\n* Long-term solution still under development.\n\n**Outstanding Concerns:**\n* Lack of alternative solutions for users experiencing difficulties with manual exemption process.\n* Impact of future authentication requirement for cloud processing.",
+          "text": "I\u00b4m sorry. Something went wrong with processing. Please wait a few seconds and try again, or contact support@pieces.app\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n10.1.13\n\n### Early Access Program\n\n- [x] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n[com.pieces.pfd.zip](https://github.com/user-attachments/files/17891327/com.pieces.pfd.zip)\n![Image](https://github.com/user-attachments/assets/c9a6f930-4d30-41ad-8d70-b81d9c3f7e6f)\n![Image](https://github.com/user-attachments/assets/99d91958-8fb7-4f27-9efa-9d628127e90f)\n![Image](https://github.com/user-attachments/assets/8d1c630b-816c-488d-87f9-202a86d63820)\n![Image](https://github.com/user-attachments/assets/8e8278a0-eca0-4b4e-bcaa-a5b195da5562)\n\n## Summary of GitHub Issue Conversation: \"I'm sorry. Something went wrong with processing.\"\n\n**Key Points Raised:**\n\n* Users were encountering an error message stating \"I'm sorry. Something went wrong with processing.\"\n* Initial speculation pointed towards VPN usage as the cause.\n* Further investigation revealed rate limiting as the root issue.\n\n**Problems Identified:**\n\n* User inability to utilize cloud processing due to rate limiting.\n* Lack of comprehensive error message to inform users of the issue.\n\n**Solutions Proposed/Implemented:**\n\n* Manual adjustment of rate limits for affected users.\n* Implementation of authentication for cloud processing in the long term.\n* Improved error message with explanation and instructions.\n\n**Current Status/Outcome:**\n\n* Rate limiting issue appears to be resolved.\n* Manual adjustments for affected users are ongoing.\n* Authentication for cloud processing in development.\n\n**Additional Points:**\n\n* User communication and updates provided by @mark-at-pieces.\n* Offer of further assistance for persistent issues.\n\n**Overall:**\n\nWhile the initial rate limiting issue caused inconvenience, the Pieces team has actively addressed the problem and offered solutions. Continued development and communication ensure a positive user experience.",
           "activity_level": 17.55
         },
         {
-          "id": 507,
-          "title": "Pieces for Developers app keeps crashing continuously on attempts to upload files and folder and needs restart on my windows 11 laptop",
-          "text": "Pieces for Developers app keeps crashing continuously on attempts to upload files and folder and needs restart on my windows 11 laptop\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n10.1.15\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nPieces for Developers app keeps crashing continuously on attempts to upload files and folder and needs restart on my windows 11 laptop\n## GitHub Issue Conversation Summary:\n\n**Key Points Raised:**\n\n* @omkar-4 reported an issue where PiecesOS crashes when starting the Pieces for Devs Desktop App. \n* The user is experiencing this issue with specific files/folders used as context.\n* The issue is difficult to reproduce without specific files/folders.\n\n**Problems Identified:**\n\n* PiecesOS crashes when starting the app due to incompatibility with specific files/folders used as context.\n* The source of the issue is difficult to pinpoint without reproducing the error with the specific files/folders.\n\n**Solutions Proposed/Implemented:**\n\n* @mark-at-pieces requested access to the specific files/folders causing the issue to facilitate troubleshooting and identify the root cause.\n\n**Current Status/Outcome:**\n\n* The user has not yet responded with the requested files/folders.\n* The issue remains unresolved until the user provides the requested information.\n\n**Additional Notes:**\n\n* The issue may be related to previous reports of crashes with file/folder contexts.\n* The user is encouraged to consult existing issues, documentation, and the YouTube channel for further assistance.\n\nThis summary highlights the key points of the conversation, focusing on the specific issue, troubleshooting steps, and current status. It provides a concise overview of the situation without including unnecessary details.",
-          "activity_level": 2.71
-        },
-        {
-          "id": 528,
-          "title": "I can't use any GPT models other than 'GPT-4o Mini'",
-          "text": "I can't use any GPT models other than 'GPT-4o Mini'\n### Software\n\nDesktop Application, JetBrains, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n10.1.15\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n\"I'm sorry. Something went wrong with processing. Please wait a few seconds and try again, or contact support@pieces.app\"\n\nIf the model is 4o Mini, everything works fine.\nNo comments found on this issue.",
-          "activity_level": 3.15
+          "id": 526,
+          "title": "Can't turn on long term memory engine",
+          "text": "Can't turn on long term memory engine\n### Software\n\nDesktop Application, Pieces OS, VS Code\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n10.1.15\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\ni keep clicking on the button but the ltm engine wont turn on\n![Image](https://github.com/user-attachments/assets/d91ee8ce-b8e1-4f28-9785-02d488d88775)\n\n## Summary of GitHub Issue conversation:\n\n**Key points raised:**\n\n* User (@sh02sahil) created an issue regarding the LTM engine not starting in Pieces OS.\n* User reported trying restarts, switching between local and cloud modes, but none of these solutions worked.\n* User confirmed they tried the suggested related issues and resources.\n\n**Problems identified:**\n\n* The LTM engine wouldn't start in Pieces OS.\n* The application couldn't find the update.\n\n**Solutions proposed/implemented:**\n\n* Pieces team suggested trying a newly released version (11.0.0) that might have a fix.\n* Pieces team offered to schedule a call to discuss the issue further.\n\n**Current status/outcome:**\n\n* User is waiting for the update to become available.\n* User booked a call with the Pieces team to discuss the issue and other questions.\n\n**Additional notes:**\n\n* The user mentioned encountering other issues and needing help.\n* The Pieces team expressed their awareness of the issue and offered their assistance.\n\n**Important details:**\n\n* User confirmed trying suggested solutions and resources.\n* User acknowledged the possibility of a fix in the new version.\n* User will provide further updates after testing the update.\n\n**Overall, the conversation suggests ongoing communication between the user and the Pieces team to resolve the LTM engine issue and address other concerns.**",
+          "activity_level": 5.67
         }
       ]
     },
     {
-      "title": "Pieces OS users report issues with LLM engine",
-      "description": "Users are experiencing difficulties with the LLM engine in Pieces OS, including problems downloading and activating local models, as well as enabling the long-term memory feature. Troubleshooting steps include restarting the application, checking network connectivity, and ensuring software is up-to-date. The Pieces team is actively working on solutions and recommends users update to the latest version for potential fixes.",
+      "title": "Pieces OS Plugin Connectivity Issues After Update",
+      "description": "Users report Pieces OS plugins for VS Code and PHPStorm breaking after updating to version 11.0.0.  The issue seems to stem from port conflicts or plugin incompatibility with the new version.  Suggested solutions include ensuring Pieces OS is running on the correct port (5323 or 1000), checking for plugin updates, and potentially downgrading Pieces OS until compatible plugin versions are available.",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 534,
+          "title": "Pieces os says: port already in use if i start phpstorm with pieces plugin",
+          "text": "Pieces os says: port already in use if i start phpstorm with pieces plugin\n### Software\n\nPieces OS\n\n### Operating System / Platform\n\nLinux\n\n### Your Pieces OS Version\n\n11.0.0 2024-12-17\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nif i start my computer, pieces-os starts. Then, if i start phpstorm, there's a message: \n> It looks like port 5323 is occupied by another application. Pieces OS uses this port to communicate with plugins. Please, enable Pieces OS to run on port 5323.\n\nEven if I kill the pieces-os on port 5323 and start up phpstorm, it still get's this error. So it looks like phpstorm is trying to start piecec-os again, and I think more than once.\nI did snap refresh pieces-os => snap \"pieces-os\" has no updates available\nphp storm plugin is to be 10.0.0\n\n## GitHub Issue Conversation Summary:\n\n**Key Points Raised:**\n\n* @micksp reported an issue with the Pieces OS Jetbrains plugin not working.\n* The author suggests checking similar issues 530, 421, and 474 for solutions.\n\n**Problems Identified:**\n\n* The Pieces OS Jetbrains plugin is not functioning properly.\n\n**Solutions Proposed/Implemented:**\n\n* The author recommends consulting related issues for possible solutions.\n* There is no mention of implemented solutions in the provided conversation.\n\n**Current Status/Outcome:**\n\n* The conversation ends with a note about follow-up within 24 hours.\n* The outcome of the issue remains unresolved in the provided snippet.\n\n**Additional Information:**\n\n* The author provides helpful resources for troubleshooting and documentation.\n\n**Note:** This summary is based on the provided excerpt of the conversation. More information may be available in the full conversation thread.",
+          "activity_level": 4.42
+        },
+        {
+          "id": 530,
+          "title": "Vscode and PHPStorm plugins stopped working after Pieces OS update",
+          "text": "Vscode and PHPStorm plugins stopped working after Pieces OS update\n### Software\n\nVS Code, Visual Studio\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n11.0.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nYesterday was working great. Minutes ago it prompt me to update Pieces OS and Pieces for Developers. After the update both Vscode and PHPStorm plugins stopped working.\n\nPHPStorm says - It looks like port 1000 is occupied by another application. Pieces OS uses this port to communicate with plugins. Please, enable Pieces OS to run on port 1000.\n\nAnd Vscode says - Please update the Pieces for VS Code extension to the latest version. This version is only compatible with Pieces OS versions less than 11.0.0, and  you have 11.0.0 installed. But there isn't any Vscode plugin update.\n\nCan you help? Is there a way to downgrade?\n\n![Image](https://github.com/user-attachments/assets/973ecc53-1230-4b25-93df-b8f258273f19)\n\n![Image](https://github.com/user-attachments/assets/a0d82807-7d45-4279-af39-b223896bd4ca)\n\n## Conversation Summary\n\n**Key Point:**\n\n* Rafael encountered a suspicious access notification from their antivirus upon updating Pieces OS.\n\n**Problem Identified:**\n\n* Rafael's antivirus flagged the Pieces OS update as suspicious.\n\n**Solutions Proposed/Implemented:**\n\n* Mark acknowledged the new update and confirmed a build for VsCode is underway.\n* Mark requested further information regarding any additional issues besides the antivirus flag.\n\n**Current Status/Outcome:**\n\n* The status of the antivirus issue and Rafael's experience remains unclear.\n* Mark offered support and requested more details to investigate.\n\n**Additional Notes:**\n\n* The update was released just 15 minutes prior to Rafael's comment.\n* Rafael mentioned other users may report the update as suspicious.",
+          "activity_level": 6.62
+        },
+        {
+          "id": 531,
+          "title": "Pieces Desktop App - Lost Connection to PiecesOS",
+          "text": "Pieces Desktop App - Lost Connection to PiecesOS\n_PiecesOS Information_\n\n**ID:** 18986c5c-5aef-40f4-ac00-93da40fd8b47\n**User:** 1446bb64-5370-4644-a0ee-5ab3b4f3a7ac\n**Current Version:** Unknown\n**Min Version Supported:** 11.0.0\n**Max Version Supported:** 12.0.0\n**Local Port:** 127.0.0.1:39300\n\n_Device Information_\n\n**Operating System:** Windows\n**Current Version:** \"Windows 10 Pro\" 10.0 (Build 26100)\n**Min Version Supported:** Windows 10 Build 1903\n\nPieces for developers always loosing connection and self closing pieces OS\n## Summary of GitHub Issue Conversation\n\n**Key Points Raised:**\n\n* Rafael-a-g-n created an issue that requires attention.\n* The issue has been automatically routed to the appropriate team member.\n\n**Problems Identified:**\n\n* The issue's content is not provided in the conversation excerpt.\n\n**Solutions Proposed/Implemented:**\n\n* The bot suggests similar issues for reference.\n* The bot provides links to helpful resources: existing issues, documentation, and YouTube channel.\n\n**Current Status/Outcome:**\n\n* The issue is awaiting further action from the assigned team member. \n\n**Additional Notes:**\n\n* The conversation provides context but lacks specific details about the issue's nature. More information is needed to accurately summarize the key points, problems, and solutions.",
+          "activity_level": 4.42
+        }
+      ]
+    },
+    {
+      "title": "Pieces OS LLM Engine Issues",
+      "description": "Users report difficulties with Pieces OS LLM engine, including failed downloads due to unstable connections and issues activating the engine. Proposed solutions involve manual workarounds, waiting for new releases with improved infrastructure, and direct support from the Pieces team.",
       "frequency": 3,
       "related_issues": [
         {
           "id": 527,
           "title": "Manually downloading a LLM",
-          "text": "Manually downloading a LLM\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nLinux\n\n### Your Pieces OS Version\n\nLatest\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI am attempting to install Pieces with a local LLM. Unfortunately, I have an unstable network connection (which is why I want a local model in the first place.) I am trying to get Mistral-7B.\n\nI found that Pieces wants to download the whole model (4 GB) all at once. If it fails for whatever reason, it restarts from the beginning.  This is annoying and it makes downloading virtually impossible, because my network connection does not stay long enough to pull 4GB in one go.\n\nI have figured out where the file is being downloaded to and from, and managed to download it manually with wget. Now the problem is that Pieces refuses to recognize it. Even if I put it in the right place, the Pieces app stil shows the Download button in the UI, and clicking Download truncates the file to zero and starts the download from the beginning.\n\nI tried to edit models.db and change \"downloaded\" to true in the relevant line, but it has no effect.\n\nIs there anything else I could do?\n## Summary of GitHub conversation about importing downloaded models into Pieces\n\n**Key points:**\n\n* Importing manually downloaded models isn't currently supported due to potential corruption issues and integration challenges.\n* Pieces automatically deletes partially downloaded models due to uncertainty about their integrity.\n* A workaround involving adding an \"download_success.txt\" file and restarting might work until a permanent solution is available.\n\n**Problems identified:**\n\n* Manually imported models might be corrupted.\n* Partial downloads get deleted, making completion difficult.\n\n**Proposed/implemented solutions:**\n\n* A new release with improved on-device LLM infrastructure, including the ability to resume failed downloads, is coming soon.\n* A temporary workaround involving adding a file and restarting is provided.\n\n**Current status/outcome:**\n\n* The issue of importing downloaded models remains unresolved, but a fix is expected in the pr\u00f3ximos d\u00edas.\n* Users can try the workaround in the meantime.",
-          "activity_level": 5.5
-        },
-        {
-          "id": 528,
-          "title": "I can't use any GPT models other than 'GPT-4o Mini'",
-          "text": "I can't use any GPT models other than 'GPT-4o Mini'\n### Software\n\nDesktop Application, JetBrains, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n10.1.15\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n\"I'm sorry. Something went wrong with processing. Please wait a few seconds and try again, or contact support@pieces.app\"\n\nIf the model is 4o Mini, everything works fine.\nNo comments found on this issue.",
-          "activity_level": 3.15
+          "text": "Manually downloading a LLM\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nLinux\n\n### Your Pieces OS Version\n\nLatest\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI am attempting to install Pieces with a local LLM. Unfortunately, I have an unstable network connection (which is why I want a local model in the first place.) I am trying to get Mistral-7B.\n\nI found that Pieces wants to download the whole model (4 GB) all at once. If it fails for whatever reason, it restarts from the beginning.  This is annoying and it makes downloading virtually impossible, because my network connection does not stay long enough to pull 4GB in one go.\n\nI have figured out where the file is being downloaded to and from, and managed to download it manually with wget. Now the problem is that Pieces refuses to recognize it. Even if I put it in the right place, the Pieces app stil shows the Download button in the UI, and clicking Download truncates the file to zero and starts the download from the beginning.\n\nI tried to edit models.db and change \"downloaded\" to true in the relevant line, but it has no effect.\n\nIs there anything else I could do?\n## Summary of GitHub Issue Conversation\n\n**Key Points Raised:**\n\n* User (@ekuznetsov139) reported an issue with importing a manually downloaded LLM model.\n* hra42 suggests the problem lies in Pieces' integration process, not just the raw model download.\n\n**Problems Identified:**\n\n* Pieces deletes partially downloaded models due to potential corruption.\n* User's attempt to update the database property wasn't enough to resolve the issue.\n\n**Solutions Proposed/Implemented:**\n\n* **Temporary workaround:**\n    1. Shutdown Pieces.\n    2. Add an empty \"download_success.txt\" file to the specified directory.\n    3. Restart Pieces.\n* **Long-term solution:**\n    - Upcoming Pieces release will overhaul the LLM infrastructure, enabling restarting failed downloads.\n\n**Current Status/Outcome:**\n\n* The user can try the temporary workaround until the new release with the improved infrastructure is available.\n* The new release is expected within the next day or two.\n* The issue will be resolved with the new release's ability to resume interrupted downloads.\n\n**Additional Notes:**\n\n* The user was provided with links to relevant resources, including existing issues, documentation, and the Pieces YouTube channel.",
+          "activity_level": 4.74
         },
         {
           "id": 526,
           "title": "Can't turn on long term memory engine",
-          "text": "Can't turn on long term memory engine\n### Software\n\nDesktop Application, Pieces OS, VS Code\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n10.1.15\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\ni keep clicking on the button but the ltm engine wont turn on\n![Image](https://github.com/user-attachments/assets/d91ee8ce-b8e1-4f28-9785-02d488d88775)\n\n## GitHub Issue Summary: LTM Engine Not Working\n\n**Key Points:**\n\n* User `sh02sahil` reported LTM engine not working, despite restarting and trying both local and cloud modes.\n* `mason-at-pieces` confirmed baseline troubleshooting steps (restart, checking mode).\n* `mark-at-pieces` identified the issue:\n    * Known problem with potential fix in upcoming release.\n    * Desktop application breaking change required for compatibility (version 11.0.0).\n    * Solution:\n        * Update to latest release (may fix the issue).\n        * Update desktop app to 11.0.0 if the issue persists.\n        * Schedule consultation if update fails.\n\n**Current Status:**\n\n* User waiting for update to become available.\n* Will test and report outcome after update.\n\n**Outcome:**\n\n* Pending user's report after testing the update. \n* Further troubleshooting may be needed depending on the results.",
-          "activity_level": 6.06
+          "text": "Can't turn on long term memory engine\n### Software\n\nDesktop Application, Pieces OS, VS Code\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n10.1.15\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\ni keep clicking on the button but the ltm engine wont turn on\n![Image](https://github.com/user-attachments/assets/d91ee8ce-b8e1-4f28-9785-02d488d88775)\n\n## Summary of GitHub Issue conversation:\n\n**Key points raised:**\n\n* User (@sh02sahil) created an issue regarding the LTM engine not starting in Pieces OS.\n* User reported trying restarts, switching between local and cloud modes, but none of these solutions worked.\n* User confirmed they tried the suggested related issues and resources.\n\n**Problems identified:**\n\n* The LTM engine wouldn't start in Pieces OS.\n* The application couldn't find the update.\n\n**Solutions proposed/implemented:**\n\n* Pieces team suggested trying a newly released version (11.0.0) that might have a fix.\n* Pieces team offered to schedule a call to discuss the issue further.\n\n**Current status/outcome:**\n\n* User is waiting for the update to become available.\n* User booked a call with the Pieces team to discuss the issue and other questions.\n\n**Additional notes:**\n\n* The user mentioned encountering other issues and needing help.\n* The Pieces team expressed their awareness of the issue and offered their assistance.\n\n**Important details:**\n\n* User confirmed trying suggested solutions and resources.\n* User acknowledged the possibility of a fix in the new version.\n* User will provide further updates after testing the update.\n\n**Overall, the conversation suggests ongoing communication between the user and the Pieces team to resolve the LTM engine issue and address other concerns.**",
+          "activity_level": 5.67
+        },
+        {
+          "id": 528,
+          "title": "I can't use any GPT models other than 'GPT-4o Mini'",
+          "text": "I can't use any GPT models other than 'GPT-4o Mini'\n### Software\n\nDesktop Application, JetBrains, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n10.1.15\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n\"I'm sorry. Something went wrong with processing. Please wait a few seconds and try again, or contact support@pieces.app\"\n\nIf the model is 4o Mini, everything works fine.\n## GitHub Issue Conversation Summary\n\n**Key Points Raised:**\n\n- User reported an issue with Copilot processing.\n- The message \"I'm sorry. Something went wrong with processing. Please wait a few minutes and try again.\" is displayed.\n\n**Problems Identified:**\n\n- Copilot is experiencing processing errors.\n- The issue may be related to similar reported incidents.\n\n**Solutions Proposed/Implemented:**\n\n- The Pieces support bot triaged the issue and routed it to the appropriate team member.\n- Related issues are suggested for reference.\n- User is advised to consult additional resources while awaiting a follow-up.\n\n**Current Status/Outcome:**\n\n- The issue is being investigated by the Pieces team.\n- No resolution has been implemented yet.\n- User is awaiting a response from the support team.",
+          "activity_level": 4.42
         }
       ]
     },
     {
-      "title": "Pieces OS 10.1.15 Bugs and Issues",
-      "description": "Multiple users report issues with Pieces OS 10.1.15, including LTM engine activation failures and app crashes.  Updating to the latest release or version 11.0.0, if available, is recommended.  Contact support if issues persist.",
+      "title": "Pieces Desktop App Issues on Windows",
+      "description": "Users are reporting various issues with the Pieces Desktop App on Windows, including taskbar hiding, loss of connection to PiecesOS, and app crashes when uploading files. Troubleshooting steps involve checking system compatibility, ensuring a stable internet connection, and providing detailed bug reports with reproducible steps. The Pieces team is actively investigating these issues and working on solutions.",
       "frequency": 3,
       "related_issues": [
         {
-          "id": 526,
-          "title": "Can't turn on long term memory engine",
-          "text": "Can't turn on long term memory engine\n### Software\n\nDesktop Application, Pieces OS, VS Code\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n10.1.15\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\ni keep clicking on the button but the ltm engine wont turn on\n![Image](https://github.com/user-attachments/assets/d91ee8ce-b8e1-4f28-9785-02d488d88775)\n\n## GitHub Issue Summary: LTM Engine Not Working\n\n**Key Points:**\n\n* User `sh02sahil` reported LTM engine not working, despite restarting and trying both local and cloud modes.\n* `mason-at-pieces` confirmed baseline troubleshooting steps (restart, checking mode).\n* `mark-at-pieces` identified the issue:\n    * Known problem with potential fix in upcoming release.\n    * Desktop application breaking change required for compatibility (version 11.0.0).\n    * Solution:\n        * Update to latest release (may fix the issue).\n        * Update desktop app to 11.0.0 if the issue persists.\n        * Schedule consultation if update fails.\n\n**Current Status:**\n\n* User waiting for update to become available.\n* Will test and report outcome after update.\n\n**Outcome:**\n\n* Pending user's report after testing the update. \n* Further troubleshooting may be needed depending on the results.",
-          "activity_level": 6.06
+          "id": 533,
+          "title": "Taskbar is not able to be  used while accessing pieces",
+          "text": "Taskbar is not able to be  used while accessing pieces\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n3.3.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nThe issue is that my task bar automatiically hides and we can only access it if we hover to the bottom of our screen.For all the apps except the pieces the hover works but when using pieces and hover for the taskbar the taskbar not appears\n## Summary of GitHub Issue Conversation\n\n**Key Points:**\n\n* User @Harisankar705 created an issue on 2024-12-17.\n* The issue concerns Pieces, likely related to the VS extension or Windows 11 experience.\n* No solution was proposed/implemented, as this is the initial bot message.\n\n**Current Status:**\n\n* Pieces-support-bot has acknowledged the issue and will be routed to the appropriate team.\n* A response is to be expected within 24 hours.\n\n**Outcome (Potential):**\n\n* Depending on the specific issue details, the user may get solutions in the form of bug fixes, workarounds, or further consultation.\n\n**Additional Notes:**\n\n* The user can review suggested articles and references while awaiting a further response.\n* The user can also access other existing issues on GitHub for possible insights.",
+          "activity_level": 4.42
         },
         {
-          "id": 528,
-          "title": "I can't use any GPT models other than 'GPT-4o Mini'",
-          "text": "I can't use any GPT models other than 'GPT-4o Mini'\n### Software\n\nDesktop Application, JetBrains, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n10.1.15\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n\"I'm sorry. Something went wrong with processing. Please wait a few seconds and try again, or contact support@pieces.app\"\n\nIf the model is 4o Mini, everything works fine.\nNo comments found on this issue.",
-          "activity_level": 3.15
+          "id": 531,
+          "title": "Pieces Desktop App - Lost Connection to PiecesOS",
+          "text": "Pieces Desktop App - Lost Connection to PiecesOS\n_PiecesOS Information_\n\n**ID:** 18986c5c-5aef-40f4-ac00-93da40fd8b47\n**User:** 1446bb64-5370-4644-a0ee-5ab3b4f3a7ac\n**Current Version:** Unknown\n**Min Version Supported:** 11.0.0\n**Max Version Supported:** 12.0.0\n**Local Port:** 127.0.0.1:39300\n\n_Device Information_\n\n**Operating System:** Windows\n**Current Version:** \"Windows 10 Pro\" 10.0 (Build 26100)\n**Min Version Supported:** Windows 10 Build 1903\n\nPieces for developers always loosing connection and self closing pieces OS\n## Summary of GitHub Issue Conversation\n\n**Key Points Raised:**\n\n* Rafael-a-g-n created an issue that requires attention.\n* The issue has been automatically routed to the appropriate team member.\n\n**Problems Identified:**\n\n* The issue's content is not provided in the conversation excerpt.\n\n**Solutions Proposed/Implemented:**\n\n* The bot suggests similar issues for reference.\n* The bot provides links to helpful resources: existing issues, documentation, and YouTube channel.\n\n**Current Status/Outcome:**\n\n* The issue is awaiting further action from the assigned team member. \n\n**Additional Notes:**\n\n* The conversation provides context but lacks specific details about the issue's nature. More information is needed to accurately summarize the key points, problems, and solutions.",
+          "activity_level": 4.42
         },
         {
           "id": 507,
           "title": "Pieces for Developers app keeps crashing continuously on attempts to upload files and folder and needs restart on my windows 11 laptop",
-          "text": "Pieces for Developers app keeps crashing continuously on attempts to upload files and folder and needs restart on my windows 11 laptop\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n10.1.15\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nPieces for Developers app keeps crashing continuously on attempts to upload files and folder and needs restart on my windows 11 laptop\n## GitHub Issue Conversation Summary:\n\n**Key Points Raised:**\n\n* @omkar-4 reported an issue where PiecesOS crashes when starting the Pieces for Devs Desktop App. \n* The user is experiencing this issue with specific files/folders used as context.\n* The issue is difficult to reproduce without specific files/folders.\n\n**Problems Identified:**\n\n* PiecesOS crashes when starting the app due to incompatibility with specific files/folders used as context.\n* The source of the issue is difficult to pinpoint without reproducing the error with the specific files/folders.\n\n**Solutions Proposed/Implemented:**\n\n* @mark-at-pieces requested access to the specific files/folders causing the issue to facilitate troubleshooting and identify the root cause.\n\n**Current Status/Outcome:**\n\n* The user has not yet responded with the requested files/folders.\n* The issue remains unresolved until the user provides the requested information.\n\n**Additional Notes:**\n\n* The issue may be related to previous reports of crashes with file/folder contexts.\n* The user is encouraged to consult existing issues, documentation, and the YouTube channel for further assistance.\n\nThis summary highlights the key points of the conversation, focusing on the specific issue, troubleshooting steps, and current status. It provides a concise overview of the situation without including unnecessary details.",
+          "text": "Pieces for Developers app keeps crashing continuously on attempts to upload files and folder and needs restart on my windows 11 laptop\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n10.1.15\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nPieces for Developers app keeps crashing continuously on attempts to upload files and folder and needs restart on my windows 11 laptop\n## Summary of GitHub Issue Conversation\n\n**Key points raised:**\n\n* User (@omkar-4) is experiencing crashes with PiecesOS when starting the Pieces for Devs Desktop App.\n* The issue seems related to files/folders being used as context.\n\n**Problems identified:**\n\n* Crashes are occurring.\n* Problem is difficult to reproduce due to reliance on specific files and folders.\n\n**Solutions proposed/implemented:**\n\n* Pieces team requested the user to share the files/folders causing the crashes.\n* Sharing the files will help reproduce the issue and identify the root cause.\n\n**Current status/outcome:**\n\n* Issue remains open and unresolved.\n* User has not yet provided the requested files/folders.\n\n**Additional notes:**\n\n* The user was provided with links to related issues, documentation, and helpful resources.\n\n## Key Takeaways\n\n* The user is experiencing a specific crash related to files/folders as context.\n* The Pieces team needs more information to diagnose the issue.\n* Sharing the problematic files/folders is crucial to resolving the problem.",
           "activity_level": 2.71
         }
       ]
     }
   ],
   "recommendations": [
-    "**Prioritize 'PiecesOS Processing Errors and Crashes'**: This issue has the highest frequency and a very active ticket (#471). Focus on implementing the long-term fixes for rate limiting and file incompatibilities to reduce its occurrence.",
-    "**Improve LLM Engine Stability and Usability**: Address the difficulties users face with the LLM engine, particularly downloading/activating local models and enabling long-term memory. This will resolve issues like those in tickets #527, #528, and #526.",
-    "**Enhance Error Messages and Troubleshooting**: Provide clearer error messages to users, especially for processing errors and LLM issues. Offer more detailed troubleshooting steps in the app and potentially through a dedicated knowledge base.",
-    "**Gather More Data on Crashes**:  Ticket #507 highlights the need for more information to reproduce and debug crashes. Explore ways to collect more detailed crash reports from the desktop application.",
-    "**Proactive Communication**:  Consider a communication to users acknowledging the recent issues and outlining the steps being taken to address them. This can help manage expectations and reduce support ticket volume."
+    "**Prioritize resolving Pieces OS processing errors:** This issue is the most frequent and has the highest activity level. Focus on addressing the root causes, such as rate limit adjustments and authentication for cloud processing.",
+    "**Investigate plugin connectivity issues after the 11.0.0 update:** Many users are experiencing broken plugins for VS Code and PHPStorm. Determine the cause of the port conflicts or incompatibility and provide a solution, such as plugin updates or clear instructions for port configuration.",
+    "**Improve communication around LLM engine issues:** Users are facing difficulties with LLM engine downloads and activation. Provide clear workarounds, communicate timelines for new releases with improved infrastructure, and offer personalized support for complex cases.",
+    "**Address Pieces Desktop App issues on Windows:** Investigate and resolve reported issues like taskbar hiding, connection losses, and app crashes. Ensure system compatibility, provide troubleshooting steps, and consider releasing updates to address these problems.",
+    "**Proactively monitor and address emerging issues:** Regularly analyze support tickets for new trends and common problems. This will help identify and address emerging issues before they escalate and impact a larger user base.",
+    "**Improve self-service resources:** Enhance documentation, FAQs, and knowledge base articles to address common issues and questions. This will empower users to troubleshoot problems independently and reduce the load on the support team.",
+    "**Consider implementing a status page:** A public status page can keep users informed about ongoing issues, planned maintenance, and service disruptions. This transparency can improve user satisfaction and reduce support inquiries during outages.",
+    "**Gather user feedback on support experience:** Regularly collect feedback from users on their support experience. This can provide valuable insights into areas for improvement and help tailor support operations to better meet user needs."
   ],
   "message": "Daily support report generated successfully."
 }

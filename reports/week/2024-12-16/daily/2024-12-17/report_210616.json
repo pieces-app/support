@@ -1,0 +1,197 @@
+{
+  "success": true,
+  "date_range": {
+    "start": "2024-12-17T00:00:00+00:00",
+    "end": "2024-12-17T21:06:16.790478+00:00"
+  },
+  "summary": {
+    "total_tickets": 6,
+    "resolved_tickets": 0,
+    "open_tickets": 6
+  },
+  "ticket_breakdown": [
+    {
+      "category": "bug",
+      "received": 5,
+      "resolved": 0,
+      "pending": 5
+    },
+    {
+      "category": "status:new",
+      "received": 4,
+      "resolved": 0,
+      "pending": 4
+    },
+    {
+      "category": "app:jetbrains",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "os:linux",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:pieces os",
+      "received": 4,
+      "resolved": 0,
+      "pending": 4
+    },
+    {
+      "category": "os:windows",
+      "received": 4,
+      "resolved": 0,
+      "pending": 4
+    },
+    {
+      "category": "app:desktop application",
+      "received": 4,
+      "resolved": 0,
+      "pending": 4
+    },
+    {
+      "category": "app:vs code",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "app:visual studio",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:waiting_on_user_responses",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:triaged",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    }
+  ],
+  "most_active_tickets": [
+    {
+      "number": 530,
+      "title": "Vscode and PHPStorm plugins stopped working after Pieces OS update",
+      "activity_level": 6.62
+    },
+    {
+      "number": 526,
+      "title": "Can't turn on long term memory engine",
+      "activity_level": 5.67
+    },
+    {
+      "number": 534,
+      "title": "Pieces os says: port already in use if i start phpstorm with pieces plugin",
+      "activity_level": 4.42
+    },
+    {
+      "number": 533,
+      "title": "Taskbar is not able to be  used while accessing pieces",
+      "activity_level": 4.42
+    },
+    {
+      "number": 531,
+      "title": "Pieces Desktop App - Lost Connection to PiecesOS",
+      "activity_level": 4.42
+    },
+    {
+      "number": 528,
+      "title": "I can't use any GPT models other than 'GPT-4o Mini'",
+      "activity_level": 4.42
+    }
+  ],
+  "common_issues": [
+    {
+      "title": "Pieces OS update causes plugin compatibility issues",
+      "description": "The latest Pieces OS update (version 11.0.0) introduced compatibility issues with VS Code and JetBrains plugins, preventing users from connecting to Pieces OS.  This is likely due to port conflicts or outdated plugin versions.  Solutions include ensuring Pieces OS is running on the correct port, updating plugins, and potentially downgrading Pieces OS until a fix is released.",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 534,
+          "title": "Pieces os says: port already in use if i start phpstorm with pieces plugin",
+          "text": "Pieces os says: port already in use if i start phpstorm with pieces plugin\n### Software\n\nPieces OS\n\n### Operating System / Platform\n\nLinux\n\n### Your Pieces OS Version\n\n11.0.0 2024-12-17\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nif i start my computer, pieces-os starts. Then, if i start phpstorm, there's a message: \n> It looks like port 5323 is occupied by another application. Pieces OS uses this port to communicate with plugins. Please, enable Pieces OS to run on port 5323.\n\nEven if I kill the pieces-os on port 5323 and start up phpstorm, it still get's this error. So it looks like phpstorm is trying to start piecec-os again, and I think more than once.\nI did snap refresh pieces-os => snap \"pieces-os\" has no updates available\nphp storm plugin is to be 10.0.0\n\n## Summary of GitHub Issue Conversation\n\n**Key Points Raised:**\n\n* User @micksp reported an issue with the Pieces OS update causing VS Code and JetBrains plugins to stop working.\n* The user provided details about the issue, including affected versions and error messages.\n\n**Problems Identified:**\n\n* The Pieces OS update caused compatibility issues with VS Code and JetBrains plugins.\n* This prevented users from using these plugins and accessing code editing features.\n\n**Solutions Proposed/Implemented:**\n\n* The Pieces support bot provided links to similar issues and helpful resources.\n* The bot assured the user that a dedicated team member would follow up within 24 hours.\n* No specific solution was proposed or implemented in this conversation.\n\n**Current Status/Outcome:**\n\n* The issue is being investigated by the Pieces team.\n* The user is awaiting a follow-up response from the team.\n\n**Additional Notes:**\n\n* The conversation timestamp indicates that the issue was reported on December 17, 2024.\n* There is no information available about the current status of the problem or the proposed fix.",
+          "activity_level": 4.42
+        },
+        {
+          "id": 530,
+          "title": "Vscode and PHPStorm plugins stopped working after Pieces OS update",
+          "text": "Vscode and PHPStorm plugins stopped working after Pieces OS update\n### Software\n\nVS Code, Visual Studio\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n11.0.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nYesterday was working great. Minutes ago it prompt me to update Pieces OS and Pieces for Developers. After the update both Vscode and PHPStorm plugins stopped working.\n\nPHPStorm says - It looks like port 1000 is occupied by another application. Pieces OS uses this port to communicate with plugins. Please, enable Pieces OS to run on port 1000.\n\nAnd Vscode says - Please update the Pieces for VS Code extension to the latest version. This version is only compatible with Pieces OS versions less than 11.0.0, and  you have 11.0.0 installed. But there isn't any Vscode plugin update.\n\nCan you help? Is there a way to downgrade?\n\n![Image](https://github.com/user-attachments/assets/973ecc53-1230-4b25-93df-b8f258273f19)\n\n![Image](https://github.com/user-attachments/assets/a0d82807-7d45-4279-af39-b223896bd4ca)\n\n## GitHub Issue Conversation Summary\n\n**Key Points Raised:**\n\n* Rafael reported that their antivirus flagged the latest Pieces OS update as suspicious.\n\n**Problems Identified:**\n\n* Rafael's antivirus flagged the update as potentially harmful.\n* This could potentially deter other users from updating.\n\n**Solutions Proposed/Implemented:**\n\n* Mark acknowledged the issue and informed Rafael that a new build for VsCode is currently rolling out.\n* They encouraged Rafael to report any further issues.\n\n**Current Status/Outcome:**\n\n* The issue is acknowledged and being addressed.\n* A new build is expected to be available within a few hours.\n* Users are encouraged to report any further problems.",
+          "activity_level": 6.62
+        },
+        {
+          "id": 531,
+          "title": "Pieces Desktop App - Lost Connection to PiecesOS",
+          "text": "Pieces Desktop App - Lost Connection to PiecesOS\n_PiecesOS Information_\n\n**ID:** 18986c5c-5aef-40f4-ac00-93da40fd8b47\n**User:** 1446bb64-5370-4644-a0ee-5ab3b4f3a7ac\n**Current Version:** Unknown\n**Min Version Supported:** 11.0.0\n**Max Version Supported:** 12.0.0\n**Local Port:** 127.0.0.1:39300\n\n_Device Information_\n\n**Operating System:** Windows\n**Current Version:** \"Windows 10 Pro\" 10.0 (Build 26100)\n**Min Version Supported:** Windows 10 Build 1903\n\nPieces for developers always loosing connection and self closing pieces OS\n## GitHub issue conversation summary:\n\n**Key points raised:**\n\n* User @rafael-a-g-n created an issue regarding the Pieces OS.\n* The issue was automatically triaged and routed to the relevant team member.\n* The user will receive a follow-up within 24 hours.\n\n**Problems identified:**\n\n* The specific problem encountered by the user is not explicitly mentioned.\n\n**Solutions proposed/implemented:**\n\n* The bot suggests checking related issues and helpful resources.\n\n**Current status/outcome:**\n\n* The issue is being investigated by the Pieces team.\n* No resolution is provided yet.\n\n**Additional notes:**\n\n* The conversation took place on December 17, 2024, at 17:04 UTC.",
+          "activity_level": 4.42
+        }
+      ]
+    },
+    {
+      "title": "Pieces OS and Desktop App Connectivity Issues",
+      "description": "Users report various issues with Pieces OS and Desktop App connectivity, including taskbar malfunctions, lost connections, and LTM engine failures.  Suggested solutions involve upgrading to the latest Pieces OS version, restarting applications, and checking for updates.  The Pieces team is actively investigating these issues and providing individual support.",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 533,
+          "title": "Taskbar is not able to be  used while accessing pieces",
+          "text": "Taskbar is not able to be  used while accessing pieces\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n3.3.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nThe issue is that my task bar automatiically hides and we can only access it if we hover to the bottom of our screen.For all the apps except the pieces the hover works but when using pieces and hover for the taskbar the taskbar not appears\n## Summary of GitHub Issue Conversation:\n\n**Key Points:**\n\n* User @Harisankar705 created an issue on 2024-12-17.\n* The issue was automatically routed to the proper Pieces team member.\n* The issue is expected to be addressed within 24 hours.\n* Three related issues were suggested for reference.\n* Useful resources were provided for user convenience.\n\n**Problems Identified:**\n\n* The specifics of the issue reported by @Harisankar705 are not mentioned in the provided conversation excerpt.\n\n**Solutions Proposed/Implemented:**\n\n* No solutions were proposed or implemented in this initial conversation.\n\n**Current Status/Outcome:**\n\n* The issue is currently being reviewed by the Pieces team.\n* The user is expected to receive a follow-up within 24 hours.\n\n**Note:**\n\n* The provided excerpt only captures the initial conversation and may not reflect the full resolution of the issue.",
+          "activity_level": 4.42
+        },
+        {
+          "id": 531,
+          "title": "Pieces Desktop App - Lost Connection to PiecesOS",
+          "text": "Pieces Desktop App - Lost Connection to PiecesOS\n_PiecesOS Information_\n\n**ID:** 18986c5c-5aef-40f4-ac00-93da40fd8b47\n**User:** 1446bb64-5370-4644-a0ee-5ab3b4f3a7ac\n**Current Version:** Unknown\n**Min Version Supported:** 11.0.0\n**Max Version Supported:** 12.0.0\n**Local Port:** 127.0.0.1:39300\n\n_Device Information_\n\n**Operating System:** Windows\n**Current Version:** \"Windows 10 Pro\" 10.0 (Build 26100)\n**Min Version Supported:** Windows 10 Build 1903\n\nPieces for developers always loosing connection and self closing pieces OS\n## GitHub issue conversation summary:\n\n**Key points raised:**\n\n* User @rafael-a-g-n created an issue regarding the Pieces OS.\n* The issue was automatically triaged and routed to the relevant team member.\n* The user will receive a follow-up within 24 hours.\n\n**Problems identified:**\n\n* The specific problem encountered by the user is not explicitly mentioned.\n\n**Solutions proposed/implemented:**\n\n* The bot suggests checking related issues and helpful resources.\n\n**Current status/outcome:**\n\n* The issue is being investigated by the Pieces team.\n* No resolution is provided yet.\n\n**Additional notes:**\n\n* The conversation took place on December 17, 2024, at 17:04 UTC.",
+          "activity_level": 4.42
+        },
+        {
+          "id": 526,
+          "title": "Can't turn on long term memory engine",
+          "text": "Can't turn on long term memory engine\n### Software\n\nDesktop Application, Pieces OS, VS Code\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n10.1.15\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\ni keep clicking on the button but the ltm engine wont turn on\n![Image](https://github.com/user-attachments/assets/d91ee8ce-b8e1-4f28-9785-02d488d88775)\n\n## Summary of GitHub Issue Conversation\n\n**Key Points Raised:**\n\n* User `sh02sahil` reported the LTM engine not functioning.\n* User confirmed they had tried restarting the engine and switching between local and cloud modes.\n* Pieces team acknowledged encountering this issue previously and provided potential solutions.\n\n**Problems Identified:**\n\n* LTM engine wouldn't start in Pieces OS.\n* Application couldn't find the update.\n\n**Solutions Proposed/Implemented:**\n\n* Releasing a fix in the evening.\n* Upgrading to Pieces OS 11.0.0 (with compatible desktop application release).\n* Scheduling a meeting with `mark-at-pieces` to address further issues.\n\n**Current Status/Outcome:**\n\n* Update not available yet, user will follow up.\n* Meeting scheduled with `mark-at-pieces` to discuss remaining issues.\n\n**Additional Notes:**\n\n* User mentioned additional unidentified issues. These will likely be addressed in the upcoming meeting.\n* The conversation occurred on December 13th and 16th, 2024.",
+          "activity_level": 5.67
+        }
+      ]
+    },
+    {
+      "title": "Pieces OS Connectivity and Functionality Issues",
+      "description": "Users report Pieces OS connection failures, LTM engine activation problems, and difficulties accessing GPT models.  Suggested solutions include restarting the engine, upgrading to the latest Pieces OS version, checking for updates, and contacting support. The Pieces team is actively investigating these issues.",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 528,
+          "title": "I can't use any GPT models other than 'GPT-4o Mini'",
+          "text": "I can't use any GPT models other than 'GPT-4o Mini'\n### Software\n\nDesktop Application, JetBrains, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n10.1.15\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n\"I'm sorry. Something went wrong with processing. Please wait a few seconds and try again, or contact support@pieces.app\"\n\nIf the model is 4o Mini, everything works fine.\n## GitHub Issue Summary\n\n**Issue:** User @int80x0 reported an issue with Copilot. \n\n**Key Points Raised:**\n\n* User experiencing \"I'm sorry. Something went wrong with processing.\" error.\n* User provided details of the issue in the report.\n\n**Problems Identified:**\n\n* Copilot functionality appears to be malfunctioning.\n* Error message is not providing specific information about the cause of the issue.\n\n**Solutions Proposed/Implemented:**\n\n* Pieces Support Bot automatically triaged and routed the issue to the appropriate team member.\n* Bot suggested relevant existing issues that might be helpful. \n* Bot provided links to helpful resources such as existing issues, documentation, and YouTube channel.\n\n**Current Status/Outcome:**\n\n* The issue is being investigated by the Pieces team. \n* No resolution or update has been provided yet. \n\n**Additional Notes:**\n\n* The bot's response suggests this may be a common issue with Copilot. \n* The user is encouraged to check the provided resources for potential solutions while the team investigates the issue.",
+          "activity_level": 4.42
+        },
+        {
+          "id": 526,
+          "title": "Can't turn on long term memory engine",
+          "text": "Can't turn on long term memory engine\n### Software\n\nDesktop Application, Pieces OS, VS Code\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n10.1.15\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\ni keep clicking on the button but the ltm engine wont turn on\n![Image](https://github.com/user-attachments/assets/d91ee8ce-b8e1-4f28-9785-02d488d88775)\n\n## Summary of GitHub Issue Conversation\n\n**Key Points Raised:**\n\n* User `sh02sahil` reported the LTM engine not functioning.\n* User confirmed they had tried restarting the engine and switching between local and cloud modes.\n* Pieces team acknowledged encountering this issue previously and provided potential solutions.\n\n**Problems Identified:**\n\n* LTM engine wouldn't start in Pieces OS.\n* Application couldn't find the update.\n\n**Solutions Proposed/Implemented:**\n\n* Releasing a fix in the evening.\n* Upgrading to Pieces OS 11.0.0 (with compatible desktop application release).\n* Scheduling a meeting with `mark-at-pieces` to address further issues.\n\n**Current Status/Outcome:**\n\n* Update not available yet, user will follow up.\n* Meeting scheduled with `mark-at-pieces` to discuss remaining issues.\n\n**Additional Notes:**\n\n* User mentioned additional unidentified issues. These will likely be addressed in the upcoming meeting.\n* The conversation occurred on December 13th and 16th, 2024.",
+          "activity_level": 5.67
+        },
+        {
+          "id": 531,
+          "title": "Pieces Desktop App - Lost Connection to PiecesOS",
+          "text": "Pieces Desktop App - Lost Connection to PiecesOS\n_PiecesOS Information_\n\n**ID:** 18986c5c-5aef-40f4-ac00-93da40fd8b47\n**User:** 1446bb64-5370-4644-a0ee-5ab3b4f3a7ac\n**Current Version:** Unknown\n**Min Version Supported:** 11.0.0\n**Max Version Supported:** 12.0.0\n**Local Port:** 127.0.0.1:39300\n\n_Device Information_\n\n**Operating System:** Windows\n**Current Version:** \"Windows 10 Pro\" 10.0 (Build 26100)\n**Min Version Supported:** Windows 10 Build 1903\n\nPieces for developers always loosing connection and self closing pieces OS\n## GitHub issue conversation summary:\n\n**Key points raised:**\n\n* User @rafael-a-g-n created an issue regarding the Pieces OS.\n* The issue was automatically triaged and routed to the relevant team member.\n* The user will receive a follow-up within 24 hours.\n\n**Problems identified:**\n\n* The specific problem encountered by the user is not explicitly mentioned.\n\n**Solutions proposed/implemented:**\n\n* The bot suggests checking related issues and helpful resources.\n\n**Current status/outcome:**\n\n* The issue is being investigated by the Pieces team.\n* No resolution is provided yet.\n\n**Additional notes:**\n\n* The conversation took place on December 17, 2024, at 17:04 UTC.",
+          "activity_level": 4.42
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    "\"Investigate and address the compatibility issues introduced by Pieces OS update (version 11.0.0), specifically the conflicts with VS Code and JetBrains plugins.\"",
+    "\"Provide clear guidance and support to users experiencing connectivity issues between Pieces OS and Desktop App, including troubleshooting steps for taskbar malfunctions, lost connections, and LTM engine failures.\"",
+    "\"Prioritize resolving the issue preventing users from activating the Long Term Memory (LTM) engine, as it impacts core functionality.\"",
+    "\"Improve communication with users regarding ongoing issues and expected resolution timelines, particularly for widespread problems like the plugin compatibility and LTM engine activation.\"",
+    "\"Expand the knowledge base and support resources to address common issues like port conflicts, plugin updates, and Pieces OS connectivity problems, enabling users to self-troubleshoot more effectively.\""
+  ],
+  "message": "Daily support report generated successfully."
+}
