@@ -1,5 +1,5 @@
 # Support Ticket Report
-- Generated: 2024-12-18 05:08:38
+- Generated: 2024-12-18 13:13:27
 - Period: 2024-12-16 to 2024-12-18
 
 ## Summary
@@ -12,64 +12,64 @@
 |---------|-------|----------------|
 | [#471](https://github.com/pieces-app/support/issues/471) | I´m sorry. Something went wrong with processing. Please wait a few seconds and try again, or contact support@pieces.app | 18.51 |
 | [#530](https://github.com/pieces-app/support/issues/530) | Vscode and PHPStorm plugins stopped working after Pieces OS update | 8.83 |
+| [#526](https://github.com/pieces-app/support/issues/526) | Can't turn on long term memory engine | 7.67 |
+| [#531](https://github.com/pieces-app/support/issues/531) | Pieces Desktop App - Lost Connection to PiecesOS | 6.94 |
 | [#528](https://github.com/pieces-app/support/issues/528) | I can't use any GPT models other than 'GPT-4o Mini' | 6.50 |
-| [#526](https://github.com/pieces-app/support/issues/526) | Can't turn on long term memory engine | 6.33 |
-| [#531](https://github.com/pieces-app/support/issues/531) | Pieces Desktop App - Lost Connection to PiecesOS | 5.68 |
 
 ## Common Issues
-### 1. PiecesOS Processing Errors and Crashes
-Users report processing errors, crashes when uploading content, and limitations with GPT models. This appears related to rate limiting and specific file/folder contexts. Solutions include authentication, PiecesOS updates (v11.0.0 or later), and providing detailed logs/files for issue diagnosis.
+### 1. PiecesOS Copilot Rate Limiting Errors
+Users are experiencing "Something went wrong with processing" errors due to rate limiting in PiecesOS versions prior to 11.0.0. This primarily affects Copilot features and GPT models other than GPT-4o Mini. Upgrading to PiecesOS 11.0.0, authenticating, and contacting support are recommended solutions.
 
 **Related Issues:**
 - [#471](https://github.com/pieces-app/support/issues/471): I´m sorry. Something went wrong with processing. Please wait a few seconds and try again, or contact support@pieces.app
 - [#528](https://github.com/pieces-app/support/issues/528): I can't use any GPT models other than 'GPT-4o Mini'
 - [#507](https://github.com/pieces-app/support/issues/507): Pieces for Developers app keeps crashing continuously on attempts to upload files and folder and needs restart on my windows 11 laptop
 
-### 2. Pieces OS 11.0.0 breaks plugins
-Pieces OS version 11.0.0 causes plugin connection issues with VS Code and PHPStorm.  Error messages indicate port conflicts or incompatible plugin versions.  Potential solutions include ensuring Pieces OS is running on the correct port, updating plugins, or downgrading Pieces OS.  The Pieces development team is aware of these issues and actively working on solutions.
+### 2. Pieces OS Plugin Connectivity Issues
+Users are experiencing connectivity problems between Pieces OS and IDE plugins (VS Code, PHPStorm) after updating to version 11.0.0.  This is likely due to port conflicts or plugin incompatibility.  Suggested solutions include ensuring Pieces OS is running on the correct port, reinstalling or updating plugins, and checking for antivirus interference.
 
 **Related Issues:**
-- [#530](https://github.com/pieces-app/support/issues/530): Vscode and PHPStorm plugins stopped working after Pieces OS update
 - [#534](https://github.com/pieces-app/support/issues/534): Pieces os says: port already in use if i start phpstorm with pieces plugin
+- [#530](https://github.com/pieces-app/support/issues/530): Vscode and PHPStorm plugins stopped working after Pieces OS update
 - [#531](https://github.com/pieces-app/support/issues/531): Pieces Desktop App - Lost Connection to PiecesOS
 
-### 3. Pieces OS LLM Download and Usage Issues
-Users report difficulties downloading LLMs due to network interruptions and an inability to use manually downloaded models. A temporary workaround involves placing a "download_success.txt" file in the model directory. Pieces is working on improvements to LLM download handling and management in upcoming releases, including download resumption and broader model support.
+### 3. Pieces OS LLM Download and Integration Issues
+Users report difficulties downloading large LLMs due to unstable network connections. Failed downloads require restarting, and manually downloaded models aren't recognized. Workarounds include adding empty files to force recognition. Additionally, users experience issues enabling the LTM engine, often persisting across restarts and updates. Solutions involve upgrading to the latest Pieces OS version or troubleshooting WSL access for VSCode extensions.
 
 **Related Issues:**
 - [#527](https://github.com/pieces-app/support/issues/527): Manually downloading a LLM
-- [#526](https://github.com/pieces-app/support/issues/526): Can't turn on long term memory engine
 - [#528](https://github.com/pieces-app/support/issues/528): I can't use any GPT models other than 'GPT-4o Mini'
-
-### 4. PiecesOS 10.1.15 crashes and malfunctions
-Users report PiecesOS 10.1.15 crashing when uploading files, failing to run LTM engine, and encountering issues with GPT models. Proposed solutions involve upgrading to PiecesOS 11.0.0, authenticating accounts, and providing detailed logs and files for developers to reproduce and debug the errors.
-
-**Related Issues:**
 - [#526](https://github.com/pieces-app/support/issues/526): Can't turn on long term memory engine
-- [#528](https://github.com/pieces-app/support/issues/528): I can't use any GPT models other than 'GPT-4o Mini'
-- [#507](https://github.com/pieces-app/support/issues/507): Pieces for Developers app keeps crashing continuously on attempts to upload files and folder and needs restart on my windows 11 laptop
 
-### 5. Pieces Desktop App connection and stability issues
-Users report Pieces for Developers Desktop App crashing, losing connection to PiecesOS, and experiencing UI conflicts. Troubleshooting includes checking for updates, ensuring system compatibility, and providing detailed bug reports with logs and system information. Support may request video recordings or file access for issue reproduction.
+### 4. PiecesOS and Desktop App Connection Issues
+Users are experiencing connection issues between the PiecesOS and Desktop App after updating to the latest version. This can manifest as crashes, plugin failures, or the app reporting a lost connection. Proposed solutions include checking for updates, ensuring PiecesOS is running on the correct port, and providing logs or system information to the Pieces team for further analysis.
 
 **Related Issues:**
 - [#531](https://github.com/pieces-app/support/issues/531): Pieces Desktop App - Lost Connection to PiecesOS
 - [#507](https://github.com/pieces-app/support/issues/507): Pieces for Developers app keeps crashing continuously on attempts to upload files and folder and needs restart on my windows 11 laptop
-- [#533](https://github.com/pieces-app/support/issues/533): Taskbar is not able to be  used while accessing pieces
+- [#530](https://github.com/pieces-app/support/issues/530): Vscode and PHPStorm plugins stopped working after Pieces OS update
+
+### 5. Pieces OS crashes and LTM engine fails
+Users report Pieces OS crashing when uploading files or starting the LTM engine.  Suggested solutions include restarting the app, updating to the latest version, checking for specific file-related issues, and contacting support. Issues persist across different Pieces OS versions and operating systems.
+
+**Related Issues:**
+- [#526](https://github.com/pieces-app/support/issues/526): Can't turn on long term memory engine
+- [#507](https://github.com/pieces-app/support/issues/507): Pieces for Developers app keeps crashing continuously on attempts to upload files and folder and needs restart on my windows 11 laptop
+- [#528](https://github.com/pieces-app/support/issues/528): I can't use any GPT models other than 'GPT-4o Mini'
 
 
 ## Recommendations
-- **Prioritize resolution of PiecesOS processing errors and crashes:** This issue is the most frequent and has the highest activity level. Focus on addressing rate limiting, file/folder context issues, and improving error messages.
-- **Address Pieces OS 11.0.0 plugin compatibility:** Investigate and resolve the plugin connection issues with VS Code and PHPStorm caused by the latest Pieces OS update. Ensure clear communication and solutions for affected users.
-- **Improve LLM download and management:** Address the difficulties users face when downloading LLMs, including network interruptions and inability to use manually downloaded models. Implement download resumption and expand model support.
-- **Enhance Pieces Desktop App stability:** Investigate and resolve crashes, connection issues, and UI conflicts reported by users. Improve bug reporting mechanisms and gather detailed system information for troubleshooting.
-- **Proactively monitor and address issues with new PiecesOS releases:** Implement rigorous testing and release procedures to minimize the impact of bugs and compatibility issues in future updates. Communicate known issues and workarounds to users promptly.
-- **Consider creating a dedicated support channel for PiecesOS and plugin issues:** This would help streamline support requests and ensure that users receive timely and relevant assistance.
-- **Develop comprehensive documentation and troubleshooting guides:** Provide clear instructions on resolving common issues, including LLM download problems, plugin conflicts, and PiecesOS errors. Make this information easily accessible within the app and on the Pieces website.
-- **Gather user feedback on specific error messages and support experiences:** Use this feedback to improve the clarity and helpfulness of error messages and identify areas for improvement in the support process.
+- **Address PiecesOS and Desktop App Connection Issues:** Prioritize resolving connection issues between PiecesOS and the Desktop App, as they are a recurring problem with high frequency and activity levels. This includes crashes, plugin failures, and lost connections.
+- **Improve LLM Download Stability and Integration:** Address issues related to LLM downloads, such as unstable connections, failed downloads requiring restarts, and manual download recognition problems. Improve the download process and provide clearer instructions for local LLM integration.
+- **Investigate and Resolve PiecesOS Plugin Connectivity Issues:** Investigate the root cause of connectivity problems between Pieces OS and IDE plugins (VS Code, PHPStorm) after the 11.0.0 update.  Focus on potential port conflicts, plugin incompatibility, and antivirus interference.
+- **Provide Clearer Communication and Solutions for Rate Limiting:** Implement better communication around rate limiting, including clearer error messages and guidance on authentication.  Consider offering alternative solutions or options for users experiencing rate limiting issues.
+- **Gather More Data on LTM Engine Failures:** Investigate the LTM engine failures, including the inability to turn it on and crashes associated with it. Gather more data on the specific conditions and user steps leading to these issues to identify solutions.
+- **Proactively Monitor and Address High-Activity Tickets:** Continue monitoring high-activity tickets, such as ticket #471, #530, #526, and others, to ensure timely resolution and identify any underlying patterns or systemic issues.
+- **Improve PiecesOS Stability and Crash Reporting:** Investigate and address the root causes of PiecesOS crashes, including those occurring during file uploads and LTM engine startup. Implement better crash reporting to gather more detailed information for debugging.
 
 ## Daily Reports
 Here are the daily reports for this week:
 
 - [report_210616](daily/2024-12-17/report_210616.md)
 - [report_131026](daily/2024-12-17/report_131026.md)
+- [report_131144](daily/2024-12-18/report_131144.md)
