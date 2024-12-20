@@ -1,71 +1,71 @@
 # Support Ticket Report
-- Generated: 2024-12-20 13:13:47
+- Generated: 2024-12-20 21:11:12
 - Period: 2024-12-16 to 2024-12-20
 
 ## Summary
-- **Total Tickets:** 24
-- **Resolved:** 10
-- **Open:** 14
+- **Total Tickets:** 26
+- **Resolved:** 11
+- **Open:** 15
 
 ## 5 Most Active Tickets
 | Issue # | Title | Activity Level |
 |---------|-------|----------------|
 | [#471](https://github.com/pieces-app/support/issues/471) | I´m sorry. Something went wrong with processing. Please wait a few seconds and try again, or contact support@pieces.app | 17.70 |
 | [#539](https://github.com/pieces-app/support/issues/539) | Pieces Desktop App - Lost Connection to PiecesOS | 14.25 |
-| [#531](https://github.com/pieces-app/support/issues/531) | Pieces Desktop App - Lost Connection to PiecesOS | 10.98 |
+| [#531](https://github.com/pieces-app/support/issues/531) | Pieces Desktop App - Lost Connection to PiecesOS | 10.64 |
 | [#543](https://github.com/pieces-app/support/issues/543) | OSX/Nukesped.ext reported by VirusBarrier | 9.46 |
-| [#536](https://github.com/pieces-app/support/issues/536) | Bug: Adding Folder as context (typescript repo) appears to crash PiecesOS within the Copilot | 8.50 |
+| [#536](https://github.com/pieces-app/support/issues/536) | Bug: Adding Folder as context (on Windows) crashes PiecesOS within the Copilot | 8.18 |
 
 ## Common Issues
-### 1. Pieces Desktop App loses connection to PiecesOS
-Users report frequent disconnections between the Pieces Desktop App and PiecesOS on Windows 10.  This issue appears linked to recent updates and alternative installation locations.  Proposed solutions include reinstalling after deleting specific folders and a potential patch from the Pieces team to address installation location conflicts.
+### 1. PiecesOS Performance and Connection Issues
+Users report high RAM/CPU usage, crashes, and disconnections with PiecesOS. Proposed solutions include restarting the app, optimizing memory usage, reinstalling, and contacting support for rate limit increases or database repair. The Pieces team is actively addressing these issues.
 
 **Related Issues:**
+- [#150](https://github.com/pieces-app/support/issues/150): PiecesOS using too much RAM/spike in CPU
 - [#531](https://github.com/pieces-app/support/issues/531): Pieces Desktop App - Lost Connection to PiecesOS
-- [#539](https://github.com/pieces-app/support/issues/539): Pieces Desktop App - Lost Connection to PiecesOS
-- [#541](https://github.com/pieces-app/support/issues/541): Pieces Desktop App - Lost Connection to PiecesOS
-
-### 2. Pieces App Onboarding and Window Resizing Issues
-Users reported issues with the Pieces app onboarding process, particularly on macOS, where a fixed window size on smaller screens made it impossible to proceed. Additionally, some users experienced an inability to resize the app window. These issues stemmed from a lack of responsive window sizing and were addressed in version 3.3.1 by implementing automatic window size adjustment and allowing manual resizing during onboarding.
-
-**Related Issues:**
-- [#504](https://github.com/pieces-app/support/issues/504): Personalizing during installation broken on macOS 12.7.6
-- [#470](https://github.com/pieces-app/support/issues/470): Unable to resize my pieces app
 - [#471](https://github.com/pieces-app/support/issues/471): I´m sorry. Something went wrong with processing. Please wait a few seconds and try again, or contact support@pieces.app
 
-### 3. Pieces OS Update Causes Plugin Issues and False Positives
-Users report plugin malfunctions and antivirus software flagging Pieces OS after updating. Solutions include updating antivirus software, reporting false positives, reinstalling Pieces OS and plugins, and awaiting patches from the Pieces team to address compatibility and false positive triggers.
+### 2. PiecesOS Connection and Installation Issues
+Users are experiencing issues with PiecesOS connecting, crashing, and data corruption.  This seems to occur after installation or upgrades. Solutions include uninstalling, deleting the 'com.pieces.os' folder, and reinstalling.  Providing log files and engaging in direct support are recommended for troubleshooting.
 
 **Related Issues:**
-- [#543](https://github.com/pieces-app/support/issues/543): OSX/Nukesped.ext reported by VirusBarrier
-- [#530](https://github.com/pieces-app/support/issues/530): Vscode and PHPStorm plugins stopped working after Pieces OS update
+- [#545](https://github.com/pieces-app/support/issues/545): facing a issue in the installation
 - [#531](https://github.com/pieces-app/support/issues/531): Pieces Desktop App - Lost Connection to PiecesOS
-
-### 4. PiecesOS Crashes When Adding Folders
-Users are reporting that the Pieces desktop app crashes or loses connection to PiecesOS when attempting to add folders to their context. This issue appears to be related to specific Windows builds and is currently under investigation by the Pieces team. A potential fix is being worked on, and users are encouraged to check for updates and refer to related GitHub issues for the latest information.
-
-**Related Issues:**
-- [#533](https://github.com/pieces-app/support/issues/533): Taskbar is not able to be  used while accessing pieces
-- [#542](https://github.com/pieces-app/support/issues/542): Pieces Desktop App - Lost Connection to PiecesOS
 - [#539](https://github.com/pieces-app/support/issues/539): Pieces Desktop App - Lost Connection to PiecesOS
 
-### 5. PiecesOS crashes when uploading folders
-Users are experiencing crashes in the PiecesOS desktop app on Windows 10 and 11 when attempting to upload folders as context. Uploading individual files appears to work. The issue seems to be related to specific Windows builds and the Pieces team is actively investigating and requesting affected users to provide more information.
+### 3. PiecesOS Connection Issues on Windows 10
+Users are experiencing lost connection to PiecesOS on Windows 10, particularly build 26100. The issue occurs when adding folders, leading to PiecesOS crashes.  Workarounds include adding single files instead. The development team is actively investigating and a potential fix is in development.  One solution involves uninstalling, deleting the 'com.pieces.os' folder, and reinstalling the application.
 
 **Related Issues:**
-- [#507](https://github.com/pieces-app/support/issues/507): Pieces for Developers app keeps crashing continuously on attempts to upload files and folder and needs restart on my windows 11 laptop
-- [#536](https://github.com/pieces-app/support/issues/536): Bug: Adding Folder as context (typescript repo) appears to crash PiecesOS within the Copilot
 - [#542](https://github.com/pieces-app/support/issues/542): Pieces Desktop App - Lost Connection to PiecesOS
+- [#539](https://github.com/pieces-app/support/issues/539): Pieces Desktop App - Lost Connection to PiecesOS
+- [#531](https://github.com/pieces-app/support/issues/531): Pieces Desktop App - Lost Connection to PiecesOS
+
+### 4. Claude 3.5 Sonnet Copilot Response Errors
+Users are experiencing error messages when using Claude 3.5 Sonnet in Copilot, potentially due to rate limiting or model issues.  Suggested solutions include switching to OpenAI or Gemini, signing into Pieces for a larger rate limit, or waiting and trying again later. The Pieces team is aware of the issue and investigating.
+
+**Related Issues:**
+- [#487](https://github.com/pieces-app/support/issues/487): "This message exceeded the context limit for this LLM. Please select a different LLM and try again, or shorten your prompt." issue
+- [#471](https://github.com/pieces-app/support/issues/471): I´m sorry. Something went wrong with processing. Please wait a few seconds and try again, or contact support@pieces.app
+- [#535](https://github.com/pieces-app/support/issues/535): Bug: Claude 3.5 Sonnet Copilot response issues "I'm Sorry something went wrong with the processing..."
+
+### 5. Pieces OS Processing Error
+Users are experiencing "Something went wrong with processing" errors in Pieces OS, primarily with Copilot and Claude models. This is often due to rate limiting. Solutions include updating to the latest Pieces OS, authenticating the account, and contacting support for rate limit increases.
+
+**Related Issues:**
+- [#528](https://github.com/pieces-app/support/issues/528): I can't use any GPT models other than 'GPT-4o Mini'
+- [#535](https://github.com/pieces-app/support/issues/535): Bug: Claude 3.5 Sonnet Copilot response issues "I'm Sorry something went wrong with the processing..."
+- [#471](https://github.com/pieces-app/support/issues/471): I´m sorry. Something went wrong with processing. Please wait a few seconds and try again, or contact support@pieces.app
 
 
 ## Recommendations
-- **Prioritize resolution of PiecesOS crashes:** The most frequent and active tickets relate to PiecesOS crashing, especially on Windows, when adding folders or after updates. Focus development resources on identifying and fixing these crashes to improve user experience and reduce support volume.
-- **Investigate and address plugin compatibility issues:** Several tickets report plugin malfunctions after PiecesOS updates. Implement stricter compatibility checks during updates and provide clearer guidance to users on plugin management.
-- **Improve error messaging and troubleshooting:** Vague error messages like "Lost connection to PiecesOS" frustrate users. Enhance error reporting to provide specific details, enabling users to self-troubleshoot or providing support teams with better information.
-- **Review onboarding process for various screen sizes:** Issues were reported with onboarding on smaller screens. Ensure the onboarding process is thoroughly tested on different screen sizes and resolutions to avoid similar problems in the future.
-- **Proactively communicate known issues and workarounds:**  Maintain a visible and up-to-date knowledge base with information on known issues, workarounds, and expected resolution timelines. This can reduce support requests and user frustration.
-- **Gather more detailed diagnostics:**  When crashes occur, gather more comprehensive logs and system information to help developers identify the root cause more efficiently. This may involve prompting users for permission to collect additional data during crash reporting.
-- **Consider a dedicated bug bounty program:**  Incentivize users to report bugs and security vulnerabilities by establishing a bug bounty program. This can help identify and address issues more quickly. 
+- **Prioritize PiecesOS Issues:** Focus on resolving the high-frequency issues related to PiecesOS performance, connection, and installation. This will directly impact a large number of users.
+- **Investigate Windows 10 Build 26100:** The specific Windows 10 build (26100) is identified as a common factor in connection and crashing issues. Investigate this further to determine if it's a root cause.
+- **Address Claude 3.5 Sonnet Errors:** Investigate and address the error messages users are encountering with Claude 3.5 Sonnet in Copilot. This may involve adjusting rate limits, addressing model-specific bugs, or providing clearer guidance to users.
+- **Improve Rate Limiting Communication:** Provide clearer communication and guidance to users regarding rate limiting. This could include in-app notifications, FAQs, or documentation explaining rate limits, how to avoid hitting them, and how to request increases.
+- **Review Most Active Tickets:** Regularly review and address the most active support tickets, such as those related to RAM/CPU usage, lost connections, and LTM issues. This will help identify and resolve trending problems quickly.
+- **Gather More Data on Error Messages:** When users encounter "Something went wrong with processing" errors, gather more specific error messages or logs to help diagnose the root cause. This will enable more targeted troubleshooting and resolution.
+- **Consider User Onboarding:** Given the recurring issues with basic functionality like installation and connection, consider improving user onboarding materials or in-app guidance to ensure users can successfully install, connect, and use Pieces OS.
 
 ## Daily Reports
 Here are the daily reports for this week:
@@ -77,5 +77,6 @@ Here are the daily reports for this week:
 - [report_131158](daily/2024-12-19/report_131158.md)
 - [report_210611](daily/2024-12-19/report_210611.md)
 - [report_050715](daily/2024-12-19/report_050715.md)
+- [report_210551](daily/2024-12-20/report_210551.md)
 - [report_050700](daily/2024-12-20/report_050700.md)
 - [report_130954](daily/2024-12-20/report_130954.md)
