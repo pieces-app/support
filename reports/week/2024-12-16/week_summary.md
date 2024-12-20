@@ -1,71 +1,71 @@
 # Support Ticket Report
-- Generated: 2024-12-19 21:12:06
-- Period: 2024-12-16 to 2024-12-19
+- Generated: 2024-12-20 05:11:11
+- Period: 2024-12-16 to 2024-12-20
 
 ## Summary
-- **Total Tickets:** 22
+- **Total Tickets:** 24
 - **Resolved:** 10
-- **Open:** 12
+- **Open:** 14
 
 ## 5 Most Active Tickets
 | Issue # | Title | Activity Level |
 |---------|-------|----------------|
-| [#471](https://github.com/pieces-app/support/issues/471) | I´m sorry. Something went wrong with processing. Please wait a few seconds and try again, or contact support@pieces.app | 18.31 |
-| [#539](https://github.com/pieces-app/support/issues/539) | Pieces Desktop App - Lost Connection to PiecesOS | 17.98 |
+| [#471](https://github.com/pieces-app/support/issues/471) | I´m sorry. Something went wrong with processing. Please wait a few seconds and try again, or contact support@pieces.app | 17.70 |
+| [#539](https://github.com/pieces-app/support/issues/539) | Pieces Desktop App - Lost Connection to PiecesOS | 14.25 |
+| [#531](https://github.com/pieces-app/support/issues/531) | Pieces Desktop App - Lost Connection to PiecesOS | 10.98 |
+| [#543](https://github.com/pieces-app/support/issues/543) | OSX/Nukesped.ext reported by VirusBarrier | 9.46 |
 | [#536](https://github.com/pieces-app/support/issues/536) | Bug: Adding Folder as context (typescript repo) appears to crash PiecesOS within the Copilot | 8.50 |
-| [#526](https://github.com/pieces-app/support/issues/526) | Can't turn on long term memory engine | 7.98 |
-| [#540](https://github.com/pieces-app/support/issues/540) | LTM doesn't work; the copilot model by defaults not saved | 7.89 |
 
 ## Common Issues
 ### 1. PiecesOS Connection Loss on Windows
-Users on Windows (Build 26100) experience "Lost Connection to PiecesOS" errors, particularly when adding folders. This seems to affect various Windows versions (Home, Pro). Proposed solutions include gathering user logs, real-time debugging, and potential patches. The issue is under active investigation.
+Users are experiencing connection issues with PiecesOS on Windows, particularly when adding folders to context. This issue appears to be related to specific Windows builds. The Pieces team is actively investigating and consolidating these reports. Users are encouraged to check for duplicate issues and provide log files for further assistance.
 
 **Related Issues:**
-- [#542](https://github.com/pieces-app/support/issues/542): Pieces Desktop App - Lost Connection to PiecesOS
 - [#539](https://github.com/pieces-app/support/issues/539): Pieces Desktop App - Lost Connection to PiecesOS
-- [#531](https://github.com/pieces-app/support/issues/531): Pieces Desktop App - Lost Connection to PiecesOS
+- [#542](https://github.com/pieces-app/support/issues/542): Pieces Desktop App - Lost Connection to PiecesOS
+- [#541](https://github.com/pieces-app/support/issues/541): Pieces Desktop App - Lost Connection to PiecesOS
 
-### 2. LLM Processing Error in Pieces
-Users are experiencing an error during LLM processing in the Pieces application. The error message, "This message exceeded the context limit..." or "I'm sorry. Something went wrong with processing...", is often misleading.  Potential causes include rate limiting or issues with the conversation flow. Solutions include upgrading to the latest Pieces OS version, authenticating for cloud processing, and contacting support for rate limit increases.
+### 2. LLM Copilot Errors and Rate Limiting
+Users reported errors when using the PiecesOS Copilot, including empty responses and "Something went wrong" messages. These errors were often related to rate limiting. Solutions included switching LLM models, signing into Pieces, and updating to the latest PiecesOS version with increased rate limits and improved error messages.
 
 **Related Issues:**
 - [#487](https://github.com/pieces-app/support/issues/487): "This message exceeded the context limit for this LLM. Please select a different LLM and try again, or shorten your prompt." issue
+- [#535](https://github.com/pieces-app/support/issues/535): Bug: Claude 3.5 Sonnet Copilot response issues "I'm Sorry something went wrong with the processing..."
+- [#471](https://github.com/pieces-app/support/issues/471): I´m sorry. Something went wrong with processing. Please wait a few seconds and try again, or contact support@pieces.app
+
+### 3. Copilot Processing Error in Pieces OS
+Users are experiencing "Something went wrong with processing" errors in the Copilot module, primarily with Claude 3.5. This is often due to rate limiting. Solutions include authenticating with Pieces Ecosystem for higher rate limits, using alternative models like OpenAI or Gemini, or updating to the latest Pieces OS version.
+
+**Related Issues:**
+- [#535](https://github.com/pieces-app/support/issues/535): Bug: Claude 3.5 Sonnet Copilot response issues "I'm Sorry something went wrong with the processing..."
 - [#528](https://github.com/pieces-app/support/issues/528): I can't use any GPT models other than 'GPT-4o Mini'
 - [#471](https://github.com/pieces-app/support/issues/471): I´m sorry. Something went wrong with processing. Please wait a few seconds and try again, or contact support@pieces.app
 
-### 3. PiecesOS Crashes When Uploading Files/Folders
-Users are experiencing crashes in the Pieces for Developers app, specifically on Windows, when attempting to upload files or folders, particularly when using them as context in Pieces Copilot. The issue seems to be related to specific file/folder configurations and OS builds.  The Pieces team is actively investigating these crashes and requesting users to share affected files/folders or repository links to help with reproduction and resolution.
+### 4. PiecesOS Connection Loss on Windows
+Users on Windows (Build 26100) experience "Lost Connection to PiecesOS" errors, particularly when adding folders. This might be due to corrupted files in the user's Documents folder. Solutions include reinstalling the app after deleting the 'com.pieces.os' and 'com.pieces.pfd' folders or contacting support for database repair.
 
 **Related Issues:**
-- [#507](https://github.com/pieces-app/support/issues/507): Pieces for Developers app keeps crashing continuously on attempts to upload files and folder and needs restart on my windows 11 laptop
-- [#536](https://github.com/pieces-app/support/issues/536): Bug: Adding Folder as context (typescript repo) appears to crash PiecesOS within the Copilot
+- [#531](https://github.com/pieces-app/support/issues/531): Pieces Desktop App - Lost Connection to PiecesOS
+- [#542](https://github.com/pieces-app/support/issues/542): Pieces Desktop App - Lost Connection to PiecesOS
 - [#541](https://github.com/pieces-app/support/issues/541): Pieces Desktop App - Lost Connection to PiecesOS
 
-### 4. LTM Engine Activation Issues in Pieces OS
-Users are experiencing difficulties enabling the Long Term Memory (LTM) engine within the Pieces OS application. This issue appears across different Pieces OS versions and operating systems. Proposed solutions include updating Pieces OS and related components, checking for conflicts with WSL environments, and verifying model runtime settings.
+### 5. PiecesOS crashes on Windows when adding context
+Users on Windows experience crashes with PiecesOS (versions 10.1.15 and 11.0.0) when adding files or folders as context. The issue seems to affect multiple Windows versions. The Pieces team is actively investigating these crashes and gathering information to debug and resolve the problem.
 
 **Related Issues:**
-- [#540](https://github.com/pieces-app/support/issues/540): LTM doesn't work; the copilot model by defaults not saved
-- [#526](https://github.com/pieces-app/support/issues/526): Can't turn on long term memory engine
-- [#535](https://github.com/pieces-app/support/issues/535): Bug: Claude 3.5 Sonnet Copilot response issues "I'm Sorry something went wrong with the processing..."
-
-### 5. Pieces OS: Issues with Local LLM Installation
-Users are experiencing difficulties installing and utilizing local LLMs, particularly Mistral-7B and Ollama, within the Pieces OS environment. Problems include failed downloads due to unstable network connections, inability to import manually downloaded models, and crashes or lack of GPU usage with locally installed models. Proposed solutions involve manual downloads, configuration adjustments, and potential bug fixes by the Pieces team.
-
-**Related Issues:**
-- [#537](https://github.com/pieces-app/support/issues/537): Ollama Fails to Install on Linux
-- [#538](https://github.com/pieces-app/support/issues/538): Announcement: 11.0.0 POS Breaking Change - TLDR: please update all plugins
-- [#527](https://github.com/pieces-app/support/issues/527): Manually downloading a LLM
+- [#536](https://github.com/pieces-app/support/issues/536): Bug: Adding Folder as context (typescript repo) appears to crash PiecesOS within the Copilot
+- [#507](https://github.com/pieces-app/support/issues/507): Pieces for Developers app keeps crashing continuously on attempts to upload files and folder and needs restart on my windows 11 laptop
+- [#541](https://github.com/pieces-app/support/issues/541): Pieces Desktop App - Lost Connection to PiecesOS
 
 
 ## Recommendations
-- **Prioritize resolution of "PiecesOS Connection Loss on Windows"**: This issue has the highest frequency and is linked to the most active tickets. Focus on gathering user logs, real-time debugging, and developing a patch to address the root cause.
-- **Improve error messaging for LLM processing errors**: The current error messages are misleading. Provide more specific messages indicating potential causes like rate limiting or conversation flow issues, and suggest solutions like upgrading Pieces OS or authenticating for cloud processing.
-- **Investigate and address issues with local LLM installation**: Focus on resolving problems with failed downloads, manual model imports, and crashes or lack of GPU usage with locally installed LLMs like Mistral-7B and Ollama.
-- **Provide clear guidance on LTM engine activation**:  Address the difficulties users face when enabling the LTM engine. Offer step-by-step instructions, troubleshooting tips, and potential workarounds for different Pieces OS versions and operating systems.
-- **Consider increasing rate limits for authenticated users**: This can help alleviate frustration caused by rate limiting and encourage users to authenticate their accounts.
-- **Continue monitoring and addressing issues related to PiecesOS crashes when uploading files/folders**: Gather more information from users experiencing these crashes, including affected files/folders or repository links, to aid in reproduction and resolution.
-- **Proactively communicate known issues and workarounds to users**: Utilize channels like the Pieces support website, blog, or in-app notifications to keep users informed about ongoing issues and available solutions. This can help reduce support ticket volume and improve user experience.
+- **Prioritize 'PiecesOS Connection Loss on Windows' Issue:** This issue is highly frequent and affects a specific Windows build. Focus on identifying the root cause and providing a permanent fix.  Consider reaching out to users on the affected build for more information.
+- **Improve Error Messaging for Copilot Issues:**  The frequent 'Something went wrong with processing' error in Copilot is often due to rate limiting. Implement clearer error messages that guide users towards solutions like authentication or model switching.
+- **Investigate and Address PiecesOS Crashes:** Crashes when adding context are critical and require immediate attention. Gather detailed logs from affected users to expedite debugging and resolution.
+- **Monitor Specific Windows Build (26100):**  A significant number of issues originate from this build.  Devote resources to testing and ensuring compatibility with this specific version.
+- **Proactive Communication for Known Issues:** For issues like rate limiting, proactively communicate workarounds and solutions through in-app notifications, FAQs, or release notes.
+- **Enhance Documentation for LTM and Ollama:** Issues related to Long-Term Memory and Ollama installation suggest a need for clearer documentation. Provide step-by-step guides and troubleshooting tips.
+- **Gather User Feedback on OSX/Nukesped.ext:** Ticket #543 suggests a potential false positive with VirusBarrier. Investigate this thoroughly and communicate findings to users to maintain trust.
 
 ## Daily Reports
 Here are the daily reports for this week:
@@ -77,3 +77,4 @@ Here are the daily reports for this week:
 - [report_131158](daily/2024-12-19/report_131158.md)
 - [report_210611](daily/2024-12-19/report_210611.md)
 - [report_050715](daily/2024-12-19/report_050715.md)
+- [report_050700](daily/2024-12-20/report_050700.md)
