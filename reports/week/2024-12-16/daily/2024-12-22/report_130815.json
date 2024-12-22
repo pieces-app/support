@@ -1,0 +1,56 @@
+{
+  "success": true,
+  "date_range": {
+    "start": "2024-12-22T00:00:00+00:00",
+    "end": "2024-12-22T13:08:15.910998+00:00"
+  },
+  "summary": {
+    "total_tickets": 1,
+    "resolved_tickets": 1,
+    "open_tickets": 0
+  },
+  "ticket_breakdown": [
+    {
+      "category": "app:pieces os",
+      "received": 1,
+      "resolved": 1,
+      "pending": 0
+    },
+    {
+      "category": "app:vs code",
+      "received": 1,
+      "resolved": 1,
+      "pending": 0
+    }
+  ],
+  "most_active_tickets": [
+    {
+      "number": 269,
+      "title": "Can't connect from dev container",
+      "activity_level": 4.13
+    }
+  ],
+  "common_issues": [
+    {
+      "title": "VS Code Extension Fails to Connect to Pieces OS in Dev Container",
+      "description": "Users are experiencing issues connecting the VS Code Pieces extension to Pieces OS when running inside a Docker container. The extension struggles to automatically detect and connect to the Pieces OS instance. As a workaround, manually setting the 'custom url' in the extension settings to 'http://host.docker.internal:1000' has been successful. Future improvements aim to automate this connection process and enhance documentation for remote environment setups.",
+      "frequency": 1,
+      "related_issues": [
+        {
+          "id": 269,
+          "title": "Can't connect from dev container",
+          "text": "Can't connect from dev container\n### Software\n\nPieces OS, VS Code\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n9.0.7\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n# Issue description\r\nHi,\r\n\r\nPieces OS is working fine in VSCode (extension version: `v1.16.2`), until I load into a dev container.\r\n\r\nVSCode gives me these notifications:\r\n![image](https://github.com/pieces-app/support/assets/30979983/48d644e3-c170-4caf-8258-d96f2323c2cf)\r\n![image](https://github.com/pieces-app/support/assets/30979983/a393edaf-8405-4581-9807-3ae093d078e3)\r\n\r\nPieces explorer looks like this: \r\n<img width=\"367\" alt=\"image\" src=\"https://github.com/pieces-app/support/assets/30979983/386b3e62-4f29-48d3-86b5-3fc09664fc84\">\r\n\r\n# Attempted fixes\r\nI tried to turn off / disable macOS native firewall as well as [Lulu](https://objective-see.org/products/lulu.html) completely, but the issue still persists. Not sure how to make inbound firewall rule for port 1000 on macOS, where you need to specify an exact application associated with firewall rules.\r\n\r\n# One strange behavior\r\n\r\nNow, one thing is strange - **if PiecesOS is turned off before opening VSCode and I open a VSCode in dev container straight away, PiecesOS automatically starts and shows me the welcome window**:\r\n![image](https://github.com/pieces-app/support/assets/30979983/07cd8e60-1b29-4757-8204-c82d87cd39ce)\r\n\r\nDoes it mean, that the VSCode extension inside dev container (i.e. docker container) can communicate with host and startup the application? If so, why does it fail to communicate further?\r\n\n## Summary of GitHub Issue Conversation: Connecting Pieces OS to VS Code in Docker Container\n\n**Key Points Raised:**\n\n* Muzosh encountered an issue where the VS Code Pieces extension couldn't reach Pieces OS running in a Docker container.\n* Initial debugging with `curl` showed successful connection to the host machine from the docker container.\n* Setting the `custom url` in the VS Code extension to `http://host.docker.internal:1000` resolved the issue.\n\n**Problems Identified:**\n\n* VS Code extension couldn't automatically detect and connect to Pieces OS running in a dev container.\n* Manual intervention was required to set the `custom url`.\n\n**Solutions Proposed/Implemented:**\n\n* Manually setting the `custom url` as a temporary workaround.\n* Future improvement to eliminate the need to manually set the `custom url`.\n* Adding a notification when using a remote environment to direct users to relevant documentation.\n\n**Current Status/Outcome:**\n\n* The issue is resolved with the manual workaround.\n* Future improvements to automatically connect to Pieces OS in dev containers are planned.\n\n**Additional Notes:**\n\n* Remote environment support, like Gitpod, requires additional considerations for connection.\n* Documentation on connecting to remote Pieces OS instances needs improvement.\n* A user reported the same issue with the latest versions, indicating the problem persists.",
+          "activity_level": 4.13
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    "**Improve VS Code Extension's Docker Container Detection:** Investigate and implement a solution for the VS Code extension to automatically detect and connect to Pieces OS running in a Docker container. This will eliminate the need for users to manually set the 'custom url'.",
+    "**Enhance Documentation for Remote Environments:** Provide clear and comprehensive documentation on connecting the VS Code extension to Pieces OS in various remote environments, including Docker containers and Gitpod. Include step-by-step instructions and troubleshooting tips.",
+    "**Consider a Notification for Remote Environments:** Implement a notification within the VS Code extension that alerts users when they are in a remote environment and directs them to the relevant documentation for connecting to Pieces OS.",
+    "**Monitor and Address the 'VS Code Extension Fails to Connect' Issue:** Continue to monitor the frequency of the 'VS Code Extension Fails to Connect to Pieces OS in Dev Container' issue. Investigate if the manual workaround is still effective in the latest versions and address any regressions promptly.",
+    "**Gather User Feedback on Remote Environment Usage:** Collect data on the different remote environments used by Pieces OS developers. This information can guide prioritization of support and feature development for specific environments like Docker and Gitpod."
+  ],
+  "message": "Daily support report generated successfully."
+}
