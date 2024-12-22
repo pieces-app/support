@@ -1,6 +1,6 @@
 # Support Ticket Report
-- Generated: 2024-12-21 21:10:20
-- Period: 2024-12-16 to 2024-12-21
+- Generated: 2024-12-22 05:10:16
+- Period: 2024-12-16 to 2024-12-22
 
 ## Summary
 - **Total Tickets:** 27
@@ -10,61 +10,65 @@
 ## 5 Most Active Tickets
 | Issue # | Title | Activity Level |
 |---------|-------|----------------|
-| [#471](https://github.com/pieces-app/support/issues/471) | I´m sorry. Something went wrong with processing. Please wait a few seconds and try again, or contact support@pieces.app | 17.53 |
-| [#539](https://github.com/pieces-app/support/issues/539) | Pieces Desktop App - Lost Connection to PiecesOS | 11.41 |
+| [#471](https://github.com/pieces-app/support/issues/471) | I´m sorry. Something went wrong with processing. Please wait a few seconds and try again, or contact support@pieces.app | 17.36 |
 | [#536](https://github.com/pieces-app/support/issues/536) | Bug: Adding Folder as context (on Windows) crashes PiecesOS within the Copilot | 10.83 |
+| [#539](https://github.com/pieces-app/support/issues/539) | Pieces Desktop App - Lost Connection to PiecesOS | 10.25 |
 | [#531](https://github.com/pieces-app/support/issues/531) | Pieces Desktop App - Lost Connection to PiecesOS | 9.80 |
 | [#546](https://github.com/pieces-app/support/issues/546) | Unable to open Pieces Core Services | 8.20 |
 
 ## Common Issues
-### 1. Claude 3.5 Sonnet Copilot Response Errors
-Users encounter errors or empty responses when using the Claude 3.5 Sonnet LLM in the Copilot module. This could be due to message length limits, content filtering, or issues with Vertex AI AOT. Solutions include switching to a different LLM, signing into Pieces for higher rate limits, or waiting for a fix in a newer version.
+### 1. PiecesOS Errors and Functionality Issues
+Users reported errors and functionality loss in PiecesOS, often due to rate limiting. Solutions included increasing user limits, improving error messages, and releasing a new version (11.0.0) with adjusted rate limiting. Users facing persistent issues were advised to contact support or try reinstalling.
 
 **Related Issues:**
-- [#487](https://github.com/pieces-app/support/issues/487): "This message exceeded the context limit for this LLM. Please select a different LLM and try again, or shorten your prompt." issue
-- [#535](https://github.com/pieces-app/support/issues/535): Bug: Claude 3.5 Sonnet Copilot response issues "I'm Sorry something went wrong with the processing..."
 - [#471](https://github.com/pieces-app/support/issues/471): I´m sorry. Something went wrong with processing. Please wait a few seconds and try again, or contact support@pieces.app
-
-### 2. Copilot Processing Error in Pieces OS
-Users across Pieces OS versions encounter "Something went wrong with processing" error, primarily with Claude 3.5 Sonnet Copilot.  Issue linked to rate limiting, resolved by authentication or upgrading to Pieces OS 11.0.0.  Users advised to contact support if the problem persists.
-
-**Related Issues:**
 - [#528](https://github.com/pieces-app/support/issues/528): I can't use any GPT models other than 'GPT-4o Mini'
-- [#471](https://github.com/pieces-app/support/issues/471): I´m sorry. Something went wrong with processing. Please wait a few seconds and try again, or contact support@pieces.app
-- [#535](https://github.com/pieces-app/support/issues/535): Bug: Claude 3.5 Sonnet Copilot response issues "I'm Sorry something went wrong with the processing..."
+- [#546](https://github.com/pieces-app/support/issues/546): Unable to open Pieces Core Services
 
-### 3. PiecesOS Crashes on Windows - File/Folder Context
-Users on Windows experience PiecesOS crashes when adding folders as context, particularly with Typescript projects. This issue was linked to specific OS builds and app installer distribution. Solutions included patches (v11.0.2) and reinstallation using different methods.
+### 2. PiecesOS Connectivity and Performance Issues
+Users report PiecesOS experiencing high RAM usage, CPU spikes, and connection issues.  Proposed solutions include restarting PiecesOS, using the "Optimize Memory" option, and reinstalling the software after deleting specific folders. The Pieces team is actively investigating these issues and working on improvements.
+
+**Related Issues:**
+- [#150](https://github.com/pieces-app/support/issues/150): PiecesOS using too much RAM/spike in CPU
+- [#531](https://github.com/pieces-app/support/issues/531): Pieces Desktop App - Lost Connection to PiecesOS
+- [#539](https://github.com/pieces-app/support/issues/539): Pieces Desktop App - Lost Connection to PiecesOS
+
+### 3. PiecesOS Crashes on Windows When Adding Folders
+Users on Windows are experiencing crashes in the PiecesOS desktop app, particularly when adding folders as context. This issue appears to be version-specific and potentially related to specific Windows builds. Solutions include updating to the latest PiecesOS version (11.0.2) and reinstalling the app using different methods. The Pieces team is actively investigating these issues.
 
 **Related Issues:**
 - [#536](https://github.com/pieces-app/support/issues/536): Bug: Adding Folder as context (on Windows) crashes PiecesOS within the Copilot
 - [#507](https://github.com/pieces-app/support/issues/507): Pieces for Developers app keeps crashing continuously on attempts to upload files and folder and needs restart on my windows 11 laptop
 - [#546](https://github.com/pieces-app/support/issues/546): Unable to open Pieces Core Services
 
-### 4. Pieces OS Update and Compatibility Issues
-Users reported various issues after updating Pieces OS, including false positive malware detection by Intego VirusBarrier, plugin incompatibility with VS Code and PHPStorm, and general malfunctioning. Solutions involved updating virus definitions, reinstalling Pieces OS, and addressing plugin compatibility. The Pieces team is actively investigating and resolving these issues.
+### 4. PiecesOS Connection Loss on Windows 10
+Multiple users reported PiecesOS losing connection on Windows 10, especially when adding folders. This seems related to specific Windows builds. Proposed solutions include a dedicated patch and deleting/reinstalling PiecesOS and related folders. The Pieces team is actively investigating these issues.
+
+**Related Issues:**
+- [#542](https://github.com/pieces-app/support/issues/542): Pieces Desktop App - Lost Connection to PiecesOS
+- [#539](https://github.com/pieces-app/support/issues/539): Pieces Desktop App - Lost Connection to PiecesOS
+- [#531](https://github.com/pieces-app/support/issues/531): Pieces Desktop App - Lost Connection to PiecesOS
+
+### 5. Pieces OS Update Causes Plugin and Antivirus Issues
+Users report Pieces OS updates causing plugin malfunctions in VS Code and PHPStorm, citing port conflicts. Additionally, antivirus software flags updated files as suspicious. Solutions involve troubleshooting port usage, reinstalling plugins, and reporting false positives to antivirus vendors. Developers are actively investigating and addressing these issues.
 
 **Related Issues:**
 - [#543](https://github.com/pieces-app/support/issues/543): OSX/Nukesped.ext reported by VirusBarrier
 - [#530](https://github.com/pieces-app/support/issues/530): Vscode and PHPStorm plugins stopped working after Pieces OS update
 - [#546](https://github.com/pieces-app/support/issues/546): Unable to open Pieces Core Services
 
-### 5. Pieces OS Update Causes Disconnections and Errors
-Users report issues after updating Pieces OS to version 11.0.0, including blinking browser extensions, LTM engine failures, and disconnections. Solutions involve updating all plugins and desktop apps, restarting Pieces OS, switching between local and cloud modes, and reinstalling Pieces OS after deleting specific folders.
-
-**Related Issues:**
-- [#538](https://github.com/pieces-app/support/issues/538): Announcement: 11.0.0 POS Breaking Change - TLDR: please update all plugins
-- [#526](https://github.com/pieces-app/support/issues/526): Can't turn on long term memory engine
-- [#531](https://github.com/pieces-app/support/issues/531): Pieces Desktop App - Lost Connection to PiecesOS
-
 
 ## Recommendations
-- **Address Claude 3.5 Sonnet Copilot Errors:** Investigate and resolve the root causes of errors and empty responses when using Claude 3.5 Sonnet in the Copilot module.  This may involve working with Vertex AI AOT, adjusting message length limits, or refining content filtering.
-- **Improve "Something went wrong with processing" Error Messaging:** Provide more specific error messages for Copilot processing failures, particularly those related to rate limiting. Guide users towards authentication or upgrading to Pieces OS 11.0.0.
-- **Mitigate PiecesOS Crashes on Windows:** Continue monitoring and addressing crashes on Windows, especially those triggered by adding folders as context. Ensure patches like v11.0.2 are effectively disseminated and consider providing alternative installation methods.
-- **Enhance Pieces OS Update Process:**  Investigate and address issues stemming from Pieces OS updates, such as false positive malware detections, plugin incompatibilities, and unexpected disconnections. Improve communication about breaking changes and the need to update plugins.
-- **Provide Clearer Guidance on LTM Engine Issues:** Offer more detailed troubleshooting steps for users experiencing issues with the Long-Term Memory (LTM) engine, including instructions for restarting, switching modes, and updating to the latest Pieces OS version.
-- **Proactively Monitor and Address Top Active Tickets:**  Dedicate resources to promptly investigate and resolve the most active support tickets, such as those related to lost connections, installation problems, and plugin malfunctions. 
+- **Address PiecesOS Stability and Connectivity:** Prioritize resolving crashes, high resource usage, and connection issues in PiecesOS, particularly on Windows 10, to improve user experience and reduce ticket volume.
+- **Improve Plugin Compatibility:** Investigate and address plugin malfunctions in VS Code and PHPStorm arising from Pieces OS updates, focusing on port conflicts, to ensure seamless integration.
+- **Reduce Rate Limiting Issues:** Review and refine rate limiting mechanisms in PiecesOS to minimize errors and functionality loss for users, particularly those relying on cloud processing.
+- **Enhance Error Messaging and Troubleshooting:** Provide clearer error messages to users and improve documentation regarding PiecesOS connectivity, performance, and plugin issues to facilitate self-resolution.
+- **Proactively Address Antivirus Conflicts:** Collaborate with antivirus vendors to address false positive detections of Pieces OS updates and minimize disruptions for users.
+- **Gather User Feedback on LTM:** Investigate and address issues related to the Long-Term Memory (LTM) feature, including difficulty enabling it and inconsistencies in model saving, based on user feedback.
+- **Optimize Onboarding and Installation:** Improve the clarity and user-friendliness of the PiecesOS installation process, addressing issues encountered on specific macOS versions and providing alternative installation methods.
+- **Monitor Specific Windows Builds:** Pay close attention to issues reported on specific Windows builds, such as Build 26100, to identify and address potential platform-specific conflicts.
+- **Review and Update Documentation:** Ensure all support documentation, including troubleshooting guides, is up-to-date and covers common issues like port conflicts, antivirus interference, and LTM usage.
+- **Consider a Bug Bounty Program:** Implement a bug bounty program to incentivize security researchers and users to identify and report vulnerabilities, potentially reducing the impact of future issues like the antivirus false positive.
 
 ## Daily Reports
 Here are the daily reports for this week:
