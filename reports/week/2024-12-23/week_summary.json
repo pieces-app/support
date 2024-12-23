@@ -2,34 +2,82 @@
   "success": true,
   "date_range": {
     "start": "2024-12-23T00:00:00+00:00",
-    "end": "2024-12-23T13:10:42.387381+00:00"
+    "end": "2024-12-23T21:06:53.949850+00:00"
   },
   "summary": {
-    "total_tickets": 1,
-    "resolved_tickets": 0,
-    "open_tickets": 1
+    "total_tickets": 5,
+    "resolved_tickets": 1,
+    "open_tickets": 4
   },
   "ticket_breakdown": [
     {
       "category": "bug",
-      "received": 1,
+      "received": 4,
       "resolved": 0,
-      "pending": 1
+      "pending": 4
     },
     {
       "category": "app:desktop application",
+      "received": 4,
+      "resolved": 0,
+      "pending": 4
+    },
+    {
+      "category": "os:macos",
       "received": 1,
       "resolved": 0,
       "pending": 1
     },
     {
-      "category": "P0",
+      "category": "app:vs code",
+      "received": 3,
+      "resolved": 1,
+      "pending": 2
+    },
+    {
+      "category": "status:triaged",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:pieces os",
+      "received": 2,
+      "resolved": 1,
+      "pending": 1
+    },
+    {
+      "category": "os:windows",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "os:linux",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:web extension",
       "received": 1,
       "resolved": 0,
       "pending": 1
     },
     {
       "category": "app:pieces copilot module",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "known_issue",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "P0",
       "received": 1,
       "resolved": 0,
       "pending": 1
@@ -46,29 +94,86 @@
       "number": 540,
       "title": "LTM doesn't work; the copilot model by defaults not saved",
       "activity_level": 7.3
+    },
+    {
+      "number": 549,
+      "title": "It's laggy and heavier, sometimes not responding in VSCode extension since major update to OS v11.0.0",
+      "activity_level": 5.68
+    },
+    {
+      "number": 550,
+      "title": "Seems like you are running VS Code in a remote environment (VS Code running remote docker container)",
+      "activity_level": 4.42
+    },
+    {
+      "number": 269,
+      "title": "Can't connect from dev container",
+      "activity_level": 4.05
+    },
+    {
+      "number": 535,
+      "title": "Bug: Claude 3.5 Sonnet Copilot response issues \"I'm Sorry something went wrong with the processing...\"",
+      "activity_level": 2.83
     }
   ],
   "common_issues": [
     {
-      "title": "LTM Activation Failure in PiecesOS 11.0.x",
-      "description": "Users reported inability to activate the Long-Term Memory Engine (LTM) due to downloaded LLM state overriding saved model selection. This issue was addressed in PiecesOS version 11.0.1. Users experiencing this problem are advised to update to the latest version. A separate issue causing a browser page to open after each reboot is under investigation.",
-      "frequency": 1,
+      "title": "Pieces OS 11 Performance Issues and Copilot Bugs",
+      "description": "Users report performance issues with Pieces OS 11, including lag, unresponsiveness, and Copilot module errors.  Suggested solutions include using alternative models, signing into the Pieces ecosystem, and upgrading to the latest versions. Pieces team is actively investigating and addressing these issues.",
+      "frequency": 3,
       "related_issues": [
+        {
+          "id": 535,
+          "title": "Bug: Claude 3.5 Sonnet Copilot response issues \"I'm Sorry something went wrong with the processing...\"",
+          "text": "Bug: Claude 3.5 Sonnet Copilot response issues \"I'm Sorry something went wrong with the processing...\"\n### Software\n\nCopilot Module\n\n### Operating System / Platform\n\nmacOS, Windows, Linux\n\n### Your Pieces OS Version\n\n11.0.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nHey \ud83d\udc4b,\n\nWe are experiencing some issues on and off w/ Claude Sonnet 3.5 within the Copilot Modules of all the applications.\n\nIf you are experiencing this issue please first:\n1. change the Model runtime to OpenAI or Gemini as these are working very consistently.\n2. Ensure you sign in to the Pieces Ecosystem, this will ensure that you have a larger rate limit than those users who are NOT authenticated.\n\nPlease feel free to comment in this thread if you are experiencing similar issues!\n\n\n## GitHub Issue Summary: \n\n**Date:** December 18, 2024\n\n**Reported by:** mark-at-pieces\n\n**Status:** Awaiting response from Pieces team\n\n**Key points:**\n\n* User is experiencing issues with Pieces, potentially related to copilot bugs or GPT models.\n* User was unable to generate a response and was notified by the bot of potential solutions (related issues and help resources).\n\n**Problems identified:**\n\n* User did not provide detailed information about the specific issues encountered.\n\n**Solutions proposed/implemented:**\n\n* None yet, awaiting response from Pieces team.\n\n**Current status/outcome:**\n\n* Open and unresolved.\n\n**Notes:**\n\n* This summary is based on the initial message and may not reflect the full conversation or subsequent updates.",
+          "activity_level": 2.83
+        },
         {
           "id": 540,
           "title": "LTM doesn't work; the copilot model by defaults not saved",
-          "text": "LTM doesn't work; the copilot model by defaults not saved\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.0.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n[https://disk.yandex.ru/i/Z_U0FzYA8NBrNg](url)\nThere is a video here that describes the problem\n## GitHub Issue Conversation Summary\n\n**Key Points Raised:**\n\n* User @Iliya3ProX  is unable to turn on the Long-Term Memory Engine (LTM) in PiecesOS.\n* They provided a video and logs for further investigation.\n* They updated to the latest version 11.0.1 of PiecesOS and 3.3.1 of the Desktop application, but the issue persists.\n* A browser page titled \"Woohoo PiecesOS 11.0 is released \ud83c\udf89\" opens after each reboot.\n* Another user, @AyomideA-S, reported the same problem.\n\n**Problems Identified:**\n\n* Downloaded LLM state override saved selected model, preventing LTM activation.\n* Browser page continuously opening after update.\n\n**Solutions Proposed/Implemented:**\n\n* Pieces team deployed a patch in version 11.0.1 to fix the LLM state override issue.\n* Investigating the cause of the browser page issue.\n\n**Current Status/Outcome:**\n\n* LTM issue should be resolved with the update.\n* Browser page issue under investigation.\n\n**Next Steps:**\n\n* @Iliya3ProX  and @AyomideA-S can confirm if the LTM issue is fixed after updating.\n* Pieces team will investigate and address the browser page issue.\n\n**Additional Notes:**\n\n* Related issues mentioned in the conversation include:\n    * Can't turn on Long-Term Memory Engine: https://github.com/pieces-app/support/issues/442\n    * Can't turn on long term memory engine: https://github.com/pieces-app/support/issues/526\n    * Claude is having an aneurysm: https://github.com/pieces-app/support/issues/482\n* User can refer to these resources for further information:\n    * Existing Issues: https://github.com/pieces-app/support/issues\n    * Documentation: https://docs.pieces.app\n    * YouTube Channel: https://www.youtube.com/user/getpieces\n\n## End of Summary",
+          "text": "LTM doesn't work; the copilot model by defaults not saved\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.0.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n[https://disk.yandex.ru/i/Z_U0FzYA8NBrNg](url)\nThere is a video here that describes the problem\n## Summary of GitHub Issue Conversation\n\n**Problem:** @Iliya3ProX reported an issue where the Long-Term Memory Engine (LTM) in Pieces OS wouldn't enable. They provided a video demonstrating the problem.\n\n**Key points raised:**\n\n* Downloaded local LLM state was overriding saved selected model.\n* Issue persisted after updating to version 11.0.1 of PiecesOS and 3.3.1 of desktop application.\n* After update, a page titled \"Woohoo PiecesOS 11.0 is released \ud83c\udf89\" opens in the browser after each reboot.\n* @AyomideA-S confirmed experiencing the same issue.\n\n**Solutions proposed/implemented:**\n\n* @mason-at-pieces requested Pieces OS logs for investigation.\n* @mack-at-pieces identified and fixed the issue in downloaded LLMs overriding saved data.\n* A patch was released by EOD on 2024-12-19.\n\n**Current status/outcome:**\n\n* The fix was implemented in version 11.0.1 of PiecesOS and 3.3.1 of the desktop application.\n* @Iliya3ProX reported the issue persists even after the update. \n* @AyomideA-S confirmed the same issue.\n* The cause of the issue after the update is unclear and requires further investigation.\n\n**Additional notes:**\n\n* @Iliya3ProX provided logs and a video demonstrating the issue.\n* @mack-at-pieces confirmed the issue and provided a timeline for the fix.\n* Further investigation is needed to address the issue after the update.",
           "activity_level": 7.3
+        },
+        {
+          "id": 549,
+          "title": "It's laggy and heavier, sometimes not responding in VSCode extension since major update to OS v11.0.0",
+          "text": "It's laggy and heavier, sometimes not responding in VSCode extension since major update to OS v11.0.0\n### Software\n\nDesktop Application, VS Code, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nOS ver.11.0.2, Desktop App ver.3.3.2, VSCode Extension ver.2.0.0\n\n### Early Access Program\n\n- [x] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nThis is performance issues. The overall performance is laggy, and its respons is laggy. It feels heavier than OS version below 11.0.0 . This performance is even worse on VSCode extension. I even need to delete one of my chat-this chat use file as context-because it caused it to not responding, I delete the chat using desktop application. If I can rate it performance, speed and lightness, if version below 11.0.0 is 10, then this new major update is about 4.5 to 4.9. Overall, this app is excellent, but it really need major improvement in performance issues.\n## Summary of GitHub Issue Conversation\n\n**Key Points:**\n\n* User, dasyari, reported experiencing performance issues with Pieces.\n* Pieces support bot acknowledged the issue and suggested possible solutions.\n* mark-at-pieces, a Pieces team member, offered to schedule a call to discuss the issue further.\n\n**Problems Identified:**\n\n* dasyari is experiencing performance issues with Pieces.\n\n**Solutions Proposed/Implemented:**\n\n* mark-at-pieces offered to schedule a call to understand dasyari's needs better.\n* Pieces is actively working on infrastructure projects to improve performance.\n\n**Current Status/Outcome:**\n\n* dasyari has not yet responded to mark-at-pieces' offer to schedule a call. \n* The infrastructure projects to improve performance are ongoing.",
+          "activity_level": 5.68
+        }
+      ]
+    },
+    {
+      "title": "Connecting to Pieces OS from remote environments",
+      "description": "Users are experiencing difficulties connecting to Pieces OS from remote environments like Docker containers and VS Code remote development. This is often due to firewall restrictions or the Pieces OS instance not being accessible from the remote environment. Solutions include configuring firewalls, setting the `pieces.customUrl` setting in VS Code, and ensuring Pieces OS is running and accessible.",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 550,
+          "title": "Seems like you are running VS Code in a remote environment (VS Code running remote docker container)",
+          "text": "Seems like you are running VS Code in a remote environment (VS Code running remote docker container)\n### Software\n\nVS Code\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n11.02\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI'm having the same problem as this: https://github.com/pieces-app/support/issues/269\n\nUsing VS Code project within a docker container and getting this message:\n\n> Woops! It seems like you are running VS Code in a remote environment & Pieces for VS Code cannot connect to Pieces OS. Please refer to our documentation on how to resolve this issue.\n\n![Image](https://github.com/user-attachments/assets/ffeb53fd-0787-4bc2-9faf-c5f3d179294b)\n\nPieces OS version:\n\n![Image](https://github.com/user-attachments/assets/640d35af-6106-4717-9269-c51205ff23fb)\n\nI followed this guide but with no luck: https://docs.pieces.app/product-highlights-and-benefits/connecting-to-a-remote-pieces-os-instance\n\nLAN IP:\n\n<img width=\"567\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/1dfb849d-0764-4ae0-801c-c55f9b3e5d7e\" />\n\nVS Code settings, pieces custom URL:\n\n![Image](https://github.com/user-attachments/assets/aaed7eb8-36e7-49cb-b6e0-84271adb8027)\n\nWhat else can I try?\n\nThanks!\n\n## Summary of GitHub Issue Conversation\n\n**Key Points Raised:**\n\n* User @malanciault is experiencing an issue with their Pieces installation.\n* The issue has been automatically triaged and routed to the proper team member.\n\n**Problems Identified:**\n\n* The specific nature of the issue is unknown.\n\n**Solutions Proposed/Implemented:**\n\n* The bot provided a follow-up timeframe of within 24 hours.\n* The bot suggested some related issues that might be helpful. \n* The bot provided links to additional resources such as existing issues, documentation, and the YouTube channel.\n\n**Current Status/Outcome:**\n\n* The issue is being investigated by the Pieces team.\n* No solution or further updates have been provided yet. \n\n**Additional Notes:**\n\n* The conversation is from December 23, 2024.",
+          "activity_level": 4.42
+        },
+        {
+          "id": 269,
+          "title": "Can't connect from dev container",
+          "text": "Can't connect from dev container\n### Software\n\nPieces OS, VS Code\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n9.0.7\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n# Issue description\r\nHi,\r\n\r\nPieces OS is working fine in VSCode (extension version: `v1.16.2`), until I load into a dev container.\r\n\r\nVSCode gives me these notifications:\r\n![image](https://github.com/pieces-app/support/assets/30979983/48d644e3-c170-4caf-8258-d96f2323c2cf)\r\n![image](https://github.com/pieces-app/support/assets/30979983/a393edaf-8405-4581-9807-3ae093d078e3)\r\n\r\nPieces explorer looks like this: \r\n<img width=\"367\" alt=\"image\" src=\"https://github.com/pieces-app/support/assets/30979983/386b3e62-4f29-48d3-86b5-3fc09664fc84\">\r\n\r\n# Attempted fixes\r\nI tried to turn off / disable macOS native firewall as well as [Lulu](https://objective-see.org/products/lulu.html) completely, but the issue still persists. Not sure how to make inbound firewall rule for port 1000 on macOS, where you need to specify an exact application associated with firewall rules.\r\n\r\n# One strange behavior\r\n\r\nNow, one thing is strange - **if PiecesOS is turned off before opening VSCode and I open a VSCode in dev container straight away, PiecesOS automatically starts and shows me the welcome window**:\r\n![image](https://github.com/pieces-app/support/assets/30979983/07cd8e60-1b29-4757-8204-c82d87cd39ce)\r\n\r\nDoes it mean, that the VSCode extension inside dev container (i.e. docker container) can communicate with host and startup the application? If so, why does it fail to communicate further?\r\n\n## Summary of GitHub Issue Conversation\n\n**Key points raised:**\n\n* User (Muzosh) unable to connect to Pieces OS from Docker container using VS Code Pieces extension.\n* User identified firewall rules as a potential issue and tried debugging using `curl`.\n* Caleb-at-pieces suggested using `pieces://launch` URI to test connection from container.\n* User confirmed connection was successful and setting `custom url` to `http://host.docker.internal:1000` solved the issue.\n* Eliezedeck mentioned the issue also affects Gitpod and other remote development environments.\n* Caleb-at-pieces acknowledged the need for better support for remote environments.\n\n**Problems identified:**\n\n* VS Code extension relies on `host.docker.internal` which may not be available outside of Docker container.\n* User experience suffers due to lack of proper support for remote environments.\n\n**Solutions proposed/implemented:**\n\n* Using `pieces://launch` URI to test connection from Docker container.\n* Setting `custom url` to `http://host.docker.internal:1000` to connect to Pieces OS.\n* Caleb-at-pieces is working on a solution to avoid requiring Pieces OS to be running before launching VS Code.\n* A notification has been added to the VS Code extension to guide users on connecting to a remote Pieces OS instance.\n\n**Current status/outcome:**\n\n* The user's issue was resolved by setting the `custom url` option.\n* Caleb-at-pieces is working on improved support for remote environments.\n\n**Additional notes:**\n\n* The user's suggestion of allowing multiple URLs in the `pieces.customUrl` setting will be considered in the future.\n* The user's suggestion of adding documentation on connecting to a remote Pieces OS instance has been implemented.",
+          "activity_level": 4.05
+        },
+        {
+          "id": 549,
+          "title": "It's laggy and heavier, sometimes not responding in VSCode extension since major update to OS v11.0.0",
+          "text": "It's laggy and heavier, sometimes not responding in VSCode extension since major update to OS v11.0.0\n### Software\n\nDesktop Application, VS Code, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nOS ver.11.0.2, Desktop App ver.3.3.2, VSCode Extension ver.2.0.0\n\n### Early Access Program\n\n- [x] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nThis is performance issues. The overall performance is laggy, and its respons is laggy. It feels heavier than OS version below 11.0.0 . This performance is even worse on VSCode extension. I even need to delete one of my chat-this chat use file as context-because it caused it to not responding, I delete the chat using desktop application. If I can rate it performance, speed and lightness, if version below 11.0.0 is 10, then this new major update is about 4.5 to 4.9. Overall, this app is excellent, but it really need major improvement in performance issues.\n## Summary of GitHub Issue Conversation\n\n**Key Points:**\n\n* User, dasyari, reported experiencing performance issues with Pieces.\n* Pieces support bot acknowledged the issue and suggested possible solutions.\n* mark-at-pieces, a Pieces team member, offered to schedule a call to discuss the issue further.\n\n**Problems Identified:**\n\n* dasyari is experiencing performance issues with Pieces.\n\n**Solutions Proposed/Implemented:**\n\n* mark-at-pieces offered to schedule a call to understand dasyari's needs better.\n* Pieces is actively working on infrastructure projects to improve performance.\n\n**Current Status/Outcome:**\n\n* dasyari has not yet responded to mark-at-pieces' offer to schedule a call. \n* The infrastructure projects to improve performance are ongoing.",
+          "activity_level": 5.68
         }
       ]
     }
   ],
   "recommendations": [
-    "**Prioritize resolving 'LTM Activation Failure'**: This issue is impacting users' ability to use the Long-Term Memory Engine, a key feature. Focus on resolving the root cause and the related browser page issue.",
-    "**Improve communication around known issues**:  Provide clear guidance to users on the 'LTM Activation Failure', including the available workaround (updating to PiecesOS 11.0.1). Consider a dedicated announcement or FAQ.",
-    "**Investigate PiecesOS 11.0.x upgrade experience**: The browser page opening after each reboot suggests potential issues with the upgrade process. Investigate and address these to ensure a smooth user experience.",
-    "**Monitor and analyze support tickets**: Continue tracking common issues and their frequency to identify trends and potential areas for product improvement. Use this data to inform future development and support decisions.",
-    "**Encourage users to update to the latest version**:  Given the fix in PiecesOS 11.0.1, emphasize the importance of keeping PiecesOS updated to benefit from bug fixes and improvements."
+    "**Prioritize resolving Pieces OS 11 performance issues:** This is the most common issue reported by users, impacting Copilot functionality and overall user experience.",
+    "**Investigate and address Copilot module errors:** Users are experiencing issues with Copilot, particularly with Claude 3.5 Sonnet. Resolving these errors will significantly improve user satisfaction.",
+    "**Improve support for remote environments:** Users face challenges connecting to Pieces OS from Docker containers and VS Code remote development. Enhance documentation and provide clear solutions for these scenarios.",
+    "**Review and address LTM functionality:**  Ticket #540 highlights persistent issues with LTM not saving the selected model. Resolving this will improve the LTM experience.",
+    "**Gather more detailed user feedback:** Encourage users to provide specific details about performance issues, including their system configurations and steps to reproduce the problem. This will help in identifying the root causes and implementing effective solutions."
   ],
   "message": "Daily support report generated successfully."
 }
