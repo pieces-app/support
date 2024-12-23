@@ -1,0 +1,74 @@
+{
+  "success": true,
+  "date_range": {
+    "start": "2024-12-23T00:00:00+00:00",
+    "end": "2024-12-23T13:10:42.387381+00:00"
+  },
+  "summary": {
+    "total_tickets": 1,
+    "resolved_tickets": 0,
+    "open_tickets": 1
+  },
+  "ticket_breakdown": [
+    {
+      "category": "bug",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:desktop application",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "P0",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:pieces copilot module",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:pending_user_confirmation",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    }
+  ],
+  "most_active_tickets": [
+    {
+      "number": 540,
+      "title": "LTM doesn't work; the copilot model by defaults not saved",
+      "activity_level": 7.3
+    }
+  ],
+  "common_issues": [
+    {
+      "title": "LTM Activation Failure in PiecesOS 11.0.x",
+      "description": "Users reported inability to activate the Long-Term Memory Engine (LTM) due to downloaded LLM state overriding saved model selection. This issue was addressed in PiecesOS version 11.0.1. Users experiencing this problem are advised to update to the latest version. A separate issue causing a browser page to open after each reboot is under investigation.",
+      "frequency": 1,
+      "related_issues": [
+        {
+          "id": 540,
+          "title": "LTM doesn't work; the copilot model by defaults not saved",
+          "text": "LTM doesn't work; the copilot model by defaults not saved\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.0.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n[https://disk.yandex.ru/i/Z_U0FzYA8NBrNg](url)\nThere is a video here that describes the problem\n## GitHub Issue Conversation Summary\n\n**Key Points Raised:**\n\n* User @Iliya3ProX  is unable to turn on the Long-Term Memory Engine (LTM) in PiecesOS.\n* They provided a video and logs for further investigation.\n* They updated to the latest version 11.0.1 of PiecesOS and 3.3.1 of the Desktop application, but the issue persists.\n* A browser page titled \"Woohoo PiecesOS 11.0 is released \ud83c\udf89\" opens after each reboot.\n* Another user, @AyomideA-S, reported the same problem.\n\n**Problems Identified:**\n\n* Downloaded LLM state override saved selected model, preventing LTM activation.\n* Browser page continuously opening after update.\n\n**Solutions Proposed/Implemented:**\n\n* Pieces team deployed a patch in version 11.0.1 to fix the LLM state override issue.\n* Investigating the cause of the browser page issue.\n\n**Current Status/Outcome:**\n\n* LTM issue should be resolved with the update.\n* Browser page issue under investigation.\n\n**Next Steps:**\n\n* @Iliya3ProX  and @AyomideA-S can confirm if the LTM issue is fixed after updating.\n* Pieces team will investigate and address the browser page issue.\n\n**Additional Notes:**\n\n* Related issues mentioned in the conversation include:\n    * Can't turn on Long-Term Memory Engine: https://github.com/pieces-app/support/issues/442\n    * Can't turn on long term memory engine: https://github.com/pieces-app/support/issues/526\n    * Claude is having an aneurysm: https://github.com/pieces-app/support/issues/482\n* User can refer to these resources for further information:\n    * Existing Issues: https://github.com/pieces-app/support/issues\n    * Documentation: https://docs.pieces.app\n    * YouTube Channel: https://www.youtube.com/user/getpieces\n\n## End of Summary",
+          "activity_level": 7.3
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    "**Prioritize resolving 'LTM Activation Failure'**: This issue is impacting users' ability to use the Long-Term Memory Engine, a key feature. Focus on resolving the root cause and the related browser page issue.",
+    "**Improve communication around known issues**:  Provide clear guidance to users on the 'LTM Activation Failure', including the available workaround (updating to PiecesOS 11.0.1). Consider a dedicated announcement or FAQ.",
+    "**Investigate PiecesOS 11.0.x upgrade experience**: The browser page opening after each reboot suggests potential issues with the upgrade process. Investigate and address these to ensure a smooth user experience.",
+    "**Monitor and analyze support tickets**: Continue tracking common issues and their frequency to identify trends and potential areas for product improvement. Use this data to inform future development and support decisions.",
+    "**Encourage users to update to the latest version**:  Given the fix in PiecesOS 11.0.1, emphasize the importance of keeping PiecesOS updated to benefit from bug fixes and improvements."
+  ],
+  "message": "Daily support report generated successfully."
+}
