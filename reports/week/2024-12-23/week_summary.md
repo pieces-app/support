@@ -1,32 +1,32 @@
 # Support Ticket Report
-- Generated: 2024-12-23 21:07:35
-- Period: 2024-12-23 to 2024-12-23
+- Generated: 2024-12-24 21:07:07
+- Period: 2024-12-23 to 2024-12-24
 
 ## Summary
-- **Total Tickets:** 5
+- **Total Tickets:** 6
 - **Resolved:** 1
-- **Open:** 4
+- **Open:** 5
 
 ## 5 Most Active Tickets
 | Issue # | Title | Activity Level |
 |---------|-------|----------------|
-| [#540](https://github.com/pieces-app/support/issues/540) | LTM doesn't work; the copilot model by defaults not saved | 7.30 |
-| [#549](https://github.com/pieces-app/support/issues/549) | It's laggy and heavier, sometimes not responding in VSCode extension since major update to OS v11.0.0 | 5.68 |
-| [#550](https://github.com/pieces-app/support/issues/550) | Seems like you are running VS Code in a remote environment (VS Code running remote docker container) | 4.42 |
+| [#540](https://github.com/pieces-app/support/issues/540) | LTM doesn't work; the copilot model by defaults not saved | 7.33 |
+| [#549](https://github.com/pieces-app/support/issues/549) | It's laggy and heavier, sometimes not responding in VSCode extension since major update to OS v11.0.0 | 4.50 |
+| [#553](https://github.com/pieces-app/support/issues/553) | Can't turn on Long-Term Memory | 4.42 |
 | [#269](https://github.com/pieces-app/support/issues/269) | Can't connect from dev container | 4.05 |
-| [#535](https://github.com/pieces-app/support/issues/535) | Bug: Claude 3.5 Sonnet Copilot response issues "I'm Sorry something went wrong with the processing..." | 2.83 |
+| [#550](https://github.com/pieces-app/support/issues/550) | Seems like you are running VS Code in a remote environment (VS Code running remote docker container) | 3.50 |
 
 ## Common Issues
-### 1. Pieces OS 11 Performance Issues and Copilot Bugs
-Users report performance issues with Pieces OS 11, including lag, unresponsiveness, and Copilot module errors.  Suggested solutions include using alternative models, signing into the Pieces ecosystem, and upgrading to the latest versions. Pieces team is actively investigating and addressing these issues.
+### 1. Long-Term Memory (LTM) Engine Activation Issues
+Users are experiencing difficulties enabling the Long-Term Memory (LTM) Engine.  The issue manifests as either an inability to activate the engine or the LTM feature not functioning as expected despite appearing to be enabled.  Proposed solutions include checking for software updates, ensuring user authentication, and providing detailed logs to the support team for further analysis.
 
 **Related Issues:**
-- [#535](https://github.com/pieces-app/support/issues/535): Bug: Claude 3.5 Sonnet Copilot response issues "I'm Sorry something went wrong with the processing..."
+- [#553](https://github.com/pieces-app/support/issues/553): Can't turn on Long-Term Memory
 - [#540](https://github.com/pieces-app/support/issues/540): LTM doesn't work; the copilot model by defaults not saved
-- [#549](https://github.com/pieces-app/support/issues/549): It's laggy and heavier, sometimes not responding in VSCode extension since major update to OS v11.0.0
+- [#535](https://github.com/pieces-app/support/issues/535): Bug: Claude 3.5 Sonnet Copilot response issues "I'm Sorry something went wrong with the processing..."
 
-### 2. Connecting to Pieces OS from remote environments
-Users are experiencing difficulties connecting to Pieces OS from remote environments like Docker containers and VS Code remote development. This is often due to firewall restrictions or the Pieces OS instance not being accessible from the remote environment. Solutions include configuring firewalls, setting the `pieces.customUrl` setting in VS Code, and ensuring Pieces OS is running and accessible.
+### 2. VS Code Extension Connection Issues
+Users are experiencing difficulties connecting the VS Code extension to Pieces OS, particularly within remote environments like Docker containers. This is often resolved by manually setting the `pieces.customUrl` to the appropriate address, such as `http://host.docker.internal:1000`. The Pieces team is actively working on improving automatic detection and support for remote environments in future releases.
 
 **Related Issues:**
 - [#550](https://github.com/pieces-app/support/issues/550): Seems like you are running VS Code in a remote environment (VS Code running remote docker container)
@@ -35,14 +35,13 @@ Users are experiencing difficulties connecting to Pieces OS from remote environm
 
 
 ## Recommendations
-- **Prioritize resolving Pieces OS 11 performance issues:** This is the most common issue reported by users, impacting Copilot functionality and overall user experience.
-- **Investigate and address Copilot module errors:** Users are experiencing issues with Copilot, particularly with Claude 3.5 Sonnet. Resolving these errors will significantly improve user satisfaction.
-- **Improve support for remote environments:** Users face challenges connecting to Pieces OS from Docker containers and VS Code remote development. Enhance documentation and provide clear solutions for these scenarios.
-- **Review and address LTM functionality:**  Ticket #540 highlights persistent issues with LTM not saving the selected model. Resolving this will improve the LTM experience.
-- **Gather more detailed user feedback:** Encourage users to provide specific details about performance issues, including their system configurations and steps to reproduce the problem. This will help in identifying the root causes and implementing effective solutions.
+- **Prioritize LTM Engine Issues:** Allocate additional resources to investigate and resolve the recurring issue of users struggling to enable or utilize the Long-Term Memory (LTM) Engine. This issue has a high frequency and directly impacts a key feature of the Pieces platform.
+- **Improve VS Code Extension Connectivity:** Address the challenges users face when connecting the VS Code extension, especially within remote environments like Docker containers. Enhance automatic detection mechanisms and provide clearer guidance on manual configuration options. 
+- **Proactive Communication:**  For known issues like the LTM Engine and VS Code connectivity, proactively communicate workarounds or temporary solutions to users through in-app notifications, release notes, or support articles. This can help mitigate user frustration while waiting for permanent fixes.
+- **Gather Detailed User Feedback:**  For issues with lower activity levels but potential impact, like performance concerns, reach out to affected users to gather more detailed feedback and logs. This will aid in replicating and diagnosing the root cause.
+- **Enhance Documentation:** Ensure that the documentation, particularly regarding remote environments and troubleshooting connection issues, is up-to-date, comprehensive, and easily accessible within the application and on the Pieces website. 
 
 ## Daily Reports
 Here are the daily reports for this week:
 
-- [report_210557](daily/2024-12-23/report_210557.md)
-- [report_131022](daily/2024-12-23/report_131022.md)
+- [report_210555](daily/2024-12-24/report_210555.md)
