@@ -1,0 +1,74 @@
+{
+  "success": true,
+  "date_range": {
+    "start": "2024-12-16T00:00:00+00:00",
+    "end": "2024-12-16T13:10:27.655696+00:00"
+  },
+  "summary": {
+    "total_tickets": 1,
+    "resolved_tickets": 0,
+    "open_tickets": 1
+  },
+  "ticket_breakdown": [
+    {
+      "category": "bug",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:desktop application",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "os:linux",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:pieces os",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:triaged",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    }
+  ],
+  "most_active_tickets": [
+    {
+      "number": 527,
+      "title": "Manually downloading a LLM",
+      "activity_level": 5.68
+    }
+  ],
+  "common_issues": [
+    {
+      "title": "Local LLM Download Issues in Pieces",
+      "description": "Users are experiencing difficulties downloading large LLMs locally within the Pieces application, particularly due to unstable network connections. Manual downloads are not recognized by the system, and the application repeatedly restarts downloads, hindering progress. Potential solutions involve improving download management, allowing for paused and resumed downloads, and implementing a mechanism to integrate manually downloaded models.",
+      "frequency": 1,
+      "related_issues": [
+        {
+          "id": 527,
+          "title": "Manually downloading a LLM",
+          "text": "Manually downloading a LLM\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nLinux\n\n### Your Pieces OS Version\n\nLatest\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI am attempting to install Pieces with a local LLM. Unfortunately, I have an unstable network connection (which is why I want a local model in the first place.) I am trying to get Mistral-7B.\n\nI found that Pieces wants to download the whole model (4 GB) all at once. If it fails for whatever reason, it restarts from the beginning.  This is annoying and it makes downloading virtually impossible, because my network connection does not stay long enough to pull 4GB in one go.\n\nI have figured out where the file is being downloaded to and from, and managed to download it manually with wget. Now the problem is that Pieces refuses to recognize it. Even if I put it in the right place, the Pieces app stil shows the Download button in the UI, and clicking Download truncates the file to zero and starts the download from the beginning.\n\nI tried to edit models.db and change \"downloaded\" to true in the relevant line, but it has no effect.\n\nIs there anything else I could do?\n## Summary of GitHub Issue Conversation\n\n**Key Points Raised:**\n\n* Importing a manually downloaded model isn't possible.\n* Pieces integrates with models in a specific way, not just a raw download.\n\n**Problems Identified:**\n\n* Manually downloaded models can't be used with Pieces.\n\n**Solutions Proposed/Implemented:**\n\n* No solutions proposed or implemented.\n\n**Current Status/Outcome:**\n\n* Issue acknowledged and routed to relevant team member. Follow-up expected within 24 hours.\n* User directed to related issues and resources.\n\n**Additional Notes:**\n\n* The conversation suggests the issue may be related to bugs with downloading and processing LLMs in Pieces.\n* The user is encouraged to check existing issues and documentation for further help.",
+          "activity_level": 5.68
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    "**Improve download management:** Investigate and address the issues related to unstable network connections causing interruptions in LLM downloads. Implement features like pausing and resuming downloads to provide a more robust download experience.",
+    "**Allow manual LLM integration:** Develop a mechanism for users to manually download LLM files and integrate them into the Pieces application. This will empower users with limited network connectivity and provide a workaround for download issues.",
+    "**Enhance communication around manual downloads:** If manual LLM integration is not feasible, clearly communicate this limitation to users. Provide guidance on alternative solutions or workarounds.",
+    "**Monitor and address Pieces download restarts:** Investigate why the application restarts downloads from the beginning even after a manual download. Implement checks to recognize partially downloaded files and resume from the point of interruption.",
+    "**Improve model recognition and integration:** Address the issue where manually placed LLM files are not recognized by the system. Ensure the application properly detects and integrates models downloaded through alternative methods."
+  ],
+  "message": "Daily support report generated successfully."
+}

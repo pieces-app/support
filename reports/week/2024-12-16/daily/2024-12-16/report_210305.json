@@ -1,0 +1,120 @@
+{
+  "success": true,
+  "date_range": {
+    "start": "2024-12-16T00:00:00+00:00",
+    "end": "2024-12-16T21:03:05.522611+00:00"
+  },
+  "summary": {
+    "total_tickets": 3,
+    "resolved_tickets": 0,
+    "open_tickets": 3
+  },
+  "ticket_breakdown": [
+    {
+      "category": "bug",
+      "received": 3,
+      "resolved": 0,
+      "pending": 3
+    },
+    {
+      "category": "os:windows",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:new",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:desktop application",
+      "received": 3,
+      "resolved": 0,
+      "pending": 3
+    },
+    {
+      "category": "app:pieces os",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "app:vs code",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:pieces copilot module",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "os:linux",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:triaged",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    }
+  ],
+  "most_active_tickets": [
+    {
+      "number": 471,
+      "title": "I\u00b4m sorry. Something went wrong with processing. Please wait a few seconds and try again, or contact support@pieces.app",
+      "activity_level": 17.77
+    },
+    {
+      "number": 527,
+      "title": "Manually downloading a LLM",
+      "activity_level": 5.5
+    },
+    {
+      "number": 526,
+      "title": "Can't turn on long term memory engine",
+      "activity_level": 4.63
+    }
+  ],
+  "common_issues": [
+    {
+      "title": "Pieces OS LLM Engine and Download Issues",
+      "description": "Users report difficulties downloading and utilizing LLMs within Pieces OS.  Problems include failed downloads due to unstable connections and the inability to import manually downloaded models. Temporary workarounds involve creating specific files while long-term solutions include improved download management and authentication procedures.",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 526,
+          "title": "Can't turn on long term memory engine",
+          "text": "Can't turn on long term memory engine\n### Software\n\nDesktop Application, Pieces OS, VS Code\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n10.1.15\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\ni keep clicking on the button but the ltm engine wont turn on\n![Image](https://github.com/user-attachments/assets/d91ee8ce-b8e1-4f28-9785-02d488d88775)\n\n## GitHub Issue Conversation Summary\n\n**Key Points:**\n\n* sh02sahil reported issues with the LTM engine not starting, even after restarting and switching between local and cloud modes.\n* The provided links did not offer relevant solutions.\n\n**Problems identified:**\n\n* LTM engine not starting.\n* Restarts and mode switches not resolving the issue.\n\n**Solutions proposed/implemented:**\n\n* Restarting Pieces OS and attempting to start the LTM engine (by mason-at-pieces).\n* Switching between Local and Cloud modes (attempted by sh02sahil).\n\n**Current status/outcome:**\n\n* The issue remains unresolved.\n* Further investigation is needed to determine the cause and solution.\n\n**Additional notes:**\n\n* The issue was automatically triaged by the support bot.\n* The author was directed to relevant resources, including existing issues, documentation, and a YouTube channel.",
+          "activity_level": 4.63
+        },
+        {
+          "id": 527,
+          "title": "Manually downloading a LLM",
+          "text": "Manually downloading a LLM\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nLinux\n\n### Your Pieces OS Version\n\nLatest\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI am attempting to install Pieces with a local LLM. Unfortunately, I have an unstable network connection (which is why I want a local model in the first place.) I am trying to get Mistral-7B.\n\nI found that Pieces wants to download the whole model (4 GB) all at once. If it fails for whatever reason, it restarts from the beginning.  This is annoying and it makes downloading virtually impossible, because my network connection does not stay long enough to pull 4GB in one go.\n\nI have figured out where the file is being downloaded to and from, and managed to download it manually with wget. Now the problem is that Pieces refuses to recognize it. Even if I put it in the right place, the Pieces app stil shows the Download button in the UI, and clicking Download truncates the file to zero and starts the download from the beginning.\n\nI tried to edit models.db and change \"downloaded\" to true in the relevant line, but it has no effect.\n\nIs there anything else I could do?\n## Summary of GitHub Issue Conversation: Importing a Manually Downloaded Model\n\n**Key Points Raised:**\n\n* User (@ekuznetsov139) is unable to import a model they downloaded manually.\n* Pieces support bot recommends checking related issues and resources.\n* Brian from Pieces explains the issue and provides a temporary workaround.\n* A new release with improved LLM infrastructure is expected soon.\n\n**Problems Identified:**\n\n* Can't import a manually downloaded model.\n* Partial download corruption makes successful import impossible.\n* Previous workaround (updating db property) is insufficient.\n\n**Solutions Proposed/Implemented:**\n\n* **Temporary:**\n    * Shutdown Pieces.\n    * Add an empty \"download_success.txt\" file to the specified directory.\n    * Restart Pieces.\n* **Long-term:**\n    * New release with improved LLM infrastructure, including the ability to resume failed downloads.\n\n**Current Status/Outcome:**\n\n* Temporary workaround provided.\n* New release expected soon with a permanent fix.\n\n**Additional Notes:**\n\n* The new release will address this issue comprehensively.\n* Users are encouraged to wait for the new release for the best experience.",
+          "activity_level": 5.5
+        },
+        {
+          "id": 471,
+          "title": "I\u00b4m sorry. Something went wrong with processing. Please wait a few seconds and try again, or contact support@pieces.app",
+          "text": "I\u00b4m sorry. Something went wrong with processing. Please wait a few seconds and try again, or contact support@pieces.app\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n10.1.13\n\n### Early Access Program\n\n- [x] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n[com.pieces.pfd.zip](https://github.com/user-attachments/files/17891327/com.pieces.pfd.zip)\n![Image](https://github.com/user-attachments/assets/c9a6f930-4d30-41ad-8d70-b81d9c3f7e6f)\n![Image](https://github.com/user-attachments/assets/99d91958-8fb7-4f27-9efa-9d628127e90f)\n![Image](https://github.com/user-attachments/assets/8d1c630b-816c-488d-87f9-202a86d63820)\n![Image](https://github.com/user-attachments/assets/8e8278a0-eca0-4b4e-bcaa-a5b195da5562)\n\n## Summary of GitHub Issue Conversation\n\n**Key Points Raised:**\n\n* Users are experiencing errors when using Copilot, Claude, Chat Bison, and Gemini on PiecesOS.\n* The error appears to be related to rate limiting implemented recently in PiecesOS.\n* Users who are affected need to provide specific information to manually increase their rate limit.\n\n**Problems Identified:**\n\n* **Rate limiting causing access issues:** The newly implemented rate limiting is causing some users to be blocked from accessing the services.\n* **Lack of clear error message:** The error message is not clear and does not provide information about the problem or solution.\n* **Difficult solution:** The required solution involves obtaining user information and manually adjusting rate limits, which is inconvenient and time-consuming.\n\n**Solutions Proposed/Implemented:**\n\n* **Manually increasing rate limits:** Users who are blocked need to contact the developer and provide specific information to have their rate limit increased.\n* **Improved error message:** The developer plans to improve the error message to provide more information and direct users to the solution.\n* **Longer-term authentication solution:** The long-term solution to prevent rate limiting issues is to require user authentication for cloud processing.\n\n**Current Status/Outcome:**\n\n* The issue was resolved on December 3rd, 2024.\n* Users who are still experiencing the issue need to follow the steps provided by the developer to increase their rate limit.\n* The developer is working on improving the error message and implementing a longer-term authentication solution.\n\n## Additional Notes:\n\n* This conversation highlights the importance of clear error messages and easily accessible solutions when unexpected issues arise.\n* The implemented rate limiting measure, while intended to improve the system, caused inconvenience for some users. This highlights the need for careful consideration of potential impacts before implementing such changes.\n* The developer's responsiveness and willingness to provide individual solutions to affected users is commendable.",
+          "activity_level": 17.77
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    "**Improve LLM Download Management:** Investigate and implement more robust download management within Pieces OS, including features like pause/resume downloads, chunk-based downloads for unstable connections, and better handling of interrupted downloads.",
+    "**Enhance Model Import Process:** Simplify the process for users to manually import downloaded LLM models. Provide clear instructions and error messages to guide users through the process.",
+    "**Review and Improve Error Messages:** Analyze error messages related to LLM engine issues and make them more user-friendly. Provide specific guidance on troubleshooting and potential solutions.",
+    "**Consider Authentication for Cloud Processing:** Explore implementing user authentication for cloud-based processing to address rate limiting issues and provide a more personalized experience.",
+    "**Monitor and Address Ticket Trends:** Regularly analyze support ticket data to identify recurring issues and prioritize solutions. Proactively address common problems to reduce ticket volume in the future."
+  ],
+  "message": "Daily support report generated successfully."
+}

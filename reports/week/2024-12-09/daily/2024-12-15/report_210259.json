@@ -1,0 +1,55 @@
+{
+  "success": true,
+  "date_range": {
+    "start": "2024-12-15T00:00:00+00:00",
+    "end": "2024-12-15T21:02:59.074449+00:00"
+  },
+  "summary": {
+    "total_tickets": 1,
+    "resolved_tickets": 0,
+    "open_tickets": 1
+  },
+  "ticket_breakdown": [
+    {
+      "category": "app:desktop application",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    }
+  ],
+  "most_active_tickets": [
+    {
+      "number": 527,
+      "title": "Manually downloading a LLM",
+      "activity_level": 3.15
+    }
+  ],
+  "common_issues": [
+    {
+      "title": "Local LLM download fails or is not recognized",
+      "description": "Users with unstable internet connections experience difficulties downloading large LLM files. Download interruptions require restarting the process. Manually downloading the files doesn't solve the issue, as the application doesn't recognize them, even when placed in the correct directory. Editing the database to reflect the download doesn't work either.",
+      "frequency": 1,
+      "related_issues": [
+        {
+          "id": 527,
+          "title": "Manually downloading a LLM",
+          "text": "Manually downloading a LLM\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nLinux\n\n### Your Pieces OS Version\n\nLatest\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI am attempting to install Pieces with a local LLM. Unfortunately, I have an unstable network connection (which is why I want a local model in the first place.) I am trying to get Mistral-7B.\n\nI found that Pieces wants to download the whole model (4 GB) all at once. If it fails for whatever reason, it restarts from the beginning.  This is annoying and it makes downloading virtually impossible, because my network connection does not stay long enough to pull 4GB in one go.\n\nI have figured out where the file is being downloaded to and from, and managed to download it manually with wget. Now the problem is that Pieces refuses to recognize it. Even if I put it in the right place, the Pieces app stil shows the Download button in the UI, and clicking Download truncates the file to zero and starts the download from the beginning.\n\nI tried to edit models.db and change \"downloaded\" to true in the relevant line, but it has no effect.\n\nIs there anything else I could do?\nNo comments found on this issue.",
+          "activity_level": 3.15
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    "**Improve LLM Download Resilience:** Investigate and implement mechanisms to handle interrupted downloads of large LLM files. Consider resuming from the point of failure or using chunked downloads to improve reliability for users with unstable internet connections.",
+    "**Enhance LLM Recognition:** Troubleshoot and resolve the issue preventing the application from recognizing manually downloaded LLM files. Ensure clear instructions and documentation for users who need to download LLMs manually.",
+    "**Monitor and Address Common Issues:** Proactively monitor support tickets for recurring issues like the LLM download problem. Develop troubleshooting guides, FAQs, or knowledge base articles to address these issues efficiently.",
+    "**Consider Download Managers:** Explore the feasibility of integrating download manager functionality or recommending reputable third-party download managers to users. This can provide better control and reliability for large file downloads.",
+    "**Gather User Feedback:** Collect feedback from users experiencing download issues to understand their specific challenges and identify areas for improvement in the download process and user interface.",
+    "**Prioritize Ticket Resolution:** With a growing user base, prioritize timely resolution of open tickets, especially those related to critical functionality like LLM downloads, to ensure user satisfaction and minimize disruption.",
+    "**Improve Error Messaging:** Provide more informative and user-friendly error messages when LLM downloads fail or are not recognized. Clearly guide users on how to troubleshoot and resolve the issue.",
+    "**Test on Various Networks:** Conduct thorough testing of the LLM download process on various network conditions (stable, unstable, low bandwidth) to identify and address potential issues related to different internet connections.",
+    "**Automate Support Tasks:** Explore opportunities to automate repetitive support tasks, such as providing initial responses to common queries or routing tickets to the appropriate teams, to improve efficiency.",
+    "**Collect Data on Download Failures:** Implement logging and tracking mechanisms to gather detailed information about LLM download failures, including error codes, network conditions, and user actions. This data can help diagnose and resolve issues more effectively."
+  ],
+  "message": "Daily support report generated successfully."
+}
