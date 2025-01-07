@@ -1,0 +1,56 @@
+{
+  "success": true,
+  "date_range": {
+    "start": "2024-12-22T00:00:00+00:00",
+    "end": "2024-12-22T21:05:51.709165+00:00"
+  },
+  "summary": {
+    "total_tickets": 1,
+    "resolved_tickets": 1,
+    "open_tickets": 0
+  },
+  "ticket_breakdown": [
+    {
+      "category": "app:pieces os",
+      "received": 1,
+      "resolved": 1,
+      "pending": 0
+    },
+    {
+      "category": "app:vs code",
+      "received": 1,
+      "resolved": 1,
+      "pending": 0
+    }
+  ],
+  "most_active_tickets": [
+    {
+      "number": 269,
+      "title": "Can't connect from dev container",
+      "activity_level": 4.12
+    }
+  ],
+  "common_issues": [
+    {
+      "title": "VS Code Dev Container Connectivity to Pieces OS",
+      "description": "Users experience connectivity issues between VS Code Dev Containers and the Pieces OS instance on their host machine. This occurs because the extension assumes Pieces OS is not in a container if DNS resolution fails. A temporary workaround involves setting the 'custom url' to 'http://host.docker.internal:1000'. Future updates aim to automatically detect cloud-based Pieces OS instances, eliminating the need for manual configuration.",
+      "frequency": 1,
+      "related_issues": [
+        {
+          "id": 269,
+          "title": "Can't connect from dev container",
+          "text": "Can't connect from dev container\n### Software\n\nPieces OS, VS Code\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n9.0.7\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n# Issue description\r\nHi,\r\n\r\nPieces OS is working fine in VSCode (extension version: `v1.16.2`), until I load into a dev container.\r\n\r\nVSCode gives me these notifications:\r\n![image](https://github.com/pieces-app/support/assets/30979983/48d644e3-c170-4caf-8258-d96f2323c2cf)\r\n![image](https://github.com/pieces-app/support/assets/30979983/a393edaf-8405-4581-9807-3ae093d078e3)\r\n\r\nPieces explorer looks like this: \r\n<img width=\"367\" alt=\"image\" src=\"https://github.com/pieces-app/support/assets/30979983/386b3e62-4f29-48d3-86b5-3fc09664fc84\">\r\n\r\n# Attempted fixes\r\nI tried to turn off / disable macOS native firewall as well as [Lulu](https://objective-see.org/products/lulu.html) completely, but the issue still persists. Not sure how to make inbound firewall rule for port 1000 on macOS, where you need to specify an exact application associated with firewall rules.\r\n\r\n# One strange behavior\r\n\r\nNow, one thing is strange - **if PiecesOS is turned off before opening VSCode and I open a VSCode in dev container straight away, PiecesOS automatically starts and shows me the welcome window**:\r\n![image](https://github.com/pieces-app/support/assets/30979983/07cd8e60-1b29-4757-8204-c82d87cd39ce)\r\n\r\nDoes it mean, that the VSCode extension inside dev container (i.e. docker container) can communicate with host and startup the application? If so, why does it fail to communicate further?\r\n\n## Summary of GitHub Issue Conversation\n\n**Problem:**\n\n* Docker container launched in VS Code Dev Container could not reach Pieces OS instance running on the host machine.\n\n**Troubleshooting:**\n\n* User @Muzosh was advised to check connectivity using `curl http://host.docker.internal:1000/.well-known/health` in the container.\n* Setting `custom url` in VS Code extension to `http://host.docker.internal:1000` resolved the issue temporarily.\n\n**Solution:**\n\n* The VS Code extension code will be improved to make the `custom url` setting unnecessary and automatically detect Pieces OS instances running in cloud environments.\n\n**Current Status/Outcome:**\n\n* The issue is resolved for users not working in cloud environments.\n* A workaround using `custom url` is available for cloud environments until a more robust solution is implemented.\n* User @eliezedeck suggested adding a guide for port forwarding Pieces OS to a cloud environment in the documentation.\n* Developer @caleb-at-pieces confirmed the guide is available and added a notification for remote environment detection in the VS Code extension.\n\n**Next Steps:**\n\n* Implement automatic detection of cloud-based Pieces OS instances in the VS Code extension.\n* Consider @eliezedeck's suggestion of displaying the guide for port forwarding Pieces OS in the relevant error message and Pieces page.\n\n**Key Points:**\n\n* The issue stemmed from the VS Code extension assuming Pieces OS is not running in a dev container if DNS resolution fails.\n* Setting `custom url` to `http://host.docker.internal:1000` is a temporary workaround.\n* Future updates will automatically detect Pieces OS in cloud environments and remove the need for manual configuration.",
+          "activity_level": 4.12
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    "**Improve Dev Container Connectivity:** Investigate and implement a more robust solution for seamless connectivity between VS Code Dev Containers and Pieces OS, including automatic detection of cloud-based instances. This will address the common issue of connectivity problems and eliminate the need for workarounds.",
+    "**Enhance Documentation:** Provide clear and detailed documentation on configuring VS Code Dev Containers to work with Pieces OS, specifically addressing port forwarding for cloud environments. This will empower users to resolve connectivity issues independently.",
+    "**Consider In-App Guidance:** Explore incorporating in-app guidance or tooltips within the VS Code extension to assist users experiencing connectivity issues. This could include automatically detecting remote environments and suggesting relevant troubleshooting steps or documentation.",
+    "**Monitor and Analyze Common Issues:** Continue monitoring support tickets and identifying common issues to proactively address them. This includes analyzing the frequency and impact of issues to prioritize development efforts.",
+    "**Gather User Feedback:** Collect feedback from users on their support experiences, particularly regarding Dev Container connectivity. This can be achieved through surveys, in-app prompts, or community forums. Use this feedback to further improve documentation, in-app guidance, and future development decisions."
+  ],
+  "message": "Daily support report generated successfully."
+}

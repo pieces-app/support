@@ -1,0 +1,73 @@
+{
+  "success": true,
+  "date_range": {
+    "start": "2024-12-23T00:00:00+00:00",
+    "end": "2024-12-23T13:10:22.231034+00:00"
+  },
+  "summary": {
+    "total_tickets": 1,
+    "resolved_tickets": 0,
+    "open_tickets": 1
+  },
+  "ticket_breakdown": [
+    {
+      "category": "bug",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:desktop application",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "P0",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:pieces copilot module",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:pending_user_confirmation",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    }
+  ],
+  "most_active_tickets": [
+    {
+      "number": 540,
+      "title": "LTM doesn't work; the copilot model by defaults not saved",
+      "activity_level": 7.3
+    }
+  ],
+  "common_issues": [
+    {
+      "title": "LTM Engine Not Enabling After Update",
+      "description": "Users report that the Long-Term Memory (LTM) engine is not enabling after updating to PiecesOS 11.0.0 and Desktop application 3.3.0. This is due to the downloaded local LLM overriding saved data. A patch (PiecesOS 11.0.1 and Desktop application 3.3.1) was released but some users still report issues. ",
+      "frequency": 1,
+      "related_issues": [
+        {
+          "id": 540,
+          "title": "LTM doesn't work; the copilot model by defaults not saved",
+          "text": "LTM doesn't work; the copilot model by defaults not saved\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.0.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n[https://disk.yandex.ru/i/Z_U0FzYA8NBrNg](url)\nThere is a video here that describes the problem\n## Summary of GitHub Issue Conversation:\n\n**Key Points Raised:**\n\n* User @Iliya3ProX reports Long-Term Memory (LTM) engine is not enabled, despite previous attempts.\n* User provides video and logs for further investigation.\n* The issue is confirmed and attributed to downloaded local LLM overriding saved data.\n\n**Solutions Proposed/Implemented:**\n\n* @mack-at-pieces identifies and fixes the issue in debug.\n* Patch released in version 11.0.1 of PiecesOS and 3.3.1 of Desktop application.\n\n**Current Status/Outcome:**\n\n* Initial fix implemented in the mentioned versions.\n* User @Iliya3ProX reports LTM still not enabled and new issue with webpage opening after reboot.\n* Additional user reports similar experience.\n\n**Action Items:**\n\n* Investigate why the fix is not working for some users and address the new issue with the webpage.\n* Follow up with users to confirm resolution.\n\n**Additional Notes:**\n\n* Related issues: \"Can't turn on Long-Term Memory Engine\", \"Can't turn on long term memory engine\", \"Claude is having an aneurysm\"\n* Helpful resources: Existing Issues, Documentation, YouTube Channel",
+          "activity_level": 7.3
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    "**Investigate LTM Engine Issues:** Prioritize resolving the persistent issues with the Long-Term Memory (LTM) engine not enabling after the update. Focus on why the patch (PiecesOS 11.0.1 and Desktop application 3.3.1) hasn't resolved the problem for all users.",
+    "**Improve Patch Testing:** Enhance the testing procedures for patches to ensure they effectively address reported issues before release.",
+    "**Gather More User Data:** Collect more detailed feedback from users experiencing the LTM issue, including their operating systems, Pieces OS versions, and specific error messages. This will help pinpoint the root cause.",
+    "**Update Documentation and Communication:**  Provide clear and updated documentation on the LTM engine, including troubleshooting steps for common issues. Communicate known issues and workarounds to users through release notes or support channels."
+  ],
+  "message": "Daily support report generated successfully."
+}

@@ -1,0 +1,97 @@
+{
+  "success": true,
+  "date_range": {
+    "start": "2024-12-18T00:00:00+00:00",
+    "end": "2024-12-18T13:11:44.305357+00:00"
+  },
+  "summary": {
+    "total_tickets": 2,
+    "resolved_tickets": 0,
+    "open_tickets": 2
+  },
+  "ticket_breakdown": [
+    {
+      "category": "bug",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "os:windows",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "app:desktop application",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "app:pieces os",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "app:vs code",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:waiting_on_user_responses",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "status:triaged",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    }
+  ],
+  "most_active_tickets": [
+    {
+      "number": 526,
+      "title": "Can't turn on long term memory engine",
+      "activity_level": 7.67
+    },
+    {
+      "number": 531,
+      "title": "Pieces Desktop App - Lost Connection to PiecesOS",
+      "activity_level": 6.94
+    }
+  ],
+  "common_issues": [
+    {
+      "title": "Pieces OS Connectivity Issues",
+      "description": "Users are reporting problems with Pieces OS, including the Long Term Memory (LTM) engine not starting and the desktop app losing connection.  Updating to the latest version of Pieces OS (11.0.0 or higher) seems to resolve the LTM issue.  For connectivity problems, further troubleshooting is needed, and users are encouraged to schedule a call with Pieces support.",
+      "frequency": 2,
+      "related_issues": [
+        {
+          "id": 526,
+          "title": "Can't turn on long term memory engine",
+          "text": "Can't turn on long term memory engine\n### Software\n\nDesktop Application, Pieces OS, VS Code\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n10.1.15\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\ni keep clicking on the button but the ltm engine wont turn on\n![Image](https://github.com/user-attachments/assets/d91ee8ce-b8e1-4f28-9785-02d488d88775)\n\n## GitHub Issue Summary\n\n**Key Points:**\n\n* User (@sh02sahil) reported an issue where the LTM engine wouldn't start in Pieces OS.\n* The user tried restarting, switching to cloud mode, and updating extensions, but none of these solutions worked initially.\n* After the release of POS 11.0.0, the issue was resolved, but the user encountered a new issue where they couldn't access the VSCode extension due to their WSL environment.\n\n**Problems Identified:**\n\n* LTM engine wouldn't start in Pieces OS.\n* VSCode extension not accessible due to WSL environment.\n\n**Solutions Proposed/Implemented:**\n\n* Update to POS 11.0.0.\n* Update extensions and desktop apps.\n* Troubleshoot WSL environment according to documentation.\n\n**Current Status/Outcome:**\n\n* LTM engine issue resolved after updating to POS 11.0.0.\n* VSCode extension accessibility issue persists.\n\n**Next Steps:**\n\n* User will continue troubleshooting WSL environment and report back.\n* If the issue persists, the user will schedule a call with the Pieces support representative.",
+          "activity_level": 7.67
+        },
+        {
+          "id": 531,
+          "title": "Pieces Desktop App - Lost Connection to PiecesOS",
+          "text": "Pieces Desktop App - Lost Connection to PiecesOS\n_PiecesOS Information_\n\n**ID:** 18986c5c-5aef-40f4-ac00-93da40fd8b47\n**User:** 1446bb64-5370-4644-a0ee-5ab3b4f3a7ac\n**Current Version:** Unknown\n**Min Version Supported:** 11.0.0\n**Max Version Supported:** 12.0.0\n**Local Port:** 127.0.0.1:39300\n\n_Device Information_\n\n**Operating System:** Windows\n**Current Version:** \"Windows 10 Pro\" 10.0 (Build 26100)\n**Min Version Supported:** Windows 10 Build 1903\n\nPieces for developers always loosing connection and self closing pieces OS\n## Summary of GitHub Issue Conversation\n**Key Points Raised:**\n\n* User `rafael-a-g-n` reported an issue where Pieces Desktop and OS stopped connecting after upgrading to the latest version.\n* They shared a screenshot of the error message.\n* The support bot suggested some related issues and resources.\n* `mark-at-pieces` suggested scheduling a call and sharing a video for further investigation.\n\n**Problems Identified:**\n\n* Loss of connection between Pieces Desktop and OS after upgrading.\n* Cause of the problem is unclear.\n\n**Solutions Proposed/Implemented:**\n\n* Scheduling a call with `mark-at-pieces` for real-time troubleshooting.\n* Sharing a video of the issue for further analysis.\n\n**Current Status/Outcome:**\n\n* The issue is still open and under investigation.\n* A call and video sharing may provide more information for resolving the problem.",
+          "activity_level": 6.94
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    "Investigate \"Pieces OS Connectivity Issues\": Prioritize resolving the root cause behind the LTM engine and desktop app connection issues to reduce ticket volume.",
+    "Improve \"Pieces OS\" onboarding and documentation: Provide clearer guidance on updating Pieces OS and troubleshooting connectivity problems to empower users to self-resolve.",
+    "Gather more data on connection issues: When scheduling calls with support, collect detailed system information, logs, and steps to reproduce the issue for faster diagnosis.",
+    "Consider a dedicated FAQ or troubleshooting guide: Address common questions and solutions related to Pieces OS connectivity in an easily accessible format for users.",
+    "Monitor new releases closely: Pay close attention to support tickets following updates to Pieces OS, as new releases can sometimes introduce new issues or regressions."
+  ],
+  "message": "Daily support report generated successfully."
+}

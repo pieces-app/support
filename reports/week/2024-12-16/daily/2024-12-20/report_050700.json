@@ -1,0 +1,101 @@
+{
+  "success": true,
+  "date_range": {
+    "start": "2024-12-20T00:00:00+00:00",
+    "end": "2024-12-20T05:07:00.540829+00:00"
+  },
+  "summary": {
+    "total_tickets": 2,
+    "resolved_tickets": 0,
+    "open_tickets": 2
+  },
+  "ticket_breakdown": [
+    {
+      "category": "bug",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "os:windows",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:desktop application",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "app:pieces os",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "status:waiting_on_user_responses",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:new",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "os:macos",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    }
+  ],
+  "most_active_tickets": [
+    {
+      "number": 531,
+      "title": "Pieces Desktop App - Lost Connection to PiecesOS",
+      "activity_level": 10.98
+    },
+    {
+      "number": 543,
+      "title": "OSX/Nukesped.ext reported by VirusBarrier",
+      "activity_level": 9.46
+    }
+  ],
+  "common_issues": [
+    {
+      "title": "Pieces OS and Desktop App Connection Issues",
+      "description": "Users report Pieces OS disconnecting, restarting, or being flagged as malware. This can be due to installation location conflicts, outdated virus definitions, or false positives. Solutions include reinstalling Pieces OS and Desktop App after deleting related folders, updating virus definitions, or reporting false positives to security software providers.",
+      "frequency": 2,
+      "related_issues": [
+        {
+          "id": 531,
+          "title": "Pieces Desktop App - Lost Connection to PiecesOS",
+          "text": "Pieces Desktop App - Lost Connection to PiecesOS\n_PiecesOS Information_\n\n**ID:** 18986c5c-5aef-40f4-ac00-93da40fd8b47\n**User:** 1446bb64-5370-4644-a0ee-5ab3b4f3a7ac\n**Current Version:** Unknown\n**Min Version Supported:** 11.0.0\n**Max Version Supported:** 12.0.0\n**Local Port:** 127.0.0.1:39300\n\n_Device Information_\n\n**Operating System:** Windows\n**Current Version:** \"Windows 10 Pro\" 10.0 (Build 26100)\n**Min Version Supported:** Windows 10 Build 1903\n\nPieces for developers always loosing connection and self closing pieces OS\n## Summary of GitHub Issue Conversation: Pieces OS Disconnecting and Restarting\n\n**Key Points Raised:**\n\n* User @rafael-a-g-n was experiencing the issue of Pieces OS disconnecting and restarting.\n* User provided steps to fix the issue, however, one crucial step was missing.\n* @tsavo-at-pieces confirmed this and informed about an upcoming patch to handle alternative installation locations.\n* @mack-at-pieces provided additional information regarding the process and a warning about removing code snippets and copilot chats.\n\n**Problems Identified:**\n\n* Pieces OS was disconnecting and restarting for user @rafael-a-g-n.\n* Original troubleshooting steps were incomplete, requiring additional steps for a complete solution.\n\n**Solutions Proposed/Implemented:**\n\n* Uninstalling and Reinstalling both Pieces OS and For Developers.\n* Deleting the folders \"com.pieces.os\" and \"com.pieces.pfd\" from Documents directory.\n* A patch was planned to be deployed to handle alternative installation locations.\n\n**Current Status/Outcome:**\n\n* The user solved the issue by following the complete instructions.\n* A patch for alternative installation locations will be rolled out.",
+          "activity_level": 10.98
+        },
+        {
+          "id": 543,
+          "title": "OSX/Nukesped.ext reported by VirusBarrier",
+          "text": "OSX/Nukesped.ext reported by VirusBarrier\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n10.1.15\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nIntego VirusBarrier has quarantined the following Apps as being infected with OSX/Nukesped.ext\n\n- MacOSx/Applications/Pieces OS.app/Contents/Frameworks/App.framework/Versions/A/App\n- MacOSx/Applications/Pieces.app/Contents/Frameworks/App.framework/Versions/A/App\n- /Library/Caches/com.pieces.os/org.sparkle-project.Sparkle/Installation/rXFHYYDjc/Pieces OS.app/Contents/Frameworks/App.framework/Versions/A\n\n![Image](https://github.com/user-attachments/assets/32bfc7dc-fda4-4377-8eb1-348cab1106b6)\n\n\n\n## Summary of GitHub issue conversation:\n\n**Key points raised:**\n\n* @idiston reported that the latest version of Pieces OS (11.0.0) is still flagged as infected by Intego VirusBarrier.\n* @tsavo-at-pieces identified the flagged files as the App framework and concluded it's likely a false positive.\n\n**Problems identified:**\n\n* Intego VirusBarrier incorrectly detects legitimate Pieces OS files as malware (OSX/NukeSped.ext).\n* This issue has occurred previously with Intego's virus definitions.\n\n**Solutions proposed/implemented:**\n\n* Update Intego VirusBarrier virus definitions to the latest version.\n* Report the detection to Intego as a false positive.\n* Temporarily trust the flagged files through Intego's interface.\n\n**Current status/outcome:**\n\n* @idiston is advised to try the proposed solutions and report the outcome.\n* @tsavo-at-pieces will investigate further on their side.\n\n**Overall, the issue appears to be caused by a false positive in Intego's virus definitions. The proposed solutions should resolve the problem. However, further investigation is needed to confirm.**",
+          "activity_level": 9.46
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    "**Prioritize resolving connection issues:** The most frequent issue is related to Pieces OS and Desktop App connection problems. Focus on identifying the root causes and implementing permanent solutions.",
+    "**Improve installation instructions and troubleshooting:** Provide clearer guidance on installation locations and potential conflicts with security software. Update troubleshooting steps to include deleting relevant folders and reporting false positives.",
+    "**Collaborate with security software vendors:** Work with Intego and other antivirus providers to address false positive detections of Pieces OS. This may involve submitting the software for whitelisting or providing detailed information about the flagged files.",
+    "**Monitor and address emerging issues:** Keep track of new support tickets and identify any patterns or trends. This will help proactively address potential problems and improve the overall user experience.",
+    "**Gather more data on user environments:** Encourage users to provide details about their operating system, security software, and installation configurations when submitting tickets. This will aid in faster diagnosis and resolution of connection issues.",
+    "**Consider implementing a system status dashboard:** Provide users with real-time information about the status of Pieces OS and Desktop App. This can help manage expectations and reduce support requests related to temporary outages or known issues.",
+    "**Improve communication with users:** Keep users informed about the progress of bug fixes and software updates. Provide clear and concise explanations of technical issues and solutions.",
+    "**Invest in automated testing:** Implement automated tests to catch potential issues before they reach production. This will help ensure the stability and reliability of Pieces OS and Desktop App.",
+    "**Collect user feedback:** Regularly solicit feedback from users about their experiences with Pieces OS and Desktop App. This will provide valuable insights into areas for improvement and help prioritize future development efforts."
+  ],
+  "message": "Daily support report generated successfully."
+}
