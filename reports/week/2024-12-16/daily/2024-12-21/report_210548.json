@@ -1,0 +1,192 @@
+{
+  "success": true,
+  "date_range": {
+    "start": "2024-12-21T00:00:00+00:00",
+    "end": "2024-12-21T21:05:48.963591+00:00"
+  },
+  "summary": {
+    "total_tickets": 5,
+    "resolved_tickets": 2,
+    "open_tickets": 3
+  },
+  "ticket_breakdown": [
+    {
+      "category": "bug",
+      "received": 4,
+      "resolved": 1,
+      "pending": 3
+    },
+    {
+      "category": "os:windows",
+      "received": 2,
+      "resolved": 1,
+      "pending": 1
+    },
+    {
+      "category": "app:desktop application",
+      "received": 5,
+      "resolved": 2,
+      "pending": 3
+    },
+    {
+      "category": "app:pieces os",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:pieces copilot module",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "status:triaged",
+      "received": 3,
+      "resolved": 1,
+      "pending": 2
+    },
+    {
+      "category": "known_issue",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "on the roadmap",
+      "received": 1,
+      "resolved": 1,
+      "pending": 0
+    },
+    {
+      "category": "os:linux",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "P0",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:pending_user_confirmation",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    }
+  ],
+  "most_active_tickets": [
+    {
+      "number": 536,
+      "title": "Bug: Adding Folder as context (on Windows) crashes PiecesOS within the Copilot",
+      "activity_level": 10.83
+    },
+    {
+      "number": 546,
+      "title": "Unable to open Pieces Core Services",
+      "activity_level": 8.2
+    },
+    {
+      "number": 540,
+      "title": "LTM doesn't work; the copilot model by defaults not saved",
+      "activity_level": 7.11
+    },
+    {
+      "number": 545,
+      "title": "facing a issue in the installation",
+      "activity_level": 5.25
+    },
+    {
+      "number": 470,
+      "title": "Unable to resize my pieces app",
+      "activity_level": 4.76
+    }
+  ],
+  "common_issues": [
+    {
+      "title": "PiecesOS Windows Stability Issues",
+      "description": "Users reported various issues with PiecesOS on Windows, including crashes when adding folders as context, failures to open core services, and LTM engine malfunctions. These issues were linked to specific OS builds, app installer distributions, and interactions with local LLMs. Solutions involved patches and updates (versions 11.0.1, 11.0.2, 3.3.1), along with reinstallation using different methods.",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 536,
+          "title": "Bug: Adding Folder as context (on Windows) crashes PiecesOS within the Copilot",
+          "text": "Bug: Adding Folder as context (on Windows) crashes PiecesOS within the Copilot\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.0.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nHey \ud83d\udc4b,\n\nWe are tracking down an issue right now on Windows w/ regard to Typescript folders crashing PiecesOS on 11.0.0.\n\nSo far we are unable to reproduce this behavior on Macos, but are still looking deeper into this issue in the Windows Ecosystem.\n\nPlease let us know in this issue if you are experiencing similar behavior on windows or if things are working properly.\n\nThank you in advance!\n## Summary of Issue Conversation: \n\n**Problem:**\n- Users were experiencing an issue where adding files to contexts via the \"Insert File\" button was not working as expected, specifically for larger folders and with certain OS builds. \n\n**Investigation and Solution:** \n- The issue was traced back to a specific app installer distribution. \n- A linked ticket was created in the Pieces OS server repository to track the problem. \n- The issue was included in Patch 11.0.2, which addressed the problem.\n\n**Outcome:** \n- The problem has been resolved. Users are able to add files and folders to contexts as expected. \n\n**Additional Notes:** \n- The author will keep the issue open for the time being. \n- A user has confirmed that the issue is resolved after updating to version 11.0.2. \n\n**Key Points:** \n- This issue was specific to certain OS builds and affected the insert file functionality. \n- The issue has been addressed with the release of Patch 11.0.2.",
+          "activity_level": 10.83
+        },
+        {
+          "id": 546,
+          "title": "Unable to open Pieces Core Services",
+          "text": "Unable to open Pieces Core Services\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.0.2\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\ni am running into this issue after installing the new Pieces version. \n![Image](https://github.com/user-attachments/assets/7b14dbce-4947-4386-870b-c6953c4acb14)\n\n## GitHub issue summary\n\n**Issue:** User (@martinafrazzoni) reported that PiecesOS was not working.\n\n**Key points:**\n* User experienced problems with PiecesOS.\n* The issue was automatically routed to the Pieces team.\n* User was provided with resources and suggestions for alternative solutions.\n* Another team member (@mark-at-pieces) suggested uninstalling and reinstalling PiecesOS using a different method.\n* The user confirmed that this solution resolved the problem.\n\n**Solutions proposed/implemented:**\n* Uninstall and reinstall PiecesOS using a different method.\n\n**Current status/outcome:**\n* Issue resolved. \n\n**Additional notes:**\n* This issue may be a duplicate of another issue (#545).",
+          "activity_level": 8.2
+        },
+        {
+          "id": 540,
+          "title": "LTM doesn't work; the copilot model by defaults not saved",
+          "text": "LTM doesn't work; the copilot model by defaults not saved\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.0.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n[https://disk.yandex.ru/i/Z_U0FzYA8NBrNg](url)\nThere is a video here that describes the problem\n## GitHub Issue Conversation Summary\n\n**Key Points:**\n\n* User Iliya3ProX reported an issue where the Long-Term Memory (LTM) Engine was not enabling.\n* They provided a video demonstrating the problem.\n* The Pieces team identified the issue as an undesired override of saved data by a downloaded local LLM.\n\n**Problems Identified:**\n\n* Downloaded local LLM state was overriding saved selected model state.\n* This prevented the LTM Engine from enabling.\n\n**Solutions Proposed/Implemented:**\n\n* Pieces team fixed the issue by ensuring saved selected model state takes priority over downloaded LLM state.\n* A patch was released in the form of PiecesOS version 11.0.1 and Desktop application version 3.3.1.\n\n**Current Status/Outcome:**\n\n* The patch was released late on December 19th, 2024.\n* User Iliya3ProX confirmed the issue persists after updating to the latest versions.\n* They provided logs and a video recording demonstrating the issue.\n* The Pieces team will likely investigate further to find a solution.",
+          "activity_level": 7.11
+        }
+      ]
+    },
+    {
+      "title": "PiecesOS Installation and Functionality Issues",
+      "description": "Users reported various issues with PiecesOS, including installation errors (\"Type ContextFacade is already registered\"), application crashes when adding folders as context, and failure to open core services. Proposed solutions involved providing log files, live troubleshooting, software updates (v11.0.2), and reinstallation using different methods.",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 545,
+          "title": "facing a issue in the installation",
+          "text": "facing a issue in the installation\n\n### Discussed in https://github.com/pieces-app/support/discussions/544\n\n<div type='discussions-op-text'>\n\n<sup>Originally posted by **kumaran1223** December 20, 2024</sup>\n![Screenshot (120)](https://github.com/user-attachments/assets/93938b60-8005-4432-b4d8-1b26595a18a5)\r\n</div>\n## Summary of GitHub Issue Conversation\n\n**Issue:** Invalid argument error \"Type ContextFacade is already registered inside GetIt\" during installation.\n\n**Key Points:**\n\n* This is a new feature and the first report of this error.\n* The error occurs during installation on Linux.\n\n**Problems Identified:**\n\n* Type ContextFacade is already registered in GetIt, causing a conflict.\n\n**Solutions Proposed:**\n\n* Share the log files located at `C:\\\\Users\\<user>\\Documents\\com.pieces.pfd\\production\\logs` for further analysis.\n* Alternatively, schedule a live troubleshooting session via the provided calendar link.\n\n**Solutions Implemented:**\n\n* None yet, pending user response.\n\n**Current Status:**\n\n* User has provided additional information and confirmed the issue on their system.\n* Awaiting user response with log files or scheduling a live troubleshooting session.\n\n**Outcome:**\n\n* To be determined based on further investigation and implementation of the proposed solutions.",
+          "activity_level": 5.25
+        },
+        {
+          "id": 536,
+          "title": "Bug: Adding Folder as context (on Windows) crashes PiecesOS within the Copilot",
+          "text": "Bug: Adding Folder as context (on Windows) crashes PiecesOS within the Copilot\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.0.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nHey \ud83d\udc4b,\n\nWe are tracking down an issue right now on Windows w/ regard to Typescript folders crashing PiecesOS on 11.0.0.\n\nSo far we are unable to reproduce this behavior on Macos, but are still looking deeper into this issue in the Windows Ecosystem.\n\nPlease let us know in this issue if you are experiencing similar behavior on windows or if things are working properly.\n\nThank you in advance!\n## Summary of Issue Conversation: \n\n**Problem:**\n- Users were experiencing an issue where adding files to contexts via the \"Insert File\" button was not working as expected, specifically for larger folders and with certain OS builds. \n\n**Investigation and Solution:** \n- The issue was traced back to a specific app installer distribution. \n- A linked ticket was created in the Pieces OS server repository to track the problem. \n- The issue was included in Patch 11.0.2, which addressed the problem.\n\n**Outcome:** \n- The problem has been resolved. Users are able to add files and folders to contexts as expected. \n\n**Additional Notes:** \n- The author will keep the issue open for the time being. \n- A user has confirmed that the issue is resolved after updating to version 11.0.2. \n\n**Key Points:** \n- This issue was specific to certain OS builds and affected the insert file functionality. \n- The issue has been addressed with the release of Patch 11.0.2.",
+          "activity_level": 10.83
+        },
+        {
+          "id": 546,
+          "title": "Unable to open Pieces Core Services",
+          "text": "Unable to open Pieces Core Services\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.0.2\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\ni am running into this issue after installing the new Pieces version. \n![Image](https://github.com/user-attachments/assets/7b14dbce-4947-4386-870b-c6953c4acb14)\n\n## GitHub issue summary\n\n**Issue:** User (@martinafrazzoni) reported that PiecesOS was not working.\n\n**Key points:**\n* User experienced problems with PiecesOS.\n* The issue was automatically routed to the Pieces team.\n* User was provided with resources and suggestions for alternative solutions.\n* Another team member (@mark-at-pieces) suggested uninstalling and reinstalling PiecesOS using a different method.\n* The user confirmed that this solution resolved the problem.\n\n**Solutions proposed/implemented:**\n* Uninstall and reinstall PiecesOS using a different method.\n\n**Current status/outcome:**\n* Issue resolved. \n\n**Additional notes:**\n* This issue may be a duplicate of another issue (#545).",
+          "activity_level": 8.2
+        }
+      ]
+    },
+    {
+      "title": "PiecesOS and Desktop App Bugs",
+      "description": "Users report various bugs in PiecesOS and Desktop App, including resizing issues, Pieces Core Services failure, and LTM malfunction. Solutions involve app updates, troubleshooting steps like reinstallation, and bug fixes from the Pieces team. Issues are tracked and addressed through GitHub and user feedback.",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 470,
+          "title": "Unable to resize my pieces app",
+          "text": "Unable to resize my pieces app\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n3.2.2\n\n### Early Access Program\n\n- [x] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\ni am unable to resize the pieces app on my mac . i downloaded the app through link as it is not available on app store . i performend many ways to resize and called apple care for this and they have done troubleshooting from their after all that nothing has happend then they said that is from developer end . \n\nplease resolve this problem as soon as possible so i can use peices app smoothly .\n## Summary of GitHub Issue Conversation\n\n**Key points raised:**\n\n* Users (@hra42 and @ShashankKanaujia) are experiencing an issue where the onboarding window is too large and cannot be resized.\n* The issue appears to be related to macOS version 15.1 and 15.1.1.\n* The window size lock during onboarding is intentional but may be causing problems.\n\n**Problems identified:**\n\n* Large and non-resizable onboarding window.\n* Potential frustration for users during onboarding process.\n\n**Solutions proposed/implemented:**\n\n* Remove the window size lock during onboarding.\n* Patch release 3.3.1 will include the fix.\n\n**Current status/outcome:**\n\n* The fix has been implemented and released in patch 3.3.1.\n* @ShashankKanaujia will confirm if the issue is resolved.\n\n**Additional notes:**\n\n* @mack-at-pieces acknowledges the issue and plans to address it in an upcoming patch.\n* This issue is potentially a duplicate of #463.",
+          "activity_level": 4.76
+        },
+        {
+          "id": 546,
+          "title": "Unable to open Pieces Core Services",
+          "text": "Unable to open Pieces Core Services\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.0.2\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\ni am running into this issue after installing the new Pieces version. \n![Image](https://github.com/user-attachments/assets/7b14dbce-4947-4386-870b-c6953c4acb14)\n\n## GitHub issue summary\n\n**Issue:** User (@martinafrazzoni) reported that PiecesOS was not working.\n\n**Key points:**\n* User experienced problems with PiecesOS.\n* The issue was automatically routed to the Pieces team.\n* User was provided with resources and suggestions for alternative solutions.\n* Another team member (@mark-at-pieces) suggested uninstalling and reinstalling PiecesOS using a different method.\n* The user confirmed that this solution resolved the problem.\n\n**Solutions proposed/implemented:**\n* Uninstall and reinstall PiecesOS using a different method.\n\n**Current status/outcome:**\n* Issue resolved. \n\n**Additional notes:**\n* This issue may be a duplicate of another issue (#545).",
+          "activity_level": 8.2
+        },
+        {
+          "id": 540,
+          "title": "LTM doesn't work; the copilot model by defaults not saved",
+          "text": "LTM doesn't work; the copilot model by defaults not saved\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.0.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n[https://disk.yandex.ru/i/Z_U0FzYA8NBrNg](url)\nThere is a video here that describes the problem\n## GitHub Issue Conversation Summary\n\n**Key Points:**\n\n* User Iliya3ProX reported an issue where the Long-Term Memory (LTM) Engine was not enabling.\n* They provided a video demonstrating the problem.\n* The Pieces team identified the issue as an undesired override of saved data by a downloaded local LLM.\n\n**Problems Identified:**\n\n* Downloaded local LLM state was overriding saved selected model state.\n* This prevented the LTM Engine from enabling.\n\n**Solutions Proposed/Implemented:**\n\n* Pieces team fixed the issue by ensuring saved selected model state takes priority over downloaded LLM state.\n* A patch was released in the form of PiecesOS version 11.0.1 and Desktop application version 3.3.1.\n\n**Current Status/Outcome:**\n\n* The patch was released late on December 19th, 2024.\n* User Iliya3ProX confirmed the issue persists after updating to the latest versions.\n* They provided logs and a video recording demonstrating the issue.\n* The Pieces team will likely investigate further to find a solution.",
+          "activity_level": 7.11
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    "**Prioritize Windows Stability:** Allocate additional resources to address the high frequency of \"PiecesOS Windows Stability Issues.\" This could involve dedicated QA for Windows builds, deeper investigation into OS-specific interactions, and proactive communication with affected users.",
+    "**Improve Installation Experience:** Investigate and resolve the root causes behind installation errors like \"Type ContextFacade is already registered.\" Enhance installation guides and troubleshooting documentation to empower users to self-resolve common issues.",
+    "**Enhance LTM Engine Reliability:** Address the LTM Engine malfunctions reported by users. This may involve code reviews, regression testing, and potentially a dedicated communication to users about the issue and its resolution.",
+    "**Monitor and Address App Resizing Issues:** While less frequent, the resizing issue on macOS highlights the importance of ensuring cross-platform compatibility. Implement robust testing for different operating systems and screen sizes.",
+    "**Proactive Communication for Known Issues:** For recurring issues like the LTM override, establish a clear communication strategy to inform users about workarounds, expected resolution timelines, and available updates."
+  ],
+  "message": "Daily support report generated successfully."
+}
