@@ -1,5 +1,5 @@
 # Support Ticket Report
-- Generated: 2025-01-11 05:09:14
+- Generated: 2025-01-11 13:15:48
 - Period: 2025-01-06 to 2025-01-11
 
 ## Summary
@@ -11,59 +11,64 @@
 | Issue # | Title | Activity Level |
 |---------|-------|----------------|
 | [#550](https://github.com/pieces-app/support/issues/550) | Seems like you are running VS Code in a remote environment (VS Code running remote docker container) | 7.97 |
-| [#540](https://github.com/pieces-app/support/issues/540) | LTM doesn't work; the copilot model by defaults not saved | 6.89 |
+| [#540](https://github.com/pieces-app/support/issues/540) | LTM doesn't work; the copilot model by defaults not saved | 6.81 |
 | [#572](https://github.com/pieces-app/support/issues/572) | Pieces OS Does not recognize folders or files | 6.65 |
-| [#568](https://github.com/pieces-app/support/issues/568) | Long-Term Memory Feature Not Working on Linux | 5.52 |
+| [#568](https://github.com/pieces-app/support/issues/568) | Long-Term Memory Feature Not Working on Linux | 5.38 |
 | [#538](https://github.com/pieces-app/support/issues/538) | Announcement: 11.0.0 POS Breaking Change - TLDR: please update all plugins | 4.79 |
 
 ## Common Issues
-### 1. Pieces OS Copilot struggles to access and read files
-Users report Pieces OS Copilot encountering difficulties in accessing and reading files, leading to inaccurate code suggestions and requiring manual copy-pasting. The issue appears to stem from problems with Pieces OS versions, potential bugs in file integration, and LTM activation issues. Solutions include updating Pieces OS, reinstalling the application, and ongoing bug fixes from the Pieces team.
+### 1. Pieces OS Functionality Issues
+Users report Pieces OS struggling to recognize files/folders, leading to difficulties with code analysis and LTM.  Suggested workarounds include restarting the app, reinstalling from the Microsoft store, and ensuring the latest version is installed.  The Pieces team is actively investigating the root causes and potential solutions.
 
 **Related Issues:**
 - [#572](https://github.com/pieces-app/support/issues/572): Pieces OS Does not recognize folders or files
-- [#564](https://github.com/pieces-app/support/issues/564): Unable to open Pieces Copilot Service
 - [#540](https://github.com/pieces-app/support/issues/540): LTM doesn't work; the copilot model by defaults not saved
+- [#561](https://github.com/pieces-app/support/issues/561): Copilot Bug: 'I'm sorry. Something went wrong with processing. Please...' copilot response
 
-### 2. Long-Term Memory (LTM) Feature Issues on Linux
-Users are experiencing issues with the Long-Term Memory (LTM) feature on Linux, particularly with Wayland. Some users report LTM not working at all, while others have issues with specific functionalities. Proposed solutions include switching to x11 as a temporary workaround, providing log files for troubleshooting, and addressing dependency failures. The Pieces team is actively investigating and working on resolving these issues.
-
-**Related Issues:**
-- [#568](https://github.com/pieces-app/support/issues/568): Long-Term Memory Feature Not Working on Linux
-- [#556](https://github.com/pieces-app/support/issues/556): Live context seems not to work on linux
-- [#540](https://github.com/pieces-app/support/issues/540): LTM doesn't work; the copilot model by defaults not saved
-
-### 3. Pieces OS Plugin Integration Issues
-Users report Pieces OS plugins, particularly for Obsidian, fail to load or function correctly.  This might involve plugin installation errors, mismatched version numbers, or issues with Pieces OS recognizing files. Troubleshooting includes updating plugins, checking console logs, and contacting Pieces support for further assistance.
-
-**Related Issues:**
-- [#574](https://github.com/pieces-app/support/issues/574): Obsidian Plugin
-- [#538](https://github.com/pieces-app/support/issues/538): Announcement: 11.0.0 POS Breaking Change - TLDR: please update all plugins
-- [#572](https://github.com/pieces-app/support/issues/572): Pieces OS Does not recognize folders or files
-
-### 4. Long-Term Memory (LTM) Feature Not Working
-Users are reporting issues with the Long-Term Memory (LTM) feature not activating or functioning as expected. This issue has been observed across different operating systems, including macOS, Windows, and Linux. The Pieces team is actively working on resolving this issue, which involves replacing the current LTM infrastructure and addressing database migration challenges. Temporary workarounds include switching to x11 on Linux and reinstalling the Pieces app. The team is also gathering logs and conducting live troubleshooting sessions to address persistent issues.
-
-**Related Issues:**
-- [#553](https://github.com/pieces-app/support/issues/553): Can't turn on Long-Term Memory
-- [#540](https://github.com/pieces-app/support/issues/540): LTM doesn't work; the copilot model by defaults not saved
-- [#568](https://github.com/pieces-app/support/issues/568): Long-Term Memory Feature Not Working on Linux
-
-### 5. Pieces OS Connection Issues in Remote Environments
-Users are experiencing difficulties connecting to Pieces OS from remote environments, particularly within Docker containers. This is often due to port access issues and changes in Pieces OS's default listening address. Solutions include upgrading to the latest Pieces OS and VS Code plugin versions, which offer automatic environment detection and eliminate the need for custom URLs.  If problems persist, contacting support for further troubleshooting is recommended.
+### 2. Pieces OS connection issues in remote environments
+Users are experiencing difficulties connecting to Pieces OS from remote environments like Docker containers and the Windsurf platform. This is often due to outdated plugin versions, changes in default listening ports, and network configuration issues. Solutions include updating to the latest plugin version, configuring Pieces OS to listen on all interfaces, and ensuring proper network connectivity between the remote environment and the Pieces OS instance.
 
 **Related Issues:**
 - [#550](https://github.com/pieces-app/support/issues/550): Seems like you are running VS Code in a remote environment (VS Code running remote docker container)
 - [#562](https://github.com/pieces-app/support/issues/562): Chrome Extension Fills Developer Console with Errors
-- [#564](https://github.com/pieces-app/support/issues/564): Unable to open Pieces Copilot Service
+- [#566](https://github.com/pieces-app/support/issues/566): Pieces Copilot not working on Windsurf
+
+### 3. Pieces OS Connection Issues
+Users are experiencing difficulties connecting to Pieces OS from remote environments and encountering errors when generating shareable links or using Copilot features. This is likely due to changes in Pieces OS versions 11.0.0 and above, affecting default listening ports and API integrations. Solutions include updating Pieces OS and extensions, configuring custom URLs, and verifying API keys.
+
+**Related Issues:**
+- [#443](https://github.com/pieces-app/support/issues/443): Unable to generate personal shareable links for 6+ months
+- [#550](https://github.com/pieces-app/support/issues/550): Seems like you are running VS Code in a remote environment (VS Code running remote docker container)
+- [#561](https://github.com/pieces-app/support/issues/561): Copilot Bug: 'I'm sorry. Something went wrong with processing. Please...' copilot response
+
+### 4. Long-Term Memory Feature Issues in Pieces OS
+Users are experiencing difficulties enabling and using the Long-Term Memory (LTM) feature in Pieces OS, particularly on Linux.  The issues include the LTM engine not activating, functionality not working as expected, and incompatibility with Wayland.  Proposed solutions and workarounds involve switching to X11, providing log files for debugging, and waiting for upcoming software updates and database migrations.
+
+**Related Issues:**
+- [#568](https://github.com/pieces-app/support/issues/568): Long-Term Memory Feature Not Working on Linux
+- [#556](https://github.com/pieces-app/support/issues/556): Live context seems not to work on linux
+- [#553](https://github.com/pieces-app/support/issues/553): Can't turn on Long-Term Memory
+
+### 5. Pieces OS and Plugin Compatibility Issues
+Users report various compatibility issues with Pieces OS, including graphics errors on Linux related to Nvidia drivers and problems with the Obsidian plugin and Long-Term Memory feature. Proposed solutions involve driver updates, switching between x11 and Wayland, setting environment variables, and ongoing troubleshooting with the development team.
+
+**Related Issues:**
+- [#565](https://github.com/pieces-app/support/issues/565): Starting error: No available configurations for the given RGBA pixel format
+- [#568](https://github.com/pieces-app/support/issues/568): Long-Term Memory Feature Not Working on Linux
+- [#574](https://github.com/pieces-app/support/issues/574): Obsidian Plugin
 
 
 ## Recommendations
-- **Prioritize LTM Issues:** Allocate resources to address the recurring issues with the Long-Term Memory (LTM) feature, particularly on Linux and with database migration challenges.
-- **Improve Plugin Integration:** Investigate and resolve issues with Pieces OS plugin integration, focusing on Obsidian and ensuring compatibility with different versions.
-- **Enhance Remote Environment Support:** Provide clearer documentation and solutions for users experiencing connection issues in remote environments, especially within Docker containers.
-- **Address File Access Problems:** Investigate and fix the root cause of Pieces OS Copilot struggling to access and read files, which leads to inaccurate code suggestions.
-- **Monitor Common Error Messages:** Analyze and address common error messages, such as "'I'm sorry. Something went wrong with processing. Please...'" and "ApiException 500: Format Metrics snapshot failed.", to improve user experience and streamline troubleshooting.
+- **Prioritize Pieces OS Functionality Issues:** Focus on resolving the root causes of Pieces OS struggling to recognize files/folders, as this significantly impacts code analysis and LTM, crucial features for the product.
+- **Address Pieces OS Connection Issues:** Investigate and resolve connection problems from remote environments like Docker and Windsurf, ensuring seamless integration for users in diverse development setups.
+- **Improve Long-Term Memory (LTM) Feature Stability:** Address issues with LTM, particularly on Linux, ensuring consistent functionality and compatibility across platforms.
+- **Enhance Plugin Compatibility and Stability:** Investigate and resolve compatibility issues with plugins like Obsidian, prioritizing those with high usage and impact on user workflows.
+- **Review and Update Documentation:** Update documentation to reflect changes in Pieces OS versions 11.0.0 and above, especially regarding default listening ports, API integrations, and remote connection setup.
+- **Monitor and Address Common Copilot Errors:** Proactively monitor and address common Copilot errors, such as the "I'm sorry. Something went wrong with processing" message, to ensure a smooth and reliable user experience.
+- **Improve Communication on Known Issues:** Provide clear and timely communication on known issues, including workarounds, estimated resolution times, and progress updates, to manage user expectations and reduce support requests.
+- **Gather Detailed Logs and System Information:** Encourage users to provide detailed logs and system information when reporting issues, enabling faster diagnosis and resolution by the support team.
+- **Consider Automated Troubleshooting Tools:** Explore the development of automated troubleshooting tools or scripts to help users resolve common issues independently, reducing the load on the support team.
+- **Collect User Feedback on Support Experience:** Implement a system for collecting user feedback on their support experience, identifying areas for improvement and enhancing overall satisfaction with support operations.
 
 ## Daily Reports
 Here are the daily reports for this week:
