@@ -1,5 +1,5 @@
 # Support Ticket Report
-- Generated: 2025-01-12 05:09:08
+- Generated: 2025-01-12 13:11:01
 - Period: 2025-01-06 to 2025-01-12
 
 ## Summary
@@ -11,64 +11,62 @@
 | Issue # | Title | Activity Level |
 |---------|-------|----------------|
 | [#550](https://github.com/pieces-app/support/issues/550) | Seems like you are running VS Code in a remote environment (VS Code running remote docker container) | 7.85 |
-| [#540](https://github.com/pieces-app/support/issues/540) | LTM doesn't work; the copilot model by defaults not saved | 6.38 |
+| [#540](https://github.com/pieces-app/support/issues/540) | LTM doesn't work; the copilot model by defaults not saved | 6.31 |
 | [#572](https://github.com/pieces-app/support/issues/572) | Pieces OS Does not recognize folders or files | 5.86 |
-| [#568](https://github.com/pieces-app/support/issues/568) | Long-Term Memory Feature Not Working on Linux | 5.38 |
+| [#568](https://github.com/pieces-app/support/issues/568) | Long-Term Memory Feature Not Working on Linux | 5.25 |
 | [#538](https://github.com/pieces-app/support/issues/538) | Announcement: 11.0.0 POS Breaking Change - TLDR: please update all plugins | 4.73 |
 
 ## Common Issues
-### 1. Pieces OS Long-Term Memory Engine Activation Issues
-Users are experiencing difficulties activating the Long-Term Memory Engine in Pieces OS. This is often due to issues with the LLM overriding saved models or problems with the Qdrant dependency. Solutions include software updates, reinstalling Pieces OS, and restoring settings from backups. The Pieces team is actively working on infrastructure upgrades to address these issues.
+### 1. Long-Term Memory (LTM) Feature Issues on Linux
+Users report LTM feature not working as expected on Linux, specifically on Wayland. Issues include feature unavailability, incorrect information from support, and dependency problems. Solutions involve bug fixes, user education on prompting LTM effectively, and ongoing investigation into dependency issues. The Pieces team is actively addressing these issues.
+
+**Related Issues:**
+- [#568](https://github.com/pieces-app/support/issues/568): Long-Term Memory Feature Not Working on Linux
+- [#556](https://github.com/pieces-app/support/issues/556): Live context seems not to work on linux
+- [#540](https://github.com/pieces-app/support/issues/540): LTM doesn't work; the copilot model by defaults not saved
+
+### 2. Long-Term Memory Engine Activation Issues
+Users are experiencing difficulties enabling the Long-Term Memory (LTM) Engine in the Pieces app. This issue appears to be related to infrastructure limitations. The Pieces team is actively working on replacing the existing infrastructure to resolve this problem. A fix is expected to be released by the end of January.
 
 **Related Issues:**
 - [#572](https://github.com/pieces-app/support/issues/572): Pieces OS Does not recognize folders or files
 - [#540](https://github.com/pieces-app/support/issues/540): LTM doesn't work; the copilot model by defaults not saved
 - [#553](https://github.com/pieces-app/support/issues/553): Can't turn on Long-Term Memory
 
-### 2. Pieces OS connectivity issues with VS Code and extensions
-Users report Pieces OS connectivity problems with VS Code and extensions due to remote environments, port changes, and networking issues. Solutions include updating to the latest extension versions, configuring custom URLs with the correct port (39300), and checking network settings. Workarounds involve manual installation from VSIX and hiding network messages in developer console.
+### 3. Pieces OS Connectivity Issues in Remote Environments
+Users are experiencing difficulties connecting to Pieces OS from remote environments, particularly Docker containers, due to networking changes. This results in connection errors and failure to access Pieces OS features. Solutions include configuring custom URLs, adjusting firewall settings, and awaiting upcoming patches that address the root cause.
 
 **Related Issues:**
 - [#550](https://github.com/pieces-app/support/issues/550): Seems like you are running VS Code in a remote environment (VS Code running remote docker container)
 - [#562](https://github.com/pieces-app/support/issues/562): Chrome Extension Fills Developer Console with Errors
-- [#566](https://github.com/pieces-app/support/issues/566): Pieces Copilot not working on Windsurf
+- [#581](https://github.com/pieces-app/support/issues/581): Unable to open Pieces Copilot Service
 
-### 3. Pieces OS and Plugin Update Issues
-Users are experiencing issues with Pieces OS and plugin updates, including software glitches, unexpected behavior like pop-ups, and difficulties with specific features like shareable links and file recognition. Solutions involve updating to the latest compatible versions, debugging with user-provided information, and planned software improvements to address the root causes.
+### 4. Raycast and Pieces OS Integration Issues
+Users report Raycast failing to connect with Pieces OS, prompting reinstallations despite being installed. This issue stems from outdated plugins and infrastructure. Solutions include updating to the latest Pieces OS and plugin versions, which incorporate hotfixes and stability improvements. If problems persist, users are advised to provide logs and software versions for further investigation.
 
 **Related Issues:**
-- [#443](https://github.com/pieces-app/support/issues/443): Unable to generate personal shareable links for 6+ months
+- [#573](https://github.com/pieces-app/support/issues/573): extension Raycast is outdated
 - [#538](https://github.com/pieces-app/support/issues/538): Announcement: 11.0.0 POS Breaking Change - TLDR: please update all plugins
-- [#572](https://github.com/pieces-app/support/issues/572): Pieces OS Does not recognize folders or files
+- [#443](https://github.com/pieces-app/support/issues/443): Unable to generate personal shareable links for 6+ months
 
-### 4. Pieces OS Linux Compatibility Issues
-Users report Pieces OS facing compatibility issues on Linux, particularly with Wayland. Errors include "No available configurations for the given RGBA pixel format" and Long-Term Memory feature malfunction. Proposed solutions involve trying different drivers, switching to X11, and using specific environment variables. Issues are under investigation.
-
-**Related Issues:**
-- [#565](https://github.com/pieces-app/support/issues/565): Starting error: No available configurations for the given RGBA pixel format
-- [#568](https://github.com/pieces-app/support/issues/568): Long-Term Memory Feature Not Working on Linux
-- [#572](https://github.com/pieces-app/support/issues/572): Pieces OS Does not recognize folders or files
-
-### 5. Pieces for Obsidian plugin installation and functionality issues
-Users report the Pieces for Obsidian plugin fails to load or recognize files, despite successful installation.  Troubleshooting includes checking for console errors, updating plugins, and ensuring compatibility between Pieces OS, plugin, and Obsidian versions. Developers are actively working on solutions and gathering information to address these issues.
+### 5. Pieces for Developers Obsidian Plugin Issues
+Users report the Pieces for Developers Obsidian plugin fails to load after installation.  Suggested workarounds, including plugin reinstallations and reviewing Obsidian logs, have proven unsuccessful.  The Pieces team is actively investigating these issues and recommends users ensure their Pieces OS and plugin versions are up to date.
 
 **Related Issues:**
 - [#574](https://github.com/pieces-app/support/issues/574): Obsidian Plugin
 - [#538](https://github.com/pieces-app/support/issues/538): Announcement: 11.0.0 POS Breaking Change - TLDR: please update all plugins
-- [#572](https://github.com/pieces-app/support/issues/572): Pieces OS Does not recognize folders or files
+- [#581](https://github.com/pieces-app/support/issues/581): Unable to open Pieces Copilot Service
 
 
 ## Recommendations
-- **Prioritize resolving Long-Term Memory Engine issues:** This appears to be a recurring and widespread problem across different operating systems and setups, impacting user experience and adoption of a key feature.
-- **Improve Pieces OS connectivity with VS Code and extensions:** Address connectivity problems stemming from remote environments, port changes, and networking issues to ensure seamless integration with a popular IDE.
-- **Investigate and resolve Pieces OS Linux compatibility issues:** Address compatibility issues on Linux, particularly with Wayland, to expand the user base and improve platform stability.
-- **Enhance Pieces OS and plugin update mechanisms:** Provide clearer communication and smoother update processes to minimize user disruption and confusion.
-- **Improve Pieces for Obsidian plugin stability and functionality:** Address plugin loading errors and file recognition problems to ensure a seamless experience for Obsidian users.
-- **Gather more detailed information on less frequent issues:** While focusing on the most common problems, systematically collect data on less frequent issues to identify potential trends and underlying causes.
-- **Consider a dedicated internal testing team or process:** Implement a robust testing process, potentially involving a dedicated team, to proactively identify and address issues before they reach users.
-- **Improve error messaging and logging:** Provide more informative error messages and detailed logs to help users and developers troubleshoot problems more effectively.
-- **Enhance documentation and support resources:** Update and expand documentation, FAQs, and troubleshooting guides to empower users with self-service solutions and reduce support requests.
-- **Analyze user feedback for emerging trends:** Regularly analyze user feedback from various channels (GitHub, Discord, etc.) to identify emerging trends and proactively address potential issues before they escalate.
+- **Prioritize LTM Issues:** Allocate additional resources to address the ongoing issues related to the Long-Term Memory (LTM) feature, specifically focusing on Linux (Wayland) compatibility and dependency problems.  This may involve assigning dedicated developers to investigate and resolve these issues.
+- **Improve Remote Environment Connectivity:** Investigate and address the connectivity issues users are experiencing when accessing Pieces OS from remote environments, such as Docker containers. This may involve reviewing networking configurations, firewall settings, and providing clearer documentation for remote access.
+- **Enhance Raycast Integration:** Address the reported issues with the Raycast plugin, ensuring compatibility with the latest Pieces OS version. This may involve collaborating with the Raycast team to expedite hotfix approvals and improve integration stability.
+- **Investigate Obsidian Plugin Issues:** Allocate resources to diagnose and resolve the problems users are encountering with the Pieces for Developers Obsidian plugin. This may involve reviewing plugin code, testing different Obsidian versions, and providing clearer troubleshooting steps for users.
+- **Improve Communication on Known Issues:**  Proactively communicate known issues and their expected resolution timelines to users, particularly for high-impact problems like LTM and remote connectivity. This could involve updating the Pieces OS support page, sending in-app notifications, or posting updates on relevant community forums.
+- **Gather Detailed User Feedback:**  Encourage users experiencing issues to provide detailed logs, software versions, and system information to aid in troubleshooting and bug fixing. This could involve simplifying the bug reporting process and providing clear instructions on how to gather relevant data.
+- **Develop Automated Tests:** Implement automated testing for critical features like LTM, remote connectivity, and plugin integrations to catch regressions and ensure stability across different environments and configurations.
+- **Review and Update Documentation:** Review and update the Pieces OS documentation to address common issues, clarify remote access instructions, and provide up-to-date information on plugin compatibility and troubleshooting steps.
 
 ## Daily Reports
 Here are the daily reports for this week:
