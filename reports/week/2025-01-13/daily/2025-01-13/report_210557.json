@@ -1,0 +1,85 @@
+{
+  "success": true,
+  "date_range": {
+    "start": "2025-01-13T00:00:00+00:00",
+    "end": "2025-01-13T21:05:57.664588+00:00"
+  },
+  "summary": {
+    "total_tickets": 2,
+    "resolved_tickets": 1,
+    "open_tickets": 1
+  },
+  "ticket_breakdown": [
+    {
+      "category": "Uncategorized",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "bug",
+      "received": 1,
+      "resolved": 1,
+      "pending": 0
+    },
+    {
+      "category": "os:windows",
+      "received": 1,
+      "resolved": 1,
+      "pending": 0
+    },
+    {
+      "category": "status:new",
+      "received": 1,
+      "resolved": 1,
+      "pending": 0
+    },
+    {
+      "category": "app:web extension",
+      "received": 1,
+      "resolved": 1,
+      "pending": 0
+    }
+  ],
+  "most_active_tickets": [
+    {
+      "number": 585,
+      "title": "Failed to load resource: net::ERR_CONNECTION_REFUSED     http://127.0.0.1:1000/.well-known/health",
+      "activity_level": 5.68
+    },
+    {
+      "number": 586,
+      "title": "Pieces plugin for UltraEdit is unresponsive after asking copilot to describe ~3000 line .py script",
+      "activity_level": 3.15
+    }
+  ],
+  "common_issues": [
+    {
+      "title": "Pieces plugin and extension unresponsive",
+      "description": "Pieces desktop and browser extension users are experiencing unresponsiveness and errors when analyzing large code files. This is potentially due to heavy resource consumption during processing.  The issue appears to be resolved in later releases.",
+      "frequency": 2,
+      "related_issues": [
+        {
+          "id": 586,
+          "title": "Pieces plugin for UltraEdit is unresponsive after asking copilot to describe ~3000 line .py script",
+          "text": "Pieces plugin for UltraEdit is unresponsive after asking copilot to describe ~3000 line .py script\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.0.3\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nIn UltraEdit I opened the python script available at https://github.com/eldraco/domain_analyzer/blob/master/domain_analyzer.py. I opened the Pieces plugin and using default settings prompted it to describe the script: \"What does this Python script do?\" The UE plugin never returns any content and seems to be unresponsive. \n\nIn Pieces Desktop, I do see the result, however interaction with it is latent indicating some sort of continual background processing even though the LLM has completed processing. Additionally, there seem to be significant scroll issues, and the code view doesn't appear to be calculating line numbers correctly, showing many empty lines after line 1,918, when line 2,837 is the last line in the file.\n\nFinally, the Pieces Desktop code view shows a wrap in the line number margin.\n\n![Image](https://github.com/user-attachments/assets/9be69032-f2e2-4379-843c-cd0bf14da63a)\nNo comments found on this issue.",
+          "activity_level": 3.15
+        },
+        {
+          "id": 585,
+          "title": "Failed to load resource: net::ERR_CONNECTION_REFUSED     http://127.0.0.1:1000/.well-known/health",
+          "text": "Failed to load resource: net::ERR_CONNECTION_REFUSED     http://127.0.0.1:1000/.well-known/health\n### Software\n\nWeb Extension\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.0.3\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nChrome browser slows to a crawl while hundreds of these errors are issued:\nFailed to load resource: net::ERR_CONNECTION_REFUSED     http://127.0.0.1:1000/.well-known/health   \n\nDisabling the extension stops it, re-enabling invokes it again\n## GitHub Issue Summary\n\n**Issue:** Chrome Extension fills Developer Console with Errors\n\n**Key Points:**\n\n* User reported Chrome Extension filling Developer Console with errors.\n* User was directed to related issues and helpful resources by the bot.\n* Support agent confirmed the issue was a duplicate of another reported issue.\n\n**Problems Identified:**\n\n* Developer Console filled with errors caused by the Chrome Extension.\n\n**Solutions Proposed/Implemented:**\n\n* The issue was marked as a duplicate of another reported issue.\n* The other issue (#562) was addressed in an upcoming release of the extension.\n\n**Current Status/Outcome:**\n\n* The issue has been fixed in the latest release of the extension.\n\n**Additional Information:**\n\n* The issue was automatically triaged and routed to the appropriate team member.\n* The user was notified via email when the issue was closed.",
+          "activity_level": 5.68
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    "**Investigate and address the root cause of the 'Pieces plugin and extension unresponsive' issue:** This appears to be a critical issue affecting multiple users, potentially leading to performance problems and errors. Prioritize resolving the underlying resource consumption problem.",
+    "**Review and improve error messaging for 'Failed to load resource: net::ERR_CONNECTION_REFUSED':** The error message is very technical and doesn't provide clear guidance to the user. Consider providing more user-friendly messages with potential solutions.",
+    "**Monitor the effectiveness of the fix for issue #562:** Ensure that the fix effectively addresses the 'Failed to load resource' error and doesn't introduce new problems. Track user feedback and monitor error logs for any recurrence.",
+    "**Consider creating a dedicated troubleshooting guide for common issues:** This would empower users to self-resolve problems and potentially reduce the support ticket volume. Include step-by-step instructions and clear explanations for issues like the unresponsive plugin and the 'Failed to load resource' error.",
+    "**Analyze ticket categories to identify trends and areas for improvement:**  For example, the 'Uncategorized' category having pending tickets suggests potential improvements in the ticket categorization process or agent training on proper categorization. "
+  ],
+  "message": "Daily support report generated successfully."
+}
