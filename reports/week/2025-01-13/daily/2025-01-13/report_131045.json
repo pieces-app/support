@@ -1,0 +1,49 @@
+{
+  "success": true,
+  "date_range": {
+    "start": "2025-01-13T00:00:00+00:00",
+    "end": "2025-01-13T13:10:45.852341+00:00"
+  },
+  "summary": {
+    "total_tickets": 1,
+    "resolved_tickets": 0,
+    "open_tickets": 1
+  },
+  "ticket_breakdown": [
+    {
+      "category": "Uncategorized",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    }
+  ],
+  "most_active_tickets": [
+    {
+      "number": 585,
+      "title": "Failed to load resource: net::ERR_CONNECTION_REFUSED     http://127.0.0.1:1000/.well-known/health",
+      "activity_level": 3.15
+    }
+  ],
+  "common_issues": [
+    {
+      "title": "Extension causes \"ERR_CONNECTION_REFUSED\" errors",
+      "description": "The web extension repeatedly attempts to access \"http://127.0.0.1:1000/.well-known/health\", leading to \"ERR_CONNECTION_REFUSED\" errors when there's no service listening at that address. This causes Chrome performance issues. Disabling and re-enabling the extension temporarily resolves the problem. The root cause appears to be within the extension's code.",
+      "frequency": 1,
+      "related_issues": [
+        {
+          "id": 585,
+          "title": "Failed to load resource: net::ERR_CONNECTION_REFUSED     http://127.0.0.1:1000/.well-known/health",
+          "text": "Failed to load resource: net::ERR_CONNECTION_REFUSED     http://127.0.0.1:1000/.well-known/health\n### Software\n\nWeb Extension\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.0.3\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nChrome browser slows to a crawl while hundreds of these errors are issued:\nFailed to load resource: net::ERR_CONNECTION_REFUSED     http://127.0.0.1:1000/.well-known/health   \n\nDisabling the extension stops it, re-enabling invokes it again\nNo comments found on this issue.",
+          "activity_level": 3.15
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    "**Investigate and address the root cause of the \"ERR_CONNECTION_REFUSED\" error:** This issue appears to be impacting users significantly and causing performance problems. Prioritize identifying why the extension is repeatedly trying to access the unresponsive address.",
+    "**Improve error handling and messaging within the extension:** Provide more user-friendly error messages that clearly explain the problem and potential solutions. Consider implementing a retry mechanism or a way to gracefully handle the connection failure.",
+    "**Categorize support tickets:** With a higher volume of tickets, assigning categories will help with prioritization and routing to the appropriate teams or individuals.",
+    "**Consider creating a dedicated FAQ or troubleshooting guide:**  Address the \"ERR_CONNECTION_REFUSED\" error with potential workarounds or solutions to help users self-serve and reduce ticket volume."
+  ],
+  "message": "Daily support report generated successfully."
+}

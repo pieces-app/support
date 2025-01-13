@@ -1,0 +1,50 @@
+{
+  "success": true,
+  "date_range": {
+    "start": "2025-01-13T00:00:00+00:00",
+    "end": "2025-01-13T13:10:58.278401+00:00"
+  },
+  "summary": {
+    "total_tickets": 1,
+    "resolved_tickets": 0,
+    "open_tickets": 1
+  },
+  "ticket_breakdown": [
+    {
+      "category": "Uncategorized",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    }
+  ],
+  "most_active_tickets": [
+    {
+      "number": 585,
+      "title": "Failed to load resource: net::ERR_CONNECTION_REFUSED     http://127.0.0.1:1000/.well-known/health",
+      "activity_level": 3.15
+    }
+  ],
+  "common_issues": [
+    {
+      "title": "Extension causes browser slowdown with connection refused errors",
+      "description": "Users experience significant browser slowdown when a specific web extension is enabled. The browser console logs numerous \"ERR_CONNECTION_REFUSED\" errors pointing to \"http://127.0.0.1:1000/.well-known/health\". Disabling the extension resolves the issue. This pattern suggests the extension repeatedly attempts to connect to a local service on port 1000 that is either unresponsive or inaccessible.",
+      "frequency": 1,
+      "related_issues": [
+        {
+          "id": 585,
+          "title": "Failed to load resource: net::ERR_CONNECTION_REFUSED     http://127.0.0.1:1000/.well-known/health",
+          "text": "Failed to load resource: net::ERR_CONNECTION_REFUSED     http://127.0.0.1:1000/.well-known/health\n### Software\n\nWeb Extension\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.0.3\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nChrome browser slows to a crawl while hundreds of these errors are issued:\nFailed to load resource: net::ERR_CONNECTION_REFUSED     http://127.0.0.1:1000/.well-known/health   \n\nDisabling the extension stops it, re-enabling invokes it again\nNo comments found on this issue.",
+          "activity_level": 3.15
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    "**Investigate and address the root cause of the 'ERR_CONNECTION_REFUSED' error:** This issue is causing significant browser slowdown and user frustration. Identify why the extension is repeatedly trying to connect to 'http://127.0.0.1:1000/.well-known/health' and resolve the underlying problem.",
+    "**Improve error handling and messaging within the extension:** Provide more user-friendly error messages that clearly explain the problem and potential solutions. Consider adding retry logic or a fallback mechanism to handle connection failures gracefully.",
+    "**Develop a process for categorizing support tickets:** This will help to identify trends and prioritize issues more effectively.  Create clear categories and train support staff on how to use them.",
+    "**Consider creating a dedicated knowledge base article or FAQ entry:** Address the 'ERR_CONNECTION_REFUSED' error. This will empower users to troubleshoot the issue themselves and potentially reduce the number of incoming support tickets.",
+    "**Monitor the effectiveness of these recommendations:** Track the number of tickets related to this issue over time to assess the impact of the implemented changes. "
+  ],
+  "message": "Daily support report generated successfully."
+}
