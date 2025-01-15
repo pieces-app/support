@@ -2,7 +2,7 @@
   "success": true,
   "date_range": {
     "start": "2025-01-13T00:00:00+00:00",
-    "end": "2025-01-15T05:06:37.815290+00:00"
+    "end": "2025-01-15T13:09:49.146675+00:00"
   },
   "summary": {
     "total_tickets": 6,
@@ -14,6 +14,30 @@
       "category": "bug",
       "received": 5,
       "resolved": 2,
+      "pending": 3
+    },
+    {
+      "category": "os:windows",
+      "received": 2,
+      "resolved": 1,
+      "pending": 1
+    },
+    {
+      "category": "app:desktop application",
+      "received": 3,
+      "resolved": 1,
+      "pending": 2
+    },
+    {
+      "category": "app:cli",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:triaged",
+      "received": 4,
+      "resolved": 1,
       "pending": 3
     },
     {
@@ -29,22 +53,10 @@
       "pending": 2
     },
     {
-      "category": "status:triaged",
-      "received": 4,
-      "resolved": 1,
-      "pending": 3
-    },
-    {
       "category": "resolved",
       "received": 1,
       "resolved": 1,
       "pending": 0
-    },
-    {
-      "category": "app:desktop application",
-      "received": 3,
-      "resolved": 1,
-      "pending": 2
     },
     {
       "category": "os:macos",
@@ -60,18 +72,6 @@
     },
     {
       "category": "ongoing",
-      "received": 1,
-      "resolved": 0,
-      "pending": 1
-    },
-    {
-      "category": "os:windows",
-      "received": 2,
-      "resolved": 1,
-      "pending": 1
-    },
-    {
-      "category": "app:cli",
       "received": 1,
       "resolved": 0,
       "pending": 1
@@ -98,12 +98,7 @@
     {
       "number": 586,
       "title": "Pieces plugin for UltraEdit is unresponsive after asking copilot to describe ~3000 line .py script",
-      "activity_level": 4.5
-    },
-    {
-      "number": 585,
-      "title": "Failed to load resource: net::ERR_CONNECTION_REFUSED     http://127.0.0.1:1000/.well-known/health",
-      "activity_level": 4.5
+      "activity_level": 5.5
     },
     {
       "number": 561,
@@ -116,6 +111,11 @@
       "activity_level": 4.48
     },
     {
+      "number": 585,
+      "title": "Failed to load resource: net::ERR_CONNECTION_REFUSED     http://127.0.0.1:1000/.well-known/health",
+      "activity_level": 3.88
+    },
+    {
       "number": 584,
       "title": "Copilot is not giving any feedback",
       "activity_level": 3.5
@@ -123,87 +123,87 @@
   ],
   "common_issues": [
     {
-      "title": "Connection Issues with Pieces OS",
-      "description": "Users are experiencing difficulties connecting to Pieces OS from various platforms, including VS Code remote environments and web extensions. This is often due to changes in Pieces OS network configurations or issues with API calls. Solutions include updating to the latest Pieces OS and extension versions, configuring network settings, and using alternative connection methods.",
+      "title": "Pieces OS connection and performance issues",
+      "description": "Users report connection issues with Pieces OS from remote environments like Docker, often due to server listening interface changes. Workarounds include custom URLs and configuration. High RAM and CPU usage is another concern, potentially linked to Live Context. Mitigation involves disabling the feature or restarting Pieces OS while optimizations are underway.",
       "frequency": 3,
       "related_issues": [
         {
           "id": 550,
           "title": "Seems like you are running VS Code in a remote environment (VS Code running remote docker container)",
-          "text": "Seems like you are running VS Code in a remote environment (VS Code running remote docker container)\n### Software\n\nVS Code\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n11.02\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI'm having the same problem as this: https://github.com/pieces-app/support/issues/269\n\nUsing VS Code project within a docker container and getting this message:\n\n> Woops! It seems like you are running VS Code in a remote environment & Pieces for VS Code cannot connect to Pieces OS. Please refer to our documentation on how to resolve this issue.\n\n![Image](https://github.com/user-attachments/assets/ffeb53fd-0787-4bc2-9faf-c5f3d179294b)\n\nPieces OS version:\n\n![Image](https://github.com/user-attachments/assets/640d35af-6106-4717-9269-c51205ff23fb)\n\nI followed this guide but with no luck: https://docs.pieces.app/product-highlights-and-benefits/connecting-to-a-remote-pieces-os-instance\n\nLAN IP:\n\n<img width=\"567\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/1dfb849d-0764-4ae0-801c-c55f9b3e5d7e\" />\n\nVS Code settings, pieces custom URL:\n\n![Image](https://github.com/user-attachments/assets/aaed7eb8-36e7-49cb-b6e0-84271adb8027)\n\nWhat else can I try?\n\nThanks!\n\n## Summary of GitHub Issue Conversation\n\n**Key Points Raised:**\n\n* Malanciault encountered an error message when trying to connect to Pieces OS from a VSCode DevContainer.\n* The error persisted even without a project opened in VSCode.\n* Remote projects failed to connect while non-remote projects functioned as expected.\n\n**Problems Identified:**\n\n* The Pieces Server's default listening interface changed to loopback in version 11.0.0, preventing remote connections.\n* Docker's `host.docker.internal` resolution did not work with Pieces OS webview tool windows.\n\n**Solutions Proposed/Implemented:**\n\n* Issue a patch to allow Pieces Server to listen on all interfaces. \n* A patch was implemented and released as version 2.0.2 of the Pieces for VSCode extension.\n\n**Current Status/Outcome:**\n\n* The issue is resolved with the updated extension version.\n\n**Additional Notes:**\n\n* A temporary workaround was suggested involving DNS configuration, but was no longer necessary with the patch.\n* A video call was considered to further troubleshoot the issue before the patch was released.",
+          "text": "Seems like you are running VS Code in a remote environment (VS Code running remote docker container)\n### Software\n\nVS Code\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n11.02\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI'm having the same problem as this: https://github.com/pieces-app/support/issues/269\n\nUsing VS Code project within a docker container and getting this message:\n\n> Woops! It seems like you are running VS Code in a remote environment & Pieces for VS Code cannot connect to Pieces OS. Please refer to our documentation on how to resolve this issue.\n\n![Image](https://github.com/user-attachments/assets/ffeb53fd-0787-4bc2-9faf-c5f3d179294b)\n\nPieces OS version:\n\n![Image](https://github.com/user-attachments/assets/640d35af-6106-4717-9269-c51205ff23fb)\n\nI followed this guide but with no luck: https://docs.pieces.app/product-highlights-and-benefits/connecting-to-a-remote-pieces-os-instance\n\nLAN IP:\n\n<img width=\"567\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/1dfb849d-0764-4ae0-801c-c55f9b3e5d7e\" />\n\nVS Code settings, pieces custom URL:\n\n![Image](https://github.com/user-attachments/assets/aaed7eb8-36e7-49cb-b6e0-84271adb8027)\n\nWhat else can I try?\n\nThanks!\n\n## Summary of GitHub Issue Conversation\n\n**Key Points Raised:**\n\n* @malanciault reported an issue where they were unable to connect to Pieces OS from VSCode, even with no project open.\n* This issue persisted even after attempting to connect using the custom URL `http://192.168.0.129:39300`.\n* The issue appeared to be specific to remote projects hosted in Docker.\n* Initial troubleshooting suggested the problem might be related to the Pieces documentation being outdated regarding the default port used by Pieces OS.\n* Further investigation revealed that changes in the latest Pieces OS release related to security resulted in the server listening only on the loopback interface by default.\n* This caused issues for remote connections from DevContainers, as they could not access the server on the loopback interface.\n* As a workaround, a complex configuration involving a custom DNS entry and hosts file modifications was suggested.\n* A patch was planned to allow changing the server's listening interface.\n* The Pieces for VSCode extension was updated to address the issue and allow for automatic detection of Pieces OS without a custom URL.\n\n**Problems Identified:**\n\n* Outdated documentation regarding the default port used by Pieces OS.\n* Change in server behavior in the latest Pieces OS release causing connection issues for remote clients.\n* Inability of the webview tool windows to resolve the `host.docker.internal` address.\n\n**Proposed/Implemented Solutions:**\n\n* Provide updated documentation with the correct default port information.\n* Patch the server to allow listening on all interfaces.\n* Update the VSCode extension to automatically detect Pieces OS and remove the need for a custom URL.\n\n**Current Status/Outcome:**\n\n* The issue has been resolved in the Pieces for VSCode extension version 2.0.2.\n* Users should update the extension and remove the custom URL to resolve the connection issue.\n\n**Additional Notes:**\n\n* The conversation highlights the importance of clear documentation and communication of changes in software releases.\n* It also showcases the collaborative effort between the Pieces team and users to identify and resolve issues.",
           "activity_level": 8.4
         },
         {
           "id": 585,
           "title": "Failed to load resource: net::ERR_CONNECTION_REFUSED     http://127.0.0.1:1000/.well-known/health",
-          "text": "Failed to load resource: net::ERR_CONNECTION_REFUSED     http://127.0.0.1:1000/.well-known/health\n### Software\n\nWeb Extension\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.0.3\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nChrome browser slows to a crawl while hundreds of these errors are issued:\nFailed to load resource: net::ERR_CONNECTION_REFUSED     http://127.0.0.1:1000/.well-known/health   \n\nDisabling the extension stops it, re-enabling invokes it again\n## GitHub Issue Summary\n\n**Key Points Raised:**\n\n* Developer console filled with errors after Chrome extension update (user: SteveW555)\n\n**Problems Identified:**\n\n* Issue similar to https://github.com/pieces-app/support/issues/562\n* Related to multiple well-known/health api calls during reload\n\n**Solutions Proposed/Implemented:**\n\n* Fix will be included in the upcoming release of the Chrome extension (by rutvik-at-pieces)\n\n**Current Status/Outcome:**\n\n* Issue closed as duplicate of https://github.com/pieces-app/support/issues/562\n* Fix expected to be available in the next day or two",
-          "activity_level": 4.5
+          "text": "Failed to load resource: net::ERR_CONNECTION_REFUSED     http://127.0.0.1:1000/.well-known/health\n### Software\n\nWeb Extension\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.0.3\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nChrome browser slows to a crawl while hundreds of these errors are issued:\nFailed to load resource: net::ERR_CONNECTION_REFUSED     http://127.0.0.1:1000/.well-known/health   \n\nDisabling the extension stops it, re-enabling invokes it again\n## Summary of GitHub Issue Conversation\n\n**Key Points Raised:**\n\n* SteveW555 reported an issue where the Chrome extension fills the developer console with errors.\n\n**Problems Identified:**\n\n* The issue is duplicated with [Multiple well-known/health api call during reload](https://github.com/pieces-app/support/issues/569) and [Chrome Extension Fills Developer Console with Errors](https://github.com/pieces-app/support/issues/562).\n\n**Solutions Proposed/Implemented:**\n\n* The bug will be fixed in the upcoming release of the extension, scheduled for today or within the next one to two days.\n\n**Current Status/Outcome:**\n\n* The issue is closed as a duplicate of [Chrome Extension Fills Developer Console with Errors](https://github.com/pieces-app/support/issues/562). The fix will be included in the upcoming extension release.",
+          "activity_level": 3.88
         },
-        {
-          "id": 561,
-          "title": "Copilot Bug: 'I'm sorry. Something went wrong with processing. Please...' copilot response",
-          "text": "Copilot Bug: 'I'm sorry. Something went wrong with processing. Please...' copilot response\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.0.3\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nhi i have been using it for 2 days but for the last 2 hours the desktop and visual studio extension are not working. \n\nNo matter what I type, it gives me this error. There was an update message for the app, it was about installing a version, I installed it but it didn't fix it.\nalways the same message \nvisual studio ide 2022 17.12 \nwindows 10 pro\n![Image](https://github.com/user-attachments/assets/c64d85bd-eb1a-4f1c-a25e-570c9a55ccd1)\n![Image](https://github.com/user-attachments/assets/55b600a6-95f4-4e71-aee1-1b1ce8b6599c)\n\n\n## GitHub Issue Conversation Summary\n\n**Key Points Raised:**\n\n* Users are experiencing issues with OpenAI models (Claude and Gemini) not functioning properly.\n* These issues seem to be affecting both the GPT-3.5 and Claude models.\n\n**Problems Identified:**\n\n* Some users' OpenAI API keys are becoming invalidated over time.\n* There appears to be an issue with the integration between OpenAI models and Pieces that is causing failures.\n\n**Solutions Proposed/Implemented:**\n\n* **For OpenAI API key invalidation issue:**\n    * Remove the OpenAI API key from Pieces and attempt to use without it.\n    * Update Pieces to version 11.0.3.\n    * Sign in to Pieces to access a higher rate limit.\n    * If issues persist, use an OpenAI model instead of Claude or Gemini.\n* **For integration issue:**\n    * Investigated and addressed by the Pieces team.\n\n**Current Status/Outcome:**\n\n* Investigating and fixing the integration issue is ongoing.\n* Users are advised to use OpenAI models temporarily until the issue is resolved.\n* Users who can operate without an OpenAI API key are advised to do so to avoid potential failures.\n\n**Overall:**\n\nThe Pieces team is aware of the issues and actively working on solutions. Users are encouraged to follow the proposed workarounds and report any further problems they encounter.",
-          "activity_level": 4.48
-        }
-      ]
-    },
-    {
-      "title": "Copilot and plugin unresponsiveness, errors",
-      "description": "Users report Copilot unresponsiveness, errors, and processing issues across platforms. Solutions include using specific PiecesOS versions (11.0.3, 11.0.4), signing into Pieces, avoiding OpenAI API keys, and waiting for bug fixes. Issues with context, line numbers, and scrolling are being investigated.",
-      "frequency": 3,
-      "related_issues": [
-        {
-          "id": 561,
-          "title": "Copilot Bug: 'I'm sorry. Something went wrong with processing. Please...' copilot response",
-          "text": "Copilot Bug: 'I'm sorry. Something went wrong with processing. Please...' copilot response\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.0.3\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nhi i have been using it for 2 days but for the last 2 hours the desktop and visual studio extension are not working. \n\nNo matter what I type, it gives me this error. There was an update message for the app, it was about installing a version, I installed it but it didn't fix it.\nalways the same message \nvisual studio ide 2022 17.12 \nwindows 10 pro\n![Image](https://github.com/user-attachments/assets/c64d85bd-eb1a-4f1c-a25e-570c9a55ccd1)\n![Image](https://github.com/user-attachments/assets/55b600a6-95f4-4e71-aee1-1b1ce8b6599c)\n\n\n## GitHub Issue Conversation Summary\n\n**Key Points Raised:**\n\n* Users are experiencing issues with OpenAI models (Claude and Gemini) not functioning properly.\n* These issues seem to be affecting both the GPT-3.5 and Claude models.\n\n**Problems Identified:**\n\n* Some users' OpenAI API keys are becoming invalidated over time.\n* There appears to be an issue with the integration between OpenAI models and Pieces that is causing failures.\n\n**Solutions Proposed/Implemented:**\n\n* **For OpenAI API key invalidation issue:**\n    * Remove the OpenAI API key from Pieces and attempt to use without it.\n    * Update Pieces to version 11.0.3.\n    * Sign in to Pieces to access a higher rate limit.\n    * If issues persist, use an OpenAI model instead of Claude or Gemini.\n* **For integration issue:**\n    * Investigated and addressed by the Pieces team.\n\n**Current Status/Outcome:**\n\n* Investigating and fixing the integration issue is ongoing.\n* Users are advised to use OpenAI models temporarily until the issue is resolved.\n* Users who can operate without an OpenAI API key are advised to do so to avoid potential failures.\n\n**Overall:**\n\nThe Pieces team is aware of the issues and actively working on solutions. Users are encouraged to follow the proposed workarounds and report any further problems they encounter.",
-          "activity_level": 4.48
-        },
-        {
-          "id": 584,
-          "title": "Copilot is not giving any feedback",
-          "text": "Copilot is not giving any feedback\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\nPieces for Developers 3.3.3\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nThe copilot is not generating anything, it just keeps on loading.\n## GitHub Issue Summary\n\n**Key Points:**\n\n* User @gittydia reported an issue with Copilot response saying \"I'm sorry, something went wrong with the processing...\"\n* Pieces support bot automatically triaged the issue and responded with related issues and resources.\n* Mark-at-pieces, a Pieces team member, stated that a fix is expected in the upcoming PiecesOS release 11.0.4.\n\n**Problems identified:**\n\n* Copilot response error message: \"I'm sorry, something went wrong with the processing...\"\n\n**Solutions proposed/implemented:**\n\n* Fix for the issue is included in the upcoming PiecesOS release 11.0.4.\n\n**Current status/outcome:**\n\n* Fix is expected to be released with PiecesOS 11.0.4. User is requested to report back if the issue persists after the update.",
-          "activity_level": 3.5
-        },
-        {
-          "id": 586,
-          "title": "Pieces plugin for UltraEdit is unresponsive after asking copilot to describe ~3000 line .py script",
-          "text": "Pieces plugin for UltraEdit is unresponsive after asking copilot to describe ~3000 line .py script\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.0.3\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nIn UltraEdit I opened the python script available at https://github.com/eldraco/domain_analyzer/blob/master/domain_analyzer.py. I opened the Pieces plugin and using default settings prompted it to describe the script: \"What does this Python script do?\" The UE plugin never returns any content and seems to be unresponsive. \n\nIn Pieces Desktop, I do see the result, however interaction with it is latent indicating some sort of continual background processing even though the LLM has completed processing. Additionally, there seem to be significant scroll issues, and the code view doesn't appear to be calculating line numbers correctly, showing many empty lines after line 1,918, when line 2,837 is the last line in the file.\n\nFinally, the Pieces Desktop code view shows a wrap in the line number margin.\n\n![Image](https://github.com/user-attachments/assets/9be69032-f2e2-4379-843c-cd0bf14da63a)\n## GitHub Issue Summary\n\n**Issue:** \nProblems with context and line number wrapping in Pieces with Gemini 1.5 flash and gpt4o.\n\n**Key Points:**\n\n* User @bschwenk reported issues with context and line number wrapping while using Pieces with Gemini 1.5 flash and gpt4o.\n* @mark-at-pieces confirmed the issue and started investigating.\n* @sam-at-pieces was requested to assist with testing.\n* @mack-at-pieces was asked to look into the line number wrapping issue.\n\n**Solutions:**\n\n* Investigate and resolve the context issue, causing the system to request the file despite having been downloaded.\n* Fix the line number wrapping issue.\n\n**Current Status:**\n\n* Both issues are being investigated and are expected to be resolved in the next patch.\n\n**Outcome:**\n\n* The problems with context and line number wrapping will be fixed with the next patch, improving the user experience with Pieces.",
-          "activity_level": 4.5
-        }
-      ]
-    },
-    {
-      "title": "PiecesOS Performance Issues",
-      "description": "Users report high RAM/CPU usage, especially with Live Context. Short-term fix: restart PiecesOS. Long-term: devs optimizing resource consumption, suggest turning off Live Context.",
-      "frequency": 3,
-      "related_issues": [
         {
           "id": 150,
           "title": "PiecesOS using too much RAM/spike in CPU",
-          "text": "PiecesOS using too much RAM/spike in CPU\nSeveral users have called in recently about Pieces using too much RAM or causing a spike in CPU up to 100%. We are trying to track down this issue, and would appreciate any feedback about your experience with this if you are experiencing it. \r\n\r\nWe have a hunch it has something to do with internet connections, but aren't fully sure yet. \r\n\r\nIf you're experiencing this and wouldn't mind hopping on a call with us to show us, we would really appreciate it to help us troubleshoot! You can schedule a call [here](https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2iaRWpd1kA2k_xg2KrVi_jiTHo0POiMZSI9WAYsxs5jJ9sU2Rd2zKitLuSFd7l3FhatGzy5Vgt\r\n). \r\n\r\nA short-term solution is to restart PiecesOS whenever this occurs. \n## Summary of GitHub issue conversation: Pieces OS high memory and CPU usage\n\n**Key Points:**\n\n* Several users report high memory and CPU usage by PiecesOS, particularly when using the Live Context feature.\n* Memory usage can reach up to 5 GB in some cases.\n* CPU usage can lead to system slowdown.\n\n**Problems Identified:**\n\n* **High memory consumption:** PiecesOS uses a significant amount of RAM, impacting system performance.\n* **CPU spikes:** Background processes cause sudden and high CPU usage.\n\n**Solutions Proposed/Implemented:**\n\n* **Live Context optimization:** Turning off the Live Context feature may reduce memory usage.\n* **Memory optimization tool:** PiecesOS offers an \"Optimize Memory\" option to free up RAM.\n* **Ongoing improvements:** The Pieces team is actively working on optimizing resource consumption.\n\n**Current Status/Outcome:**\n\n* The issue remains ongoing, and some users have opted to stop using PiecesOS due to performance concerns.\n* Further improvements and optimizations are expected.\n\n**Additional Notes:**\n\n* High resource usage is attributed to on-device ML processing.\n* The Pieces team encourages users experiencing excessive resource usage to contact them for troubleshooting.\n\n**Next Steps:**\n\n* Monitor future updates from the Pieces team regarding performance improvements.\n* Consider using alternative tools or workflows that are less resource-intensive.",
+          "text": "PiecesOS using too much RAM/spike in CPU\nSeveral users have called in recently about Pieces using too much RAM or causing a spike in CPU up to 100%. We are trying to track down this issue, and would appreciate any feedback about your experience with this if you are experiencing it. \r\n\r\nWe have a hunch it has something to do with internet connections, but aren't fully sure yet. \r\n\r\nIf you're experiencing this and wouldn't mind hopping on a call with us to show us, we would really appreciate it to help us troubleshoot! You can schedule a call [here](https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2iaRWpd1kA2k_xg2KrVi_jiTHo0POiMZSI9WAYsxs5jJ9sU2Rd2zKitLuSFd7l3FhatGzy5Vgt\r\n). \r\n\r\nA short-term solution is to restart PiecesOS whenever this occurs. \n## Summary of GitHub Issue Conversation on Pieces OS High Memory Usage\n\n**Key Points Raised:**\n\n* Pieces OS, a local server for Pieces suite, consumes high memory and sometimes even CPU resources.\n* Memory usage can exceed 2GB even with no models installed, causing performance issues.\n* Live Context feature seems to contribute to the increased resource consumption.\n\n**Problems Identified:**\n\n* High RAM and CPU usage impacting overall system performance.\n* Users have to disable Pieces OS to prevent slowdown.\n* Memory leak suspected.\n\n**Solutions Proposed/Implemented:**\n\n* Turning off Live Context feature to reduce RAM usage.\n* \"Optimize Memory\" option to free up some RAM.\n* Working on improvements for better performance.\n* Offering individual support to diagnose and resolve issues.\n\n**Current Status/Outcome:**\n\n* Issue still ongoing with no fixed timeline for complete resolution.\n* Some users have stopped using Pieces due to high resource demands.\n\n**Notes:**\n\n* Pieces OS acknowledges the challenges of building on-device ML with limitations on resource consumption.\n* They are actively working on improvements and appreciate users' patience.\n\n**Additional Points:**\n\n* Issue has been ongoing since April 2024 and is still relevant as of November 2024.\n* Users have reported the issue on different operating systems, including Windows, Linux, and MacOS.",
           "activity_level": 4.48
-        },
+        }
+      ]
+    },
+    {
+      "title": "Pieces performance issues and errors",
+      "description": "Users report Pieces being unresponsive, using excessive RAM, and displaying errors. This occurs when analyzing large codebases or using features like Copilot. Proposed solutions include restarting Pieces, disabling Live Context, and waiting for updates addressing memory leaks and performance optimization.",
+      "frequency": 3,
+      "related_issues": [
         {
           "id": 586,
           "title": "Pieces plugin for UltraEdit is unresponsive after asking copilot to describe ~3000 line .py script",
-          "text": "Pieces plugin for UltraEdit is unresponsive after asking copilot to describe ~3000 line .py script\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.0.3\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nIn UltraEdit I opened the python script available at https://github.com/eldraco/domain_analyzer/blob/master/domain_analyzer.py. I opened the Pieces plugin and using default settings prompted it to describe the script: \"What does this Python script do?\" The UE plugin never returns any content and seems to be unresponsive. \n\nIn Pieces Desktop, I do see the result, however interaction with it is latent indicating some sort of continual background processing even though the LLM has completed processing. Additionally, there seem to be significant scroll issues, and the code view doesn't appear to be calculating line numbers correctly, showing many empty lines after line 1,918, when line 2,837 is the last line in the file.\n\nFinally, the Pieces Desktop code view shows a wrap in the line number margin.\n\n![Image](https://github.com/user-attachments/assets/9be69032-f2e2-4379-843c-cd0bf14da63a)\n## GitHub Issue Summary\n\n**Issue:** \nProblems with context and line number wrapping in Pieces with Gemini 1.5 flash and gpt4o.\n\n**Key Points:**\n\n* User @bschwenk reported issues with context and line number wrapping while using Pieces with Gemini 1.5 flash and gpt4o.\n* @mark-at-pieces confirmed the issue and started investigating.\n* @sam-at-pieces was requested to assist with testing.\n* @mack-at-pieces was asked to look into the line number wrapping issue.\n\n**Solutions:**\n\n* Investigate and resolve the context issue, causing the system to request the file despite having been downloaded.\n* Fix the line number wrapping issue.\n\n**Current Status:**\n\n* Both issues are being investigated and are expected to be resolved in the next patch.\n\n**Outcome:**\n\n* The problems with context and line number wrapping will be fixed with the next patch, improving the user experience with Pieces.",
-          "activity_level": 4.5
+          "text": "Pieces plugin for UltraEdit is unresponsive after asking copilot to describe ~3000 line .py script\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.0.3\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nIn UltraEdit I opened the python script available at https://github.com/eldraco/domain_analyzer/blob/master/domain_analyzer.py. I opened the Pieces plugin and using default settings prompted it to describe the script: \"What does this Python script do?\" The UE plugin never returns any content and seems to be unresponsive. \n\nIn Pieces Desktop, I do see the result, however interaction with it is latent indicating some sort of continual background processing even though the LLM has completed processing. Additionally, there seem to be significant scroll issues, and the code view doesn't appear to be calculating line numbers correctly, showing many empty lines after line 1,918, when line 2,837 is the last line in the file.\n\nFinally, the Pieces Desktop code view shows a wrap in the line number margin.\n\n![Image](https://github.com/user-attachments/assets/9be69032-f2e2-4379-843c-cd0bf14da63a)\n## GitHub Issue Summary\n\n**Key Points:**\n\n* User @bschwenk reported an issue with context and line number wrapping in Gemini 1.5 flash and gpt4o. \n* The issue appears specific to a file downloaded by the user. \n\n**Problems Identified:**\n\n1. **Context Issue:** The file is not getting included in the context, causing Gemini to request the file again. \n2. **Line Number Wrapping:** Line numbers are wrapping incorrectly. \n\n**Solutions Proposed/Implemented:**\n\n* @mark-at-pieces and @sam-at-pieces are investigating and working on a fix for the context issue. \n* The fix is expected to be included in the next release of Pieces. \n* No solution mentioned for the line number wrapping issue. \n\n**Current Status/Outcome:**\n\n* The issue is being addressed by the Pieces team. \n* A fix for the context issue is expected in the next release. \n* The status of the line number wrapping issue is unclear. \n\n**Additional Notes:**\n\n* The author also linked to some relevant resources:\n\n    * Existing Issues: https://github.com/pieces-app/support/issues\n    * Documentation: https://docs.pieces.app\n    * YouTube Channel: https://www.youtube.com/@getpieces",
+          "activity_level": 5.5
         },
         {
           "id": 584,
           "title": "Copilot is not giving any feedback",
-          "text": "Copilot is not giving any feedback\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\nPieces for Developers 3.3.3\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nThe copilot is not generating anything, it just keeps on loading.\n## GitHub Issue Summary\n\n**Key Points:**\n\n* User @gittydia reported an issue with Copilot response saying \"I'm sorry, something went wrong with the processing...\"\n* Pieces support bot automatically triaged the issue and responded with related issues and resources.\n* Mark-at-pieces, a Pieces team member, stated that a fix is expected in the upcoming PiecesOS release 11.0.4.\n\n**Problems identified:**\n\n* Copilot response error message: \"I'm sorry, something went wrong with the processing...\"\n\n**Solutions proposed/implemented:**\n\n* Fix for the issue is included in the upcoming PiecesOS release 11.0.4.\n\n**Current status/outcome:**\n\n* Fix is expected to be released with PiecesOS 11.0.4. User is requested to report back if the issue persists after the update.",
+          "text": "Copilot is not giving any feedback\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\nPieces for Developers 3.3.3\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nThe copilot is not generating anything, it just keeps on loading.\n## Summary of GitHub Issue Conversation: Copilot Response Issues\n\n**Key Points:**\n\n* @gittydia reported an issue where Pieces Copilot responded with \"I'm sorry. Something went wrong with the processing. Please...\"\n* This issue is similar to other reported issues related to Copilot response problems.\n* The issue has been triaged and routed to the appropriate Pieces team member.\n* A potential fix is expected to be included in the upcoming PiecesOS release 11.0.4 (estimated release date: Thursday).\n\n**Problems Identified:**\n\n* Pieces Copilot responses are failing with an error message.\n* This issue has been affecting multiple users.\n\n**Solutions Proposed/Implemented:**\n\n* A fix is being implemented in the upcoming PiecesOS release 11.0.4.\n\n**Current Status/Outcome:**\n\n* The fix is currently being tested and is expected to be released on Thursday.\n* Users are requested to report back if the issue persists after the release.\n\n**Additional Information:**\n\n* Related issues and resources are provided for reference.",
           "activity_level": 3.5
+        },
+        {
+          "id": 150,
+          "title": "PiecesOS using too much RAM/spike in CPU",
+          "text": "PiecesOS using too much RAM/spike in CPU\nSeveral users have called in recently about Pieces using too much RAM or causing a spike in CPU up to 100%. We are trying to track down this issue, and would appreciate any feedback about your experience with this if you are experiencing it. \r\n\r\nWe have a hunch it has something to do with internet connections, but aren't fully sure yet. \r\n\r\nIf you're experiencing this and wouldn't mind hopping on a call with us to show us, we would really appreciate it to help us troubleshoot! You can schedule a call [here](https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2iaRWpd1kA2k_xg2KrVi_jiTHo0POiMZSI9WAYsxs5jJ9sU2Rd2zKitLuSFd7l3FhatGzy5Vgt\r\n). \r\n\r\nA short-term solution is to restart PiecesOS whenever this occurs. \n## Summary of GitHub Issue Conversation on Pieces OS High Memory Usage\n\n**Key Points Raised:**\n\n* Pieces OS, a local server for Pieces suite, consumes high memory and sometimes even CPU resources.\n* Memory usage can exceed 2GB even with no models installed, causing performance issues.\n* Live Context feature seems to contribute to the increased resource consumption.\n\n**Problems Identified:**\n\n* High RAM and CPU usage impacting overall system performance.\n* Users have to disable Pieces OS to prevent slowdown.\n* Memory leak suspected.\n\n**Solutions Proposed/Implemented:**\n\n* Turning off Live Context feature to reduce RAM usage.\n* \"Optimize Memory\" option to free up some RAM.\n* Working on improvements for better performance.\n* Offering individual support to diagnose and resolve issues.\n\n**Current Status/Outcome:**\n\n* Issue still ongoing with no fixed timeline for complete resolution.\n* Some users have stopped using Pieces due to high resource demands.\n\n**Notes:**\n\n* Pieces OS acknowledges the challenges of building on-device ML with limitations on resource consumption.\n* They are actively working on improvements and appreciate users' patience.\n\n**Additional Points:**\n\n* Issue has been ongoing since April 2024 and is still relevant as of November 2024.\n* Users have reported the issue on different operating systems, including Windows, Linux, and MacOS.",
+          "activity_level": 4.48
+        }
+      ]
+    },
+    {
+      "title": "Pieces Copilot response errors and UI issues",
+      "description": "Users report Copilot not responding, showing error messages, or experiencing lag. Issues include invalid API keys, problems with specific models, and UI glitches in code view. Solutions involve updating Pieces, removing or registering OpenAI API keys, switching models, and waiting for upcoming releases with fixes.",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 561,
+          "title": "Copilot Bug: 'I'm sorry. Something went wrong with processing. Please...' copilot response",
+          "text": "Copilot Bug: 'I'm sorry. Something went wrong with processing. Please...' copilot response\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.0.3\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nhi i have been using it for 2 days but for the last 2 hours the desktop and visual studio extension are not working. \n\nNo matter what I type, it gives me this error. There was an update message for the app, it was about installing a version, I installed it but it didn't fix it.\nalways the same message \nvisual studio ide 2022 17.12 \nwindows 10 pro\n![Image](https://github.com/user-attachments/assets/c64d85bd-eb1a-4f1c-a25e-570c9a55ccd1)\n![Image](https://github.com/user-attachments/assets/55b600a6-95f4-4e71-aee1-1b1ce8b6599c)\n\n\n## GitHub Issue Conversation Summary\n\n**Key Points Raised:**\n\n* Users experiencing issues with the product, including:\n    * Invalid API keys\n    * Errors with Claude and Gemini models\n    * High rate limits\n* Removing the OpenAI API key as a temporary workaround \n\n**Problems Identified:**\n\n* Outdated version of the product (11.0.2)\n* Invalid or outdated OpenAI API keys\n* Issues with specific models (Claude and Gemini)\n* High rate limits for non-signed-in users\n\n**Solutions Proposed/Implemented:**\n\n* Update to the latest version (11.0.3)\n* Remove the OpenAI API key\n* Switch to the GPT4o model\n* Sign in to Pieces for a higher rate limit\n* Register the OpenAI API key (investigation ongoing)\n\n**Current Status/Outcome:**\n\n* The issue appears to be resolved for most users who have updated to the latest version and/or removed their OpenAI API key.\n* The team is investigating the issue with API keys and registration.\n\n**Additional Notes:**\n\n* The team is actively looking into the issues with the Claude and Gemini models.\n* It is recommended to switch to the GPT4o model if you are experiencing problems with other models.",
+          "activity_level": 4.48
+        },
+        {
+          "id": 584,
+          "title": "Copilot is not giving any feedback",
+          "text": "Copilot is not giving any feedback\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\nPieces for Developers 3.3.3\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nThe copilot is not generating anything, it just keeps on loading.\n## Summary of GitHub Issue Conversation: Copilot Response Issues\n\n**Key Points:**\n\n* @gittydia reported an issue where Pieces Copilot responded with \"I'm sorry. Something went wrong with the processing. Please...\"\n* This issue is similar to other reported issues related to Copilot response problems.\n* The issue has been triaged and routed to the appropriate Pieces team member.\n* A potential fix is expected to be included in the upcoming PiecesOS release 11.0.4 (estimated release date: Thursday).\n\n**Problems Identified:**\n\n* Pieces Copilot responses are failing with an error message.\n* This issue has been affecting multiple users.\n\n**Solutions Proposed/Implemented:**\n\n* A fix is being implemented in the upcoming PiecesOS release 11.0.4.\n\n**Current Status/Outcome:**\n\n* The fix is currently being tested and is expected to be released on Thursday.\n* Users are requested to report back if the issue persists after the release.\n\n**Additional Information:**\n\n* Related issues and resources are provided for reference.",
+          "activity_level": 3.5
+        },
+        {
+          "id": 586,
+          "title": "Pieces plugin for UltraEdit is unresponsive after asking copilot to describe ~3000 line .py script",
+          "text": "Pieces plugin for UltraEdit is unresponsive after asking copilot to describe ~3000 line .py script\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.0.3\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nIn UltraEdit I opened the python script available at https://github.com/eldraco/domain_analyzer/blob/master/domain_analyzer.py. I opened the Pieces plugin and using default settings prompted it to describe the script: \"What does this Python script do?\" The UE plugin never returns any content and seems to be unresponsive. \n\nIn Pieces Desktop, I do see the result, however interaction with it is latent indicating some sort of continual background processing even though the LLM has completed processing. Additionally, there seem to be significant scroll issues, and the code view doesn't appear to be calculating line numbers correctly, showing many empty lines after line 1,918, when line 2,837 is the last line in the file.\n\nFinally, the Pieces Desktop code view shows a wrap in the line number margin.\n\n![Image](https://github.com/user-attachments/assets/9be69032-f2e2-4379-843c-cd0bf14da63a)\n## GitHub Issue Summary\n\n**Key Points:**\n\n* User @bschwenk reported an issue with context and line number wrapping in Gemini 1.5 flash and gpt4o. \n* The issue appears specific to a file downloaded by the user. \n\n**Problems Identified:**\n\n1. **Context Issue:** The file is not getting included in the context, causing Gemini to request the file again. \n2. **Line Number Wrapping:** Line numbers are wrapping incorrectly. \n\n**Solutions Proposed/Implemented:**\n\n* @mark-at-pieces and @sam-at-pieces are investigating and working on a fix for the context issue. \n* The fix is expected to be included in the next release of Pieces. \n* No solution mentioned for the line number wrapping issue. \n\n**Current Status/Outcome:**\n\n* The issue is being addressed by the Pieces team. \n* A fix for the context issue is expected in the next release. \n* The status of the line number wrapping issue is unclear. \n\n**Additional Notes:**\n\n* The author also linked to some relevant resources:\n\n    * Existing Issues: https://github.com/pieces-app/support/issues\n    * Documentation: https://docs.pieces.app\n    * YouTube Channel: https://www.youtube.com/@getpieces",
+          "activity_level": 5.5
         }
       ]
     }
   ],
   "recommendations": [
-    "**Prioritize Connection Issues:** Allocate additional resources to diagnose and resolve connection issues with Pieces OS, particularly from VS Code remote environments and web extensions. Update documentation with clear troubleshooting steps.",
-    "**Address Copilot Unresponsiveness:** Investigate and address the root causes of Copilot unresponsiveness and errors across platforms. Provide temporary workarounds to users while a permanent fix is being developed.",
-    "**Optimize PiecesOS Resource Consumption:** Continue optimizing PiecesOS to reduce RAM/CPU usage, especially for Live Context. Explore options for user-configurable performance settings.",
-    "**Improve Communication on Known Issues:** Proactively communicate known issues and workarounds to users through release notes, blog posts, and social media updates.",
-    "**Enhance Ticket Triaging:** Implement a more robust ticket triaging system to automatically categorize and prioritize issues based on severity and impact. "
+    "**Prioritize resolution of Pieces OS connection issues:** The most active ticket (#550) highlights persistent problems with Pieces OS connecting from remote environments like Docker. Focus on resolving this issue to improve user experience, especially for developers working in containerized setups.",
+    "**Investigate and address Pieces performance issues:** Tickets #150, #586, and others indicate concerns about high RAM usage, CPU spikes, and unresponsiveness. Allocate resources to identify memory leaks, optimize performance, and ensure Pieces can handle large codebases efficiently.",
+    "**Improve Copilot stability and responsiveness:** Several tickets (#561, #584, #586) report Copilot errors, unresponsiveness, and UI glitches. Focus on enhancing Copilot's error handling, API key management, and overall stability to provide a seamless AI assistance experience.",
+    "**Review and update documentation:** Ticket #550 reveals outdated documentation regarding Pieces OS default port. Conduct a thorough review and update of all documentation to ensure accuracy and clarity, reducing user confusion and support requests.",
+    "**Enhance communication about upcoming releases:** Keep users informed about bug fixes and improvements in upcoming releases. This can be done through release notes, blog posts, or in-app notifications. Transparency about upcoming fixes can manage user expectations and reduce support inquiries."
   ],
   "message": "Daily support report generated successfully."
 }
