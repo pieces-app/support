@@ -1,0 +1,111 @@
+{
+  "success": true,
+  "date_range": {
+    "start": "2025-01-09T00:00:00+00:00",
+    "end": "2025-01-09T19:42:17.059301+00:00"
+  },
+  "summary": {
+    "total_tickets": 3,
+    "resolved_tickets": 0,
+    "open_tickets": 3
+  },
+  "ticket_breakdown": [
+    {
+      "category": "status:triaged",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "bug",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "app:desktop application",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "P0",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:pieces copilot module",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:obsidian",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:waiting_on_user_responses",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    }
+  ],
+  "most_active_tickets": [
+    {
+      "number": 540,
+      "title": "LTM doesn't work; the copilot model by defaults not saved",
+      "activity_level": 6.98
+    },
+    {
+      "number": 572,
+      "title": "Pieces OS Does not recognize folders or files",
+      "activity_level": 6.92
+    },
+    {
+      "number": 574,
+      "title": "Obsidian Plugin",
+      "activity_level": 4.33
+    }
+  ],
+  "common_issues": [
+    {
+      "title": "Pieces OS Integration and Functionality Issues",
+      "description": "Users report Pieces OS struggling to interact with external files and applications, such as VS Code and Obsidian.  This includes failing to recognize files, plugins malfunctioning, and Long Term Memory (LTM) activation problems. Proposed solutions involve software updates, enabling specific settings, and detailed troubleshooting with Pieces support staff.",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 572,
+          "title": "Pieces OS Does not recognize folders or files",
+          "text": "Pieces OS Does not recognize folders or files\n### Software\n\nDesktop Application, VS Code, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nPiecesOS 11.0.3\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nSo until about a weekish ago, Everything would work smoothly, except for some other issues that did annoy me, but I had workarounds for them. Those issues was pieces os not working after a while. Not a big deal since I would just close it in task manager and reopen it once it was all closed to force a hard restart of the whole system. But, now (thanks for listening to my little rant up there) there is an issue that I cannot workaround. For some reason pieces cannot get any context from any files or folders, and its getting pretty annoying to the fact that I have started using other softwares because at least they can look at the files and suggest changes or edits that actually have something to do with my code. I believe this happened ever since i updated pieces os about 2-3 updates ago, but cannot pinpoint any specific cause. Another cause may be that fact that I downloaded Ollama but never really used it.\n## Summary of GitHub Issue Conversation\n\n**Key Points Raised:**\n\n* User (RamanBaig) reported an issue where Pieces could not read files, even though it recognized their names.\n* The issue occurred with multiple files, including large ones with thousands of lines of code.\n* User was using Windows 11, Claude sonnet 3.5 and gpt foundation models, with Long Term Memory enabled.\n\n**Problems Identified:**\n\n* Pieces was unable to read file content directly.\n* User had to manually copy and paste code into the chat, which was inconvenient and time-consuming.\n* The underlying cause of the issue was not clear.\n\n**Solutions Proposed/Implemented:**\n\n* Sam-at-pieces suggested several actions, including:\n    * Enabling Long Term Memory \n    * Trying different foundation models (Claude, gpt)\n    * Sharing specific files and folders experiencing the issue\n    * Providing details about the operating system\n    * Joining a call for further troubleshooting\n* Mark-at-pieces suggested scheduling a call to diagnose the issue.\n* Two calendar links were provided for scheduling calls with either Sam-at-pieces or Mark-at-pieces.\n\n**Current Status/Outcome:**\n\n* The user agreed to schedule a call with either Sam-at-pieces or Mark-at-pieces to further investigate the issue.\n* Two calendar links were provided for scheduling, but the user has not yet confirmed a specific time.\n\n**Additional Notes:**\n\n* The user reported using Windows 11 Home, 24H2 and having approximately 9 files in the affected folder, with 4 actively used.\n* The user also confirmed that the affected files were correctly displayed in the \"related files\" tab within the chat.\n\n**Overall, the issue remains unresolved, but further investigation through a scheduled call is planned.**",
+          "activity_level": 6.92
+        },
+        {
+          "id": 540,
+          "title": "LTM doesn't work; the copilot model by defaults not saved",
+          "text": "LTM doesn't work; the copilot model by defaults not saved\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.0.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n[https://disk.yandex.ru/i/Z_U0FzYA8NBrNg](url)\nThere is a video here that describes the problem\n## Summary of GitHub issue conversation:\n\n**Key points raised:**\n\n- User Iliya3ProX reported an issue with their Long-Term Memory (LTM) not activating.\n- Video recording and log files were provided to illustrate the problem.\n- Other users AyomideA-S confirmed experiencing the same issue.\n\n**Problems identified:**\n\n- Downloaded LLM's state overriding saved models, preventing LTM activation.\n- Dependency issue on user's machine causing LTM activation to fail.\n- Large idle time usage observed.\n\n**Solutions proposed/implemented:**\n\n- Patch released on December 19th, 2024, to address overriding issue.\n- Additional update released on January 3rd, 2025.\n- Investigating database infrastructure for improved performance.\n\n**Current status/outcome:**\n\n- Patch and update partially resolved the LTM activation issue for some users, but not others.\n- Issue with large idle time still needs investigation.\n\n**Future steps:**\n\n- Determine the specific cause of LTM activation failure for remaining affected users.\n- Investigate and address large idle time usage.\n- Fix PyCharm plugin crash triggered by pressing Shift+Enter in Copilot.\n\n## Additional notes:\n\n- User Iliya3ProX successfully activated LTM by reinstalling PiecesOS from the Microsoft Store.\n- User AyomideA-S provided directory size information for potential troubleshooting.",
+          "activity_level": 6.98
+        },
+        {
+          "id": 574,
+          "title": "Obsidian Plugin",
+          "text": "Obsidian Plugin\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.0.3\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nHi! I'm attempting to get the Pieces for Devs Obsidian plugin to work. The installation of the Pieces for Devs \" Pieces for Obsidian plugin\" goes seemingly faultless as it reports in green: \" Pieces for Obsidian plugin installed successfully\". \n\n However, as soon as I attempt to enable the plugin (v1.21.1)the following error pops up \u201dFailed to load plugin \u2018pieces-for-developers\u2019\u201d. \n- Obsidian v1.7.7 is up to date, and running. \n- Pieces OS v11.0.3 is running, and \n- Pieces for Devs Desktop is up and running @ v3.3.3. \n- The OS is Windows 10 Pro 64 bit Version 22H2, Build 19045.5247 updated 02-02-2025\n\nI have followed the guidelines in the following documentation (https://docs.pieces.app/extensions-plugins/obsidian). The install fails with a not-very-helpful answer. \u201dFailed to load plugin \u2018pieces-for-developers\u2019\u201d\n\nReferring to the section \"https://docs.pieces.app/extensions-plugins/obsidian#having-trouble-with-the-pieces-for-developers-obsidian-plugin\" in the documentation still fails to provide the expected results, so the next step would be to attempt to find related installation logs that might shed light on the issue.\n\nI've searched for possible issues indicating this type of bug/issue but none were found here on GitHub.\nI had a look at the `obsidian.log` file in the `C:\\Users\\[user]\\AppData\\Roaming\\obsidian` folder but there's no indication at all nor any mention of any plugins or installations related to such.\n\nRepeat uninstall/reinstall advice does not resolve the problem either.\nCould you indicate which other Pieces, Obsidian and Win-OS logs would be the most appropriate to investigate which might shed light on the cause, please?\n\n**Edit:**\nI'm using other plugins without any issues.\n![Image](https://github.com/user-attachments/assets/19b3dcd2-05fa-4171-ae2e-dc71b5ce451c)\n\nThank you for looking into this.\n## GitHub Issue Conversation Summary\n\n**Key Points:**\n\n* User bishoy-at-pieces asks Andre-ADPC to share their console to help with debugging.\n* Andre-ADPC misunderstands the request due to differences in perspective and assumptions.\n* bishoy-at-pieces clarifies the request and provides instructions on accessing the Obsidian developer console.\n* Andre-ADPC takes a screenshot of the developer console and shares it with bishoy-at-pieces.\n\n**Problems Identified:**\n\n* Difficulty in communication due to different perspectives and assumptions.\n* Andre-ADPC's misunderstanding of the request.\n\n**Solutions Proposed/Implemented:**\n\n* Bishoy-at-pieces provides clear instructions and references relevant resources.\n* Andre-ADPC follows the instructions and shares the requested information.\n\n**Current Status/Outcome:**\n\n* The issue seems to be resolved with Andre-ADPC providing the necessary information.\n* Further communication or troubleshooting may be needed depending on the content of the developer console screenshot.\n\n**Additional Notes:**\n\n* The conversation highlights the importance of clear communication and providing context when troubleshooting technical issues.\n* The use of screenshots can be helpful in resolving issues remotely.\n* The issue conversation is ongoing as of 2023-11-13.",
+          "activity_level": 4.33
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    "**Prioritize resolving file recognition issues:** The most frequent and active tickets indicate problems with Pieces OS recognizing and interacting with external files and applications. Focus development efforts on addressing these issues to improve core functionality.",
+    "**Investigate and resolve LTM activation failures:** Multiple users report issues with Long Term Memory (LTM) not activating consistently. Identify the root cause of these failures and implement a permanent solution.",
+    "**Improve Obsidian plugin stability and functionality:** Address the reported issues with the Obsidian plugin, including installation errors and potential conflicts with other plugins. Ensure seamless integration and functionality with Obsidian.",
+    "**Enhance communication clarity for troubleshooting:** Provide clearer instructions and documentation for troubleshooting common issues, particularly accessing logs and developer consoles. This will help users provide relevant information for faster resolution.",
+    "**Consider a dedicated support channel for Pieces OS integration:** Given the frequency of issues related to external integrations, create a dedicated support channel or knowledge base section specifically for these issues. This will centralize information and streamline support for users facing similar problems.",
+    "**Gather more detailed user data on affected systems:** Collect information about users' operating systems, Pieces OS versions, and specific software configurations to identify potential patterns or conflicts contributing to the reported issues.",
+    "**Proactively monitor and address emerging issues:** Implement a system for monitoring support tickets and community forums to identify emerging trends or common issues. This will allow for proactive communication and faster resolution of widespread problems.",
+    "**Improve error messages and logging:** Provide more informative error messages and detailed logs to help both users and developers understand the root cause of issues. This will facilitate faster and more effective troubleshooting."
+  ],
+  "message": "Daily support report generated successfully."
+}
