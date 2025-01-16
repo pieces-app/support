@@ -1,73 +1,74 @@
 # Support Ticket Report
-- Generated: 2025-01-15 21:07:32
-- Period: 2025-01-13 to 2025-01-15
+- Generated: 2025-01-16 05:08:42
+- Period: 2025-01-13 to 2025-01-16
 
 ## Summary
-- **Total Tickets:** 8
-- **Resolved:** 2
-- **Open:** 6
+- **Total Tickets:** 12
+- **Resolved:** 4
+- **Open:** 8
 
 ## 5 Most Active Tickets
 | Issue # | Title | Activity Level |
 |---------|-------|----------------|
 | [#550](https://github.com/pieces-app/support/issues/550) | Seems like you are running VS Code in a remote environment (VS Code running remote docker container) | 8.30 |
 | [#586](https://github.com/pieces-app/support/issues/586) | Pieces plugin for UltraEdit is unresponsive after asking copilot to describe ~3000 line .py script | 6.46 |
-| [#561](https://github.com/pieces-app/support/issues/561) | Copilot Bug: 'I'm sorry. Something went wrong with processing. Please...' copilot response | 4.48 |
 | [#150](https://github.com/pieces-app/support/issues/150) | PiecesOS using too much RAM/spike in CPU | 4.48 |
 | [#588](https://github.com/pieces-app/support/issues/588) | Neural Code Search returns no results | 4.42 |
+| [#561](https://github.com/pieces-app/support/issues/561) | Copilot Bug: 'I'm sorry. Something went wrong with processing. Please...' copilot response | 4.42 |
 
 ## Common Issues
-### 1. Pieces connectivity and functionality issues
-Users report Pieces failing to connect remotely, especially within Docker containers. This is due to Pieces defaulting to the loopback interface. Solutions include upgrading to version 2.0.2, setting a blank custom URL, or using the workaround with DNS entries. Other issues involve OpenAI API key issues and Neural Code Search failing to return results, with ongoing investigations and workarounds suggested.
+### 1. Pieces Copilot Unresponsive or Errors
+Users report Pieces Copilot being unresponsive, slow, or returning errors like "Something went wrong with processing". Issues appear across OS platforms and Pieces versions. Suggested workarounds include ensuring Pieces is updated, using the GPT4o model, signing into Pieces, and potentially removing any registered OpenAI API keys. The Pieces team is investigating the root causes and working on fixes.
 
 **Related Issues:**
-- [#550](https://github.com/pieces-app/support/issues/550): Seems like you are running VS Code in a remote environment (VS Code running remote docker container)
+- [#586](https://github.com/pieces-app/support/issues/586): Pieces plugin for UltraEdit is unresponsive after asking copilot to describe ~3000 line .py script
+- [#584](https://github.com/pieces-app/support/issues/584): Copilot is not giving any feedback
 - [#561](https://github.com/pieces-app/support/issues/561): Copilot Bug: 'I'm sorry. Something went wrong with processing. Please...' copilot response
+
+### 2. Pieces OS connection issues in remote environments
+Users experience difficulties connecting Pieces OS to IDE extensions (VSCode, JetBrains) in remote environments like WSL2 and Docker. Issues include Copilot rendering failures and general connection problems. Solutions involve ensuring network accessibility, adjusting Pieces OS settings, and using updated plugin versions.
+
+**Related Issues:**
+- [#489](https://github.com/pieces-app/support/issues/489): VSCode extension issue rendering Copilot when installed via snap in WSL2
+- [#550](https://github.com/pieces-app/support/issues/550): Seems like you are running VS Code in a remote environment (VS Code running remote docker container)
+- [#421](https://github.com/pieces-app/support/issues/421): Pieces OS does not connect to Jetbrains plugin
+
+### 3. Pieces OS and Desktop App Functionality Issues
+Users report problems with Pieces OS and Desktop app, including Neural Code Search not returning results, app launch failures on Windows and macOS, and Copilot not providing feedback. Troubleshooting steps include checking for updates, providing log files, and waiting for new releases. Some issues are unresolved and under investigation.
+
+**Related Issues:**
 - [#588](https://github.com/pieces-app/support/issues/588): Neural Code Search returns no results
+- [#131](https://github.com/pieces-app/support/issues/131): Unable to Launch Pieces Windows Desktop Version
+- [#584](https://github.com/pieces-app/support/issues/584): Copilot is not giving any feedback
 
-### 2. Pieces connection issues across platforms
-Users report Pieces connection errors in web, desktop, and VS Code extensions. Problems include API key issues, remote connection failures, and general service outages. Solutions involve updating Pieces, checking API keys, configuring remote connections, and waiting for service restoration or bug fixes.
-
-**Related Issues:**
-- [#585](https://github.com/pieces-app/support/issues/585): Failed to load resource: net::ERR_CONNECTION_REFUSED     http://127.0.0.1:1000/.well-known/health
-- [#561](https://github.com/pieces-app/support/issues/561): Copilot Bug: 'I'm sorry. Something went wrong with processing. Please...' copilot response
-- [#550](https://github.com/pieces-app/support/issues/550): Seems like you are running VS Code in a remote environment (VS Code running remote docker container)
-
-### 3. PiecesOS Performance and API Issues
-Users report high RAM/CPU usage with PiecesOS, potentially due to internet connectivity or background processes.  Short-term solutions include restarting PiecesOS or limiting large file interactions.  Additionally, users experience unresponsive behavior or errors, likely linked to OpenAI API, Claude, or Gemini issues.  Suggested fixes include removing API keys, switching to GPT4o, or ensuring the latest PiecesOS version.
+### 4. PiecesOS Launch and Performance Issues
+Users report high RAM/CPU usage, launch failures, and loading screen freezes.  Suggested solutions include restarting PiecesOS, optimizing memory, and providing log files for troubleshooting.  The Pieces team is actively investigating these issues.
 
 **Related Issues:**
 - [#150](https://github.com/pieces-app/support/issues/150): PiecesOS using too much RAM/spike in CPU
-- [#586](https://github.com/pieces-app/support/issues/586): Pieces plugin for UltraEdit is unresponsive after asking copilot to describe ~3000 line .py script
-- [#561](https://github.com/pieces-app/support/issues/561): Copilot Bug: 'I'm sorry. Something went wrong with processing. Please...' copilot response
+- [#131](https://github.com/pieces-app/support/issues/131): Unable to Launch Pieces Windows Desktop Version
+- [#456](https://github.com/pieces-app/support/issues/456): Not Working
 
-### 4. Pieces Copilot Unresponsive or Erroneous
-Users report Pieces Copilot being unresponsive, returning errors, or generating irrelevant responses. Issues are often related to specific file types or language models used. Solutions include updating Pieces, switching language models (e.g., to GPT4o), ensuring OpenAI API key validity, and signing into Pieces.
-
-**Related Issues:**
-- [#586](https://github.com/pieces-app/support/issues/586): Pieces plugin for UltraEdit is unresponsive after asking copilot to describe ~3000 line .py script
-- [#561](https://github.com/pieces-app/support/issues/561): Copilot Bug: 'I'm sorry. Something went wrong with processing. Please...' copilot response
-- [#584](https://github.com/pieces-app/support/issues/584): Copilot is not giving any feedback
-
-### 5. Pieces Copilot and Neural Code Search Issues
-Users are experiencing issues with Pieces Copilot and Neural Code Search not generating responses or returning results. This appears to be related to API keys, specific language models (Claude, Gemini), and potential software bugs. Solutions include removing OpenAI API keys, switching to different language models, ensuring software is updated, and waiting for upcoming releases with fixes.
+### 5. Pieces Desktop Application Bugs
+Multiple users reported issues with the Pieces Desktop Application on macOS and Windows. Issues include a "Welcome Message" appearing repeatedly, Copilot functionality not working, and the application getting stuck on the loading screen. Proposed solutions involve bug fixes in upcoming releases and analysis of user log files.
 
 **Related Issues:**
-- [#588](https://github.com/pieces-app/support/issues/588): Neural Code Search returns no results
-- [#561](https://github.com/pieces-app/support/issues/561): Copilot Bug: 'I'm sorry. Something went wrong with processing. Please...' copilot response
+- [#582](https://github.com/pieces-app/support/issues/582): Saved Snippets Welcome Screen
 - [#584](https://github.com/pieces-app/support/issues/584): Copilot is not giving any feedback
+- [#456](https://github.com/pieces-app/support/issues/456): Not Working
 
 
 ## Recommendations
-- **Prioritize resolution of connectivity issues:** Focus on addressing the root causes of connection errors across different Pieces platforms (web, desktop, VS Code) and within Docker containers. This will likely involve investigating API key handling, remote connection protocols, and potential service stability improvements.
-- **Investigate and address PiecesOS performance issues:** Look into reports of high RAM/CPU usage, potentially caused by internet connectivity problems or inefficient background processes. Optimize PiecesOS for better resource management and investigate potential memory leaks.
-- **Improve Pieces Copilot and Neural Code Search reliability:** Address issues with Copilot unresponsiveness, errors, and irrelevant responses, particularly with specific file types or language models. Enhance Neural Code Search to ensure consistent and accurate results. This might involve reviewing language model integrations, API interactions, and software logic.
-- **Proactively communicate known issues and workarounds:** Keep users informed about ongoing problems, such as those related to specific language models (Claude, Gemini) or OpenAI API keys. Provide clear workarounds, such as switching to alternative language models or removing API keys, to minimize user disruption.
-- **Enhance support documentation and resources:** Expand documentation to include detailed troubleshooting steps for common issues like connectivity problems, API key management, and language model selection. Create or update help articles and tutorials addressing these specific areas.
-- **Gather more detailed user feedback:** Encourage users to provide comprehensive bug reports, including steps to reproduce the issue, relevant screenshots, and system information. This will help in identifying patterns and root causes more effectively.
-- **Consider implementing a status page:** Create a public status page to communicate service uptime and any ongoing outages or maintenance activities. This will keep users informed and manage expectations during service disruptions.
-- **Review and optimize large file handling:** Investigate how Pieces handles large files, as this appears to be a potential contributor to performance issues. Explore optimizations or limitations to improve user experience with larger codebases or datasets.
-- **Analyze and address trends in user-reported issues:** Regularly analyze support tickets to identify recurring problems and prioritize development efforts accordingly. This data-driven approach will help allocate resources effectively and address the most impactful issues first.
+- **Prioritize 'Pieces Copilot Unresponsive or Errors'**: This issue has the highest frequency and is impacting users across platforms. Focus on identifying the root cause and implementing a permanent fix.
+- **Address 'Pieces OS connection issues in remote environments'**: This is a recurring problem with a high activity level. Improve documentation and troubleshooting steps for remote environments, and investigate solutions for seamless integration in WSL2 and Docker.
+- **Investigate 'Pieces OS and Desktop App Functionality Issues'**: These issues, including Neural Code Search failures and launch problems, indicate potential core functionality bugs. Prioritize investigation and resolution in upcoming releases.
+- **Monitor 'PiecesOS Launch and Performance Issues'**: High resource usage can be detrimental to user experience. Continue optimizing PiecesOS for better performance and resource management.
+- **Review and address bugs related to the Pieces Desktop Application**: Issues like the recurring 'Welcome Message' and loading screen freezes need to be addressed for a smoother user experience.
+- **Improve communication and transparency**: Keep users informed about ongoing issues, planned fixes, and estimated timelines. Provide clear workarounds and troubleshooting steps where applicable.
+- **Gather more detailed logs and user feedback**: Encourage users to submit detailed logs and feedback for more effective troubleshooting and issue resolution.
+- **Consider automated testing for common issues**: Implement automated testing to catch common bugs and regressions early in the development cycle.
+- **Create a comprehensive knowledge base**: Develop a detailed knowledge base with FAQs, troubleshooting guides, and known issue documentation for users and support staff.
+- **Analyze ticket trends**: Regularly analyze ticket data to identify recurring issues, emerging trends, and areas for improvement in the software or support processes.
 
 ## Daily Reports
 Here are the daily reports for this week:
@@ -75,3 +76,4 @@ Here are the daily reports for this week:
 - [report_210608](daily/2025-01-14/report_210608.md)
 - [report_210557](daily/2025-01-15/report_210557.md)
 - [report_130931](daily/2025-01-15/report_130931.md)
+- [report_050643](daily/2025-01-16/report_050643.md)
