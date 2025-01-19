@@ -1,5 +1,5 @@
 # Support Ticket Report
-- Generated: 2025-01-19 13:09:48
+- Generated: 2025-01-19 21:07:55
 - Period: 2025-01-13 to 2025-01-19
 
 ## Summary
@@ -10,64 +10,63 @@
 ## 5 Most Active Tickets
 | Issue # | Title | Activity Level |
 |---------|-------|----------------|
-| [#550](https://github.com/pieces-app/support/issues/550) | Seems like you are running VS Code in a remote environment (VS Code running remote docker container) | 7.62 |
-| [#590](https://github.com/pieces-app/support/issues/590) | Non-dismissable overlay message. | 4.50 |
-| [#586](https://github.com/pieces-app/support/issues/586) | Pieces plugin for UltraEdit is unresponsive after asking copilot to describe ~3000 line .py script | 4.33 |
+| [#550](https://github.com/pieces-app/support/issues/550) | Seems like you are running VS Code in a remote environment (VS Code running remote docker container) | 7.54 |
 | [#150](https://github.com/pieces-app/support/issues/150) | PiecesOS using too much RAM/spike in CPU | 4.22 |
+| [#586](https://github.com/pieces-app/support/issues/586) | Pieces plugin for UltraEdit is unresponsive after asking copilot to describe ~3000 line .py script | 4.10 |
 | [#561](https://github.com/pieces-app/support/issues/561) | Copilot Bug: 'I'm sorry. Something went wrong with processing. Please...' copilot response | 3.83 |
+| [#589](https://github.com/pieces-app/support/issues/589) | Conversation titles save too eagerly while editing | 3.66 |
 
 ## Common Issues
-### 1. Pieces OS Connection Issues with JetBrains and VS Code
-Users are experiencing difficulties connecting Pieces OS to JetBrains plugins and VS Code, particularly in remote environments like Docker. This is often caused by network configuration issues, such as Pieces OS listening only on the loopback interface. Solutions include upgrading to the latest Pieces OS and plugin versions, configuring custom URLs, and modifying DNS settings. The Pieces team actively provides support and workarounds, including patches and potential live debugging sessions.
-
-**Related Issues:**
-- [#421](https://github.com/pieces-app/support/issues/421): Pieces OS does not connect to Jetbrains plugin
-- [#456](https://github.com/pieces-app/support/issues/456): Not Working
-- [#550](https://github.com/pieces-app/support/issues/550): Seems like you are running VS Code in a remote environment (VS Code running remote docker container)
-
-### 2. Pieces OS Connection Issues in Remote Environments
-Users are experiencing difficulties connecting Pieces OS to IDE extensions (VSCode, JetBrains) in remote environments like WSL2 and Docker.  This is often due to networking configurations and Pieces OS listening on specific interfaces. Solutions include custom URL configurations, Pieces OS patches to broaden listening interfaces, and ensuring proper DNS resolution within the remote environment.
+### 1. Pieces Copilot Connectivity Issues in Remote Environments
+Users are experiencing difficulties connecting to Pieces Copilot from VS Code in remote environments like WSL2 and Docker containers.  The issues often involve network connectivity problems, specifically with Pieces OS listening on the loopback interface. Solutions include ensuring Pieces OS listens on all interfaces, configuring custom URLs in VS Code settings, and using the 'host.docker.internal' resolution for Docker environments.
 
 **Related Issues:**
 - [#489](https://github.com/pieces-app/support/issues/489): VSCode extension issue rendering Copilot when installed via snap in WSL2
 - [#550](https://github.com/pieces-app/support/issues/550): Seems like you are running VS Code in a remote environment (VS Code running remote docker container)
-- [#421](https://github.com/pieces-app/support/issues/421): Pieces OS does not connect to Jetbrains plugin
+- [#591](https://github.com/pieces-app/support/issues/591): Unable to open Pieces Copilot Service
 
-### 3. Pieces Desktop App Bugs and Issues
-Users are reporting various bugs in the Pieces Desktop App, including issues with saving conversation titles, persistent welcome messages, and non-dismissable overlay messages. The Pieces team is actively investigating these issues, providing workarounds, and planning patches for future releases.
+### 2. Pieces Copilot Unresponsive or Errors
+Users report Pieces Copilot becoming unresponsive or returning errors. This often involves specific file types or large codebases. Solutions include updating Pieces OS, checking API keys, switching language models, and ensuring sufficient system resources.
+
+**Related Issues:**
+- [#586](https://github.com/pieces-app/support/issues/586): Pieces plugin for UltraEdit is unresponsive after asking copilot to describe ~3000 line .py script
+- [#561](https://github.com/pieces-app/support/issues/561): Copilot Bug: 'I'm sorry. Something went wrong with processing. Please...' copilot response
+- [#584](https://github.com/pieces-app/support/issues/584): Copilot is not giving any feedback
+
+### 3. Pieces Copilot Service Errors and Connectivity Issues
+Users report Pieces Copilot service inaccessibility, errors fetching data, and general unresponsiveness. Issues range from connection problems to backend processing errors. Proposed solutions include checking for updates, reinstalling, and waiting for bug fixes. OpenAI API key invalidation was identified as a cause, with removal suggested as a fix. Model switching (from Claude/Gemini to GPT4o) is recommended for specific issues.
+
+**Related Issues:**
+- [#591](https://github.com/pieces-app/support/issues/591): Unable to open Pieces Copilot Service
+- [#584](https://github.com/pieces-app/support/issues/584): Copilot is not giving any feedback
+- [#561](https://github.com/pieces-app/support/issues/561): Copilot Bug: 'I'm sorry. Something went wrong with processing. Please...' copilot response
+
+### 4. PiecesOS High Resource Usage
+Users report high RAM/CPU usage with PiecesOS, sometimes reaching 100%, especially when using Live Context. This might be linked to internet connectivity or memory leaks. Temporary solutions include restarting PiecesOS or using the "Optimize Memory" button. The Pieces team is actively working on a permanent fix.
+
+**Related Issues:**
+- [#150](https://github.com/pieces-app/support/issues/150): PiecesOS using too much RAM/spike in CPU
+- [#456](https://github.com/pieces-app/support/issues/456): Not Working
+- [#584](https://github.com/pieces-app/support/issues/584): Copilot is not giving any feedback
+
+### 5. Desktop Application Bugs and Fixes
+Multiple users reported issues with the Pieces Desktop Application on macOS, including eager saving of conversation titles, repetitive welcome messages, and Copilot functionality problems.  Solutions involved bug fixes and patches scheduled for upcoming PiecesOS releases (11.0.4 and later).
 
 **Related Issues:**
 - [#589](https://github.com/pieces-app/support/issues/589): Conversation titles save too eagerly while editing
 - [#582](https://github.com/pieces-app/support/issues/582): Saved Snippets Welcome Screen
-- [#590](https://github.com/pieces-app/support/issues/590): Non-dismissable overlay message.
-
-### 4. Pieces Copilot Service Connection Issues
-Users report Pieces Copilot not working, getting stuck loading, or receiving error messages. This appears across operating systems and Pieces versions. Proposed solutions include waiting for the next Pieces update, removing OpenAI keys, or switching to a different model like GPT4o.
-
-**Related Issues:**
-- [#561](https://github.com/pieces-app/support/issues/561): Copilot Bug: 'I'm sorry. Something went wrong with processing. Please...' copilot response
 - [#584](https://github.com/pieces-app/support/issues/584): Copilot is not giving any feedback
-- [#591](https://github.com/pieces-app/support/issues/591): Unable to open Pieces Copilot Service
-
-### 5. Pieces OS Search and Performance Issues
-Users report Pieces OS search functionality returning no results or being stuck connecting. Issues also include latency, scrolling problems, and incorrect line numbers in code view. Proposed solutions involve upgrading search functionality and addressing context issues in code processing.
-
-**Related Issues:**
-- [#588](https://github.com/pieces-app/support/issues/588): Neural Code Search returns no results
-- [#456](https://github.com/pieces-app/support/issues/456): Not Working
-- [#586](https://github.com/pieces-app/support/issues/586): Pieces plugin for UltraEdit is unresponsive after asking copilot to describe ~3000 line .py script
 
 
 ## Recommendations
-- **Prioritize Connection Issues:** Focus on resolving connection issues between Pieces OS and IDE extensions (VSCode, JetBrains) in both local and remote environments. This is a recurring and high-impact problem affecting user experience.
-- **Improve Desktop App Stability:** Address bugs and issues reported for the Pieces Desktop App, such as saving conversation titles, persistent welcome messages, and non-dismissable overlays. These impact usability and user confidence.
-- **Enhance Copilot Service Reliability:** Investigate and resolve issues related to Pieces Copilot, including loading problems, error messages, and inconsistencies across operating systems. A reliable Copilot experience is crucial for user satisfaction.
-- **Optimize Search Functionality:** Address the issues with Pieces OS search, such as no results, inaccurate line numbers, and latency. Improve search accuracy and speed to enhance productivity.
-- **Proactive Communication:** Keep users informed about known issues, planned patches, and workarounds through release notes, blog posts, and in-app notifications. Transparency builds trust and reduces support requests.
-- **Invest in Troubleshooting Documentation:** Create detailed troubleshooting guides for common issues, particularly connection problems in remote environments. This empowers users to resolve issues independently.
-- **Gather Detailed Diagnostics:** When users encounter issues, collect comprehensive logs, system information, and steps to reproduce the problem. This helps developers diagnose and fix issues faster.
-- **Prioritize Issues Based on Impact and Frequency:** Use data on ticket frequency, activity level, and user impact to prioritize development efforts. Focus on resolving the most critical issues first.
-- **Consider User Feedback:** Analyze user feedback from support tickets, community forums, and surveys to identify pain points and areas for improvement. User input is invaluable for product development.
+- **Prioritize resolving Pieces Copilot connectivity issues:** This recurring issue causes significant user frustration, especially in remote environments. Focus on ensuring seamless Copilot access across various setups (WSL2, Docker, etc.).
+- **Investigate and address Pieces Copilot unresponsiveness and errors:** Analyze reported cases with specific file types or large codebases to identify root causes. Optimize Copilot's performance and resource handling.
+- **Address PiecesOS high resource usage:** Investigate memory leaks and optimize Live Context functionality to reduce RAM/CPU consumption. Provide clear communication to users about ongoing efforts and temporary workarounds.
+- **Improve Desktop Application stability:** Address reported bugs like eager saving of conversation titles and repetitive welcome messages to enhance user experience.
+- **Review and update documentation:** Ensure that support articles and FAQs effectively address common issues like Copilot connectivity problems and provide clear instructions for troubleshooting.
+- **Consider enhancing error messaging:** Provide more informative error messages to users, enabling them to understand the problem and potentially resolve it themselves.
+- **Gather more data on less active issues:** While focusing on the most frequent issues, systematically gather information about less common problems to identify potential trends and underlying causes.
+- **Monitor the effectiveness of implemented solutions:** Track the impact of bug fixes and improvements on user-reported issues to ensure their effectiveness and identify any regressions.
 
 ## Daily Reports
 Here are the daily reports for this week:
