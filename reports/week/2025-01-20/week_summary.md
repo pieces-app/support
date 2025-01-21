@@ -31,4 +31,3 @@ Users are experiencing issues with Pieces OS either not launching correctly on s
 
 ## Daily Reports
 Here are the daily reports for this week:
-
