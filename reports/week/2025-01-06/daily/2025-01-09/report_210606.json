@@ -1,0 +1,113 @@
+{
+  "success": true,
+  "date_range": {
+    "start": "2025-01-09T00:00:00+00:00",
+    "end": "2025-01-09T21:06:06.008506+00:00"
+  },
+  "summary": {
+    "total_tickets": 3,
+    "resolved_tickets": 0,
+    "open_tickets": 3
+  },
+  "ticket_breakdown": [
+    {
+      "category": "status:triaged",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "bug",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "app:desktop application",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "P0",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:pieces copilot module",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:obsidian",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:waiting_on_user_responses",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    }
+  ],
+  "most_active_tickets": [
+    {
+      "number": 540,
+      "title": "LTM doesn't work; the copilot model by defaults not saved",
+      "activity_level": 6.98
+    },
+    {
+      "number": 572,
+      "title": "Pieces OS Does not recognize folders or files",
+      "activity_level": 6.92
+    },
+    {
+      "number": 574,
+      "title": "Obsidian Plugin",
+      "activity_level": 4.33
+    }
+  ],
+  "common_issues": [
+    {
+      "title": "Pieces OS Plugin and Feature Issues",
+      "description": "Users are reporting various issues with Pieces OS, including plugins not working (Obsidian, PyCharm), features malfunctioning (LTM), and the software failing to recognize files or folders. Troubleshooting steps have been suggested, updates have been released, and further investigation is ongoing for some issues. Communication with developers and sharing logs are crucial for resolving these issues.",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 572,
+          "title": "Pieces OS Does not recognize folders or files",
+          "text": "Pieces OS Does not recognize folders or files\n### Software\n\nDesktop Application, VS Code, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nPiecesOS 11.0.3\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nSo until about a weekish ago, Everything would work smoothly, except for some other issues that did annoy me, but I had workarounds for them. Those issues was pieces os not working after a while. Not a big deal since I would just close it in task manager and reopen it once it was all closed to force a hard restart of the whole system. But, now (thanks for listening to my little rant up there) there is an issue that I cannot workaround. For some reason pieces cannot get any context from any files or folders, and its getting pretty annoying to the fact that I have started using other softwares because at least they can look at the files and suggest changes or edits that actually have something to do with my code. I believe this happened ever since i updated pieces os about 2-3 updates ago, but cannot pinpoint any specific cause. Another cause may be that fact that I downloaded Ollama but never really used it.\n## Conversation Summary\n\n**Key points raised:**\n* User was unable to access files directly from chat, even though the system recognized their names.\n* User tried different foundation models (Claude, gpt) and encountered the issue across different folders.\n* The issue persisted regardless of the number of files.\n\n**Problems identified:**\n* Files were not accessible for direct interaction, requiring manual copy-pasting.\n* The cause of the issue was unknown and difficult to reproduce.\n\n**Solutions proposed/implemented:**\n* Sharing more details with the developer to help with troubleshooting.\n* Scheduling a call with the developer for further investigation.\n* Developer made some unconfirmed changes that may resolve the issue.\n* Scheduling a call with another developer to help diagnose the problem.\n\n**Current status/outcome:**\n* The root cause is still being investigated.\n* A potential solution has been implemented but its effectiveness remains unconfirmed.\n* A follow-up call with the user is planned to test the potential solution and gather more information.",
+          "activity_level": 6.92
+        },
+        {
+          "id": 540,
+          "title": "LTM doesn't work; the copilot model by defaults not saved",
+          "text": "LTM doesn't work; the copilot model by defaults not saved\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.0.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n[https://disk.yandex.ru/i/Z_U0FzYA8NBrNg](url)\nThere is a video here that describes the problem\n## Conversation Summary - LTM Issue on Pieces\n\n**Key Points Raised:**\n\n- User reported LTM Engine cannot be turned on.\n- Logs provided after initial troubleshooting steps.\n\n**Problems Identified:**\n\n- Downloaded LLM state overriding saved selection, preventing LTM activation.\n- Dependency for LTM Engine (Qdrant) failing to boot on user's machine.\n- PyCharm plugin crashing after update.\n- High idle time expense causing concerns.\n\n**Solutions Proposed/Implemented:**\n\n- Fix released in patch version 11.0.1/3.3.1 to address override issue.\n- Dependency issue investigated and tagged for further investigation.\n- Database infrastructure update planned to address Qdrant booting issues.\n\n**Current Status/Outcome:**\n\n- LTM issue potentially resolved for some users after update. \n- Qdrant boot issue still under investigation. \n- PyCharm plugin crash acknowledged, fix likely included in future update. \n- High idle time issue reported, further information required for analysis. \n\n**Additional Notes:**\n\n- User reported success after re-installing from Microsoft Store. \n- Communication challenges acknowledged due to language translation.",
+          "activity_level": 6.98
+        },
+        {
+          "id": 574,
+          "title": "Obsidian Plugin",
+          "text": "Obsidian Plugin\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.0.3\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nHi! I'm attempting to get the Pieces for Devs Obsidian plugin to work. The installation of the Pieces for Devs \" Pieces for Obsidian plugin\" goes seemingly faultless as it reports in green: \" Pieces for Obsidian plugin installed successfully\". \n\n However, as soon as I attempt to enable the plugin (v1.21.1)the following error pops up \u201dFailed to load plugin \u2018pieces-for-developers\u2019\u201d. \n- Obsidian v1.7.7 is up to date, and running. \n- Pieces OS v11.0.3 is running, and \n- Pieces for Devs Desktop is up and running @ v3.3.3. \n- The OS is Windows 10 Pro 64 bit Version 22H2, Build 19045.5247 updated 02-02-2025\n\nI have followed the guidelines in the following documentation (https://docs.pieces.app/extensions-plugins/obsidian). The install fails with a not-very-helpful answer. \u201dFailed to load plugin \u2018pieces-for-developers\u2019\u201d\n\nReferring to the section \"https://docs.pieces.app/extensions-plugins/obsidian#having-trouble-with-the-pieces-for-developers-obsidian-plugin\" in the documentation still fails to provide the expected results, so the next step would be to attempt to find related installation logs that might shed light on the issue.\n\nI've searched for possible issues indicating this type of bug/issue but none were found here on GitHub.\nI had a look at the `obsidian.log` file in the `C:\\Users\\[user]\\AppData\\Roaming\\obsidian` folder but there's no indication at all nor any mention of any plugins or installations related to such.\n\nRepeat uninstall/reinstall advice does not resolve the problem either.\nCould you indicate which other Pieces, Obsidian and Win-OS logs would be the most appropriate to investigate which might shed light on the cause, please?\n\n**Edit:**\nI'm using other plugins without any issues.\n![Image](https://github.com/user-attachments/assets/19b3dcd2-05fa-4171-ae2e-dc71b5ce451c)\n\nThank you for looking into this.\n## Summary of GitHub Issue Conversation\n\n**Key Points:**\n\n* Andre-ADPC encountered an issue with the Pieces for Obsidian plugin.\n* bishoy-at-pieces asked Andre-ADPC to share the console for debugging.\n* Andre-ADPC was initially confused about which console to share.\n* bishoy-at-pieces clarified that they were referring to the Obsidian developer console.\n* Andre-ADPC was instructed on how to access the Obsidian developer console and take a screenshot.\n\n**Problems Identified:**\n\n* Andre-ADPC was unsure which console to share.\n* Andre-ADPC did not know how to access the Obsidian developer console.\n\n**Solutions Proposed/Implemented:**\n\n* Provide a clear explanation of which console to share.\n* Provide instructions on how to access the Obsidian developer console.\n\n**Current Status/Outcome:**\n\n* Andre-ADPC was able to access the Obsidian developer console and take a screenshot.\n* The issue was not resolved within the conversation, but Andre-ADPC was provided with the necessary information to continue troubleshooting.\n* The conversation ended with an offer of further assistance from bishoy-at-pieces.",
+          "activity_level": 4.33
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    "**Investigate Pieces OS Plugin and Feature Issues:** Prioritize resolving the issues related to Pieces OS plugins (Obsidian, PyCharm), features like LTM, and file/folder recognition. These issues are causing significant user frustration and impacting core functionality.",
+    "**Improve LTM Functionality and Configuration:** Address the problems with LTM not working and the copilot model not being saved by default. Ensure clear documentation and user-friendly settings for LTM configuration.",
+    "**Enhance Obsidian Plugin Stability and Compatibility:** Investigate and resolve the issues preventing the Pieces for Devs Obsidian plugin from working correctly. Ensure compatibility with different Obsidian versions and provide clear installation and troubleshooting steps.",
+    "**Gather More Data on File/Folder Recognition Issues:** Collect more information from users experiencing problems with Pieces OS not recognizing files or folders. This includes system specifications, steps to reproduce the issue, and any relevant logs.",
+    "**Improve Communication and Documentation:** Provide clear and concise communication to users regarding ongoing issues, troubleshooting steps, and expected resolution timelines. Update documentation to reflect the latest software versions and address common user questions and problems.",
+    "**Consider User Feedback for Future Development:** Use the feedback received in support tickets to inform future development priorities. Focus on addressing the most common pain points and improving the overall user experience.",
+    "**Proactive Monitoring and Issue Detection:** Implement systems for proactively monitoring software performance and identifying potential issues before they become widespread. This could include error tracking, log analysis, and user feedback mechanisms.",
+    "**Streamline Support Processes:** Evaluate and optimize support processes to ensure efficient ticket handling, timely responses, and effective issue resolution. This could involve using a ticketing system, knowledge base, and automation tools.",
+    "**Prioritize High-Impact Issues:** Develop a system for triaging and prioritizing support tickets based on severity, frequency, and impact on users. This will help ensure that critical issues are addressed promptly.",
+    "**Encourage User Community and Knowledge Sharing:** Foster a supportive user community where users can share tips, troubleshoot issues, and help each other. This can reduce the burden on the support team and improve the overall user experience."
+  ],
+  "message": "Daily support report generated successfully."
+}
