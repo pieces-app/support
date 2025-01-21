@@ -1,0 +1,114 @@
+{
+  "success": true,
+  "date_range": {
+    "start": "2025-01-15T00:00:00+00:00",
+    "end": "2025-01-15T21:05:57.688227+00:00"
+  },
+  "summary": {
+    "total_tickets": 3,
+    "resolved_tickets": 0,
+    "open_tickets": 3
+  },
+  "ticket_breakdown": [
+    {
+      "category": "bug",
+      "received": 3,
+      "resolved": 0,
+      "pending": 3
+    },
+    {
+      "category": "os:windows",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "app:desktop application",
+      "received": 3,
+      "resolved": 0,
+      "pending": 3
+    },
+    {
+      "category": "app:cli",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:triaged",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:new",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "queued for release",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:in_progress",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    }
+  ],
+  "most_active_tickets": [
+    {
+      "number": 586,
+      "title": "Pieces plugin for UltraEdit is unresponsive after asking copilot to describe ~3000 line .py script",
+      "activity_level": 6.46
+    },
+    {
+      "number": 588,
+      "title": "Neural Code Search returns no results",
+      "activity_level": 4.42
+    },
+    {
+      "number": 582,
+      "title": "Saved Snippets Welcome Screen",
+      "activity_level": 2.56
+    }
+  ],
+  "common_issues": [
+    {
+      "title": "Pieces Desktop Application Bugs",
+      "description": "Users report various issues with the Pieces Desktop Application, including plugin unresponsiveness, inaccurate code view line numbers, and persistent welcome messages. Troubleshooting often involves verifying software versions, checking for updates, and providing detailed bug reports to the Pieces support team.",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 586,
+          "title": "Pieces plugin for UltraEdit is unresponsive after asking copilot to describe ~3000 line .py script",
+          "text": "Pieces plugin for UltraEdit is unresponsive after asking copilot to describe ~3000 line .py script\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.0.3\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nIn UltraEdit I opened the python script available at https://github.com/eldraco/domain_analyzer/blob/master/domain_analyzer.py. I opened the Pieces plugin and using default settings prompted it to describe the script: \"What does this Python script do?\" The UE plugin never returns any content and seems to be unresponsive. \n\nIn Pieces Desktop, I do see the result, however interaction with it is latent indicating some sort of continual background processing even though the LLM has completed processing. Additionally, there seem to be significant scroll issues, and the code view doesn't appear to be calculating line numbers correctly, showing many empty lines after line 1,918, when line 2,837 is the last line in the file.\n\nFinally, the Pieces Desktop code view shows a wrap in the line number margin.\n\n![Image](https://github.com/user-attachments/assets/9be69032-f2e2-4379-843c-cd0bf14da63a)\n## GitHub Issue Conversation Summary\n\n**Key points raised:**\n\n* User bschwenk reported two issues with Pieces:\n    * Context issues while using a specific .py file with Gemini 1.5 and GPT-4o.\n    * Line number wrapping issues.\n\n**Problems identified:**\n\n* The .py file was not included in the context, leading to the \"Please provide the file itself\" response.\n* Line numbers were wrapping incorrectly.\n\n**Solutions proposed/implemented:**\n\n* The context issue was fixed by @mark-at-pieces and @sam-at-pieces.\n* The line number wrapping issue was identified and will be addressed in a future release.\n\n**Current status/outcome:**\n\n* The context issue has been resolved and will be released in Pieces version 11.0.4.\n* The line number wrapping issue is still under investigation.\n\n**Additional information:**\n\n* The issue was automatically triaged and routed to the Pieces support team.\n* The user was provided with links to relevant resources.",
+          "activity_level": 6.46
+        },
+        {
+          "id": 588,
+          "title": "Neural Code Search returns no results",
+          "text": "Neural Code Search returns no results\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.0.3\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI have four materials entered since a few days ago and NCS type search never returns anything.\n\n![Image](https://github.com/user-attachments/assets/cea82b95-b382-45f3-8777-227d3abd2269)\n\n![Image](https://github.com/user-attachments/assets/175e6117-9ef6-49c0-94f2-26812b788080)\n## GitHub Issue Conversation Summary:\n\n**Key Points:**\n\n* User @hovek created an issue and is awaiting a response from the Pieces team.\n* The issue has been automatically triaged and routed to the relevant team member.\n* The user is requested to check provided resources for potential solutions.\n\n**Problems Identified:**\n\n* The user's specific issue is not stated in the conversation.\n\n**Solutions Proposed/Implemented:**\n\n* The Pieces support bot provides helpful resources for the user to explore potential solutions.\n\n**Current Status/Outcome:**\n\n* The user is awaiting a follow-up from the Pieces team.\n\n**Additional Notes:**\n\n* The conversation date is 2025-01-15, indicating it is within the timeframe of my knowledge.\n* The conversation highlights the initial interaction between a user and the Pieces support system.",
+          "activity_level": 4.42
+        },
+        {
+          "id": 582,
+          "title": "Saved Snippets Welcome Screen",
+          "text": "Saved Snippets Welcome Screen\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n11.0.3\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWhen I save a snippet I get a Welcome Message with the first saved snippet every time:\n![Image](https://github.com/user-attachments/assets/7f8c393f-0097-4f17-997a-75d20c526ce3)\n\nPfD Version: 3.3.3\n## GitHub Issue Summary\n\n**Key Points:**\n\n* User mack-at-pieces (@mack-at-pieces) successfully reproduced the issue reported by hra42 (@hra42) in the Desktop App.\n\n**Problems Identified:**\n\n* The issue involves the Desktop App.\n* The specific details of the issue are not provided.\n\n**Solutions Proposed/Implemented:**\n\n* mack-at-pieces will patch the issue in the next Desktop App release.\n\n**Current Status/Outcome:**\n\n* The issue will be fixed in the next Desktop App release.\n\n**Additional Notes:**\n\n* The specific details of the issue and the proposed solution are not provided in the conversation.\n* It is unclear what version of the Desktop App was affected by the issue.",
+          "activity_level": 2.56
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    "**Prioritize bug fixes for the Pieces Desktop Application:** The majority of support tickets are related to bugs in the desktop app, particularly plugin unresponsiveness, code view issues, and persistent welcome messages. Focusing on resolving these issues should be a top priority.",
+    "**Improve Neural Code Search functionality:** Investigate and address the issue of Neural Code Search returning no results for some users. This feature is important for code discovery and its malfunction significantly impacts user experience.",
+    "**Review welcome message behavior:** Address the bug causing the saved snippets welcome message to appear repeatedly. While seemingly minor, this can be disruptive to the user workflow.",
+    "**Gather more detailed bug reports:** Encourage users to provide comprehensive information when reporting bugs, including software versions, operating systems, and steps to reproduce the issue. This will help developers identify and fix issues more efficiently.",
+    "**Consider creating a dedicated FAQ or troubleshooting guide for common issues:** This could help users resolve problems independently and reduce the number of support tickets submitted for known issues. "
+  ],
+  "message": "Daily support report generated successfully."
+}
