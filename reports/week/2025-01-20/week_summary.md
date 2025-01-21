@@ -1,5 +1,5 @@
 # Support Ticket Report
-- Generated: 2025-01-21 05:06:59
+- Generated: 2025-01-21 13:09:58
 - Period: 2025-01-20 to 2025-01-21
 
 ## Summary
@@ -10,12 +10,12 @@
 ## 5 Most Active Tickets
 | Issue # | Title | Activity Level |
 |---------|-------|----------------|
-| [#591](https://github.com/pieces-app/support/issues/591) | Unable to open Pieces Copilot Service | 3.88 |
+| [#591](https://github.com/pieces-app/support/issues/591) | Unable to open Pieces Copilot Service | 3.48 |
 | [#590](https://github.com/pieces-app/support/issues/590) | Non-dismissable overlay message. | 3.48 |
 
 ## Common Issues
-### 1. PiecesOS and Desktop App Connection Issues
-Users are experiencing difficulties with PiecesOS and Desktop App communication, resulting in errors like "Connection closed before full header was received." This prevents features such as local LLM download and app launch. Troubleshooting involves checking logs, software versions, and ensuring proper installation.
+### 1. Pieces OS Startup and Connection Issues
+Users are experiencing issues with Pieces OS either not launching correctly on startup or encountering connection errors when downloading local LLMs.  Troubleshooting steps include checking logs, verifying internet connection, and ensuring Pieces OS is updated to the latest version.
 
 **Related Issues:**
 - [#591](https://github.com/pieces-app/support/issues/591): Unable to open Pieces Copilot Service
@@ -23,10 +23,11 @@ Users are experiencing difficulties with PiecesOS and Desktop App communication,
 
 
 ## Recommendations
-- **Investigate and resolve PiecesOS and Desktop App connection issues:** This appears to be the most common and impactful issue, hindering core features. Prioritize identifying the root cause and providing a solution.
-- **Improve communication around updates and installations:** The "Non-dismissable overlay message" suggests potential issues with update processes or user guidance. Provide clearer instructions and communication channels for updates.
-- **Enhance error messaging and logging:**  Error messages like "Connection closed before full header was received" are not user-friendly. Improve error messages to be more informative and actionable for both users and support teams. Ensure detailed logging to aid in troubleshooting.
-- **Consider a dedicated FAQ or troubleshooting guide for common issues:**  Given the recurrence of certain issues, creating readily accessible resources can reduce support volume and improve user experience.
+- **Prioritize 'Pieces OS Startup and Connection Issues'**: This is the most common issue, impacting users' ability to launch or connect to Pieces OS. Focus on identifying the root cause and providing a solution.
+- **Investigate 'Unable to open Pieces Copilot Service'**: This ticket has high activity and relates to the common issue. Resolving it might address similar connection problems.
+- **Improve onboarding and documentation**: Issues like the non-dismissable overlay suggest users might need clearer guidance on basic functionalities and troubleshooting.
+- **Gather more data on Windows-specific issues**: Both common issues seem to affect Windows users. Investigate if there are any platform-specific bugs or compatibility problems.
+- **Consider automated troubleshooting**: For common issues like connection problems, explore creating automated checks or guides within the app to assist users before they need to raise a ticket.
 
 ## Daily Reports
 Here are the daily reports for this week:
