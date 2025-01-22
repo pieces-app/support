@@ -2,14 +2,38 @@
   "success": true,
   "date_range": {
     "start": "2025-01-20T00:00:00+00:00",
-    "end": "2025-01-22T05:06:46.557461+00:00"
+    "end": "2025-01-22T13:10:22.073872+00:00"
   },
   "summary": {
-    "total_tickets": 3,
+    "total_tickets": 4,
     "resolved_tickets": 0,
-    "open_tickets": 3
+    "open_tickets": 4
   },
   "ticket_breakdown": [
+    {
+      "category": "bug",
+      "received": 3,
+      "resolved": 0,
+      "pending": 3
+    },
+    {
+      "category": "app:pieces os",
+      "received": 3,
+      "resolved": 0,
+      "pending": 3
+    },
+    {
+      "category": "app:pieces copilot module",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "status:triaged",
+      "received": 4,
+      "resolved": 0,
+      "pending": 4
+    },
     {
       "category": "enhancement",
       "received": 1,
@@ -27,30 +51,6 @@
       "received": 2,
       "resolved": 0,
       "pending": 2
-    },
-    {
-      "category": "status:triaged",
-      "received": 3,
-      "resolved": 0,
-      "pending": 3
-    },
-    {
-      "category": "bug",
-      "received": 2,
-      "resolved": 0,
-      "pending": 2
-    },
-    {
-      "category": "app:pieces os",
-      "received": 2,
-      "resolved": 0,
-      "pending": 2
-    },
-    {
-      "category": "app:pieces copilot module",
-      "received": 1,
-      "resolved": 0,
-      "pending": 1
     }
   ],
   "most_active_tickets": [
@@ -60,9 +60,14 @@
       "activity_level": 6.62
     },
     {
+      "number": 561,
+      "title": "Copilot Bug: 'I'm sorry. Something went wrong with processing. Please...' copilot response",
+      "activity_level": 4.53
+    },
+    {
       "number": 591,
       "title": "Unable to open Pieces Copilot Service",
-      "activity_level": 3.48
+      "activity_level": 3.21
     },
     {
       "number": 590,
@@ -73,34 +78,60 @@
   "common_issues": [
     {
       "title": "Pieces OS Errors and Feature Requests",
-      "description": "Users report various issues with Pieces OS, including app launch failures, error messages, and feature requests. Troubleshooting steps involve gathering system information, checking for software conflicts, and providing logs. Solutions range from bug fixes to implementing new features based on user feedback.",
+      "description": "Users are encountering errors with Pieces OS, including issues with Pieces Core Services and downloading local LLMs. Additionally, users are requesting new features, such as support for additional scripting languages. The Pieces team is actively investigating and addressing these issues, providing support and gathering information to resolve problems.",
       "frequency": 3,
       "related_issues": [
         {
           "id": 594,
           "title": "Adding a script language to the supported languages",
-          "text": "Adding a script language to the supported languages\n\n### Discussed in https://github.com/pieces-app/support/discussions/1\n\n<div type='discussions-op-text'>\n\n<sup>Originally posted by **ddasberg** January  21, 2025</sup>\nIs it possible to add a script language to the supported languages?\n\nIf so, what kind of files or information are necessary?\n\nWe have develeoped a script-language for database-applications for Windows named \"CARA\".\n\nOur complete Windows-ERP-System has been written in CARA. \nIt would be nice to have Pieces-support for the language.\n</div>\n## GitHub issue summary:\n\n**Key points:**\n\n* User @ddasberg created an issue requesting a new feature.\n* The issue was automatically triaged and routed to the Pieces team.\n* The Pieces team responded within the promised 24 hours.\n* The Pieces team added the feature request to the language support system.\n\n**Problems identified:**\n\n* The user needed a new feature.\n\n**Solutions proposed/implemented:**\n\n* The Pieces team added the feature request to the language support system.\n\n**Current status/outcome:**\n\n* The feature request is being reviewed by the Pieces team.\n\n**Additional details:**\n\n* The issue was created on 2025-01-21.\n* The Pieces team responded on 2025-01-21.",
+          "text": "Adding a script language to the supported languages\n\n### Discussed in https://github.com/pieces-app/support/discussions/1\n\n<div type='discussions-op-text'>\n\n<sup>Originally posted by **ddasberg** January  21, 2025</sup>\nIs it possible to add a script language to the supported languages?\n\nIf so, what kind of files or information are necessary?\n\nWe have develeoped a script-language for database-applications for Windows named \"CARA\".\n\nOur complete Windows-ERP-System has been written in CARA. \nIt would be nice to have Pieces-support for the language.\n</div>\n## GitHub Issue Summary\n\n**Issue:** Feature request for adding language support to the Pieces app.\n\n**Key points:**\n\n* User @ddasberg created an issue requesting additional language support.\n* The issue was automatically routed to the Pieces team.\n* User @ddasberg was directed to resources while awaiting a response.\n* User @mark-at-pieces confirmed receipt of the request and added it to the internal language support queue.\n\n**Problems identified:**\n\n* The Pieces app lacked support for languages other than English.\n\n**Solutions proposed/implemented:**\n\n* Adding the feature request to the language support queue.\n\n**Current status/outcome:**\n\n* The language support request is pending implementation. The user is awaiting further updates.\n\n**Additional notes:**\n\n* The conversation does not indicate a specific timeline for implementation.\n* It is unclear which languages will be added with the new feature.\n\n**Overall, the issue conversation demonstrates the Pieces team's responsiveness to user feedback and commitment to continuous improvement.**",
           "activity_level": 6.62
         },
         {
           "id": 590,
           "title": "Non-dismissable overlay message.",
-          "text": "Non-dismissable overlay message.\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nv11.0.4\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nMy Pieces app launches at Windows startup (intended). Sometimes, (possibly after a background update?), this dialog appears on my desktop. I don't know what it means, exactly, but I cannot click \"Ok\" and there is no other way to dismiss it. My only option appears to be to restart the computer, which is often impractical. Please fix!\n\n![Image](https://github.com/user-attachments/assets/f231ef56-3d59-4e94-8cb5-2b54249900cc)\n## Summary of GitHub Issue Conversation: Unable to Launch Pieces Windows Desktop Version\n\n**Key points raised:**\n\n* @ThemePark is unable to launch the Pieces Windows Desktop Version.\n* This issue is similar to existing issues 546, 571, and 131.\n\n**Problems identified:**\n\n* The user cannot launch the Pieces Windows Desktop app.\n* The cause of the issue is unclear.\n\n**Solutions proposed/implemented:**\n\n* @Mack-at-Pieces asks for the user's Windows version and confirmation of installed software.\n* No further solutions are proposed in the conversation excerpt.\n\n**Current status/outcome:**\n\n* The issue is currently being investigated by @Mack-at-Pieces.\n* The outcome is unknown at this time.\n\n**Additional information:**\n\n* The user is directed to several resources, including existing issues, documentation, and a YouTube channel.",
+          "text": "Non-dismissable overlay message.\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nv11.0.4\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nMy Pieces app launches at Windows startup (intended). Sometimes, (possibly after a background update?), this dialog appears on my desktop. I don't know what it means, exactly, but I cannot click \"Ok\" and there is no other way to dismiss it. My only option appears to be to restart the computer, which is often impractical. Please fix!\n\n![Image](https://github.com/user-attachments/assets/f231ef56-3d59-4e94-8cb5-2b54249900cc)\n## Summary of GitHub Issue Conversation:\n\n**Key Points Raised:**\n\n* ThemePark reported an issue where they were unable to open Pieces Core Services.\n* The issue was automatically triaged and routed to the relevant team member.\n* ThemePark provided additional details about their system configuration.\n\n**Problems Identified:**\n\n* ThemePark was unable to open Pieces Core Services.\n\n**Solutions Proposed/Implemented:**\n\n* Related issues were suggested for reference.\n* Questions were asked to gather more information about ThemePark's system configuration.\n\n**Current Status/Outcome:**\n\n* The issue is being investigated by the Pieces team.\n* No further updates are available at this time.\n\n**Additional Information:**\n\n* The issue was reported on January 17, 2025.\n* The issue was raised by ThemePark.\n* The issue was addressed by mack-at-pieces.",
           "activity_level": 3.21
         },
         {
           "id": 591,
           "title": "Unable to open Pieces Copilot Service",
-          "text": "Unable to open Pieces Copilot Service\nError: HttpException: Connection closed before full header was received, uri = http://127.0.0.1:39300/model/2fca5f65-b3ce-459b-b394-0ea5de0b050d/download/progress\n\n**Installation Details**\n\nSucceeded: true\nPath: C:\\Program Files\\WindowsApps\\com.MeshIntelligentTechnologi.PiecesOS_11.0.4.0_x64__84gz00a5z79wr/os_server.exe\n\n**PiecesOS Information**\n\nID: 62ded9e8-d9d0-490e-b34e-632516b3cf1a\r\n\nUser: Anonymous\nCurrent Version: 11.0.4\nMin Version Supported: 11.0.4\nMax Version Supported: 12.0.0\nLocal Port: 39300\n\n**Device Information**\n\nOperating System: Windows\nCurrent Version: \"Windows 10 Home Single Language\" 10.0 (Build 26100)\nMin Version Supported: Windows 10 Build 1903\n## Summary of GitHub Issue Conversation\n\n**Key Points:**\n\n* User @AmanSingh766 reported an issue with downloading local LLMs.\n* The error message is \"Connection closed before full header was received\".\n* The issue has been routed to the proper Pieces team member for investigation.\n\n**Problems Identified:**\n\n* User is unable to download local LLMs.\n* The cause of the error is unknown.\n\n**Solutions Proposed/Implemented:**\n\n* User has been asked to provide support logs.\n* It has been suggested to check if the issue occurs with semua downloads or only a specific one.\n\n**Current Status/Outcome:**\n\n* The team is investigating the issue.\n* No solution has been provided yet.\n\n**Additional Notes:**\n\n* The user has been provided with links to relevant resources.",
-          "activity_level": 3.48
+          "text": "Unable to open Pieces Copilot Service\nError: HttpException: Connection closed before full header was received, uri = http://127.0.0.1:39300/model/2fca5f65-b3ce-459b-b394-0ea5de0b050d/download/progress\n\n**Installation Details**\n\nSucceeded: true\nPath: C:\\Program Files\\WindowsApps\\com.MeshIntelligentTechnologi.PiecesOS_11.0.4.0_x64__84gz00a5z79wr/os_server.exe\n\n**PiecesOS Information**\n\nID: 62ded9e8-d9d0-490e-b34e-632516b3cf1a\r\n\nUser: Anonymous\nCurrent Version: 11.0.4\nMin Version Supported: 11.0.4\nMax Version Supported: 12.0.0\nLocal Port: 39300\n\n**Device Information**\n\nOperating System: Windows\nCurrent Version: \"Windows 10 Home Single Language\" 10.0 (Build 26100)\nMin Version Supported: Windows 10 Build 1903\n## Summary of GitHub Issue Conversation:\n\n**Key Points:**\n\n* User AmanSingh766 reported an exception when downloading local LLMs in Pieces Copilot Service.\n* The error message is: \"Connection closed before full header was received, uri = http://127.0.0.1:39300/model/2fca5f65-b3ce-459b-b394-0ea5de0b050d/download/progress\".\n\n**Problems Identified:**\n\n* User is unable to download local LLMs.\n* The specific cause of the download error is unknown.\n\n**Solutions Proposed/Implemented:**\n\n* Pieces support representative requested support logs and further information about the issue.\n* No solutions have been implemented yet.\n\n**Current Status/Outcome:**\n\n* The issue is currently being investigated by Pieces support.\n* There is no known resolution at this time.\n\n**Additional Notes:**\n\n* The issue was automatically triaged by a bot and assigned to a Pieces team member.\n* The user was provided with links to related issues and resources.",
+          "activity_level": 3.21
+        }
+      ]
+    },
+    {
+      "title": "Pieces Copilot Errors and Connectivity Issues",
+      "description": "Users are reporting various errors with Pieces Copilot, including connection issues, download failures for local LLMs, and unresponsive overlays.  Proposed solutions involve checking API keys, updating the software, and gathering system logs for further investigation by the Pieces team.",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 561,
+          "title": "Copilot Bug: 'I'm sorry. Something went wrong with processing. Please...' copilot response",
+          "text": "Copilot Bug: 'I'm sorry. Something went wrong with processing. Please...' copilot response\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.0.3\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nhi i have been using it for 2 days but for the last 2 hours the desktop and visual studio extension are not working. \n\nNo matter what I type, it gives me this error. There was an update message for the app, it was about installing a version, I installed it but it didn't fix it.\nalways the same message \nvisual studio ide 2022 17.12 \nwindows 10 pro\n![Image](https://github.com/user-attachments/assets/c64d85bd-eb1a-4f1c-a25e-570c9a55ccd1)\n![Image](https://github.com/user-attachments/assets/55b600a6-95f4-4e71-aee1-1b1ce8b6599c)\n\n\n## Summary of GitHub Issue Conversation\n\n**Key Points Raised:**\n\n* **Issue:** Users experiencing errors with various language models, including Claude and Gemini.\n* **Possible Causes:** \n    * Invalid OpenAI API keys.\n    * Issues with Specific models (Claude and Gemini).\n    * Outdated versions of the product.\n    * API rate limits.\n\n**Solutions Proposed/Implemented:**\n\n* Removing the OpenAI API key.\n* Switching to the GPT4o model.\n* Updating to the latest version (11.0.3).\n* Ensuring sign-in to Pieces.\n* Keeping the OpenAI key out of the product for now.\n\n**Current Status/Outcome:**\n\n* The issue appears to be ongoing, with some users still experiencing problems.\n* The root cause of the issue is still being investigated.\n* Workarounds exist, but a permanent solution is not yet available.\n\n**Additional Notes:**\n\n* The author of the issue conversation is not explicitly mentioned.\n* The specific product or service affected is not clear.\n* The conversation spans multiple days, suggesting an ongoing issue.\n\n**Overall, the conversation highlights a frustrating issue impacting users' ability to utilize language models. While some workarounds exist, a definitive solution is still needed.**",
+          "activity_level": 4.53
+        },
+        {
+          "id": 591,
+          "title": "Unable to open Pieces Copilot Service",
+          "text": "Unable to open Pieces Copilot Service\nError: HttpException: Connection closed before full header was received, uri = http://127.0.0.1:39300/model/2fca5f65-b3ce-459b-b394-0ea5de0b050d/download/progress\n\n**Installation Details**\n\nSucceeded: true\nPath: C:\\Program Files\\WindowsApps\\com.MeshIntelligentTechnologi.PiecesOS_11.0.4.0_x64__84gz00a5z79wr/os_server.exe\n\n**PiecesOS Information**\n\nID: 62ded9e8-d9d0-490e-b34e-632516b3cf1a\r\n\nUser: Anonymous\nCurrent Version: 11.0.4\nMin Version Supported: 11.0.4\nMax Version Supported: 12.0.0\nLocal Port: 39300\n\n**Device Information**\n\nOperating System: Windows\nCurrent Version: \"Windows 10 Home Single Language\" 10.0 (Build 26100)\nMin Version Supported: Windows 10 Build 1903\n## Summary of GitHub Issue Conversation:\n\n**Key Points:**\n\n* User AmanSingh766 reported an exception when downloading local LLMs in Pieces Copilot Service.\n* The error message is: \"Connection closed before full header was received, uri = http://127.0.0.1:39300/model/2fca5f65-b3ce-459b-b394-0ea5de0b050d/download/progress\".\n\n**Problems Identified:**\n\n* User is unable to download local LLMs.\n* The specific cause of the download error is unknown.\n\n**Solutions Proposed/Implemented:**\n\n* Pieces support representative requested support logs and further information about the issue.\n* No solutions have been implemented yet.\n\n**Current Status/Outcome:**\n\n* The issue is currently being investigated by Pieces support.\n* There is no known resolution at this time.\n\n**Additional Notes:**\n\n* The issue was automatically triaged by a bot and assigned to a Pieces team member.\n* The user was provided with links to related issues and resources.",
+          "activity_level": 3.21
+        },
+        {
+          "id": 590,
+          "title": "Non-dismissable overlay message.",
+          "text": "Non-dismissable overlay message.\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nv11.0.4\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nMy Pieces app launches at Windows startup (intended). Sometimes, (possibly after a background update?), this dialog appears on my desktop. I don't know what it means, exactly, but I cannot click \"Ok\" and there is no other way to dismiss it. My only option appears to be to restart the computer, which is often impractical. Please fix!\n\n![Image](https://github.com/user-attachments/assets/f231ef56-3d59-4e94-8cb5-2b54249900cc)\n## Summary of GitHub Issue Conversation:\n\n**Key Points Raised:**\n\n* ThemePark reported an issue where they were unable to open Pieces Core Services.\n* The issue was automatically triaged and routed to the relevant team member.\n* ThemePark provided additional details about their system configuration.\n\n**Problems Identified:**\n\n* ThemePark was unable to open Pieces Core Services.\n\n**Solutions Proposed/Implemented:**\n\n* Related issues were suggested for reference.\n* Questions were asked to gather more information about ThemePark's system configuration.\n\n**Current Status/Outcome:**\n\n* The issue is being investigated by the Pieces team.\n* No further updates are available at this time.\n\n**Additional Information:**\n\n* The issue was reported on January 17, 2025.\n* The issue was raised by ThemePark.\n* The issue was addressed by mack-at-pieces.",
+          "activity_level": 3.21
         }
       ]
     }
   ],
   "recommendations": [
-    "\"Investigate Pieces OS Errors: Prioritize resolving the recurring issue of 'Pieces OS Errors and Feature Requests' as it has the highest frequency (3) and relates to app launch failures and error messages. This will directly impact user experience.\"",
-    "\"Improve Communication on Overlay Message: Address the 'Non-dismissable overlay message' issue by providing clearer information to the user about the message's purpose and how to resolve or dismiss it. This will reduce user frustration.\"",
-    "\"Gather More Data on Copilot Service Issue: For the 'Unable to open Pieces Copilot Service' issue, gather more data from users experiencing this, including their specific operating system versions and any recent software changes. This will help pinpoint the root cause.\""
+    "\"Investigate and address the root causes of errors with Pieces OS, such as Pieces Core Services issues and local LLM download failures.\"",
+    "\"Prioritize resolving the non-dismissable overlay message bug, as it requires users to restart their computers.\"",
+    "\"Provide clearer documentation and support resources for users experiencing issues with Pieces Copilot, including troubleshooting steps for connection problems and download errors.\"",
+    "\"Consider implementing a feature to support additional scripting languages based on user requests and the popularity of the suggestion.\""
   ],
   "message": "Daily support report generated successfully."
 }

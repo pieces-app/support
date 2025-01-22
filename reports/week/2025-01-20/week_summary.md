@@ -1,35 +1,46 @@
 # Support Ticket Report
-- Generated: 2025-01-22 05:07:08
+- Generated: 2025-01-22 13:10:58
 - Period: 2025-01-20 to 2025-01-22
 
 ## Summary
-- **Total Tickets:** 3
+- **Total Tickets:** 4
 - **Resolved:** 0
-- **Open:** 3
+- **Open:** 4
 
 ## 5 Most Active Tickets
 | Issue # | Title | Activity Level |
 |---------|-------|----------------|
 | [#594](https://github.com/pieces-app/support/issues/594) | Adding a script language to the supported languages | 6.62 |
-| [#591](https://github.com/pieces-app/support/issues/591) | Unable to open Pieces Copilot Service | 3.48 |
+| [#561](https://github.com/pieces-app/support/issues/561) | Copilot Bug: 'I'm sorry. Something went wrong with processing. Please...' copilot response | 4.53 |
+| [#591](https://github.com/pieces-app/support/issues/591) | Unable to open Pieces Copilot Service | 3.21 |
 | [#590](https://github.com/pieces-app/support/issues/590) | Non-dismissable overlay message. | 3.21 |
 
 ## Common Issues
 ### 1. Pieces OS Errors and Feature Requests
-Users report various issues with Pieces OS, including app launch failures, error messages, and feature requests. Troubleshooting steps involve gathering system information, checking for software conflicts, and providing logs. Solutions range from bug fixes to implementing new features based on user feedback.
+Users are encountering errors with Pieces OS, including issues with Pieces Core Services and downloading local LLMs. Additionally, users are requesting new features, such as support for additional scripting languages. The Pieces team is actively investigating and addressing these issues, providing support and gathering information to resolve problems.
 
 **Related Issues:**
 - [#594](https://github.com/pieces-app/support/issues/594): Adding a script language to the supported languages
 - [#590](https://github.com/pieces-app/support/issues/590): Non-dismissable overlay message.
 - [#591](https://github.com/pieces-app/support/issues/591): Unable to open Pieces Copilot Service
 
+### 2. Pieces Copilot Errors and Connectivity Issues
+Users are reporting various errors with Pieces Copilot, including connection issues, download failures for local LLMs, and unresponsive overlays.  Proposed solutions involve checking API keys, updating the software, and gathering system logs for further investigation by the Pieces team.
+
+**Related Issues:**
+- [#561](https://github.com/pieces-app/support/issues/561): Copilot Bug: 'I'm sorry. Something went wrong with processing. Please...' copilot response
+- [#591](https://github.com/pieces-app/support/issues/591): Unable to open Pieces Copilot Service
+- [#590](https://github.com/pieces-app/support/issues/590): Non-dismissable overlay message.
+
 
 ## Recommendations
-- "Investigate Pieces OS Errors: Prioritize resolving the recurring issue of 'Pieces OS Errors and Feature Requests' as it has the highest frequency (3) and relates to app launch failures and error messages. This will directly impact user experience."
-- "Improve Communication on Overlay Message: Address the 'Non-dismissable overlay message' issue by providing clearer information to the user about the message's purpose and how to resolve or dismiss it. This will reduce user frustration."
-- "Gather More Data on Copilot Service Issue: For the 'Unable to open Pieces Copilot Service' issue, gather more data from users experiencing this, including their specific operating system versions and any recent software changes. This will help pinpoint the root cause."
+- "Investigate and address the root causes of errors with Pieces OS, such as Pieces Core Services issues and local LLM download failures."
+- "Prioritize resolving the non-dismissable overlay message bug, as it requires users to restart their computers."
+- "Provide clearer documentation and support resources for users experiencing issues with Pieces Copilot, including troubleshooting steps for connection problems and download errors."
+- "Consider implementing a feature to support additional scripting languages based on user requests and the popularity of the suggestion."
 
 ## Daily Reports
 Here are the daily reports for this week:
 
 - [report_210557](daily/2025-01-21/report_210557.md)
+- [report_131004](daily/2025-01-22/report_131004.md)
