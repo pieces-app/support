@@ -1,6 +1,6 @@
 # Support Ticket Report
-- Generated: 2025-01-21 21:06:36
-- Period: 2025-01-20 to 2025-01-21
+- Generated: 2025-01-22 05:07:08
+- Period: 2025-01-20 to 2025-01-22
 
 ## Summary
 - **Total Tickets:** 3
@@ -15,8 +15,8 @@
 | [#590](https://github.com/pieces-app/support/issues/590) | Non-dismissable overlay message. | 3.21 |
 
 ## Common Issues
-### 1. Pieces Users Report Issues and Request Features
-Users report various issues like app launch failures, download errors, and feature requests for language support. The Pieces team actively triages, requests information, and works towards solutions while keeping users informed.
+### 1. Pieces OS Errors and Feature Requests
+Users report various issues with Pieces OS, including app launch failures, error messages, and feature requests. Troubleshooting steps involve gathering system information, checking for software conflicts, and providing logs. Solutions range from bug fixes to implementing new features based on user feedback.
 
 **Related Issues:**
 - [#594](https://github.com/pieces-app/support/issues/594): Adding a script language to the supported languages
@@ -25,12 +25,9 @@ Users report various issues like app launch failures, download errors, and featu
 
 
 ## Recommendations
-- **Investigate and address the root cause of app launch failures and download errors:** This is crucial to improve user experience and reduce ticket volume related to these issues.
-- **Provide clear and concise documentation on language support:** This will help users understand how to use Pieces with their desired languages and potentially reduce support requests.
-- **Improve communication around background updates:** Users should be informed about background updates and how to manage them to avoid unexpected dialog boxes or interruptions.
-- **Investigate and resolve the "Connection closed before full header was received" error:** This error seems to be preventing users from downloading local LLMs, impacting the functionality of Pieces Copilot Service.
-- **Consider implementing a more robust error handling and reporting mechanism:** This will help gather more detailed information about errors, making it easier to diagnose and fix issues effectively.
-- **Prioritize feature requests based on user demand and impact:** Addressing popular feature requests like adding support for more scripting languages can significantly improve user satisfaction.
+- "Investigate Pieces OS Errors: Prioritize resolving the recurring issue of 'Pieces OS Errors and Feature Requests' as it has the highest frequency (3) and relates to app launch failures and error messages. This will directly impact user experience."
+- "Improve Communication on Overlay Message: Address the 'Non-dismissable overlay message' issue by providing clearer information to the user about the message's purpose and how to resolve or dismiss it. This will reduce user frustration."
+- "Gather More Data on Copilot Service Issue: For the 'Unable to open Pieces Copilot Service' issue, gather more data from users experiencing this, including their specific operating system versions and any recent software changes. This will help pinpoint the root cause."
 
 ## Daily Reports
 Here are the daily reports for this week:
