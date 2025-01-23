@@ -1,0 +1,74 @@
+{
+  "success": true,
+  "date_range": {
+    "start": "2025-01-23T00:00:00+00:00",
+    "end": "2025-01-23T13:09:54.405393+00:00"
+  },
+  "summary": {
+    "total_tickets": 1,
+    "resolved_tickets": 0,
+    "open_tickets": 1
+  },
+  "ticket_breakdown": [
+    {
+      "category": "bug",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:new",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:desktop application",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "os:linux",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "known_issue",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    }
+  ],
+  "most_active_tickets": [
+    {
+      "number": 537,
+      "title": "Ollama Fails to Install on Linux",
+      "activity_level": 3.53
+    }
+  ],
+  "common_issues": [
+    {
+      "title": "Ollama installation fails in Pieces-OS",
+      "description": "Users are unable to install Ollama through the Pieces desktop app on Linux due to a missing 'curl' dependency within the Pieces-OS Snap sandbox environment. A patch is being developed to address this, but a concrete timeline for resolution is unavailable.",
+      "frequency": 1,
+      "related_issues": [
+        {
+          "id": 537,
+          "title": "Ollama Fails to Install on Linux",
+          "text": "Ollama Fails to Install on Linux\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nLinux\n\n### Your Pieces OS Version\n\n11.0.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nUser reports immediate \"Ollama failed to install\" diaglog upon clicking install Ollama install button in Pieces desktop app\n## Conversation Summary: Ollama Installation Issue in Pieces-OS on Ubuntu\n\n**Key points raised:**\n\n* @brian-at-pieces initially believed the issue was a missing `curl` dependency which could be resolved by installing it.\n* @ekuznetsov139 confirmed having `curl` installed but pointed out the Pieces-OS snap environment lacks it, requiring its addition to the snap definition file.\n* Internal miscommunication within Pieces team about the confinement level of their Snap package caused confusion.\n\n**Problems identified:**\n\n* Ollama installation fails due to missing `curl` in Pieces-OS Snap sandbox.\n* Installing Ollama manually outside the Snap environment has no effect.\n\n**Solutions proposed/implemented:**\n\n* Patch is being developed to enable Ollama usage within the Snap sandbox environment.\n\n**Current status/outcome:**\n\n* Issue remains unresolved as of January 23, 2025 in the latest Snap version on Ubuntu.\n* A fix is promised, but no specific ETA provided.",
+          "activity_level": 3.53
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    "**Prioritize resolution of Ollama installation issue on Linux:** This is a critical issue affecting Linux users and hindering Ollama adoption within Pieces-OS. Allocate resources to expedite the patch development and release.",
+    "**Improve communication about known issues:** Provide clear and timely updates to users about the status of the Ollama installation issue, including estimated resolution timelines. Consider a dedicated page or section for known issues.",
+    "**Review and update Pieces-OS Snap sandbox environment:** Investigate the missing 'curl' dependency and any other potential limitations within the Snap sandbox to prevent similar issues in the future. Ensure essential dependencies for common tools and applications are included.",
+    "**Gather more detailed information about user environments:** Encourage users to provide their Pieces OS version and distribution details when reporting issues to aid in troubleshooting and reproduction.",
+    "**Consider providing a temporary workaround:** While the patch is being developed, explore potential temporary workarounds or alternative installation methods for Ollama on Linux to mitigate user frustration."
+  ],
+  "message": "Daily support report generated successfully."
+}
