@@ -1,69 +1,69 @@
 # Support Ticket Report
-- Generated: 2025-01-24 13:11:16
+- Generated: 2025-01-24 21:08:34
 - Period: 2025-01-20 to 2025-01-24
 
 ## Summary
-- **Total Tickets:** 10
+- **Total Tickets:** 11
 - **Resolved:** 2
-- **Open:** 8
+- **Open:** 9
 
 ## 5 Most Active Tickets
 | Issue # | Title | Activity Level |
 |---------|-------|----------------|
+| [#596](https://github.com/pieces-app/support/issues/596) | Getting Error: connect ECONNREFUSED 127.0.0.1:1000 | 6.94 |
 | [#561](https://github.com/pieces-app/support/issues/561) | Copilot Bug: 'I'm sorry. Something went wrong with processing. Please...' copilot response | 5.25 |
 | [#584](https://github.com/pieces-app/support/issues/584) | Copilot is not giving any feedback | 4.53 |
-| [#537](https://github.com/pieces-app/support/issues/537) | Ollama Fails to Install on Linux | 3.88 |
-| [#594](https://github.com/pieces-app/support/issues/594) | Adding a script language to the supported languages | 3.66 |
-| [#307](https://github.com/pieces-app/support/issues/307) | The interface's font is too large. | 3.01 |
+| [#537](https://github.com/pieces-app/support/issues/537) | Ollama Fails to Install on Linux | 3.85 |
+| [#594](https://github.com/pieces-app/support/issues/594) | Adding a script language to the supported languages | 3.29 |
 
 ## Common Issues
-### 1. Pieces Copilot experiencing errors and malfunctions
-Users report Pieces Copilot failing to generate responses, getting stuck loading, or displaying error messages. Issues persist across different operating systems and Pieces versions. Proposed solutions include updating PiecesOS, switching AI models, removing OpenAI API keys, and checking for conflicts with security software. While some workarounds exist, the root cause remains unclear, and the Pieces team is actively investigating.
+### 1. Pieces Copilot Processing Errors and UI Issues
+Users report Pieces Copilot encountering processing errors, displaying 'Something went wrong' messages.  This might be related to OpenAI API keys, SSL certificates, or specific LLMs. Suggested solutions include removing API keys, switching to GPT4o, reinstalling software, or updating to the latest version. Additionally, users experience UI issues like oversized fonts and zoom functionalities not working properly, with the Pieces team actively working on solutions.
 
 **Related Issues:**
 - [#307](https://github.com/pieces-app/support/issues/307): The interface's font is too large.
 - [#584](https://github.com/pieces-app/support/issues/584): Copilot is not giving any feedback
 - [#561](https://github.com/pieces-app/support/issues/561): Copilot Bug: 'I'm sorry. Something went wrong with processing. Please...' copilot response
 
-### 2. Copilot Processing Errors and Failures
-Users are experiencing issues with Copilot, including loading failures and "Something went wrong with processing" errors.  These issues persist across different operating systems and Pieces versions. Proposed solutions include updating PiecesOS, switching to the GPT-4o model, removing OpenAI API keys, and checking for conflicts with security software.
+### 2. Pieces Copilot Processing Errors
+Users report Pieces Copilot failing to process requests, displaying error messages. This issue appears across operating systems and Pieces versions. Suggested solutions include checking OpenAI API keys, switching to GPT4o model, ensuring Pieces isn't blocked by firewalls, and reinstalling Pieces software.
 
 **Related Issues:**
 - [#584](https://github.com/pieces-app/support/issues/584): Copilot is not giving any feedback
 - [#561](https://github.com/pieces-app/support/issues/561): Copilot Bug: 'I'm sorry. Something went wrong with processing. Please...' copilot response
 - [#590](https://github.com/pieces-app/support/issues/590): Non-dismissable overlay message.
 
-### 3. Pieces Copilot connection and processing errors
-Users are experiencing connection errors and "Something went wrong with processing" errors with Pieces Copilot. Proposed solutions include checking for PiecesOS updates, ensuring API keys are correctly configured, and verifying Pieces is allowed by firewalls and antivirus software. The issue seems to persist across different Pieces versions and operating systems.
+### 3. Pieces OS Connection Issues
+Users report connection errors with Pieces OS after updating to version 11.0.4.  These errors manifest as 'Connection refused' messages when attempting to connect to the Pieces OS endpoint (127.0.0.1:1000 or 127.0.0.1:39300) and difficulties downloading local LLMs.  Suggested solutions include verifying the Pieces OS is running and the correct port is being used.  Further investigation and support logs may be required for diagnosis.
 
 **Related Issues:**
+- [#596](https://github.com/pieces-app/support/issues/596): Getting Error: connect ECONNREFUSED 127.0.0.1:1000
+- [#590](https://github.com/pieces-app/support/issues/590): Non-dismissable overlay message.
 - [#591](https://github.com/pieces-app/support/issues/591): Unable to open Pieces Copilot Service
-- [#561](https://github.com/pieces-app/support/issues/561): Copilot Bug: 'I'm sorry. Something went wrong with processing. Please...' copilot response
-- [#584](https://github.com/pieces-app/support/issues/584): Copilot is not giving any feedback
 
-### 4. Pieces installation and feature failures
-Users report Pieces features or installation failing on various operating systems, including Windows, MacOS, and Linux.  The errors often manifest as cryptic messages with no clear resolution. Proposed solutions include software updates, configuration changes (like adding Pieces to Windows Defender exclusion list), and debugging with the Pieces team.
+### 4. Pieces OS and App Installation and Processing Errors
+Users report installation failures of Pieces OS and app on Linux and Windows due to missing dependencies, sandbox restrictions, and Windows Defender blocks. Processing errors with messages like 'Something went wrong with processing' are also prevalent, potentially linked to OpenAI API keys and SSL certificates. Proposed solutions include dependency installation, software updates, Windows Defender configuration, and switching to alternative language models.
 
 **Related Issues:**
 - [#537](https://github.com/pieces-app/support/issues/537): Ollama Fails to Install on Linux
-- [#584](https://github.com/pieces-app/support/issues/584): Copilot is not giving any feedback
 - [#160](https://github.com/pieces-app/support/issues/160): suite installer always fails for me. (windows 11)
+- [#561](https://github.com/pieces-app/support/issues/561): Copilot Bug: 'I'm sorry. Something went wrong with processing. Please...' copilot response
 
-### 5. Pieces Suite Installer and App Issues
-Users report Pieces Suite installation failures on Windows, often due to Windows Defender blocks. Others experience app launch failures or 'Something went wrong' errors with Copilot, potentially linked to OpenAI API keys or model selection. Solutions include adding Pieces to Defender exclusions, switching Copilot models, or removing API keys.
+### 5. Pieces OS Windows App Errors
+Users report errors with the Pieces OS Windows app, including a non-dismissable overlay message, connection refused errors, and issues after upgrading to version 11.0.0. Suggested solutions include allowing access to Pieces Qdrant Server, checking Pieces OS and Desktop App installation, and ensuring the correct port (39300) is being used.
 
 **Related Issues:**
-- [#160](https://github.com/pieces-app/support/issues/160): suite installer always fails for me. (windows 11)
+- [#92](https://github.com/pieces-app/support/issues/92): ANNOUNCEMENT: Pieces Qdrant Server pop up in Pieces OS 8.0.0 Windows
 - [#590](https://github.com/pieces-app/support/issues/590): Non-dismissable overlay message.
-- [#561](https://github.com/pieces-app/support/issues/561): Copilot Bug: 'I'm sorry. Something went wrong with processing. Please...' copilot response
+- [#596](https://github.com/pieces-app/support/issues/596): Getting Error: connect ECONNREFUSED 127.0.0.1:1000
 
 
 ## Recommendations
-- **Prioritize Copilot Issues:** Allocate additional resources to investigate and resolve the ongoing issues with Pieces Copilot, such as processing errors and connection failures.
-- **Improve Windows Installer Experience:** Investigate and address the issues with the Pieces Suite installer on Windows, particularly the conflicts with Windows Defender.
-- **Enhance Error Messaging:** Provide clearer error messages to users, especially for installation and Copilot issues, to help them troubleshoot problems more effectively.
-- **Review Ollama Installation Process:** Review the Ollama installation process on Linux, specifically within the Snap environment, to address the reported failures and improve compatibility.
-- **Gather User Feedback:** Collect more detailed feedback from users experiencing issues, including their operating system, Pieces version, and steps to reproduce the problem, to aid in debugging and resolution.
+- "Investigate and address the root cause of Pieces Copilot processing errors, including OpenAI API key issues, SSL certificate problems, and potential conflicts with firewalls or antivirus software."
+- "Prioritize resolving connection issues with Pieces OS after updating to version 11.0.4, specifically the 'Connection refused' errors and difficulties downloading local LLMs."
+- "Provide clear and updated documentation on Pieces OS and app installation, addressing common issues such as missing dependencies, sandbox restrictions, and Windows Defender blocks."
+- "Improve the user experience for Pieces OS on Windows by addressing the non-dismissable overlay message and ensuring compatibility with different Windows versions."
+- "Consider implementing a more robust error handling and reporting mechanism for Pieces Copilot and Pieces OS to better diagnose and resolve issues."
 
 ## Daily Reports
 Here are the daily reports for this week:
@@ -75,3 +75,4 @@ Here are the daily reports for this week:
 - [report_130954](daily/2025-01-23/report_130954.md)
 - [report_050647](daily/2025-01-23/report_050647.md)
 - [report_130917](daily/2025-01-24/report_130917.md)
+- [report_210607](daily/2025-01-24/report_210607.md)

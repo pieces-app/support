@@ -2,25 +2,49 @@
   "success": true,
   "date_range": {
     "start": "2025-01-20T00:00:00+00:00",
-    "end": "2025-01-24T13:09:41.512571+00:00"
+    "end": "2025-01-24T21:06:45.120659+00:00"
   },
   "summary": {
-    "total_tickets": 10,
+    "total_tickets": 11,
     "resolved_tickets": 2,
-    "open_tickets": 8
+    "open_tickets": 9
   },
   "ticket_breakdown": [
     {
       "category": "bug",
+      "received": 7,
+      "resolved": 1,
+      "pending": 6
+    },
+    {
+      "category": "os:windows",
       "received": 6,
       "resolved": 1,
       "pending": 5
     },
     {
       "category": "app:desktop application",
-      "received": 7,
+      "received": 8,
       "resolved": 1,
+      "pending": 7
+    },
+    {
+      "category": "app:pieces os",
+      "received": 5,
+      "resolved": 1,
+      "pending": 4
+    },
+    {
+      "category": "status:triaged",
+      "received": 6,
+      "resolved": 0,
       "pending": 6
+    },
+    {
+      "category": "stale",
+      "received": 1,
+      "resolved": 1,
+      "pending": 0
     },
     {
       "category": "os:macos",
@@ -35,12 +59,6 @@
       "pending": 3
     },
     {
-      "category": "status:triaged",
-      "received": 5,
-      "resolved": 0,
-      "pending": 5
-    },
-    {
       "category": "status:in_progress",
       "received": 1,
       "resolved": 1,
@@ -48,24 +66,6 @@
     },
     {
       "category": "status:pending_user_confirmation",
-      "received": 1,
-      "resolved": 1,
-      "pending": 0
-    },
-    {
-      "category": "os:windows",
-      "received": 5,
-      "resolved": 1,
-      "pending": 4
-    },
-    {
-      "category": "app:pieces os",
-      "received": 4,
-      "resolved": 1,
-      "pending": 3
-    },
-    {
-      "category": "stale",
       "received": 1,
       "resolved": 1,
       "pending": 0
@@ -103,6 +103,11 @@
   ],
   "most_active_tickets": [
     {
+      "number": 596,
+      "title": "Getting Error: connect ECONNREFUSED 127.0.0.1:1000",
+      "activity_level": 6.94
+    },
+    {
       "number": 561,
       "title": "Copilot Bug: 'I'm sorry. Something went wrong with processing. Please...' copilot response",
       "activity_level": 5.25
@@ -115,12 +120,12 @@
     {
       "number": 537,
       "title": "Ollama Fails to Install on Linux",
-      "activity_level": 3.88
+      "activity_level": 3.85
     },
     {
       "number": 594,
       "title": "Adding a script language to the supported languages",
-      "activity_level": 3.66
+      "activity_level": 3.29
     },
     {
       "number": 307,
@@ -130,12 +135,7 @@
     {
       "number": 582,
       "title": "Saved Snippets Welcome Screen",
-      "activity_level": 3.0
-    },
-    {
-      "number": 590,
-      "title": "Non-dismissable overlay message.",
-      "activity_level": 2.84
+      "activity_level": 2.94
     },
     {
       "number": 591,
@@ -148,144 +148,149 @@
       "activity_level": 2.81
     },
     {
+      "number": 590,
+      "title": "Non-dismissable overlay message.",
+      "activity_level": 2.71
+    },
+    {
       "number": 92,
       "title": "ANNOUNCEMENT: Pieces Qdrant Server pop up in Pieces OS 8.0.0 Windows",
-      "activity_level": 1.3
+      "activity_level": 1.54
     }
   ],
   "common_issues": [
     {
-      "title": "Pieces Copilot experiencing errors and malfunctions",
-      "description": "Users report Pieces Copilot failing to generate responses, getting stuck loading, or displaying error messages. Issues persist across different operating systems and Pieces versions. Proposed solutions include updating PiecesOS, switching AI models, removing OpenAI API keys, and checking for conflicts with security software. While some workarounds exist, the root cause remains unclear, and the Pieces team is actively investigating.",
+      "title": "Pieces Copilot Processing Errors and UI Issues",
+      "description": "Users report Pieces Copilot encountering processing errors, displaying 'Something went wrong' messages.  This might be related to OpenAI API keys, SSL certificates, or specific LLMs. Suggested solutions include removing API keys, switching to GPT4o, reinstalling software, or updating to the latest version. Additionally, users experience UI issues like oversized fonts and zoom functionalities not working properly, with the Pieces team actively working on solutions.",
       "frequency": 3,
       "related_issues": [
         {
           "id": 307,
           "title": "The interface's font is too large.",
-          "text": "The interface's font is too large.\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nLinux\n\n### Your Pieces OS Version\n\n10.0.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nThe recent interface update, specifically the increased font size in the answer section, limits the number of answers that can be displayed. \r\n![Screenshot from 2024-07-12 22-14-57](https://github.com/user-attachments/assets/3265af50-ffc6-4ab1-b6b8-397cd3979a9f)\r\n\n## Summary of GitHub Issue Conversation\n\n**Key points raised:**\n\n* Pieces Copilot app UI needs adjustments.\n* Some Pieces services are down.\n* Font size is too large after update.\n* User should be able to zoom in/out in onboarding screens.\n\n**Problems identified:**\n\n* UI needs improvement.\n* Recent update changed font size.\n* Lack of zoom functionality in onboarding screens.\n\n**Solutions proposed/implemented:**\n\n* Team is working on UI adjustments.\n* User can use Ctrl+ or Ctrl- to adjust zoom in desktop app.\n* Version 3.1.0 of Desktop App released with potential fix.\n\n**Current status/outcome:**\n\n* Issue with font size potentially fixed in version 3.1.0.\n* Zooming in onboarding screens still not implemented.\n* Team is investigating further.\n\n**Additional Notes:**\n\n* Zoom functionality in chat window might be buggy.\n* Issue persists with high resolution displays.\n\n## Important Details\n\n* User should be able to zoom in both main application and onboarding screens.\n* Problem with font size likely addressed in latest version of Desktop App.\n* Zooming issue in chat window might require further investigation.",
+          "text": "The interface's font is too large.\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nLinux\n\n### Your Pieces OS Version\n\n10.0.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nThe recent interface update, specifically the increased font size in the answer section, limits the number of answers that can be displayed. \r\n![Screenshot from 2024-07-12 22-14-57](https://github.com/user-attachments/assets/3265af50-ffc6-4ab1-b6b8-397cd3979a9f)\r\n\n## Summary of GitHub Issue Conversation\n\n**Key Points:**\n\n* User `ksubramanyeshwara` reported two issues:\n    * Font size increased after update in the Pieces Copilot app.\n    * Unable to zoom in/out during onboarding screens.\n* The team acknowledged the font size issue and mentioned ongoing UI adjustments.\n* User `choir241` provided steps to reproduce the zoom issue and suggested a solution.\n* User `hra42` reported a similar issue with the chat window zoom.\n* The team released version 3.1.0 of the Desktop App with a fix for the zoom issue.\n\n**Problems Identified:**\n\n* Increased font size in the Pieces Copilot app post-update.\n* Inability to zoom in/out during onboarding screens.\n* Inability to zoom in/out on the chat window.\n\n**Solutions Proposed/Implemented:**\n\n* The team is working on UI adjustments for the font size issue.\n* Zooming in/out during onboarding screens was fixed in version 3.1.0 of the Desktop App.\n* No clear solution mentioned for the chat window zoom issue.\n\n**Current Status/Outcome:**\n\n* Font size issue is being addressed through UI adjustments.\n* Zoom issue in onboarding screens is resolved in version 3.1.0.\n* Chat window zoom issue still persists.\n\n**Additional Notes:**\n\n* The conversation spans from July 2024 to January 2025.\n* Some users reported experiencing the issue on specific screen resolutions and OS versions.",
           "activity_level": 3.01
         },
         {
           "id": 584,
           "title": "Copilot is not giving any feedback",
-          "text": "Copilot is not giving any feedback\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\nPieces for Developers 3.3.3\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nThe copilot is not generating anything, it just keeps on loading.\n## Summary of GitHub Issue Conversation:\n\n**Key Points Raised:**\n\n* @gittydia reported an issue with Copilot responses stating \"I'm sorry. Something went wrong with processing.\"\n* @luigigalli confirmed the same issue on macOS with Pieces for Developers 3.3.4 and PiecesOS 11.0.19 staging.\n\n**Problems Identified:**\n\n* Copilot responses were failing with an error message.\n* The issue persisted even after updating to PiecesOS 11.0.4.\n\n**Solutions Proposed/Implemented:**\n\n* @mark-at-pieces suggested updating to PiecesOS 11.0.4, which was supposed to include a fix for the issue.\n* @mark-at-pieces later suggested uninstalling the staging build and installing the stable version of PiecesOS 11.0.4.\n* @mark-at-pieces offered to schedule a call for real-time debugging.\n\n**Current Status/Outcome:**\n\n* The issue remains unresolved for @luigigalli even after updating to PiecesOS 11.0.4.\n* A call has been scheduled for further debugging.",
+          "text": "Copilot is not giving any feedback\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\nPieces for Developers 3.3.3\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nThe copilot is not generating anything, it just keeps on loading.\n## Summary of GitHub Issue Conversation\n\n**Key Points Raised:**\n\n* @gittydia reported an issue with Pieces Copilot Service.\n* The issue was related to the \"I'm sorry. Something went wrong with the processing...\" error message.\n* @luigigalli confirmed the same issue on macOS with the latest PiecesOS version.\n\n**Problems Identified:**\n\n* The \"I'm sorry. Something went wrong with the processing...\" error message was occurring for multiple users.\n* The issue persisted even after the supposed fix in PiecesOS 11.0.4.\n* The issue occurred with different LLMs (Claude Sonnet, ChatGPT, Gemini).\n\n**Solutions Proposed/Implemented:**\n\n* Upgrade to PiecesOS 11.0.4.\n* Uninstall the 11.0.19-staging build for POS and install the latest from Production 11.0.4.\n* Real-time debugging via a scheduled call.\n\n**Current Status/Outcome:**\n\n* The issue remains unresolved for @luigigalli.\n* A real-time debugging session is scheduled to further investigate the problem.\n\n**Additional Notes:**\n\n* The bot initially suggested related issues and helpful resources.\n* @mark-at-pieces provided support and troubleshooting steps.\n* Staging builds are not recommended due to potential instability.",
           "activity_level": 4.53
         },
         {
           "id": 561,
           "title": "Copilot Bug: 'I'm sorry. Something went wrong with processing. Please...' copilot response",
-          "text": "Copilot Bug: 'I'm sorry. Something went wrong with processing. Please...' copilot response\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.0.3\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nhi i have been using it for 2 days but for the last 2 hours the desktop and visual studio extension are not working. \n\nNo matter what I type, it gives me this error. There was an update message for the app, it was about installing a version, I installed it but it didn't fix it.\nalways the same message \nvisual studio ide 2022 17.12 \nwindows 10 pro\n![Image](https://github.com/user-attachments/assets/c64d85bd-eb1a-4f1c-a25e-570c9a55ccd1)\n![Image](https://github.com/user-attachments/assets/55b600a6-95f4-4e71-aee1-1b1ce8b6599c)\n\n\n## GitHub Issue Summary\n\n**Issue:** Users are experiencing \"Something went wrong with processing\" error when using Pieces with Claude or Gemini models.\n\n**Key Points Raised:**\n\n* Multiple users experiencing the same error message.\n* Switching to GPT-4o model resolves the issue for some users.\n* Updating to version 11.0.3 and signing in to Pieces may improve success rate.\n* OpenAI API key might be causing failures and should be removed temporarily.\n\n**Problems Identified:**\n\n* Underlying cause of the error message is not yet determined.\n* OpenAI API key may be causing conflicts with Pieces service.\n* Local SSL certificate issue may be involved.\n\n**Solutions Proposed/Implemented:**\n\n* Switch to GPT-4o model.\n* Update to version 11.0.3 and sign in to Pieces.\n* Remove OpenAI API key.\n* Reinstall Pieces for Developers and PiecesOS.\n* Ensure Windows Defender is not blocking Pieces requests.\n\n**Current Status/Outcome:**\n\n* The issue is still under investigation.\n* Some users have found workarounds by switching models or removing OpenAI API key.\n* The exact cause and permanent solution are yet to be identified.",
+          "text": "Copilot Bug: 'I'm sorry. Something went wrong with processing. Please...' copilot response\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.0.3\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nhi i have been using it for 2 days but for the last 2 hours the desktop and visual studio extension are not working. \n\nNo matter what I type, it gives me this error. There was an update message for the app, it was about installing a version, I installed it but it didn't fix it.\nalways the same message \nvisual studio ide 2022 17.12 \nwindows 10 pro\n![Image](https://github.com/user-attachments/assets/c64d85bd-eb1a-4f1c-a25e-570c9a55ccd1)\n![Image](https://github.com/user-attachments/assets/55b600a6-95f4-4e71-aee1-1b1ce8b6599c)\n\n\n## Summary of GitHub Issue Conversation\n\n**Key Points:**\n\n* Users are experiencing issues with processing requests, receiving error messages like \"Something went wrong with processing.\"\n* The issue seems to be related to OpenAI API keys and local SSL certificates.\n* The proposed solutions include removing the OpenAI API key, switching to the GPT4o model, and reinstalling the Pieces software.\n\n**Problems Identified:**\n\n* OpenAI API keys are causing processing failures in some cases.\n* There may be issues with local SSL certificates.\n* Claude and Gemini language models might be experiencing problems.\n\n**Solutions Proposed/Implemented:**\n\n* Remove the OpenAI API key.\n* Switch to the GPT4o language model.\n* Update to Pieces version 11.0.3.\n* Sign in to Pieces to increase rate limit.\n* Uninstall and reinstall Pieces for Developers and PiecesOS.\n* Ensure Windows Defender is not blocking Pieces requests.\n\n**Current Status/Outcome:**\n\n* The cause of the issue is still under investigation.\n* Some users have reported success after removing their OpenAI API key.\n* It is recommended to switch to the GPT4o model for now.\n* If the issues persist, users can contact the developer for real-time debugging.",
           "activity_level": 5.25
         }
       ]
     },
     {
-      "title": "Copilot Processing Errors and Failures",
-      "description": "Users are experiencing issues with Copilot, including loading failures and \"Something went wrong with processing\" errors.  These issues persist across different operating systems and Pieces versions. Proposed solutions include updating PiecesOS, switching to the GPT-4o model, removing OpenAI API keys, and checking for conflicts with security software.",
+      "title": "Pieces Copilot Processing Errors",
+      "description": "Users report Pieces Copilot failing to process requests, displaying error messages. This issue appears across operating systems and Pieces versions. Suggested solutions include checking OpenAI API keys, switching to GPT4o model, ensuring Pieces isn't blocked by firewalls, and reinstalling Pieces software.",
       "frequency": 3,
       "related_issues": [
         {
           "id": 584,
           "title": "Copilot is not giving any feedback",
-          "text": "Copilot is not giving any feedback\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\nPieces for Developers 3.3.3\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nThe copilot is not generating anything, it just keeps on loading.\n## Summary of GitHub Issue Conversation:\n\n**Key Points Raised:**\n\n* @gittydia reported an issue with Copilot responses stating \"I'm sorry. Something went wrong with processing.\"\n* @luigigalli confirmed the same issue on macOS with Pieces for Developers 3.3.4 and PiecesOS 11.0.19 staging.\n\n**Problems Identified:**\n\n* Copilot responses were failing with an error message.\n* The issue persisted even after updating to PiecesOS 11.0.4.\n\n**Solutions Proposed/Implemented:**\n\n* @mark-at-pieces suggested updating to PiecesOS 11.0.4, which was supposed to include a fix for the issue.\n* @mark-at-pieces later suggested uninstalling the staging build and installing the stable version of PiecesOS 11.0.4.\n* @mark-at-pieces offered to schedule a call for real-time debugging.\n\n**Current Status/Outcome:**\n\n* The issue remains unresolved for @luigigalli even after updating to PiecesOS 11.0.4.\n* A call has been scheduled for further debugging.",
+          "text": "Copilot is not giving any feedback\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\nPieces for Developers 3.3.3\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nThe copilot is not generating anything, it just keeps on loading.\n## Summary of GitHub Issue Conversation\n\n**Key Points Raised:**\n\n* @gittydia reported an issue with Pieces Copilot Service.\n* The issue was related to the \"I'm sorry. Something went wrong with the processing...\" error message.\n* @luigigalli confirmed the same issue on macOS with the latest PiecesOS version.\n\n**Problems Identified:**\n\n* The \"I'm sorry. Something went wrong with the processing...\" error message was occurring for multiple users.\n* The issue persisted even after the supposed fix in PiecesOS 11.0.4.\n* The issue occurred with different LLMs (Claude Sonnet, ChatGPT, Gemini).\n\n**Solutions Proposed/Implemented:**\n\n* Upgrade to PiecesOS 11.0.4.\n* Uninstall the 11.0.19-staging build for POS and install the latest from Production 11.0.4.\n* Real-time debugging via a scheduled call.\n\n**Current Status/Outcome:**\n\n* The issue remains unresolved for @luigigalli.\n* A real-time debugging session is scheduled to further investigate the problem.\n\n**Additional Notes:**\n\n* The bot initially suggested related issues and helpful resources.\n* @mark-at-pieces provided support and troubleshooting steps.\n* Staging builds are not recommended due to potential instability.",
           "activity_level": 4.53
         },
         {
           "id": 561,
           "title": "Copilot Bug: 'I'm sorry. Something went wrong with processing. Please...' copilot response",
-          "text": "Copilot Bug: 'I'm sorry. Something went wrong with processing. Please...' copilot response\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.0.3\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nhi i have been using it for 2 days but for the last 2 hours the desktop and visual studio extension are not working. \n\nNo matter what I type, it gives me this error. There was an update message for the app, it was about installing a version, I installed it but it didn't fix it.\nalways the same message \nvisual studio ide 2022 17.12 \nwindows 10 pro\n![Image](https://github.com/user-attachments/assets/c64d85bd-eb1a-4f1c-a25e-570c9a55ccd1)\n![Image](https://github.com/user-attachments/assets/55b600a6-95f4-4e71-aee1-1b1ce8b6599c)\n\n\n## GitHub Issue Summary\n\n**Issue:** Users are experiencing \"Something went wrong with processing\" error when using Pieces with Claude or Gemini models.\n\n**Key Points Raised:**\n\n* Multiple users experiencing the same error message.\n* Switching to GPT-4o model resolves the issue for some users.\n* Updating to version 11.0.3 and signing in to Pieces may improve success rate.\n* OpenAI API key might be causing failures and should be removed temporarily.\n\n**Problems Identified:**\n\n* Underlying cause of the error message is not yet determined.\n* OpenAI API key may be causing conflicts with Pieces service.\n* Local SSL certificate issue may be involved.\n\n**Solutions Proposed/Implemented:**\n\n* Switch to GPT-4o model.\n* Update to version 11.0.3 and sign in to Pieces.\n* Remove OpenAI API key.\n* Reinstall Pieces for Developers and PiecesOS.\n* Ensure Windows Defender is not blocking Pieces requests.\n\n**Current Status/Outcome:**\n\n* The issue is still under investigation.\n* Some users have found workarounds by switching models or removing OpenAI API key.\n* The exact cause and permanent solution are yet to be identified.",
+          "text": "Copilot Bug: 'I'm sorry. Something went wrong with processing. Please...' copilot response\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.0.3\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nhi i have been using it for 2 days but for the last 2 hours the desktop and visual studio extension are not working. \n\nNo matter what I type, it gives me this error. There was an update message for the app, it was about installing a version, I installed it but it didn't fix it.\nalways the same message \nvisual studio ide 2022 17.12 \nwindows 10 pro\n![Image](https://github.com/user-attachments/assets/c64d85bd-eb1a-4f1c-a25e-570c9a55ccd1)\n![Image](https://github.com/user-attachments/assets/55b600a6-95f4-4e71-aee1-1b1ce8b6599c)\n\n\n## Summary of GitHub Issue Conversation\n\n**Key Points:**\n\n* Users are experiencing issues with processing requests, receiving error messages like \"Something went wrong with processing.\"\n* The issue seems to be related to OpenAI API keys and local SSL certificates.\n* The proposed solutions include removing the OpenAI API key, switching to the GPT4o model, and reinstalling the Pieces software.\n\n**Problems Identified:**\n\n* OpenAI API keys are causing processing failures in some cases.\n* There may be issues with local SSL certificates.\n* Claude and Gemini language models might be experiencing problems.\n\n**Solutions Proposed/Implemented:**\n\n* Remove the OpenAI API key.\n* Switch to the GPT4o language model.\n* Update to Pieces version 11.0.3.\n* Sign in to Pieces to increase rate limit.\n* Uninstall and reinstall Pieces for Developers and PiecesOS.\n* Ensure Windows Defender is not blocking Pieces requests.\n\n**Current Status/Outcome:**\n\n* The cause of the issue is still under investigation.\n* Some users have reported success after removing their OpenAI API key.\n* It is recommended to switch to the GPT4o model for now.\n* If the issues persist, users can contact the developer for real-time debugging.",
           "activity_level": 5.25
         },
         {
           "id": 590,
           "title": "Non-dismissable overlay message.",
-          "text": "Non-dismissable overlay message.\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nv11.0.4\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nMy Pieces app launches at Windows startup (intended). Sometimes, (possibly after a background update?), this dialog appears on my desktop. I don't know what it means, exactly, but I cannot click \"Ok\" and there is no other way to dismiss it. My only option appears to be to restart the computer, which is often impractical. Please fix!\n\n![Image](https://github.com/user-attachments/assets/f231ef56-3d59-4e94-8cb5-2b54249900cc)\n## Issue Summary - Pieces Windows Desktop Version Launch Failure\n\n**Key Points:**\n\n* User @ThemePark reported an issue with the Windows Desktop version of Pieces failing to launch.\n* This issue is distinct from similar issues previously reported (Unable to open Pieces Core Services, Pieces For Desktop App not opening, etc.).\n* The issue appears specific to the Windows version of the app.\n\n**Problems Identified:**\n\n* The Windows Desktop version of Pieces is not launching for @ThemePark.\n* The cause of the issue is unknown.\n\n**Solutions Proposed/Implemented:**\n\n* @mack-at-pieces, a Pieces support team member, asked for additional information from @ThemePark:\n    * Windows version\n    * Confirmation of PiecesOS and Pieces Desktop installation\n\n**Current Status/Outcome:**\n\n* The issue remains unresolved.\n* @ThemePark is providing additional information to help diagnose the problem.\n\n**Next Steps:**\n\n* Once @ThemePark provides the requested information, the Pieces support team can further investigate the issue and provide a resolution.",
-          "activity_level": 2.84
+          "text": "Non-dismissable overlay message.\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nv11.0.4\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nMy Pieces app launches at Windows startup (intended). Sometimes, (possibly after a background update?), this dialog appears on my desktop. I don't know what it means, exactly, but I cannot click \"Ok\" and there is no other way to dismiss it. My only option appears to be to restart the computer, which is often impractical. Please fix!\n\n![Image](https://github.com/user-attachments/assets/f231ef56-3d59-4e94-8cb5-2b54249900cc)\n## Conversation Summary for Pieces Support GitHub Issue: \n\n**Key Points Raised:**\n\n* User (@ThemePark) reports an inability to open the Pieces Desktop App.\n\n**Problems Identified:**\n\n* App fails to launch after latest Pieces OS 11.0 update.\n* This appears to be an ongoing issue with multiple users experiencing similar problems (as evidenced by linked references).\n\n**Solutions Proposed/Implemented:**\n\n* Support bot recommends checking related issues and resources. \n* @mack-at-pieces requests additional information: Windows version and PiecesOS/Desktop installation confirmation.\n\n**Current Status/Outcome:**\n\n* No further updates provided. Issue remains open, awaiting user response and troubleshooting. \n\n**Additional Notes:**\n\n* User is encouraged to share additional details for better diagnosis and resolution.",
+          "activity_level": 2.71
         }
       ]
     },
     {
-      "title": "Pieces Copilot connection and processing errors",
-      "description": "Users are experiencing connection errors and \"Something went wrong with processing\" errors with Pieces Copilot. Proposed solutions include checking for PiecesOS updates, ensuring API keys are correctly configured, and verifying Pieces is allowed by firewalls and antivirus software. The issue seems to persist across different Pieces versions and operating systems.",
+      "title": "Pieces OS Connection Issues",
+      "description": "Users report connection errors with Pieces OS after updating to version 11.0.4.  These errors manifest as 'Connection refused' messages when attempting to connect to the Pieces OS endpoint (127.0.0.1:1000 or 127.0.0.1:39300) and difficulties downloading local LLMs.  Suggested solutions include verifying the Pieces OS is running and the correct port is being used.  Further investigation and support logs may be required for diagnosis.",
       "frequency": 3,
       "related_issues": [
         {
+          "id": 596,
+          "title": "Getting Error: connect ECONNREFUSED 127.0.0.1:1000",
+          "text": "Getting Error: connect ECONNREFUSED 127.0.0.1:1000\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.0.4\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI tried to include the Pieces OS endpoint (127.0.0.1:1000) into my external project, but even though Pieces OS is operating, I keep getting the error \"Connection refused.\"\n\n![Image](https://github.com/user-attachments/assets/f50f1e1d-4eb2-46a2-9df7-2892ea6d319b)\n## Summary of GitHub Issue Conversation\n\n**Key Points:**\n\n* Raju-git20 reported an issue with Pieces not working after upgrading to version 11.0.0.\n* The issue seems to be related to the new port 39300 used by PiecesOS.\n* Screenshots were provided showing the error message.\n\n**Problems Identified:**\n\n* Pieces is not working after upgrading to version 11.0.0.\n* The new port 39300 might be causing the issue.\n\n**Solutions Proposed/Implemented:**\n\n* Mark-at-pieces suggested trying the new port 39300.\n\n**Current Status/Outcome:**\n\n* The issue persists even after trying the new port. \n* Further investigation is needed to identify the root cause and find a solution.\n\n**Additional Notes:**\n\n* The user provided screenshots as evidence of the issue.\n* The issue was automatically triaged and routed to the Pieces team. \n* The user was directed to relevant resources for further assistance.",
+          "activity_level": 6.94
+        },
+        {
+          "id": 590,
+          "title": "Non-dismissable overlay message.",
+          "text": "Non-dismissable overlay message.\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nv11.0.4\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nMy Pieces app launches at Windows startup (intended). Sometimes, (possibly after a background update?), this dialog appears on my desktop. I don't know what it means, exactly, but I cannot click \"Ok\" and there is no other way to dismiss it. My only option appears to be to restart the computer, which is often impractical. Please fix!\n\n![Image](https://github.com/user-attachments/assets/f231ef56-3d59-4e94-8cb5-2b54249900cc)\n## Conversation Summary for Pieces Support GitHub Issue: \n\n**Key Points Raised:**\n\n* User (@ThemePark) reports an inability to open the Pieces Desktop App.\n\n**Problems Identified:**\n\n* App fails to launch after latest Pieces OS 11.0 update.\n* This appears to be an ongoing issue with multiple users experiencing similar problems (as evidenced by linked references).\n\n**Solutions Proposed/Implemented:**\n\n* Support bot recommends checking related issues and resources. \n* @mack-at-pieces requests additional information: Windows version and PiecesOS/Desktop installation confirmation.\n\n**Current Status/Outcome:**\n\n* No further updates provided. Issue remains open, awaiting user response and troubleshooting. \n\n**Additional Notes:**\n\n* User is encouraged to share additional details for better diagnosis and resolution.",
+          "activity_level": 2.71
+        },
+        {
           "id": 591,
           "title": "Unable to open Pieces Copilot Service",
-          "text": "Unable to open Pieces Copilot Service\nError: HttpException: Connection closed before full header was received, uri = http://127.0.0.1:39300/model/2fca5f65-b3ce-459b-b394-0ea5de0b050d/download/progress\n\n**Installation Details**\n\nSucceeded: true\nPath: C:\\Program Files\\WindowsApps\\com.MeshIntelligentTechnologi.PiecesOS_11.0.4.0_x64__84gz00a5z79wr/os_server.exe\n\n**PiecesOS Information**\n\nID: 62ded9e8-d9d0-490e-b34e-632516b3cf1a\r\n\nUser: Anonymous\nCurrent Version: 11.0.4\nMin Version Supported: 11.0.4\nMax Version Supported: 12.0.0\nLocal Port: 39300\n\n**Device Information**\n\nOperating System: Windows\nCurrent Version: \"Windows 10 Home Single Language\" 10.0 (Build 26100)\nMin Version Supported: Windows 10 Build 1903\n## Summary of GitHub Issue Conversation\n\n**Key Points Raised:**\n\n* User @AmanSingh766 is experiencing an exception while downloading local LLMs in Pieces Copilot Service.\n* The error message is: \"Connection closed before full header was received, uri = http://127.0.0.1:39300/model/2fca5f65-b3ce-459b-b394-0ea5de0b050d/download/progress\".\n\n**Problems Identified:**\n\n* User is unable to download local LLMs.\n* The cause of the error is unclear.\n\n**Solutions Proposed/Implemented:**\n\n* Pieces support team member (@mark-at-pieces) requests support logs from the user.\n* They also inquire whether the error occurs consistently or only during specific attempts.\n\n**Current Status/Outcome:**\n\n* The issue is currently being investigated by the Pieces support team.\n* No solution has been implemented yet. \n\n**Additional Notes:**\n\n* The user has been directed to relevant resources such as existing issues, documentation, and YouTube channel. \n* The support team expects to follow up within 24 hours.",
+          "text": "Unable to open Pieces Copilot Service\nError: HttpException: Connection closed before full header was received, uri = http://127.0.0.1:39300/model/2fca5f65-b3ce-459b-b394-0ea5de0b050d/download/progress\n\n**Installation Details**\n\nSucceeded: true\nPath: C:\\Program Files\\WindowsApps\\com.MeshIntelligentTechnologi.PiecesOS_11.0.4.0_x64__84gz00a5z79wr/os_server.exe\n\n**PiecesOS Information**\n\nID: 62ded9e8-d9d0-490e-b34e-632516b3cf1a\r\n\nUser: Anonymous\nCurrent Version: 11.0.4\nMin Version Supported: 11.0.4\nMax Version Supported: 12.0.0\nLocal Port: 39300\n\n**Device Information**\n\nOperating System: Windows\nCurrent Version: \"Windows 10 Home Single Language\" 10.0 (Build 26100)\nMin Version Supported: Windows 10 Build 1903\n## GitHub Issue Summary: Unable to Download Local LLMs\n\n**Key Points:**\n\n- User (@AmanSingh766) reported encountering an error when trying to download local LLMs.\n- The error message: \"Connection closed before full header was received, uri = http://127.0.0.1:39300/model/2fca5f65-b3ce-459b-b394-0ea5de0b050d/download/progress\"\n- Pieces support bot provided links to similar \nissues and resource links.\n- @mark-at-pieces investigated further, asking for \nsupport logs and clarifying error occurrence frequency.\n\n**Problems:**\n\n- User experiences error while downloading local LLMs.\n- The specific cause of the error message remains unclear.\n\n**Solutions:**\n\n- Pieces support team requested support logs and information \nabout error consistency for further diagnosis.\n\n**Current Status/Outcome:**\n\n- The issue remains ongoing, pending user response and further\n investigation by Pieces support. \n\n**Note:** The conversation provides limited \ninformation for an conclusive diagnosis. More \ninteractions are vital for understanding the root cause.",
           "activity_level": 2.84
-        },
-        {
-          "id": 561,
-          "title": "Copilot Bug: 'I'm sorry. Something went wrong with processing. Please...' copilot response",
-          "text": "Copilot Bug: 'I'm sorry. Something went wrong with processing. Please...' copilot response\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.0.3\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nhi i have been using it for 2 days but for the last 2 hours the desktop and visual studio extension are not working. \n\nNo matter what I type, it gives me this error. There was an update message for the app, it was about installing a version, I installed it but it didn't fix it.\nalways the same message \nvisual studio ide 2022 17.12 \nwindows 10 pro\n![Image](https://github.com/user-attachments/assets/c64d85bd-eb1a-4f1c-a25e-570c9a55ccd1)\n![Image](https://github.com/user-attachments/assets/55b600a6-95f4-4e71-aee1-1b1ce8b6599c)\n\n\n## GitHub Issue Summary\n\n**Issue:** Users are experiencing \"Something went wrong with processing\" error when using Pieces with Claude or Gemini models.\n\n**Key Points Raised:**\n\n* Multiple users experiencing the same error message.\n* Switching to GPT-4o model resolves the issue for some users.\n* Updating to version 11.0.3 and signing in to Pieces may improve success rate.\n* OpenAI API key might be causing failures and should be removed temporarily.\n\n**Problems Identified:**\n\n* Underlying cause of the error message is not yet determined.\n* OpenAI API key may be causing conflicts with Pieces service.\n* Local SSL certificate issue may be involved.\n\n**Solutions Proposed/Implemented:**\n\n* Switch to GPT-4o model.\n* Update to version 11.0.3 and sign in to Pieces.\n* Remove OpenAI API key.\n* Reinstall Pieces for Developers and PiecesOS.\n* Ensure Windows Defender is not blocking Pieces requests.\n\n**Current Status/Outcome:**\n\n* The issue is still under investigation.\n* Some users have found workarounds by switching models or removing OpenAI API key.\n* The exact cause and permanent solution are yet to be identified.",
-          "activity_level": 5.25
-        },
-        {
-          "id": 584,
-          "title": "Copilot is not giving any feedback",
-          "text": "Copilot is not giving any feedback\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\nPieces for Developers 3.3.3\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nThe copilot is not generating anything, it just keeps on loading.\n## Summary of GitHub Issue Conversation:\n\n**Key Points Raised:**\n\n* @gittydia reported an issue with Copilot responses stating \"I'm sorry. Something went wrong with processing.\"\n* @luigigalli confirmed the same issue on macOS with Pieces for Developers 3.3.4 and PiecesOS 11.0.19 staging.\n\n**Problems Identified:**\n\n* Copilot responses were failing with an error message.\n* The issue persisted even after updating to PiecesOS 11.0.4.\n\n**Solutions Proposed/Implemented:**\n\n* @mark-at-pieces suggested updating to PiecesOS 11.0.4, which was supposed to include a fix for the issue.\n* @mark-at-pieces later suggested uninstalling the staging build and installing the stable version of PiecesOS 11.0.4.\n* @mark-at-pieces offered to schedule a call for real-time debugging.\n\n**Current Status/Outcome:**\n\n* The issue remains unresolved for @luigigalli even after updating to PiecesOS 11.0.4.\n* A call has been scheduled for further debugging.",
-          "activity_level": 4.53
         }
       ]
     },
     {
-      "title": "Pieces installation and feature failures",
-      "description": "Users report Pieces features or installation failing on various operating systems, including Windows, MacOS, and Linux.  The errors often manifest as cryptic messages with no clear resolution. Proposed solutions include software updates, configuration changes (like adding Pieces to Windows Defender exclusion list), and debugging with the Pieces team.",
+      "title": "Pieces OS and App Installation and Processing Errors",
+      "description": "Users report installation failures of Pieces OS and app on Linux and Windows due to missing dependencies, sandbox restrictions, and Windows Defender blocks. Processing errors with messages like 'Something went wrong with processing' are also prevalent, potentially linked to OpenAI API keys and SSL certificates. Proposed solutions include dependency installation, software updates, Windows Defender configuration, and switching to alternative language models.",
       "frequency": 3,
       "related_issues": [
         {
           "id": 537,
           "title": "Ollama Fails to Install on Linux",
-          "text": "Ollama Fails to Install on Linux\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nLinux\n\n### Your Pieces OS Version\n\n11.0.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nUser reports immediate \"Ollama failed to install\" diaglog upon clicking install Ollama install button in Pieces desktop app\n## GitHub Issue Summary: Ollama Installation in Pieces-OS on Snap\n\n### Key Points:\n\n* User @ekuznetsov139 reported Ollama installation failing in Pieces-OS running as a Snap.\n* Brian, a Pieces Support staff member, identified the issue as missing curl package in the Snap environment.\n* @ekuznetsov139 clarified that despite having curl installed on the host system, the Snap environment lacks it.\n* Brian acknowledged the misunderstanding and confirmed that ollama installation needs sandbox access.\n\n### Identified Problems:\n\n* Ollama installation fails when Pieces-OS runs as a Snap due to curl's unavailability within the sandboxed environment.\n* The Snap confinement configuration might be set too strict and prevent proper ollama access.\n\n### Proposed/Implemented Solutions:\n\n* Patching Pieces-OS to allow ollama usage from the sandbox is in progress.\n* Adding curl as a dependency in the Snap definition file is being considered.\n\n### Current Status/Outcome:\n\n* As of 2025-01-23, the issue persists in the latest Snap version.\n* A fix is planned for release in the next week.\n\n### Note:\n\n* This summary only covers the information available up to November 2023, as specified in the prompt. Any updates after that date are not included.",
-          "activity_level": 3.88
-        },
-        {
-          "id": 584,
-          "title": "Copilot is not giving any feedback",
-          "text": "Copilot is not giving any feedback\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\nPieces for Developers 3.3.3\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nThe copilot is not generating anything, it just keeps on loading.\n## Summary of GitHub Issue Conversation:\n\n**Key Points Raised:**\n\n* @gittydia reported an issue with Copilot responses stating \"I'm sorry. Something went wrong with processing.\"\n* @luigigalli confirmed the same issue on macOS with Pieces for Developers 3.3.4 and PiecesOS 11.0.19 staging.\n\n**Problems Identified:**\n\n* Copilot responses were failing with an error message.\n* The issue persisted even after updating to PiecesOS 11.0.4.\n\n**Solutions Proposed/Implemented:**\n\n* @mark-at-pieces suggested updating to PiecesOS 11.0.4, which was supposed to include a fix for the issue.\n* @mark-at-pieces later suggested uninstalling the staging build and installing the stable version of PiecesOS 11.0.4.\n* @mark-at-pieces offered to schedule a call for real-time debugging.\n\n**Current Status/Outcome:**\n\n* The issue remains unresolved for @luigigalli even after updating to PiecesOS 11.0.4.\n* A call has been scheduled for further debugging.",
-          "activity_level": 4.53
+          "text": "Ollama Fails to Install on Linux\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nLinux\n\n### Your Pieces OS Version\n\n11.0.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nUser reports immediate \"Ollama failed to install\" diaglog upon clicking install Ollama install button in Pieces desktop app\n## Summary of GitHub Issue Conversation\n\n**Key Points Raised:**\n\n* Ollama installation failure in Pieces OS\n* Missing `curl` dependency in Pieces OS snap\n* Inability to launch external executables from Pieces OS sandbox\n\n**Problems Identified:**\n\n* Pieces OS attempts to install Ollama using `curl`, which is not guaranteed to be installed.\n* Pieces OS snap confinement prevents access to external executables like Ollama.\n\n**Solutions Proposed/Implemented:**\n\n* Patching Pieces OS to allow Ollama usage within the sandbox.\n* Adding `curl` to the Pieces OS snap dependency packages.\n\n**Current Status/Outcome:**\n\n* Fix is in development and expected to be released in the upcoming week.\n* Issue remains unresolved in the latest Pieces OS snap version as of January 23, 2025.",
+          "activity_level": 3.85
         },
         {
           "id": 160,
           "title": "suite installer always fails for me. (windows 11)",
-          "text": "suite installer always fails for me. (windows 11)\n### Software\r\n\r\nDesktop Application\r\n\r\n### Operating System\r\n\r\nWindows\r\n\r\n### Your Pieces OS Version\r\n\r\nn/a\r\n\r\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\r\n\r\nsuite installer always fails for me. (windows 11)\r\n\r\n```\r\n \ue683 shane @ moa \u276f ~ cd .\\Downloads\\\r\n \ue683 shane @ moa \u276f Downloads ./Pieces_Suite.appinstaller\r\nResourceUnavailable: Program 'Pieces_Suite.appinstaller' failed to run: An error occurred trying to start process 'C:\\Users\\shane\\Downloads\\Pieces_Suite.appinstaller' with working directory 'C:\\Users\\shane\\Downloads'. The app didn't start.At line:1 char:1\r\n+ ./Pieces_Suite.appinstaller\r\n+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~.\r\n \ue683 shane @ moa \u276f Downloads\r\n```\r\n\r\n\r\nalso tried double clicking in gui. same issue>\r\n\r\nI also tried as user and admin\r\n\r\nall failed\n## Summary of GitHub Issue Conversation\n\n**Key Points:**\n\n* User reported that the installer was not working for them.\n* The problem was specific to the App Installer method on Windows.\n* It was identified that Windows Defender was blocking the application.\n\n**Solutions Proposed/Implemented:**\n\n* Update the App Installer and Microsoft Store app.\n* Restart the PC.\n* Add the application directory to the Windows Defender exclusion list.\n\n**Current Status/Outcome:**\n\n* The user was able to successfully install the application after adding the directory to the Windows Defender exclusion list.\n* It is unclear whether this is a one-off issue or if it affects other users.\n* The team will investigate further and update the documentation if needed.\n\n**Additional Notes:**\n\n* The team will also consider making the .exe installer the default installation method for Windows.\n\nI hope this summary is concise and captures the most important details of the conversation. Please let me know if you have any other questions.",
+          "text": "suite installer always fails for me. (windows 11)\n### Software\r\n\r\nDesktop Application\r\n\r\n### Operating System\r\n\r\nWindows\r\n\r\n### Your Pieces OS Version\r\n\r\nn/a\r\n\r\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\r\n\r\nsuite installer always fails for me. (windows 11)\r\n\r\n```\r\n \ue683 shane @ moa \u276f ~ cd .\\Downloads\\\r\n \ue683 shane @ moa \u276f Downloads ./Pieces_Suite.appinstaller\r\nResourceUnavailable: Program 'Pieces_Suite.appinstaller' failed to run: An error occurred trying to start process 'C:\\Users\\shane\\Downloads\\Pieces_Suite.appinstaller' with working directory 'C:\\Users\\shane\\Downloads'. The app didn't start.At line:1 char:1\r\n+ ./Pieces_Suite.appinstaller\r\n+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~.\r\n \ue683 shane @ moa \u276f Downloads\r\n```\r\n\r\n\r\nalso tried double clicking in gui. same issue>\r\n\r\nI also tried as user and admin\r\n\r\nall failed\n## Summary of GitHub Issue Conversation: Pieces App Installation Issue\n\n**Key Points:**\n\n* Pieces App installation using App Installer fails on Windows.\n* Exe installer works, but encounters issues launching.\n* Windows Defender blocks app execution.\n\n**Problems Identified:**\n\n* App Installer installation fails.\n* Launcher fails to start after successful installation.\n* Windows Defender blocks the application.\n\n**Solutions Proposed/Implemented:**\n\n* Update App Installer and Microsoft Store.\n* Restart PC after updates.\n* Add exclusion for Pieces App directory in Windows Defender.\n\n**Current Status/Outcome:**\n\n* App installation using exe installer succeeds.\n* Cause of Windows Defender blocking is unclear.\n* Further investigation and documentation update planned for February 2025.",
           "activity_level": 2.81
-        }
-      ]
-    },
-    {
-      "title": "Pieces Suite Installer and App Issues",
-      "description": "Users report Pieces Suite installation failures on Windows, often due to Windows Defender blocks. Others experience app launch failures or 'Something went wrong' errors with Copilot, potentially linked to OpenAI API keys or model selection. Solutions include adding Pieces to Defender exclusions, switching Copilot models, or removing API keys.",
-      "frequency": 3,
-      "related_issues": [
-        {
-          "id": 160,
-          "title": "suite installer always fails for me. (windows 11)",
-          "text": "suite installer always fails for me. (windows 11)\n### Software\r\n\r\nDesktop Application\r\n\r\n### Operating System\r\n\r\nWindows\r\n\r\n### Your Pieces OS Version\r\n\r\nn/a\r\n\r\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\r\n\r\nsuite installer always fails for me. (windows 11)\r\n\r\n```\r\n \ue683 shane @ moa \u276f ~ cd .\\Downloads\\\r\n \ue683 shane @ moa \u276f Downloads ./Pieces_Suite.appinstaller\r\nResourceUnavailable: Program 'Pieces_Suite.appinstaller' failed to run: An error occurred trying to start process 'C:\\Users\\shane\\Downloads\\Pieces_Suite.appinstaller' with working directory 'C:\\Users\\shane\\Downloads'. The app didn't start.At line:1 char:1\r\n+ ./Pieces_Suite.appinstaller\r\n+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~.\r\n \ue683 shane @ moa \u276f Downloads\r\n```\r\n\r\n\r\nalso tried double clicking in gui. same issue>\r\n\r\nI also tried as user and admin\r\n\r\nall failed\n## Summary of GitHub Issue Conversation\n\n**Key Points:**\n\n* User reported that the installer was not working for them.\n* The problem was specific to the App Installer method on Windows.\n* It was identified that Windows Defender was blocking the application.\n\n**Solutions Proposed/Implemented:**\n\n* Update the App Installer and Microsoft Store app.\n* Restart the PC.\n* Add the application directory to the Windows Defender exclusion list.\n\n**Current Status/Outcome:**\n\n* The user was able to successfully install the application after adding the directory to the Windows Defender exclusion list.\n* It is unclear whether this is a one-off issue or if it affects other users.\n* The team will investigate further and update the documentation if needed.\n\n**Additional Notes:**\n\n* The team will also consider making the .exe installer the default installation method for Windows.\n\nI hope this summary is concise and captures the most important details of the conversation. Please let me know if you have any other questions.",
-          "activity_level": 2.81
-        },
-        {
-          "id": 590,
-          "title": "Non-dismissable overlay message.",
-          "text": "Non-dismissable overlay message.\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nv11.0.4\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nMy Pieces app launches at Windows startup (intended). Sometimes, (possibly after a background update?), this dialog appears on my desktop. I don't know what it means, exactly, but I cannot click \"Ok\" and there is no other way to dismiss it. My only option appears to be to restart the computer, which is often impractical. Please fix!\n\n![Image](https://github.com/user-attachments/assets/f231ef56-3d59-4e94-8cb5-2b54249900cc)\n## Issue Summary - Pieces Windows Desktop Version Launch Failure\n\n**Key Points:**\n\n* User @ThemePark reported an issue with the Windows Desktop version of Pieces failing to launch.\n* This issue is distinct from similar issues previously reported (Unable to open Pieces Core Services, Pieces For Desktop App not opening, etc.).\n* The issue appears specific to the Windows version of the app.\n\n**Problems Identified:**\n\n* The Windows Desktop version of Pieces is not launching for @ThemePark.\n* The cause of the issue is unknown.\n\n**Solutions Proposed/Implemented:**\n\n* @mack-at-pieces, a Pieces support team member, asked for additional information from @ThemePark:\n    * Windows version\n    * Confirmation of PiecesOS and Pieces Desktop installation\n\n**Current Status/Outcome:**\n\n* The issue remains unresolved.\n* @ThemePark is providing additional information to help diagnose the problem.\n\n**Next Steps:**\n\n* Once @ThemePark provides the requested information, the Pieces support team can further investigate the issue and provide a resolution.",
-          "activity_level": 2.84
         },
         {
           "id": 561,
           "title": "Copilot Bug: 'I'm sorry. Something went wrong with processing. Please...' copilot response",
-          "text": "Copilot Bug: 'I'm sorry. Something went wrong with processing. Please...' copilot response\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.0.3\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nhi i have been using it for 2 days but for the last 2 hours the desktop and visual studio extension are not working. \n\nNo matter what I type, it gives me this error. There was an update message for the app, it was about installing a version, I installed it but it didn't fix it.\nalways the same message \nvisual studio ide 2022 17.12 \nwindows 10 pro\n![Image](https://github.com/user-attachments/assets/c64d85bd-eb1a-4f1c-a25e-570c9a55ccd1)\n![Image](https://github.com/user-attachments/assets/55b600a6-95f4-4e71-aee1-1b1ce8b6599c)\n\n\n## GitHub Issue Summary\n\n**Issue:** Users are experiencing \"Something went wrong with processing\" error when using Pieces with Claude or Gemini models.\n\n**Key Points Raised:**\n\n* Multiple users experiencing the same error message.\n* Switching to GPT-4o model resolves the issue for some users.\n* Updating to version 11.0.3 and signing in to Pieces may improve success rate.\n* OpenAI API key might be causing failures and should be removed temporarily.\n\n**Problems Identified:**\n\n* Underlying cause of the error message is not yet determined.\n* OpenAI API key may be causing conflicts with Pieces service.\n* Local SSL certificate issue may be involved.\n\n**Solutions Proposed/Implemented:**\n\n* Switch to GPT-4o model.\n* Update to version 11.0.3 and sign in to Pieces.\n* Remove OpenAI API key.\n* Reinstall Pieces for Developers and PiecesOS.\n* Ensure Windows Defender is not blocking Pieces requests.\n\n**Current Status/Outcome:**\n\n* The issue is still under investigation.\n* Some users have found workarounds by switching models or removing OpenAI API key.\n* The exact cause and permanent solution are yet to be identified.",
+          "text": "Copilot Bug: 'I'm sorry. Something went wrong with processing. Please...' copilot response\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.0.3\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nhi i have been using it for 2 days but for the last 2 hours the desktop and visual studio extension are not working. \n\nNo matter what I type, it gives me this error. There was an update message for the app, it was about installing a version, I installed it but it didn't fix it.\nalways the same message \nvisual studio ide 2022 17.12 \nwindows 10 pro\n![Image](https://github.com/user-attachments/assets/c64d85bd-eb1a-4f1c-a25e-570c9a55ccd1)\n![Image](https://github.com/user-attachments/assets/55b600a6-95f4-4e71-aee1-1b1ce8b6599c)\n\n\n## Summary of GitHub Issue Conversation\n\n**Key Points:**\n\n* Users are experiencing issues with processing requests, receiving error messages like \"Something went wrong with processing.\"\n* The issue seems to be related to OpenAI API keys and local SSL certificates.\n* The proposed solutions include removing the OpenAI API key, switching to the GPT4o model, and reinstalling the Pieces software.\n\n**Problems Identified:**\n\n* OpenAI API keys are causing processing failures in some cases.\n* There may be issues with local SSL certificates.\n* Claude and Gemini language models might be experiencing problems.\n\n**Solutions Proposed/Implemented:**\n\n* Remove the OpenAI API key.\n* Switch to the GPT4o language model.\n* Update to Pieces version 11.0.3.\n* Sign in to Pieces to increase rate limit.\n* Uninstall and reinstall Pieces for Developers and PiecesOS.\n* Ensure Windows Defender is not blocking Pieces requests.\n\n**Current Status/Outcome:**\n\n* The cause of the issue is still under investigation.\n* Some users have reported success after removing their OpenAI API key.\n* It is recommended to switch to the GPT4o model for now.\n* If the issues persist, users can contact the developer for real-time debugging.",
           "activity_level": 5.25
+        }
+      ]
+    },
+    {
+      "title": "Pieces OS Windows App Errors",
+      "description": "Users report errors with the Pieces OS Windows app, including a non-dismissable overlay message, connection refused errors, and issues after upgrading to version 11.0.0. Suggested solutions include allowing access to Pieces Qdrant Server, checking Pieces OS and Desktop App installation, and ensuring the correct port (39300) is being used.",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 92,
+          "title": "ANNOUNCEMENT: Pieces Qdrant Server pop up in Pieces OS 8.0.0 Windows",
+          "text": "ANNOUNCEMENT: Pieces Qdrant Server pop up in Pieces OS 8.0.0 Windows\n### Software\n\nPieces OS\n\n### Operating System\n\nWindows\n\n### Your Pieces OS Version\n\n8.0.0\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWindows users please be aware that with the release of Pieces OS v8.0.0, upon loading the desktop application the first time you may receive the following dialog box:\r\n\r\n![image (8)](https://github.com/pieces-app/support/assets/152189388/bd326c95-752d-435f-88d2-9da46d88c46a)\r\n\r\nThis is a standalone executable that we need to run in order to enable our new long-term memory and other enhancements to the copilot chat experience. This dialog box is expected and in order to receive this new functionality you will need to choose \"Allow access.\" If you deny it, you will likely have a degraded chat experience and it may cause breakages in the app down the line. \r\n\r\nApologies for the inconvenience; we will work on making this a better user experience going forward.\n## GitHub Issue Conversation Summary\n\n**Key Points:**\n\n* This issue is requesting documentation on installing certain software for Windows.\n* The documentation is intended for PiecesOS.\n\n**Problems Identified:**\n\n* The original documentation request predates the deprecation of the relevant software (qdrant).\n\n**Solutions Proposed/Implemented:**\n\n* Documenting the requested software is no longer necessary due to its deprecation.\n* The issue will be closed once the new PiecesOS documentation is finalized.\n\n**Current Status/Outcome:**\n\n* The issue remains open, but is awaiting closure upon completion of the new documentation.\n* Documentation specific to the requested software is no longer required.",
+          "activity_level": 1.54
+        },
+        {
+          "id": 590,
+          "title": "Non-dismissable overlay message.",
+          "text": "Non-dismissable overlay message.\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nv11.0.4\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nMy Pieces app launches at Windows startup (intended). Sometimes, (possibly after a background update?), this dialog appears on my desktop. I don't know what it means, exactly, but I cannot click \"Ok\" and there is no other way to dismiss it. My only option appears to be to restart the computer, which is often impractical. Please fix!\n\n![Image](https://github.com/user-attachments/assets/f231ef56-3d59-4e94-8cb5-2b54249900cc)\n## Conversation Summary for Pieces Support GitHub Issue: \n\n**Key Points Raised:**\n\n* User (@ThemePark) reports an inability to open the Pieces Desktop App.\n\n**Problems Identified:**\n\n* App fails to launch after latest Pieces OS 11.0 update.\n* This appears to be an ongoing issue with multiple users experiencing similar problems (as evidenced by linked references).\n\n**Solutions Proposed/Implemented:**\n\n* Support bot recommends checking related issues and resources. \n* @mack-at-pieces requests additional information: Windows version and PiecesOS/Desktop installation confirmation.\n\n**Current Status/Outcome:**\n\n* No further updates provided. Issue remains open, awaiting user response and troubleshooting. \n\n**Additional Notes:**\n\n* User is encouraged to share additional details for better diagnosis and resolution.",
+          "activity_level": 2.71
+        },
+        {
+          "id": 596,
+          "title": "Getting Error: connect ECONNREFUSED 127.0.0.1:1000",
+          "text": "Getting Error: connect ECONNREFUSED 127.0.0.1:1000\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.0.4\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI tried to include the Pieces OS endpoint (127.0.0.1:1000) into my external project, but even though Pieces OS is operating, I keep getting the error \"Connection refused.\"\n\n![Image](https://github.com/user-attachments/assets/f50f1e1d-4eb2-46a2-9df7-2892ea6d319b)\n## Summary of GitHub Issue Conversation\n\n**Key Points:**\n\n* Raju-git20 reported an issue with Pieces not working after upgrading to version 11.0.0.\n* The issue seems to be related to the new port 39300 used by PiecesOS.\n* Screenshots were provided showing the error message.\n\n**Problems Identified:**\n\n* Pieces is not working after upgrading to version 11.0.0.\n* The new port 39300 might be causing the issue.\n\n**Solutions Proposed/Implemented:**\n\n* Mark-at-pieces suggested trying the new port 39300.\n\n**Current Status/Outcome:**\n\n* The issue persists even after trying the new port. \n* Further investigation is needed to identify the root cause and find a solution.\n\n**Additional Notes:**\n\n* The user provided screenshots as evidence of the issue.\n* The issue was automatically triaged and routed to the Pieces team. \n* The user was directed to relevant resources for further assistance.",
+          "activity_level": 6.94
         }
       ]
     }
   ],
   "recommendations": [
-    "**Prioritize Copilot Issues:** Allocate additional resources to investigate and resolve the ongoing issues with Pieces Copilot, such as processing errors and connection failures.",
-    "**Improve Windows Installer Experience:** Investigate and address the issues with the Pieces Suite installer on Windows, particularly the conflicts with Windows Defender.",
-    "**Enhance Error Messaging:** Provide clearer error messages to users, especially for installation and Copilot issues, to help them troubleshoot problems more effectively.",
-    "**Review Ollama Installation Process:** Review the Ollama installation process on Linux, specifically within the Snap environment, to address the reported failures and improve compatibility.",
-    "**Gather User Feedback:** Collect more detailed feedback from users experiencing issues, including their operating system, Pieces version, and steps to reproduce the problem, to aid in debugging and resolution."
+    "\"Investigate and address the root cause of Pieces Copilot processing errors, including OpenAI API key issues, SSL certificate problems, and potential conflicts with firewalls or antivirus software.\"",
+    "\"Prioritize resolving connection issues with Pieces OS after updating to version 11.0.4, specifically the 'Connection refused' errors and difficulties downloading local LLMs.\"",
+    "\"Provide clear and updated documentation on Pieces OS and app installation, addressing common issues such as missing dependencies, sandbox restrictions, and Windows Defender blocks.\"",
+    "\"Improve the user experience for Pieces OS on Windows by addressing the non-dismissable overlay message and ensuring compatibility with different Windows versions.\"",
+    "\"Consider implementing a more robust error handling and reporting mechanism for Pieces Copilot and Pieces OS to better diagnose and resolve issues.\""
   ],
   "message": "Daily support report generated successfully."
 }
