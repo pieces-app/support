@@ -1,5 +1,5 @@
 # Support Ticket Report
-- Generated: 2025-01-25 05:07:49
+- Generated: 2025-01-25 13:09:14
 - Period: 2025-01-20 to 2025-01-25
 
 ## Summary
@@ -17,54 +17,54 @@
 | [#590](https://github.com/pieces-app/support/issues/590) | Non-dismissable overlay message. | 3.31 |
 
 ## Common Issues
-### 1. Pieces OS Connection Issues
-Users are experiencing connection errors with Pieces OS, primarily "Connection refused" and "Connection closed before full header was received." This occurs when accessing Pieces OS endpoints or using features like Copilot. Proposed solutions include checking Pieces OS version, ensuring it's running, verifying port accessibility, and reviewing firewall settings.
+### 1. Pieces Installation and Connectivity Issues
+Users report Pieces installation failures on Linux and Windows due to missing dependencies and Windows Defender blocks. Connectivity issues arise from incorrect port configurations and potential conflicts with external projects. Solutions include ensuring curl is available in Linux sandboxes, configuring Windows Defender exclusions, and verifying port settings.
+
+**Related Issues:**
+- [#537](https://github.com/pieces-app/support/issues/537): Ollama Fails to Install on Linux
+- [#160](https://github.com/pieces-app/support/issues/160): suite installer always fails for me. (windows 11)
+- [#596](https://github.com/pieces-app/support/issues/596): Getting Error: connect ECONNREFUSED 127.0.0.1:1000
+
+### 2. Pieces Desktop App Installation and Connectivity Issues
+Users report difficulties installing Pieces Desktop app on Windows, encountering errors like 'ECONNREFUSED' when connecting to local endpoints. Proposed solutions include verifying port numbers (39300), checking application logs, and ensuring Windows Defender is not blocking the app.
 
 **Related Issues:**
 - [#596](https://github.com/pieces-app/support/issues/596): Getting Error: connect ECONNREFUSED 127.0.0.1:1000
+- [#160](https://github.com/pieces-app/support/issues/160): suite installer always fails for me. (windows 11)
+- [#590](https://github.com/pieces-app/support/issues/590): Non-dismissable overlay message.
+
+### 3. Pieces Copilot Encounters Processing Errors
+Users report Pieces Copilot failing to generate responses, often getting stuck loading or displaying "something went wrong" errors. This issue persists across different operating systems, Pieces versions, and LLM models. Proposed solutions include checking for updates, switching LLM models, reinstalling Pieces, and verifying API keys, but a definitive fix is still pending.
+
+**Related Issues:**
+- [#584](https://github.com/pieces-app/support/issues/584): Copilot is not giving any feedback
 - [#561](https://github.com/pieces-app/support/issues/561): Copilot Bug: 'I'm sorry. Something went wrong with processing. Please...' copilot response
 - [#591](https://github.com/pieces-app/support/issues/591): Unable to open Pieces Copilot Service
 
-### 2. Pieces Copilot Processing Errors
-Users reported frequent "Something went wrong with processing" errors, particularly with Claude and Gemini models. Suggested solutions included updating to the latest version, signing in, switching to OpenAI models, and reinstalling Pieces. The issue's root cause is still under investigation, but real-time debugging is available.
+### 4. Pieces Feature Requests and Bug Reports
+Users report issues with Pieces, including feature requests like adding support for the 'CARA' scripting language and bugs like Copilot failing to generate code and Ollama failing to install. Solutions vary from tracking feature requests internally to proposing debugging sessions and patching the Pieces OS.
 
 **Related Issues:**
 - [#594](https://github.com/pieces-app/support/issues/594): Adding a script language to the supported languages
 - [#584](https://github.com/pieces-app/support/issues/584): Copilot is not giving any feedback
-- [#561](https://github.com/pieces-app/support/issues/561): Copilot Bug: 'I'm sorry. Something went wrong with processing. Please...' copilot response
+- [#537](https://github.com/pieces-app/support/issues/537): Ollama Fails to Install on Linux
 
-### 3. Pieces Copilot Functionality Issues
-Users are experiencing various issues with Pieces Copilot, including large font sizes, zoom problems, and processing errors. Solutions include updating to the latest version, adjusting system settings, and switching to different AI models. Some issues are still under investigation.
+### 5. Pieces Desktop App UI and Functionality Issues
+Users reported various issues with the Pieces Desktop App, including large font sizes, inconsistent zoom functionality, and errors with Copilot and LLM models. Solutions involved updating to the latest app version, adjusting zoom settings, and switching LLM models. The Pieces team is actively investigating and resolving these issues.
 
 **Related Issues:**
 - [#307](https://github.com/pieces-app/support/issues/307): The interface's font is too large.
-- [#584](https://github.com/pieces-app/support/issues/584): Copilot is not giving any feedback
+- [#582](https://github.com/pieces-app/support/issues/582): Saved Snippets Welcome Screen
 - [#561](https://github.com/pieces-app/support/issues/561): Copilot Bug: 'I'm sorry. Something went wrong with processing. Please...' copilot response
-
-### 4. Pieces Copilot Processing Errors
-Users report Pieces Copilot failing to process requests, often displaying "Something went wrong with processing." This issue appears across operating systems and Pieces versions. Suggested solutions include updating Pieces, switching to different LLM models, signing in to Pieces, and verifying API keys and SSL certificates. The Pieces team is actively investigating these issues.
-
-**Related Issues:**
-- [#584](https://github.com/pieces-app/support/issues/584): Copilot is not giving any feedback
-- [#561](https://github.com/pieces-app/support/issues/561): Copilot Bug: 'I'm sorry. Something went wrong with processing. Please...' copilot response
-- [#591](https://github.com/pieces-app/support/issues/591): Unable to open Pieces Copilot Service
-
-### 5. Pieces installation and functionality issues
-Users report various issues with Pieces installation and functionality, including Ollama installation failing on Linux due to sandbox environment restrictions, Copilot not responding on macOS, and Suite installer consistently failing on Windows 11. Proposed solutions involve patching Pieces for compatibility, debugging Copilot connectivity, and using the EXE installer for Windows. 
-
-**Related Issues:**
-- [#537](https://github.com/pieces-app/support/issues/537): Ollama Fails to Install on Linux
-- [#584](https://github.com/pieces-app/support/issues/584): Copilot is not giving any feedback
-- [#160](https://github.com/pieces-app/support/issues/160): suite installer always fails for me. (windows 11)
 
 
 ## Recommendations
-- **Prioritize connection issues:** Allocate resources to promptly address the high volume of "Pieces OS Connection Issues" and "Pieces Copilot Processing Errors," as these appear to be widespread and impacting user experience.
-- **Investigate Copilot functionality:** Conduct thorough testing and debugging to identify the root cause of the "Pieces Copilot Processing Errors" and other Copilot-related issues, such as those related to specific AI models.
-- **Improve installation experience:** Review and address the issues reported with Pieces installation, particularly the Ollama installation on Linux and the Suite installer on Windows 11, to ensure a smooth onboarding process for new users.
-- **Review and update documentation:** Ensure that support documentation and FAQs are up-to-date with solutions and workarounds for common issues, including those related to Pieces OS connections, Copilot processing errors, and installation problems.
-- **Gather more detailed logs:** Implement more comprehensive logging for Pieces OS and Copilot to capture detailed information about errors and failures, which will aid in faster diagnosis and resolution of issues in the future.
-- **Consider user feedback:** Analyze user feedback from support tickets and other channels to identify recurring pain points and prioritize improvements based on user needs and impact.
+- **Prioritize resolving Pieces Copilot errors:** Investigate and address the root causes of Copilot failing to generate responses, getting stuck loading, or displaying "something went wrong" errors. This issue appears frequently across different operating systems and Pieces versions.
+- **Improve Pieces installation experience:** Address installation failures on Linux due to missing dependencies (e.g., curl in sandboxes) and Windows Defender blocks. Provide clear instructions for configuring Windows Defender exclusions and ensure a smoother installation process.
+- **Provide clear guidance on connectivity issues:** Create comprehensive documentation or FAQs addressing "ECONNREFUSED" errors and connectivity problems with local endpoints. Clarify the correct port numbers (39300) and troubleshooting steps for different operating systems.
+- **Investigate and resolve Pieces Desktop App UI/UX issues:** Address reported problems like large font sizes, inconsistent zoom functionality, and non-dismissable overlay messages. Ensure a consistent and user-friendly experience across different operating systems and screen resolutions.
+- **Consider adding support for the 'CARA' scripting language:** Evaluate the feasibility and benefits of incorporating 'CARA' support based on user requests and the language's relevance to Pieces' functionality.
+- **Continuously monitor and analyze support tickets:** Regularly review common issues, active tickets, and user feedback to identify recurring problems and prioritize areas for improvement in future releases and support documentation.
 
 ## Daily Reports
 Here are the daily reports for this week:
@@ -78,3 +78,4 @@ Here are the daily reports for this week:
 - [report_130917](daily/2025-01-24/report_130917.md)
 - [report_210607](daily/2025-01-24/report_210607.md)
 - [report_050611](daily/2025-01-25/report_050611.md)
+- [report_130736](daily/2025-01-25/report_130736.md)
