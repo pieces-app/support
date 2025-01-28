@@ -1,0 +1,86 @@
+{
+  "success": true,
+  "date_range": {
+    "start": "2025-01-24T00:00:00+00:00",
+    "end": "2025-01-24T13:09:17.162122+00:00"
+  },
+  "summary": {
+    "total_tickets": 2,
+    "resolved_tickets": 0,
+    "open_tickets": 2
+  },
+  "ticket_breakdown": [
+    {
+      "category": "bug",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:desktop application",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "os:macos",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:pieces copilot module",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:triaged",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    }
+  ],
+  "most_active_tickets": [
+    {
+      "number": 584,
+      "title": "Copilot is not giving any feedback",
+      "activity_level": 4.53
+    },
+    {
+      "number": 307,
+      "title": "The interface's font is too large.",
+      "activity_level": 3.01
+    }
+  ],
+  "common_issues": [
+    {
+      "title": "Pieces Desktop Application Bugs",
+      "description": "Users are experiencing various bugs in the Pieces Desktop application, including Copilot loading issues and large font sizes impacting usability. Proposed solutions include upgrading to the latest Pieces OS version, using zoom shortcuts, and real-time debugging sessions with support. However, some issues persist despite these attempts.",
+      "frequency": 2,
+      "related_issues": [
+        {
+          "id": 584,
+          "title": "Copilot is not giving any feedback",
+          "text": "Copilot is not giving any feedback\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\nPieces for Developers 3.3.3\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nThe copilot is not generating anything, it just keeps on loading.\n## Summary of GitHub Issue Conversation\n\n**Key Points Raised:**\n\n* User gittydia reported an issue with Pieces Copilot experiencing an \"I'm sorry. Something went wrong with processing. Please...\" response.\n* User luigigalli encountered the same issue on MacOS with a specific PiecesOS version.\n\n**Problems Identified:**\n\n* The reported error message indicates a problem with processing requests within Pieces Copilot.\n* This issue appears to be related to using a staging build of PiecesOS.\n\n**Proposed/Implemented Solutions:**\n\n* Pieces support bot suggested related issues and resources for troubleshooting.\n* mark-at-pieces recommended waiting for the PiecesOS 11.0.4 release, which allegedly includes a fix for the issue.\n* Later, mark-at-pieces suggested switching to the production version 11.0.4 of PiecesOS instead of the staging build.\n* Finally, mark-at-pieces proposed a real-time debugging session to further investigate the issue.\n\n**Current Status/Outcome:**\n\n* The user confirmed trying the suggested solutions, but the problem persists.\n* A real-time debugging session is scheduled to further diagnose the issue. \n\n**Note:** This summary is based on the information provided in the GitHub issue conversation.",
+          "activity_level": 4.53
+        },
+        {
+          "id": 307,
+          "title": "The interface's font is too large.",
+          "text": "The interface's font is too large.\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nLinux\n\n### Your Pieces OS Version\n\n10.0.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nThe recent interface update, specifically the increased font size in the answer section, limits the number of answers that can be displayed. \r\n![Screenshot from 2024-07-12 22-14-57](https://github.com/user-attachments/assets/3265af50-ffc6-4ab1-b6b8-397cd3979a9f)\r\n\n## Issue Summary\n\nThis GitHub conversation revolves around a bug reported in the Pieces Desktop application related to font sizes, zoom functionality, and the onboarding screen.\n\n**Key points raised:**\n\n* Font size in the Desktop app increased after an update. \n* User is unable to zoom out/in the onboarding screens.\n* Clicking on the Chat window prevents zooming, while clicking on the input bar allows it.\n\n**Problems identified:**\n\n* Larger font size affecting usability. \n* Inconsistent zoom behavior across different sections of the application.\n\n**Solutions proposed/implemented:**\n\n* \"Ctrl+\" or \"Ctrl-\" shortcut suggested for zooming the Desktop application.\n* Version 3.1.0 of the app released with potential fixes.\n\n**Current status/outcome:**\n\n* The bug persists as of January 24, 2025, despite the release.\n\n**Additional notes:**\n\n* The problem appears to affect users with high-resolution displays and scaling enabled.\n* The issue affects both chat font size and general font size in the app.",
+          "activity_level": 3.01
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    "**Prioritize bug fixes related to the Pieces Desktop Application:** The majority of reported issues stem from bugs in the desktop app, particularly with Copilot loading and large font sizes. Allocating resources to resolve these issues should be a priority.",
+    "**Investigate and address Copilot loading issues:** Ticket #584 highlights persistent problems with Copilot not providing feedback and getting stuck in a loading state. This appears to be a recurring issue affecting multiple users and requires immediate attention.",
+    "**Improve font size settings and zoom functionality:** Ticket #307 reveals ongoing complaints about large font sizes impacting usability. Implementing more robust font size options and ensuring consistent zoom functionality across the application are crucial.",
+    "**Gather more information about user environments:**  While the provided data mentions macOS and Pieces OS versions, collecting more detailed information about users' operating systems, screen resolutions, and scaling settings can aid in replicating and resolving issues like the font size problem.",
+    "**Review and update onboarding documentation:** Given the issues with zoom functionality and potentially larger UI changes, ensure the onboarding process and documentation clearly explain how to navigate the application, including zoom options and other relevant settings.",
+    "**Consider a bug bounty program:** To uncover and address bugs more efficiently, explore launching a bug bounty program to incentivize users to report issues and provide valuable feedback."
+  ],
+  "message": "Daily support report generated successfully."
+}

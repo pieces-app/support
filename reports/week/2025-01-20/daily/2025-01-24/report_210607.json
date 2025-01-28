@@ -1,0 +1,141 @@
+{
+  "success": true,
+  "date_range": {
+    "start": "2025-01-24T00:00:00+00:00",
+    "end": "2025-01-24T21:06:07.026146+00:00"
+  },
+  "summary": {
+    "total_tickets": 4,
+    "resolved_tickets": 1,
+    "open_tickets": 3
+  },
+  "ticket_breakdown": [
+    {
+      "category": "bug",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "os:windows",
+      "received": 2,
+      "resolved": 1,
+      "pending": 1
+    },
+    {
+      "category": "app:desktop application",
+      "received": 3,
+      "resolved": 0,
+      "pending": 3
+    },
+    {
+      "category": "app:pieces os",
+      "received": 2,
+      "resolved": 1,
+      "pending": 1
+    },
+    {
+      "category": "status:triaged",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "stale",
+      "received": 1,
+      "resolved": 1,
+      "pending": 0
+    },
+    {
+      "category": "os:macos",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:pieces copilot module",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    }
+  ],
+  "most_active_tickets": [
+    {
+      "number": 596,
+      "title": "Getting Error: connect ECONNREFUSED 127.0.0.1:1000",
+      "activity_level": 6.94
+    },
+    {
+      "number": 584,
+      "title": "Copilot is not giving any feedback",
+      "activity_level": 4.53
+    },
+    {
+      "number": 307,
+      "title": "The interface's font is too large.",
+      "activity_level": 3.01
+    },
+    {
+      "number": 92,
+      "title": "ANNOUNCEMENT: Pieces Qdrant Server pop up in Pieces OS 8.0.0 Windows",
+      "activity_level": 1.54
+    }
+  ],
+  "common_issues": [
+    {
+      "title": "Pieces OS Connection Issues and Errors",
+      "description": "Users report connection errors, including \"Connection refused\" and unresponsive Copilot, across different Pieces OS versions and operating systems. Troubleshooting suggestions include checking firewall settings, verifying Pieces OS installation and configuration, and trying different ports. Upgrading to the latest Pieces OS version is also recommended, although it doesn't always resolve the issues. ",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 596,
+          "title": "Getting Error: connect ECONNREFUSED 127.0.0.1:1000",
+          "text": "Getting Error: connect ECONNREFUSED 127.0.0.1:1000\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.0.4\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI tried to include the Pieces OS endpoint (127.0.0.1:1000) into my external project, but even though Pieces OS is operating, I keep getting the error \"Connection refused.\"\n\n![Image](https://github.com/user-attachments/assets/f50f1e1d-4eb2-46a2-9df7-2892ea6d319b)\n## GitHub Issue Conversation Summary\n\n**Issue:** Raju-git20 is experiencing problems with PiecesOS after upgrading to version 11.0.0. \n\n**Key Points Raised:**\n\n* Raju-git20 is unable to access PiecesOS after upgrading to version 11.0.0.\n* The issue persists even after trying the new port (39300) suggested by mark-at-pieces.\n* Screenshots of the error messages are provided.\n\n**Problems Identified:**\n\n* Raju-git20 is likely facing compatibility issues due to the PiecesOS upgrade.\n* The new port may not be configured correctly on Raju-git20's system.\n\n**Solutions Proposed/Implemented:**\n\n* mark-at-pieces suggests using the new port (39300).\n* Raju-git20 confirms trying the new port but it didn't resolve the issue.\n\n**Current Status/Outcome:**\n\n* The issue remains unresolved. \n* Further troubleshooting is needed to identify the root cause and find a solution. \n\n**Next Steps:**\n\n* Raju-git20 and mark-at-pieces could work together to diagnose the problem by:\n    * Checking firewall settings.\n    * Verifying PiecesOS installation and configuration.\n    * Looking for additional error logs.\n* Sharing detailed information about the setup and error messages would help pinpoint the issue.",
+          "activity_level": 6.94
+        },
+        {
+          "id": 92,
+          "title": "ANNOUNCEMENT: Pieces Qdrant Server pop up in Pieces OS 8.0.0 Windows",
+          "text": "ANNOUNCEMENT: Pieces Qdrant Server pop up in Pieces OS 8.0.0 Windows\n### Software\n\nPieces OS\n\n### Operating System\n\nWindows\n\n### Your Pieces OS Version\n\n8.0.0\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWindows users please be aware that with the release of Pieces OS v8.0.0, upon loading the desktop application the first time you may receive the following dialog box:\r\n\r\n![image (8)](https://github.com/pieces-app/support/assets/152189388/bd326c95-752d-435f-88d2-9da46d88c46a)\r\n\r\nThis is a standalone executable that we need to run in order to enable our new long-term memory and other enhancements to the copilot chat experience. This dialog box is expected and in order to receive this new functionality you will need to choose \"Allow access.\" If you deny it, you will likely have a degraded chat experience and it may cause breakages in the app down the line. \r\n\r\nApologies for the inconvenience; we will work on making this a better user experience going forward.\n## Summary of GitHub Issue Conversation\n\n**Key Points:**\n\n* Adding information about PiecesOS documentation to Windows installation instructions.\n* This issue will be included in the new PiecesOS documentation sprint.\n* Qdrant is being deprecated with the next POS release, making this issue irrelevant for 11.1.0 and onwards.\n\n**Problems Identified:**\n\n* The Windows installation instructions are missing information about PiecesOS documentation.\n* Qdrant is becoming obsolete.\n\n**Solutions Proposed/Implemented:**\n\n* Judson will include the information in the new PiecesOS documentation.\n* Mark informs that the issue will be irrelevant due to Qdrant's deprecation.\n\n**Current Status/Outcome:**\n\n* The issue is closed as it will be addressed in the new PiecesOS documentation.\n* The information will not be added to the Windows installation instructions due to Qdrant's deprecation.",
+          "activity_level": 1.54
+        },
+        {
+          "id": 584,
+          "title": "Copilot is not giving any feedback",
+          "text": "Copilot is not giving any feedback\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\nPieces for Developers 3.3.3\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nThe copilot is not generating anything, it just keeps on loading.\n## Summary of GitHub Issue Conversation\n\n**Problem:** \n\n* Gittydia reported an issue with Pieces Copilot throwing an \"I'm sorry. Something went wrong with processing. Please...\" error.\n* Luigi Galli confirmed the same issue on MacOS with Pieces for Developers 3.3.4 and PiecesOS 11.0.19 staging.\n\n**Solutions Proposed/Implemented:**\n\n* Mark-at-pieces suggested waiting for the PiecesOS 11.0.4 release, claiming it contained a fix.\n* After the release, Luigi Galli confirmed the issue persisted even with 11.0.4 and different LLMs.\n* Mark-at-pieces recommended switching to the production 11.0.4 build and offered a real-time debugging session.\n\n**Current Status/Outcome:**\n\n* The issue remains unresolved for Luigi Galli.\n* Mark-at-pieces proposed a real-time debugging session to investigate further.\n\n**Key Points:**\n\n* The issue involves the Pieces Copilot functionality throwing an error message.\n* It affects both Gittydia and Luigi Galli.\n* The proposed fix in PiecesOS 11.0.4 did not resolve the issue for Luigi Galli.\n* A real-time debugging session is scheduled to investigate further.",
+          "activity_level": 4.53
+        }
+      ]
+    },
+    {
+      "title": "Pieces Desktop App UI/UX Issues",
+      "description": "Users report large font sizes, lack of zoom functionality in onboarding screens, and zoom issues in the chat window. Proposed solutions include UI adjustments, using Ctrl+ and Ctrl- for zoom, and app updates. However, some issues persist, and further investigation and debugging are ongoing.",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 307,
+          "title": "The interface's font is too large.",
+          "text": "The interface's font is too large.\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nLinux\n\n### Your Pieces OS Version\n\n10.0.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nThe recent interface update, specifically the increased font size in the answer section, limits the number of answers that can be displayed. \r\n![Screenshot from 2024-07-12 22-14-57](https://github.com/user-attachments/assets/3265af50-ffc6-4ab1-b6b8-397cd3979a9f)\r\n\n## GitHub Issue Conversation Summary:\n\n**Key points raised:**\n\n* User @ksubramanyeshwara reports that font sizes are too large in the latest Desktop app update.\n* User @choir241 requests zoom functionality in the onboarding screens for accessibility and consistency.\n* User @hra42 reports that clicking on the input bar is required for zoom to function in the chat window.\n* User @3dyuval confirms the issue with large font sizes and provides system details.\n\n**Problems identified:**\n\n* Recent update caused larger font sizes in Desktop app, impacting user experience.\n* Onboarding screens lack zoom functionality.\n* Zooming in the chat window only works when the input bar is clicked.\n* Large fonts persist in certain system configurations.\n\n**Solutions proposed/implemented:**\n\n* The team is working on UI adjustments for the Copilot app.\n* Mack recommends using Ctrl+ and Ctrl- to adjust the zoom within the Desktop app.\n* The team released Desktop App version 3.1.0 with potential fixes.\n\n**Current status/outcome:**\n\n* The issue with large fonts in Desktop App and lack of zoom in onboarding screens persists as of January 2025.\n* It's unclear if Mack's recommendation or version 3.1.0 of the app fully addresses the issues.\n* The team is likely still investigating and working on a resolution.",
+          "activity_level": 3.01
+        },
+        {
+          "id": 584,
+          "title": "Copilot is not giving any feedback",
+          "text": "Copilot is not giving any feedback\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\nPieces for Developers 3.3.3\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nThe copilot is not generating anything, it just keeps on loading.\n## Summary of GitHub Issue Conversation\n\n**Problem:** \n\n* Gittydia reported an issue with Pieces Copilot throwing an \"I'm sorry. Something went wrong with processing. Please...\" error.\n* Luigi Galli confirmed the same issue on MacOS with Pieces for Developers 3.3.4 and PiecesOS 11.0.19 staging.\n\n**Solutions Proposed/Implemented:**\n\n* Mark-at-pieces suggested waiting for the PiecesOS 11.0.4 release, claiming it contained a fix.\n* After the release, Luigi Galli confirmed the issue persisted even with 11.0.4 and different LLMs.\n* Mark-at-pieces recommended switching to the production 11.0.4 build and offered a real-time debugging session.\n\n**Current Status/Outcome:**\n\n* The issue remains unresolved for Luigi Galli.\n* Mark-at-pieces proposed a real-time debugging session to investigate further.\n\n**Key Points:**\n\n* The issue involves the Pieces Copilot functionality throwing an error message.\n* It affects both Gittydia and Luigi Galli.\n* The proposed fix in PiecesOS 11.0.4 did not resolve the issue for Luigi Galli.\n* A real-time debugging session is scheduled to investigate further.",
+          "activity_level": 4.53
+        },
+        {
+          "id": 92,
+          "title": "ANNOUNCEMENT: Pieces Qdrant Server pop up in Pieces OS 8.0.0 Windows",
+          "text": "ANNOUNCEMENT: Pieces Qdrant Server pop up in Pieces OS 8.0.0 Windows\n### Software\n\nPieces OS\n\n### Operating System\n\nWindows\n\n### Your Pieces OS Version\n\n8.0.0\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWindows users please be aware that with the release of Pieces OS v8.0.0, upon loading the desktop application the first time you may receive the following dialog box:\r\n\r\n![image (8)](https://github.com/pieces-app/support/assets/152189388/bd326c95-752d-435f-88d2-9da46d88c46a)\r\n\r\nThis is a standalone executable that we need to run in order to enable our new long-term memory and other enhancements to the copilot chat experience. This dialog box is expected and in order to receive this new functionality you will need to choose \"Allow access.\" If you deny it, you will likely have a degraded chat experience and it may cause breakages in the app down the line. \r\n\r\nApologies for the inconvenience; we will work on making this a better user experience going forward.\n## Summary of GitHub Issue Conversation\n\n**Key Points:**\n\n* Adding information about PiecesOS documentation to Windows installation instructions.\n* This issue will be included in the new PiecesOS documentation sprint.\n* Qdrant is being deprecated with the next POS release, making this issue irrelevant for 11.1.0 and onwards.\n\n**Problems Identified:**\n\n* The Windows installation instructions are missing information about PiecesOS documentation.\n* Qdrant is becoming obsolete.\n\n**Solutions Proposed/Implemented:**\n\n* Judson will include the information in the new PiecesOS documentation.\n* Mark informs that the issue will be irrelevant due to Qdrant's deprecation.\n\n**Current Status/Outcome:**\n\n* The issue is closed as it will be addressed in the new PiecesOS documentation.\n* The information will not be added to the Windows installation instructions due to Qdrant's deprecation.",
+          "activity_level": 1.54
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    "\"Investigate and address the root cause of Pieces OS connection errors, such as firewall conflicts, installation issues, and port configurations.\"",
+    "\"Improve the Pieces Desktop App's UI/UX by addressing large font sizes, implementing zoom functionality in onboarding screens, and ensuring consistent zoom behavior in the chat window.\""
+  ],
+  "message": "Daily support report generated successfully."
+}
