@@ -1,0 +1,191 @@
+{
+  "success": true,
+  "date_range": {
+    "start": "2025-01-27T00:00:00+00:00",
+    "end": "2025-01-28T05:06:55.645416+00:00"
+  },
+  "summary": {
+    "total_tickets": 6,
+    "resolved_tickets": 1,
+    "open_tickets": 5
+  },
+  "ticket_breakdown": [
+    {
+      "category": "Uncategorized",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "enhancement",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:new",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:desktop application",
+      "received": 4,
+      "resolved": 0,
+      "pending": 4
+    },
+    {
+      "category": "os:linux",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "bug",
+      "received": 4,
+      "resolved": 1,
+      "pending": 3
+    },
+    {
+      "category": "os:windows",
+      "received": 4,
+      "resolved": 1,
+      "pending": 3
+    },
+    {
+      "category": "app:pieces os",
+      "received": 4,
+      "resolved": 1,
+      "pending": 3
+    },
+    {
+      "category": "status:triaged",
+      "received": 4,
+      "resolved": 1,
+      "pending": 3
+    },
+    {
+      "category": "duplicate",
+      "received": 1,
+      "resolved": 1,
+      "pending": 0
+    }
+  ],
+  "most_active_tickets": [
+    {
+      "number": 596,
+      "title": "Getting Error: connect ECONNREFUSED 127.0.0.1:1000",
+      "activity_level": 6.38
+    },
+    {
+      "number": 601,
+      "title": "How to change the font of the linux app?",
+      "activity_level": 5.68
+    },
+    {
+      "number": 597,
+      "title": "Getting an error of Route not found error",
+      "activity_level": 5.6
+    },
+    {
+      "number": 598,
+      "title": "Ensure core dependencies need help asap",
+      "activity_level": 5.5
+    },
+    {
+      "number": 590,
+      "title": "Non-dismissable overlay message.",
+      "activity_level": 3.38
+    },
+    {
+      "number": 602,
+      "title": "Ensure core dependencies  Retry Step , I need help #bug",
+      "activity_level": 3.15
+    }
+  ],
+  "common_issues": [
+    {
+      "title": "Pieces OS Connection Issues",
+      "description": "Users are experiencing difficulties connecting to Pieces OS, encountering errors like \"Connection refused\" or \"Route not found\" when accessing the endpoint. This is often due to using the incorrect port. Pieces OS dynamically assigns ports, starting from 39300. Solutions involve identifying the correct port by checking log files or using port scanning techniques.",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 596,
+          "title": "Getting Error: connect ECONNREFUSED 127.0.0.1:1000",
+          "text": "Getting Error: connect ECONNREFUSED 127.0.0.1:1000\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.0.4\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI tried to include the Pieces OS endpoint (127.0.0.1:1000) into my external project, but even though Pieces OS is operating, I keep getting the error \"Connection refused.\"\n\n![Image](https://github.com/user-attachments/assets/f50f1e1d-4eb2-46a2-9df7-2892ea6d319b)\n## GitHub Issue Summary\n\n**Title:** Pieces OS Port Issue\n\n**Key Points Raised:**\n\n* Raju-git20 is experiencing an issue where they are unable to connect to the Pieces OS. \n* The user initially tried connecting to the default port of 39300, but it didn't work.\n* Raju-git20 is working on a project that uses AI to connect with LinkedIn for scraping positions and applying to them.\n\n**Problems Identified:**\n\n* The port used by Pieces OS is no longer the default port 39300.\n* Raju-git20's project requires access to the Pieces OS and the specific port it is running on.\n\n**Solutions Proposed/Implemented:**\n\n* Mark-at-Pieces explained that the POS has a range of ports and checks 100 ports starting from 39300 to find the running port.\n* They also mentioned the location of a file containing the port number for POS.\n\n**Current Status/Outcome:**\n\n* Raju-git20 is aware of the port finding algorithm and the location of the port number file.\n* They have requested a call with the Pieces team to discuss their project and receive feedback.\n\nThe issue remains open pending further communication and resolution.",
+          "activity_level": 6.38
+        },
+        {
+          "id": 597,
+          "title": "Getting an error of Route not found error",
+          "text": "Getting an error of Route not found error\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.0.4\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nThe problem \"route not found\" appears whenever I attempt to access the pieces os endpoint on port 39300.\n\n![Image](https://github.com/user-attachments/assets/d4f8961a-afa1-401d-82b5-cc2ead804b9f)\n## Summary of Github Conversation\n\n**Key Points:**\n\n* User @Raju-git20 created an issue with POS but no further information was given.\n* User @mark-at-pieces asked for the user's POS version to troubleshoot.\n* @mark-at-pieces explained the port finding process of POS and offered help with further development efforts.\n* Due to similar nature, this conversation was marked as a continuation of another issue (github/support/issues/597).\n\n**Problems Identified:**\n\n* Lack of information from user regarding the issue with POS.\n\n**Solutions Implemented/Proposed:**\n\n* **User asked:** To provide information about POS version for troubleshooting.\n* **Proposed by Support Bot:** Links to related issues and documentation for self help.\n* **Proposed by @mark-at-pieces:** Help with further development once the user provided requested details.\n\n**Current Status/Outcome:**\n\n* Issue was closed as it continued the discussion from another issue (github/support/issues/597).\n\n**Important Details:**\n\n* User needs to provide more context about the problem with POS.\n* There are other related issues and resources available to the user for self help.",
+          "activity_level": 5.6
+        },
+        {
+          "id": 602,
+          "title": "Ensure core dependencies  Retry Step , I need help #bug",
+          "text": "Ensure core dependencies  Retry Step , I need help #bug\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nPieces OS  v11.0.4 and Pieces for Developers v3.3.4 \n\n### Early Access Program\n\n- [x] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\ni am trying to launch but showing same error repeatedly .\nhow to fix this error \n\n![Image](https://github.com/user-attachments/assets/8d210966-b923-4f51-81ae-b6941e3824b8)\nNo comments found on this issue.",
+          "activity_level": 3.15
+        }
+      ]
+    },
+    {
+      "title": "Pieces OS launch errors and font customization",
+      "description": "Users report issues with Pieces OS failing to launch, encountering \"Ensure core dependencies\" errors. Troubleshooting steps and potential solutions are being explored. Additionally, users seek font customization options for the Pieces Copilot chat and sidebar, a feature currently unavailable but under consideration for future development.",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 601,
+          "title": "How to change the font of the linux app?",
+          "text": "How to change the font of the linux app?\n\n### Discussed in https://github.com/pieces-app/support/discussions/600\n\n<div type='discussions-op-text'>\n\n<sup>Originally posted by **rafidahmed816** January 27, 2025</sup>\nThe font is too bold. Can I change the font style?\r\n![Screenshot from 2025-01-27 16-30-12](https://github.com/user-attachments/assets/fc48f057-36b7-4645-89b8-373702db6fdc)\r\n</div>\n## GitHub Issue Conversation Summary\n\n**Key Points:**\n\n* User @rafidahmed816 inquired about the possibility of changing the font within the Pieces Copilot chat and sidebar.\n* Currently, there is no setting available for font customization.\n\n**Problems Identified:**\n\n* Users do not have the option to adjust the font to their preference within the chat and sidebar.\n\n**Solutions Proposed/Implemented:**\n\n* The developer, @mack-at-pieces, proposed exploring the implementation of a font setting for the chat and sidebar.\n\n**Current Status/Outcome:**\n\n* The issue remains open and the proposed solution is under consideration for future development.\n\n**Additional Notes:**\n\n* The user confirmed they were referring to the font within the Pieces Copilot chat and sidebar, rather than the Window title bar font.",
+          "activity_level": 5.68
+        },
+        {
+          "id": 602,
+          "title": "Ensure core dependencies  Retry Step , I need help #bug",
+          "text": "Ensure core dependencies  Retry Step , I need help #bug\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nPieces OS  v11.0.4 and Pieces for Developers v3.3.4 \n\n### Early Access Program\n\n- [x] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\ni am trying to launch but showing same error repeatedly .\nhow to fix this error \n\n![Image](https://github.com/user-attachments/assets/8d210966-b923-4f51-81ae-b6941e3824b8)\nNo comments found on this issue.",
+          "activity_level": 3.15
+        },
+        {
+          "id": 598,
+          "title": "Ensure core dependencies need help asap",
+          "text": "Ensure core dependencies need help asap\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.0.3\n\n### Early Access Program\n\n- [x] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n![Image](https://github.com/user-attachments/assets/50ccb8d9-4bd4-4036-85f9-6f42840bec67)\n\n![Image](https://github.com/user-attachments/assets/3ceec7f4-768a-43cc-b06d-25a14c6d4e94)\n\nI have this issue with opening Pieces and is checking updates and it does reload many times, need help asap\n## Summary of GitHub Issue Conversation\n\n**Key Points Raised:**\n\n* CPX10 reported an issue where they were unable to open Pieces Core Services.\n* The issue was automatically triaged and routed to the proper Pieces team member.\n* The support bot provided helpful resources and related issues.\n\n**Problems Identified:**\n\n* Pieces Core Services is not opening for CPX10.\n\n**Solutions Proposed/Implemented:**\n\n* Mark-at-Pieces tagged Mack-at-Pieces and Nathan-Courtney-Pieces to take a deeper look at the issue.\n* Mack-at-Pieces suggested a live video call to troubleshoot the issue.\n\n**Current Status/Outcome:**\n\n* CPX10 has been offered a live video call to troubleshoot the issue. The outcome is currently unknown.\n\n**Additional Notes:**\n\n* The conversation is ongoing.\n* The issue appears to be specific to CPX10's device or configuration.",
+          "activity_level": 5.5
+        }
+      ]
+    },
+    {
+      "title": "Pieces OS fails to launch on Windows",
+      "description": "Users are reporting that Pieces OS (versions 11.0.3 and 11.0.4) on Windows fails to launch, getting stuck on \"Ensure core dependencies\" step. This seems to be related to Pieces Core Services failing to start. Proposed solutions include checking for updates, restarting the computer, and contacting Pieces support for live troubleshooting.",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 602,
+          "title": "Ensure core dependencies  Retry Step , I need help #bug",
+          "text": "Ensure core dependencies  Retry Step , I need help #bug\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nPieces OS  v11.0.4 and Pieces for Developers v3.3.4 \n\n### Early Access Program\n\n- [x] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\ni am trying to launch but showing same error repeatedly .\nhow to fix this error \n\n![Image](https://github.com/user-attachments/assets/8d210966-b923-4f51-81ae-b6941e3824b8)\nNo comments found on this issue.",
+          "activity_level": 3.15
+        },
+        {
+          "id": 598,
+          "title": "Ensure core dependencies need help asap",
+          "text": "Ensure core dependencies need help asap\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.0.3\n\n### Early Access Program\n\n- [x] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n![Image](https://github.com/user-attachments/assets/50ccb8d9-4bd4-4036-85f9-6f42840bec67)\n\n![Image](https://github.com/user-attachments/assets/3ceec7f4-768a-43cc-b06d-25a14c6d4e94)\n\nI have this issue with opening Pieces and is checking updates and it does reload many times, need help asap\n## Summary of GitHub Issue Conversation\n\n**Key Points Raised:**\n\n* CPX10 reported an issue where they were unable to open Pieces Core Services.\n* The issue was automatically triaged and routed to the proper Pieces team member.\n* The support bot provided helpful resources and related issues.\n\n**Problems Identified:**\n\n* Pieces Core Services is not opening for CPX10.\n\n**Solutions Proposed/Implemented:**\n\n* Mark-at-Pieces tagged Mack-at-Pieces and Nathan-Courtney-Pieces to take a deeper look at the issue.\n* Mack-at-Pieces suggested a live video call to troubleshoot the issue.\n\n**Current Status/Outcome:**\n\n* CPX10 has been offered a live video call to troubleshoot the issue. The outcome is currently unknown.\n\n**Additional Notes:**\n\n* The conversation is ongoing.\n* The issue appears to be specific to CPX10's device or configuration.",
+          "activity_level": 5.5
+        },
+        {
+          "id": 590,
+          "title": "Non-dismissable overlay message.",
+          "text": "Non-dismissable overlay message.\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nv11.0.4\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nMy Pieces app launches at Windows startup (intended). Sometimes, (possibly after a background update?), this dialog appears on my desktop. I don't know what it means, exactly, but I cannot click \"Ok\" and there is no other way to dismiss it. My only option appears to be to restart the computer, which is often impractical. Please fix!\n\n![Image](https://github.com/user-attachments/assets/f231ef56-3d59-4e94-8cb5-2b54249900cc)\n## Summary of GitHub Issue Conversation\n\n**Issue:** ThemePark is unable to open Pieces Core Services on their Windows 10 machine.\n\n**Key Points:**\n\n* User reported the issue and was automatically routed to the proper Pieces team member.\n* User confirmed they have Pieces Suite, OS, and Desktop installed.\n\n**Problems Identified:**\n\n* Pieces Core Services is not opening on Windows 10.\n\n**Solutions Proposed/Implemented:**\n\n* No specific solutions were proposed in the conversation.\n\n**Current Status/Outcome:**\n\n* The issue remains unresolved.\n\n**Next Steps:**\n\n* The Pieces team may need to investigate further to diagnose the problem and propose a solution.\n\n**Additional Information:**\n\n* The user did not provide the version of Pieces they are using.",
+          "activity_level": 3.38
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    "**Prioritize Pieces OS Connection Issues:** Focus on resolving the root cause of connection problems with Pieces OS, such as the dynamic port assignment.  Consider a more user-friendly way to identify the correct port or improve error messages.",
+    "**Investigate Pieces OS Launch Errors:** Address the \"Ensure core dependencies\" error preventing Pieces OS launch on Windows. This may require debugging Pieces Core Services startup.",
+    "**Improve Documentation for Common Issues:** Create or update documentation that clearly explains how to troubleshoot Pieces OS connection problems and launch errors. Include steps to identify the correct port and solutions for common error messages.",
+    "**Consider Font Customization:** Explore the feasibility of adding font customization options for the Pieces Copilot chat and sidebar based on user feedback.",
+    "**Gather More Information on Launch Errors:**  For the \"Ensure core dependencies\" error, collect more detailed logs and system information to help identify the root cause and provide more specific solutions. "
+  ],
+  "message": "Daily support report generated successfully."
+}
