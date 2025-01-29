@@ -1,6 +1,6 @@
 # Support Ticket Report
-- Generated: 2025-01-28 21:08:18
-- Period: 2025-01-27 to 2025-01-28
+- Generated: 2025-01-29 05:07:58
+- Period: 2025-01-27 to 2025-01-29
 
 ## Summary
 - **Total Tickets:** 9
@@ -14,57 +14,57 @@
 | [#598](https://github.com/pieces-app/support/issues/598) | Ensure core dependencies need help asap | 5.38 |
 | [#597](https://github.com/pieces-app/support/issues/597) | Getting an error of Route not found error | 5.03 |
 | [#150](https://github.com/pieces-app/support/issues/150) | PiecesOS using too much RAM/spike in CPU | 4.93 |
-| [#601](https://github.com/pieces-app/support/issues/601) | How to change the font of the linux app? | 4.50 |
+| [#537](https://github.com/pieces-app/support/issues/537) | Ollama Fails to Install on Linux | 4.85 |
 
 ## Common Issues
 ### 1. Pieces OS Connection Issues
-Users are experiencing difficulties connecting to Pieces OS after the 11.0.4 update. The issue stems from a port change, with the new port being dynamically assigned and documented in the 'com.pieces.os/production/config/.port.txt' file.  Solutions involve verifying the correct port, checking Pieces OS version, and consulting relevant documentation.
+Users are experiencing difficulties connecting to Pieces OS after upgrading to version 11.0.4.  The issues involve connection refused errors, route not found errors, and problems accessing Pieces Core Services.  Solutions include verifying the correct port (39300), checking the .port.txt file, and ensuring all dependencies are met.
 
 **Related Issues:**
 - [#596](https://github.com/pieces-app/support/issues/596): Getting Error: connect ECONNREFUSED 127.0.0.1:1000
 - [#597](https://github.com/pieces-app/support/issues/597): Getting an error of Route not found error
 - [#602](https://github.com/pieces-app/support/issues/602): Ensure core dependencies  Retry Step , I need help #bug
 
-### 2. Pieces Core Services Failing to Launch
-Users are experiencing difficulties launching Pieces Core Services on both Windows and Linux. The issue on Linux seems to stem from snap sandbox restrictions and a potential fix is awaiting release. On Windows, the exact cause is unclear, and the Pieces team is actively investigating, offering live troubleshooting sessions to affected users.
+### 2. Issues with Pieces OS on Linux
+Users are experiencing issues with Pieces OS on Linux, including font customization limitations in Copilot Chats, "PiecesWebSocketCreator not registered" errors, and Ollama installation failures. Proposed solutions involve exploring font customization settings, investigating the WebSocket error, and developing a patch for Ollama installation within the Pieces sandbox environment.
 
 **Related Issues:**
-- [#537](https://github.com/pieces-app/support/issues/537): Ollama Fails to Install on Linux
-- [#602](https://github.com/pieces-app/support/issues/602): Ensure core dependencies  Retry Step , I need help #bug
-- [#598](https://github.com/pieces-app/support/issues/598): Ensure core dependencies need help asap
-
-### 3. Pieces Core Services Failing to Open
-Users are experiencing difficulties opening Pieces Core Services on various operating systems. The issue seems to stem from potential dependency errors during startup. Proposed solutions include checking for updates, ensuring dependencies are met, and engaging in live troubleshooting with the Pieces team.
-
-**Related Issues:**
+- [#601](https://github.com/pieces-app/support/issues/601): How to change the font of the linux app?
 - [#604](https://github.com/pieces-app/support/issues/604): Unable to open Pieces Copilot Service
-- [#602](https://github.com/pieces-app/support/issues/602): Ensure core dependencies  Retry Step , I need help #bug
-- [#598](https://github.com/pieces-app/support/issues/598): Ensure core dependencies need help asap
+- [#537](https://github.com/pieces-app/support/issues/537): Ollama Fails to Install on Linux
 
-### 4. PiecesOS High Resource Usage and Startup Issues
-Users report high RAM/CPU usage, sometimes exceeding 5GB, potentially due to memory leaks.  Suggested workarounds include restarting PiecesOS and disabling the Live Context feature.  A potential fix was released in PiecesOS 11.1.0.  Additionally, some users experience issues with PiecesOS or core services not opening, often requiring individual troubleshooting.
+### 3. PiecesOS Performance Issues
+Users report high RAM/CPU usage, particularly on Windows. Issues potentially linked to internet connection, background updates, and core services. Short-term solution: restart PiecesOS. Long-term: update to latest version, contact support for troubleshooting, consider turning off 'Live Context' feature.
 
 **Related Issues:**
 - [#150](https://github.com/pieces-app/support/issues/150): PiecesOS using too much RAM/spike in CPU
 - [#598](https://github.com/pieces-app/support/issues/598): Ensure core dependencies need help asap
 - [#590](https://github.com/pieces-app/support/issues/590): Non-dismissable overlay message.
 
-### 5. Pieces for Desktop App Issues and Errors
-Users are experiencing various issues with the Pieces for Desktop App, including font customization limitations, service launch errors with "Bad State" messages, and non-dismissable overlay messages. Troubleshooting steps often involve checking installation details, Pieces OS information, and device information. The Pieces support team is actively investigating these issues and providing updates to users.
+### 4. Pieces Copilot/Core Services Access Failure
+Users report Pieces Copilot/Core Services inaccessibility on Linux & Windows. Error messages indicate potential dependency registration issues within the application. Proposed solutions include checking Pieces OS version compatibility, ensuring core dependencies are met, and reviewing installation steps.
 
 **Related Issues:**
-- [#601](https://github.com/pieces-app/support/issues/601): How to change the font of the linux app?
 - [#604](https://github.com/pieces-app/support/issues/604): Unable to open Pieces Copilot Service
+- [#602](https://github.com/pieces-app/support/issues/602): Ensure core dependencies  Retry Step , I need help #bug
+- [#598](https://github.com/pieces-app/support/issues/598): Ensure core dependencies need help asap
+
+### 5. Pieces Desktop App Installation and Access Issues
+Users report Pieces Desktop App installation failures, particularly with Ollama on Linux, and difficulties accessing core services. Proposed solutions involve infrastructure updates, patches for sandboxed environments, and ensuring core dependencies are met. Support teams are actively investigating and addressing these issues.
+
+**Related Issues:**
+- [#537](https://github.com/pieces-app/support/issues/537): Ollama Fails to Install on Linux
+- [#602](https://github.com/pieces-app/support/issues/602): Ensure core dependencies  Retry Step , I need help #bug
 - [#590](https://github.com/pieces-app/support/issues/590): Non-dismissable overlay message.
 
 
 ## Recommendations
-- **Prioritize Pieces OS Connection Issues:** Allocate additional resources to address the difficulties users face connecting to Pieces OS after the 11.0.4 update. Investigate the root cause of the port change issue and provide clear guidance on port configuration.
-- **Investigate Pieces Core Services Launch Failures:** Address the issues preventing users from launching Pieces Core Services on Windows and Linux. Prioritize resolving the snap sandbox restrictions on Linux and provide a timely fix. Continue investigating the cause of launch failures on Windows and offer support through live troubleshooting sessions.
-- **Address PiecesOS High Resource Usage:** Investigate and address the high RAM/CPU usage reported by users, potentially caused by memory leaks. While PiecesOS 11.1.0 includes a potential fix, continue monitoring its effectiveness and explore further optimizations to reduce resource consumption.
-- **Improve Communication on Known Issues:** Provide clear and timely communication to users regarding the status of known issues, such as the Pieces Core Services launch failures and PiecesOS high resource usage. Offer workarounds and alternative solutions while fixes are being developed.
-- **Enhance Font Customization Options:** Consider adding a setting to allow users to customize the font in the Pieces Copilot interface, addressing the feedback received regarding font boldness and lack of customization options.
-- **Review and Update Support Documentation:** Ensure that support documentation, particularly regarding Pieces OS port configuration and troubleshooting core services launch failures, is up-to-date and comprehensive. Provide clear step-by-step instructions and troubleshooting tips.
+- **Prioritize resolution of Pieces OS connection issues:** Focus on addressing connection refused errors, route not found errors, and problems accessing Pieces Core Services, particularly for users who recently upgraded to version 11.0.4. Ensure clear communication about the correct port (39300) and troubleshooting steps.
+- **Improve Pieces OS stability on Linux:** Investigate and address issues related to font customization limitations in Copilot Chats, "PiecesWebSocketCreator not registered" errors, and Ollama installation failures. Explore solutions like enhanced font customization settings, debugging the WebSocket error, and developing a patch for Ollama installation within the Pieces sandbox environment.
+- **Address PiecesOS performance issues:** Investigate reports of high RAM/CPU usage, especially on Windows. Explore potential links to internet connection, background updates, and core services. While restarting PiecesOS offers a temporary fix, prioritize long-term solutions like optimizing core functionalities and potentially releasing an update.
+- **Enhance communication and documentation for core dependencies:** Provide clear instructions and troubleshooting steps for users encountering issues with Pieces Copilot/Core Services on both Linux and Windows. Ensure compatibility information and installation procedures are readily available.
+- **Proactively monitor and address installation issues:** Continue monitoring reports of Pieces Desktop App installation failures, particularly with Ollama on Linux. Implement necessary infrastructure updates and patches to ensure a smooth installation process for all users.
+- **Consider creating a dedicated troubleshooting guide for Pieces OS 11.0.4:** This guide can consolidate solutions for common issues encountered after the recent upgrade, including connection problems and core service access failures.
 
 ## Daily Reports
 Here are the daily reports for this week:
