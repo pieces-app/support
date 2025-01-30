@@ -1,0 +1,73 @@
+{
+  "success": true,
+  "date_range": {
+    "start": "2025-01-23T00:00:00+00:00",
+    "end": "2025-01-23T05:06:47.937338+00:00"
+  },
+  "summary": {
+    "total_tickets": 1,
+    "resolved_tickets": 0,
+    "open_tickets": 1
+  },
+  "ticket_breakdown": [
+    {
+      "category": "bug",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:new",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:desktop application",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "os:linux",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "known_issue",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    }
+  ],
+  "most_active_tickets": [
+    {
+      "number": 537,
+      "title": "Ollama Fails to Install on Linux",
+      "activity_level": 3.53
+    }
+  ],
+  "common_issues": [
+    {
+      "title": "Ollama installation fails in Pieces Desktop App on Linux",
+      "description": "Users are unable to install Ollama through the Pieces Desktop App on Linux due to the Pieces-OS snap environment lacking the 'curl' dependency. Proposed solutions include adding 'curl' as a dependency to the Pieces-OS snap or patching Pieces-OS to enable Ollama usage within its sandbox.",
+      "frequency": 1,
+      "related_issues": [
+        {
+          "id": 537,
+          "title": "Ollama Fails to Install on Linux",
+          "text": "Ollama Fails to Install on Linux\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nLinux\n\n### Your Pieces OS Version\n\n11.0.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nUser reports immediate \"Ollama failed to install\" diaglog upon clicking install Ollama install button in Pieces desktop app\n## Summary of GitHub Issue Conversation:\n\n**Key Points Raised:**\n\n* An issue with Ollama installation in Pieces was reported.\n* It was identified that the issue was due to Ollama installation being attempted using `curl` within the sandboxed Pieces-OS snap environment.\n\n**Problems Identified:**\n\n* `curl` is not a standard package in Pieces-OS snap environment\n* Ollama could not be installed due to missing `curl`.\n\n**Proposed Solutions**:\n\n* Add `curl` to Pieces-OS snap definition file as a dependency.\n* Patch Pieces-OS to allow using Ollama within the sandbox.\n\n**Implemented Solutions (as of Nov 2023):**\n\n* A patch for allowing Ollama usage within Pieces-OS sandbox was being worked on.\n\n**Current Status/Outcome (as of Nov 2023):**\n\n* The issue was acknowledged and a fix was planned.\n* It was unclear if the fix had been fully implemented and available in the latest snap version as of Jan 23, 2025.\n\n**Further Actions Needed (as of Nov 2023):**\n\n* Confirmation is needed regarding the fix implementation and availability in the latest snap version.",
+          "activity_level": 3.53
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    "**Investigate and resolve the Ollama installation issue on Linux:** This is a critical issue affecting users on Linux and has been raised multiple times. Prioritize finding a permanent solution, such as adding 'curl' as a dependency to the Pieces-OS snap or patching Pieces-OS to enable Ollama usage within its sandbox.",
+    "**Improve communication around known issues:** Keep users informed about the status of known issues like the Ollama installation problem. Provide updates on workarounds, estimated resolution times, and any progress made.",
+    "**Monitor and analyze support ticket trends:** Regularly review support tickets to identify recurring issues, common pain points, and areas for improvement in the product or documentation. Use this data to proactively address issues and improve the user experience.",
+    "**Consider creating a dedicated knowledge base or FAQ section:**  A centralized resource with information on common issues, troubleshooting steps, and workarounds can empower users to resolve problems independently and reduce the support ticket volume."
+  ],
+  "message": "Daily support report generated successfully."
+}
