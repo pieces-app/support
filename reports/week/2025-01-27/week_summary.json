@@ -2,31 +2,49 @@
   "success": true,
   "date_range": {
     "start": "2025-01-27T00:00:00+00:00",
-    "end": "2025-01-29T21:06:47.428474+00:00"
+    "end": "2025-01-30T05:07:34.553961+00:00"
   },
   "summary": {
-    "total_tickets": 9,
+    "total_tickets": 10,
     "resolved_tickets": 3,
-    "open_tickets": 6
+    "open_tickets": 7
   },
   "ticket_breakdown": [
     {
       "category": "bug",
-      "received": 7,
+      "received": 8,
       "resolved": 3,
-      "pending": 4
+      "pending": 5
+    },
+    {
+      "category": "status:new",
+      "received": 3,
+      "resolved": 1,
+      "pending": 2
+    },
+    {
+      "category": "app:desktop application",
+      "received": 8,
+      "resolved": 2,
+      "pending": 6
+    },
+    {
+      "category": "os:linux",
+      "received": 4,
+      "resolved": 1,
+      "pending": 3
+    },
+    {
+      "category": "app:pieces copilot module",
+      "received": 2,
+      "resolved": 1,
+      "pending": 1
     },
     {
       "category": "os:windows",
       "received": 5,
       "resolved": 2,
       "pending": 3
-    },
-    {
-      "category": "app:desktop application",
-      "received": 7,
-      "resolved": 2,
-      "pending": 5
     },
     {
       "category": "app:pieces os",
@@ -59,21 +77,9 @@
       "pending": 1
     },
     {
-      "category": "os:linux",
-      "received": 3,
-      "resolved": 1,
-      "pending": 2
-    },
-    {
       "category": "status:waiting_on_user_responses",
       "received": 1,
       "resolved": 0,
-      "pending": 1
-    },
-    {
-      "category": "status:new",
-      "received": 2,
-      "resolved": 1,
       "pending": 1
     },
     {
@@ -89,12 +95,6 @@
       "pending": 1
     },
     {
-      "category": "app:pieces copilot module",
-      "received": 1,
-      "resolved": 1,
-      "pending": 0
-    },
-    {
       "category": "duplicate",
       "received": 1,
       "resolved": 1,
@@ -108,6 +108,11 @@
       "activity_level": 6.17
     },
     {
+      "number": 605,
+      "title": "Ollama failed to install in pieces",
+      "activity_level": 5.68
+    },
+    {
       "number": 598,
       "title": "Ensure core dependencies need help asap",
       "activity_level": 5.61
@@ -115,12 +120,12 @@
     {
       "number": 537,
       "title": "Ollama Fails to Install on Linux",
-      "activity_level": 5.19
+      "activity_level": 5.46
     },
     {
       "number": 150,
       "title": "PiecesOS using too much RAM/spike in CPU",
-      "activity_level": 4.93
+      "activity_level": 4.92
     },
     {
       "number": 601,
@@ -128,14 +133,14 @@
       "activity_level": 4.74
     },
     {
-      "number": 602,
-      "title": "Ensure core dependencies  Retry Step , I need help #bug",
-      "activity_level": 4.5
-    },
-    {
       "number": 597,
       "title": "Getting an error of Route not found error",
       "activity_level": 3.92
+    },
+    {
+      "number": 602,
+      "title": "Ensure core dependencies  Retry Step , I need help #bug",
+      "activity_level": 3.88
     },
     {
       "number": 590,
@@ -150,112 +155,113 @@
   ],
   "common_issues": [
     {
-      "title": "PiecesOS Installation and Update Issues",
-      "description": "Users report PiecesOS failing to install or update properly. This includes issues with Ollama installation failing within the Pieces sandbox environment due to dependency conflicts. Solutions involve ensuring core dependencies are met, restarting the application, or updating through the Microsoft Store for specific installation types.",
+      "title": "Ollama Installation Failures in Pieces OS",
+      "description": "Users on various Pieces OS versions and operating systems are experiencing failures when installing the Ollama model. This is primarily due to dependency conflicts and snap confinement issues. Proposed solutions involve ensuring dependency accessibility within the snap environment and potential patching by the Pieces team.",
       "frequency": 3,
       "related_issues": [
         {
+          "id": 605,
+          "title": "Ollama failed to install in pieces",
+          "text": "Ollama failed to install in pieces\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nLinux\n\n### Your Pieces OS Version\n\n11.0.4\n\n### Early Access Program\n\n- [x] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI have a deepseek-r1:32b model installed in my desktop with ollama, and then try to use pieces for using this model locally, like there's a option called On-device copilot right, when I try to click to install ollama it shows failed to install and remaining all models are blocked, can you please fix it \n## GitHub Issue Conversation Summary\n\n**Key Points Raised:**\n\n* User @srisrihari reports an issue with the Ollama model by attaching an image.\n* The issue is automatically triaged and routed to the Pieces support team.\n* Related issues and helpful resources are provided for the user.\n\n**Problems Identified:**\n\n* The specific problem encountered by the user is unclear from the provided information.\n\n**Solutions Proposed/Implemented:**\n\n* No specific solutions are proposed or implemented in the conversation.\n\n**Current Status/Outcome:**\n\n* The user is advised to wait for a follow-up from the Pieces support team within 24 hours.\n\n**Additional Notes:**\n\n* The user might find the provided related issues and resources helpful for troubleshooting.",
+          "activity_level": 5.68
+        },
+        {
           "id": 537,
           "title": "Ollama Fails to Install on Linux",
-          "text": "Ollama Fails to Install on Linux\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nLinux\n\n### Your Pieces OS Version\n\n11.0.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nUser reports immediate \"Ollama failed to install\" diaglog upon clicking install Ollama install button in Pieces desktop app\n## Summary of GitHub Issue Conversation\n\n**Key Points:**\n\n* Issue involves ollama installation failure within the Pieces sandbox environment.\n* This is due to the sandbox's lack of curl and ollama's confined nature.\n* The issue persists as of Jan 23, 2025, impacting both download and inference.\n\n**Problems Identified:**\n\n* Ollama installation fails in Pieces due to missing curl dependency and ollama's confined nature.\n* The issue is persistent despite initial reassurances.\n\n**Solutions Proposed/Implemented:**\n\n* Adding curl to the Pieces sandbox environment.\n* Patching Pieces to allow ollama usage within the sandbox.\n* Delay in implementation due to infrastructure updates.\n\n**Current Status/Outcome:**\n\n* Patch is currently in development.\n* Solution expected within the next week (as of Jan 28, 2025).\n\n**Additional Information:**\n\n* Issue prevents both downloading and running local llm models.\n\n## Conciseness and Focus\n\nThe summary highlights the key problem and impacts, solutions proposed, and current status. It avoids unnecessary details while focusing on important information for users facing the issue.",
-          "activity_level": 5.19
+          "text": "Ollama Fails to Install on Linux\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nLinux\n\n### Your Pieces OS Version\n\n11.0.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nUser reports immediate \"Ollama failed to install\" diaglog upon clicking install Ollama install button in Pieces desktop app\n## Summary of GitHub Issue Conversation regarding Ollama Installation in Pieces-OS\n\n**Key Points Raised:**\n\n* User is unable to install Ollama due to Pieces-OS running as a snap with limited access to packages like `curl`.\n* User has confirmed `curl` is installed on their system but not accessible within the snap environment.\n\n**Problems Identified:**\n\n* Ollama installation script attempts to use `curl` within the Pieces-OS snap environment, where it is not available.\n* Manually downloading and installing Ollama outside the snap does not resolve the issue as Pieces-OS cannot access it.\n\n**Solutions Proposed/Implemented:**\n\n* Pieces team is working on a patch to allow Ollama access within the Pieces-OS snap environment.\n* Infrastructure updates have been completed, allowing development to resume on the fix.\n\n**Current Status/Outcome:**\n\n* The issue is not yet resolved as of January 28, 2025.\n* The fix is actively being worked on with an expected release in the near future.\n\n**Additional Notes:**\n\n* Manually downloading the models will not resolve the issue as it also affects inference.\n* Users are advised to wait for the official fix to be released.",
+          "activity_level": 5.46
         },
         {
           "id": 602,
           "title": "Ensure core dependencies  Retry Step , I need help #bug",
-          "text": "Ensure core dependencies  Retry Step , I need help #bug\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nPieces OS  v11.0.4 and Pieces for Developers v3.3.4 \n\n### Early Access Program\n\n- [x] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\ni am trying to launch but showing same error repeatedly .\nhow to fix this error \n\n![Image](https://github.com/user-attachments/assets/8d210966-b923-4f51-81ae-b6941e3824b8)\n## GitHub Issue Conversation Summary\n\n**Key Points Raised:**\n\n* User @aspirants2 is facing an issue where PiecesOS is unable to launch.\n* The Pieces support bot suggests potential solutions and helpful resources.\n* Pieces support contact, @mack-at-pieces, investigates further and offers assistance.\n\n**Problems Identified:**\n\n* PiecesOS is failing to launch.\n\n**Solutions Proposed/Implemented:**\n\n* Verify the status of PiecesOS by visiting a specific URL.\n* Potentially schedule a video call for live troubleshooting.\n\n**Current Status/Outcome:**\n\n* The user has not responded to the follow-up from @mack-at-pieces.\n* The issue remains unresolved.\n\n**Additional Notes:**\n\n* The bot suggested previously reported similar issues which could be helpful for the user.\n* The user was provided with access to documentation and a YouTube channel for further information.\n\n**Overall, the conversation highlights a user facing a technical issue with PiecesOS. The support team attempted to provide assistance by suggesting potential solutions and offering additional resources. However, the issue remains unresolved as the user has not yet responded to the proposed solutions.**",
-          "activity_level": 4.5
-        },
-        {
-          "id": 598,
-          "title": "Ensure core dependencies need help asap",
-          "text": "Ensure core dependencies need help asap\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.0.3\n\n### Early Access Program\n\n- [x] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n![Image](https://github.com/user-attachments/assets/50ccb8d9-4bd4-4036-85f9-6f42840bec67)\n\n![Image](https://github.com/user-attachments/assets/3ceec7f4-768a-43cc-b06d-25a14c6d4e94)\n\nI have this issue with opening Pieces and is checking updates and it does reload many times, need help asap\n## GitHub Issue Summary: Pieces Updating Issue\n\n**Key Points:**\n\n* User reported an issue with Pieces apps not updating automatically after installing them from the Microsoft Store.\n* This issue is specific to Microsoft Store installations as the Pieces team doesn't support in-app updating for them.\n\n**Problems:**\n\n* Automatic updates weren't working for users who installed Pieces and PiecesOS from the Microsoft Store.\n* The updating process was not intuitive for these users.\n\n**Solutions:**\n\n* **Workaround 1:** Quit PiecesOS and the Desktop App, then re-open.\n* **Workaround 2:** Update the applications from the Microsoft Store, then re-open.\n* The Pieces team will improve the experience around updating Microsoft Store builds in the future.\n\n**Current Status:**\n\n* The issue has been closed for now. The team will continue to improve the update experience for Microsoft Store users.",
-          "activity_level": 5.61
+          "text": "Ensure core dependencies  Retry Step , I need help #bug\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nPieces OS  v11.0.4 and Pieces for Developers v3.3.4 \n\n### Early Access Program\n\n- [x] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\ni am trying to launch but showing same error repeatedly .\nhow to fix this error \n\n![Image](https://github.com/user-attachments/assets/8d210966-b923-4f51-81ae-b6941e3824b8)\n## Summary of GitHub Issue Conversation:\n\n**Key Points Raised:**\n\n*  @aspirants2 created an issue regarding trouble launching PiecesOS.\n*  The issue has been automatically triaged and assigned to the appropriate team member.\n*  Pieces Support Bot provided helpful resources, including related issues and documentation.\n*  @mack-at-pieces attempted to verify if PiecesOS is running and offered a video call for troubleshooting.\n\n**Problems Identified:**\n\n*  The user is unable to launch PiecesOS.\n\n**Solutions Proposed/Implemented:**\n\n*  Pieces Support Bot provided links to related issues and documentation.\n*  @mack-at-pieces asked the user to verify if PiecesOS is running and offered a video call for troubleshooting.\n\n**Current Status/Outcome:**\n\n*  @aspirants2 hasn't responded to @mack-at-pieces' request.\n*  The issue is currently open and awaiting further communication from the user.",
+          "activity_level": 3.88
         }
       ]
     },
     {
-      "title": "Pieces OS Connection and Launch Issues",
-      "description": "Users report difficulties connecting to Pieces OS endpoints, encountering 'Connection refused' or 'Route not found' errors. This might involve incorrect port configuration or issues with Pieces OS launching. Solutions include verifying port settings, checking Pieces OS status, and consulting documentation for troubleshooting.",
+      "title": "Pieces OS Connection Issues",
+      "description": "Users are experiencing difficulties connecting to Pieces OS endpoints, encountering errors like \"Connection refused\" and \"Route not found\" on ports 1000 and 39300. This might be related to Pieces OS version upgrades and port changes. Solutions include verifying the correct port (39300), checking if Pieces OS is running, and contacting Pieces support for further assistance.",
       "frequency": 3,
       "related_issues": [
         {
           "id": 596,
           "title": "Getting Error: connect ECONNREFUSED 127.0.0.1:1000",
-          "text": "Getting Error: connect ECONNREFUSED 127.0.0.1:1000\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.0.4\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI tried to include the Pieces OS endpoint (127.0.0.1:1000) into my external project, but even though Pieces OS is operating, I keep getting the error \"Connection refused.\"\n\n![Image](https://github.com/user-attachments/assets/f50f1e1d-4eb2-46a2-9df7-2892ea6d319b)\n## Summary of GitHub Issue Conversation:\n\n**Key Points Raised:**\n\n* Raju-git20 reported an issue with connecting to PiecesOS using the new port (39300).\n* Mark-at-pieces clarified that PiecesOS uses a range of ports, not just 39300.\n* Raju-git20 confirmed that the correct port is mentioned in the port text file.\n* Raju-git20 shared their project - a Python code connecting LinkedIn for scraping positions and applying to them with AI integration.\n\n**Problems Identified:**\n\n* Raju-git20 was unable to connect to PiecesOS with the new port.\n* The port range used by PiecesOS might cause confusion for users.\n\n**Solutions Proposed/Implemented:**\n\n* Mark-at-pieces explained the port range used by PiecesOS and the port-finding algorithm.\n* Mark-at-pieces offered to connect Raju-git20 with the relevant people at Pieces to assist with their development.\n\n**Current Status/Outcome:**\n\n* Raju-git20 and Mark-at-pieces scheduled a call to discuss the project and obtain feedback.\n* The issue of connecting to PiecesOS with the new port remains unresolved.\n\n**Additional Notes:**\n\n* The conversation took place between January 24, 2025, and January 28, 2025.\n* Raju-git20 received helpful resources and documentation from the Pieces support bot.\n* The conversation highlights the importance of clear communication and support for developers working with PiecesOS.",
+          "text": "Getting Error: connect ECONNREFUSED 127.0.0.1:1000\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.0.4\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI tried to include the Pieces OS endpoint (127.0.0.1:1000) into my external project, but even though Pieces OS is operating, I keep getting the error \"Connection refused.\"\n\n![Image](https://github.com/user-attachments/assets/f50f1e1d-4eb2-46a2-9df7-2892ea6d319b)\n## GitHub Issue Conversation Summary\n\n### Key Points Raised:\n\n* Raju faced issues connecting to PiecesOS after its port changed with version 11.0.0.\n* The error messages indicated a connection issue to the POS.\n* The new port recommendation (39300) and port-finding algorithm information were provided.\n* Raju's project involves scraping LinkedIn positions and applying using AI, and they wanted to schedule a call for further discussion and feedback.\n\n### Problems Identified:\n\n* Raju's initial attempts to connect using the new port failed.\n* The port-finding algorithm might not have been able to locate the POS.\n\n### Solutions Proposed/Implemented:\n\n* Mark provided the correct port information and explained the port-finding algorithm.\n* They offered to connect Raju with the appropriate team at Pieces for further assistance.\n* Raju's request for a call to discuss their project and get feedback was acknowledged.\n\n### Current Status/Outcome:\n\n* A call was scheduled between Raju and Mark to discuss their project and provide feedback.\n\n### Additional Notes:\n\n* The conversation suggests that Raju's project might not be directly related to the Pieces platform, but they potentially want to utilize its services.\n* Further communication is needed to determine the project's specific details and requirements.",
           "activity_level": 6.17
         },
         {
           "id": 597,
           "title": "Getting an error of Route not found error",
-          "text": "Getting an error of Route not found error\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.0.4\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nThe problem \"route not found\" appears whenever I attempt to access the pieces os endpoint on port 39300.\n\n![Image](https://github.com/user-attachments/assets/d4f8961a-afa1-401d-82b5-cc2ead804b9f)\n## GitHub Issue Summary\n\n**Title:** Problem connecting to Pieces POS\n\n**Author:** Raju-git20\n\n**Date:** 2025-01-25\n\n**Key Points:**\n\n* Raju-git20 experiencing connection issues with Pieces POS.\n* Support bot triaged and routed the issue.\n* Suggested related issues and resources were provided.\n* Mark-at-Pieces requested POS version information.\n* Mark-at-Pieces offered assistance with development journey and port-finding algorithm information.\n* Issue closed due to continued discussion in another issue (#597).\n\n**Problems Identified:**\n\n* Difficulty connecting to Pieces POS.\n* Uncertainty about POS version number and port configuration.\n\n**Solutions Proposed/Implemented:**\n\n* Troubleshooting steps provided in related issues.\n* Information on port-finding algorithm and POS configuration.\n\n**Current Status/Outcome:**\n\n* Issue closed. Discussion ongoing in another issue (#597).\n* User encouraged to reach out for further assistance.",
+          "text": "Getting an error of Route not found error\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.0.4\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nThe problem \"route not found\" appears whenever I attempt to access the pieces os endpoint on port 39300.\n\n![Image](https://github.com/user-attachments/assets/d4f8961a-afa1-401d-82b5-cc2ead804b9f)\n## Summary of GitHub Issue Conversation:\n\n**Key Points:**\n\n* Raju-git20 reported an issue connecting to Pieces Core Services.\n* The issue was automatically triaged and routed to the Pieces team.\n* Several related issues and helpful resources were suggested by the bot.\n* Mark-at-pieces requested the user's POS version number for troubleshooting.\n* Mark-at-pieces provided information about POS port usage and suggested connecting with the right folks at Pieces for development help.\n\n**Problems Identified:**\n\n* User was unable to connect to Pieces Core Services.\n* The root cause of the issue was unclear.\n\n**Solutions Proposed/Implemented:**\n\n* Mark-at-pieces requested additional information to help diagnose the issue.\n* Mark-at-pieces recommended connecting the user with the appropriate resources and people at Pieces.\n\n**Current Status/Outcome:**\n\n* The issue was closed as a duplicate of another issue.\n* The user was directed to the relevant information and resources for further investigation and assistance.\n\n**Additional Notes:**\n\n* The user did not provide their POS version number.\n* It is unclear if the user followed up with the suggested resources or contacted Pieces for support.",
           "activity_level": 3.92
         },
         {
           "id": 602,
           "title": "Ensure core dependencies  Retry Step , I need help #bug",
-          "text": "Ensure core dependencies  Retry Step , I need help #bug\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nPieces OS  v11.0.4 and Pieces for Developers v3.3.4 \n\n### Early Access Program\n\n- [x] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\ni am trying to launch but showing same error repeatedly .\nhow to fix this error \n\n![Image](https://github.com/user-attachments/assets/8d210966-b923-4f51-81ae-b6941e3824b8)\n## GitHub Issue Conversation Summary\n\n**Key Points Raised:**\n\n* User @aspirants2 is facing an issue where PiecesOS is unable to launch.\n* The Pieces support bot suggests potential solutions and helpful resources.\n* Pieces support contact, @mack-at-pieces, investigates further and offers assistance.\n\n**Problems Identified:**\n\n* PiecesOS is failing to launch.\n\n**Solutions Proposed/Implemented:**\n\n* Verify the status of PiecesOS by visiting a specific URL.\n* Potentially schedule a video call for live troubleshooting.\n\n**Current Status/Outcome:**\n\n* The user has not responded to the follow-up from @mack-at-pieces.\n* The issue remains unresolved.\n\n**Additional Notes:**\n\n* The bot suggested previously reported similar issues which could be helpful for the user.\n* The user was provided with access to documentation and a YouTube channel for further information.\n\n**Overall, the conversation highlights a user facing a technical issue with PiecesOS. The support team attempted to provide assistance by suggesting potential solutions and offering additional resources. However, the issue remains unresolved as the user has not yet responded to the proposed solutions.**",
-          "activity_level": 4.5
+          "text": "Ensure core dependencies  Retry Step , I need help #bug\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nPieces OS  v11.0.4 and Pieces for Developers v3.3.4 \n\n### Early Access Program\n\n- [x] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\ni am trying to launch but showing same error repeatedly .\nhow to fix this error \n\n![Image](https://github.com/user-attachments/assets/8d210966-b923-4f51-81ae-b6941e3824b8)\n## Summary of GitHub Issue Conversation:\n\n**Key Points Raised:**\n\n*  @aspirants2 created an issue regarding trouble launching PiecesOS.\n*  The issue has been automatically triaged and assigned to the appropriate team member.\n*  Pieces Support Bot provided helpful resources, including related issues and documentation.\n*  @mack-at-pieces attempted to verify if PiecesOS is running and offered a video call for troubleshooting.\n\n**Problems Identified:**\n\n*  The user is unable to launch PiecesOS.\n\n**Solutions Proposed/Implemented:**\n\n*  Pieces Support Bot provided links to related issues and documentation.\n*  @mack-at-pieces asked the user to verify if PiecesOS is running and offered a video call for troubleshooting.\n\n**Current Status/Outcome:**\n\n*  @aspirants2 hasn't responded to @mack-at-pieces' request.\n*  The issue is currently open and awaiting further communication from the user.",
+          "activity_level": 3.88
         }
       ]
     },
     {
-      "title": "PiecesOS and Desktop App Launch Failures",
-      "description": "Users report PiecesOS or Desktop App failing to launch after updates, showing \"Ensure core dependencies\" error. Workarounds include restarting the app or computer, or updating through the Microsoft Store. The Pieces team is investigating timing conflicts during updates.",
+      "title": "Pieces Desktop App Update and Launch Issues",
+      "description": "Users are experiencing issues with Pieces Desktop App after updating to PiecesOS 11.0.x, including non-dismissable overlay messages, repeated update prompts, and launch failures.  Suggested solutions include verifying auto-launch settings, updating through the Microsoft Store, and restarting the computer. The Pieces team is actively investigating these issues and working on improvements.",
       "frequency": 3,
       "related_issues": [
         {
           "id": 590,
           "title": "Non-dismissable overlay message.",
-          "text": "Non-dismissable overlay message.\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nv11.0.4\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nMy Pieces app launches at Windows startup (intended). Sometimes, (possibly after a background update?), this dialog appears on my desktop. I don't know what it means, exactly, but I cannot click \"Ok\" and there is no other way to dismiss it. My only option appears to be to restart the computer, which is often impractical. Please fix!\n\n![Image](https://github.com/user-attachments/assets/f231ef56-3d59-4e94-8cb5-2b54249900cc)\n## Summary of GitHub Issue Conversation:\n\n**Key Points Raised:**\n\n* ThemePark is experiencing an issue with Pieces Desktop failing to launch after the latest Pieces OS update.\n* Pieces-support-bot suggests related issues and resources.\n* Mack Myers, a Pieces team member, investigates the issue by asking for additional information.\n\n**Problems Identified:**\n\n* Pieces Desktop fails to launch after a Pieces OS update.\n* Potential conflict between PiecesOS and Desktop app trying to launch simultaneously.\n\n**Solutions Proposed/Implemented:**\n\n* Confirming the version of Windows and ensuring both PiecesOS and Desktop app are installed.\n* Identifying the app configured to launch on Startup.\n\n**Current Status/Outcome:**\n\n* The investigation is ongoing. Mack Myers suspects a timing conflict between PiecesOS update and Desktop app launch.\n* ThemePark is asked to confirm the app configured for Startup.\n\n**Overall:**\n\nThe conversation highlights an issue with Pieces Desktop failing to launch after an OS update. The Pieces team is investigating the problem and seeking additional information to identify the root cause.",
+          "text": "Non-dismissable overlay message.\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nv11.0.4\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nMy Pieces app launches at Windows startup (intended). Sometimes, (possibly after a background update?), this dialog appears on my desktop. I don't know what it means, exactly, but I cannot click \"Ok\" and there is no other way to dismiss it. My only option appears to be to restart the computer, which is often impractical. Please fix!\n\n![Image](https://github.com/user-attachments/assets/f231ef56-3d59-4e94-8cb5-2b54249900cc)\n## GitHub Issue Conversation Summary\n\n**Issue Title:** Pieces Desktop App no longer opens after latest PiecesOS 11.0 release\n\n**Key Points:**\n\n* ThemePark is experiencing issues with Pieces Desktop App not launching after upgrading to PiecesOS 11.0 on their Windows 10 machine.\n* Mack-at-pieces suspects a potential timing conflict between PiecesOS update on startup and Pieces Desktop's auto-launch configuration.\n\n**Problems Identified:**\n\n* Pieces Desktop App fails to open after PiecesOS 11.0 upgrade on Windows 10.\n* Possible conflict between PiecesOS startup update and Pieces Desktop's auto-launch.\n\n**Proposed/Implemented Solutions:**\n\n* Confirm whether PiecesOS or Desktop App is configured for auto-launch on startup.\n\n**Current Status/Outcome:**\n\n* Issue still under investigation. User needs to confirm auto-launch configuration for PiecesOS and Desktop App.\n\n**Next Steps:**\n\n* ThemePark needs to provide confirmation regarding auto-launch settings.\n* Mack-at-pieces will likely investigate further based on the user's response to determine the root cause and potential solution.",
           "activity_level": 3.71
-        },
-        {
-          "id": 602,
-          "title": "Ensure core dependencies  Retry Step , I need help #bug",
-          "text": "Ensure core dependencies  Retry Step , I need help #bug\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nPieces OS  v11.0.4 and Pieces for Developers v3.3.4 \n\n### Early Access Program\n\n- [x] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\ni am trying to launch but showing same error repeatedly .\nhow to fix this error \n\n![Image](https://github.com/user-attachments/assets/8d210966-b923-4f51-81ae-b6941e3824b8)\n## GitHub Issue Conversation Summary\n\n**Key Points Raised:**\n\n* User @aspirants2 is facing an issue where PiecesOS is unable to launch.\n* The Pieces support bot suggests potential solutions and helpful resources.\n* Pieces support contact, @mack-at-pieces, investigates further and offers assistance.\n\n**Problems Identified:**\n\n* PiecesOS is failing to launch.\n\n**Solutions Proposed/Implemented:**\n\n* Verify the status of PiecesOS by visiting a specific URL.\n* Potentially schedule a video call for live troubleshooting.\n\n**Current Status/Outcome:**\n\n* The user has not responded to the follow-up from @mack-at-pieces.\n* The issue remains unresolved.\n\n**Additional Notes:**\n\n* The bot suggested previously reported similar issues which could be helpful for the user.\n* The user was provided with access to documentation and a YouTube channel for further information.\n\n**Overall, the conversation highlights a user facing a technical issue with PiecesOS. The support team attempted to provide assistance by suggesting potential solutions and offering additional resources. However, the issue remains unresolved as the user has not yet responded to the proposed solutions.**",
-          "activity_level": 4.5
         },
         {
           "id": 598,
           "title": "Ensure core dependencies need help asap",
-          "text": "Ensure core dependencies need help asap\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.0.3\n\n### Early Access Program\n\n- [x] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n![Image](https://github.com/user-attachments/assets/50ccb8d9-4bd4-4036-85f9-6f42840bec67)\n\n![Image](https://github.com/user-attachments/assets/3ceec7f4-768a-43cc-b06d-25a14c6d4e94)\n\nI have this issue with opening Pieces and is checking updates and it does reload many times, need help asap\n## GitHub Issue Summary: Pieces Updating Issue\n\n**Key Points:**\n\n* User reported an issue with Pieces apps not updating automatically after installing them from the Microsoft Store.\n* This issue is specific to Microsoft Store installations as the Pieces team doesn't support in-app updating for them.\n\n**Problems:**\n\n* Automatic updates weren't working for users who installed Pieces and PiecesOS from the Microsoft Store.\n* The updating process was not intuitive for these users.\n\n**Solutions:**\n\n* **Workaround 1:** Quit PiecesOS and the Desktop App, then re-open.\n* **Workaround 2:** Update the applications from the Microsoft Store, then re-open.\n* The Pieces team will improve the experience around updating Microsoft Store builds in the future.\n\n**Current Status:**\n\n* The issue has been closed for now. The team will continue to improve the update experience for Microsoft Store users.",
+          "text": "Ensure core dependencies need help asap\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.0.3\n\n### Early Access Program\n\n- [x] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n![Image](https://github.com/user-attachments/assets/50ccb8d9-4bd4-4036-85f9-6f42840bec67)\n\n![Image](https://github.com/user-attachments/assets/3ceec7f4-768a-43cc-b06d-25a14c6d4e94)\n\nI have this issue with opening Pieces and is checking updates and it does reload many times, need help asap\n## GitHub Issue Conversation Summary\n\n**Issue:** User @CPX10 reported that PiecesOS and Pieces For Desktop App were not updating automatically.\n\n**Key Points:**\n\n* The issue was automatically triaged by a bot.\n* Support suggested related issues and resources for the user to explore.\n* The Pieces team was tagged for further investigation.\n* @mack-at-pieces confirmed that in-app updating is not yet supported for Microsoft Store installations.\n\n**Solutions Proposed:**\n\n* Quit and reopen PiecesOS and the Desktop App.\n* Update the applications from the Microsoft Store.\n* Improve the experience for updating Microsoft Store builds.\n\n**Current Status:**\n\n* The issue was closed.\n* The Pieces team will work on improving the update experience for Microsoft Store installations.\n\n**Outcome:**\n\n* The user received a workaround for the update issue. \n* The Pieces team will address the underlying issue in a future update.",
           "activity_level": 5.61
+        },
+        {
+          "id": 602,
+          "title": "Ensure core dependencies  Retry Step , I need help #bug",
+          "text": "Ensure core dependencies  Retry Step , I need help #bug\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nPieces OS  v11.0.4 and Pieces for Developers v3.3.4 \n\n### Early Access Program\n\n- [x] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\ni am trying to launch but showing same error repeatedly .\nhow to fix this error \n\n![Image](https://github.com/user-attachments/assets/8d210966-b923-4f51-81ae-b6941e3824b8)\n## Summary of GitHub Issue Conversation:\n\n**Key Points Raised:**\n\n*  @aspirants2 created an issue regarding trouble launching PiecesOS.\n*  The issue has been automatically triaged and assigned to the appropriate team member.\n*  Pieces Support Bot provided helpful resources, including related issues and documentation.\n*  @mack-at-pieces attempted to verify if PiecesOS is running and offered a video call for troubleshooting.\n\n**Problems Identified:**\n\n*  The user is unable to launch PiecesOS.\n\n**Solutions Proposed/Implemented:**\n\n*  Pieces Support Bot provided links to related issues and documentation.\n*  @mack-at-pieces asked the user to verify if PiecesOS is running and offered a video call for troubleshooting.\n\n**Current Status/Outcome:**\n\n*  @aspirants2 hasn't responded to @mack-at-pieces' request.\n*  The issue is currently open and awaiting further communication from the user.",
+          "activity_level": 3.88
         }
       ]
     },
     {
-      "title": "PiecesOS Performance and Stability Issues",
-      "description": "Users report high resource usage, crashes, and service failures with PiecesOS. Proposed solutions include optimizing memory, upgrading to the latest version (11.1.0), and contacting support for troubleshooting. The Pieces team is actively investigating and addressing these issues.",
+      "title": "PiecesOS Performance Issues and Feature Requests",
+      "description": "Users report high RAM/CPU usage by PiecesOS, potentially linked to internet connectivity or Live Context. Short-term solutions include restarting PiecesOS or disabling Live Context. A database technology replacement in PiecesOS 11.1.0 aims to address these issues. Additionally, users request font customization in Copilot chats, which is planned for an upcoming release.",
       "frequency": 3,
       "related_issues": [
         {
           "id": 601,
           "title": "How to change the font of the linux app?",
-          "text": "How to change the font of the linux app?\n\n### Discussed in https://github.com/pieces-app/support/discussions/600\n\n<div type='discussions-op-text'>\n\n<sup>Originally posted by **rafidahmed816** January 27, 2025</sup>\nThe font is too bold. Can I change the font style?\r\n![Screenshot from 2025-01-27 16-30-12](https://github.com/user-attachments/assets/fc48f057-36b7-4645-89b8-373702db6fdc)\r\n</div>\n## Summary of GitHub Issue Conversation: Font Customization in Pieces Copilot Chats\n\n**Key Points Raised:**\n\n* User [@rafidahmed816](https://github.com/rafidahmed816) requested the ability to adjust the font within the Pieces Copilot chat and sidebar.\n\n**Problems Identified:**\n\n* Lack of user control over font customization within the chat interface.\n\n**Solutions Proposed/Implemented:**\n\n* The Pieces team is working on a project to improve the visual density and font system, which will include the option to configure font weight.\n* This update is expected to be released within the next two weeks (from January 29, 2025).\n\n**Current Status/Outcome:**\n\n* The issue is currently open and awaiting the release of the aforementioned update.\n\n**Additional Notes:**\n\n* The initial inquiry by [@rafidahmed816](https://github.com/rafidahmed816) clarified that they were not referring to the font in the Window's title bar.\n* The Pieces team is actively engaged in addressing the user's request.",
+          "text": "How to change the font of the linux app?\n\n### Discussed in https://github.com/pieces-app/support/discussions/600\n\n<div type='discussions-op-text'>\n\n<sup>Originally posted by **rafidahmed816** January 27, 2025</sup>\nThe font is too bold. Can I change the font style?\r\n![Screenshot from 2025-01-27 16-30-12](https://github.com/user-attachments/assets/fc48f057-36b7-4645-89b8-373702db6fdc)\r\n</div>\n## GitHub Issue Summary: Font Customization for Pieces Copilot Chats\n\n**Key Points:**\n\n* User (@rafidahmed816) requested the ability to customize the font within Pieces Copilot chats.\n* This includes the font within the chat window and the sidebar.\n* Currently, there is no setting for this customization.\n\n**Problems Identified:**\n\n* Users have limited control over the visual appearance of the chat interface.\n* The default font may not be suitable for all users' preferences or accessibility needs.\n\n**Solutions Proposed/Implemented:**\n\n* The Pieces team is working on a project to improve the visual density and font system of the UI.\n* This project will include the option to configure the font weight for the Pieces Copilot chats.\n\n**Current Status/Outcome:**\n\n* The project is expected to be released within the next two weeks.\n* Once released, users will be able to customize the font weight of the chat interface. \n\n**Additional Notes:**\n\n* The issue remains open until the update is released.\n* The user will be notified when the update is available.",
           "activity_level": 4.74
-        },
-        {
-          "id": 150,
-          "title": "PiecesOS using too much RAM/spike in CPU",
-          "text": "PiecesOS using too much RAM/spike in CPU\nSeveral users have called in recently about Pieces using too much RAM or causing a spike in CPU up to 100%. We are trying to track down this issue, and would appreciate any feedback about your experience with this if you are experiencing it. \r\n\r\nWe have a hunch it has something to do with internet connections, but aren't fully sure yet. \r\n\r\nIf you're experiencing this and wouldn't mind hopping on a call with us to show us, we would really appreciate it to help us troubleshoot! You can schedule a call [here](https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2iaRWpd1kA2k_xg2KrVi_jiTHo0POiMZSI9WAYsxs5jJ9sU2Rd2zKitLuSFd7l3FhatGzy5Vgt\r\n). \r\n\r\nA short-term solution is to restart PiecesOS whenever this occurs. \n## Summary of GitHub Issue Conversation on Memory Usage in PiecesOS\n\n**Key Points Raised:**\n\n- Users are experiencing high RAM usage (2+ GB) and CPU spikes with PiecesOS.\n- This issue appears to be unrelated to model usage or running in the background.\n- Disabling Live Context may reduce RAM consumption.\n\n**Problems Identified:**\n\n- High memory usage, potentially due to ML processing and Live Context.\n- High CPU usage, with no clear trigger identified.\n\n**Solutions Proposed/Implemented:**\n\n- PiecesOS 11.1.0 release replacing heavy database technologies to address memory and CPU issues.\n- \"Optimize Memory\" option to unload some ML models and free up RAM.\n\n**Current Status/Outcome:**\n\n- PiecesOS 11.1.0 release is expected to address the issue. \n- Further improvements are planned for future releases.\n\n**Additional Notes:**\n\n- Users with excessive memory or CPU usage are encouraged to contact the Pieces team for individual troubleshooting. \n- Some users have stopped using PiecesOS due to the resource usage.",
-          "activity_level": 4.93
         },
         {
           "id": 604,
           "title": "Unable to open Pieces Copilot Service",
-          "text": "Unable to open Pieces Copilot Service\nError: Bad state: GetIt: Object/factory with type PiecesWebSocketCreator is not registered inside GetIt. \n(Did you accidentally do GetIt sl=GetIt.instance(); instead of GetIt sl=GetIt.instance;\nDid you forget to register it?)\n\n**Installation Details**\n\nSucceeded: false\nPath: \n\n**PiecesOS Information**\n\nID: d577e8e9-3d15-402f-b1f8-4b925e53849a\nUser: b827c171-d5b6-4aca-81fd-27d0ac789fcb\nCurrent Version: 11.0.4\nMin Version Supported: 11.0.4\nMax Version Supported: 12.0.0\nLocal Port: 39301\n\n**Device Information**\n\nOperating System: Linux\nCurrent Version: Linux 6.8.0-51-generic #52-Ubuntu SMP PREEMPT_DYNAMIC Thu Dec  5 13:09:44 UTC 2024\nMin Version Supported: Ubuntu 18\n## GitHub Issue Summary: Unable to Open Pieces Copilot Service\n\n**Key Points:**\n\n* User (@Sahil-kushwaha) reports being unable to open the Pieces Copilot Service.\n* Issue automatically triaged and routed to the Pieces team.\n* Related issues #581, #559, #555 suggest this might be a recurring problem.\n* User encouraged to review existing documentation and resources while awaiting response.\n\n**Problems:**\n\n* User cannot access the Pieces Copilot Service.\n\n**Solutions:**\n\n* Pieces team will follow up within 24 hours to investigate.\n* User advised to refer to helpful resources and previously reported issues.\n\n**Current Status:**\n\n* Issue acknowledged and assigned to the Pieces team.\n* No further updates provided.\n\n**Outcome:**\n\n* Pending resolution by the Pieces team.",
+          "text": "Unable to open Pieces Copilot Service\nError: Bad state: GetIt: Object/factory with type PiecesWebSocketCreator is not registered inside GetIt. \n(Did you accidentally do GetIt sl=GetIt.instance(); instead of GetIt sl=GetIt.instance;\nDid you forget to register it?)\n\n**Installation Details**\n\nSucceeded: false\nPath: \n\n**PiecesOS Information**\n\nID: d577e8e9-3d15-402f-b1f8-4b925e53849a\nUser: b827c171-d5b6-4aca-81fd-27d0ac789fcb\nCurrent Version: 11.0.4\nMin Version Supported: 11.0.4\nMax Version Supported: 12.0.0\nLocal Port: 39301\n\n**Device Information**\n\nOperating System: Linux\nCurrent Version: Linux 6.8.0-51-generic #52-Ubuntu SMP PREEMPT_DYNAMIC Thu Dec  5 13:09:44 UTC 2024\nMin Version Supported: Ubuntu 18\n## Summary of GitHub Issue Conversation\n\n**Key Points:**\n\n* User (@Sahil-kushwaha) reported an issue with being unable to open the Pieces Copilot Service.\n* The issue was automatically triaged and routed to the proper support team member.\n* The user was provided with links to potentially helpful resources.\n\n**Problems Identified:**\n\n* The user is experiencing difficulty opening the Pieces Copilot Service.\n\n**Solutions Proposed/Implemented:**\n\n* The issue has been routed to the proper support team member who will follow up within 24 hours.\n\n**Current Status/Outcome:**\n\n* The issue is being investigated.\n\n**Additional Notes:**\n\n* This issue appears to be similar to other reported issues (#581, #559, #555).\n\n## Summary of User Conversation\n\n**User:**\n\nThe user reported the same problem as in the GitHub conversation and requested an update.\n\n**AI:**\n\nI identified that the user's problem was already reported and routed to the proper support team. I provided an update on the current status and assured the user that a team member will follow up within 24 hours. I also shared links to potentially helpful resources.",
           "activity_level": 3.5
+        },
+        {
+          "id": 150,
+          "title": "PiecesOS using too much RAM/spike in CPU",
+          "text": "PiecesOS using too much RAM/spike in CPU\nSeveral users have called in recently about Pieces using too much RAM or causing a spike in CPU up to 100%. We are trying to track down this issue, and would appreciate any feedback about your experience with this if you are experiencing it. \r\n\r\nWe have a hunch it has something to do with internet connections, but aren't fully sure yet. \r\n\r\nIf you're experiencing this and wouldn't mind hopping on a call with us to show us, we would really appreciate it to help us troubleshoot! You can schedule a call [here](https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2iaRWpd1kA2k_xg2KrVi_jiTHo0POiMZSI9WAYsxs5jJ9sU2Rd2zKitLuSFd7l3FhatGzy5Vgt\r\n). \r\n\r\nA short-term solution is to restart PiecesOS whenever this occurs. \n## Summary of GitHub Issue Conversation Regarding High Memory and CPU Usage in PiecesOS:\n\n**Key Points Raised:**\n\n* High memory and CPU usage by PiecesOS, impacting user experience.\n* Some users reporting excessive RAM usage (up to 5GB) and high CPU spikes (120%+).\n* Speculation that Live Context feature might contribute to high resource usage.\n\n**Problems Identified:**\n\n* Memory leaks leading to excessive RAM consumption.\n* High CPU usage causing system slowdowns and impacting overall performance.\n\n**Solutions Proposed/Implemented:**\n\n* Database technology replacement in PiecesOS 11.1.0 to address memory and CPU issues.\n* Optimize Memory feature to temporarily unload ML models and free up RAM.\n* Live Context deactivation as a potential solution to reduce memory consumption.\n\n**Current Status/Outcome:**\n\n* PiecesOS 11.1.0 release addressing memory and CPU issues is available.\n* Community feedback is being collected to assess the effectiveness of the release.\n* Further improvements are planned to optimize resource usage.\n\n**Additional Notes:**\n\n* Some users continue to experience high CPU usage even after updating to 11.1.0.\n* Live Context is suspected to be a potential factor in high memory consumption.\n* The development team is actively working on further optimizations.",
+          "activity_level": 4.92
         }
       ]
     }
   ],
   "recommendations": [
-    "**Prioritize resolution of PiecesOS installation and update issues:** This is a recurring problem impacting users on different operating systems, particularly related to Ollama integration and Microsoft Store updates. Focus on improving installation instructions, resolving dependency conflicts, and ensuring smooth update mechanisms.",
-    "**Address PiecesOS connection and launch issues:** Investigate and resolve the root causes of 'Connection refused' and 'Route not found' errors. Improve documentation regarding port configuration and PiecesOS status checking. ",
-    "**Improve PiecesOS performance and stability:** Investigate and address high resource usage, crashes, and service failures reported by users. Explore memory optimization techniques and ensure the latest version (11.1.0) effectively resolves these issues.",
-    "**Enhance communication around known issues:** Proactively communicate known issues like the PiecesOS and Desktop App launch failures after updates. Provide clear workarounds and timelines for permanent solutions.",
-    "**Consider a dedicated support channel for PiecesOS:** Given the recurring issues related to PiecesOS, establishing a dedicated support channel or knowledge base could streamline troubleshooting and improve user experience. "
+    "**Prioritize Ollama Installation Issues:** Allocate immediate resources to address the Ollama installation failures, focusing on dependency conflicts and snap confinement issues within Pieces OS. ",
+    "**Investigate Pieces OS Connection Problems:** Investigate and resolve the connection issues users are facing with Pieces OS endpoints, specifically on ports 1000 and 39300. Ensure clear communication about port changes in future updates.",
+    "**Address Pieces Desktop App Update and Launch Concerns:** Focus on resolving the issues users are experiencing with the Pieces Desktop App after updating to PiecesOS 11.0.x, including non-dismissable overlays, update prompts, and launch failures.",
+    "**Improve PiecesOS Resource Management:** Continue optimizing PiecesOS to reduce RAM/CPU usage, particularly in relation to internet connectivity and Live Context. Monitor the effectiveness of the database technology replacement in version 11.1.0.",
+    "**Enhance Communication about Known Issues:** Proactively communicate known issues, such as the high resource usage, to manage user expectations and provide potential workarounds while solutions are being developed.",
+    "**Implement Font Customization:** Prioritize the implementation of font customization in Copilot chats, as requested by users, to improve user experience and accessibility."
   ],
   "message": "Daily support report generated successfully."
 }
