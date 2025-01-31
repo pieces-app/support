@@ -1,6 +1,6 @@
 # Support Ticket Report
-- Generated: 2025-01-30 21:07:50
-- Period: 2025-01-27 to 2025-01-30
+- Generated: 2025-01-31 05:08:34
+- Period: 2025-01-27 to 2025-01-31
 
 ## Summary
 - **Total Tickets:** 10
@@ -10,55 +10,62 @@
 ## 5 Most Active Tickets
 | Issue # | Title | Activity Level |
 |---------|-------|----------------|
-| [#605](https://github.com/pieces-app/support/issues/605) | Ollama failed to install in pieces | 6.94 |
+| [#605](https://github.com/pieces-app/support/issues/605) | Ollama failed to install in pieces | 5.50 |
 | [#537](https://github.com/pieces-app/support/issues/537) | Ollama Fails to Install on Linux | 5.43 |
 | [#596](https://github.com/pieces-app/support/issues/596) | Getting Error: connect ECONNREFUSED 127.0.0.1:1000 | 5.21 |
 | [#598](https://github.com/pieces-app/support/issues/598) | Ensure core dependencies need help asap | 5.17 |
-| [#602](https://github.com/pieces-app/support/issues/602) | Ensure core dependencies  Retry Step , I need help #bug | 4.74 |
+| [#150](https://github.com/pieces-app/support/issues/150) | PiecesOS using too much RAM/spike in CPU | 4.68 |
 
 ## Common Issues
 ### 1. Ollama Installation Failures in Pieces OS
-Users on Linux experience consistent failures when installing Ollama. This is primarily due to Snap confinement blocking access to "curl", needed for Ollama download. While a fix is in development, temporary solutions involve manual Ollama installation or avoiding Snap. Users on other platforms report issues with Pieces OS launching, often resolved by reinstallation.
+Users reported various issues with installing and using Ollama within the Pieces OS desktop application across Linux and Windows platforms.  Problems included installation failures, dependency conflicts, and sandbox restrictions. Proposed solutions involved patching Pieces OS to enable Ollama functionality and addressing dependency issues. Some fixes were implemented, while others were under development or pending release.
 
 **Related Issues:**
 - [#605](https://github.com/pieces-app/support/issues/605): Ollama failed to install in pieces
 - [#537](https://github.com/pieces-app/support/issues/537): Ollama Fails to Install on Linux
 - [#602](https://github.com/pieces-app/support/issues/602): Ensure core dependencies  Retry Step , I need help #bug
 
-### 2. Pieces Desktop App Launch and Update Issues
-Users are experiencing issues with Pieces Desktop App launching and updating, particularly on Windows with Pieces OS v11.0.4. Problems include non-dismissable overlay messages, update errors, and dependency conflicts. Proposed solutions involve checking startup configurations, updating through the Microsoft Store, and reinstalling the app. The Pieces team is investigating the root causes and working on improvements.
+### 2. PiecesOS Linux App Issues
+Users report issues with PiecesOS Linux app, including font customization limitations, high resource consumption, and Ollama installation failures. Solutions involve UI updates for font control, memory optimization, and enabling external tool access within the snap environment.
+
+**Related Issues:**
+- [#601](https://github.com/pieces-app/support/issues/601): How to change the font of the linux app?
+- [#150](https://github.com/pieces-app/support/issues/150): PiecesOS using too much RAM/spike in CPU
+- [#537](https://github.com/pieces-app/support/issues/537): Ollama Fails to Install on Linux
+
+### 3. Pieces Desktop App Launch and Update Issues
+Users reported Pieces Desktop app failing to launch or update, particularly after a Pieces OS upgrade or when installed via Microsoft Store.  This seems to stem from startup conflicts and update mechanism issues. Proposed solutions include managing startup programs, reinstalling via Microsoft Store, and awaiting improved update functionality.
 
 **Related Issues:**
 - [#590](https://github.com/pieces-app/support/issues/590): Non-dismissable overlay message.
 - [#598](https://github.com/pieces-app/support/issues/598): Ensure core dependencies need help asap
 - [#602](https://github.com/pieces-app/support/issues/602): Ensure core dependencies  Retry Step , I need help #bug
 
-### 3. Pieces OS Connection Issues on Windows
-Users on Windows encounter "Connection refused" or "Route not found" errors when connecting to Pieces OS on ports 1000 or 39300. This is often due to Pieces OS not running or using an incorrect port. Solutions include verifying Pieces OS is running, using the correct port (39300), and ensuring firewall is not blocking the connection.
+### 4. Pieces OS Connection Issues
+Users are experiencing difficulties connecting to the Pieces OS endpoint on various ports, including 1000, 39300, and 54321. This issue seems to stem from incorrect port configurations or potential conflicts with other applications. Solutions include verifying the correct port using Pieces OS's port-finding algorithm and ensuring no other processes are using the required ports.
 
 **Related Issues:**
 - [#596](https://github.com/pieces-app/support/issues/596): Getting Error: connect ECONNREFUSED 127.0.0.1:1000
 - [#597](https://github.com/pieces-app/support/issues/597): Getting an error of Route not found error
 - [#602](https://github.com/pieces-app/support/issues/602): Ensure core dependencies  Retry Step , I need help #bug
 
-### 4. PiecesOS Performance and Usability Issues
-Users report high RAM/CPU usage, font customization issues in PiecesOS. Workarounds include restarting the app and disabling Live Context. The development team is addressing these issues with updates, including font settings and memory optimization.
+### 5. PiecesOS Connection and Launch Issues
+Users report difficulties connecting to PiecesOS from external applications and launching the service.  Problems include incorrect port usage, potential firewall issues, and software conflicts. Solutions involve verifying the correct port (39300), ensuring firewall access, and reinstalling PiecesOS via the Microsoft Store.
 
 **Related Issues:**
-- [#601](https://github.com/pieces-app/support/issues/601): How to change the font of the linux app?
-- [#150](https://github.com/pieces-app/support/issues/150): PiecesOS using too much RAM/spike in CPU
 - [#604](https://github.com/pieces-app/support/issues/604): Unable to open Pieces Copilot Service
+- [#602](https://github.com/pieces-app/support/issues/602): Ensure core dependencies  Retry Step , I need help #bug
+- [#596](https://github.com/pieces-app/support/issues/596): Getting Error: connect ECONNREFUSED 127.0.0.1:1000
 
 
 ## Recommendations
-- **Prioritize Ollama Installation Issues:** Allocate additional resources to address the Ollama installation failures on Pieces OS, particularly for Linux users experiencing Snap confinement issues.  This is the most frequent and active issue reported.
-- **Improve Pieces Desktop App Stability:** Investigate and resolve the launch and update issues with the Pieces Desktop App on Windows, specifically for version 11.0.4. Focus on resolving non-dismissable overlay messages, update errors, and dependency conflicts.
-- **Address Pieces OS Connection Problems:** Provide clear instructions and troubleshooting steps for users experiencing "Connection refused" or "Route not found" errors on Windows. Ensure users understand the correct port (39300) and potential firewall configurations.
-- **Enhance Communication on Known Issues:** Proactively communicate the status of known issues, such as Ollama installation problems and Pieces Desktop App launch issues, through release notes, FAQs, or in-app notifications. Provide clear workarounds or temporary solutions while fixes are in development.
-- **Optimize PiecesOS Resource Usage:** Continue efforts to optimize PiecesOS for reduced RAM and CPU usage. Investigate memory leaks and explore further optimizations for on-device ML capabilities and the Live Context feature. Keep users informed about progress and any potential workarounds.
-- **Improve Font Customization:** Prioritize implementing font customization options, including font weight and style, in the Pieces Copilot chats and sidebar. This addresses a common user request and enhances the overall user experience.
-- **Gather More Detailed Issue Reports:** Encourage users to provide comprehensive information when reporting issues, including software versions, operating systems, specific error messages, and steps to reproduce the problem. This helps in faster diagnosis and resolution.
-- **Consider a Bug Bounty Program:** To incentivize community involvement in identifying and reporting bugs, explore implementing a bug bounty program. This can help uncover hidden issues and improve the overall software quality.
+- **Prioritize Ollama Integration Issues:** Allocate resources to address the recurring problem of Ollama installation failures within Pieces OS, particularly on Linux and Windows. Investigate dependency conflicts, sandbox restrictions, and implement necessary patches to ensure seamless Ollama functionality.
+- **Improve PiecesOS Linux App Stability:** Address reported issues with the Linux app, including font customization limitations, high resource consumption, and Ollama installation failures. Implement UI updates for font control, optimize memory usage, and enable smoother external tool access within the snap environment.
+- **Resolve Pieces Desktop App Launch and Update Issues:** Investigate and fix problems related to the Desktop app failing to launch or update, especially after a Pieces OS upgrade or when installed via the Microsoft Store. Address startup conflicts, improve update mechanisms, and provide clear guidance to users experiencing these issues.
+- **Provide Clear Guidance on Pieces OS Connection Issues:** Create comprehensive documentation or FAQs addressing connection issues with Pieces OS, specifically regarding port configurations. Explain the port-finding algorithm, common error messages (like ECONNREFUSED), and potential firewall issues.
+- **Gather More Data on Performance Issues:** While some users reported high RAM/CPU usage, more data is needed. Implement better logging and error reporting for performance issues to help developers identify the root causes and implement effective solutions.
+- **Improve Communication on Update Processes:** Clearly communicate to users the differences between installing Pieces OS via the website and the Microsoft Store, particularly regarding the update process. Provide timely updates on the progress of improvements to the update functionality for Microsoft Store installations.
+- **Proactively Monitor Common Issues:** Develop a system to proactively monitor and identify recurring issues across different platforms. This could involve analyzing support tickets, community forums, and social media for emerging trends and common pain points. 
 
 ## Daily Reports
 Here are the daily reports for this week:
