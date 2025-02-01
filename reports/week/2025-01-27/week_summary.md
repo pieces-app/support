@@ -1,5 +1,5 @@
 # Support Ticket Report
-- Generated: 2025-02-01 05:07:53
+- Generated: 2025-02-01 13:09:06
 - Period: 2025-01-27 to 2025-02-01
 
 ## Summary
@@ -10,60 +10,63 @@
 ## 5 Most Active Tickets
 | Issue # | Title | Activity Level |
 |---------|-------|----------------|
-| [#606](https://github.com/pieces-app/support/issues/606) | LTM cannot see code inside a sandbox in the browser | 6.94 |
 | [#596](https://github.com/pieces-app/support/issues/596) | Getting Error: connect ECONNREFUSED 127.0.0.1:1000 | 5.57 |
+| [#606](https://github.com/pieces-app/support/issues/606) | LTM cannot see code inside a sandbox in the browser | 5.50 |
 | [#537](https://github.com/pieces-app/support/issues/537) | Ollama Fails to Install on Linux | 5.04 |
 | [#605](https://github.com/pieces-app/support/issues/605) | Ollama failed to install in pieces | 4.74 |
 | [#150](https://github.com/pieces-app/support/issues/150) | PiecesOS using too much RAM/spike in CPU | 4.68 |
 
 ## Common Issues
-### 1. Ollama Installation Failures in Pieces OS
-Users on Linux and Windows encounter "Ollama failed to install" errors in the Pieces desktop app. This is likely due to Pieces OS's sandboxed environment and potential dependency issues with 'curl'. Workarounds include reinstalling Pieces OS via the Microsoft Store (Windows) or waiting for a patch from the Pieces team to resolve the 'curl' dependency within the snap environment (Linux).
+### 1. Ollama Installation Failures in Pieces
+Users are experiencing issues installing and using Ollama within the Pieces desktop application across Linux and Windows.  Problems include installation failures, model loading errors, and dependency conflicts.  Solutions involve ensuring curl is available in sandboxed environments and addressing potential issues with Pieces OS installation or configuration.
 
 **Related Issues:**
 - [#605](https://github.com/pieces-app/support/issues/605): Ollama failed to install in pieces
 - [#537](https://github.com/pieces-app/support/issues/537): Ollama Fails to Install on Linux
 - [#602](https://github.com/pieces-app/support/issues/602): Ensure core dependencies  Retry Step , I need help #bug
 
-### 2. PiecesOS Performance and Functionality Issues
-Users report high RAM/CPU usage, LTM sandbox issues, and Copilot service errors. Solutions include restarting PiecesOS, upgrading to version 11.1.0, and contacting support. Issues may relate to internet connectivity, Live Context feature, or underlying database technology.
-
-**Related Issues:**
-- [#606](https://github.com/pieces-app/support/issues/606): LTM cannot see code inside a sandbox in the browser
-- [#150](https://github.com/pieces-app/support/issues/150): PiecesOS using too much RAM/spike in CPU
-- [#604](https://github.com/pieces-app/support/issues/604): Unable to open Pieces Copilot Service
-
-### 3. Pieces OS Connectivity Issues on Port 39300
-Users are experiencing difficulties connecting to Pieces OS on port 39300 after upgrading to version 11.0.0. This is due to a change in the port used by Pieces OS.  Suggested solutions include checking the Pieces OS version, verifying the port number, and ensuring the application is using the correct port-finding algorithm.
+### 2. Pieces OS Connectivity Issues on Port 39300
+Multiple users report "Connection refused" or "Route not found" errors when accessing Pieces OS on port 39300.  This is often due to Pieces OS using a dynamic port range. Solutions include verifying the actual port in use (check `.port.txt` file) or contacting Pieces support for assistance.
 
 **Related Issues:**
 - [#596](https://github.com/pieces-app/support/issues/596): Getting Error: connect ECONNREFUSED 127.0.0.1:1000
 - [#597](https://github.com/pieces-app/support/issues/597): Getting an error of Route not found error
 - [#602](https://github.com/pieces-app/support/issues/602): Ensure core dependencies  Retry Step , I need help #bug
 
-### 4. Pieces OS and Desktop App Installation and Update Issues
-Users report issues installing Pieces OS and Desktop App using the .appinstaller file, encountering errors and launch failures. Reinstalling through the Microsoft Store often resolves the problem. Additionally, users experience difficulties updating the Desktop App, with missing update buttons and non-functional update mechanisms. Workarounds include restarting Pieces OS and the Desktop App or updating through the Microsoft Store, with improved update experiences planned for future releases.
+### 3. PiecesOS High Resource Usage and Update Issues
+Users report high RAM/CPU usage by PiecesOS, potentially linked to internet connectivity or database operations. Version 11.1.0 aims to mitigate this. Additionally, users experience repeated update prompts, particularly with the Microsoft Store version. Workarounds include restarting PiecesOS or updating through the store.
 
 **Related Issues:**
-- [#607](https://github.com/pieces-app/support/issues/607): Feat: Localization(french) for the Desktop Application
+- [#150](https://github.com/pieces-app/support/issues/150): PiecesOS using too much RAM/spike in CPU
 - [#602](https://github.com/pieces-app/support/issues/602): Ensure core dependencies  Retry Step , I need help #bug
 - [#598](https://github.com/pieces-app/support/issues/598): Ensure core dependencies need help asap
 
-### 5. Pieces Desktop App Launch and Update Issues
-Users report Pieces Desktop App failing to launch, displaying a non-dismissable overlay message, or having trouble updating. Issues potentially stem from conflicts with PiecesOS updates, Microsoft Store installations, or the .appinstaller method. Suggested solutions include restarting PiecesOS and Desktop App, updating through the Microsoft Store, or reinstalling using a different method.
+### 4. Pieces Startup and Update Issues on Windows
+Users are experiencing issues with Pieces Desktop and PiecesOS launching and updating on Windows. These issues include non-dismissable overlay messages, repeated update prompts, and failures to launch. Suggested solutions involve checking startup configurations, updating through the Microsoft Store, and reinstalling the applications.
 
 **Related Issues:**
 - [#590](https://github.com/pieces-app/support/issues/590): Non-dismissable overlay message.
 - [#598](https://github.com/pieces-app/support/issues/598): Ensure core dependencies need help asap
 - [#602](https://github.com/pieces-app/support/issues/602): Ensure core dependencies  Retry Step , I need help #bug
 
+### 5. PiecesOS installation and functionality errors
+Users report issues with PiecesOS installation, launching, and Copilot integration. Problems include failure to launch, Copilot inaccessibility, and sandbox content visibility. Solutions involve reinstalling, waiting for stability updates, and seeking support for troubleshooting. Users also provide feedback on response time and accuracy compared to other AI tools.
+
+**Related Issues:**
+- [#606](https://github.com/pieces-app/support/issues/606): LTM cannot see code inside a sandbox in the browser
+- [#604](https://github.com/pieces-app/support/issues/604): Unable to open Pieces Copilot Service
+- [#602](https://github.com/pieces-app/support/issues/602): Ensure core dependencies  Retry Step , I need help #bug
+
 
 ## Recommendations
-- **Prioritize resolution of Ollama installation failures:** This issue is prevalent on both Windows and Linux and presents a significant barrier to users leveraging local LLM capabilities.
-- **Investigate and address PiecesOS performance issues:** High RAM/CPU usage, LTM sandbox issues, and Copilot service errors are recurring concerns that impact user experience.  Focus on optimizing resource consumption and improving overall stability.
-- **Improve Pieces OS and Desktop App installation and update processes:** Users encounter frequent errors with the .appinstaller method and experience difficulties updating the Desktop App. Streamline these processes and provide clearer guidance to users.
-- **Enhance communication around Pieces OS port changes:** The shift to port 39300 in version 11.0.0 has caused confusion. Clearly document this change and update support resources accordingly.
-- **Consider developing a dedicated troubleshooting guide for common issues:** This would empower users to self-resolve problems and potentially reduce support ticket volume. 
+- **Prioritize Ollama Integration Issues:** Allocate resources to address the Ollama installation and functionality problems on both Windows and Linux. This includes investigating sandbox environments, dependency conflicts, and model loading errors.
+- **Investigate and Resolve Pieces OS Connectivity Issues:** Address the root cause of the "Connection refused" errors on port 39300.  Explore solutions like consistent port usage or providing clear instructions for users to find the dynamic port.
+- **Improve Pieces OS Resource Management:** Continue optimizing Pieces OS to reduce RAM/CPU usage, particularly in relation to internet connectivity and database operations. Monitor the effectiveness of version 11.1.0 in addressing this issue.
+- **Address Windows Startup and Update Issues:** Focus on resolving the problems with Pieces Desktop and PiecesOS launching and updating on Windows, including the non-dismissable overlay messages and repeated update prompts. Review startup configurations and update mechanisms.
+- **Enhance Communication on Dynamic Port Usage:** Clearly document and communicate that Pieces OS uses a dynamic port range. Provide instructions for users on how to identify the currently used port, such as checking the `.port.txt` file.
+- **Improve Error Messages and Troubleshooting:** Provide more informative error messages to users, particularly for issues like Ollama installation failures and Pieces OS connectivity problems. This will help users self-diagnose and potentially resolve issues without needing to contact support.
+- **Gather More Detailed User Data:** Collect additional information about user environments, Pieces OS versions, and specific error logs. This data will aid in faster identification and resolution of recurring issues.
+- **Consider a Dedicated Support Portal:** Explore creating a dedicated support portal with FAQs, troubleshooting guides, and a knowledge base. This can help users find solutions to common problems independently.
 
 ## Daily Reports
 Here are the daily reports for this week:
