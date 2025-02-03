@@ -1,0 +1,116 @@
+{
+  "success": true,
+  "date_range": {
+    "start": "2025-02-03T00:00:00+00:00",
+    "end": "2025-02-03T21:06:37.695829+00:00"
+  },
+  "summary": {
+    "total_tickets": 3,
+    "resolved_tickets": 0,
+    "open_tickets": 3
+  },
+  "ticket_breakdown": [
+    {
+      "category": "bug",
+      "received": 3,
+      "resolved": 0,
+      "pending": 3
+    },
+    {
+      "category": "os:windows",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:new",
+      "received": 3,
+      "resolved": 0,
+      "pending": 3
+    },
+    {
+      "category": "app:desktop application",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "app:pieces os",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "os:linux",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "app:pieces copilot module",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "known_issue",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    }
+  ],
+  "most_active_tickets": [
+    {
+      "number": 537,
+      "title": "Ollama Fails to Install on Linux",
+      "activity_level": 5.94
+    },
+    {
+      "number": 609,
+      "title": "Unable to open Pieces Copilot Service",
+      "activity_level": 4.42
+    },
+    {
+      "number": 608,
+      "title": "Models Download Fail",
+      "activity_level": 3.5
+    }
+  ],
+  "common_issues": [
+    {
+      "title": "Ollama Installation and Integration Issues",
+      "description": "Users are experiencing problems with Ollama installation, model downloads, and integration with Pieces OS on Windows and Linux. Issues include installation failures, model download errors, and service connection problems. Proposed solutions involve addressing sandbox confinement issues, bug fixes, and improved error messaging. Users are advised to check for updates and refer to related issue threads for potential workarounds.",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 608,
+          "title": "Models Download Fail",
+          "text": "Models Download Fail\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.0.4\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI'm not able to download any of the models for ollama.\n[log-02022025.txt](https://github.com/user-attachments/files/18631166/log-02022025.txt)\n\nhttps://github.com/user-attachments/assets/8e93857a-de7e-4e62-b3d0-c6a68b48631e\n## GitHub Issue Summary: Ollama Installation in Pieces\n\n**Key Points:**\n\n* User @surya-sengupta reported an issue with Ollama installation in Pieces.\n* The issue was automatically triaged by the bot.\n\n**Problems Identified:**\n\n* User is unable to install Ollama in Pieces.\n\n**Proposed/Implemented Solutions:**\n\n* The bot suggested related issues for reference.\n* The bot provided helpful resources like existing issues, documentation, and YouTube channel.\n\n**Current Status/Outcome:**\n\n* The issue is being routed to the appropriate team member.\n* An update is expected within 24 hours.",
+          "activity_level": 3.5
+        },
+        {
+          "id": 537,
+          "title": "Ollama Fails to Install on Linux",
+          "text": "Ollama Fails to Install on Linux\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nLinux\n\n### Your Pieces OS Version\n\n11.0.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nUser reports immediate \"Ollama failed to install\" diaglog upon clicking install Ollama install button in Pieces desktop app\n## GitHub Issue Summary\n\n**Issue:** Ollama installation fails in Pieces-OS due to snap confinement.\n\n**Key points:**\n\n* @ekuznetsov139 reported the issue, indicating \"Ollama failed to install\" even though `curl` is available.\n* @brian-at-pieces acknowledged miscommunication about the package's confinement and confirmed the issue is caused by Pieces-OS running in a sandbox.\n* @brian-at-pieces stated a fix is being worked on and will be released soon.\n* @cwoolfo1 inquired about progress and workarounds for downloading local LLM models.\n* @brian-at-pieces confirmed the issue impacts inference and downloading, and a fix is underway.\n* @umeshwayakole27 requested a solution to avoid relying on cloud LLMs.\n\n**Current status:**\n\n* The issue is still present in the latest version of Pieces-OS.\n* A fix is being actively worked on and is expected to be released soon.\n\n**Outcome:**\n\n* Once the fix is released, Ollama installation should work correctly within the Pieces-OS sandbox.\n* Users will be able to utilize local LLM models without relying on cloud services.\n\n**Note:** \n\nThis summary was generated based on the information provided in the GitHub issue conversation. The actual resolution and timing may vary.",
+          "activity_level": 5.94
+        },
+        {
+          "id": 609,
+          "title": "Unable to open Pieces Copilot Service",
+          "text": "Unable to open Pieces Copilot Service\nError: Bad state: GetIt: Object/factory with type PiecesWebSocketCreator is not registered inside GetIt. \n(Did you accidentally do GetIt sl=GetIt.instance(); instead of GetIt sl=GetIt.instance;\nDid you forget to register it?)\n\n**Installation Details**\n\nSucceeded: false\nPath: \n\n**PiecesOS Information**\n\nID: 4c9e86c3-7cd9-4905-84a3-be29a48a5a26\nUser: Anonymous\nCurrent Version: Unknown\nMin Version Supported: 11.0.4\nMax Version Supported: 12.0.0\nLocal Port: 39301\n\n**Device Information**\n\nOperating System: Linux\nCurrent Version: Linux 6.8.0-50-generic #51-Ubuntu SMP PREEMPT_DYNAMIC Sat Nov  9 17:58:29 UTC 2024\nMin Version Supported: Ubuntu 18\n## Summary of GitHub Issue\n\n**Key Points Raised:**\n* User (@Nagarajan2004) experiences an issue with Pieces Copilot Service.\n\n**Problems Identified:**\n* User cannot open Pieces Copilot Service.\n* No information provided about the specific error or context.\n\n**Solutions:**\n* Bot recommends related issue threads with potentially similar problems and solutions.\n* Provides links to resources like documentation, YouTube channel, and existing issues.\n\n**Current Status:**\n* No follow-up from Pieces team member within 24 hours.\n* Issue remains open.\n\n**Outcome:**\n* Uncertain. User needs further assistance to troubleshoot the issue.",
+          "activity_level": 4.42
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    "**Prioritize resolving Ollama installation issues:** This is a recurring problem on both Windows and Linux, impacting user experience. Focus on addressing sandbox confinement issues, bug fixes, and improving error messaging related to Ollama.",
+    "**Investigate and address Pieces Copilot Service startup error:** The \"Bad state: GetIt\" error on Linux needs immediate attention. Ensure all necessary dependencies and services are correctly registered and configured.",
+    "**Improve model download success rate:** Investigate the root cause of model download failures reported by users. This might involve server-side checks, download resume capabilities, or clearer communication about potential network issues.",
+    "**Review and update documentation:** Ensure installation guides, troubleshooting steps, and FAQs cover the identified Ollama and model download issues. Clear and concise documentation can reduce user frustration and support tickets.",
+    "**Consider a more detailed error reporting mechanism:** Encourage users to submit logs or more context when facing issues. This will help the support team to diagnose and resolve problems more efficiently.",
+    "**Proactively monitor and address known issues:** The 'known_issue' category suggests a tracking system is in place. Ensure timely communication and updates are provided to users about known issues and their expected resolution timeframes.",
+    "**Analyze ticket trends over time:** Track the volume and nature of support tickets related to specific features or issues. This will help identify areas for improvement and prioritize development efforts."
+  ],
+  "message": "Daily support report generated successfully."
+}

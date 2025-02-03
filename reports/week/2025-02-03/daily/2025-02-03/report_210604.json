@@ -1,0 +1,114 @@
+{
+  "success": true,
+  "date_range": {
+    "start": "2025-02-03T00:00:00+00:00",
+    "end": "2025-02-03T21:06:04.102151+00:00"
+  },
+  "summary": {
+    "total_tickets": 3,
+    "resolved_tickets": 0,
+    "open_tickets": 3
+  },
+  "ticket_breakdown": [
+    {
+      "category": "bug",
+      "received": 3,
+      "resolved": 0,
+      "pending": 3
+    },
+    {
+      "category": "os:windows",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:new",
+      "received": 3,
+      "resolved": 0,
+      "pending": 3
+    },
+    {
+      "category": "app:desktop application",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "app:pieces os",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "os:linux",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "app:pieces copilot module",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "known_issue",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    }
+  ],
+  "most_active_tickets": [
+    {
+      "number": 537,
+      "title": "Ollama Fails to Install on Linux",
+      "activity_level": 5.94
+    },
+    {
+      "number": 609,
+      "title": "Unable to open Pieces Copilot Service",
+      "activity_level": 4.42
+    },
+    {
+      "number": 608,
+      "title": "Models Download Fail",
+      "activity_level": 3.5
+    }
+  ],
+  "common_issues": [
+    {
+      "title": "Ollama Model Download and Installation Issues",
+      "description": "Users are experiencing difficulties downloading and installing Ollama models within the Pieces desktop application. This issue appears to be prevalent on Linux systems, particularly those running Pieces via Snap, due to sandbox restrictions. Proposed solutions include modifying the Snap definition to include dependencies like 'curl' and allowing Pieces to access externally installed models. ",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 608,
+          "title": "Models Download Fail",
+          "text": "Models Download Fail\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.0.4\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI'm not able to download any of the models for ollama.\n[log-02022025.txt](https://github.com/user-attachments/files/18631166/log-02022025.txt)\n\nhttps://github.com/user-attachments/assets/8e93857a-de7e-4e62-b3d0-c6a68b48631e\n## Summary of GitHub Issue Conversation:\n\n**Key Points:**\n\n* User @surya-sengupta reported an issue with Ollama failing to install in Pieces.\n* The issue was automatically routed to the Pieces support team.\n\n**Problems Identified:**\n\n* Ollama failed to install in Pieces.\n* This may be related to other known issues with Ollama installation on Linux.\n\n**Solutions Proposed/Implemented:**\n\n* The user was provided with links to potentially helpful information, including:\n    * Existing Issues on GitHub\n    * Pieces Documentation\n    * Pieces YouTube Channel\n    * Related Issues on Ollama installation failures\n\n**Current Status/Outcome:**\n\n* The Pieces support team is investigating the issue and will follow up with the user within 24 hours.\n\n**Additional Notes:**\n\n* The user has not provided any further information about the specific error or steps taken leading to the issue.\n* It is unclear if the proposed solutions have been implemented or have resolved the issue.",
+          "activity_level": 3.5
+        },
+        {
+          "id": 537,
+          "title": "Ollama Fails to Install on Linux",
+          "text": "Ollama Fails to Install on Linux\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nLinux\n\n### Your Pieces OS Version\n\n11.0.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nUser reports immediate \"Ollama failed to install\" diaglog upon clicking install Ollama install button in Pieces desktop app\n## Summary of GitHub Issue Conversation\n\n**Key Points Raised:**\n\n* The `Ollama` LLM model fails to install in Pieces installed via Snap on Ubuntu.\n* This is due to the sandboxed environment of the Snap, which restricts access to certain resources, including `curl`.\n* Manually downloading the model or installing it globally has no effect because Pieces cannot access it within its sandbox.\n\n**Problems Identified:**\n\n* Installation of `Ollama` from within Pieces fails due to `curl` not being available.\n* Downloaded models or global installations of `Ollama` cannot be accessed by Pieces.\n\n**Solutions Proposed/Implemented:**\n\n* Modify the Pieces Snap definition file to include `curl` as a dependency.\n* Modify Pieces to allow access to `Ollama` installed outside of the Snap environment.\n\n**Current Status/Outcome:**\n\n* A fix has been developed and is expected to be released soon.\n* As of January 28, 2025, the fix was not yet available.\n* Users are still waiting for a solution to be implemented.\n\n**Additional Notes:**\n\n* The issue also affects model inference, not just downloading.\n* Users are concerned about privacy implications of using cloud-based LLMs.",
+          "activity_level": 5.94
+        },
+        {
+          "id": 609,
+          "title": "Unable to open Pieces Copilot Service",
+          "text": "Unable to open Pieces Copilot Service\nError: Bad state: GetIt: Object/factory with type PiecesWebSocketCreator is not registered inside GetIt. \n(Did you accidentally do GetIt sl=GetIt.instance(); instead of GetIt sl=GetIt.instance;\nDid you forget to register it?)\n\n**Installation Details**\n\nSucceeded: false\nPath: \n\n**PiecesOS Information**\n\nID: 4c9e86c3-7cd9-4905-84a3-be29a48a5a26\nUser: Anonymous\nCurrent Version: Unknown\nMin Version Supported: 11.0.4\nMax Version Supported: 12.0.0\nLocal Port: 39301\n\n**Device Information**\n\nOperating System: Linux\nCurrent Version: Linux 6.8.0-50-generic #51-Ubuntu SMP PREEMPT_DYNAMIC Sat Nov  9 17:58:29 UTC 2024\nMin Version Supported: Ubuntu 18\n## Conversation Summary on GitHub Issue\n\n**Key Points:**\n\n* User @Nagarajan2004 reported an issue.\n* The issue was automatically triaged and assigned to the appropriate Pieces team member.\n* The user will receive a follow-up within 24 hours.\n* The bot suggested related issues and helpful resources.\n\n**Problems Identified:**\n\n* Unclear nature of the user's issue.\n\n**Solutions Proposed/Implemented:**\n\n* Automated triage and routing of the issue.\n* Providing related issues and helpful resources.\n\n**Current Status/Outcome:**\n\n* The user awaits further response from the Pieces team.\n\n**Additional Notes:**\n\n* The conversation is dated February 3, 2025. \n* The user's issue remains unresolved based on the provided information.",
+          "activity_level": 4.42
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    "**Prioritize 'Ollama Model Download and Installation Issues'**: This is the most frequent and impactful issue, particularly for Linux users. Focus on resolving the sandbox restrictions causing installation failures.",
+    "**Investigate Snap Confinement Issues:** The root cause of the Ollama installation problem seems tied to Snap's sandboxing. Explore solutions like modifying the Snap definition or providing alternative installation methods for Linux.",
+    "**Improve 'Pieces Copilot Service' Stability:** Address the 'Bad state' error preventing users from opening the Copilot service. This might involve reviewing service registration and dependencies.",
+    "**Gather More Information on 'Models Download Fail':** While less active than other issues, investigate the root cause of model download failures on Windows. Analyze provided logs and request additional details from affected users if needed.",
+    "**Consider a Dedicated FAQ or Troubleshooting Guide:** Given the recurring nature of these issues, create a dedicated FAQ or troubleshooting section in your documentation specifically addressing Ollama installation, model downloads, and Pieces Copilot Service errors on different operating systems."
+  ],
+  "message": "Daily support report generated successfully."
+}
