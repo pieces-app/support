@@ -1,6 +1,6 @@
 # Support Ticket Report
-- Generated: 2025-02-06 21:07:30
-- Period: 2025-02-03 to 2025-02-06
+- Generated: 2025-02-07 05:08:29
+- Period: 2025-02-03 to 2025-02-07
 
 ## Summary
 - **Total Tickets:** 9
@@ -10,63 +10,67 @@
 ## 5 Most Active Tickets
 | Issue # | Title | Activity Level |
 |---------|-------|----------------|
-| [#613](https://github.com/pieces-app/support/issues/613) | PiecesOS takes a while to boot-up(cannot run): (Unable to make it past ensure core dependency in the Desktop application) | 19.00 |
-| [#610](https://github.com/pieces-app/support/issues/610) | Pieces Desktop app, account linking never acheived for several years? | 13.35 |
+| [#613](https://github.com/pieces-app/support/issues/613) | PiecesOS takes a while to boot-up(cannot run): (Unable to make it past ensure core dependency in the Desktop application) | 21.00 |
+| [#610](https://github.com/pieces-app/support/issues/610) | Pieces Desktop app, account linking never acheived for several years? | 11.99 |
+| [#617](https://github.com/pieces-app/support/issues/617) | i got this error when opening localhost | 5.68 |
 | [#537](https://github.com/pieces-app/support/issues/537) | Ollama Fails to Install on Linux | 5.50 |
 | [#614](https://github.com/pieces-app/support/issues/614) | Pieces OS won't run | 4.50 |
-| [#617](https://github.com/pieces-app/support/issues/617) | i got this error when opening localhost | 4.42 |
 
 ## Common Issues
-### 1. PiecesOS Startup and Account Linking Issues
-Users report PiecesOS failing to launch or connect to the cloud, often after updates. Troubleshooting includes restarting PiecesOS, checking server status, and reinstalling. Account linking problems involve difficulty linking Google and GitHub simultaneously, with solutions like merging accounts or awaiting a new authentication system.
+### 1. Pieces OS and Desktop App Issues
+Users report issues with Pieces OS and Desktop app, including account linking problems, app launch failures, and OS boot-up errors.  Solutions include waiting for new authentication service, debugging steps, reinstalling the app, and updating to the latest version.
 
 **Related Issues:**
 - [#610](https://github.com/pieces-app/support/issues/610): Pieces Desktop app, account linking never acheived for several years?
 - [#614](https://github.com/pieces-app/support/issues/614): Pieces OS won't run
 - [#613](https://github.com/pieces-app/support/issues/613): PiecesOS takes a while to boot-up(cannot run): (Unable to make it past ensure core dependency in the Desktop application)
 
-### 2. Pieces OS Startup Failure and Connectivity Issues
-Users report Pieces OS failing to launch or connect, often getting stuck on "core dependencies" during startup. This occurs across macOS and Windows, sometimes after updates. Proposed solutions include restarting Pieces OS and the Desktop application, reinstalling, checking for server issues, and consulting Pieces support.
-
-**Related Issues:**
-- [#613](https://github.com/pieces-app/support/issues/613): PiecesOS takes a while to boot-up(cannot run): (Unable to make it past ensure core dependency in the Desktop application)
-- [#614](https://github.com/pieces-app/support/issues/614): Pieces OS won't run
-- [#617](https://github.com/pieces-app/support/issues/617): i got this error when opening localhost
-
-### 3. PiecesOS Boot and Startup Issues
-Users report PiecesOS failing to boot or taking a long time to start, often getting stuck on "core dependencies." This occurs across macOS and Windows, potentially due to incorrect installation (especially on M1/M2 Macs), server issues, or problems with updates. Solutions include reinstalling, checking for ARM/Intel compatibility, restarting PiecesOS, and reviewing server connection logs.
-
-**Related Issues:**
-- [#615](https://github.com/pieces-app/support/issues/615): Unable to Boot PiecesOS on Macos(Arm architecture) After updating to 11.1.0
-- [#613](https://github.com/pieces-app/support/issues/613): PiecesOS takes a while to boot-up(cannot run): (Unable to make it past ensure core dependency in the Desktop application)
-- [#614](https://github.com/pieces-app/support/issues/614): Pieces OS won't run
-
-### 4. Ollama Installation and Access Issues
-Users are experiencing difficulties installing and accessing Ollama across different Pieces OS versions and platforms. Problems include installation failures, incompatibility with Snap environments, and inability to download models. Solutions involve updating Pieces OS, modifying Snap configurations, and potential workarounds or patches from the Pieces team.
+### 2. PiecesOS Ollama Installation and Update Issues
+Users report various issues with Ollama installation and PiecesOS updates, including installation failures, dependency errors, and application freezes. Solutions involve updating to the latest PiecesOS version (11.1.1), which includes stability improvements and bug fixes. Contact Pieces support for persistent issues.
 
 **Related Issues:**
 - [#608](https://github.com/pieces-app/support/issues/608): Models Download Fail
 - [#537](https://github.com/pieces-app/support/issues/537): Ollama Fails to Install on Linux
-- [#614](https://github.com/pieces-app/support/issues/614): Pieces OS won't run
+- [#613](https://github.com/pieces-app/support/issues/613): PiecesOS takes a while to boot-up(cannot run): (Unable to make it past ensure core dependency in the Desktop application)
 
-### 5. Pieces for Developers Issues
-Users are experiencing various issues with Pieces for Developers, including requests for French localization, errors when opening localhost, and inability to launch Pieces OS. The Pieces team is actively investigating these issues, providing troubleshooting steps, and working on solutions. Users are encouraged to consult documentation, explore existing issues, and contact support for further assistance.
+### 3. Pieces OS startup and update issues
+Users report Pieces OS failing to launch or update, often getting stuck on dependency checks. This affects both Windows and macOS. Solutions include updating to the latest version, reinstalling, or contacting support for debugging assistance.
 
 **Related Issues:**
 - [#607](https://github.com/pieces-app/support/issues/607): Feat: Localization(french) for the Desktop Application
+- [#614](https://github.com/pieces-app/support/issues/614): Pieces OS won't run
+- [#613](https://github.com/pieces-app/support/issues/613): PiecesOS takes a while to boot-up(cannot run): (Unable to make it past ensure core dependency in the Desktop application)
+
+### 4. PiecesOS fails to boot after update
+Users report PiecesOS getting stuck during startup after updating, often on the dependencies stage. This issue appears on both macOS and Windows. Reinstalling the app doesn't always solve the problem. The Pieces team has addressed this in version 11.1.1. Ensure you're running the latest version. If problems persist, contact Pieces support.
+
+**Related Issues:**
+- [#613](https://github.com/pieces-app/support/issues/613): PiecesOS takes a while to boot-up(cannot run): (Unable to make it past ensure core dependency in the Desktop application)
+- [#614](https://github.com/pieces-app/support/issues/614): Pieces OS won't run
+- [#615](https://github.com/pieces-app/support/issues/615): Unable to Boot PiecesOS on Macos(Arm architecture) After updating to 11.1.0
+
+### 5. Pieces OS and Desktop Application Launch Issues
+Users are experiencing difficulties launching Pieces OS and the desktop application on Windows and Linux.  Issues include failure to launch, inability to connect to localhost, and error messages related to PiecesWebSocketCreator. Troubleshooting steps include verifying installation, checking system requirements, and reviewing logs. Contact Pieces support for further assistance.
+
+**Related Issues:**
 - [#617](https://github.com/pieces-app/support/issues/617): i got this error when opening localhost
 - [#614](https://github.com/pieces-app/support/issues/614): Pieces OS won't run
+- [#609](https://github.com/pieces-app/support/issues/609): Unable to open Pieces Copilot Service
 
 
 ## Recommendations
-- **Prioritize PiecesOS Startup Issues:** Focus on resolving the recurring problems with PiecesOS failing to launch or connect, particularly the "core dependencies" issue affecting both macOS and Windows users. This appears to be a major pain point.
-- **Improve Account Linking:** Investigate and fix the persistent issue with simultaneous Google and GitHub account linking. Consider simplifying the account linking process based on user feedback.
-- **Address Ollama Installation Challenges:** Provide clear solutions for Ollama installation issues, specifically addressing Snap environment conflicts and model download failures. This is crucial for users who rely on local LLM capabilities.
-- **Enhance Communication on Known Issues:**  Keep users informed about the status of known issues, such as the French localization request and localhost errors. Provide timelines for resolutions or workarounds when possible.
-- **Review Pieces for Developers Onboarding:** Given the localhost and Pieces OS launch issues, review the onboarding process for Pieces for Developers to ensure users have clear instructions and troubleshooting steps.
-- **Gather More Data on ARM Mac Issues:** Investigate if the PiecesOS boot issues disproportionately affect M1/M2 Macs. If so, prioritize solutions for this user group.
-- **Analyze Server Connection Logs:**  Review server connection logs to identify any patterns or recurring issues related to PiecesOS startup or cloud connectivity problems.
-- **Consider a Bug Bounty Program:** To address issues like the account linking problem that has persisted for years, consider implementing a bug bounty program to incentivize community contributions to bug discovery and resolution.
+- **Prioritize Pieces OS and Desktop App Issues:** Focus on resolving the launch failures, account linking problems, and OS boot-up errors related to Pieces OS and the Desktop app. These issues are the most frequent and cause significant disruption to users.
+- **Improve Ollama Installation and Update Process:** Address the issues related to Ollama installation and PiecesOS updates, including installation failures, dependency errors, and application freezes. Ensure a smoother experience for users wanting to utilize Ollama.
+- **Enhance Communication on Update Impacts:** Clearly communicate the changes introduced in each PiecesOS update and provide guidance on potential issues users might encounter. This includes specific instructions for users upgrading from older versions.
+- **Investigate and Address Dependency Issues:** Conduct thorough testing to identify and resolve the root causes of dependency-related errors during PiecesOS startup and update processes. This will prevent users from getting stuck on dependency checks.
+- **Provide Detailed Troubleshooting Documentation:** Create comprehensive troubleshooting guides for common issues, including step-by-step instructions, screenshots, and clear explanations. This will empower users to resolve problems independently.
+- **Improve Account Linking Functionality:** Review and redesign the account linking process to make it more intuitive and reliable. Ensure that users can easily link multiple accounts without encountering errors or unexpected behavior.
+- **Monitor Platform-Specific Issues:** Pay close attention to issues reported on specific operating systems (Windows, macOS, Linux) and provide tailored solutions. This ensures compatibility and a consistent user experience across platforms.
+- **Gather User Feedback on New Features:** Implement mechanisms to collect user feedback on new features and updates, such as in-app surveys or dedicated feedback channels. This helps identify and address usability issues early on.
+- **Consider Localization for Wider Accessibility:** Explore the possibility of localizing Pieces products, starting with high-demand languages like French. This will make the products accessible to a larger user base.
+- **Proactively Communicate Known Issues:** Maintain a publicly accessible list of known issues and their current status. This keeps users informed and reduces support requests for already identified problems.
+- **Offer Multiple Support Channels:** Provide various support channels, including email, live chat, and a comprehensive knowledge base. This allows users to choose their preferred method of communication.
+- **Track Support Ticket Trends:** Regularly analyze support ticket data to identify trends, common issues, and areas for improvement. This data-driven approach helps optimize support operations and resource allocation.
 
 ## Daily Reports
 Here are the daily reports for this week:
@@ -79,3 +83,4 @@ Here are the daily reports for this week:
 - [report_050647](daily/2025-02-05/report_050647.md)
 - [report_131014](daily/2025-02-06/report_131014.md)
 - [report_210556](daily/2025-02-06/report_210556.md)
+- [report_050647](daily/2025-02-07/report_050647.md)
