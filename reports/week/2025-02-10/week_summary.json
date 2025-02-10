@@ -2,46 +2,100 @@
   "success": true,
   "date_range": {
     "start": "2025-02-10T00:00:00+00:00",
-    "end": "2025-02-10T13:10:53.913097+00:00"
+    "end": "2025-02-10T21:07:33.881339+00:00"
   },
   "summary": {
-    "total_tickets": 2,
-    "resolved_tickets": 0,
-    "open_tickets": 2
+    "total_tickets": 12,
+    "resolved_tickets": 2,
+    "open_tickets": 10
   },
   "ticket_breakdown": [
     {
       "category": "bug",
-      "received": 2,
-      "resolved": 0,
-      "pending": 2
+      "received": 11,
+      "resolved": 2,
+      "pending": 9
     },
     {
       "category": "os:windows",
-      "received": 2,
-      "resolved": 0,
-      "pending": 2
+      "received": 6,
+      "resolved": 1,
+      "pending": 5
     },
     {
-      "category": "app:desktop application",
-      "received": 2,
-      "resolved": 0,
-      "pending": 2
-    },
-    {
-      "category": "app:pieces os",
-      "received": 2,
-      "resolved": 0,
-      "pending": 2
-    },
-    {
-      "category": "status:triaged",
+      "category": "status:new",
       "received": 1,
       "resolved": 0,
       "pending": 1
     },
     {
-      "category": "status:new",
+      "category": "app:visual studio",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:pieces copilot module",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "on the roadmap",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:desktop application",
+      "received": 9,
+      "resolved": 2,
+      "pending": 7
+    },
+    {
+      "category": "status:triaged",
+      "received": 8,
+      "resolved": 2,
+      "pending": 6
+    },
+    {
+      "category": "os:macos",
+      "received": 3,
+      "resolved": 1,
+      "pending": 2
+    },
+    {
+      "category": "status:pending_user_confirmation",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:pieces os",
+      "received": 7,
+      "resolved": 1,
+      "pending": 6
+    },
+    {
+      "category": "status:waiting_on_user_responses",
+      "received": 4,
+      "resolved": 0,
+      "pending": 4
+    },
+    {
+      "category": "resolved",
+      "received": 1,
+      "resolved": 1,
+      "pending": 0
+    },
+    {
+      "category": "os:linux",
+      "received": 3,
+      "resolved": 0,
+      "pending": 3
+    },
+    {
+      "category": "announcement",
       "received": 1,
       "resolved": 0,
       "pending": 1
@@ -49,42 +103,201 @@
   ],
   "most_active_tickets": [
     {
+      "number": 621,
+      "title": "Cannot launch pieces-for-developers after new installation on MacOS Sequoia 15.2 M1 chip",
+      "activity_level": 8.2
+    },
+    {
       "number": 620,
       "title": "Pieces os doesn't launch at all for past week. Can't use pieces at all",
-      "activity_level": 4.42
+      "activity_level": 6.94
+    },
+    {
+      "number": 622,
+      "title": "Visual Studio Extension: Home and End keys should move the text cursor to the beginning and end of the input text box",
+      "activity_level": 5.68
+    },
+    {
+      "number": 618,
+      "title": "Pieces app goes unresponsive on opening and every 5sec. Can't use it at all in any way",
+      "activity_level": 5.25
+    },
+    {
+      "number": 619,
+      "title": "Facing error on Ubuntu while opening Pieces \"DatabaseException\"",
+      "activity_level": 4.5
     },
     {
       "number": 608,
       "title": "Models Download Fail",
-      "activity_level": 3.76
+      "activity_level": 4.34
+    },
+    {
+      "number": 606,
+      "title": "LTM cannot see code inside a sandbox in the browser",
+      "activity_level": 4.05
+    },
+    {
+      "number": 617,
+      "title": "i got this error when opening localhost",
+      "activity_level": 3.21
+    },
+    {
+      "number": 609,
+      "title": "Unable to open Pieces Copilot Service",
+      "activity_level": 2.71
+    },
+    {
+      "number": 589,
+      "title": "Conversation titles save too eagerly while editing",
+      "activity_level": 2.63
+    },
+    {
+      "number": 615,
+      "title": "Unable to Boot PiecesOS on Macos(Arm architecture) After updating to 11.1.0",
+      "activity_level": 2.17
+    },
+    {
+      "number": 588,
+      "title": "Neural Code Search returns no results",
+      "activity_level": 1.85
     }
   ],
   "common_issues": [
     {
-      "title": "Pieces OS and Model Download Failures",
-      "description": "Users report Pieces OS failing to launch or download models.  Issues potentially stem from software versions, requiring updates to Pieces OS or the desktop application.  Reinstallation attempts haven't consistently resolved the problems.  The Pieces team is actively investigating these issues.",
-      "frequency": 2,
+      "title": "Pieces OS Installation and Launch Issues",
+      "description": "Users reported various issues with Pieces OS installation, launching, and model downloads, particularly on Windows and MacOS. Problems included installation failures, application crashes, and inability to download models. Solutions involved upgrading Pieces OS, reinstalling with correct builds (Apple Silicon vs Intel), killing conflicting processes, and providing support logs for further analysis.",
+      "frequency": 3,
       "related_issues": [
         {
           "id": 608,
           "title": "Models Download Fail",
-          "text": "Models Download Fail\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.0.4\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI'm not able to download any of the models for ollama.\n[log-02022025.txt](https://github.com/user-attachments/files/18631166/log-02022025.txt)\n\nhttps://github.com/user-attachments/assets/8e93857a-de7e-4e62-b3d0-c6a68b48631e\n## GitHub Issue Summary: Ollama Installation Issue\n\n**Key Points:**\n* Surya Sengupta reported an issue with Ollama installation not working after one day.\n* Support bot provided some initial guidance and suggested relevant resources.\n* Brian from the Pieces team recommended updating to OS 11.1.0 for potential stability improvements.\n\n**Identified Problem:** Ollama installation fails or stops working shortly after installation.\n\n**Proposed/Implemented Solution:**\n* Update Pieces OS to version 11.1.0.\n\n**Outcome:**\n* The issue seemed resolved after updating to OS 11.1.0 but reoccurred after a day, even after a clean reinstall. \n* User provided additional information through a log file for further troubleshooting.\n\n**Current Status:** Open. The Pieces team continues to investigate and address the issue.",
-          "activity_level": 3.76
+          "text": "Models Download Fail\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.0.4\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI'm not able to download any of the models for ollama.\n[log-02022025.txt](https://github.com/user-attachments/files/18631166/log-02022025.txt)\n\nhttps://github.com/user-attachments/assets/8e93857a-de7e-4e62-b3d0-c6a68b48631e\n## GitHub Issue Summary: Ollama Installation Issue\n\n**Key Points:**\n\n* Surya Sengupta reported an issue with Ollama installation not working in Pieces OS.\n* The issue was initially thought to be resolved with a Pieces OS update, but it re-appeared.\n* Support logs were requested for further analysis.\n\n**Problems Identified:**\n\n* Ollama installation fails after a successful initial installation.\n* Clean reinstall of Ollama and Pieces OS doesn't resolve the issue.\n\n**Proposed/Implemented Solutions:**\n\n* Upgrade to Pieces OS version 11.1.0 (initially thought to resolve the issue).\n* Sending support logs for further investigation.\n\n**Current Status/Outcome:**\n\n* The issue is still ongoing and requires further investigation.\n* Support logs are needed to identify the root cause and find a solution.\n\n**Additional Information:**\n\n* Log file from the user is available at: https://github.com/user-attachments/files/18732103/log-02102025.txt.\n* Related issues:\n    * [Ollama failed to install in pieces](https://github.com/pieces-app/support/issues/605)\n    * [Ollama Fails to Install on Linux](https://github.com/pieces-app/support/issues/537)\n    * [Unable to open Pieces Copilot Service](https://github.com/pieces-app/support/issues/591)\n* Helpful resources:\n    * Existing Issues: https://github.com/pieces-app/support/issues\n    * Documentation: https://docs.pieces.app\n    * YouTube Channel: https://www.youtube.com/@getpieces",
+          "activity_level": 4.34
         },
         {
           "id": 620,
           "title": "Pieces os doesn't launch at all for past week. Can't use pieces at all",
-          "text": "Pieces os doesn't launch at all for past week. Can't use pieces at all\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.1.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nFor the past week, anytime that I launch pieces I see this: \n\n![Image](https://github.com/user-attachments/assets/61f18fb6-8846-46d8-8747-5c415fd2e82d)\n\nPieces OS just doesn't open, no matter what.\n\nI tried to reinstall everything, but also no progress.\n\nHow to fix it? (Also to mention, Pieces desktop app is in Early Access program, but I don't know if this information is useful)\n## Summary of GitHub Issue Conversation\n\n**Issue:** GetReal444 reported an issue with Pieces on February 10, 2025.\n\n**Key Points:**\n\n* The issue was automatically triaged and routed to the relevant Pieces team member.\n* GetReal444 will receive a follow-up within 24 hours.\n* Similar issues have been reported previously:\n    * Unable to launch Pieces Windows desktop version\n    * Pieces OS won't run\n    * Not working\n* Resources provided to GetReal444:\n    * Existing Issues on GitHub\n    * Pieces documentation\n    * Pieces YouTube channel\n\n**Problems Identified:**\n\n* The exact nature of the problem GetReal444 is experiencing is unclear.\n* It is possible that the issue is related to one of the previously reported problems.\n\n**Solutions Proposed/Implemented:**\n\n* The Pieces team will investigate the issue and provide a follow-up to GetReal444.\n* GetReal444 is encouraged to consult the provided resources for potential solutions.\n\n**Current Status/Outcome:**\n\n* The issue is currently being investigated by the Pieces team.\n* The outcome is unknown at this time.\n\n**Note:** The conversation only provides limited information. For a more comprehensive understanding of the issue and its resolution, further investigation is required.",
-          "activity_level": 4.42
+          "text": "Pieces os doesn't launch at all for past week. Can't use pieces at all\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.1.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nFor the past week, anytime that I launch pieces I see this: \n\n![Image](https://github.com/user-attachments/assets/61f18fb6-8846-46d8-8747-5c415fd2e82d)\n\nPieces OS just doesn't open, no matter what.\n\nI tried to reinstall everything, but also no progress.\n\nHow to fix it? (Also to mention, Pieces desktop app is in Early Access program, but I don't know if this information is useful)\n## GitHub Issue Conversation Summary: \n\n**Key Points:**\n\n* User (@GetReal444) reported an issue with booting up the Pieces app.\n* The issue was automatically triaged by Pieces support bot and assigned to @mark-at-pieces.\n* Bot provided links to related issues and suggested resources.\n\n**Problems Identified:**\n\n* User was unable to launch the Pieces Windows Desktop Version.\n* Exact cause of the issue was unclear.\n\n**Solutions Proposed/Implemented:**\n\n* @mark-at-pieces requested additional information and suggested file upload for diagnosis.\n* He also offered a call to troubleshoot the issue directly.\n* A potential link to a previously resolved issue was mentioned.\n\n**Current Status/Outcome:**\n\n* The conversation is ongoing and further investigation is needed to identify and resolve the specific problem.\n\n**Important Note:**\n\n* This summary only covers the initial conversation. Further updates may be available in the ongoing issue thread.",
+          "activity_level": 6.94
+        },
+        {
+          "id": 621,
+          "title": "Cannot launch pieces-for-developers after new installation on MacOS Sequoia 15.2 M1 chip",
+          "text": "Cannot launch pieces-for-developers after new installation on MacOS Sequoia 15.2 M1 chip\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n11.1.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI cannot install pieces Desktop App, or it fails to run.  I originally reported this by email on 9 Jan 2025, and the response email referred to an existing issue on github #546.  However this issue now seems closed, hence I am raising it here as a new bug.\n \nI have recently installed pieces OS on my Mac with a package dmg.  The pieces OS appears to install, and I see the icon in the top bar.  Pieces appears to connect to the cloud successfully, and I can install plugins for Intellij, VSCode and Obsidian.  These are visible within the pieces OS icon at the top.  \n \nPieces appears to work from IDE plugins.   However I cannot launch the Desktop App, and \u2018launch pieces for developers\u2019 from the top Pieces menu fails silently.\n\nI have recently upgraded Pieces OS, now on 11.1.1\n \nInfo:\n \nMac OS: Sequoia 15.2\nChip: Apple M1 Pro\n \nPieces OS: 11.1.1 (was installed as 11.0.3(\nPieces desktop app \u2013 won\u2019t install\nPieces OS seems to be running in \u2018activity monitor\u2019\n## Summary of GitHub Issue Conversation\n\n**Key Points Raised:**\n\n* PASimmons encountered an issue with Pieces OS not running on their M1 Mac.\n\n**Problems Identified:**\n\n* The user was using an incorrect build of Pieces for Developers (Intel instead of Apple Silicon).\n* Conflicting processes may have been interfering with the launch.\n\n**Solutions Proposed/Implemented:**\n\n* Mark Widman from Pieces support suggested the following solutions:\n    * Killing conflicting processes in Activity Monitor.\n    * Providing the pieces_os support logs.\n    * Uninstalling and reinstalling Pieces using the correct Apple Silicon build.\n\n**Current Status/Outcome:**\n\n* PASimmons confirmed the issue was resolved after following the suggestion to reinstall with the correct build.\n* Mark Widman marked the issue as resolved and referred to the ongoing announcement in issue #615 for further information.\n\n**Additional Notes:**\n\n* Issue #615 provides more details about the service constraints related to Arm/Intel builds.\n\n## Overall, the conversation demonstrates effective troubleshooting and resolution of the issue by Pieces support.",
+          "activity_level": 8.2
+        }
+      ]
+    },
+    {
+      "title": "PiecesOS launch failure on Apple Silicon Macs",
+      "description": "Users on Apple Silicon Macs (M1, M2, etc.) reported PiecesOS failing to launch after updating to version 11.1.0 or later. The issue stemmed from accidentally installing the Intel build instead of the Apple Silicon build. The solution involved uninstalling the incorrect build and reinstalling using the correct build for Apple Silicon Macs from the official website.",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 615,
+          "title": "Unable to Boot PiecesOS on Macos(Arm architecture) After updating to 11.1.0",
+          "text": "Unable to Boot PiecesOS on Macos(Arm architecture) After updating to 11.1.0\nIf you cannot open PiecesOS after updating to 11.1.0 and you are on an arm Machine M1, M2, M3,...etc then it is likely that you accidentally installed the intel version of the application.\n\nIf you are Unsure.\n\nPlease uninstall Pieces OS from your applications folder and reinstall from https://docs.pieces.app/installation-getting-started/macos (Arm == Apple Silicon)\n\nYou can tell if you are working with Arm architecture if you see something that resembles this within your 'About this Mac'\n\n<img width=\"280\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/c855e1d2-0ca4-474c-9857-4e3b0069f0e5\" />\n\nIf you are still having issues after trying these steps please feel free to add a comment on this issue and schedule a time on my calendar here.\n\nhttps://calendar.app.google/MGd9i5gELtiDjWZm8\nNo comments found on this issue.",
+          "activity_level": 2.17
+        },
+        {
+          "id": 621,
+          "title": "Cannot launch pieces-for-developers after new installation on MacOS Sequoia 15.2 M1 chip",
+          "text": "Cannot launch pieces-for-developers after new installation on MacOS Sequoia 15.2 M1 chip\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n11.1.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI cannot install pieces Desktop App, or it fails to run.  I originally reported this by email on 9 Jan 2025, and the response email referred to an existing issue on github #546.  However this issue now seems closed, hence I am raising it here as a new bug.\n \nI have recently installed pieces OS on my Mac with a package dmg.  The pieces OS appears to install, and I see the icon in the top bar.  Pieces appears to connect to the cloud successfully, and I can install plugins for Intellij, VSCode and Obsidian.  These are visible within the pieces OS icon at the top.  \n \nPieces appears to work from IDE plugins.   However I cannot launch the Desktop App, and \u2018launch pieces for developers\u2019 from the top Pieces menu fails silently.\n\nI have recently upgraded Pieces OS, now on 11.1.1\n \nInfo:\n \nMac OS: Sequoia 15.2\nChip: Apple M1 Pro\n \nPieces OS: 11.1.1 (was installed as 11.0.3(\nPieces desktop app \u2013 won\u2019t install\nPieces OS seems to be running in \u2018activity monitor\u2019\n## Summary of GitHub Issue Conversation\n\n**Key Points Raised:**\n\n* PASimmons encountered an issue with Pieces OS not running on their M1 Mac.\n\n**Problems Identified:**\n\n* The user was using an incorrect build of Pieces for Developers (Intel instead of Apple Silicon).\n* Conflicting processes may have been interfering with the launch.\n\n**Solutions Proposed/Implemented:**\n\n* Mark Widman from Pieces support suggested the following solutions:\n    * Killing conflicting processes in Activity Monitor.\n    * Providing the pieces_os support logs.\n    * Uninstalling and reinstalling Pieces using the correct Apple Silicon build.\n\n**Current Status/Outcome:**\n\n* PASimmons confirmed the issue was resolved after following the suggestion to reinstall with the correct build.\n* Mark Widman marked the issue as resolved and referred to the ongoing announcement in issue #615 for further information.\n\n**Additional Notes:**\n\n* Issue #615 provides more details about the service constraints related to Arm/Intel builds.\n\n## Overall, the conversation demonstrates effective troubleshooting and resolution of the issue by Pieces support.",
+          "activity_level": 8.2
+        },
+        {
+          "id": 620,
+          "title": "Pieces os doesn't launch at all for past week. Can't use pieces at all",
+          "text": "Pieces os doesn't launch at all for past week. Can't use pieces at all\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.1.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nFor the past week, anytime that I launch pieces I see this: \n\n![Image](https://github.com/user-attachments/assets/61f18fb6-8846-46d8-8747-5c415fd2e82d)\n\nPieces OS just doesn't open, no matter what.\n\nI tried to reinstall everything, but also no progress.\n\nHow to fix it? (Also to mention, Pieces desktop app is in Early Access program, but I don't know if this information is useful)\n## GitHub Issue Conversation Summary: \n\n**Key Points:**\n\n* User (@GetReal444) reported an issue with booting up the Pieces app.\n* The issue was automatically triaged by Pieces support bot and assigned to @mark-at-pieces.\n* Bot provided links to related issues and suggested resources.\n\n**Problems Identified:**\n\n* User was unable to launch the Pieces Windows Desktop Version.\n* Exact cause of the issue was unclear.\n\n**Solutions Proposed/Implemented:**\n\n* @mark-at-pieces requested additional information and suggested file upload for diagnosis.\n* He also offered a call to troubleshoot the issue directly.\n* A potential link to a previously resolved issue was mentioned.\n\n**Current Status/Outcome:**\n\n* The conversation is ongoing and further investigation is needed to identify and resolve the specific problem.\n\n**Important Note:**\n\n* This summary only covers the initial conversation. Further updates may be available in the ongoing issue thread.",
+          "activity_level": 6.94
+        }
+      ]
+    },
+    {
+      "title": "Pieces App Launching and Freezing Issues",
+      "description": "Multiple users report Pieces app freezing or failing to launch on Linux and Windows. Issues involve unresponsiveness, database errors, and boot-up failures. Proposed solutions include disabling on-screen keyboards, reinstalling, and Pieces team hotfixes. Support actively investigates and assists with troubleshooting.",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 618,
+          "title": "Pieces app goes unresponsive on opening and every 5sec. Can't use it at all in any way",
+          "text": "Pieces app goes unresponsive on opening and every 5sec. Can't use it at all in any way\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nLinux\n\n### Your Pieces OS Version\n\n11.1.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nPieces app goes unresponsive and freezes a lot when trying to do anything, like trying to type in copilot chat or navigating through the menus. Can't use pieces app at all! Tried reinstalling it, but it made no difference. Desktop app version is 3.3.6\n\nhttps://github.com/user-attachments/assets/e75595c0-31c8-4560-b08b-9ad3de8af6ab\n## GitHub Issue Summary\n\n**Issue:** Pieces app freezing \n\n**Key Points:**\n\n* User experiencing app freezing issues.\n* Problem appears to be related to TextFields and specific versions of Linux Mint.\n\n**Proposed/Implemented Solutions:**\n\n* Disable on-screen keyboard as a workaround.\n* Upcoming hotfix by Pieces team to address the issue.\n\n**Current Status/Outcome:**\n\n* Workaround available.\n* Fix in progress by Pieces team.\n\n**Additional Information:**\n\n* Related issues: [Copilot not giving feedback](https://github.com/pieces-app/support/issues/584), [PiecesOS takes a while to boot-up](https://github.com/pieces-app/support/issues/613), [Not Working](https://github.com/pieces-app/support/issues/456)\n* Helpful resources: Existing Issues, Documentation, YouTube Channel\n\n\n**Note:**\n\n* The issue was originally created by `94tejas`.\n* The support team member responsible for the issue is `mack-at-pieces`.",
+          "activity_level": 5.25
+        },
+        {
+          "id": 620,
+          "title": "Pieces os doesn't launch at all for past week. Can't use pieces at all",
+          "text": "Pieces os doesn't launch at all for past week. Can't use pieces at all\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.1.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nFor the past week, anytime that I launch pieces I see this: \n\n![Image](https://github.com/user-attachments/assets/61f18fb6-8846-46d8-8747-5c415fd2e82d)\n\nPieces OS just doesn't open, no matter what.\n\nI tried to reinstall everything, but also no progress.\n\nHow to fix it? (Also to mention, Pieces desktop app is in Early Access program, but I don't know if this information is useful)\n## GitHub Issue Conversation Summary: \n\n**Key Points:**\n\n* User (@GetReal444) reported an issue with booting up the Pieces app.\n* The issue was automatically triaged by Pieces support bot and assigned to @mark-at-pieces.\n* Bot provided links to related issues and suggested resources.\n\n**Problems Identified:**\n\n* User was unable to launch the Pieces Windows Desktop Version.\n* Exact cause of the issue was unclear.\n\n**Solutions Proposed/Implemented:**\n\n* @mark-at-pieces requested additional information and suggested file upload for diagnosis.\n* He also offered a call to troubleshoot the issue directly.\n* A potential link to a previously resolved issue was mentioned.\n\n**Current Status/Outcome:**\n\n* The conversation is ongoing and further investigation is needed to identify and resolve the specific problem.\n\n**Important Note:**\n\n* This summary only covers the initial conversation. Further updates may be available in the ongoing issue thread.",
+          "activity_level": 6.94
+        },
+        {
+          "id": 619,
+          "title": "Facing error on Ubuntu while opening Pieces \"DatabaseException\"",
+          "text": "Facing error on Ubuntu while opening Pieces \"DatabaseException\"\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nLinux\n\n### Your Pieces OS Version\n\n11.1.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nFaccing \"DatabaseException(Unable to load 'CouchbaseLiteVectorSearch' extenstion\" (1), code : can'tOpenFile)\" on my ubuntu desktop \n## GitHub Issue Summary\n\n**Key Points:**\n\n* User @Rohit0072 reported an issue with the Pieces app not booting up.\n* The issue was automatically triaged and routed to the Pieces team.\n* Related issues and helpful resources were suggested to the user.\n* The Pieces team member, Mark, reached out to the user for further assistance.\n\n**Problems Identified:**\n\n* The Pieces app was not booting up for @Rohit0072.\n\n**Solutions Proposed/Implemented:**\n\n* Mark provided contact information for further assistance.\n\n**Current Status/Outcome:**\n\n* Mark is working with the user to diagnose and resolve the issue.\n\n**Additional Notes:**\n\n* The conversation took place on February 9th and 10th, 2025.",
+          "activity_level": 4.5
+        }
+      ]
+    },
+    {
+      "title": "PiecesOS/Desktop Application Launching Issues",
+      "description": "Users report inability to launch PiecesOS or the desktop application. Problems include errors related to PiecesWebSocketCreator, failure to boot up, and issues accessing localhost. Proposed solutions involve checking installation, providing logs, and live troubleshooting with support.",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 609,
+          "title": "Unable to open Pieces Copilot Service",
+          "text": "Unable to open Pieces Copilot Service\nError: Bad state: GetIt: Object/factory with type PiecesWebSocketCreator is not registered inside GetIt. \n(Did you accidentally do GetIt sl=GetIt.instance(); instead of GetIt sl=GetIt.instance;\nDid you forget to register it?)\n\n**Installation Details**\n\nSucceeded: false\nPath: \n\n**PiecesOS Information**\n\nID: 4c9e86c3-7cd9-4905-84a3-be29a48a5a26\nUser: Anonymous\nCurrent Version: Unknown\nMin Version Supported: 11.0.4\nMax Version Supported: 12.0.0\nLocal Port: 39301\n\n**Device Information**\n\nOperating System: Linux\nCurrent Version: Linux 6.8.0-50-generic #51-Ubuntu SMP PREEMPT_DYNAMIC Sat Nov  9 17:58:29 UTC 2024\nMin Version Supported: Ubuntu 18\n## GitHub Issue Conversation Summary\n\n**Date:** February 3, 2025\n\n**Issue:** Pieces Copilot Service is not opening.\n\n**Author:** Nagrajan2004\n\n**Key points raised:**\n\n* Unable to open Pieces Copilot Service.\n\n**Problems identified:**\n\n* Accessing Pieces Copilot Service is not possible.\n\n**Solutions proposed/implemented:**\n\n* The bot suggests checking similar issues and helpful resources.\n* Mack-at-pieces suggests booking a time for live troubleshooting.\n\n**Current status/outcome:**\n\n* Unclear if the user responded to the suggestion for live troubleshooting. \n* Issue remains open as of February 10, 2025.",
+          "activity_level": 2.71
+        },
+        {
+          "id": 620,
+          "title": "Pieces os doesn't launch at all for past week. Can't use pieces at all",
+          "text": "Pieces os doesn't launch at all for past week. Can't use pieces at all\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.1.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nFor the past week, anytime that I launch pieces I see this: \n\n![Image](https://github.com/user-attachments/assets/61f18fb6-8846-46d8-8747-5c415fd2e82d)\n\nPieces OS just doesn't open, no matter what.\n\nI tried to reinstall everything, but also no progress.\n\nHow to fix it? (Also to mention, Pieces desktop app is in Early Access program, but I don't know if this information is useful)\n## GitHub Issue Conversation Summary: \n\n**Key Points:**\n\n* User (@GetReal444) reported an issue with booting up the Pieces app.\n* The issue was automatically triaged by Pieces support bot and assigned to @mark-at-pieces.\n* Bot provided links to related issues and suggested resources.\n\n**Problems Identified:**\n\n* User was unable to launch the Pieces Windows Desktop Version.\n* Exact cause of the issue was unclear.\n\n**Solutions Proposed/Implemented:**\n\n* @mark-at-pieces requested additional information and suggested file upload for diagnosis.\n* He also offered a call to troubleshoot the issue directly.\n* A potential link to a previously resolved issue was mentioned.\n\n**Current Status/Outcome:**\n\n* The conversation is ongoing and further investigation is needed to identify and resolve the specific problem.\n\n**Important Note:**\n\n* This summary only covers the initial conversation. Further updates may be available in the ongoing issue thread.",
+          "activity_level": 6.94
+        },
+        {
+          "id": 617,
+          "title": "i got this error when opening localhost",
+          "text": "i got this error when opening localhost\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nlatest\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n![Image](https://github.com/user-attachments/assets/9a5eb05e-1c2f-4e2f-aa3a-205d8791de81)\nso\nwhen I was opening the localhost for testing I got this problem\ni already search for a solution but i cant fix that\n## GitHub Issue Conversation Summary\n\n**Key Points Raised:**\n\n* User (@WhyQwerty23811) reported an issue with accessing PiecesOS or the desktop.\n* The issue was automatically triaged and routed to the Pieces team.\n\n**Problems Identified:**\n\n* The user was unable to access PiecesOS or the desktop.\n\n**Solutions Proposed/Implemented:**\n\n* The Pieces support bot provided resources for the user to explore while waiting for a follow-up.\n* mark-at-pieces clarified that Pieces is hosted over 39300 and not on 1000 and 3000.\n\n**Current Status/Outcome:**\n\n* The user has not responded with further information. It is unclear if the issue has been resolved.\n\n**Additional Notes:**\n\n* The conversation took place on February 6, 2025.\n* The user did not provide any specific details about the issue they were experiencing.",
+          "activity_level": 3.21
+        }
+      ]
+    },
+    {
+      "title": "Visual Studio Extension: Unexpected Hotkey Behavior",
+      "description": "Users experience unexpected behavior with Home/End keys in the Pieces Visual Studio Extension. Instead of navigating the text cursor, these keys switch between docked tabs. This issue appears related to WebView2 hotkey functionality within WPF TabControl containers. A temporary workaround involves using the Pieces Copilot as a floating window instead of docking or tabbing it.",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 622,
+          "title": "Visual Studio Extension: Home and End keys should move the text cursor to the beginning and end of the input text box",
+          "text": "Visual Studio Extension: Home and End keys should move the text cursor to the beginning and end of the input text box\n\n### Discussed in https://github.com/pieces-app/support/discussions/476\n\n<div type='discussions-op-text'>\n\n<sup>Originally posted by **icnocop** November 25, 2024</sup>\nHi.\r\n\r\nThank you for \"Pieces for Developers\".\r\n\r\nWhen using the Visual Studio extension, the input text box in the `Pieces Copilot` tab does not respond to the `Home` and `End` keys as expected.\r\n\r\nI expected the `Home` and `End` keys to move the text cursor to the beginning and end of the input text box, respectively.\r\n\r\nInstead, the `Home` and `End` keys switch to first and last tabs, respectively.\r\nFor example, pressing the `Home` key switches to the `Solution Explorer` tab, which is also docked on the right side of the IDE.\r\nPressing the `End` key switches to the `Notifications` tab, which is also docked on the right side of the IDE.\r\n\r\nIf I had typed some text in the input text box, I expected to be able to jump to the beginning and end of the input text box, using the `Home` and `End` keys respectfully.\r\n\r\n![image](https://github.com/user-attachments/assets/6bd4b361-6f38-4a4a-9dfb-5de887074a82)\r\n\r\n\r\nThank you.\r\n\r\nPieces for Visual Studio 3.0.1.0\r\nVisual Studio 2022 17.12.0</div>\n## GitHub Conversation Summary\n\n**Issue:** WebView2 hotkeys not working as expected when docked/tabbed within a WPF TabControl.\n\n**Key Points:**\n\n* User @mack-at-pieces reported the issue.\n* Pieces support bot routed the issue to the appropriate team member.\n* @robert-at-pieces is investigating and gathering notes.\n* The issue may be related to WebView2 hotkeys not working properly inside WPF TabControl containers.\n* Using Copilot as a floating window instead of docked/tabbed resolves the issue.\n* Similar issue reported on MicrosoftEdge/WebView2Feedback repository.\n\n**Problems Identified:**\n\n* WebView2 hotkeys not functioning as expected when docked/tabbed within a WPF TabControl. \n\n**Solutions Proposed/Implemented:**\n\n* Using Copilot as a floating window instead of docked/tabbed.\n\n**Current Status/Outcome:**\n\n* @robert-at-pieces is investigating the issue. \n* No permanent solution has been implemented yet.\n* A workaround using Copilot as a floating window is available. \n* The issue may be related to a known problem with WebView2 hotkeys in WPF TabControl containers.",
+          "activity_level": 5.68
+        },
+        {
+          "id": 606,
+          "title": "LTM cannot see code inside a sandbox in the browser",
+          "text": "LTM cannot see code inside a sandbox in the browser\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.0.4\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nCopilot's LTM is unable to see the content of a sandbox (eg. [Svelte Tutorial](https://svelte.dev/tutorial/kit/handlefetch)).\n\n<img width=\"1920\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/919b4920-6b96-4566-b77c-180e0825d6b9\" />\n## Summary of GitHub Issue Conversation\n\n**Key Points Raised:**\n\n* User @dotnetemmanuel reported an issue with the Copilot model not working on their Linux system.\n* The issue was automatically triaged by the Pieces support bot and routed to the appropriate team member.\n* The user was provided with links to relevant resources, including similar issues and documentation.\n\n**Problems Identified:**\n\n* The Copilot model was not working on the user's system.\n\n**Solutions Proposed/Implemented:**\n\n* The Pieces team suggested the user try a new stability release (v11.1.0) of PiecesOS.\n\n**Current Status/Outcome:**\n\n* The user has not yet confirmed whether the issue has been resolved with the new software update.\n\n**Next Steps:**\n\n* The user will try the new PiecesOS update and report back to the support team.\n\n**Additional Notes:**\n\n* The conversation is ongoing and may be updated with further information.",
+          "activity_level": 4.05
+        },
+        {
+          "id": 589,
+          "title": "Conversation titles save too eagerly while editing",
+          "text": "Conversation titles save too eagerly while editing\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n11.0.4\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWhen I click on the title of Conversation in the Desktop app, I can edit it as expected but it will update save the input before I'm done editing.\n## GitHub Issue Conversation Summary\n\n**Key Points Raised:**\n\n* @seantiz reported an issue with \"odd behavior\" in the Pieces app.\n* @mack-at-pieces acknowledged the issue and confirmed experiencing it themselves.\n* The issue was identified as a bug and prioritized for fixing.\n\n**Problems Identified:**\n\n* Specific details of the bug are not mentioned, but the user describes it as \"odd behavior.\"\n* The bug affects both the copilot and desktop apps.\n\n**Solutions Proposed/Implemented:**\n\n* A patch was released for the copilot and desktop app (v3.3.5 and 3.3.6) to fix the bug.\n\n**Current Status/Outcome:**\n\n* The user is encouraged to update and try the latest versions of the app to see if the bug is resolved.\n* The outcome of the update or any further resolution remains unclear as the user hasn't provided follow-up information.\n\n**Additional Notes:**\n\n* The initial comment from the Pieces Support Bot provides helpful links to resources.\n* The second comment from @mack-at-pieces offers reassurance that the issue is being addressed.",
+          "activity_level": 2.63
         }
       ]
     }
   ],
   "recommendations": [
-    "Investigate the recurring issue of Pieces OS failing to launch or download models, as reported in tickets #608 and #620.",
-    "Provide users with clear and consistent guidance on troubleshooting steps for Pieces OS and Model Download Failures, including potential workarounds while a permanent solution is being developed.",
-    "Consider prioritizing bug fixes and software updates related to Pieces OS and model downloads to address the root cause of these common issues.",
-    "Monitor the effectiveness of implemented solutions and update support documentation and communication channels accordingly to reflect the latest findings and resolutions."
+    "**Prioritize resolution of Pieces OS launch failures:** The most frequent and active tickets relate to Pieces OS failing to launch, particularly on Apple Silicon Macs and Windows. Focus on identifying the root causes and implementing fixes to improve user experience.",
+    "**Address Pieces App freezing issues:** Investigate and address the reports of the Pieces app freezing on Linux and Windows, specifically focusing on database errors and boot-up failures. This will improve the app's stability and usability.",
+    "**Improve Visual Studio Extension compatibility:** Investigate the unexpected hotkey behavior in the Visual Studio Extension and find a solution that ensures consistent functionality across different IDE setups. This will enhance the extension's usability for developers.",
+    "**Provide clear guidance on Apple Silicon vs. Intel builds:**  Given the recurring issue of users installing the incorrect build for their Mac architecture, prominently highlight the difference between Apple Silicon and Intel builds during the installation process. Consider adding in-app checks or prompts to prevent accidental mismatches.",
+    "**Enhance communication and documentation:** Proactively communicate known issues and workarounds to users through release notes, FAQs, and in-app notifications. Ensure that documentation clearly outlines troubleshooting steps for common problems, including installation and launch issues.",
+    "**Gather more detailed diagnostics:** Encourage users to provide detailed logs and system information when reporting issues to aid in faster diagnosis and resolution. This can be facilitated through in-app bug reporting tools or clear instructions on how to access and share relevant logs.",
+    "**Consider automated triage and routing:** Implement a more robust system for automatically triaging incoming tickets and routing them to the appropriate support team members based on keywords, categories, and issue descriptions. This can help streamline the support process and reduce response times."
   ],
   "message": "Daily support report generated successfully."
 }
