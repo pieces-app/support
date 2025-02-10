@@ -1,0 +1,75 @@
+{
+  "success": true,
+  "date_range": {
+    "start": "2025-02-07T00:00:00+00:00",
+    "end": "2025-02-07T21:05:53.082571+00:00"
+  },
+  "summary": {
+    "total_tickets": 1,
+    "resolved_tickets": 0,
+    "open_tickets": 1
+  },
+  "ticket_breakdown": [
+    {
+      "category": "bug",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:desktop application",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "os:macos",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:pieces os",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:triaged",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    }
+  ],
+  "most_active_tickets": [
+    {
+      "number": 613,
+      "title": "PiecesOS takes a while to boot-up(cannot run): (Unable to make it past ensure core dependency in the Desktop application)",
+      "activity_level": 18.95
+    }
+  ],
+  "common_issues": [
+    {
+      "title": "PiecesOS Startup Failure: Stuck on Core Dependencies",
+      "description": "Users are reporting that the PiecesOS desktop application fails to start after updating. The app gets stuck on the \"ensure core dependency\" step, preventing users from accessing the platform. This issue appears to affect both macOS and Windows users. Reinstalling the latest version of PiecesOS is the recommended solution. Providing system information and logs can help in diagnosing the issue further.",
+      "frequency": 1,
+      "related_issues": [
+        {
+          "id": 613,
+          "title": "PiecesOS takes a while to boot-up(cannot run): (Unable to make it past ensure core dependency in the Desktop application)",
+          "text": "PiecesOS takes a while to boot-up(cannot run): (Unable to make it past ensure core dependency in the Desktop application)\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n3.3.5\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI got a popup that there was a new version of Pieces OS and that I needed to click and restart to update. But now the desktop app won't start anymore, being stuck on the core dependencies.\n\nI can click on the link, but nothing changes when I do that.\n\n![Image](https://github.com/user-attachments/assets/716af38b-6a71-4162-80f8-b9e9e44f7059)\n## Summary of GitHub Issue #613: \"PiecesOS stuck on dependencies scenario\"\n\n**Key Points:**\n\n* The issue involves PiecesOS getting stuck on the \"dependencies scenario\" tab during startup.\n* This issue affects users on both Windows and macOS.\n* Some users report seeing the PiecesOS icon in the top bar for a brief period before it disappears.\n* The issue appears to be related to a major migration of data from the previous stack to the new stack in PiecesOS version 11.1.0.\n\n**Problems Identified:**\n\n* The issue prevents users from accessing PiecesOS and using its features.\n* The cause of the issue is not entirely clear, with different users experiencing the problem under different circumstances.\n* The issue seems to be more prevalent on older hardware.\n\n**Solutions Proposed/Implemented:**\n\n* The PiecesOS team has released a new version (11.1.1) that claims to resolve the issue.\n* Users are advised to uninstall the previous version and reinstall version 11.1.1.\n* If the issue persists with version 11.1.1, users can follow up in the same thread and provide additional information.\n\n**Current Status/Outcome:**\n\n* The issue appears to be resolved for some users who have updated to version 11.1.1.\n* Other users are still experiencing the issue and are providing additional information to the PiecesOS team.\n\n**Additional Notes:**\n\n* It is important to distinguish between the issues reported by Shamas Habib and rogierlegit, as they are experiencing the problem under different operating systems.\n* The issue with Atlas OS is likely unrelated to the problem with PiecesOS.\n* Users are encouraged to provide as much information as possible, including logs and screenshots, to help the PiecesOS team diagnose the issue.",
+          "activity_level": 18.95
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    "**Prioritize the 'PiecesOS Startup Failure' issue:** This issue is causing significant user friction and should be addressed with high priority. Investigate the root cause of the startup failure and provide a permanent fix.",
+    "**Improve error messaging during startup:** The \"ensure core dependency\" message is not informative enough. Provide users with more specific error messages to help them troubleshoot the issue themselves.",
+    "**Create a troubleshooting guide for startup issues:** Develop a comprehensive guide that users can refer to when they encounter startup problems. Include common causes, solutions, and steps to gather relevant logs for support.",
+    "**Gather more system information:** Encourage users to provide system information and logs when reporting startup issues. This will help in diagnosing the problem more effectively.",
+    "**Consider automated checks for core dependencies:** Implement checks during installation or updates to ensure all core dependencies are met. This can help prevent the startup failure from occurring in the first place.",
+    "**Monitor the effectiveness of the latest PiecesOS update:** Track if the reported issue persists after users update to the latest version. If the issue is not resolved, further investigation and a new fix might be necessary."
+  ],
+  "message": "Daily support report generated successfully."
+}
