@@ -5,6 +5,15 @@ body:
     attributes:
       value: |
         Thanks for taking the time to fill out this bug report!
+  - type: checkboxes
+    id: duplicate_issues
+    attributes:
+      label: Checked for Existing Issues?
+      description: Have you checked our existing issues for an issue related to this before creating a new one?
+      options:
+        - label: Yes, I have checked existing issues and cannot find one related to this.
+    validations:
+      required: true
   - type: dropdown
     id: software
     attributes:
@@ -50,15 +59,6 @@ body:
     attributes:
       label: Your Pieces OS Version
       description: Add the version of Pieces OS installed in your system
-    validations:
-      required: true
-  - type: checkboxes
-    id: duplicate_issues
-    attributes:
-      label: Checked for Existing Issues?
-      description: Have you checked our existing issues for an issue related to this before creating a new one?
-      options:
-        - label: Yes, I have checked existing issues and cannot find one related to this.
     validations:
       required: true
   - type: checkboxes
