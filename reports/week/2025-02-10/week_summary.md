@@ -1,74 +1,71 @@
 # Support Ticket Report
-- Generated: 2025-02-14 05:09:37
+- Generated: 2025-02-14 13:12:24
 - Period: 2025-02-10 to 2025-02-14
 
 ## Summary
-- **Total Tickets:** 17
+- **Total Tickets:** 18
 - **Resolved:** 5
-- **Open:** 12
+- **Open:** 13
 
 ## 5 Most Active Tickets
 | Issue # | Title | Activity Level |
 |---------|-------|----------------|
-| [#613](https://github.com/pieces-app/support/issues/613) | PiecesOS takes a while to boot-up(cannot run): (Unable to make it past ensure core dependency in the Desktop application) | 14.16 |
+| [#613](https://github.com/pieces-app/support/issues/613) | PiecesOS takes a while to boot-up(cannot run): (Unable to make it past ensure core dependency in the Desktop application) | 13.67 |
 | [#625](https://github.com/pieces-app/support/issues/625) | PiecesOS crash immediately after launch | 9.75 |
-| [#624](https://github.com/pieces-app/support/issues/624) | PiecesOS was unable to launch. | 8.18 |
-| [#620](https://github.com/pieces-app/support/issues/620) | Pieces os doesn't launch at all for past week. Can't use pieces at all | 7.74 |
-| [#626](https://github.com/pieces-app/support/issues/626) | [Linux Mint 22.1] Pieces OS high CPU usage | 6.94 |
+| [#624](https://github.com/pieces-app/support/issues/624) | PiecesOS was unable to launch. | 7.93 |
+| [#620](https://github.com/pieces-app/support/issues/620) | Pieces os doesn't launch at all for past week. Can't use pieces at all | 7.12 |
+| [#626](https://github.com/pieces-app/support/issues/626) | [Linux Mint 22.1] Pieces OS high CPU usage | 5.50 |
 
 ## Common Issues
-### 1. PiecesOS Launch Failure Across Platforms
-Users report PiecesOS failing to launch on macOS and Windows after recent updates. Issues include dependency errors, long boot times, and stricter hardware requirements. Solutions involve using specific OS builds (Apple Silicon for M1 Macs), waiting for new releases addressing hardware compatibility, and providing logs to the support team for diagnosis.
+### 1. PiecesOS Fails to Launch After Update
+Users report PiecesOS failing to launch, often getting stuck on "Ensure Core Dependency" after an update. This issue appears primarily on Windows and might be related to hardware requirements. Proposed solutions include reinstalling, trying the AppInstaller build, or waiting for the patch (v11.1.1 aimed to address this but some users still face issues).
 
 **Related Issues:**
-- [#621](https://github.com/pieces-app/support/issues/621): Cannot launch pieces-for-developers after new installation on MacOS Sequoia 15.2 M1 chip
 - [#613](https://github.com/pieces-app/support/issues/613): PiecesOS takes a while to boot-up(cannot run): (Unable to make it past ensure core dependency in the Desktop application)
 - [#624](https://github.com/pieces-app/support/issues/624): PiecesOS was unable to launch.
+- [#627](https://github.com/pieces-app/support/issues/627): PiecesOS was unable to launch.
 
-### 2. PiecesOS Startup Failure and Model Download Issues
-Users report PiecesOS failing to launch, getting stuck during startup, or being unable to download models. This seems to affect various OS versions and might be related to hardware requirements, data migration issues, or certificate errors. Proposed solutions include updating to the latest version, providing logs for diagnosis, and waiting for a new release with bug fixes.
-
-**Related Issues:**
-- [#608](https://github.com/pieces-app/support/issues/608): Models Download Fail
-- [#624](https://github.com/pieces-app/support/issues/624): PiecesOS was unable to launch.
-- [#613](https://github.com/pieces-app/support/issues/613): PiecesOS takes a while to boot-up(cannot run): (Unable to make it past ensure core dependency in the Desktop application)
-
-### 3. PiecesOS launch crash due to AVX2 incompatibility
-Users are reporting PiecesOS crashing immediately after launch on macOS and Windows, particularly after upgrading to version 11.1.1. The issue stems from an AVX2 incompatibility in the new vector library. A fix was identified and a new release was planned to address this problem. Users experiencing this issue are advised to update to the latest version.
+### 2. Pieces OS experiencing performance issues and crashes
+Users are reporting high CPU usage, unresponsiveness, and crashes with the Pieces OS desktop app on Linux and macOS.  The issues seem to stem from LTM-1 algorithm, Flutter bugs on certain Linux Mint versions, and problems with the vector library on macOS. Proposed solutions include disabling LTM-1, disabling the virtual keyboard in accessibility settings on Linux Mint, and waiting for an upcoming patch from the Pieces team.
 
 **Related Issues:**
-- [#625](https://github.com/pieces-app/support/issues/625): PiecesOS crash immediately after launch
-- [#620](https://github.com/pieces-app/support/issues/620): Pieces os doesn't launch at all for past week. Can't use pieces at all
-- [#624](https://github.com/pieces-app/support/issues/624): PiecesOS was unable to launch.
-
-### 4. Pieces Desktop App Performance and Stability Issues
-Users report various issues with the Pieces desktop app, including slow startup times, freezing, and unexpected behavior. These problems are often related to specific operating systems, software versions, or conflicts with other applications. Solutions include updating to the latest version, disabling certain features, or waiting for a patch from the Pieces team.
-
-**Related Issues:**
-- [#589](https://github.com/pieces-app/support/issues/589): Conversation titles save too eagerly while editing
-- [#613](https://github.com/pieces-app/support/issues/613): PiecesOS takes a while to boot-up(cannot run): (Unable to make it past ensure core dependency in the Desktop application)
+- [#626](https://github.com/pieces-app/support/issues/626): [Linux Mint 22.1] Pieces OS high CPU usage
 - [#618](https://github.com/pieces-app/support/issues/618): [Linux Mint] Pieces app goes unresponsive on opening and every 5sec. Can't use it at all in any way
+- [#625](https://github.com/pieces-app/support/issues/625): PiecesOS crash immediately after launch
 
-### 5. PiecesOS Startup Failure on MacOS
-Users are experiencing issues with PiecesOS failing to launch or getting stuck during startup on MacOS, especially after updating to recent versions. This is often linked to installing the incorrect build (Intel vs. Apple Silicon) or issues with core dependencies. Solutions include reinstalling the correct version from the official link, ensuring a stable internet connection, and checking for conflicting applications.
+### 3. PiecesOS failing to launch after update
+Users report PiecesOS failing to launch after a recent update, specifically version 11.1.1. The issue seems to stem from stricter hardware requirements, particularly the need for AVX2 support. A patch is expected to be released to address this, with temporary solutions involving providing system specs to support or waiting for the upcoming fix.
 
 **Related Issues:**
-- [#615](https://github.com/pieces-app/support/issues/615): Unable to Boot PiecesOS on Macos(Arm architecture) After updating to 11.1.0
+- [#627](https://github.com/pieces-app/support/issues/627): PiecesOS was unable to launch.
+- [#624](https://github.com/pieces-app/support/issues/624): PiecesOS was unable to launch.
+- [#620](https://github.com/pieces-app/support/issues/620): Pieces os doesn't launch at all for past week. Can't use pieces at all
+
+### 4. Pieces OS launch failure on Windows and Ubuntu
+Users report Pieces OS failing to launch on Windows and Ubuntu after updating to version 11.1.1. The issue seems to stem from stricter hardware requirements, particularly AVX2 support. A patch is expected to be released on February 14th, 2025. Users facing this issue are encouraged to contact Pieces support and provide their system logs.
+
+**Related Issues:**
+- [#619](https://github.com/pieces-app/support/issues/619): Facing error on Ubuntu while opening Pieces "DatabaseException"
+- [#624](https://github.com/pieces-app/support/issues/624): PiecesOS was unable to launch.
+- [#620](https://github.com/pieces-app/support/issues/620): Pieces os doesn't launch at all for past week. Can't use pieces at all
+
+### 5. PiecesOS Failing to Launch After Update
+Users report PiecesOS failing to launch, particularly after updating to version 11.1.1. This issue appears across macOS and Windows. Proposed solutions include ensuring compatibility with M1 chips on macOS and waiting for a patch addressing stricter hardware requirements on Windows.
+
+**Related Issues:**
 - [#621](https://github.com/pieces-app/support/issues/621): Cannot launch pieces-for-developers after new installation on MacOS Sequoia 15.2 M1 chip
-- [#613](https://github.com/pieces-app/support/issues/613): PiecesOS takes a while to boot-up(cannot run): (Unable to make it past ensure core dependency in the Desktop application)
+- [#624](https://github.com/pieces-app/support/issues/624): PiecesOS was unable to launch.
+- [#627](https://github.com/pieces-app/support/issues/627): PiecesOS was unable to launch.
 
 
 ## Recommendations
-- **Prioritize resolving launch failures:** Focus on addressing the common issue of PiecesOS launch failures across platforms, particularly related to AVX2 incompatibility, incorrect builds for MacOS architectures, and core dependency issues.
-- **Improve communication about hardware requirements:** Clearly communicate the minimum hardware requirements for running PiecesOS, especially with the release of version 11.1.1, to prevent users from encountering launch issues.
-- **Investigate and address model download failures:** Investigate the root cause of model download failures and provide solutions, as this issue impacts the user experience, particularly for those utilizing Ollama.
-- **Monitor and improve startup performance:** Continue to monitor and optimize the startup time of PiecesOS, particularly on MacOS, as slow startup times can be frustrating for users.
-- **Gather more detailed logs and diagnostics:** Implement more robust logging and diagnostic tools to help identify the root cause of issues like freezing and unresponsiveness on certain operating systems and configurations.
-- **Consider a dedicated support channel for Linux users:** Given the specific issues encountered by Linux users, particularly on Linux Mint, consider creating a dedicated support channel or knowledge base to address their unique needs.
-- **Proactively communicate known issues and workarounds:** Maintain a publicly accessible list of known issues and workarounds, such as the virtual keyboard issue on Linux Mint, to keep users informed and minimize frustration.
-- **Review and update documentation:** Ensure that all documentation, including installation guides and troubleshooting steps, is up-to-date and reflects the latest software versions and known issues.
-- **Gather user feedback on specific features:** Encourage users to provide feedback on specific features, such as the conversation title saving behavior, to identify areas for improvement in future releases.
-- **Continue monitoring and addressing top active tickets:** Regularly review and prioritize the most active support tickets to ensure that critical issues are addressed promptly and effectively.
+- **Prioritize resolving launch failures:** The most frequent and active tickets relate to PiecesOS failing to launch after the 11.1.1 update, particularly on Windows due to stricter hardware requirements. Focus on resolving this urgently.
+- **Investigate and address performance issues:** Several users report high CPU usage, unresponsiveness, and crashes, especially on Linux and macOS. Allocate resources to identify the root causes and implement fixes.
+- **Improve communication about hardware requirements:** The launch failures highlight the need for clearer communication about updated hardware requirements, particularly AVX2 support. Update system requirements documentation and announcements.
+- **Review and optimize LTM-1 algorithm:**  High resource consumption related to LTM-1 is a recurring issue. Investigate optimizing the algorithm or provide clearer guidance on disabling it.
+- **Monitor Flutter-related issues on Linux Mint:**  Address the freezing issue on specific Linux Mint versions stemming from Flutter bugs. Explore workarounds or prioritize a permanent fix in collaboration with the Flutter community.
+- **Ensure M1 chip compatibility on macOS:** Investigate and address issues related to PiecesOS launch failures on macOS devices with M1 chips.
+- **Consider a dedicated support channel for launch issues:** Given the high volume of launch-related tickets, create a dedicated support channel or knowledge base section to streamline troubleshooting.
 
 ## Daily Reports
 Here are the daily reports for this week:
@@ -81,3 +78,4 @@ Here are the daily reports for this week:
 - [report_210607](daily/2025-02-13/report_210607.md)
 - [report_131018](daily/2025-02-13/report_131018.md)
 - [report_050654](daily/2025-02-13/report_050654.md)
+- [report_130931](daily/2025-02-14/report_130931.md)
