@@ -1,6 +1,6 @@
 # Support Ticket Report
-- Generated: 2025-02-15 21:09:38
-- Period: 2025-02-10 to 2025-02-15
+- Generated: 2025-02-16 05:09:06
+- Period: 2025-02-10 to 2025-02-16
 
 ## Summary
 - **Total Tickets:** 20
@@ -11,60 +11,59 @@
 | Issue # | Title | Activity Level |
 |---------|-------|----------------|
 | [#613](https://github.com/pieces-app/support/issues/613) | PiecesOS takes a while to boot-up(cannot run): (Unable to make it past ensure core dependency in the Desktop application) | 14.73 |
-| [#625](https://github.com/pieces-app/support/issues/625) | PiecesOS crash immediately after launch | 14.21 |
+| [#625](https://github.com/pieces-app/support/issues/625) | PiecesOS crash immediately after launch | 12.77 |
 | [#620](https://github.com/pieces-app/support/issues/620) | Pieces os doesn't launch at all for past week. Can't use pieces at all | 8.50 |
 | [#624](https://github.com/pieces-app/support/issues/624) | PiecesOS was unable to launch. | 8.01 |
 | [#150](https://github.com/pieces-app/support/issues/150) | PiecesOS using too much RAM/spike in CPU | 5.78 |
 
 ## Common Issues
-### 1. PiecesOS launch failures due to CPU incompatibility
-Multiple users reported PiecesOS crashing or failing to launch after upgrading to version 11.1.1. The issue stemmed from a new dependency requiring AVX2 support, which is absent in older CPUs (pre-2016) and some ARM-based Macs. The Pieces team addressed the problem by releasing version 11.1.2 with a fix for the AVX2 dependency. Users confirmed that updating to the latest version resolved the launch issues.
+### 1. PiecesOS launch failure due to AVX2 incompatibility
+Multiple users reported PiecesOS failing to launch after updating to version 11.1.1. The issue stemmed from hardware incompatibility with the AVX2 instruction set. The Pieces team acknowledged the problem and released a fix in version 11.1.2, resolving the launch issue for affected users.
 
 **Related Issues:**
 - [#625](https://github.com/pieces-app/support/issues/625): PiecesOS crash immediately after launch
 - [#620](https://github.com/pieces-app/support/issues/620): Pieces os doesn't launch at all for past week. Can't use pieces at all
-- [#621](https://github.com/pieces-app/support/issues/621): Cannot launch pieces-for-developers after new installation on MacOS Sequoia 15.2 M1 chip
+- [#624](https://github.com/pieces-app/support/issues/624): PiecesOS was unable to launch.
 
-### 2. PiecesOS Fails to Launch After Update
-Users report PiecesOS failing to launch, often getting stuck on "core dependencies" after an update. This issue appears across macOS and Windows OS, particularly after updating to versions 11.1.1 or 3.3.5. Proposed solutions include updating to the latest version, reinstalling the app, or waiting for a hotfix from the Pieces team.
+### 2. PiecesOS boot-up failure due to core dependencies
+Users are experiencing issues with PiecesOS getting stuck during startup, particularly on the "dependencies scenario" tab. This problem appears to be related to recent updates and stricter hardware requirements. Solutions include upgrading to the latest version (11.1.2), reinstalling PiecesOS, and waiting for a patch to address hardware compatibility.
 
 **Related Issues:**
 - [#613](https://github.com/pieces-app/support/issues/613): PiecesOS takes a while to boot-up(cannot run): (Unable to make it past ensure core dependency in the Desktop application)
 - [#630](https://github.com/pieces-app/support/issues/630): core services
-- [#627](https://github.com/pieces-app/support/issues/627): PiecesOS was unable to launch.
+- [#624](https://github.com/pieces-app/support/issues/624): PiecesOS was unable to launch.
 
-### 3. PiecesOS Launch Failure Due to Hardware Incompatibility
-Multiple users reported PiecesOS failing to launch on Ubuntu and Windows, encountering a "DatabaseException" related to "CouchbaseLiteVectorSearch" extension. This was caused by stricter hardware requirements in version 11.1.1, particularly the lack of AVX2 support. The issue was resolved in version 11.1.2, released on February 13th, 2025. Users experiencing this problem are advised to update to the latest version.
+### 3. PiecesOS launch failures on macOS
+Users reported PiecesOS failing to launch on macOS after updating to version 11.1.1. The issue was attributed to hardware incompatibility, particularly on M1 chips and systems lacking AVX2 support. The Pieces team addressed the problem by releasing version 11.1.2, which includes fixes for these issues. Users experiencing launch problems are advised to upgrade to the latest version.
 
 **Related Issues:**
-- [#619](https://github.com/pieces-app/support/issues/619): Facing error on Ubuntu while opening Pieces "DatabaseException"
+- [#621](https://github.com/pieces-app/support/issues/621): Cannot launch pieces-for-developers after new installation on MacOS Sequoia 15.2 M1 chip
+- [#624](https://github.com/pieces-app/support/issues/624): PiecesOS was unable to launch.
+- [#625](https://github.com/pieces-app/support/issues/625): PiecesOS crash immediately after launch
+
+### 4. PiecesOS fails to launch after update
+Users report PiecesOS failing to launch after updating to version 11.1.1. This is due to stricter hardware requirements, specifically AVX2 support. The issue was acknowledged by the Pieces team and a hotfix was released in version 11.1.2. Users experiencing this issue are advised to update to the latest version.
+
+**Related Issues:**
+- [#627](https://github.com/pieces-app/support/issues/627): PiecesOS was unable to launch.
+- [#624](https://github.com/pieces-app/support/issues/624): PiecesOS was unable to launch.
 - [#620](https://github.com/pieces-app/support/issues/620): Pieces os doesn't launch at all for past week. Can't use pieces at all
-- [#624](https://github.com/pieces-app/support/issues/624): PiecesOS was unable to launch.
 
-### 4. PiecesOS High Resource Usage
-Users report high CPU and RAM usage, sometimes reaching 100%, especially with PiecesOS 11.1.1. This is potentially linked to the "Live Context" and Long Term Memory (LTM-1) features. Suggested workarounds include restarting PiecesOS, disabling LTM-1, and using "Optimize Memory." The PiecesOS team is actively working on optimizations and cloud processing to address these issues.
-
-**Related Issues:**
-- [#150](https://github.com/pieces-app/support/issues/150): PiecesOS using too much RAM/spike in CPU
-- [#626](https://github.com/pieces-app/support/issues/626): [Linux Mint 22.1] Pieces OS high CPU usage
-- [#624](https://github.com/pieces-app/support/issues/624): PiecesOS was unable to launch.
-
-### 5. PiecesOS Launch and Model Download Failures
-Users report PiecesOS failing to launch after update 11.1.1 due to stricter hardware requirements. A patch (11.1.2) is in progress. Separately, model downloads for Ollama are failing for some users.  Providing support logs is recommended for both issues to help diagnose and resolve them.
+### 5. PiecesOS Crashing on macOS after Update
+Users reported PiecesOS crashing on macOS after updating to version 11.1.0 or 11.1.1. The issue was primarily observed on machines with Apple Silicon (M1, M2, etc.) and Intel CPUs lacking AVX2 support. The solution involved reinstalling from the correct download link for Apple Silicon or upgrading to version 11.1.2, which addressed the AVX2 compatibility issue.
 
 **Related Issues:**
-- [#608](https://github.com/pieces-app/support/issues/608): Models Download Fail
-- [#624](https://github.com/pieces-app/support/issues/624): PiecesOS was unable to launch.
-- [#627](https://github.com/pieces-app/support/issues/627): PiecesOS was unable to launch.
+- [#615](https://github.com/pieces-app/support/issues/615): Unable to Boot PiecesOS on Macos(Arm architecture) After updating to 11.1.0
+- [#625](https://github.com/pieces-app/support/issues/625): PiecesOS crash immediately after launch
+- [#630](https://github.com/pieces-app/support/issues/630): core services
 
 
 ## Recommendations
-- **Prioritize resolving PiecesOS launch failures:** The most frequent and active support tickets revolve around PiecesOS failing to launch after the 11.1.1 update, particularly due to hardware incompatibility and core dependency issues. Focus on resolving these issues swiftly to reduce ticket volume.
-- **Investigate and address high resource usage:**  Tickets indicate ongoing concerns about PiecesOS consuming high CPU and RAM, potentially linked to Live Context and LTM-1. Prioritize optimizing these features and explore cloud processing to alleviate the load on user devices.
-- **Improve model download reliability:**  Address the issue of failing model downloads for Ollama, as it hinders user experience. Investigate the root cause and provide clear solutions or workarounds.
-- **Proactively communicate known issues and solutions:**  Maintain a publicly accessible list of known issues, their status, and workarounds. This can reduce support requests and frustration by empowering users to self-serve.
-- **Gather detailed system information:**  When users report launch failures or performance issues, ensure the support process includes gathering detailed system information (OS, CPU, RAM, PiecesOS version) to expedite diagnosis and resolution.
-- **Consider hardware requirement checks:** Implement a system within PiecesOS that checks for minimum hardware requirements during installation or launch. This can prevent installations on incompatible systems and provide users with clear guidance.
+- **Prioritize resolving PiecesOS launch failures:** The most frequent and active support tickets revolve around PiecesOS failing to launch after the 11.1.1 update, particularly due to AVX2 incompatibility and issues on macOS. Focus on providing clear guidance for affected users, such as upgrading to 11.1.2 or reinstalling with the correct version for their architecture.
+- **Improve communication about hardware requirements:** The launch failures highlight the need for clearer communication about PiecesOS's hardware requirements. Update the documentation and installation instructions to prominently feature these requirements, potentially including a system check tool.
+- **Investigate and address PiecesOS boot-up issues:**  Users are experiencing issues with PiecesOS getting stuck during boot-up, specifically on the "dependencies scenario" tab. Investigate the root cause of this problem and provide a timely resolution.
+- **Address high resource usage:** Some users report high RAM and CPU usage by PiecesOS. Investigate these reports, optimize resource utilization, and provide guidance on configuration options that could alleviate these issues.
+- **Review and improve macOS compatibility:** A significant number of issues originate from macOS users, particularly those with M1 chips. Dedicate resources to thoroughly test and ensure compatibility with various macOS versions and architectures.
 
 ## Daily Reports
 Here are the daily reports for this week:
