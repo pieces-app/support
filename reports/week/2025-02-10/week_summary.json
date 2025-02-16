@@ -2,19 +2,25 @@
   "success": true,
   "date_range": {
     "start": "2025-02-10T00:00:00+00:00",
-    "end": "2025-02-16T05:06:18.933239+00:00"
+    "end": "2025-02-16T13:09:01.538255+00:00"
   },
   "summary": {
-    "total_tickets": 20,
+    "total_tickets": 21,
     "resolved_tickets": 6,
-    "open_tickets": 14
+    "open_tickets": 15
   },
   "ticket_breakdown": [
     {
       "category": "bug",
-      "received": 17,
+      "received": 18,
       "resolved": 6,
-      "pending": 11
+      "pending": 12
+    },
+    {
+      "category": "app:desktop application",
+      "received": 16,
+      "resolved": 6,
+      "pending": 10
     },
     {
       "category": "os:macos",
@@ -35,22 +41,22 @@
       "pending": 11
     },
     {
+      "category": "os:windows",
+      "received": 10,
+      "resolved": 2,
+      "pending": 8
+    },
+    {
+      "category": "status:new",
+      "received": 2,
+      "resolved": 1,
+      "pending": 1
+    },
+    {
       "category": "ongoing",
       "received": 1,
       "resolved": 0,
       "pending": 1
-    },
-    {
-      "category": "os:windows",
-      "received": 9,
-      "resolved": 2,
-      "pending": 7
-    },
-    {
-      "category": "app:desktop application",
-      "received": 15,
-      "resolved": 6,
-      "pending": 9
     },
     {
       "category": "status:waiting_on_user_responses",
@@ -63,12 +69,6 @@
       "received": 4,
       "resolved": 2,
       "pending": 2
-    },
-    {
-      "category": "status:new",
-      "received": 1,
-      "resolved": 1,
-      "pending": 0
     },
     {
       "category": "app:visual studio",
@@ -117,7 +117,7 @@
     {
       "number": 613,
       "title": "PiecesOS takes a while to boot-up(cannot run): (Unable to make it past ensure core dependency in the Desktop application)",
-      "activity_level": 14.73
+      "activity_level": 14.84
     },
     {
       "number": 625,
@@ -127,12 +127,12 @@
     {
       "number": 620,
       "title": "Pieces os doesn't launch at all for past week. Can't use pieces at all",
-      "activity_level": 8.5
+      "activity_level": 8.04
     },
     {
       "number": 624,
       "title": "PiecesOS was unable to launch.",
-      "activity_level": 8.01
+      "activity_level": 7.5
     },
     {
       "number": 150,
@@ -140,14 +140,14 @@
       "activity_level": 5.78
     },
     {
-      "number": 619,
-      "title": "Facing error on Ubuntu while opening Pieces \"DatabaseException\"",
-      "activity_level": 4.73
-    },
-    {
       "number": 621,
       "title": "Cannot launch pieces-for-developers after new installation on MacOS Sequoia 15.2 M1 chip",
       "activity_level": 4.67
+    },
+    {
+      "number": 619,
+      "title": "Facing error on Ubuntu while opening Pieces \"DatabaseException\"",
+      "activity_level": 4.52
     },
     {
       "number": 630,
@@ -155,9 +155,9 @@
       "activity_level": 4.5
     },
     {
-      "number": 627,
-      "title": "PiecesOS was unable to launch.",
-      "activity_level": 4.5
+      "number": 631,
+      "title": "Pieces for Developers Not Working \u2013 Cloud Service & Local LLM Issues",
+      "activity_level": 4.42
     },
     {
       "number": 618,
@@ -165,19 +165,24 @@
       "activity_level": 4.21
     },
     {
-      "number": 626,
-      "title": "[Linux Mint 22.1] Pieces OS high CPU usage",
-      "activity_level": 3.88
-    },
-    {
       "number": 608,
       "title": "Models Download Fail",
-      "activity_level": 3.67
+      "activity_level": 4.04
+    },
+    {
+      "number": 627,
+      "title": "PiecesOS was unable to launch.",
+      "activity_level": 3.88
     },
     {
       "number": 606,
       "title": "LTM cannot see code inside a sandbox in the browser",
-      "activity_level": 3.6
+      "activity_level": 3.53
+    },
+    {
+      "number": 626,
+      "title": "[Linux Mint 22.1] Pieces OS high CPU usage",
+      "activity_level": 3.48
     },
     {
       "number": 622,
@@ -202,7 +207,7 @@
     {
       "number": 607,
       "title": "Feat: Localization(french) for the Desktop Application",
-      "activity_level": 1.68
+      "activity_level": 1.65
     },
     {
       "number": 615,
@@ -217,137 +222,136 @@
   ],
   "common_issues": [
     {
-      "title": "PiecesOS launch failure due to AVX2 incompatibility",
-      "description": "Multiple users reported PiecesOS failing to launch after updating to version 11.1.1. The issue stemmed from hardware incompatibility with the AVX2 instruction set. The Pieces team acknowledged the problem and released a fix in version 11.1.2, resolving the launch issue for affected users.",
+      "title": "PiecesOS launch crash due to AVX2 requirement",
+      "description": "PiecesOS version 11.1.1 introduced a new vector library requiring AVX2 support, causing launch crashes for users with older CPUs lacking this feature. The issue affected Windows and macOS users. The Pieces team acknowledged the problem and released a patch in version 11.1.2 to address the dependency, resolving the issue for affected users.",
       "frequency": 3,
       "related_issues": [
         {
           "id": 625,
           "title": "PiecesOS crash immediately after launch",
-          "text": "PiecesOS crash immediately after launch\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n11.1.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nAfter upgrade PiecesOS to version 11.1..1 it crashes every time immediately after launch. Previous version worked well. Attached is the crash report log.\n\nEnvironment: \n\n- OS MacOS 15.2\n- CPU Intel \n\n[trace.log](https://github.com/user-attachments/files/18777512/trace.log)\n## Summary of GitHub Issue Conversation\n\n**Key Points:**\n\n* User reported being unable to launch PiecesOS on macOS (Arm architecture) after updating to 11.1.0.\n* Related issues were identified by the support bot, including other launch failures on macOS and M1 chips.\n* The Pieces team acknowledged the issue and identified the root cause as a lack of AVX2 support on the user's CPU.\n* A fix was implemented and released in version 11.1.2.\n\n**Problems Identified:**\n\n* PiecesOS wasn't launching on certain macOS systems with newer CPUs.\n* The issue was related to the lack of AVX2 support on those CPUs.\n\n**Solutions Proposed/Implemented:**\n\n* The Pieces team released a new version (11.1.2) that addresses the AVX2 issue.\n\n**Current Status/Outcome:**\n\n* The issue has been resolved with the release of version 11.1.2.\n* The user confirmed that the fix works for them.\n\n**Additional Notes:**\n\n* This conversation highlights the importance of providing detailed information about your system when reporting issues.\n* It also demonstrates the Pieces team's commitment to resolving user issues promptly.",
+          "text": "PiecesOS crash immediately after launch\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n11.1.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nAfter upgrade PiecesOS to version 11.1..1 it crashes every time immediately after launch. Previous version worked well. Attached is the crash report log.\n\nEnvironment: \n\n- OS MacOS 15.2\n- CPU Intel \n\n[trace.log](https://github.com/user-attachments/files/18777512/trace.log)\n## Summary of GitHub Issue Conversation\n\n**Key points raised:**\n\n* User `gonzososa` reported an issue launching PiecesOS on their system.\n* The issue is related to the new vector library requiring AVX2 support, which is not available on older CPUs.\n* `gonzososa` provided information about their CPU (Intel Core i5-3210M).\n* Pieces team acknowledged the issue and mentioned they are working on a fix.\n\n**Problems identified:**\n\n* PiecesOS was unable to launch due to the new vector library requiring AVX2 support.\n* This impacted users with older CPUs that lacked AVX2 support.\n\n**Solutions proposed/implemented:**\n\n* The Pieces team developed a solution to address the AVX2 issue.\n* They released a new version (11.1.2) of the application with the fix.\n\n**Current status/outcome:**\n\n* The issue has been resolved with the release of version 11.1.2.\n* User `gonzososa` confirmed that the fix works for them.\n\n**Additional notes:**\n\n* This issue is related to another issue (#620) where users reported similar problems with the application.\n* The Pieces team actively engaged with the users and provided updates on the progress of the fix.",
           "activity_level": 12.77
         },
         {
           "id": 620,
           "title": "Pieces os doesn't launch at all for past week. Can't use pieces at all",
-          "text": "Pieces os doesn't launch at all for past week. Can't use pieces at all\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.1.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nFor the past week, anytime that I launch pieces I see this: \n\n![Image](https://github.com/user-attachments/assets/61f18fb6-8846-46d8-8747-5c415fd2e82d)\n\nPieces OS just doesn't open, no matter what.\n\nI tried to reinstall everything, but also no progress.\n\nHow to fix it? (Also to mention, Pieces desktop app is in Early Access program, but I don't know if this information is useful)\n## Summary of GitHub Issue Conversation\n\n**Key points raised:**\n\n* GetReal444 reported an issue booting up the Pieces app.\n* Mark-at-Pieces requested additional information for diagnosis and offered support via call.\n* GetReal444 provided logs indicating an error message related to AVX2 requirement.\n* Mark-at-Pieces acknowledged the issue and explained it affects multiple users.\n\n**Problems identified:**\n\n* The Pieces app was not booting up for some users due to an AVX2 hardware requirement.\n\n**Solutions proposed/implemented:**\n\n* The Pieces team is actively working on a patch to resolve the issue.\n* A workaround is to update to the latest version (11.1.2) of PiecesOS.\n\n**Current status/outcome:**\n\n* The issue has been resolved with the release of PiecesOS version 11.1.2.\n* GetReal444 confirmed that the app is working after the update.\n\n**Additional notes:**\n\n* The issue is related to a failing dependency of the AVX2 vector library on certain platforms.\n* The Pieces team is actively working on a permanent solution.",
-          "activity_level": 8.5
+          "text": "Pieces os doesn't launch at all for past week. Can't use pieces at all\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.1.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nFor the past week, anytime that I launch pieces I see this: \n\n![Image](https://github.com/user-attachments/assets/61f18fb6-8846-46d8-8747-5c415fd2e82d)\n\nPieces OS just doesn't open, no matter what.\n\nI tried to reinstall everything, but also no progress.\n\nHow to fix it? (Also to mention, Pieces desktop app is in Early Access program, but I don't know if this information is useful)\n## Summary of GitHub Issue Conversation: \n\n**Key points raised:**\n\n- User (@GetReal444) reported an issue with booting up PiecesOS.\n- The error message seems to be related to the \"CouchbaseLiteVectorSearch\" extension and AVX2 support.\n- User provided logs and a screenshot of their tech specs.\n\n**Problems identified:**\n\n- The CouchbaseLiteVectorSearch extension requires AVX2 which is not supported on some processors.\n- This issue affects multiple users.\n\n**Solutions proposed/implemented:**\n\n- The Pieces team is actively working on a solution.\n- They released a patch in version 11.1.2 of PiecesOS to address the dependency issue.\n\n**Current status/outcome:**\n\n- The user confirmed that the latest version (11.1.2) resolved the issue for them.\n\n**Additional notes:**\n\n- The team is monitoring the situation and will provide updates as needed.\n- Users experiencing similar issues should update to the latest version of PiecesOS.",
+          "activity_level": 8.04
         },
         {
           "id": 624,
           "title": "PiecesOS was unable to launch.",
-          "text": "PiecesOS was unable to launch.\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nlatest\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n![Image](https://github.com/user-attachments/assets/7a6a7957-5aa1-4d53-b492-cf4470aa5edc)\n## Summary of GitHub Issue Conversation\n\n**Key Points:**\n\n- User @DevWizard24 reported an issue with Pieces not launching.\n- User @GetReal444 confirmed the same issue and provided instructions for collecting logs.\n- Pieces support confirmed the issue and identified it as related to hardware requirements in version 11.1.1.\n- A fix was planned for release within 24-48 hours.\n- User @tsavo-at-pieces mentioned a related issue (#625).\n- A release to mitigate the issue was planned for the next day.\n- On February 14th, Pieces support requested an update from @DevWizard24 after updating to version 11.1.2.\n\n**Problems Identified:**\n\n- Pieces was not launching for some users.\n- The issue was related to stricter hardware requirements in version 11.1.1.\n\n**Solutions Proposed/Implemented:**\n\n- Collect logs from the user's computer.\n- Release a patch to fix the issue within 24-48 hours.\n- Release a mitigation update the next day.\n\n**Current Status/Outcome:**\n\n- A fix was released in version 11.1.2.\n- Pieces support is awaiting an update from the user after updating to the new version.\n\n**Additional Notes:**\n\n- The user can find more information about the issue in related issues #131, #620, and #456.\n- They can also refer to the provided links for existing issues, documentation, and YouTube channel.",
-          "activity_level": 8.01
+          "text": "PiecesOS was unable to launch.\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nlatest\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n![Image](https://github.com/user-attachments/assets/7a6a7957-5aa1-4d53-b492-cf4470aa5edc)\n## GitHub Issue Summary: PiecesOS not launching (11.1.1)\n\n**Key points raised:**\n\n* PiecesOS version 11.1.1 has issues launching for some users.\n* Users are experiencing problems across different platforms (Windows, possibly others).\n* The issue seems to be related to stricter hardware requirements.\n\n**Problems identified:**\n\n* User frustration due to inability to launch PiecesOS.\n* Potential loss of productivity and inconvenience for users.\n* Negative impact on user experience.\n\n**Solutions proposed/implemented:**\n\n* Pieces team is actively investigating the issue and working on a patch.\n* Users are encouraged to provide support logs for troubleshooting.\n* A patch release is expected within 24-48 hours (as of Feb 11, 2025).\n* A mitigation release is planned for Feb 13, 2025.\n\n**Current status/outcome:**\n\n* Patch released as PiecesOS version 11.1.2 on Feb 14, 2025.\n* Users are encouraged to update and report any further issues.\n* The issue appears to be resolved with the latest update.\n\n**Additional notes:**\n\n* The conversation highlights the importance of user feedback in identifying and resolving software issues.\n* The Pieces team is responsive and working diligently to address the problem.\n\n**Overall, the situation is improving, and the Pieces team is committed to ensuring a smooth user experience.**",
+          "activity_level": 7.5
         }
       ]
     },
     {
-      "title": "PiecesOS boot-up failure due to core dependencies",
-      "description": "Users are experiencing issues with PiecesOS getting stuck during startup, particularly on the \"dependencies scenario\" tab. This problem appears to be related to recent updates and stricter hardware requirements. Solutions include upgrading to the latest version (11.1.2), reinstalling PiecesOS, and waiting for a patch to address hardware compatibility.",
-      "frequency": 3,
-      "related_issues": [
-        {
-          "id": 613,
-          "title": "PiecesOS takes a while to boot-up(cannot run): (Unable to make it past ensure core dependency in the Desktop application)",
-          "text": "PiecesOS takes a while to boot-up(cannot run): (Unable to make it past ensure core dependency in the Desktop application)\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n3.3.5\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI got a popup that there was a new version of Pieces OS and that I needed to click and restart to update. But now the desktop app won't start anymore, being stuck on the core dependencies.\n\nI can click on the link, but nothing changes when I do that.\n\n![Image](https://github.com/user-attachments/assets/716af38b-6a71-4162-80f8-b9e9e44f7059)\n## Summary of GitHub Issue Conversation #613\n\n**Key Points Raised:**\n\n* Shamas-Habib is experiencing an issue where PiecesOS is stuck on the \"dependencies scenario\" tab and doesn't progress. They have tried several solutions, including reinstalling Windows and removing Atlas OS, but the issue persists.\n* JasonDWilson is also experiencing an issue where PiecesOS won't fully start. He has updated to the latest version, but the os_server.exe process is still running without the systray icon appearing and PFD is unable to connect.\n* Rogierlegit commented that the issue reported by Shamas-Habib is likely not related to his issue on MacOS Monterey.\n\n**Problems Identified:**\n\n* PiecesOS is taking a long time to boot up for Shamas-Habib.\n* PiecesOS is not starting for JasonDWilson.\n* The user identified as rogierlegit is experiencing a different issue on MacOS Monterey.\n\n**Solutions Proposed/Implemented:**\n\n* Mark-at-pieces recommended Shamas-Habib to wait for the issue to be resolved.\n* Nathan-courtney-pieces suggested Shamas-Habib to uninstall and reinstall PiecesOS using a specific link. They also asked them to share screenshots of the related files.\n* Mark-at-pieces announced that the issue has been resolved and asked Shamas-Habib to confirm if it is working.\n* Mark-at-pieces suggested JasonDWilson to update to version 11.1.1.\n* Mark-at-pieces identified that JasonDWilson's issue may be related to a long-standing issue with OneDrive and advised them to either reach out to support or remove the database if it is empty.\n* Mark-at-pieces suggested rogierlegit to update to version 11.1.2 and report back.\n\n**Current Status/Outcome:**\n\n* Shamas-Habib confirmed that the issue is resolved after updating to version 11.1.1.\n* JasonDWilson's issue is still unresolved and they are scheduled to have a call on Monday to discuss further.\n* Rogierlegit's issue on MacOS Monterey is still unresolved and they are asked to update to version 11.1.2 and report back.",
-          "activity_level": 14.73
-        },
-        {
-          "id": 630,
-          "title": "core services",
-          "text": "core services\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n11.1.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\ni had no issues with it in the begining but now when i try to open it now i encounter this error message \n\n![Image](https://github.com/user-attachments/assets/e929cf56-d8a1-4185-8167-867ede2048e7)\n## GitHub Issue Summary\n\n**Key Points:**\n\n* Issue created by @C2mokete regarding potential issues with PiecesOS boot-up time.\n* Pieces support bot provides potential solutions and resources.\n* @mark-at-pieces informs @C2mokete about a new release (11.1.2) that might address the issue.\n\n**Problems Identified:**\n\n* Slow boot-up time for PiecesOS.\n\n**Solutions Proposed/Implemented:**\n\n* Upgrade to PiecesOS version 11.1.2.\n\n**Current Status/Outcome:**\n\n* It is unclear if @C2mokete has upgraded to the new version or if the issue has been resolved. \n\n**Additional Notes:**\n\n* The issue was automatically triaged and routed to the appropriate Pieces team member.\n* The conversation took place on February 14, 2025.",
-          "activity_level": 4.5
-        },
-        {
-          "id": 624,
-          "title": "PiecesOS was unable to launch.",
-          "text": "PiecesOS was unable to launch.\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nlatest\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n![Image](https://github.com/user-attachments/assets/7a6a7957-5aa1-4d53-b492-cf4470aa5edc)\n## Summary of GitHub Issue Conversation\n\n**Key Points:**\n\n- User @DevWizard24 reported an issue with Pieces not launching.\n- User @GetReal444 confirmed the same issue and provided instructions for collecting logs.\n- Pieces support confirmed the issue and identified it as related to hardware requirements in version 11.1.1.\n- A fix was planned for release within 24-48 hours.\n- User @tsavo-at-pieces mentioned a related issue (#625).\n- A release to mitigate the issue was planned for the next day.\n- On February 14th, Pieces support requested an update from @DevWizard24 after updating to version 11.1.2.\n\n**Problems Identified:**\n\n- Pieces was not launching for some users.\n- The issue was related to stricter hardware requirements in version 11.1.1.\n\n**Solutions Proposed/Implemented:**\n\n- Collect logs from the user's computer.\n- Release a patch to fix the issue within 24-48 hours.\n- Release a mitigation update the next day.\n\n**Current Status/Outcome:**\n\n- A fix was released in version 11.1.2.\n- Pieces support is awaiting an update from the user after updating to the new version.\n\n**Additional Notes:**\n\n- The user can find more information about the issue in related issues #131, #620, and #456.\n- They can also refer to the provided links for existing issues, documentation, and YouTube channel.",
-          "activity_level": 8.01
-        }
-      ]
-    },
-    {
-      "title": "PiecesOS launch failures on macOS",
-      "description": "Users reported PiecesOS failing to launch on macOS after updating to version 11.1.1. The issue was attributed to hardware incompatibility, particularly on M1 chips and systems lacking AVX2 support. The Pieces team addressed the problem by releasing version 11.1.2, which includes fixes for these issues. Users experiencing launch problems are advised to upgrade to the latest version.",
+      "title": "PiecesOS launch failure and slow startup",
+      "description": "Users reported PiecesOS failing to launch or experiencing slow startups, often encountering errors related to core dependencies. This issue affected various operating systems and PiecesOS versions. Proposed solutions included updating to the latest version (11.1.2), reinstalling the application, and addressing potential conflicts with OneDrive.",
       "frequency": 3,
       "related_issues": [
         {
           "id": 621,
           "title": "Cannot launch pieces-for-developers after new installation on MacOS Sequoia 15.2 M1 chip",
-          "text": "Cannot launch pieces-for-developers after new installation on MacOS Sequoia 15.2 M1 chip\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n11.1.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI cannot install pieces Desktop App, or it fails to run.  I originally reported this by email on 9 Jan 2025, and the response email referred to an existing issue on github #546.  However this issue now seems closed, hence I am raising it here as a new bug.\n \nI have recently installed pieces OS on my Mac with a package dmg.  The pieces OS appears to install, and I see the icon in the top bar.  Pieces appears to connect to the cloud successfully, and I can install plugins for Intellij, VSCode and Obsidian.  These are visible within the pieces OS icon at the top.  \n \nPieces appears to work from IDE plugins.   However I cannot launch the Desktop App, and \u2018launch pieces for developers\u2019 from the top Pieces menu fails silently.\n\nI have recently upgraded Pieces OS, now on 11.1.1\n \nInfo:\n \nMac OS: Sequoia 15.2\nChip: Apple M1 Pro\n \nPieces OS: 11.1.1 (was installed as 11.0.3(\nPieces desktop app \u2013 won\u2019t install\nPieces OS seems to be running in \u2018activity monitor\u2019\n## Summary of GitHub Issue #621\n\n**Key points raised:**\n\n* PASimmons reported an issue with PiecesOS not running on their Mac M1 chip.\n* The support bot suggested related issues and resources.\n* Mark, a Pieces support team member, provided troubleshooting steps involving:\n    * Killing `pieces_qdrant_server` process\n    * Sharing support logs\n    * Verifying and reinstalling the correct Pieces version for their M1 chip\n\n**Problems identified:**\n\n* Initial installation of PiecesOS might not have been compatible with PASimmons' M1 chip.\n\n**Solutions proposed/implemented:**\n\n* Reinstalling the correct Pieces version for M1 architecture from the official website.\n\n**Current status/outcome:**\n\n* PASimmons confirmed successful resolution after reinstalling the proper version.\n* Mark closed the issue and linked to an ongoing announcement about the issue.",
+          "text": "Cannot launch pieces-for-developers after new installation on MacOS Sequoia 15.2 M1 chip\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n11.1.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI cannot install pieces Desktop App, or it fails to run.  I originally reported this by email on 9 Jan 2025, and the response email referred to an existing issue on github #546.  However this issue now seems closed, hence I am raising it here as a new bug.\n \nI have recently installed pieces OS on my Mac with a package dmg.  The pieces OS appears to install, and I see the icon in the top bar.  Pieces appears to connect to the cloud successfully, and I can install plugins for Intellij, VSCode and Obsidian.  These are visible within the pieces OS icon at the top.  \n \nPieces appears to work from IDE plugins.   However I cannot launch the Desktop App, and \u2018launch pieces for developers\u2019 from the top Pieces menu fails silently.\n\nI have recently upgraded Pieces OS, now on 11.1.1\n \nInfo:\n \nMac OS: Sequoia 15.2\nChip: Apple M1 Pro\n \nPieces OS: 11.1.1 (was installed as 11.0.3(\nPieces desktop app \u2013 won\u2019t install\nPieces OS seems to be running in \u2018activity monitor\u2019\n## Summary of GitHub Issue Conversation:\n\n**Key points raised:**\n\n* PASimmons was unable to launch PiecesOS on their M1 Mac.\n\n**Problems identified:**\n\n* Incorrect build for the M1 chip was installed.\n* Potentially conflicting processes were running.\n\n**Solutions proposed/implemented:**\n\n* Mark suggested:\n    * Killing the `pieces_qdrant_server` process.\n    * Providing `com.pieces.os` support logs.\n    * Reinstalling Pieces for developers and PiecesOS using the correct build for the M1 chip.\n* PASimmons reinstalled Pieces for developers using the Apple Silicon download link.\n\n**Current status/outcome:**\n\n* The issue is resolved. \n* PASimmons confirmed that Pieces for developers is now running fine.\n* Mark announced the resolution and linked to a related issue #615. \n\n**Additional Information:**\n\n* The issue was automatically triaged and routed to the proper team member.\n* Mark provided calendar link for real-time debugging.",
           "activity_level": 4.67
+        },
+        {
+          "id": 613,
+          "title": "PiecesOS takes a while to boot-up(cannot run): (Unable to make it past ensure core dependency in the Desktop application)",
+          "text": "PiecesOS takes a while to boot-up(cannot run): (Unable to make it past ensure core dependency in the Desktop application)\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n3.3.5\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI got a popup that there was a new version of Pieces OS and that I needed to click and restart to update. But now the desktop app won't start anymore, being stuck on the core dependencies.\n\nI can click on the link, but nothing changes when I do that.\n\n![Image](https://github.com/user-attachments/assets/716af38b-6a71-4162-80f8-b9e9e44f7059)\n## Summary of GitHub Issue Conversation: PiecesOS Takes a While to Boot-up (Cannot Run)\n\n**Key Points Raised:**\n\n* **Issue:** PiecesOS takes a long time to boot up and often gets stuck, displaying an error message about failing to ensure core dependencies in the Desktop Application.\n* **Affected Users:** Multiple users reported the issue, including on Windows and macOS.\n* **Potential Causes:**\n    * Possible bug in the application installer.\n    * Conflict with OneDrive.\n    * Outdated processor (pre-2015).\n* **Solutions Proposed/Implemented:**\n    * Update to version 11.1.1.\n    * Uninstall and reinstall the app.\n    * Manually install the app using the appInstaller build.\n    * Remove the com.pieces.os folder from OneDrive.\n    * Update to version 11.1.2.\n* **Current Status/Outcome:**\n    * The issue seems to be resolved for most users who updated to version 11.1.1 or 11.1.2.\n    * Some users, including rogierlegit, are still experiencing issues.\n\n**Problem Identified:**\n\nThe issue appears to be related to a bug in the application installer, a conflict with OneDrive, or an outdated processor.\n\n**Solution Implemented:**\n\nUpdating to the latest version of PiecesOS (11.1.2) seems to have resolved the issue for most users. Additionally, removing the com.pieces.os folder from OneDrive and using the appInstaller build may have helped some users.\n\n**Current Status:**\n\nThe issue seems to be resolved for most users. However, some users are still experiencing issues and require further assistance.\n\n**Additional Notes:**\n\n* The conversation highlights the importance of providing detailed information about the issue, including screenshots and logs.\n* The PiecesOS team was responsive and actively engaged in resolving the issue.\n* It is important to note that the information provided is based on the available conversation and may not represent all cases.",
+          "activity_level": 14.84
         },
         {
           "id": 624,
           "title": "PiecesOS was unable to launch.",
-          "text": "PiecesOS was unable to launch.\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nlatest\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n![Image](https://github.com/user-attachments/assets/7a6a7957-5aa1-4d53-b492-cf4470aa5edc)\n## Summary of GitHub Issue Conversation\n\n**Key Points:**\n\n- User @DevWizard24 reported an issue with Pieces not launching.\n- User @GetReal444 confirmed the same issue and provided instructions for collecting logs.\n- Pieces support confirmed the issue and identified it as related to hardware requirements in version 11.1.1.\n- A fix was planned for release within 24-48 hours.\n- User @tsavo-at-pieces mentioned a related issue (#625).\n- A release to mitigate the issue was planned for the next day.\n- On February 14th, Pieces support requested an update from @DevWizard24 after updating to version 11.1.2.\n\n**Problems Identified:**\n\n- Pieces was not launching for some users.\n- The issue was related to stricter hardware requirements in version 11.1.1.\n\n**Solutions Proposed/Implemented:**\n\n- Collect logs from the user's computer.\n- Release a patch to fix the issue within 24-48 hours.\n- Release a mitigation update the next day.\n\n**Current Status/Outcome:**\n\n- A fix was released in version 11.1.2.\n- Pieces support is awaiting an update from the user after updating to the new version.\n\n**Additional Notes:**\n\n- The user can find more information about the issue in related issues #131, #620, and #456.\n- They can also refer to the provided links for existing issues, documentation, and YouTube channel.",
-          "activity_level": 8.01
-        },
-        {
-          "id": 625,
-          "title": "PiecesOS crash immediately after launch",
-          "text": "PiecesOS crash immediately after launch\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n11.1.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nAfter upgrade PiecesOS to version 11.1..1 it crashes every time immediately after launch. Previous version worked well. Attached is the crash report log.\n\nEnvironment: \n\n- OS MacOS 15.2\n- CPU Intel \n\n[trace.log](https://github.com/user-attachments/files/18777512/trace.log)\n## Summary of GitHub Issue Conversation\n\n**Key Points:**\n\n* User reported being unable to launch PiecesOS on macOS (Arm architecture) after updating to 11.1.0.\n* Related issues were identified by the support bot, including other launch failures on macOS and M1 chips.\n* The Pieces team acknowledged the issue and identified the root cause as a lack of AVX2 support on the user's CPU.\n* A fix was implemented and released in version 11.1.2.\n\n**Problems Identified:**\n\n* PiecesOS wasn't launching on certain macOS systems with newer CPUs.\n* The issue was related to the lack of AVX2 support on those CPUs.\n\n**Solutions Proposed/Implemented:**\n\n* The Pieces team released a new version (11.1.2) that addresses the AVX2 issue.\n\n**Current Status/Outcome:**\n\n* The issue has been resolved with the release of version 11.1.2.\n* The user confirmed that the fix works for them.\n\n**Additional Notes:**\n\n* This conversation highlights the importance of providing detailed information about your system when reporting issues.\n* It also demonstrates the Pieces team's commitment to resolving user issues promptly.",
-          "activity_level": 12.77
+          "text": "PiecesOS was unable to launch.\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nlatest\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n![Image](https://github.com/user-attachments/assets/7a6a7957-5aa1-4d53-b492-cf4470aa5edc)\n## GitHub Issue Summary: PiecesOS not launching (11.1.1)\n\n**Key points raised:**\n\n* PiecesOS version 11.1.1 has issues launching for some users.\n* Users are experiencing problems across different platforms (Windows, possibly others).\n* The issue seems to be related to stricter hardware requirements.\n\n**Problems identified:**\n\n* User frustration due to inability to launch PiecesOS.\n* Potential loss of productivity and inconvenience for users.\n* Negative impact on user experience.\n\n**Solutions proposed/implemented:**\n\n* Pieces team is actively investigating the issue and working on a patch.\n* Users are encouraged to provide support logs for troubleshooting.\n* A patch release is expected within 24-48 hours (as of Feb 11, 2025).\n* A mitigation release is planned for Feb 13, 2025.\n\n**Current status/outcome:**\n\n* Patch released as PiecesOS version 11.1.2 on Feb 14, 2025.\n* Users are encouraged to update and report any further issues.\n* The issue appears to be resolved with the latest update.\n\n**Additional notes:**\n\n* The conversation highlights the importance of user feedback in identifying and resolving software issues.\n* The Pieces team is responsive and working diligently to address the problem.\n\n**Overall, the situation is improving, and the Pieces team is committed to ensuring a smooth user experience.**",
+          "activity_level": 7.5
         }
       ]
     },
     {
-      "title": "PiecesOS fails to launch after update",
-      "description": "Users report PiecesOS failing to launch after updating to version 11.1.1. This is due to stricter hardware requirements, specifically AVX2 support. The issue was acknowledged by the Pieces team and a hotfix was released in version 11.1.2. Users experiencing this issue are advised to update to the latest version.",
+      "title": "PiecesOS fails to launch due to core dependency errors",
+      "description": "Users are reporting PiecesOS failing to launch, getting stuck on \"Ensuring Core Dependencies\" during startup. This issue appears across macOS and Windows platforms. Proposed solutions include updating to the latest version (11.1.2 or higher), reinstalling the app, and removing the 'com.pieces.os' folder from OneDrive if applicable.",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 613,
+          "title": "PiecesOS takes a while to boot-up(cannot run): (Unable to make it past ensure core dependency in the Desktop application)",
+          "text": "PiecesOS takes a while to boot-up(cannot run): (Unable to make it past ensure core dependency in the Desktop application)\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n3.3.5\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI got a popup that there was a new version of Pieces OS and that I needed to click and restart to update. But now the desktop app won't start anymore, being stuck on the core dependencies.\n\nI can click on the link, but nothing changes when I do that.\n\n![Image](https://github.com/user-attachments/assets/716af38b-6a71-4162-80f8-b9e9e44f7059)\n## Summary of GitHub Issue Conversation: PiecesOS Takes a While to Boot-up (Cannot Run)\n\n**Key Points Raised:**\n\n* **Issue:** PiecesOS takes a long time to boot up and often gets stuck, displaying an error message about failing to ensure core dependencies in the Desktop Application.\n* **Affected Users:** Multiple users reported the issue, including on Windows and macOS.\n* **Potential Causes:**\n    * Possible bug in the application installer.\n    * Conflict with OneDrive.\n    * Outdated processor (pre-2015).\n* **Solutions Proposed/Implemented:**\n    * Update to version 11.1.1.\n    * Uninstall and reinstall the app.\n    * Manually install the app using the appInstaller build.\n    * Remove the com.pieces.os folder from OneDrive.\n    * Update to version 11.1.2.\n* **Current Status/Outcome:**\n    * The issue seems to be resolved for most users who updated to version 11.1.1 or 11.1.2.\n    * Some users, including rogierlegit, are still experiencing issues.\n\n**Problem Identified:**\n\nThe issue appears to be related to a bug in the application installer, a conflict with OneDrive, or an outdated processor.\n\n**Solution Implemented:**\n\nUpdating to the latest version of PiecesOS (11.1.2) seems to have resolved the issue for most users. Additionally, removing the com.pieces.os folder from OneDrive and using the appInstaller build may have helped some users.\n\n**Current Status:**\n\nThe issue seems to be resolved for most users. However, some users are still experiencing issues and require further assistance.\n\n**Additional Notes:**\n\n* The conversation highlights the importance of providing detailed information about the issue, including screenshots and logs.\n* The PiecesOS team was responsive and actively engaged in resolving the issue.\n* It is important to note that the information provided is based on the available conversation and may not represent all cases.",
+          "activity_level": 14.84
+        },
+        {
+          "id": 630,
+          "title": "core services",
+          "text": "core services\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n11.1.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\ni had no issues with it in the begining but now when i try to open it now i encounter this error message \n\n![Image](https://github.com/user-attachments/assets/e929cf56-d8a1-4185-8167-867ede2048e7)\n## Summary of GitHub Issue Conversation\n\n**Key points:**\n\n* User C2mokete reported an issue with PiecesOS taking a long time to boot.\n* The Pieces Support Bot provided some helpful resources, including similar issues and documentation.\n* Mark, a member of the Pieces team, suggested the user try the recently released version 11.1.2 of PiecesOS.\n\n**Problems identified:**\n\n* PiecesOS boot time was slow for C2mokete.\n\n**Solutions proposed/implemented:**\n\n* Mark suggested trying the latest version 11.1.2 of PiecesOS.\n\n**Current status/outcome:**\n\n* It is unclear whether C2mokete tried the suggested solution or if it resolved the issue.\n\n**Additional notes:**\n\n* This conversation is from February 2025. \n* The conversation is brief, and it's possible there were follow-up discussions not included here.",
+          "activity_level": 4.5
+        },
+        {
+          "id": 624,
+          "title": "PiecesOS was unable to launch.",
+          "text": "PiecesOS was unable to launch.\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nlatest\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n![Image](https://github.com/user-attachments/assets/7a6a7957-5aa1-4d53-b492-cf4470aa5edc)\n## GitHub Issue Summary: PiecesOS not launching (11.1.1)\n\n**Key points raised:**\n\n* PiecesOS version 11.1.1 has issues launching for some users.\n* Users are experiencing problems across different platforms (Windows, possibly others).\n* The issue seems to be related to stricter hardware requirements.\n\n**Problems identified:**\n\n* User frustration due to inability to launch PiecesOS.\n* Potential loss of productivity and inconvenience for users.\n* Negative impact on user experience.\n\n**Solutions proposed/implemented:**\n\n* Pieces team is actively investigating the issue and working on a patch.\n* Users are encouraged to provide support logs for troubleshooting.\n* A patch release is expected within 24-48 hours (as of Feb 11, 2025).\n* A mitigation release is planned for Feb 13, 2025.\n\n**Current status/outcome:**\n\n* Patch released as PiecesOS version 11.1.2 on Feb 14, 2025.\n* Users are encouraged to update and report any further issues.\n* The issue appears to be resolved with the latest update.\n\n**Additional notes:**\n\n* The conversation highlights the importance of user feedback in identifying and resolving software issues.\n* The Pieces team is responsive and working diligently to address the problem.\n\n**Overall, the situation is improving, and the Pieces team is committed to ensuring a smooth user experience.**",
+          "activity_level": 7.5
+        }
+      ]
+    },
+    {
+      "title": "PiecesOS Fails to Launch After Update",
+      "description": "Users report PiecesOS failing to launch after updating, often getting stuck on \"ensuring core dependencies.\" This issue appears across operating systems and versions, potentially due to installer bugs, OneDrive conflicts, or hardware limitations. Proposed solutions include updating to the latest version (11.1.2), reinstalling the app, manually installing using the appInstaller build, and removing the 'com.pieces.os' folder from OneDrive.",
       "frequency": 3,
       "related_issues": [
         {
           "id": 627,
           "title": "PiecesOS was unable to launch.",
-          "text": "PiecesOS was unable to launch.\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.1.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nmy pieces os was working but now its not working. when i install it it was working after upfate its not working\n## Summary of GitHub Issue Conversation:\n\n**Key points raised:** Danica121 reported an issue with PiecesOS not launching.\n\n**Problems identified:** PiecesOS is unable to launch, similar to reported issues #624, #131, and #614.\n\n**Solutions proposed/implemented:** The issue is a duplicate of #625, for which the team is actively working on a hotfix.\n\n**Current status/outcome:** Users are advised to be patient while the team works on a fix. \n\n**Additional information:** \n* Related issues: #624, #131, #614\n* Resources: Existing Issues, Documentation, YouTube Channel\n\n**Overall, the issue is acknowledged and being addressed. Users are encouraged to be patient while the team works on a fix.**",
-          "activity_level": 4.5
+          "text": "PiecesOS was unable to launch.\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.1.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nmy pieces os was working but now its not working. when i install it it was working after upfate its not working\n## Summary of GitHub Issue Conversation:\n\n**Key Points Raised:**\n\n* Danica121 reported an issue where PiecesOS was unable to launch.\n\n**Problems Identified:**\n\n* This issue appears to be a duplicate of existing issue #625.\n* The Pieces team is actively working on a hotfix.\n\n**Solutions Proposed/Implemented:**\n\n* No specific solutions are discussed in this conversation.\n\n**Current Status/Outcome:**\n\n* The issue remains unresolved but the Pieces team is working on a fix. \n* Danica121 is advised to be patient while the team works on a solution.\n\n**Additional Information:**\n\n* The issue seems similar to other reported issues: #624, #131, and #614. \n* Resources are provided for further assistance.",
+          "activity_level": 3.88
         },
         {
           "id": 624,
           "title": "PiecesOS was unable to launch.",
-          "text": "PiecesOS was unable to launch.\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nlatest\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n![Image](https://github.com/user-attachments/assets/7a6a7957-5aa1-4d53-b492-cf4470aa5edc)\n## Summary of GitHub Issue Conversation\n\n**Key Points:**\n\n- User @DevWizard24 reported an issue with Pieces not launching.\n- User @GetReal444 confirmed the same issue and provided instructions for collecting logs.\n- Pieces support confirmed the issue and identified it as related to hardware requirements in version 11.1.1.\n- A fix was planned for release within 24-48 hours.\n- User @tsavo-at-pieces mentioned a related issue (#625).\n- A release to mitigate the issue was planned for the next day.\n- On February 14th, Pieces support requested an update from @DevWizard24 after updating to version 11.1.2.\n\n**Problems Identified:**\n\n- Pieces was not launching for some users.\n- The issue was related to stricter hardware requirements in version 11.1.1.\n\n**Solutions Proposed/Implemented:**\n\n- Collect logs from the user's computer.\n- Release a patch to fix the issue within 24-48 hours.\n- Release a mitigation update the next day.\n\n**Current Status/Outcome:**\n\n- A fix was released in version 11.1.2.\n- Pieces support is awaiting an update from the user after updating to the new version.\n\n**Additional Notes:**\n\n- The user can find more information about the issue in related issues #131, #620, and #456.\n- They can also refer to the provided links for existing issues, documentation, and YouTube channel.",
-          "activity_level": 8.01
+          "text": "PiecesOS was unable to launch.\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nlatest\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n![Image](https://github.com/user-attachments/assets/7a6a7957-5aa1-4d53-b492-cf4470aa5edc)\n## GitHub Issue Summary: PiecesOS not launching (11.1.1)\n\n**Key points raised:**\n\n* PiecesOS version 11.1.1 has issues launching for some users.\n* Users are experiencing problems across different platforms (Windows, possibly others).\n* The issue seems to be related to stricter hardware requirements.\n\n**Problems identified:**\n\n* User frustration due to inability to launch PiecesOS.\n* Potential loss of productivity and inconvenience for users.\n* Negative impact on user experience.\n\n**Solutions proposed/implemented:**\n\n* Pieces team is actively investigating the issue and working on a patch.\n* Users are encouraged to provide support logs for troubleshooting.\n* A patch release is expected within 24-48 hours (as of Feb 11, 2025).\n* A mitigation release is planned for Feb 13, 2025.\n\n**Current status/outcome:**\n\n* Patch released as PiecesOS version 11.1.2 on Feb 14, 2025.\n* Users are encouraged to update and report any further issues.\n* The issue appears to be resolved with the latest update.\n\n**Additional notes:**\n\n* The conversation highlights the importance of user feedback in identifying and resolving software issues.\n* The Pieces team is responsive and working diligently to address the problem.\n\n**Overall, the situation is improving, and the Pieces team is committed to ensuring a smooth user experience.**",
+          "activity_level": 7.5
         },
         {
-          "id": 620,
-          "title": "Pieces os doesn't launch at all for past week. Can't use pieces at all",
-          "text": "Pieces os doesn't launch at all for past week. Can't use pieces at all\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.1.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nFor the past week, anytime that I launch pieces I see this: \n\n![Image](https://github.com/user-attachments/assets/61f18fb6-8846-46d8-8747-5c415fd2e82d)\n\nPieces OS just doesn't open, no matter what.\n\nI tried to reinstall everything, but also no progress.\n\nHow to fix it? (Also to mention, Pieces desktop app is in Early Access program, but I don't know if this information is useful)\n## Summary of GitHub Issue Conversation\n\n**Key points raised:**\n\n* GetReal444 reported an issue booting up the Pieces app.\n* Mark-at-Pieces requested additional information for diagnosis and offered support via call.\n* GetReal444 provided logs indicating an error message related to AVX2 requirement.\n* Mark-at-Pieces acknowledged the issue and explained it affects multiple users.\n\n**Problems identified:**\n\n* The Pieces app was not booting up for some users due to an AVX2 hardware requirement.\n\n**Solutions proposed/implemented:**\n\n* The Pieces team is actively working on a patch to resolve the issue.\n* A workaround is to update to the latest version (11.1.2) of PiecesOS.\n\n**Current status/outcome:**\n\n* The issue has been resolved with the release of PiecesOS version 11.1.2.\n* GetReal444 confirmed that the app is working after the update.\n\n**Additional notes:**\n\n* The issue is related to a failing dependency of the AVX2 vector library on certain platforms.\n* The Pieces team is actively working on a permanent solution.",
-          "activity_level": 8.5
+          "id": 613,
+          "title": "PiecesOS takes a while to boot-up(cannot run): (Unable to make it past ensure core dependency in the Desktop application)",
+          "text": "PiecesOS takes a while to boot-up(cannot run): (Unable to make it past ensure core dependency in the Desktop application)\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n3.3.5\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI got a popup that there was a new version of Pieces OS and that I needed to click and restart to update. But now the desktop app won't start anymore, being stuck on the core dependencies.\n\nI can click on the link, but nothing changes when I do that.\n\n![Image](https://github.com/user-attachments/assets/716af38b-6a71-4162-80f8-b9e9e44f7059)\n## Summary of GitHub Issue Conversation: PiecesOS Takes a While to Boot-up (Cannot Run)\n\n**Key Points Raised:**\n\n* **Issue:** PiecesOS takes a long time to boot up and often gets stuck, displaying an error message about failing to ensure core dependencies in the Desktop Application.\n* **Affected Users:** Multiple users reported the issue, including on Windows and macOS.\n* **Potential Causes:**\n    * Possible bug in the application installer.\n    * Conflict with OneDrive.\n    * Outdated processor (pre-2015).\n* **Solutions Proposed/Implemented:**\n    * Update to version 11.1.1.\n    * Uninstall and reinstall the app.\n    * Manually install the app using the appInstaller build.\n    * Remove the com.pieces.os folder from OneDrive.\n    * Update to version 11.1.2.\n* **Current Status/Outcome:**\n    * The issue seems to be resolved for most users who updated to version 11.1.1 or 11.1.2.\n    * Some users, including rogierlegit, are still experiencing issues.\n\n**Problem Identified:**\n\nThe issue appears to be related to a bug in the application installer, a conflict with OneDrive, or an outdated processor.\n\n**Solution Implemented:**\n\nUpdating to the latest version of PiecesOS (11.1.2) seems to have resolved the issue for most users. Additionally, removing the com.pieces.os folder from OneDrive and using the appInstaller build may have helped some users.\n\n**Current Status:**\n\nThe issue seems to be resolved for most users. However, some users are still experiencing issues and require further assistance.\n\n**Additional Notes:**\n\n* The conversation highlights the importance of providing detailed information about the issue, including screenshots and logs.\n* The PiecesOS team was responsive and actively engaged in resolving the issue.\n* It is important to note that the information provided is based on the available conversation and may not represent all cases.",
+          "activity_level": 14.84
         }
       ]
     },
     {
-      "title": "PiecesOS Crashing on macOS after Update",
-      "description": "Users reported PiecesOS crashing on macOS after updating to version 11.1.0 or 11.1.1. The issue was primarily observed on machines with Apple Silicon (M1, M2, etc.) and Intel CPUs lacking AVX2 support. The solution involved reinstalling from the correct download link for Apple Silicon or upgrading to version 11.1.2, which addressed the AVX2 compatibility issue.",
+      "title": "PiecesOS fails to launch due to extension error",
+      "description": "Multiple users reported PiecesOS failing to launch on versions 11.1.1. The error message pointed to a \"DatabaseException\" related to the \"CouchbaseLiteVectorSearch\" extension. This was caused by a dependency on AVX2 instruction sets not supported on all CPUs. The Pieces team released a patch in version 11.1.2 to address this issue.",
       "frequency": 3,
       "related_issues": [
         {
-          "id": 615,
-          "title": "Unable to Boot PiecesOS on Macos(Arm architecture) After updating to 11.1.0",
-          "text": "Unable to Boot PiecesOS on Macos(Arm architecture) After updating to 11.1.0\nIf you cannot open PiecesOS after updating to 11.1.0 and you are on an arm Machine M1, M2, M3,...etc then it is likely that you accidentally installed the intel version of the application.\n\nIf you are Unsure.\n\nPlease uninstall Pieces OS from your applications folder and reinstall from https://docs.pieces.app/installation-getting-started/macos (Arm == Apple Silicon)\n\nYou can tell if you are working with Arm architecture if you see something that resembles this within your 'About this Mac'\n\n<img width=\"280\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/c855e1d2-0ca4-474c-9857-4e3b0069f0e5\" />\n\nIf you are still having issues after trying these steps please feel free to add a comment on this issue and schedule a time on my calendar here.\n\nhttps://calendar.app.google/MGd9i5gELtiDjWZm8\nNo comments found on this issue.",
-          "activity_level": 1.62
+          "id": 619,
+          "title": "Facing error on Ubuntu while opening Pieces \"DatabaseException\"",
+          "text": "Facing error on Ubuntu while opening Pieces \"DatabaseException\"\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nLinux\n\n### Your Pieces OS Version\n\n11.1.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nFaccing \"DatabaseException(Unable to load 'CouchbaseLiteVectorSearch' extenstion\" (1), code : can'tOpenFile)\" on my ubuntu desktop \n## GitHub Issue Summary: Pieces App Boot Up Issue\n\n**Key Points:**\n\n* User @Rohit0072 reported an issue where the Pieces app was not booting up.\n* The issue was automatically triaged and assigned to the relevant team.\n* The user was provided with helpful resources and related issues.\n* @tsavo-at-pieces identified the issue as related to other reported issues (#620, #624, and #625).\n* A fix was expected to be released by the end of the next day (February 13th, 2025).\n\n**Problems Identified:**\n\n* The Pieces app was not booting up for the user.\n* This issue was affecting multiple users.\n\n**Solutions Proposed/Implemented:**\n\n* A fix was identified and was expected to be released on February 13th, 2025.\n\n**Current Status/Outcome:**\n\n* The user was advised to update to the latest version of PiecesOS (11.1.2) to see if the issue was resolved.\n* The outcome of the update is not mentioned in the conversation.\n\n**Additional Notes:**\n\n* The conversation took place between February 9th, 2025 and February 14th, 2025.\n* The user was offered additional support through a calendar link and email address.",
+          "activity_level": 4.52
         },
         {
-          "id": 625,
-          "title": "PiecesOS crash immediately after launch",
-          "text": "PiecesOS crash immediately after launch\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n11.1.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nAfter upgrade PiecesOS to version 11.1..1 it crashes every time immediately after launch. Previous version worked well. Attached is the crash report log.\n\nEnvironment: \n\n- OS MacOS 15.2\n- CPU Intel \n\n[trace.log](https://github.com/user-attachments/files/18777512/trace.log)\n## Summary of GitHub Issue Conversation\n\n**Key Points:**\n\n* User reported being unable to launch PiecesOS on macOS (Arm architecture) after updating to 11.1.0.\n* Related issues were identified by the support bot, including other launch failures on macOS and M1 chips.\n* The Pieces team acknowledged the issue and identified the root cause as a lack of AVX2 support on the user's CPU.\n* A fix was implemented and released in version 11.1.2.\n\n**Problems Identified:**\n\n* PiecesOS wasn't launching on certain macOS systems with newer CPUs.\n* The issue was related to the lack of AVX2 support on those CPUs.\n\n**Solutions Proposed/Implemented:**\n\n* The Pieces team released a new version (11.1.2) that addresses the AVX2 issue.\n\n**Current Status/Outcome:**\n\n* The issue has been resolved with the release of version 11.1.2.\n* The user confirmed that the fix works for them.\n\n**Additional Notes:**\n\n* This conversation highlights the importance of providing detailed information about your system when reporting issues.\n* It also demonstrates the Pieces team's commitment to resolving user issues promptly.",
-          "activity_level": 12.77
+          "id": 620,
+          "title": "Pieces os doesn't launch at all for past week. Can't use pieces at all",
+          "text": "Pieces os doesn't launch at all for past week. Can't use pieces at all\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.1.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nFor the past week, anytime that I launch pieces I see this: \n\n![Image](https://github.com/user-attachments/assets/61f18fb6-8846-46d8-8747-5c415fd2e82d)\n\nPieces OS just doesn't open, no matter what.\n\nI tried to reinstall everything, but also no progress.\n\nHow to fix it? (Also to mention, Pieces desktop app is in Early Access program, but I don't know if this information is useful)\n## Summary of GitHub Issue Conversation: \n\n**Key points raised:**\n\n- User (@GetReal444) reported an issue with booting up PiecesOS.\n- The error message seems to be related to the \"CouchbaseLiteVectorSearch\" extension and AVX2 support.\n- User provided logs and a screenshot of their tech specs.\n\n**Problems identified:**\n\n- The CouchbaseLiteVectorSearch extension requires AVX2 which is not supported on some processors.\n- This issue affects multiple users.\n\n**Solutions proposed/implemented:**\n\n- The Pieces team is actively working on a solution.\n- They released a patch in version 11.1.2 of PiecesOS to address the dependency issue.\n\n**Current status/outcome:**\n\n- The user confirmed that the latest version (11.1.2) resolved the issue for them.\n\n**Additional notes:**\n\n- The team is monitoring the situation and will provide updates as needed.\n- Users experiencing similar issues should update to the latest version of PiecesOS.",
+          "activity_level": 8.04
         },
         {
-          "id": 630,
-          "title": "core services",
-          "text": "core services\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n11.1.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\ni had no issues with it in the begining but now when i try to open it now i encounter this error message \n\n![Image](https://github.com/user-attachments/assets/e929cf56-d8a1-4185-8167-867ede2048e7)\n## GitHub Issue Summary\n\n**Key Points:**\n\n* Issue created by @C2mokete regarding potential issues with PiecesOS boot-up time.\n* Pieces support bot provides potential solutions and resources.\n* @mark-at-pieces informs @C2mokete about a new release (11.1.2) that might address the issue.\n\n**Problems Identified:**\n\n* Slow boot-up time for PiecesOS.\n\n**Solutions Proposed/Implemented:**\n\n* Upgrade to PiecesOS version 11.1.2.\n\n**Current Status/Outcome:**\n\n* It is unclear if @C2mokete has upgraded to the new version or if the issue has been resolved. \n\n**Additional Notes:**\n\n* The issue was automatically triaged and routed to the appropriate Pieces team member.\n* The conversation took place on February 14, 2025.",
-          "activity_level": 4.5
+          "id": 624,
+          "title": "PiecesOS was unable to launch.",
+          "text": "PiecesOS was unable to launch.\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nlatest\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n![Image](https://github.com/user-attachments/assets/7a6a7957-5aa1-4d53-b492-cf4470aa5edc)\n## GitHub Issue Summary: PiecesOS not launching (11.1.1)\n\n**Key points raised:**\n\n* PiecesOS version 11.1.1 has issues launching for some users.\n* Users are experiencing problems across different platforms (Windows, possibly others).\n* The issue seems to be related to stricter hardware requirements.\n\n**Problems identified:**\n\n* User frustration due to inability to launch PiecesOS.\n* Potential loss of productivity and inconvenience for users.\n* Negative impact on user experience.\n\n**Solutions proposed/implemented:**\n\n* Pieces team is actively investigating the issue and working on a patch.\n* Users are encouraged to provide support logs for troubleshooting.\n* A patch release is expected within 24-48 hours (as of Feb 11, 2025).\n* A mitigation release is planned for Feb 13, 2025.\n\n**Current status/outcome:**\n\n* Patch released as PiecesOS version 11.1.2 on Feb 14, 2025.\n* Users are encouraged to update and report any further issues.\n* The issue appears to be resolved with the latest update.\n\n**Additional notes:**\n\n* The conversation highlights the importance of user feedback in identifying and resolving software issues.\n* The Pieces team is responsive and working diligently to address the problem.\n\n**Overall, the situation is improving, and the Pieces team is committed to ensuring a smooth user experience.**",
+          "activity_level": 7.5
         }
       ]
     }
   ],
   "recommendations": [
-    "**Prioritize resolving PiecesOS launch failures:** The most frequent and active support tickets revolve around PiecesOS failing to launch after the 11.1.1 update, particularly due to AVX2 incompatibility and issues on macOS. Focus on providing clear guidance for affected users, such as upgrading to 11.1.2 or reinstalling with the correct version for their architecture.",
-    "**Improve communication about hardware requirements:** The launch failures highlight the need for clearer communication about PiecesOS's hardware requirements. Update the documentation and installation instructions to prominently feature these requirements, potentially including a system check tool.",
-    "**Investigate and address PiecesOS boot-up issues:**  Users are experiencing issues with PiecesOS getting stuck during boot-up, specifically on the \"dependencies scenario\" tab. Investigate the root cause of this problem and provide a timely resolution.",
-    "**Address high resource usage:** Some users report high RAM and CPU usage by PiecesOS. Investigate these reports, optimize resource utilization, and provide guidance on configuration options that could alleviate these issues.",
-    "**Review and improve macOS compatibility:** A significant number of issues originate from macOS users, particularly those with M1 chips. Dedicate resources to thoroughly test and ensure compatibility with various macOS versions and architectures."
+    "\"Prioritize resolving PiecesOS launch issues affecting versions 11.1.1 and earlier, specifically addressing AVX2 dependency and core dependency errors during startup.\"",
+    "\"Investigate and address the root cause of slow startup times and high resource usage reported in PiecesOS, particularly in versions prior to 11.1.2.\"",
+    "\"Review and improve the PiecesOS installer to prevent issues related to OneDrive conflicts and ensure smooth updates.\"",
+    "\"Consider providing clearer communication and documentation regarding PiecesOS hardware and software requirements to manage user expectations and minimize compatibility issues.\""
   ],
   "message": "Daily support report generated successfully."
 }
