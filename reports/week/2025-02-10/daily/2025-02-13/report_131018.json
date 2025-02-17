@@ -1,0 +1,181 @@
+{
+  "success": true,
+  "date_range": {
+    "start": "2025-02-13T00:00:00+00:00",
+    "end": "2025-02-13T13:10:18.960373+00:00"
+  },
+  "summary": {
+    "total_tickets": 6,
+    "resolved_tickets": 1,
+    "open_tickets": 5
+  },
+  "ticket_breakdown": [
+    {
+      "category": "bug",
+      "received": 6,
+      "resolved": 1,
+      "pending": 5
+    },
+    {
+      "category": "app:desktop application",
+      "received": 5,
+      "resolved": 1,
+      "pending": 4
+    },
+    {
+      "category": "os:linux",
+      "received": 3,
+      "resolved": 1,
+      "pending": 2
+    },
+    {
+      "category": "status:triaged",
+      "received": 5,
+      "resolved": 1,
+      "pending": 4
+    },
+    {
+      "category": "os:macos",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:pieces os",
+      "received": 4,
+      "resolved": 1,
+      "pending": 3
+    },
+    {
+      "category": "os:windows",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "status:waiting_on_user_responses",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    }
+  ],
+  "most_active_tickets": [
+    {
+      "number": 625,
+      "title": "PiecesOS crash immediately after launch",
+      "activity_level": 11.04
+    },
+    {
+      "number": 624,
+      "title": "PiecesOS was unable to launch.",
+      "activity_level": 8.18
+    },
+    {
+      "number": 620,
+      "title": "Pieces os doesn't launch at all for past week. Can't use pieces at all",
+      "activity_level": 7.74
+    },
+    {
+      "number": 626,
+      "title": "[Linux Mint 22.1] Pieces OS high CPU usage",
+      "activity_level": 6.94
+    },
+    {
+      "number": 618,
+      "title": "[Linux Mint] Pieces app goes unresponsive on opening and every 5sec. Can't use it at all in any way",
+      "activity_level": 5.7
+    },
+    {
+      "number": 619,
+      "title": "Facing error on Ubuntu while opening Pieces \"DatabaseException\"",
+      "activity_level": 4.63
+    }
+  ],
+  "common_issues": [
+    {
+      "title": "PiecesOS fails to launch after recent update",
+      "description": "Users are reporting that PiecesOS fails to launch after a recent update (v11.1.1). The issue seems to stem from a new vector library with AVX2 requirements that are incompatible with some user systems (Windows and MacOS). The Pieces team is aware of the issue and is working on a patch to address the problem. Users are encouraged to provide their system specs and logs to assist in resolving the issue.",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 625,
+          "title": "PiecesOS crash immediately after launch",
+          "text": "PiecesOS crash immediately after launch\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n11.1.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nAfter upgrade PiecesOS to version 11.1..1 it crashes every time immediately after launch. Previous version worked well. Attached is the crash report log.\n\nEnvironment: \n\n- OS MacOS 15.2\n- CPU Intel \n\n[trace.log](https://github.com/user-attachments/files/18777512/trace.log)\n## Summary of GitHub Issue Conversation:\n\n**Key Points Raised:**\n\n* User @gonzososa reported an issue with PiecesOS not launching on their macOS system.\n* The issue was related to the new vector library having avx2 issues on different systems.\n* Additional information about the user's CPU was requested.\n\n**Problems Identified:**\n\n* PiecesOS was unable to launch on macOS due to avx2 issues in the new vector library.\n\n**Solutions Proposed/Implemented:**\n\n* The Pieces team is actively working on a solution and will release a new version with a fix soon.\n* The team requested the user to provide information about their CPU to help diagnose the issue.\n\n**Current Status/Outcome:**\n\n* The issue is still under investigation and a fix is expected to be released soon.\n\n**Additional Notes:**\n\n* The conversation highlights the importance of providing detailed information about the issue and the user's system to help developers diagnose and fix the problem.\n* The Pieces team is actively engaged with users and is committed to resolving the issue promptly.",
+          "activity_level": 11.04
+        },
+        {
+          "id": 620,
+          "title": "Pieces os doesn't launch at all for past week. Can't use pieces at all",
+          "text": "Pieces os doesn't launch at all for past week. Can't use pieces at all\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.1.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nFor the past week, anytime that I launch pieces I see this: \n\n![Image](https://github.com/user-attachments/assets/61f18fb6-8846-46d8-8747-5c415fd2e82d)\n\nPieces OS just doesn't open, no matter what.\n\nI tried to reinstall everything, but also no progress.\n\nHow to fix it? (Also to mention, Pieces desktop app is in Early Access program, but I don't know if this information is useful)\n## Summary of GitHub Issue Conversation:\n\n**Key points raised:**\n\n* User \"GetReal444\" was experiencing issues booting up the application.\n* Error logs indicated a problem with the `CouchbaseLiteVectorSearch` extension requiring AVX2 support, which was missing on the user's machine.\n\n**Problems identified:**\n\n* The application had a hardware requirement for AVX2 support, which not all users' machines possessed.\n* This requirement was causing the application to fail to boot for a significant number of users.\n\n**Solutions proposed/implemented:**\n\n* The Pieces team acknowledged the issue and was actively working on a solution.\n* A temporary workaround involved providing the team with the user's machine specifications.\n* A patch was expected to be released within 24-48 hours.\n\n**Current status/outcome:**\n\n* The issue was affecting multiple users.\n* A fix was expected to be released by the end of the next day (2025-02-14).\n\n**Additional notes:**\n\n* The conversation involved several team members, including a support bot, a customer support representative, and a developer.\n* The team was responsive and communicative throughout the process.",
+          "activity_level": 7.74
+        },
+        {
+          "id": 624,
+          "title": "PiecesOS was unable to launch.",
+          "text": "PiecesOS was unable to launch.\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nlatest\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n![Image](https://github.com/user-attachments/assets/7a6a7957-5aa1-4d53-b492-cf4470aa5edc)\n## GitHub Issue Summary:\n\n**Key Points:**\n\n* User @DevWizard24 reported an issue with `Pieces os` not launching on their Windows device.\n* The `pieces-support-bot` provided helpful resources and related issues.\n* @GetReal444 experienced the same problem and suggested attaching logs.\n* @mark-at-pieces acknowledged the issue and requested logs for further investigation.\n* @tsavo-at-pieces informed about a related issue and a planned release to address the problem.\n\n**Problems Identified:**\n\n* `Pieces os` fails to launch on some Windows devices, likely due to stricter hardware requirements in version 11.1.1.\n\n**Solutions Proposed/Implemented:**\n\n* @mark-at-pieces requested user logs for troubleshooting.\n* @tsavo-at-pieces announced a planned release to fix the issue.\n\n**Current Status/Outcome:**\n\n* A patch release is expected within 24-48 hours to address the launch issue. \n* The users involved will be notified about the update.",
+          "activity_level": 8.18
+        }
+      ]
+    },
+    {
+      "title": "Pieces OS Performance and Launch Issues",
+      "description": "Users reported high CPU usage, unresponsiveness, and launch failures in Pieces OS 11.1.1 on Linux and Windows. Workarounds include disabling LTM-1, using cloud-only enrichment, and disabling virtual keyboards. The Pieces team is addressing these issues through optimization, bug fixes, and upcoming releases.",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 626,
+          "title": "[Linux Mint 22.1] Pieces OS high CPU usage",
+          "text": "[Linux Mint 22.1] Pieces OS high CPU usage\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nLinux\n\n### Your Pieces OS Version\n\n11.1.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nPieces OS has high CPU usage even when idle and no LLM output is processing. Closing the desktop app or any other app with integrations like VScode makes no difference. The CPU usage sometimes drops down to 0% but immediately picks up back to 90%+. \nI dont have any local LLMs or any of the browser plugins installed. I am aware that similar issue was raised last year and was supposed to be fixed in 11.1.0, maybe it wasn't fixed entirely.\n\n\nhttps://github.com/user-attachments/assets/3bedac0a-c9aa-48b9-a86a-6a3c4698d263\n## GitHub Issue Summary\n\n**Key Points Raised:**\n\n* User @94tejas reported high RAM/CPU usage and unresponsiveness in the Pieces app.\n* The issue was suspected to be related to the Long-Term Memory Engine (LTM-1).\n\n**Problems Identified:**\n\n* LTM-1 was consuming excessive resources on the user's device.\n* This led to performance issues, including high RAM usage, CPU spikes, and unresponsiveness.\n\n**Solutions Proposed/Implemented:**\n\n* **Short-term:**\n    * Disable LTM-1 to reduce resource consumption.\n    * Modify the enrichment mode to \"Cloud Only\" to minimize local processing.\n* **Long-term:**\n    * Optimize the LTM-1 algorithm to decrease resource usage.\n    * Implement an option for users to opt into cloud processing for LTM-1.\n\n**Current Status/Outcome:**\n\n* The user confirmed that disabling LTM-1 resolved the issue.\n* The team is working on long-term solutions to improve LTM-1's efficiency and provide users with more control over resource usage.",
+          "activity_level": 6.94
+        },
+        {
+          "id": 618,
+          "title": "[Linux Mint] Pieces app goes unresponsive on opening and every 5sec. Can't use it at all in any way",
+          "text": "[Linux Mint] Pieces app goes unresponsive on opening and every 5sec. Can't use it at all in any way\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nLinux\n\n### Your Pieces OS Version\n\n11.1.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nPieces app goes unresponsive and freezes a lot when trying to do anything, like trying to type in copilot chat or navigating through the menus. Can't use pieces app at all! Tried reinstalling it, but it made no difference. Desktop app version is 3.3.6\n\nhttps://github.com/user-attachments/assets/e75595c0-31c8-4560-b08b-9ad3de8af6ab\n## Summary of GitHub Issue Conversation\n\n**Key Points:**\n\n* User (@94tejas) reported the app freezing, specifically with text fields.\n* Pieces support identified a potential connection to a known Flutter issue ([#153560](https://github.com/flutter/flutter/issues/153560)).\n* The issue primarily affects users of specific versions of Linux Mint with on-screen keyboards.\n\n**Problems:**\n\n* App freezes when using specific text fields on Linux Mint, likely due to a conflict with on-screen keyboards.\n\n**Solutions:**\n\n* **Workaround:** Disable the virtual keyboard in accessibility settings. This solved the user's issue.\n* **Long-term fix:** Await a fix from the Flutter team, which is anticipated soon.\n\n**Current Status:**\n\n* Issue closed as the workaround resolved the user's problem.\n* Pieces will continue to monitor the situation and implement the fix when it becomes available through Flutter updates.",
+          "activity_level": 5.7
+        },
+        {
+          "id": 624,
+          "title": "PiecesOS was unable to launch.",
+          "text": "PiecesOS was unable to launch.\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nlatest\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n![Image](https://github.com/user-attachments/assets/7a6a7957-5aa1-4d53-b492-cf4470aa5edc)\n## GitHub Issue Summary:\n\n**Key Points:**\n\n* User @DevWizard24 reported an issue with `Pieces os` not launching on their Windows device.\n* The `pieces-support-bot` provided helpful resources and related issues.\n* @GetReal444 experienced the same problem and suggested attaching logs.\n* @mark-at-pieces acknowledged the issue and requested logs for further investigation.\n* @tsavo-at-pieces informed about a related issue and a planned release to address the problem.\n\n**Problems Identified:**\n\n* `Pieces os` fails to launch on some Windows devices, likely due to stricter hardware requirements in version 11.1.1.\n\n**Solutions Proposed/Implemented:**\n\n* @mark-at-pieces requested user logs for troubleshooting.\n* @tsavo-at-pieces announced a planned release to fix the issue.\n\n**Current Status/Outcome:**\n\n* A patch release is expected within 24-48 hours to address the launch issue. \n* The users involved will be notified about the update.",
+          "activity_level": 8.18
+        }
+      ]
+    },
+    {
+      "title": "Pieces OS fails to launch on various platforms",
+      "description": "Users on Windows and Ubuntu are experiencing issues launching Pieces OS after updating to version 11.1.1. The error messages point to problems with the 'CouchbaseLiteVectorSearch' extension and potential hardware incompatibility, specifically AVX2 support. The Pieces team has acknowledged the issue and is actively working on a patch, expected to be released within 24-48 hours.",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 619,
+          "title": "Facing error on Ubuntu while opening Pieces \"DatabaseException\"",
+          "text": "Facing error on Ubuntu while opening Pieces \"DatabaseException\"\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nLinux\n\n### Your Pieces OS Version\n\n11.1.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nFaccing \"DatabaseException(Unable to load 'CouchbaseLiteVectorSearch' extenstion\" (1), code : can'tOpenFile)\" on my ubuntu desktop \n##  Summary of GitHub Issue Conversation:\n\n**Key points raised:**\n\n* @Rohit0072 reported an issue with booting the Pieces app.\n* Pieces Support bot suggested related issues and resources. \n* @mark-at-pieces offered further help and contact information.\n* @tsavo-at-pieces mentioned the issue relates to other reported problems (#620, #624, and #625) and assured a potential fix release by EOD.\n\n\n**Problems identified:**\n\n* Pieces app fails to boot up.\n\n**Solutions proposed/implemented:**\n\n* A potential fix release scheduled for the end of the day. \n\n\n**Current status/outcome:**\n\n* Issue acknowledged by Pieces team.\n* Fix in development, expected to be released within a day.",
+          "activity_level": 4.63
+        },
+        {
+          "id": 620,
+          "title": "Pieces os doesn't launch at all for past week. Can't use pieces at all",
+          "text": "Pieces os doesn't launch at all for past week. Can't use pieces at all\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.1.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nFor the past week, anytime that I launch pieces I see this: \n\n![Image](https://github.com/user-attachments/assets/61f18fb6-8846-46d8-8747-5c415fd2e82d)\n\nPieces OS just doesn't open, no matter what.\n\nI tried to reinstall everything, but also no progress.\n\nHow to fix it? (Also to mention, Pieces desktop app is in Early Access program, but I don't know if this information is useful)\n## Summary of GitHub Issue Conversation:\n\n**Key points raised:**\n\n* User \"GetReal444\" was experiencing issues booting up the application.\n* Error logs indicated a problem with the `CouchbaseLiteVectorSearch` extension requiring AVX2 support, which was missing on the user's machine.\n\n**Problems identified:**\n\n* The application had a hardware requirement for AVX2 support, which not all users' machines possessed.\n* This requirement was causing the application to fail to boot for a significant number of users.\n\n**Solutions proposed/implemented:**\n\n* The Pieces team acknowledged the issue and was actively working on a solution.\n* A temporary workaround involved providing the team with the user's machine specifications.\n* A patch was expected to be released within 24-48 hours.\n\n**Current status/outcome:**\n\n* The issue was affecting multiple users.\n* A fix was expected to be released by the end of the next day (2025-02-14).\n\n**Additional notes:**\n\n* The conversation involved several team members, including a support bot, a customer support representative, and a developer.\n* The team was responsive and communicative throughout the process.",
+          "activity_level": 7.74
+        },
+        {
+          "id": 624,
+          "title": "PiecesOS was unable to launch.",
+          "text": "PiecesOS was unable to launch.\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nlatest\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n![Image](https://github.com/user-attachments/assets/7a6a7957-5aa1-4d53-b492-cf4470aa5edc)\n## GitHub Issue Summary:\n\n**Key Points:**\n\n* User @DevWizard24 reported an issue with `Pieces os` not launching on their Windows device.\n* The `pieces-support-bot` provided helpful resources and related issues.\n* @GetReal444 experienced the same problem and suggested attaching logs.\n* @mark-at-pieces acknowledged the issue and requested logs for further investigation.\n* @tsavo-at-pieces informed about a related issue and a planned release to address the problem.\n\n**Problems Identified:**\n\n* `Pieces os` fails to launch on some Windows devices, likely due to stricter hardware requirements in version 11.1.1.\n\n**Solutions Proposed/Implemented:**\n\n* @mark-at-pieces requested user logs for troubleshooting.\n* @tsavo-at-pieces announced a planned release to fix the issue.\n\n**Current Status/Outcome:**\n\n* A patch release is expected within 24-48 hours to address the launch issue. \n* The users involved will be notified about the update.",
+          "activity_level": 8.18
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    "**Prioritize resolving launch issues:** The most frequent and active tickets indicate problems with Pieces OS launching, particularly after the 11.1.1 update. Focus on resolving these issues swiftly to minimize user disruption.",
+    "**Address AVX2 compatibility:** Investigate and implement solutions for the AVX2 compatibility problems preventing launch on some systems. This could involve providing alternative builds or clear guidance on system requirements.",
+    "**Improve performance on Linux:** Several reports highlight high CPU usage and unresponsiveness on Linux. Optimize Pieces OS performance on this platform to enhance user experience.",
+    "**Gather detailed system information:**  Request users experiencing launch or performance issues to provide detailed system specifications and logs. This will aid in faster diagnosis and resolution.",
+    "**Proactive communication:** Keep users informed about the status of known issues, planned fixes, and estimated timelines. This can be done through release notes, in-app notifications, or a dedicated status page.",
+    "**Enhance documentation:** Update documentation to include clear system requirements, troubleshooting steps for common issues, and workarounds for known problems. This empowers users to self-resolve issues where possible.",
+    "**Consider automated testing:** Implement automated testing to catch compatibility issues and performance regressions before release. This can help prevent similar issues from arising in the future."
+  ],
+  "message": "Daily support report generated successfully."
+}

@@ -1,0 +1,96 @@
+{
+  "success": true,
+  "date_range": {
+    "start": "2025-02-16T00:00:00+00:00",
+    "end": "2025-02-16T13:08:30.689900+00:00"
+  },
+  "summary": {
+    "total_tickets": 2,
+    "resolved_tickets": 0,
+    "open_tickets": 2
+  },
+  "ticket_breakdown": [
+    {
+      "category": "bug",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "app:desktop application",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "os:macos",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:pieces os",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:triaged",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "os:windows",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:new",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    }
+  ],
+  "most_active_tickets": [
+    {
+      "number": 613,
+      "title": "PiecesOS takes a while to boot-up(cannot run): (Unable to make it past ensure core dependency in the Desktop application)",
+      "activity_level": 14.84
+    },
+    {
+      "number": 631,
+      "title": "Pieces for Developers Not Working \u2013 Cloud Service & Local LLM Issues",
+      "activity_level": 4.42
+    }
+  ],
+  "common_issues": [
+    {
+      "title": "PiecesOS and Pieces for Developers Startup and Connectivity Issues",
+      "description": "Users report long boot times, getting stuck on \"dependencies scenario\", and \"trouble reaching cloud services\" errors. Suggested solutions include updating to the latest version, checking OneDrive for conflicting folders, verifying internet connection, and using the appInstaller version on Windows. Contact support if issues persist.",
+      "frequency": 2,
+      "related_issues": [
+        {
+          "id": 613,
+          "title": "PiecesOS takes a while to boot-up(cannot run): (Unable to make it past ensure core dependency in the Desktop application)",
+          "text": "PiecesOS takes a while to boot-up(cannot run): (Unable to make it past ensure core dependency in the Desktop application)\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n3.3.5\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI got a popup that there was a new version of Pieces OS and that I needed to click and restart to update. But now the desktop app won't start anymore, being stuck on the core dependencies.\n\nI can click on the link, but nothing changes when I do that.\n\n![Image](https://github.com/user-attachments/assets/716af38b-6a71-4162-80f8-b9e9e44f7059)\n## Summary and Analysis of GitHub Issue Conversation\n\n**Key Issues:**\n\n* PiecesOS takes a long time to boot, often getting stuck on the \"dependencies scenario\" tab.\n* Installation issues, including missing systray icon and port connection for PFD.\n* Handshake error in client, likely due to self-signed certificate in certificate chain.\n\n**Solutions:**\n\n* Update to the latest version (11.1.1 or 11.1.2) of PiecesOS.\n* Check for com.pieces.os folder within OneDrive/Documents and either remove it (if empty) or contact support.\n* If on Windows, try running the appInstaller version of PiecesOS.\n* Resolve any potential issues with OneDrive on your system.\n* Ensure you have a compatible CPU (not older than 2015).\n* Check user logs for more information on the issue.\n* Join a support meeting for real-time assistance.\n\n**Problems Identified:**\n\n* Major data migration during PiecesOS upgrade.\n* Incompatibility with certain system configurations (OneDrive, older CPUs).\n* Potential issues with self-signed certificates.\n\n**Current Status:**\n\n* Issue appears resolved for some users, including those on Windows.\n* Some users still experiencing problems, including rogierlegit on MacOS Monterey.\n* PiecesOS team continuing to investigate and resolve remaining issues.\n\n**Recommendations:**\n\n* Update to the latest version of PiecesOS.\n* Contact PiecesOS support for further assistance if issues persist.\n* Ensure you have met all system requirements.\n* Check for compatibility issues with other software.\n* Provide detailed logs and information about your system configuration to support.\n\n## Outcome:**\n\nThe issue has been partially resolved with the release of new versions and identified solutions. However, some users continue to experience problems, requiring further investigation by the PiecesOS team.",
+          "activity_level": 14.84
+        },
+        {
+          "id": 631,
+          "title": "Pieces for Developers Not Working \u2013 Cloud Service & Local LLM Issues",
+          "text": "Pieces for Developers Not Working \u2013 Cloud Service & Local LLM Issues\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nv11.1.2\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n**Title:** Pieces for Developers Not Working \u2013 Cloud Service & Local LLM Issues  \n\n**Description:**  \nHello Pieces team,  \n\nI have been using *Pieces for Developers* for the past 1.5 months and have been very impressed with its functionality. However, for the last 2\u20133 weeks, the application has stopped working. Whenever I enter a prompt, I receive the following message:  \n\n> *\"I'm sorry, we're having trouble reaching our cloud services. This is likely due to an issue with your local network, such as limited connectivity. Try checking your internet connection or switching your network, then try again. If that doesn't work, please contact support.\"*  \n\nI have verified my internet connection and tried switching networks, but the issue persists. Additionally, when I attempted to use a local LLM (Ollama) and different LLM aswell, I encountered the same error message, indicating that the problem is not limited to cloud services.  \n\nI would appreciate any guidance on how to resolve this issue. If a fix is not available, I may need to uninstall the application. I have attached relevant screenshots for reference.  \n\n**System Information:**  \n- Operating System: Windows 11\n- Pieces OS Version: v11.1.2\n- Pieces for Developer Version: v3.3.7 \n- Network Status: Stable / Switched Networks  \n\n**Steps to Reproduce:**  \n1. Open *Pieces for Developers*.  \n2. Enter a prompt.  \n3. Observe the error message regarding cloud service connectivity.  \n4. Attempt to use a local LLM (Ollama) and receive the same message.  \n\n**Expected Behavior:**  \nThe application should process prompts as expected, either via cloud services or local LLMs.  \n\n**Attachments:**  \n[Attach screenshots here] \n\n![Image](https://github.com/user-attachments/assets/157e569c-042f-4833-aa67-2bbd2f657f1d)\n\n![Image](https://github.com/user-attachments/assets/25fdf544-8465-45c2-a906-1e492d6533e4)\n \n\nLooking forward to your assistance. Thanks!\n## GitHub Issue Summary\n\n**Key Points:**\n\n* User @rohanrathi99 reported an issue with Copilot responding with \"I'm sorry. Something went wrong with processing. Please...\"\n* The Pieces team acknowledged the issue and assigned it to the appropriate member.\n* Related issues and helpful resources were provided to the user.\n\n**Problems Identified:**\n\n* Copilot is experiencing an error preventing it from processing requests properly.\n\n**Solutions Proposed/Implemented:**\n\n* No solutions are explicitly proposed in the conversation. The team is likely investigating the issue and will provide a solution when available.\n\n**Current Status/Outcome:**\n\n* The issue is currently being investigated by the Pieces team. There is no update on the resolution or outcome yet.\n\n**Additional Notes:**\n\n* The user was directed to related issues and helpful resources while they wait for a solution.",
+          "activity_level": 4.42
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    "\"Investigate the 'PiecesOS and Pieces for Developers Startup and Connectivity Issues' as it has the highest frequency and is impacting both PiecesOS and Pieces for Developers users.\"",
+    "\"Prioritize resolving ticket #613 ('PiecesOS takes a while to boot-up') due to its high activity level.\"",
+    "\"Look into the 'trouble reaching cloud services' error, potentially affecting both PiecesOS and Pieces for Developers as reported in multiple tickets.\"",
+    "\"Check for any common factors, such as specific operating systems (macOS and Windows) or Pieces OS versions, among the reported issues.\""
+  ],
+  "message": "Daily support report generated successfully."
+}

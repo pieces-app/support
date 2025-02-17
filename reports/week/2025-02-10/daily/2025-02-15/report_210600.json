@@ -1,0 +1,114 @@
+{
+  "success": true,
+  "date_range": {
+    "start": "2025-02-15T00:00:00+00:00",
+    "end": "2025-02-15T21:06:00.576792+00:00"
+  },
+  "summary": {
+    "total_tickets": 3,
+    "resolved_tickets": 0,
+    "open_tickets": 3
+  },
+  "ticket_breakdown": [
+    {
+      "category": "bug",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "os:macos",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:pieces os",
+      "received": 3,
+      "resolved": 0,
+      "pending": 3
+    },
+    {
+      "category": "status:triaged",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "ongoing",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "os:windows",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:desktop application",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:waiting_on_user_responses",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    }
+  ],
+  "most_active_tickets": [
+    {
+      "number": 625,
+      "title": "PiecesOS crash immediately after launch",
+      "activity_level": 14.21
+    },
+    {
+      "number": 620,
+      "title": "Pieces os doesn't launch at all for past week. Can't use pieces at all",
+      "activity_level": 8.5
+    },
+    {
+      "number": 150,
+      "title": "PiecesOS using too much RAM/spike in CPU",
+      "activity_level": 5.78
+    }
+  ],
+  "common_issues": [
+    {
+      "title": "PiecesOS launch and performance issues",
+      "description": "Users reported PiecesOS crashing after launch or experiencing high RAM/CPU usage. This was linked to hardware incompatibility with AVX2 instructions, particularly on older CPUs. The issue was addressed in version 11.1.2, which included a fix for AVX2 compatibility. Additionally, memory optimization features were implemented to improve resource management.",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 625,
+          "title": "PiecesOS crash immediately after launch",
+          "text": "PiecesOS crash immediately after launch\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n11.1.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nAfter upgrade PiecesOS to version 11.1..1 it crashes every time immediately after launch. Previous version worked well. Attached is the crash report log.\n\nEnvironment: \n\n- OS MacOS 15.2\n- CPU Intel \n\n[trace.log](https://github.com/user-attachments/files/18777512/trace.log)\n## Summary of GitHub Issue Conversation\n\n**Key Points Raised:**\n\n* Unable to Boot PiecesOS on Macos(Arm architecture) after updating to 11.1.0 (related issue)\n* PiecesOS was unable to launch (related issue)\n* Cannot launch pieces-for-developers after new installation on MacOS Sequoia 15.2 M1 chip (related issue)\n* User @gonzososa experiencing issues with the latest version of the application on macOS\n* User's CPU: Intel(R) Core(TM) i5-3210M @ 2.50GHz\n\n**Problems Identified:**\n\n* Issues booting and launching PiecesOS on specific macOS versions and architectures\n* Problem launching pieces-for-developers on a specific macOS version and chip \n* User's CPU lacking AVX2 support required by CouchbaseLiteVectorSearch\n\n**Solutions Proposed/Implemented:**\n\n* New vector library release to address AVX2 issues on different systems\n* Released version 11.1.2 with the fix\n\n**Current Status/Outcome:**\n\n* User @gonzososa confirmed the fix in version 11.1.2 resolved the issue.\n* Issue is considered resolved.\n\n**Additional Notes:**\n\n* The root cause of the issue was the user's CPU lacking AVX2 support, which is required by CouchbaseLiteVectorSearch.\n* The fix involved a new vector library release that addresses AVX2 issues on different systems.",
+          "activity_level": 14.21
+        },
+        {
+          "id": 620,
+          "title": "Pieces os doesn't launch at all for past week. Can't use pieces at all",
+          "text": "Pieces os doesn't launch at all for past week. Can't use pieces at all\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.1.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nFor the past week, anytime that I launch pieces I see this: \n\n![Image](https://github.com/user-attachments/assets/61f18fb6-8846-46d8-8747-5c415fd2e82d)\n\nPieces OS just doesn't open, no matter what.\n\nI tried to reinstall everything, but also no progress.\n\nHow to fix it? (Also to mention, Pieces desktop app is in Early Access program, but I don't know if this information is useful)\n## Summary of GitHub Issue Conversation:\n\n**Key Points Raised:**\n\n* User @GetReal444 was experiencing an issue booting up the Pieces OS application.\n* The issue was identified as related to a hardware requirement on the Pieces database service.\n* The specific issue involved an unsupported AVX2 instruction set on the user's machine.\n\n**Problems Identified:**\n\n* Pieces OS application was unable to launch due to an incompatible hardware requirement.\n* This issue was affecting a wider range of users than initially anticipated.\n\n**Solutions Proposed/Implemented:**\n\n* The Pieces team was actively working on a solution to address the hardware requirement.\n* A patch was expected to be released within 24-48 hours.\n* Users were advised to provide a screenshot of their machine's tech specs to help diagnose the issue.\n\n**Current Status/Outcome:**\n\n* The issue has been resolved with the release of PiecesOS version 11.1.2.\n* The user confirmed that the latest version fixed the booting problem.\n\n**Additional Notes:**\n\n* This issue was related to previous issues reported in #624 and #625.\n* The Pieces team was working around the clock to resolve the issue.",
+          "activity_level": 8.5
+        },
+        {
+          "id": 150,
+          "title": "PiecesOS using too much RAM/spike in CPU",
+          "text": "PiecesOS using too much RAM/spike in CPU\nSeveral users have called in recently about Pieces using too much RAM or causing a spike in CPU up to 100%. We are trying to track down this issue, and would appreciate any feedback about your experience with this if you are experiencing it. \r\n\r\nWe have a hunch it has something to do with internet connections, but aren't fully sure yet. \r\n\r\nIf you're experiencing this and wouldn't mind hopping on a call with us to show us, we would really appreciate it to help us troubleshoot! You can schedule a call [here](https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2iaRWpd1kA2k_xg2KrVi_jiTHo0POiMZSI9WAYsxs5jJ9sU2Rd2zKitLuSFd7l3FhatGzy5Vgt\r\n). \r\n\r\nA short-term solution is to restart PiecesOS whenever this occurs. \n## Summary of GitHub Issue Conversation Regarding Pieces OS Memory & CPU Usage:\n\n**Key points raised:**\n\n- High RAM and CPU usage by Pieces OS.\n- Reports of usage exceeding 5GB RAM and 50% CPU.\n- Concerns about mining and performance impact.\n- Queries about expected behavior and solutions.\n\n**Problems identified:**\n\n- Memory leaks and inefficient resource utilization.\n- Significant impact on system performance.\n\n**Solutions proposed/implemented:**\n\n- Memory optimization feature.\n- Replacing heavy database technologies with lighter alternatives (PiecesOS 11.1.0).\n- Additional work ongoing to improve resource efficiency.\n\n**Current status/outcome:**\n\n- Latest update (11.1.0) has shown significant improvement in CPU usage for some users.\n- Further optimization efforts are underway.\n\n**Overall, the issue of high resource consumption by Pieces OS is acknowledged and actively addressed by the development team. While the latest update has brought positive changes, further improvements are expected in the future.**\n\n**Note:** Some users reported continued issues even after the update. These cases should be investigated individually.",
+          "activity_level": 5.78
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    "**Prioritize resolving 'PiecesOS launch and performance issues'**: This issue is the most frequent and impacts user experience significantly. Focus on addressing the root causes, such as hardware incompatibility and memory optimization.",
+    "**Investigate reported high RAM/CPU usage**: While a fix was implemented in version 11.1.2, some users still experience this issue. Further investigation is needed to determine if it's a new variant or a persistent issue.",
+    "**Improve communication about known issues**: Proactively communicate known issues and their solutions to users through release notes, FAQs, or in-app notifications. This can reduce support ticket volume.",
+    "**Gather more detailed system information**: When users report issues, collect detailed system information (OS version, hardware specs, PiecesOS version) to help with faster diagnosis and resolution.",
+    "**Consider a bug bounty program**: Incentivize users to report bugs and security vulnerabilities by offering rewards. This can help identify and address issues more quickly."
+  ],
+  "message": "Daily support report generated successfully."
+}

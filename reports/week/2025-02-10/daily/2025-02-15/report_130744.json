@@ -1,0 +1,116 @@
+{
+  "success": true,
+  "date_range": {
+    "start": "2025-02-15T00:00:00+00:00",
+    "end": "2025-02-15T13:07:44.711410+00:00"
+  },
+  "summary": {
+    "total_tickets": 3,
+    "resolved_tickets": 0,
+    "open_tickets": 3
+  },
+  "ticket_breakdown": [
+    {
+      "category": "app:pieces os",
+      "received": 3,
+      "resolved": 0,
+      "pending": 3
+    },
+    {
+      "category": "ongoing",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "bug",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "os:windows",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:desktop application",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:waiting_on_user_responses",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "os:macos",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:triaged",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    }
+  ],
+  "most_active_tickets": [
+    {
+      "number": 625,
+      "title": "PiecesOS crash immediately after launch",
+      "activity_level": 13.35
+    },
+    {
+      "number": 620,
+      "title": "Pieces os doesn't launch at all for past week. Can't use pieces at all",
+      "activity_level": 8.5
+    },
+    {
+      "number": 150,
+      "title": "PiecesOS using too much RAM/spike in CPU",
+      "activity_level": 5.78
+    }
+  ],
+  "common_issues": [
+    {
+      "title": "PiecesOS Launch and Performance Issues",
+      "description": "Users reported high resource usage, crashes, and launch failures in PiecesOS versions 11.1.0 and 11.1.1. These issues were attributed to internet connection problems, database inefficiencies, and AVX2 compatibility conflicts. The Pieces team released updates (11.1.2) to address these issues, including database optimization and AVX2 compatibility fixes. Users are encouraged to update to the latest version for improved stability and performance.",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 150,
+          "title": "PiecesOS using too much RAM/spike in CPU",
+          "text": "PiecesOS using too much RAM/spike in CPU\nSeveral users have called in recently about Pieces using too much RAM or causing a spike in CPU up to 100%. We are trying to track down this issue, and would appreciate any feedback about your experience with this if you are experiencing it. \r\n\r\nWe have a hunch it has something to do with internet connections, but aren't fully sure yet. \r\n\r\nIf you're experiencing this and wouldn't mind hopping on a call with us to show us, we would really appreciate it to help us troubleshoot! You can schedule a call [here](https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2iaRWpd1kA2k_xg2KrVi_jiTHo0POiMZSI9WAYsxs5jJ9sU2Rd2zKitLuSFd7l3FhatGzy5Vgt\r\n). \r\n\r\nA short-term solution is to restart PiecesOS whenever this occurs. \n## Summary of GitHub Issue Conversation about PiecesOS High Resource Usage\n\n**Key Points Raised:**\n\n* PiecesOS is a centralized server running locally on your machine.\n* It uses a lot of RAM and CPU, especially when Live Context is enabled.\n* This can slow down the entire system and make it unusable for some users.\n\n**Problems Identified:**\n\n* High RAM and CPU usage even when not actively using the app.\n* Sudden spikes in resource usage.\n* Unresponsiveness of the system due to high resource usage.\n\n**Solutions Proposed/Implemented:**\n\n* \"Optimize Memory\" option to temporarily free up RAM.\n* Improved database technologies in PiecesOS 11.1.0 to reduce CPU and memory usage.\n* Further improvements planned for future releases.\n\n**Current Status/Outcome:**\n\n* Version 11.1.0 seems to have significantly reduced CPU usage for some users.\n* Memory usage is still high, but the \"Optimize Memory\" option helps.\n* Long-term improvements are still in progress.\n\n**Additional Points:**\n\n* Some users suggest disabling Live Context to reduce resource usage.\n* Others wish for a \"lite\" mode with fewer features and lower resource consumption.\n\n**Overall, PiecesOS is acknowledged to be resource-intensive, but the development team is working on improvements. Users are encouraged to report their experiences and provide feedback to help further optimize the app.**",
+          "activity_level": 5.78
+        },
+        {
+          "id": 620,
+          "title": "Pieces os doesn't launch at all for past week. Can't use pieces at all",
+          "text": "Pieces os doesn't launch at all for past week. Can't use pieces at all\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.1.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nFor the past week, anytime that I launch pieces I see this: \n\n![Image](https://github.com/user-attachments/assets/61f18fb6-8846-46d8-8747-5c415fd2e82d)\n\nPieces OS just doesn't open, no matter what.\n\nI tried to reinstall everything, but also no progress.\n\nHow to fix it? (Also to mention, Pieces desktop app is in Early Access program, but I don't know if this information is useful)\n## Summary of GitHub Issue Conversation:\n\n**Key points raised:**\n\n* User @GetReal444 reported an issue booting up Pieces OS.\n* The issue appears to be related to a database extension requiring AVX2 support, which is not available on all processors.\n* Pieces team acknowledged the issue and confirmed it affects multiple users.\n\n**Problems identified:**\n\n* Database extension requiring AVX2 support prevented Pieces OS from booting on certain machines.\n* This issue affected multiple users.\n\n**Solutions proposed/implemented:**\n\n* Pieces team investigated the issue and identified it as a dependency problem.\n* A new release (11.1.2) addressing the issue was released within 48 hours.\n\n**Current status/outcome:**\n\n* The issue has been resolved with the release of Pieces OS version 11.1.2.\n* User @GetReal444 confirmed that the issue is fixed after updating to the latest version.\n* Pieces team successfully handled the issue quickly and effectively.",
+          "activity_level": 8.5
+        },
+        {
+          "id": 625,
+          "title": "PiecesOS crash immediately after launch",
+          "text": "PiecesOS crash immediately after launch\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n11.1.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nAfter upgrade PiecesOS to version 11.1..1 it crashes every time immediately after launch. Previous version worked well. Attached is the crash report log.\n\nEnvironment: \n\n- OS MacOS 15.2\n- CPU Intel \n\n[trace.log](https://github.com/user-attachments/files/18777512/trace.log)\n## Summary of GitHub Issue Conversation (PiecesOS unable to launch)\n\n**Key Points Raised:**\n\n*  The user (@gonzososa) reported an issue where PiecesOS was unable to launch on their system.\n*  The user provided details about their system configuration, including the CPU.\n*  The Pieces team acknowledged the issue and identified it as a compatibility problem with AVX2 support in the new vector library.\n*  The team proposed a solution with a new release that included a fix for the AVX2 issue.\n\n**Problems Identified:**\n\n*  The new vector library in PiecesOS had AVX2 compatibility issues, preventing it from running on older CPUs lacking AVX2 support.\n\n**Solutions Proposed/Implemented:**\n\n*  The Pieces team released a new version (11.1.2) that addressed the AVX2 compatibility issue.\n\n**Current Status/Outcome:**\n\n*  The user confirmed that the issue was resolved with the new version.",
+          "activity_level": 13.35
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    "**Prioritize resolving PiecesOS launch and performance issues:** The most frequent and active support tickets are related to PiecesOS crashing or using excessive resources. Focus on addressing the root causes identified (internet connection problems, database inefficiencies, AVX2 compatibility) to improve user experience and reduce support volume.",
+    "**Improve communication about known issues:** Proactively communicate known issues and workarounds to users through release notes, FAQs, or in-app notifications. This can help reduce user frustration and support requests.",
+    "**Gather more detailed system information:** When users encounter crashes or performance issues, collect detailed system logs, CPU models, and PiecesOS versions to help diagnose and resolve issues faster.",
+    "**Consider creating a dedicated troubleshooting guide:** Develop a comprehensive troubleshooting guide for PiecesOS launch and performance issues, covering common problems, solutions, and workarounds. This can empower users to resolve issues independently and reduce reliance on support.",
+    "**Monitor user feedback for emerging issues:** Regularly analyze support tickets and community forums for patterns or emerging issues. This allows for proactive identification and resolution of problems before they become widespread.",
+    "**Improve error messages and logging:** Ensure error messages are clear, concise, and provide actionable information for users or support agents. Detailed logging can help developers identify and fix issues more efficiently.",
+    "**Invest in automated testing:** Implement automated testing to catch compatibility issues and regressions before releasing updates. This can help prevent issues like the AVX2 compatibility problem from reaching users."
+  ],
+  "message": "Daily support report generated successfully."
+}
