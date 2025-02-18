@@ -1,0 +1,77 @@
+{
+  "success": true,
+  "date_range": {
+    "start": "2025-02-18T00:00:00+00:00",
+    "end": "2025-02-18T13:09:54.528530+00:00"
+  },
+  "summary": {
+    "total_tickets": 1,
+    "resolved_tickets": 1,
+    "open_tickets": 0
+  },
+  "ticket_breakdown": [
+    {
+      "category": "bug",
+      "received": 1,
+      "resolved": 1,
+      "pending": 0
+    },
+    {
+      "category": "app:desktop application",
+      "received": 1,
+      "resolved": 1,
+      "pending": 0
+    },
+    {
+      "category": "os:macos",
+      "received": 1,
+      "resolved": 1,
+      "pending": 0
+    },
+    {
+      "category": "app:pieces os",
+      "received": 1,
+      "resolved": 1,
+      "pending": 0
+    },
+    {
+      "category": "status:triaged",
+      "received": 1,
+      "resolved": 1,
+      "pending": 0
+    }
+  ],
+  "most_active_tickets": [
+    {
+      "number": 613,
+      "title": "PiecesOS takes a while to boot-up(cannot run): (Unable to make it past ensure core dependency in the Desktop application)",
+      "activity_level": 16.62
+    }
+  ],
+  "common_issues": [
+    {
+      "title": "PiecesOS Startup Freeze at Core Dependency",
+      "description": "Users report PiecesOS Desktop app freezing at \"ensure core dependency\" after update.  Issue linked to data migration, OneDrive conflicts, and MacOS startup. Solutions include allowing time for migration, restarting app, removing OneDrive folder \"com.pieces.os\", updating to latest version, and closing/reopening app on MacOS.",
+      "frequency": 1,
+      "related_issues": [
+        {
+          "id": 613,
+          "title": "PiecesOS takes a while to boot-up(cannot run): (Unable to make it past ensure core dependency in the Desktop application)",
+          "text": "PiecesOS takes a while to boot-up(cannot run): (Unable to make it past ensure core dependency in the Desktop application)\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n3.3.5\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI got a popup that there was a new version of Pieces OS and that I needed to click and restart to update. But now the desktop app won't start anymore, being stuck on the core dependencies.\n\nI can click on the link, but nothing changes when I do that.\n\n![Image](https://github.com/user-attachments/assets/716af38b-6a71-4162-80f8-b9e9e44f7059)\n## PiecesOS Startup Issue Summary:\n\n**Key Points:**\n\n* **Initial Issue:** PiecesOS taking a long time to boot up (stuck at \"ensure core dependency\" in the Desktop app) and potentially not running at all.\n* **Troubleshooting:** \n    * Identified potential causes:\n        * Major data migration due to OS update (11.1.0)\n        * Conflicting files in OneDrive\n        * MacOS startup issues\n    * Suggested solutions:\n        * Allow PiecesOS time to migrate data (a few minutes)\n        * Restart the Pieces Desktop app\n        * Check for and remove com.pieces.os folder in OneDrive\n        * Update to PiecesOS 11.1.1 or 11.1.2\n        * Close and reopen the app (MacOS)\n        * Uninstall and reinstall the app\n    * Resolved issue for some users\n* **Ongoing Issue:** PiecesOS still not fully starting for some users, even after trying the suggested solutions.\n* **Next Steps:**\n    * Investigate further using provided logs\n    * Consider rolling back to previous OS version if issue persists\n\n**Additional Notes:**\n\n* The issue appears to be more prevalent on Windows and MacOS than on other platforms.\n* The team is working on a patch to prevent the hanging issue in the future.\n* Users are encouraged to report their experiences, including success and failure, with the suggested solutions.\n\n## Timeline:\n\n* **2025-02-05:** Issue reported by various users, including Shamas Habib and rogierlegit.\n* **2025-02-05:** PiecesOS team acknowledges the issue and begins investigating.\n* **2025-02-06:** PiecesOS team releases update 11.1.1, claiming to have resolved the issue.\n* **2025-02-07:** Some users report success with the update, while others still experience the issue.\n* **2025-02-11:** PiecesOS team acknowledges the issue persists for some users.\n* **2025-02-11:** OneDrive identified as a potential cause for some users.\n* **2025-02-14:** PiecesOS team releases update 11.1.2.\n* **2025-02-16:** rogierlegit reports issue persists with version 11.1.2 on MacOS.\n* **2025-02-17:** PiecesOS team acknowledges the issue on MacOS and suggests temporary solution of closing and re-opening the app.\n* **2025-02-17:** rogierlegit confirms temporary solution works.\n* **2025-02-18:** PiecesOS team announces upcoming patch to prevent hanging issue.",
+          "activity_level": 16.62
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    "**Investigate and address the PiecesOS startup freeze issue:** This is the most common issue reported, with users experiencing freezes at the \"ensure core dependency\" stage. Focus on resolving data migration conflicts, OneDrive interactions, and MacOS startup compatibility.",
+    "**Improve communication around updates:** Provide clear instructions and information about potential issues or changes users might encounter after an update. This can include proactively warning about data migration times, OneDrive conflicts, and recommended steps to avoid startup issues.",
+    "**Develop a more robust solution for MacOS startup issues:** While closing and reopening the app seems to work temporarily, a permanent fix is needed to address the underlying compatibility issue between PiecesOS and MacOS.",
+    "**Monitor the effectiveness of updates:** Track the number of users still experiencing the startup freeze after each update to measure the effectiveness of the implemented solutions. Continue to investigate and address the issue until it is fully resolved for all users.",
+    "**Gather more detailed logs and user feedback:** Encourage users to submit detailed logs and feedback when they encounter the startup freeze. This information can help pinpoint the root cause of the issue and develop more targeted solutions.",
+    "**Consider a rollback option for problematic updates:** In cases where an update causes widespread issues, have a plan in place to quickly and efficiently roll back to a previous stable version. This can minimize user disruption and frustration while a permanent fix is developed.",
+    "**Create a comprehensive troubleshooting guide:** Develop a detailed troubleshooting guide for common issues, including the PiecesOS startup freeze. This guide should be easily accessible to users through the PiecesOS website, help center, and support channels.",
+    "**Proactively monitor system health and performance:** Implement monitoring tools and processes to detect potential issues before they become widespread. This can help identify and address emerging problems early on, reducing the impact on users and support operations."
+  ],
+  "message": "Daily support report generated successfully."
+}
