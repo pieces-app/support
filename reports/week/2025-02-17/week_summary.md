@@ -1,6 +1,6 @@
 # Support Ticket Report
-- Generated: 2025-02-20 21:08:04
-- Period: 2025-02-17 to 2025-02-20
+- Generated: 2025-02-21 05:08:31
+- Period: 2025-02-17 to 2025-02-21
 
 ## Summary
 - **Total Tickets:** 11
@@ -11,64 +11,63 @@
 | Issue # | Title | Activity Level |
 |---------|-------|----------------|
 | [#613](https://github.com/pieces-app/support/issues/613) | PiecesOS takes a while to boot-up(cannot run): (Unable to make it past ensure core dependency in the Desktop application) | 15.47 |
-| [#625](https://github.com/pieces-app/support/issues/625) | PiecesOS crash immediately after launch | 9.33 |
+| [#625](https://github.com/pieces-app/support/issues/625) | PiecesOS crash immediately after launch | 8.96 |
 | [#624](https://github.com/pieces-app/support/issues/624) | PiecesOS was unable to launch. | 6.83 |
 | [#620](https://github.com/pieces-app/support/issues/620) | Pieces os doesn't launch at all for past week. Can't use pieces at all | 6.35 |
 | [#634](https://github.com/pieces-app/support/issues/634) | Unable to sign in! We aren't sure what happened. | 4.42 |
 
 ## Common Issues
-### 1. PiecesOS Boot-up and Launch Issues
-Users reported PiecesOS taking a long time to boot up or failing to launch, particularly after updates (11.1.0, 11.1.1). Issues were linked to data migration problems, stricter hardware requirements, and potential conflicts with OneDrive. Patches (11.1.1, 11.1.2, 3.3.8) were released to address these issues, resolving the problems for most users. Providing logs and system information aided in troubleshooting.
+### 1. PiecesOS fails to launch on startup
+Users report PiecesOS getting stuck on "ensure core dependencies" screen. This affected both MacOS and Windows users. Updating to the latest version (11.1.1 or 11.1.2) often resolved the issue. Providing user logs aided in diagnosis. In some cases, the issue stemmed from stricter hardware requirements in version 11.1.1, addressed in the 11.1.2 patch.
 
 **Related Issues:**
 - [#613](https://github.com/pieces-app/support/issues/613): PiecesOS takes a while to boot-up(cannot run): (Unable to make it past ensure core dependency in the Desktop application)
-- [#630](https://github.com/pieces-app/support/issues/630): core services
+- [#633](https://github.com/pieces-app/support/issues/633): PiecesOS was unable to launch
 - [#624](https://github.com/pieces-app/support/issues/624): PiecesOS was unable to launch.
 
-### 2. Pieces OS launch failure due to database error
-Multiple users reported Pieces OS failing to launch on Ubuntu, Windows, and macOS due to a "DatabaseException" related to the "CouchbaseLiteVectorSearch" extension. The issue stemmed from older CPUs lacking AVX2 support. The Pieces team resolved the issue by releasing version 11.1.2, which included a patch to address the AVX2 requirement. Users experiencing this issue are advised to update to the latest version.
+### 2. PiecesOS launch crash due to missing AVX2 support
+PiecesOS versions 11.1.1 had a bug causing crashes on launch for systems lacking AVX2 support. This affected macOS and Windows users. The issue stemmed from a new vector library with stricter hardware requirements. Pieces released version 11.1.2 with a fix, resolving the issue for users with compatible CPUs.
+
+**Related Issues:**
+- [#625](https://github.com/pieces-app/support/issues/625): PiecesOS crash immediately after launch
+- [#620](https://github.com/pieces-app/support/issues/620): Pieces os doesn't launch at all for past week. Can't use pieces at all
+- [#624](https://github.com/pieces-app/support/issues/624): PiecesOS was unable to launch.
+
+### 3. PiecesOS launch failure due to database error
+Multiple users reported PiecesOS failing to launch on Windows and Ubuntu due to a database error related to missing AVX2 hardware support. This issue primarily affected version 11.1.1. The Pieces team released a patch in version 11.1.2 to resolve this issue. Users experiencing this problem are advised to upgrade to the latest version.
 
 **Related Issues:**
 - [#619](https://github.com/pieces-app/support/issues/619): Facing error on Ubuntu while opening Pieces "DatabaseException"
 - [#620](https://github.com/pieces-app/support/issues/620): Pieces os doesn't launch at all for past week. Can't use pieces at all
-- [#625](https://github.com/pieces-app/support/issues/625): PiecesOS crash immediately after launch
+- [#624](https://github.com/pieces-app/support/issues/624): PiecesOS was unable to launch.
 
-### 3. PiecesOS Boot and Launch Issues
-Users reported issues with PiecesOS booting and launching after updating to version 11.1.0 and 11.1.1. The issues seem to stem from compatibility problems and stricter hardware requirements. Solutions included reinstalling the correct version for the architecture, waiting for a patch release (11.1.2), and providing logs for further troubleshooting.
+### 4. PiecesOS 11.1.1 fails to launch on some systems
+Users reported PiecesOS 11.1.1 failing to launch, particularly on Mac with Apple Silicon and some Windows machines. This was attributed to stricter hardware requirements in the 11.1.1 update. The issue was addressed in version 11.1.2, encouraging users to update to the latest version.
 
 **Related Issues:**
 - [#615](https://github.com/pieces-app/support/issues/615): Unable to Boot PiecesOS on Macos(Arm architecture) After updating to 11.1.0
 - [#624](https://github.com/pieces-app/support/issues/624): PiecesOS was unable to launch.
 - [#630](https://github.com/pieces-app/support/issues/630): core services
 
-### 4. PiecesOS Connectivity and Launch Issues
-Users report PiecesOS failing to connect to cloud services or launch, often encountering "Unable to sign in" errors. This might stem from network configuration, firewall restrictions, or software bugs. Suggested solutions include checking internet connection, verifying firewall settings, ensuring PiecesOS is updated, and consulting Pieces support.
+### 5. PiecesOS Connectivity and Launch Issues
+Users are experiencing problems with PiecesOS connecting to cloud services and launching properly. This is possibly due to network configuration, firewall settings, or software dependencies. Suggested solutions include checking internet connection, verifying firewall settings, ensuring PiecesOS dependencies are met, and reviewing logs for detailed error messages.
 
 **Related Issues:**
 - [#634](https://github.com/pieces-app/support/issues/634): Unable to sign in! We aren't sure what happened.
 - [#631](https://github.com/pieces-app/support/issues/631): Pieces for Developers Not Working – Cloud Service & Local LLM Issues
 - [#633](https://github.com/pieces-app/support/issues/633): PiecesOS was unable to launch
 
-### 5. PiecesOS Connectivity and Service Issues
-Users are experiencing issues with PiecesOS connecting to cloud services and utilizing local LLMs.  This is likely due to network configuration or firewall issues.  Solutions include checking network settings, firewall rules, and upgrading to the latest PiecesOS version (11.1.2).
-
-**Related Issues:**
-- [#591](https://github.com/pieces-app/support/issues/591): Unable to open Pieces Copilot Service
-- [#631](https://github.com/pieces-app/support/issues/631): Pieces for Developers Not Working – Cloud Service & Local LLM Issues
-- [#630](https://github.com/pieces-app/support/issues/630): core services
-
 
 ## Recommendations
-- **Prioritize resolution of PiecesOS boot and launch issues:** These issues are the most frequent and impactful, causing frustration for users upgrading to newer versions. Focus on addressing the root causes, such as data migration problems, hardware compatibility, and conflicts with other software like OneDrive.
-- **Improve communication and troubleshooting for MacOS users:** Ensure dedicated support and resources are available for MacOS users to avoid overlooking platform-specific issues.
-- **Investigate and address connectivity and cloud service issues:** Identify the root causes of connection failures, including network configuration, firewall restrictions, and potential software bugs. Provide clear troubleshooting steps for users experiencing these issues.
-- **Enhance error messaging and logging:** Provide more informative error messages to users, clearly explaining the problem and potential solutions. Improve logging mechanisms to aid in faster and more efficient troubleshooting.
-- **Proactively monitor for emerging issues:** Implement systems to track common issues and user reports, allowing for quicker identification and resolution of widespread problems. Consider setting up monitoring for error logs and user feedback channels.
-- **Create a comprehensive knowledge base:** Develop a detailed knowledge base with articles, FAQs, and troubleshooting guides covering common issues, installation instructions, and feature explanations. This will empower users to self-serve and reduce the support load.
-- **Consider hardware requirements in future updates:** Clearly communicate any changes in hardware requirements to users before releasing updates. Provide compatibility information and alternative solutions for users with older hardware.
-- **Gather user feedback on updates:** Implement a system for gathering user feedback on new releases and updates. This will help identify potential issues early on and improve the overall user experience.
-- **Improve support bot's effectiveness:** Enhance the support bot's ability to understand and respond to user queries. Provide it with more comprehensive information and train it on past support interactions to improve its accuracy and helpfulness.
-- **Explore real-time debugging options:** Offer real-time debugging sessions for complex issues that require direct interaction with support agents. This can expedite the troubleshooting process and improve user satisfaction.
+- **Prioritize resolution of launch issues:** The most frequent and active tickets revolve around PiecesOS launch failures. Focus on identifying the root causes and implementing permanent fixes.
+- **Improve communication about hardware requirements:** Clearly communicate the minimum hardware requirements for PiecesOS, especially AVX2 support, to prevent installation and launch issues.
+- **Enhance error messaging and logging:** Provide more informative error messages to users and ensure detailed logs are generated to aid in faster diagnosis and resolution.
+- **Develop a troubleshooting guide for connectivity problems:** Create a comprehensive guide for users experiencing connectivity issues with cloud services, covering network configuration, firewall settings, and dependency checks.
+- **Investigate and address issues with Pieces for Developers:** Several tickets indicate problems with Pieces for Developers, including cloud service access and local LLM usage. Investigate these issues thoroughly and provide timely solutions.
+- **Consider a more robust hardware check during installation:** Implement a system check during installation to detect incompatible hardware and alert users before installation to prevent subsequent launch problems.
+- **Proactively monitor for similar issues:** Develop a system to monitor support tickets for recurring issues and prioritize addressing them to prevent widespread user impact.
+- **Improve discoverability of existing resources:** Ensure users can easily find relevant documentation, FAQs, and troubleshooting guides to encourage self-service resolution for common problems.
+- **Gather user feedback on error messages and support experience:** Collect feedback from users on the clarity of error messages and their overall support experience to identify areas for improvement.
 
 ## Daily Reports
 Here are the daily reports for this week:
