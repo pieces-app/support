@@ -1,0 +1,96 @@
+{
+  "success": true,
+  "date_range": {
+    "start": "2025-02-25T00:00:00+00:00",
+    "end": "2025-02-25T21:06:21.503413+00:00"
+  },
+  "summary": {
+    "total_tickets": 3,
+    "resolved_tickets": 1,
+    "open_tickets": 2
+  },
+  "ticket_breakdown": [
+    {
+      "category": "bug",
+      "received": 3,
+      "resolved": 1,
+      "pending": 2
+    },
+    {
+      "category": "os:windows",
+      "received": 3,
+      "resolved": 1,
+      "pending": 2
+    },
+    {
+      "category": "app:desktop application",
+      "received": 3,
+      "resolved": 1,
+      "pending": 2
+    },
+    {
+      "category": "status:triaged",
+      "received": 3,
+      "resolved": 1,
+      "pending": 2
+    },
+    {
+      "category": "app:pieces os",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    }
+  ],
+  "most_active_tickets": [
+    {
+      "number": 633,
+      "title": "PiecesOS was unable to launch",
+      "activity_level": 7.0
+    },
+    {
+      "number": 631,
+      "title": "Pieces for Developers Not Working \u2013 Cloud Service & Local LLM Issues",
+      "activity_level": 5.86
+    },
+    {
+      "number": 590,
+      "title": "Non-dismissable overlay message.",
+      "activity_level": 3.71
+    }
+  ],
+  "common_issues": [
+    {
+      "title": "Pieces for Developers Launch and Connectivity Issues",
+      "description": "Users report Pieces for Developers failing to launch or connect to cloud/local LLMs. This might be due to firewall configurations, conflicting installations (e.g., Microsoft Store vs. EXE), hardware limitations with local LLMs, or PiecesOS startup issues. Solutions include checking firewall settings, removing duplicate installations, using smaller local models, and managing PiecesOS startup behavior.",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 631,
+          "title": "Pieces for Developers Not Working \u2013 Cloud Service & Local LLM Issues",
+          "text": "Pieces for Developers Not Working \u2013 Cloud Service & Local LLM Issues\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nv11.1.2\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n**Title:** Pieces for Developers Not Working \u2013 Cloud Service & Local LLM Issues  \n\n**Description:**  \nHello Pieces team,  \n\nI have been using *Pieces for Developers* for the past 1.5 months and have been very impressed with its functionality. However, for the last 2\u20133 weeks, the application has stopped working. Whenever I enter a prompt, I receive the following message:  \n\n> *\"I'm sorry, we're having trouble reaching our cloud services. This is likely due to an issue with your local network, such as limited connectivity. Try checking your internet connection or switching your network, then try again. If that doesn't work, please contact support.\"*  \n\nI have verified my internet connection and tried switching networks, but the issue persists. Additionally, when I attempted to use a local LLM (Ollama) and different LLM aswell, I encountered the same error message, indicating that the problem is not limited to cloud services.  \n\nI would appreciate any guidance on how to resolve this issue. If a fix is not available, I may need to uninstall the application. I have attached relevant screenshots for reference.  \n\n**System Information:**  \n- Operating System: Windows 11\n- Pieces OS Version: v11.1.2\n- Pieces for Developer Version: v3.3.7 \n- Network Status: Stable / Switched Networks  \n\n**Steps to Reproduce:**  \n1. Open *Pieces for Developers*.  \n2. Enter a prompt.  \n3. Observe the error message regarding cloud service connectivity.  \n4. Attempt to use a local LLM (Ollama) and receive the same message.  \n\n**Expected Behavior:**  \nThe application should process prompts as expected, either via cloud services or local LLMs.  \n\n**Attachments:**  \n[Attach screenshots here] \n\n![Image](https://github.com/user-attachments/assets/157e569c-042f-4833-aa67-2bbd2f657f1d)\n\n![Image](https://github.com/user-attachments/assets/25fdf544-8465-45c2-a906-1e492d6533e4)\n \n\nLooking forward to your assistance. Thanks!\n## Summary of GitHub Issue Conversation\n\n**Key Points Raised:**\n\n* Rohanrathi99 reported issues with making requests to Pieces cloud services and local models.\n* Mark-at-Pieces suspected firewall or network configuration issues and requested log files.\n\n**Problems Identified:**\n\n* Firewall or network configuration might be blocking outgoing requests.\n* Local model issues might be due to hardware constraints.\n\n**Solutions Proposed/Implemented:**\n\n* Rohanrathi99 provided log files for investigation.\n* Mark-at-Pieces investigated the logs and identified two issues:\n    * Cloud LLM issue caused by a personal OpenApi key (resolved by removing the key).\n    * Local LLM issue likely due to hardware constraints (resolved by using a smaller local model).\n\n**Current Status/Outcome:**\n\n* Both cloud and local LLM issues are resolved.\n\n**Additional Notes:**\n\n* A meeting was scheduled to discuss the issues further and identify the root cause.\n* The issue was resolved before the meeting took place.",
+          "activity_level": 5.86
+        },
+        {
+          "id": 633,
+          "title": "PiecesOS was unable to launch",
+          "text": "PiecesOS was unable to launch\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.1.2.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nEnsure core Dependencies ... (retry setup)\n\n![Image](https://github.com/user-attachments/assets/8b426c73-aebb-4905-857f-bdee4cad2882)\n## Summary of GitHub Issue Conversation\n\n**Key Points Raised:**\n\n* MR-AAYU is experiencing issues booting up the Pieces for Developers Desktop application.\n* The issue appears to be related to having Pieces for Developers installed twice on the machine - once from the Microsoft Store and once from the EXE installer.\n\n**Problems Identified:**\n\n* Duplicate installation of Pieces for Developers is causing conflicts and preventing the application from launching.\n\n**Solutions Proposed/Implemented:**\n\n* Nathan-courtney-pieces suggests checking for Pieces OS logs in a specific location:\n    * c://Users/{USER}/Documents/com.pieces.os/production/support/logs\n* It's worth noting that Pieces OS is a separate application required for Pieces for Developers to function.\n\n**Current Status/Outcome:**\n\n* The conversation ends with Nathan-courtney-pieces asking MR-AAYU to check for logs in the specified location. \n* It's unclear whether the issue has been resolved or not.\n\n**Additional Notes:**\n\n* MR-AAYU appears to be somewhat impatient, repeatedly requesting a fix for the issue.\n* The conversation could benefit from a clearer explanation of the issue and the recommended solution.",
+          "activity_level": 7.0
+        },
+        {
+          "id": 590,
+          "title": "Non-dismissable overlay message.",
+          "text": "Non-dismissable overlay message.\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nv11.0.4\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nMy Pieces app launches at Windows startup (intended). Sometimes, (possibly after a background update?), this dialog appears on my desktop. I don't know what it means, exactly, but I cannot click \"Ok\" and there is no other way to dismiss it. My only option appears to be to restart the computer, which is often impractical. Please fix!\n\n![Image](https://github.com/user-attachments/assets/f231ef56-3d59-4e94-8cb5-2b54249900cc)\n## Summary of GitHub issue conversation:\n\n**Key points raised:**\n\n* ThemePark is experiencing an issue with the Pieces Desktop app not launching on their Windows 10 PC.\n* ThemePark uses PiecesOS, Pieces Suite, and Pieces Desktop.\n* Mack-at-pieces suspects a timing conflict between PiecesOS updating and the Desktop App launching on Startup.\n* ThemePark confirms that PiecesOS is the app configured to launch on Startup.\n\n**Problems identified:**\n\n* Pieces Desktop app doesn't launch automatically on startup.\n* ThemePark encounters a \"Launch\" button and a non-dismissable overlay message after attempting to launch the app.\n* This issue seems to occur after using Pieces for VS Code for about 10 minutes.\n\n**Solutions proposed/implemented:**\n\n* Mack-at-pieces suggests switching the Startup app to Pieces Desktop instead of PiecesOS or not running either app on Startup.\n* ThemePark wants to explore other options and seeks further advice.\n\n**Current status/outcome:**\n\n* ThemePark needs further assistance in resolving the issue.\n* Mack-at-pieces awaits ThemePark's response to propose additional solutions.\n\n**Additional information:**\n\n* ThemePark is running Pieces for VS Code.\n* The issue seems to occur after using the app for a specific duration.\n* ThemePark provided a screenshot of the error message.",
+          "activity_level": 3.71
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    "Investigate and address the root cause of Pieces for Developers launch and connectivity issues, focusing on firewall configurations, conflicting installations, hardware limitations with local LLMs, and PiecesOS startup issues.",
+    "Improve communication and documentation regarding PiecesOS startup behavior and its interaction with Pieces for Developers.",
+    "Provide clearer guidance on resolving duplicate installations of Pieces for Developers, particularly from different sources like the Microsoft Store and EXE installer.",
+    "Explore solutions to prevent non-dismissable overlay messages and improve error handling in the Pieces Desktop app, especially after background updates.",
+    "Consider implementing a more robust system for detecting and resolving conflicts between PiecesOS updates and the Desktop App launching on startup."
+  ],
+  "message": "Daily support report generated successfully."
+}
