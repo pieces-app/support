@@ -1,5 +1,5 @@
 # Support Ticket Report
-- Generated: 2025-02-26 13:12:23
+- Generated: 2025-02-26 21:07:34
 - Period: 2025-02-24 to 2025-02-26
 
 ## Summary
@@ -10,60 +10,60 @@
 ## 5 Most Active Tickets
 | Issue # | Title | Activity Level |
 |---------|-------|----------------|
-| [#640](https://github.com/pieces-app/support/issues/640) | Installing Ollama - Forever | 10.50 |
-| [#610](https://github.com/pieces-app/support/issues/610) | Pieces Desktop app, account linking never acheived for several years? | 7.86 |
+| [#640](https://github.com/pieces-app/support/issues/640) | Installing Ollama - Forever | 8.18 |
+| [#610](https://github.com/pieces-app/support/issues/610) | Pieces Desktop app, account linking never acheived for several years? | 7.43 |
 | [#633](https://github.com/pieces-app/support/issues/633) | PiecesOS was unable to launch | 6.62 |
-| [#641](https://github.com/pieces-app/support/issues/641) | Invalid port http://0.0.0.0:null/connect | 6.50 |
 | [#631](https://github.com/pieces-app/support/issues/631) | Pieces for Developers Not Working – Cloud Service & Local LLM Issues | 5.68 |
+| [#641](https://github.com/pieces-app/support/issues/641) | Invalid port http://0.0.0.0:null/connect | 4.74 |
 
 ## Common Issues
-### 1. Ollama Integration Issues in Pieces OS
-Users are experiencing problems with Ollama integration in Pieces OS, encountering errors related to cloud service connectivity, Cuda DLLs, and conflicting instances. Proposed solutions include checking network configurations, reinstalling Ollama and Pieces OS, managing startup order, and using smaller local models. Pieces OS version 11.1.2 includes a potential fix, but further testing is required.
+### 1. PiecesOS Installation and Functionality Issues
+Users are experiencing problems with PiecesOS installation, cloud service connectivity, and local LLM usage. Solutions include verifying internet connection, checking firewall settings, removing duplicate installations, using smaller local LLMs, and contacting support for further assistance.
 
 **Related Issues:**
 - [#631](https://github.com/pieces-app/support/issues/631): Pieces for Developers Not Working – Cloud Service & Local LLM Issues
 - [#640](https://github.com/pieces-app/support/issues/640): Installing Ollama - Forever
-- [#570](https://github.com/pieces-app/support/issues/570): Pieces OS conflicting with Installed Ollama Server?
+- [#633](https://github.com/pieces-app/support/issues/633): PiecesOS was unable to launch
 
-### 2. PiecesOS: Issues with Account Linking and Functionality
-Users report problems with linking accounts (Google, GitHub) and application functionality, including cloud service connection errors and local LLM issues. Solutions involve troubleshooting network configurations, resolving OpenApi key conflicts, using smaller local models, and addressing duplicate installations. A new account linking system is planned for future release.
+### 2. PiecesOS Account Linking and Connectivity Issues
+Users report problems with PiecesOS account linking, particularly with Google and GitHub integration. Some experience difficulties connecting to cloud services or using local LLMs due to potential firewall, network configuration, or hardware constraints. Solutions include verifying installations, checking network settings, removing conflicting personal API keys, and using smaller local LLMs. Pieces team actively investigates issues and offers support via GitHub and scheduled calls.
 
 **Related Issues:**
 - [#610](https://github.com/pieces-app/support/issues/610): Pieces Desktop app, account linking never acheived for several years?
+- [#633](https://github.com/pieces-app/support/issues/633): PiecesOS was unable to launch
 - [#631](https://github.com/pieces-app/support/issues/631): Pieces for Developers Not Working – Cloud Service & Local LLM Issues
+
+### 3. Ollama Installation and Startup Issues
+Users report Pieces OS failing to recognize existing Ollama installations, leading to startup errors. This might involve Cuda dll errors or infinite installation loops. Proposed solutions include reinstalling Ollama, Pieces OS, or both, and ensuring Pieces OS is not launching its own Ollama instance.
+
+**Related Issues:**
+- [#570](https://github.com/pieces-app/support/issues/570): Pieces OS conflicting with Installed Ollama Server?
+- [#640](https://github.com/pieces-app/support/issues/640): Installing Ollama - Forever
 - [#633](https://github.com/pieces-app/support/issues/633): PiecesOS was unable to launch
 
-### 3. PiecesOS Launch Issues
-Users are experiencing difficulties launching PiecesOS due to various reasons like invalid port configurations, cloud service connection problems, and potential conflicts with multiple installations. Solutions include verifying network connectivity, checking firewall settings, ensuring correct port values, and resolving installation conflicts.
+### 4. Pieces for Developers Connectivity Issues
+Users report Pieces for Developers failing to connect to cloud services or utilize local LLMs. This can be due to firewall configurations, incorrect API keys, hardware limitations, or duplicate installations. Solutions include checking network settings, verifying API keys, using smaller LLMs, or ensuring a single Pieces for Developers installation.
 
 **Related Issues:**
 - [#641](https://github.com/pieces-app/support/issues/641): Invalid port http://0.0.0.0:null/connect
-- [#631](https://github.com/pieces-app/support/issues/631): Pieces for Developers Not Working – Cloud Service & Local LLM Issues
 - [#633](https://github.com/pieces-app/support/issues/633): PiecesOS was unable to launch
-
-### 4. PiecesOS Launch and Connectivity Issues
-Users report PiecesOS failing to launch or experiencing connectivity problems with cloud services and local LLMs. This can be due to conflicting installations, background updates, firewall restrictions, or hardware limitations. Solutions include checking for duplicate installations, managing startup applications, verifying network connectivity, and using smaller local models or cloud services.
-
-**Related Issues:**
-- [#633](https://github.com/pieces-app/support/issues/633): PiecesOS was unable to launch
-- [#590](https://github.com/pieces-app/support/issues/590): Non-dismissable overlay message.
 - [#631](https://github.com/pieces-app/support/issues/631): Pieces for Developers Not Working – Cloud Service & Local LLM Issues
 
-### 5. Pieces Desktop Application UI Bugs
-Users are experiencing various UI issues in the Pieces desktop app, including horizontal scrolling problems in code snippets, cursor visibility issues in the Copilot chat window, and non-dismissable overlay messages. These issues persist across different operating systems like Windows and macOS. Proposed solutions involve checking for software updates, ensuring only one Pieces application launches at startup, and waiting for bug fixes from the Pieces team.
+### 5. Pieces OS and Pieces for Developers Connectivity Issues
+Users report Pieces OS and Pieces for Developers fail to connect to cloud services or utilize local LLMs. This can be caused by firewall configurations, incorrect API keys, hardware limitations, or Pieces OS installation issues. Solutions include checking network settings, verifying API keys, using smaller LLMs, or reinstalling Pieces OS.
 
 **Related Issues:**
-- [#639](https://github.com/pieces-app/support/issues/639): Horizontal scrolling doesn't work in JetbRains plugin
-- [#638](https://github.com/pieces-app/support/issues/638): Cursor will not hide when typing in the Copilot chat window
 - [#590](https://github.com/pieces-app/support/issues/590): Non-dismissable overlay message.
+- [#633](https://github.com/pieces-app/support/issues/633): PiecesOS was unable to launch
+- [#631](https://github.com/pieces-app/support/issues/631): Pieces for Developers Not Working – Cloud Service & Local LLM Issues
 
 
 ## Recommendations
-- **Prioritize Ollama Integration Issues:** Allocate additional resources to investigate and resolve the recurring problems users face with Ollama integration in Pieces OS. Focus on addressing cloud service connectivity errors, Cuda DLL conflicts, and issues related to conflicting instances.
-- **Improve Account Linking Experience:**  Expedite the development and rollout of the new account linking system planned for mid-March 2025. Ensure the new system provides a seamless and user-friendly experience for linking multiple accounts.
-- **Address PiecesOS Launch and Connectivity Problems:** Investigate and resolve the root causes behind PiecesOS launch failures and connectivity issues. This includes addressing invalid port configurations, cloud service connection errors, and potential conflicts with multiple installations.
-- **Enhance UI/UX of Pieces Desktop Application:** Prioritize fixing UI bugs affecting the Pieces desktop app, such as horizontal scrolling issues in code snippets, cursor visibility problems in the Copilot chat window, and non-dismissable overlay messages. Ensure a consistent and intuitive user experience across different operating systems.
-- **Proactive Communication and Documentation:**  Provide clear and timely communication to users regarding ongoing issues, planned fixes, and workarounds. Update documentation and support resources to address common questions and problems related to Ollama integration, account linking, and application launch issues.
+- "Investigate and address the root causes of PiecesOS installation and launch issues to reduce ticket volume."
+- "Improve documentation and user guidance on PiecesOS account linking, network configuration, and Ollama integration to prevent common issues."
+- "Explore solutions to improve PiecesOS and Pieces for Developers compatibility with existing Ollama installations."
+- "Prioritize resolving issues related to cloud service and local LLM connectivity, particularly on Windows and for Pieces for Developers."
+- "Review and optimize the account linking process, specifically for Google and GitHub integration, to ensure seamless user experience."
 
 ## Daily Reports
 Here are the daily reports for this week:
