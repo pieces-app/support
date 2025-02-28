@@ -1,56 +1,56 @@
 # Support Ticket Report
-- Generated: 2025-02-27 21:08:13
-- Period: 2025-02-24 to 2025-02-27
+- Generated: 2025-02-28 05:08:44
+- Period: 2025-02-24 to 2025-02-28
 
 ## Summary
-- **Total Tickets:** 10
+- **Total Tickets:** 11
 - **Resolved:** 2
-- **Open:** 8
+- **Open:** 9
 
 ## 5 Most Active Tickets
 | Issue # | Title | Activity Level |
 |---------|-------|----------------|
 | [#633](https://github.com/pieces-app/support/issues/633) | PiecesOS was unable to launch | 7.53 |
 | [#640](https://github.com/pieces-app/support/issues/640) | Installing Ollama - Forever | 7.35 |
-| [#610](https://github.com/pieces-app/support/issues/610) | Pieces Desktop app, account linking never acheived for several years? | 7.34 |
-| [#643](https://github.com/pieces-app/support/issues/643) | Shareable link is not generating | 6.94 |
+| [#610](https://github.com/pieces-app/support/issues/610) | Pieces Desktop app, account linking never acheived for several years? | 7.26 |
+| [#643](https://github.com/pieces-app/support/issues/643) | Shareable link is not generating | 5.50 |
 | [#631](https://github.com/pieces-app/support/issues/631) | Pieces for Developers Not Working – Cloud Service & Local LLM Issues | 4.99 |
 
 ## Common Issues
-### 1. PiecesOS Bugs and Errors
-Users are experiencing various issues with PiecesOS, including failure to generate shareable links, account linking problems, and launch errors.  Troubleshooting steps include checking for duplicate installations, OneDrive interference, and analyzing log files.  The Pieces team is actively working on solutions, including a new authentication system for improved account linking.
+### 1. Pieces OS Account Linking and Launching Issues
+Users report issues with linking multiple accounts (Google, GitHub) and launching Pieces OS. Linking problems often involve email discrepancies or legacy system limitations. Solutions include account resets, manual linking via support, and awaiting a new authentication service. Launching issues may involve conflicting installations or OneDrive interference, addressed by deleting conflicting folders or providing logs for further diagnosis.
 
 **Related Issues:**
 - [#643](https://github.com/pieces-app/support/issues/643): Shareable link is not generating
-- [#610](https://github.com/pieces-app/support/issues/610): Pieces Desktop app, account linking never acheived for several years?
 - [#633](https://github.com/pieces-app/support/issues/633): PiecesOS was unable to launch
+- [#610](https://github.com/pieces-app/support/issues/610): Pieces Desktop app, account linking never acheived for several years?
 
-### 2. PiecesOS and Pieces for Developers Launch Issues
-Users report failures to launch PiecesOS or connect to cloud services/local LLMs in Pieces for Developers. Issues often involve network configuration, firewall interference, OneDrive conflicts, or duplicate installations. Solutions include verifying network settings, disabling firewalls, relocating PiecesOS directories, removing duplicate installations, and using smaller LLMs.
+### 2. Pieces for Developers and Pieces OS Launch Issues
+Users are experiencing difficulties launching Pieces for Developers and Pieces OS on Linux and Windows. Issues include dependency connection errors, cloud service connectivity problems, and general launch failures. Proposed solutions involve checking log files, verifying network connectivity, resolving potential conflicts with OneDrive, and ensuring only one instance of the application is installed.
 
 **Related Issues:**
 - [#641](https://github.com/pieces-app/support/issues/641): Invalid port http://0.0.0.0:null/connect
 - [#631](https://github.com/pieces-app/support/issues/631): Pieces for Developers Not Working – Cloud Service & Local LLM Issues
 - [#633](https://github.com/pieces-app/support/issues/633): PiecesOS was unable to launch
 
-### 3. Ollama Integration Issues with Pieces OS
-Users report conflicts between Pieces OS and Ollama, resulting in installation failures, Cuda errors, and difficulties connecting to local or cloud LLMs. Solutions include reinstalling Ollama, checking system paths, verifying network connectivity, and ensuring sufficient hardware resources. Pieces OS updates address some compatibility issues, and direct support helps diagnose and resolve individual cases.
-
-**Related Issues:**
-- [#640](https://github.com/pieces-app/support/issues/640): Installing Ollama - Forever
-- [#570](https://github.com/pieces-app/support/issues/570): Pieces OS conflicting with Installed Ollama Server?
-- [#631](https://github.com/pieces-app/support/issues/631): Pieces for Developers Not Working – Cloud Service & Local LLM Issues
-
-### 4. PiecesOS Launch and Connectivity Issues
-Users report PiecesOS failing to launch, often due to conflicts with other installations or OneDrive. Network connectivity problems also arise, hindering cloud service and local LLM access. Solutions involve checking for duplicate installations, resolving OneDrive conflicts, verifying network settings, and ensuring sufficient system resources.
+### 3. PiecesOS Launch and Connectivity Issues
+Users report PiecesOS failing to launch or connect to cloud services and local LLMs. This can be due to OneDrive interference, Pieces for Developers installation conflicts, firewall blocking outgoing requests, or hardware limitations. Solutions include deleting conflicting folders, checking firewall settings, ensuring stable internet connection, using smaller LLMs, and contacting Pieces support.
 
 **Related Issues:**
 - [#633](https://github.com/pieces-app/support/issues/633): PiecesOS was unable to launch
 - [#590](https://github.com/pieces-app/support/issues/590): Non-dismissable overlay message.
 - [#631](https://github.com/pieces-app/support/issues/631): Pieces for Developers Not Working – Cloud Service & Local LLM Issues
 
-### 5. Pieces for Developers Functionality Issues
-Users report Pieces for Developers experiencing issues with horizontal scrolling in code snippets, cursor visibility in the Copilot chat window, and difficulties accessing cloud services or utilizing local LLMs. Solutions vary from bug fixes in upcoming releases to adjusting network settings or utilizing smaller local LLMs.
+### 4. Ollama Integration Issues with Pieces OS
+Users are experiencing difficulties connecting Pieces OS to Ollama, both locally installed and through Pieces. Issues include installation failures, CUDA errors, and Pieces OS launching its own Ollama instance. Solutions involve ensuring proper installation, resolving path conflicts, and verifying CUDA configurations. Pieces support is actively engaged in troubleshooting via calls and debugging.
+
+**Related Issues:**
+- [#640](https://github.com/pieces-app/support/issues/640): Installing Ollama - Forever
+- [#570](https://github.com/pieces-app/support/issues/570): Pieces OS conflicting with Installed Ollama Server?
+- [#631](https://github.com/pieces-app/support/issues/631): Pieces for Developers Not Working – Cloud Service & Local LLM Issues
+
+### 5. JetBrains Plugin and App Bugs
+Users report issues with the JetBrains plugin and Pieces app, including horizontal scrolling problems in code snippets, cursor visibility in the Copilot chat, and difficulties connecting to cloud services and local LLMs. Troubleshooting steps often involve checking internet connectivity, switching networks, and verifying firewall settings. Solutions may require updates from the Pieces team or adjustments to user configurations.
 
 **Related Issues:**
 - [#639](https://github.com/pieces-app/support/issues/639): Horizontal scrolling doesn't work in JetbRains plugin
@@ -59,16 +59,14 @@ Users report Pieces for Developers experiencing issues with horizontal scrolling
 
 
 ## Recommendations
-- **Prioritize resolution of PiecesOS launch issues:** This is a recurring and high-impact problem affecting users across different Pieces products. Focus on identifying the root causes, particularly conflicts with OneDrive and duplicate installations.
-- **Improve Ollama integration:** Address conflicts between Pieces OS and Ollama, including installation failures, Cuda errors, and connection problems. Enhance documentation and support resources to guide users on proper installation and configuration.
-- **Investigate and resolve account linking issues:** Address the persistent problem of account linking failures, especially for users with multiple accounts. The development of a new authentication system is a positive step, but ensure it effectively addresses these issues.
-- **Enhance communication and transparency:** Keep users informed about ongoing issues, planned fixes, and estimated resolution timelines. Provide clear and concise instructions for troubleshooting common problems.
-- **Gather more detailed diagnostics:** Encourage users to provide comprehensive logs and system information when reporting issues. This will help support teams diagnose problems more efficiently and identify potential patterns or trends.
-- **Consider a dedicated support channel for Pieces for Developers:** Given the specific issues and complexities related to Pieces for Developers, a dedicated support channel could provide more focused assistance and faster resolution times.
-- **Proactively monitor for common issues:** Implement systems to track and analyze support tickets, identifying recurring problems and emerging trends. This will enable proactive communication and faster resolution of widespread issues.
-- **Improve error messages:** Ensure error messages are clear, informative, and provide actionable steps for users to resolve problems. Vague error messages like "unable to reach cloud services" can be frustrating and hinder troubleshooting efforts.
-- **Develop automated solutions:** Explore opportunities to automate common support tasks, such as checking for duplicate installations, verifying network connectivity, or providing basic troubleshooting steps. This can free up support staff to focus on more complex issues.
-- **Continuously gather user feedback:** Implement mechanisms for users to provide feedback on their support experiences, including suggestions for improvement. Regularly review and analyze this feedback to identify areas for optimization and enhance the overall support process.
+- **Prioritize resolution of Pieces OS launch and connectivity issues:** This is the most common issue reported by users, impacting both Pieces for Developers and Pieces OS on Linux and Windows. Focus on resolving conflicts with OneDrive, dependency errors, and cloud service connectivity problems.
+- **Improve Ollama integration with Pieces OS:** Address installation failures, CUDA errors, and conflicts with existing Ollama installations to ensure a smoother user experience.
+- **Investigate and resolve account linking issues:** Address the legacy system limitations preventing users from linking multiple accounts, particularly the email discrepancy issue. The implementation of the new authentication service in March should be a high priority.
+- **Address bugs in the JetBrains plugin and Pieces app:** Focus on resolving horizontal scrolling issues in code snippets, cursor visibility problems in the Copilot chat, and difficulties connecting to cloud services and local LLMs.
+- **Proactively monitor and address issues reported in the most active tickets:** This will help identify and resolve emerging issues quickly and efficiently.
+- **Improve communication with users regarding ongoing issues and expected resolution times:** Keep users informed about the progress being made on resolving known issues and provide clear timelines for when they can expect a fix. This will help manage user expectations and reduce frustration.
+- **Develop and maintain comprehensive documentation and troubleshooting guides:** Provide users with easy-to-understand resources that can help them resolve common issues on their own. This will reduce the number of support tickets submitted and free up support staff to focus on more complex issues.
+- **Gather user feedback on support experiences and identify areas for improvement:** Regularly solicit feedback from users on their support experiences to identify areas where the support process can be improved. This could include feedback on response times, communication clarity, and the helpfulness of provided solutions.
 
 ## Daily Reports
 Here are the daily reports for this week:
