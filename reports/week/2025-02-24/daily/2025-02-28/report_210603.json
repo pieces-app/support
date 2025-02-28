@@ -1,0 +1,92 @@
+{
+  "success": true,
+  "date_range": {
+    "start": "2025-02-28T00:00:00+00:00",
+    "end": "2025-02-28T21:06:03.961061+00:00"
+  },
+  "summary": {
+    "total_tickets": 2,
+    "resolved_tickets": 0,
+    "open_tickets": 2
+  },
+  "ticket_breakdown": [
+    {
+      "category": "bug",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "os:windows",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "status:new",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:desktop application",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "app:pieces os",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "status:triaged",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    }
+  ],
+  "most_active_tickets": [
+    {
+      "number": 644,
+      "title": "Long Term Memory engine makes piecesOs loop reload",
+      "activity_level": 4.42
+    },
+    {
+      "number": 590,
+      "title": "Non-dismissable overlay message.",
+      "activity_level": 4.28
+    }
+  ],
+  "common_issues": [
+    {
+      "title": "Pieces OS Startup and Update Conflicts",
+      "description": "Users are experiencing conflicts related to Pieces OS startup and background updates, primarily on Windows.  These conflicts manifest as either application crashes and restarts or non-dismissable overlay messages, rendering Pieces unusable.  Suggested workarounds include altering startup configurations and ensuring Pieces OS is fully updated, but the issue persists for some users.",
+      "frequency": 2,
+      "related_issues": [
+        {
+          "id": 644,
+          "title": "Long Term Memory engine makes piecesOs loop reload",
+          "text": "Long Term Memory engine makes piecesOs loop reload\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.1.2\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWhen I enable Long term memory engine on and use it on pieces for dev or vscode when I try to prompt anything, piecesOS shit's off and starts looping on restart until I manage in the seconds it stays on to disable the LTM engine.\n## GitHub Issue Conversation Summary\n\n**Key Points Raised:**\n\n* User @rafael-a-g-n reported an issue.\n* The issue was automatically triaged and routed to the appropriate team member.\n* Expected follow-up within 24 hours.\n* Related issues and helpful resources were suggested.\n\n**Problems Identified:**\n\n* The specific issue reported by @rafael-a-g-n is not clear from the provided conversation.\n\n**Solutions Proposed/Implemented:**\n\n* Automatic issue triaging and routing.\n* Suggestion of related issues and helpful resources.\n\n**Current Status/Outcome:**\n\n* The issue is being reviewed by the Pieces team. \n* No further updates are available at this time. \n\n**Additional Notes:**\n\n* The conversation lacks details about the specific issue reported by the user. \n* More information is needed to fully understand the problem and the proposed solutions.",
+          "activity_level": 4.42
+        },
+        {
+          "id": 590,
+          "title": "Non-dismissable overlay message.",
+          "text": "Non-dismissable overlay message.\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nv11.0.4\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nMy Pieces app launches at Windows startup (intended). Sometimes, (possibly after a background update?), this dialog appears on my desktop. I don't know what it means, exactly, but I cannot click \"Ok\" and there is no other way to dismiss it. My only option appears to be to restart the computer, which is often impractical. Please fix!\n\n![Image](https://github.com/user-attachments/assets/f231ef56-3d59-4e94-8cb5-2b54249900cc)\n## Summary of GitHub Issue Conversation\n\n**Key Points:**\n\n* ThemePark is experiencing issues with Pieces on Windows 10.\n* The issue manifests as a non-dismissable overlay message stating that Pieces OS is not running.\n* This occurs when launching Pieces for VS Code, approximately 10 minutes after initial launch.\n* Restarting the computer is the only known workaround.\n\n**Problems Identified:**\n\n* Timing conflict between PiecesOS update and Pieces Desktop launch on startup.\n* Non-dismissable overlay message preventing further interaction with Pieces.\n\n**Solutions Proposed/Implemented:**\n\n* **Pieces Support:** Suggested switching the startup app to Pieces Desktop instead of PiecesOS.\n* **ThemePark:** Tried switching but the issue persists.\n\n**Current Status/Outcome:**\n\n* Problem remains unsolved. \n* ThemePark is experiencing daily disruption to their workflow. \n* Further investigation and troubleshooting are required.\n\n**Additional Points:**\n\n* ThemePark is running Pieces for VS Code.\n* The issue seems to be related to VS Code launch.\n\n**Next Steps:**\n\n* Pieces Support needs to investigate the problem further, considering the new information provided by ThemePark.\n* ThemePark will continue to provide updates and any potential leads for troubleshooting.\n* Finding a solution to the non-dismissable overlay message is crucial to restoring ThemePark's workflow.",
+          "activity_level": 4.28
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    "**Prioritize 'Pieces OS Startup and Update Conflicts' Resolution:** This issue is causing significant disruption to users, as evidenced by its high frequency and the severity of its impact. Allocate resources to investigate and address the root cause of these conflicts.",
+    "**Improve Error Messaging and Resolution Guidance:** The 'Non-dismissable overlay message' is unclear and offers no actionable steps for users.  Redesign this message to provide specific information about the issue and potential solutions.",
+    "**Investigate Potential Conflicts with Windows Startup:**  The recurring theme of conflicts arising during startup suggests a potential incompatibility or timing issue with Windows. Conduct thorough testing to identify and address any such conflicts.",
+    "**Enhance Communication and Transparency:** Keep users informed about the progress of bug fixes and workarounds.  Provide regular updates through release notes, support articles, or in-app notifications.",
+    "**Gather More Detailed Diagnostics:**  Implement logging or error reporting mechanisms to capture more information about the conditions leading up to crashes and conflicts. This data will be invaluable for troubleshooting and resolving issues effectively.",
+    "**Consider a Staged Rollout for Updates:**  To mitigate the impact of potential issues, explore a staged rollout approach for future updates. This allows for early detection and resolution of problems before they affect a wider user base."
+  ],
+  "message": "Daily support report generated successfully."
+}

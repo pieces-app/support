@@ -1,5 +1,5 @@
 # Support Ticket Report
-- Generated: 2025-02-28 13:12:19
+- Generated: 2025-02-28 21:08:18
 - Period: 2025-02-24 to 2025-02-28
 
 ## Summary
@@ -10,62 +10,63 @@
 ## 5 Most Active Tickets
 | Issue # | Title | Activity Level |
 |---------|-------|----------------|
-| [#640](https://github.com/pieces-app/support/issues/640) | Installing Ollama - Forever | 7.35 |
 | [#610](https://github.com/pieces-app/support/issues/610) | Pieces Desktop app, account linking never acheived for several years? | 7.26 |
 | [#633](https://github.com/pieces-app/support/issues/633) | PiecesOS was unable to launch | 7.23 |
+| [#640](https://github.com/pieces-app/support/issues/640) | Installing Ollama - Forever | 6.77 |
 | [#643](https://github.com/pieces-app/support/issues/643) | Shareable link is not generating | 5.50 |
 | [#631](https://github.com/pieces-app/support/issues/631) | Pieces for Developers Not Working – Cloud Service & Local LLM Issues | 4.86 |
 
 ## Common Issues
-### 1. Pieces OS Desktop App Issues
-Users are reporting issues with the Pieces OS Desktop app, including failure to launch, inability to generate shareable links, and difficulties linking accounts. Troubleshooting steps involve checking for conflicting installations, verifying log file locations, and investigating potential OneDrive interference. A new authentication system is planned to address account linking problems.
+### 1. Pieces OS and Desktop App Issues
+Users report problems with Pieces OS launching, account linking, and share link generation. Troubleshooting includes checking for duplicate installations, OneDrive interference, and account merging. Solutions involve resetting accounts, gathering system info, and awaiting new auth service.
 
 **Related Issues:**
 - [#643](https://github.com/pieces-app/support/issues/643): Shareable link is not generating
 - [#633](https://github.com/pieces-app/support/issues/633): PiecesOS was unable to launch
 - [#610](https://github.com/pieces-app/support/issues/610): Pieces Desktop app, account linking never acheived for several years?
 
-### 2. Pieces Desktop App Connection Issues
-Users are experiencing difficulties connecting Pieces Desktop App to cloud services or local LLMs, encountering error messages related to localhost or cloud service connectivity. Proposed solutions include checking internet connection, switching networks, verifying log files, removing personal API keys, using smaller local LLMs, and ensuring Pieces OS is not installed in restricted locations like OneDrive.
+### 2. PiecesOS Launch and Connectivity Issues
+Users report PiecesOS failing to launch or connect to cloud services and local LLMs. This might involve error messages about cloud service connectivity or non-dismissable overlays. Troubleshooting includes verifying internet connection, checking for duplicate installations, removing personal API keys, using smaller local LLMs, and examining OneDrive for interference. Contacting support with logs is recommended for further assistance.
+
+**Related Issues:**
+- [#633](https://github.com/pieces-app/support/issues/633): PiecesOS was unable to launch
+- [#590](https://github.com/pieces-app/support/issues/590): Non-dismissable overlay message.
+- [#631](https://github.com/pieces-app/support/issues/631): Pieces for Developers Not Working – Cloud Service & Local LLM Issues
+
+### 3. PiecesOS Connectivity and Launch Issues
+Users reported difficulties connecting to PiecesOS cloud services and launching the application on Linux and Windows. Troubleshooting involved checking network connectivity, removing duplicate installations, and analyzing log files. Solutions included verifying firewall settings, removing personal API keys, and using smaller local LLMs.
 
 **Related Issues:**
 - [#641](https://github.com/pieces-app/support/issues/641): Invalid port http://0.0.0.0:null/connect
-- [#631](https://github.com/pieces-app/support/issues/631): Pieces for Developers Not Working – Cloud Service & Local LLM Issues
 - [#633](https://github.com/pieces-app/support/issues/633): PiecesOS was unable to launch
+- [#631](https://github.com/pieces-app/support/issues/631): Pieces for Developers Not Working – Cloud Service & Local LLM Issues
 
-### 3. Ollama Integration Issues with Pieces OS
-Users report conflicts between Pieces OS's built-in Ollama instance and externally installed ones, leading to CUDA errors and connectivity problems. Solutions include reinstalling Ollama, managing startup order, and using smaller local LLMs. Pieces developers are investigating potential fixes and improvements.
+### 4. Pieces OS Stability and Functionality Issues
+Users report Pieces OS crashing, looping, or freezing, particularly when using features like Long Term Memory or integrations like Ollama.  Suggested solutions include disabling problematic features, ensuring Pieces OS is updated, and checking for conflicts with other applications or startup processes.  Direct support and debugging are often required to fully resolve issues.
+
+**Related Issues:**
+- [#644](https://github.com/pieces-app/support/issues/644): Long Term Memory engine makes piecesOs loop reload
+- [#590](https://github.com/pieces-app/support/issues/590): Non-dismissable overlay message.
+- [#640](https://github.com/pieces-app/support/issues/640): Installing Ollama - Forever
+
+### 5. Ollama Integration Issues with Pieces OS
+Users report conflicts between Pieces OS's bundled Ollama instance and externally installed ones, leading to Cuda errors and startup issues. Solutions include clean Ollama reinstalls, using smaller local LLMs to address hardware constraints, and ensuring Pieces OS can access network resources for cloud services.
 
 **Related Issues:**
 - [#570](https://github.com/pieces-app/support/issues/570): Pieces OS conflicting with Installed Ollama Server?
 - [#640](https://github.com/pieces-app/support/issues/640): Installing Ollama - Forever
 - [#631](https://github.com/pieces-app/support/issues/631): Pieces for Developers Not Working – Cloud Service & Local LLM Issues
 
-### 4. PiecesOS and Desktop App Launch Issues
-Users report PiecesOS failing to launch or encountering errors, often after updates or on startup. Issues involve cloud service connectivity, local LLM usage, and conflicts between PiecesOS and Desktop App. Solutions include checking logs, network connectivity, OneDrive interference, and adjusting startup settings.
-
-**Related Issues:**
-- [#633](https://github.com/pieces-app/support/issues/633): PiecesOS was unable to launch
-- [#590](https://github.com/pieces-app/support/issues/590): Non-dismissable overlay message.
-- [#631](https://github.com/pieces-app/support/issues/631): Pieces for Developers Not Working – Cloud Service & Local LLM Issues
-
-### 5. Pieces OS Stability and Functionality Issues
-Users report Pieces OS crashing, freezing, or encountering errors with features like Long Term Memory and Ollama integration.  Issues often involve high CPU usage, non-dismissable messages, and conflicts with startup processes. Troubleshooting steps include restarting, reinstalling, and disabling conflicting features.  Some issues require further investigation from the Pieces team.
-
-**Related Issues:**
-- [#644](https://github.com/pieces-app/support/issues/644): Long Term Memory engine maques piecesOs loop reload
-- [#590](https://github.com/pieces-app/support/issues/590): Non-dismissable overlay message.
-- [#640](https://github.com/pieces-app/support/issues/640): Installing Ollama - Forever
-
 
 ## Recommendations
-- **Prioritize Ollama Integration Issues:** Allocate additional resources to investigate and address the recurring conflicts between Pieces OS and externally installed Ollama instances.  Focus on resolving CUDA errors, connectivity problems, and improving the user experience related to Ollama integration.
-- **Improve Pieces Desktop App Stability:** Investigate and address the root causes of Pieces Desktop App launch failures and connection issues. Focus on resolving cloud service connectivity problems, local LLM usage errors, and conflicts with Pieces OS.
-- **Enhance Account Linking Functionality:**  Prioritize the development and rollout of the new authentication system to address long-standing account linking issues.  Ensure the new system allows for simultaneous linking of multiple accounts and handles minor email variations effectively.
-- **Address Pieces OS Stability Concerns:** Investigate and resolve issues related to Pieces OS crashing, freezing, and high CPU usage.  Focus on improving the stability of Long Term Memory and Ollama integration features.
-- **Improve Communication and Documentation:** Provide clear and concise documentation on troubleshooting common issues, including Ollama integration, account linking, and launch failures.  Consider creating FAQs or knowledge base articles addressing these specific problems.
-- **Gather User Feedback:** Implement a system for collecting user feedback on specific features, such as Ollama integration and account linking.  Use this feedback to prioritize bug fixes and improvements in future releases.
-- **Proactive Monitoring and Issue Detection:**  Implement monitoring tools to proactively identify and address potential issues before they impact a large number of users.  This could include monitoring system logs, resource usage, and error rates.
+- **Prioritize resolution of PiecesOS launch and connectivity issues:** This appears to be the most common problem category, impacting both Windows and Linux users. Focus on identifying the root causes, whether related to duplicate installations, OneDrive interference, network configurations, or conflicts with external Ollama instances.
+- **Improve Ollama integration stability:** Address conflicts between Pieces OS's bundled Ollama and external installations. Provide clear guidance on using external Ollama instances and ensure smooth integration to avoid Cuda errors and startup issues.
+- **Investigate and address Pieces OS stability issues:** Focus on reported crashes, loops, and freezes, especially when using Long Term Memory or Ollama. Enhance error logging and diagnostics to facilitate faster troubleshooting and resolution.
+- **Review and update documentation for account linking:** Given the longstanding issue with account linking, revisit and improve the documentation to provide clearer instructions and troubleshooting steps. Consider adding FAQs or video tutorials.
+- **Gather more detailed user feedback:** Encourage users to provide comprehensive information about their system configurations, steps to reproduce issues, and any error messages encountered. This will help in identifying patterns and resolving issues more effectively.
+- **Explore automation for common troubleshooting steps:** Develop automated scripts or tools to guide users through basic troubleshooting steps like checking network connectivity, verifying installations, and gathering log files. This can reduce support workload and resolution time.
+- **Proactively monitor for emerging issues:** Implement a system for tracking and analyzing support tickets to identify emerging trends or common problems. This will enable proactive communication and faster resolution of widespread issues.
+- **Consider a dedicated forum or knowledge base:** Create a centralized platform for users to find solutions, share workarounds, and discuss issues. This can foster a sense of community and reduce reliance on individual support tickets.
 
 ## Daily Reports
 Here are the daily reports for this week:
@@ -75,3 +76,4 @@ Here are the daily reports for this week:
 - [report_050720](daily/2025-02-27/report_050720.md)
 - [report_131132](daily/2025-02-27/report_131132.md)
 - [report_210625](daily/2025-02-27/report_210625.md)
+- [report_210603](daily/2025-02-28/report_210603.md)
