@@ -1,5 +1,5 @@
 # Support Ticket Report
-- Generated: 2025-03-02 13:10:16
+- Generated: 2025-03-02 21:07:45
 - Period: 2025-02-24 to 2025-03-02
 
 ## Summary
@@ -12,13 +12,13 @@
 |---------|-------|----------------|
 | [#610](https://github.com/pieces-app/support/issues/610) | Pieces Desktop app, account linking never acheived for several years? | 7.93 |
 | [#633](https://github.com/pieces-app/support/issues/633) | PiecesOS was unable to launch | 7.30 |
-| [#640](https://github.com/pieces-app/support/issues/640) | Installing Ollama - Forever | 6.33 |
+| [#640](https://github.com/pieces-app/support/issues/640) | Installing Ollama - Forever | 5.99 |
 | [#631](https://github.com/pieces-app/support/issues/631) | Pieces for Developers Not Working – Cloud Service & Local LLM Issues | 4.65 |
 | [#570](https://github.com/pieces-app/support/issues/570) | Pieces OS conflicting with Installed Ollama Server? | 4.33 |
 
 ## Common Issues
-### 1. Pieces Desktop App Issues and Bugs
-Users are experiencing various issues with the Pieces Desktop app, including account linking problems, failure to generate shareable links, and launch failures.  Troubleshooting steps often involve checking log files, resetting account links, and investigating potential conflicts with OneDrive.  A new account linking flow is planned for March 2025 to address some of these issues.
+### 1. Pieces OS Desktop App Issues
+Users report problems with account linking, link sharing, and application launching.  Solutions include verifying account details, checking for software conflicts, and contacting support for log analysis and troubleshooting assistance.
 
 **Related Issues:**
 - [#610](https://github.com/pieces-app/support/issues/610): Pieces Desktop app, account linking never acheived for several years?
@@ -26,15 +26,15 @@ Users are experiencing various issues with the Pieces Desktop app, including acc
 - [#633](https://github.com/pieces-app/support/issues/633): PiecesOS was unable to launch
 
 ### 2. PiecesOS Launch and Connectivity Issues
-Users are experiencing problems launching PiecesOS or connecting to cloud services and local LLMs. This could be due to conflicting installations, OneDrive interference, network configuration, or hardware limitations. Solutions include checking OneDrive, configuring firewalls, ensuring stable internet, and using smaller local LLMs.
+Users report PiecesOS failing to launch, possibly due to OneDrive conflicts or duplicate installations. Connectivity issues with cloud services and local LLMs are also common, potentially caused by network problems or hardware constraints. Solutions include checking OneDrive settings, ensuring a single PiecesOS installation, verifying network connectivity, and using smaller local LLMs.
 
 **Related Issues:**
 - [#633](https://github.com/pieces-app/support/issues/633): PiecesOS was unable to launch
 - [#590](https://github.com/pieces-app/support/issues/590): Non-dismissable overlay message.
 - [#631](https://github.com/pieces-app/support/issues/631): Pieces for Developers Not Working – Cloud Service & Local LLM Issues
 
-### 3. PiecesOS and Pieces for Developers Launch Issues
-Users report failures to launch PiecesOS or Pieces for Developers, encountering errors related to cloud service connectivity, local LLM functionality, or dependency verification. Solutions include verifying internet connection, checking firewall settings, using compatible LLMs, providing log files for analysis, and scheduling support calls.
+### 3. PiecesOS Connectivity and Launch Issues
+Users report PiecesOS failing to connect to cloud services or local LLMs, often due to network configuration, hardware limitations, or software conflicts. Suggested solutions include verifying network settings, using smaller LLMs, checking for duplicate installations, and disabling conflicting software like OneDrive.
 
 **Related Issues:**
 - [#641](https://github.com/pieces-app/support/issues/641): Invalid port http://0.0.0.0:null/connect
@@ -42,32 +42,33 @@ Users report failures to launch PiecesOS or Pieces for Developers, encountering 
 - [#633](https://github.com/pieces-app/support/issues/633): PiecesOS was unable to launch
 
 ### 4. Ollama Integration Issues with Pieces OS
-Users are experiencing difficulties installing, running, and connecting to Ollama within Pieces OS.  Problems include Cuda errors, installation failures, and conflicts between Pieces OS and external Ollama instances. Solutions involve ensuring proper installation order, troubleshooting network connectivity, and verifying hardware compatibility for local LLMs.
+Users are experiencing problems with Ollama server integration on Pieces OS, encountering Cuda errors and installation issues. Potential causes include conflicting installations, race conditions during startup, and hardware limitations. Proposed solutions involve reinstalling Ollama, managing startup sequences, and using smaller LLMs. Further investigation and debugging are ongoing.
 
 **Related Issues:**
 - [#570](https://github.com/pieces-app/support/issues/570): Pieces OS conflicting with Installed Ollama Server?
 - [#640](https://github.com/pieces-app/support/issues/640): Installing Ollama - Forever
 - [#631](https://github.com/pieces-app/support/issues/631): Pieces for Developers Not Working – Cloud Service & Local LLM Issues
 
-### 5. PiecesOS crashes and restarts or becomes unresponsive
-Users report PiecesOS crashing and restarting in a loop, particularly when the Long Term Memory engine is enabled. Others experience unresponsiveness with cloud and local LLMs, requiring a system restart. Proposed solutions include disabling LTM, checking network connectivity, firewall settings, and ensuring sufficient hardware resources for local LLMs.
+### 5. JetBrains Plugin and Desktop App Bugs
+Users report issues with JetBrains plugin horizontal scrolling, cursor visibility in Copilot chat, and cloud service/local LLM connectivity. Solutions include checking internet connection, using smaller local LLMs, and avoiding OpenApi keys for cloud LLMs. Issues are under investigation or resolved.
 
 **Related Issues:**
-- [#644](https://github.com/pieces-app/support/issues/644): Long Term Memory engine makes piecesOs loop reload
+- [#639](https://github.com/pieces-app/support/issues/639): Horizontal scrolling doesn't work in JetbRains plugin
+- [#638](https://github.com/pieces-app/support/issues/638): Cursor will not hide when typing in the Copilot chat window
 - [#631](https://github.com/pieces-app/support/issues/631): Pieces for Developers Not Working – Cloud Service & Local LLM Issues
-- [#590](https://github.com/pieces-app/support/issues/590): Non-dismissable overlay message.
 
 
 ## Recommendations
-- **Prioritize resolution of Pieces Desktop App Issues:** Focus on resolving the top reported issue, "Pieces Desktop App Issues and Bugs," particularly account linking problems and launch failures. The planned account linking flow update in March 2025 should be thoroughly tested and implemented effectively.
-- **Improve PiecesOS Launch and Connectivity:** Address the recurring issues related to PiecesOS launch failures and connectivity problems with cloud services and local LLMs. Investigate OneDrive interference, network configuration issues, and hardware limitations.
-- **Enhance Ollama Integration Stability:** Investigate and resolve the difficulties users face with Ollama integration, including installation errors, Cuda errors, and conflicts with external Ollama instances. Provide clear guidance on installation order, network connectivity, and hardware requirements.
-- **Address PiecesOS Crashes and Unresponsiveness:** Investigate and resolve the causes of PiecesOS crashes, restarts, and unresponsiveness, particularly when Long Term Memory is enabled. Explore solutions like optimizing LTM functionality, improving network stability checks, and providing clearer guidance on hardware requirements for local LLMs.
-- **Proactive Communication and Documentation:**  Keep users informed about ongoing issues, planned updates, and troubleshooting steps through clear and timely communication channels. Enhance documentation to cover common issues, FAQs, and detailed solutions related to account linking, Ollama integration, and PiecesOS launch problems.
-- **Gather Detailed System Information:** During support interactions, collect comprehensive system information from users, including operating system, Pieces OS version, hardware specifications, and relevant log files. This will help in faster diagnosis and resolution of issues.
-- **Consider Hardware Recommendations:**  Given the recurring issues related to local LLM functionality and PiecesOS performance, consider providing users with recommended hardware specifications to ensure optimal performance and minimize compatibility issues.
-- **Automated Troubleshooting Tools:** Explore developing automated troubleshooting tools or diagnostic scripts that users can run to identify common problems and receive suggested solutions. This can help reduce the load on support staff and provide faster initial support.
-- **User Feedback Mechanisms:** Implement robust feedback mechanisms to collect user experiences and identify pain points. This can include in-app surveys, feedback forms, and forums where users can share their issues and suggestions.
+- **Prioritize resolution of Pieces OS launch issues:** This is a critical issue affecting multiple users and hindering their ability to use the software. Focus on identifying the root causes, whether it's OneDrive conflicts, duplicate installations, or other factors, and provide clear solutions.
+- **Improve Ollama integration and troubleshooting:** Address the recurring issues with Ollama server integration, including Cuda errors and installation problems. Provide clearer instructions, investigate potential conflicts, and ensure compatibility with different hardware configurations.
+- **Enhance communication and documentation:** Provide users with more detailed guidance on troubleshooting common issues, including network connectivity problems, account linking errors, and software conflicts. Update documentation and FAQs to reflect these solutions.
+- **Investigate and address JetBrains plugin bugs:** Resolve the reported issues with horizontal scrolling, cursor visibility, and connectivity within the JetBrains plugin to ensure a seamless user experience.
+- **Gather more detailed user feedback:** Encourage users to provide comprehensive information when reporting issues, including system specifications, steps to reproduce the problem, and any error messages encountered. This will help in faster diagnosis and resolution.
+- **Consider implementing a system for detecting and utilizing external Ollama App instances:** This would allow users to leverage their existing Ollama installations and potentially avoid conflicts with the Pieces OS built-in version.
+- **Investigate the feasibility of a more robust account linking system:** Address the long-standing issue of account linking difficulties, potentially by revamping the linking process or exploring alternative authentication methods.
+- **Continue monitoring and addressing issues related to new features:** As new features are released, pay close attention to user feedback and support tickets to identify and address any teething problems promptly.
+- **Proactively communicate known issues and workarounds:** Maintain a public-facing list of known issues and workarounds to keep users informed and minimize frustration while waiting for permanent solutions.
+- **Analyze support ticket trends:** Regularly analyze support ticket data to identify recurring issues, common pain points, and areas where documentation or software improvements are needed. This data-driven approach will help prioritize development efforts and enhance the overall user experience.
 
 ## Daily Reports
 Here are the daily reports for this week:
@@ -80,4 +81,5 @@ Here are the daily reports for this week:
 - [report_210603](daily/2025-02-28/report_210603.md)
 - [report_130834](daily/2025-03-01/report_130834.md)
 - [report_210606](daily/2025-03-01/report_210606.md)
+- [report_210605](daily/2025-03-02/report_210605.md)
 - [report_130829](daily/2025-03-02/report_130829.md)

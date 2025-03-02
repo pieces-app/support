@@ -1,0 +1,72 @@
+{
+  "success": true,
+  "date_range": {
+    "start": "2025-03-02T00:00:00+00:00",
+    "end": "2025-03-02T21:06:05.647151+00:00"
+  },
+  "summary": {
+    "total_tickets": 1,
+    "resolved_tickets": 0,
+    "open_tickets": 1
+  },
+  "ticket_breakdown": [
+    {
+      "category": "bug",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "os:windows",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:desktop application",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:pieces os",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:triaged",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    }
+  ],
+  "most_active_tickets": [
+    {
+      "number": 633,
+      "title": "PiecesOS was unable to launch",
+      "activity_level": 7.3
+    }
+  ],
+  "common_issues": [
+    {
+      "title": "PiecesOS Launch Failure",
+      "description": "Users are experiencing difficulties launching PiecesOS. Troubleshooting steps include checking for duplicate installations, examining log files in both local and OneDrive directories, and providing machine specifications to support. The issue may stem from OneDrive interference or missing dependencies.",
+      "frequency": 1,
+      "related_issues": [
+        {
+          "id": 633,
+          "title": "PiecesOS was unable to launch",
+          "text": "PiecesOS was unable to launch\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.1.2.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nEnsure core Dependencies ... (retry setup)\n\n![Image](https://github.com/user-attachments/assets/8b426c73-aebb-4905-857f-bdee4cad2882)\n## Summary of GitHub Issue Conversation:\n\n**Key Problem:**\n\n- User @MR-AAYU is experiencing the \"PiecesOS was unable to launch\" error.\n\n**Steps Taken:**\n\n- Pieces support team requested log files for diagnosis.\n- User provided log files, revealing duplicated installations of Pieces for Developers.\n- Support team identified that Pieces OS, a separate requirement, was missing logs.\n- User provided logs from \"C:\\Users\\AYUSH-ANAND\\Documents\\com.pieces.pfd\\production\".\n- Support team suspected OneDrive interference and advised checking the \"C:\\Users\\AYUSH-ANAND\\OneDrive\\Documents\\com.pieces.os\" folder.\n- User confirmed no logs in OneDrive location.\n\n**Current Status:**\n\n- The root cause of the launch issue remains unclear.\n- Support team requested additional information (machine specs) and offered a calendar link for further diagnosis.\n- User provided machine specs.\n\n**Missing Information:**\n\n- Whether the user checked the OneDrive folder for logs.\n- Whether the user attempted to delete the OneDrive \"com.pieces.os\" folder and relaunch Pieces OS.\n- Outcome of the calendar link booking.\n\n**Next Steps:**\n\n- User to provide information about OneDrive folder check and deletion attempt.\n- User to book a time slot on the provided calendar link for further diagnosis.\n- Support team to investigate the issue based on additional information and potentially schedule a remote session.",
+          "activity_level": 7.3
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    "\"Investigate potential OneDrive interference with PiecesOS launch based on support ticket #633 and log file analysis.\"",
+    "\"Develop troubleshooting documentation or FAQs specifically addressing PiecesOS launch failures, including steps like checking for duplicate installations, examining log files in both local and OneDrive directories, and providing machine specifications.\"",
+    "\"Consider creating a system diagnostic tool to automatically gather relevant information (logs, installation paths, machine specs) for PiecesOS launch issues, streamlining the support process.\""
+  ],
+  "message": "Daily support report generated successfully."
+}
