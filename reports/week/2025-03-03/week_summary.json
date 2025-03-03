@@ -1,0 +1,75 @@
+{
+  "success": true,
+  "date_range": {
+    "start": "2025-03-03T00:00:00+00:00",
+    "end": "2025-03-03T13:11:41.876900+00:00"
+  },
+  "summary": {
+    "total_tickets": 1,
+    "resolved_tickets": 0,
+    "open_tickets": 1
+  },
+  "ticket_breakdown": [
+    {
+      "category": "bug",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:new",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:desktop application",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "os:linux",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "known_issue",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    }
+  ],
+  "most_active_tickets": [
+    {
+      "number": 537,
+      "title": "Ollama Fails to Install on Linux",
+      "activity_level": 5.66
+    }
+  ],
+  "common_issues": [
+    {
+      "title": "Ollama installation fails in Pieces OS snap",
+      "description": "Users are experiencing issues with Ollama installation on Linux systems, specifically when Pieces OS is installed as a snap. The snap's confinement restricts access to necessary resources like 'curl', causing the installation to fail. A fix is in progress to modify the snap definition and allow Ollama to function within the sandbox environment.",
+      "frequency": 1,
+      "related_issues": [
+        {
+          "id": 537,
+          "title": "Ollama Fails to Install on Linux",
+          "text": "Ollama Fails to Install on Linux\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nLinux\n\n### Your Pieces OS Version\n\n11.0.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nUser reports immediate \"Ollama failed to install\" diaglog upon clicking install Ollama install button in Pieces desktop app\n## GitHub Issue Summary\n\n**Title:** Ollama fails to install in snap environment\n\n**Key Points:**\n\n* Ollama is a required package for Pieces-OS, but it fails to install when Pieces-OS is installed as a snap.\n* This is because the snap environment sandboxes the application and restricts its access to certain resources like `curl`.\n* The issue affects both downloading and inference of LLM models.\n\n**Problems Identified:**\n\n* Strict confinement of the snap prevents access to necessary dependencies like `curl`.\n* Manual installation of Ollama outside the sandbox has no effect.\n* The issue persists in the latest snap version.\n\n**Solutions Proposed/Implemented:**\n\n* Add `curl` to the list of dependencies in the snap definition file.\n* Modify the package to allow Ollama usage within the sandbox environment.\n* Work is in progress to implement the solution.\n\n**Current Status/Outcome:**\n\n* The fix is currently being worked on and is expected to be released soon.\n* Users are advised to wait for the updated snap version.\n\n**Additional Notes:**\n\n* Users are requesting a temporary workaround, but manual downloading of LLM models is not a viable solution due to the dependency issue.\n* The delay in the fix is due to prioritizing critical infrastructure updates.",
+          "activity_level": 5.66
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    "**Prioritize resolving the Ollama installation issue:** This is a critical issue affecting Linux users, especially those using Pieces OS snap. Allocate resources to expedite the fix and provide clear communication to users on the progress.",
+    "**Improve error messaging during Ollama installation:** Provide more specific error messages to users when installation fails, such as identifying the root cause (e.g., restricted access to 'curl'). This will help users troubleshoot the issue or provide more informative bug reports.",
+    "**Consider creating a dedicated troubleshooting guide for Ollama installation on Linux:** This guide can include step-by-step instructions, common issues, and workarounds. This will empower users to resolve the issue independently while waiting for a permanent fix.",
+    "**Monitor the effectiveness of the implemented solutions:** After deploying the fix for the Ollama installation issue, track the number of new tickets related to it. This will help assess the effectiveness of the solution and identify any remaining pain points.",
+    "**Gather more information about the impact of the 'known_issue' category:** Investigate the reasons behind the 'known_issue' categorization for the Ollama installation problem. Understand why it was categorized as such and if there are any underlying processes or workflows that contributed to this. This analysis can help optimize issue tracking and resolution processes in the future.",
+    "**Analyze ticket trends over time:** While this data represents a short timeframe, establish a practice of regularly analyzing ticket data to identify patterns, trends, and common issues. This will enable proactive support measures and improvements to the product or service."
+  ],
+  "message": "Daily support report generated successfully."
+}
