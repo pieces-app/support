@@ -2,28 +2,52 @@
   "success": true,
   "date_range": {
     "start": "2025-03-03T00:00:00+00:00",
-    "end": "2025-03-03T13:11:41.876900+00:00"
+    "end": "2025-03-03T21:07:02.656091+00:00"
   },
   "summary": {
-    "total_tickets": 1,
+    "total_tickets": 3,
     "resolved_tickets": 0,
-    "open_tickets": 1
+    "open_tickets": 3
   },
   "ticket_breakdown": [
     {
       "category": "bug",
-      "received": 1,
+      "received": 3,
       "resolved": 0,
-      "pending": 1
+      "pending": 3
     },
     {
-      "category": "status:new",
+      "category": "os:windows",
       "received": 1,
       "resolved": 0,
       "pending": 1
     },
     {
       "category": "app:desktop application",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "app:pieces os",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "status:triaged",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "os:macos",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:new",
       "received": 1,
       "resolved": 0,
       "pending": 1
@@ -43,33 +67,52 @@
   ],
   "most_active_tickets": [
     {
+      "number": 645,
+      "title": "Unable to launch Pieces as Pieces OS is not updating after multiple tries",
+      "activity_level": 5.68
+    },
+    {
       "number": 537,
       "title": "Ollama Fails to Install on Linux",
-      "activity_level": 5.66
+      "activity_level": 5.65
+    },
+    {
+      "number": 644,
+      "title": "Long Term Memory engine makes piecesOs loop reload",
+      "activity_level": 3.48
     }
   ],
   "common_issues": [
     {
-      "title": "Ollama installation fails in Pieces OS snap",
-      "description": "Users are experiencing issues with Ollama installation on Linux systems, specifically when Pieces OS is installed as a snap. The snap's confinement restricts access to necessary resources like 'curl', causing the installation to fail. A fix is in progress to modify the snap definition and allow Ollama to function within the sandbox environment.",
-      "frequency": 1,
+      "title": "PiecesOS Update and Stability Issues",
+      "description": "Users are reporting problems with PiecesOS updates causing boot loops, installation failures, and high CPU usage. Solutions include updating to the latest version, providing logs for debugging, and waiting for upcoming releases with fixes. Some issues persist and require further investigation by the Pieces team.",
+      "frequency": 3,
       "related_issues": [
+        {
+          "id": 644,
+          "title": "Long Term Memory engine makes piecesOs loop reload",
+          "text": "Long Term Memory engine makes piecesOs loop reload\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.1.2\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWhen I enable Long term memory engine on and use it on pieces for dev or vscode when I try to prompt anything, piecesOS shit's off and starts looping on restart until I manage in the seconds it stays on to disable the LTM engine.\n## GitHub Issue Summary\n\n**Issue:** High CPU usage in LTM on Linux Mint 22.1\n\n**Key Points:**\n\n* User reported high CPU usage in LTM on Linux Mint 22.1.\n* Pieces support bot suggested related issues and resources.\n* Support engineer acknowledged the issue and apologized for the delayed response.\n* Support engineer suggested waiting for the release of PiecesOS 11.2.0 and offered to schedule a meeting to diagnose the issue if it persists.\n\n**Problems Identified:**\n\n* LTM causing high CPU usage on Linux Mint 22.1.\n* Delayed response from support team.\n\n**Solutions Proposed/Implemented:**\n\n* Wait for the release of PiecesOS 11.2.0.\n* Schedule a meeting with a support engineer to diagnose the issue further.\n\n**Current Status/Outcome:**\n\n* Issue is unresolved, pending the release of PiecesOS 11.2.0 or further investigation by a support engineer.",
+          "activity_level": 3.48
+        },
+        {
+          "id": 645,
+          "title": "Unable to launch Pieces as Pieces OS is not updating after multiple tries",
+          "text": "Unable to launch Pieces as Pieces OS is not updating after multiple tries\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nPieces OS\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\nUnable to launch it, so I am not aware\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI have been trying to use Pieces since Sunday and the OS shows need update, but it is not able to update.\n\nHow can I get it working?\n\n<img width=\"1058\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/7bad989f-2254-44f6-8508-9057cb23ea52\" />\n## GitHub Issue Conversation Summary\n\n**Key Points Raised:**\n\n* User @Haimantika is experiencing issues with PiecesOS taking a long time to boot, specifically a \"cannot run\" error.\n\n**Problems Identified:**\n\n* The issue seems related to a known bug in a previous PiecesOS release.\n\n**Solutions Proposed/Implemented:**\n\n* **1. Update PiecesOS and Desktop Application:** Ensure the user has the latest versions installed (PiecesOS 1.1.2 and PiecesDesktop 3.3.8).\n* **2. Provide logs:** If the issue persists, provide logs located at `/Users/markwidman/Library/com.pieces.os/production/Support/logs` for further troubleshooting.\n* **3. Schedule a debug session:** Option to book a calendar slot with @mark-at-pieces for further debugging assistance.\n\n**Current Status/Outcome:**\n\n* The user is required to confirm their installed versions and potentially provide logs to verify the issue and its resolution.\n\n**Additional Notes:**\n\n* Similar issues reported elsewhere on GitHub suggest the problem is widespread.\n* The bot provides useful resources for potential solutions and documentation in the meantime.\n\n**Overall:** The conversation appears helpful and offers practical steps for the user to troubleshoot and resolve the boot issue.",
+          "activity_level": 5.68
+        },
         {
           "id": 537,
           "title": "Ollama Fails to Install on Linux",
-          "text": "Ollama Fails to Install on Linux\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nLinux\n\n### Your Pieces OS Version\n\n11.0.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nUser reports immediate \"Ollama failed to install\" diaglog upon clicking install Ollama install button in Pieces desktop app\n## GitHub Issue Summary\n\n**Title:** Ollama fails to install in snap environment\n\n**Key Points:**\n\n* Ollama is a required package for Pieces-OS, but it fails to install when Pieces-OS is installed as a snap.\n* This is because the snap environment sandboxes the application and restricts its access to certain resources like `curl`.\n* The issue affects both downloading and inference of LLM models.\n\n**Problems Identified:**\n\n* Strict confinement of the snap prevents access to necessary dependencies like `curl`.\n* Manual installation of Ollama outside the sandbox has no effect.\n* The issue persists in the latest snap version.\n\n**Solutions Proposed/Implemented:**\n\n* Add `curl` to the list of dependencies in the snap definition file.\n* Modify the package to allow Ollama usage within the sandbox environment.\n* Work is in progress to implement the solution.\n\n**Current Status/Outcome:**\n\n* The fix is currently being worked on and is expected to be released soon.\n* Users are advised to wait for the updated snap version.\n\n**Additional Notes:**\n\n* Users are requesting a temporary workaround, but manual downloading of LLM models is not a viable solution due to the dependency issue.\n* The delay in the fix is due to prioritizing critical infrastructure updates.",
-          "activity_level": 5.66
+          "text": "Ollama Fails to Install on Linux\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nLinux\n\n### Your Pieces OS Version\n\n11.0.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nUser reports immediate \"Ollama failed to install\" diaglog upon clicking install Ollama install button in Pieces desktop app\n## Summary of GitHub Issue Conversation\n\n**Key points raised:**\n\n* `pieces-os` snap package requires `curl` which is not included in the sandbox environment. \n* Installing `curl` or Ollama manually has no effect due to the sandbox limitations.\n* Ollama download and inference are impacted by this issue.\n* Users are unable to use local LLM models.\n\n**Problems identified:**\n\n* Incorrect package confinement (classic instead of strict).\n* `pieces-os` sandbox environment lacks `curl`.\n* Ollama download and inference functions are broken.\n* Users are unable to download local LLMs.\n\n**Solutions proposed/implemented:**\n\n* Patching the package to allow `pieces-os` to use Ollama within the sandbox environment.\n* Adding `curl` to the list of dependencies in the snap definition file.\n\n**Current status/outcome:**\n\n* The fix is on a branch and expected to be included in the next update.\n* Users are waiting for the fix to be released.\n* Local LLM download and inference remain unavailable in the meantime.\n\n\n## Additional Information\n\n* The issue is still present as of March 3, 2025.\n* Users are requesting a solution to the problem as it is causing inconvenience. \n* The developers are actively working on a fix and aiming to release it soon.",
+          "activity_level": 5.65
         }
       ]
     }
   ],
   "recommendations": [
-    "**Prioritize resolving the Ollama installation issue:** This is a critical issue affecting Linux users, especially those using Pieces OS snap. Allocate resources to expedite the fix and provide clear communication to users on the progress.",
-    "**Improve error messaging during Ollama installation:** Provide more specific error messages to users when installation fails, such as identifying the root cause (e.g., restricted access to 'curl'). This will help users troubleshoot the issue or provide more informative bug reports.",
-    "**Consider creating a dedicated troubleshooting guide for Ollama installation on Linux:** This guide can include step-by-step instructions, common issues, and workarounds. This will empower users to resolve the issue independently while waiting for a permanent fix.",
-    "**Monitor the effectiveness of the implemented solutions:** After deploying the fix for the Ollama installation issue, track the number of new tickets related to it. This will help assess the effectiveness of the solution and identify any remaining pain points.",
-    "**Gather more information about the impact of the 'known_issue' category:** Investigate the reasons behind the 'known_issue' categorization for the Ollama installation problem. Understand why it was categorized as such and if there are any underlying processes or workflows that contributed to this. This analysis can help optimize issue tracking and resolution processes in the future.",
-    "**Analyze ticket trends over time:** While this data represents a short timeframe, establish a practice of regularly analyzing ticket data to identify patterns, trends, and common issues. This will enable proactive support measures and improvements to the product or service."
+    "\"Investigate and address the root cause of PiecesOS update and stability issues to reduce ticket volume.\"",
+    "\"Prioritize resolving the 'Ollama Fails to Install on Linux' issue as it has high activity and impacts functionality.\"",
+    "\"Improve communication with users regarding known issues and expected resolution timelines, particularly for the PiecesOS update problems.\""
   ],
   "message": "Daily support report generated successfully."
 }
