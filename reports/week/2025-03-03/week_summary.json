@@ -2,43 +2,43 @@
   "success": true,
   "date_range": {
     "start": "2025-03-03T00:00:00+00:00",
-    "end": "2025-03-04T05:07:14.662293+00:00"
+    "end": "2025-03-04T13:11:19.896305+00:00"
   },
   "summary": {
-    "total_tickets": 3,
+    "total_tickets": 4,
     "resolved_tickets": 0,
-    "open_tickets": 3
+    "open_tickets": 4
   },
   "ticket_breakdown": [
     {
       "category": "bug",
+      "received": 4,
+      "resolved": 0,
+      "pending": 4
+    },
+    {
+      "category": "os:windows",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "app:desktop application",
       "received": 3,
       "resolved": 0,
       "pending": 3
     },
     {
-      "category": "os:windows",
-      "received": 1,
-      "resolved": 0,
-      "pending": 1
-    },
-    {
-      "category": "app:desktop application",
-      "received": 2,
-      "resolved": 0,
-      "pending": 2
-    },
-    {
       "category": "app:pieces os",
-      "received": 2,
+      "received": 3,
       "resolved": 0,
-      "pending": 2
+      "pending": 3
     },
     {
       "category": "status:triaged",
-      "received": 2,
+      "received": 3,
       "resolved": 0,
-      "pending": 2
+      "pending": 3
     },
     {
       "category": "os:macos",
@@ -67,6 +67,11 @@
   ],
   "most_active_tickets": [
     {
+      "number": 640,
+      "title": "Installing Ollama - Forever",
+      "activity_level": 6.92
+    },
+    {
       "number": 645,
       "title": "Unable to launch Pieces as Pieces OS is not updating after multiple tries",
       "activity_level": 5.68
@@ -84,38 +89,67 @@
   ],
   "common_issues": [
     {
-      "title": "PiecesOS update and installation issues",
-      "description": "Users are experiencing issues with PiecesOS updates causing long boot times and installation failures. Solutions include ensuring the latest versions of PiecesOS and Desktop Application are installed, providing logs for debugging, and waiting for upcoming releases with fixes for LTM and Ollama installation problems.",
+      "title": "PiecesOS Update and Launch Issues",
+      "description": "Users report PiecesOS failing to update or launch, often getting stuck in a loop. This prevents access to Pieces features. Proposed solutions include updating PiecesOS and the desktop app, checking logs, scheduling debugging sessions, and ensuring Ollama is properly installed and integrated.",
       "frequency": 3,
       "related_issues": [
         {
+          "id": 645,
+          "title": "Unable to launch Pieces as Pieces OS is not updating after multiple tries",
+          "text": "Unable to launch Pieces as Pieces OS is not updating after multiple tries\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nPieces OS\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\nUnable to launch it, so I am not aware\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI have been trying to use Pieces since Sunday and the OS shows need update, but it is not able to update.\n\nHow can I get it working?\n\n<img width=\"1058\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/7bad989f-2254-44f6-8508-9057cb23ea52\" />\n## Summary of GitHub Issue Conversation\n\n**Key points raised:**\n\n* User (@Haimantika) experiences difficulty launching PiecesOS.\n* Issue reported to support bot.\n\n**Problems identified:**\n\n* PiecesOS might be taking a long time to boot up.\n* User unable to launch PiecesOS and Pieces-for-developers.\n\n**Solutions proposed/implemented:**\n\n* Support bot suggests checking related issues and resources.\n* Support agent (@mark-at-pieces) identifies a previous issue and suggests:\n    * Updating PiecesOS and Pieces Desktop Application to versions 1.1.2 and 3.3.8 respectively.\n    * Providing logs for further investigation.\n    * Scheduling a debugging session.\n\n**Current status/outcome:**\n\n* User needs to try the proposed solutions and update the issue.\n\n**Additional notes:**\n\n* The issue was created on 2025-03-03T18:03:15+00:00 and has not been resolved yet.",
+          "activity_level": 5.68
+        },
+        {
           "id": 644,
           "title": "Long Term Memory engine makes piecesOs loop reload",
-          "text": "Long Term Memory engine makes piecesOs loop reload\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.1.2\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWhen I enable Long term memory engine on and use it on pieces for dev or vscode when I try to prompt anything, piecesOS shit's off and starts looping on restart until I manage in the seconds it stays on to disable the LTM engine.\n## GitHub Issue Summary\n\n**Issue Title:** LTM is unable to see code inside the sandbox\n\n**Author:** @rafael-a-g-n\n\n**Date Created:** February 27, 2025\n\n**Key Points:**\n\n* LTM, a feature within Pieces OS, is unable to view code inside the sandbox environment.\n\n**Response from Support Bot:**\n\n* Acknowledged the issue and informed the user about automatic routing to the appropriate team member.\n* Suggested other related issues for reference.\n* Provided links to resources like existing issues, documentation, and YouTube channel.\n\n**Response from Support Agent:**\n\n* Apologized for the delayed response and explained the reason for it.\n* Informed the user about an upcoming LTM2 release with fixes and enhancements.\n* Requested the user to wait for the `11.2.0 PiecesOS` release.\n* Offered to schedule a call if the problem persists after the update.\n\n**Current Status:**\n\n* The issue has been acknowledged and the user is awaiting the `11.2.0 PiecesOS` release for a potential fix. \n* Further action will be taken if the problem persists after the update.",
+          "text": "Long Term Memory engine makes piecesOs loop reload\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.1.2\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWhen I enable Long term memory engine on and use it on pieces for dev or vscode when I try to prompt anything, piecesOS shit's off and starts looping on restart until I manage in the seconds it stays on to disable the LTM engine.\n## GitHub Issue Conversation Summary\n\n**Issue:** LTM experiencing performance issues\n**Author:** rafael-a-g-n\n\n**Key points raised:**\n\n* User reported high CPU usage with LTM in Linux Mint 22.1.\n* User mentioned related issues with code visibility and dismissable overlays.\n\n**Problems identified:**\n\n* LTM performance impacting user experience.\n* Delayed response from support team due to LTM2 development sprint.\n\n**Solutions proposed/implemented:**\n\n* User advised to wait for release 11.2.0 of PiecesOS. \n* Future troubleshooting suggested by scheduling with the support team on a dedicated calendar app link provided.\n\n**Current status/outcome:**\n\n* Unclear if issue was resolved with PiecesOS update, though user advised to contact support if persists.\n\n**Additional notes:**\n\n*  Support team provided links to resources on troubleshooting and documentation.",
           "activity_level": 3.21
         },
         {
-          "id": 645,
-          "title": "Unable to launch Pieces as Pieces OS is not updating after multiple tries",
-          "text": "Unable to launch Pieces as Pieces OS is not updating after multiple tries\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nPieces OS\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\nUnable to launch it, so I am not aware\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI have been trying to use Pieces since Sunday and the OS shows need update, but it is not able to update.\n\nHow can I get it working?\n\n<img width=\"1058\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/7bad989f-2254-44f6-8508-9057cb23ea52\" />\n## Summary of GitHub Issue Conversation\n\n**Key points raised:**\n\n- User @Haimantika is experiencing issues with PiecesOS taking a long time to boot up.\n- Pieces-support-bot triaged the issue and suggested relevant resources.\n- Mark-at-pieces followed up, identifying a possible cause due to a previous issue.\n\n**Problems identified:**\n\n- PiecesOS is taking a long time to boot up.\n\n**Solutions proposed/implemented:**\n\n- Ensure the latest versions of PiecesOS (1.1.2) and Pieces Desktop Application (3.3.8) are installed.\n- Provide logs from `/Users/markwidman/Library/com.pieces.os/production/Support/logs` if the issue persists.\n- Schedule a debugging session with Mark-at-pieces.\n\n**Current status/outcome:**\n\n- The user is recommended to try the proposed solutions.\n- No further updates provided in the conversation.\n\n**Additional notes:**\n\n- The conversation took place on March 3, 2025.",
-          "activity_level": 5.68
+          "id": 640,
+          "title": "Installing Ollama - Forever",
+          "text": "Installing Ollama - Forever\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.1.2\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n![Image](https://github.com/user-attachments/assets/677e938c-3198-4f1b-af00-b22543704fcc)\n\nI have Ollama installed and this is stuck like this forever. I even tried uninstalling Ollama. Still the same :-(\n## Summary of GitHub Issue Conversation\n\n**Key Points:**\n\n* User (waseem852) is unable to use Ollama in Pieces app, despite multiple installation attempts and restarts.\n\n**Problem Identified:**\n\n* Ollama fails to work with Pieces, regardless of installation method (Pieces, winget, or manual).\n\n**Solutions Proposed/Implemented:**\n\n* Troubleshooting: Verify if both Pieces applications are shut down after uninstalling Ollama, clear task manager for both applications.\n* Schedule a call for debugging: Brian from the Pieces team proposes a call to further troubleshoot the issue.\n* User agrees to a call.\n**Outcome:**\n\n* The outcome of the call is not documented in the provided conversation, so the current status of the problem is unclear.",
+          "activity_level": 6.92
+        }
+      ]
+    },
+    {
+      "title": "Ollama Integration Issues in PiecesOS",
+      "description": "Users are experiencing problems with Ollama installation and functionality within PiecesOS. This includes installation failures, dependency conflicts, and performance issues. Proposed solutions involve addressing dependency issues, improving sandbox integration, and optimizing LTM performance.",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 640,
+          "title": "Installing Ollama - Forever",
+          "text": "Installing Ollama - Forever\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.1.2\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n![Image](https://github.com/user-attachments/assets/677e938c-3198-4f1b-af00-b22543704fcc)\n\nI have Ollama installed and this is stuck like this forever. I even tried uninstalling Ollama. Still the same :-(\n## Summary of GitHub Issue Conversation\n\n**Key Points:**\n\n* User (waseem852) is unable to use Ollama in Pieces app, despite multiple installation attempts and restarts.\n\n**Problem Identified:**\n\n* Ollama fails to work with Pieces, regardless of installation method (Pieces, winget, or manual).\n\n**Solutions Proposed/Implemented:**\n\n* Troubleshooting: Verify if both Pieces applications are shut down after uninstalling Ollama, clear task manager for both applications.\n* Schedule a call for debugging: Brian from the Pieces team proposes a call to further troubleshoot the issue.\n* User agrees to a call.\n**Outcome:**\n\n* The outcome of the call is not documented in the provided conversation, so the current status of the problem is unclear.",
+          "activity_level": 6.92
         },
         {
           "id": 537,
           "title": "Ollama Fails to Install on Linux",
-          "text": "Ollama Fails to Install on Linux\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nLinux\n\n### Your Pieces OS Version\n\n11.0.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nUser reports immediate \"Ollama failed to install\" diaglog upon clicking install Ollama install button in Pieces desktop app\n## Summary of GitHub Issue Conversation\n\n**Key Points Raised:**\n\n* User @ekuznetsov139 reported that Pieces is trying to use `curl` which is not installed by default in their sandbox environment.\n* User @umeshwayakole27 expressed concern about using cloud LLMs due to potential data access issues.\n\n**Problems Identified:**\n\n* Pieces is attempting to use `curl` in a sandbox environment where it's not available. \n* This prevents users from installing and using local LLM models.\n\n**Solutions Proposed/Implemented:**\n\n* Pieces team is working on a patch to allow using ollama from a sandbox.\n* Infrastructure updates were completed, allowing work on the fix to resume.\n\n**Current Status/Outcome:**\n\n* The fix is still in progress, with an estimated release date of next week (as of January 23rd, 2025).\n* Users are currently unable to use local LLM models due to this issue.\n* The team is actively working on a solution to address this problem.",
+          "text": "Ollama Fails to Install on Linux\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nLinux\n\n### Your Pieces OS Version\n\n11.0.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nUser reports immediate \"Ollama failed to install\" diaglog upon clicking install Ollama install button in Pieces desktop app\n## Summary of GitHub Issue Conversation\n\n**Key Points Raised:**\n\n* **Ollama installation failure:** Users are facing issues with Ollama installation within the Pieces environment.\n* **`curl` dependency:** The installation process relies on the `curl` program, which is not always available in the sandboxed Pieces environment.\n* **Snap confinement:** The problem is exacerbated by Pieces being installed as a Snap package with limited access to external tools and resources.\n\n**Problems Identified:**\n\n* The Ollama installation process fails due to the missing `curl` dependency.\n* Snap confinement restricts access to external tools and resources, including `curl`.\n* Users are unable to download Ollama models for both training and inference due to this issue.\n* Concerns are raised about the security implications of relying on cloud LLMs.\n\n**Solutions Proposed/Implemented:**\n\n* Patches are being developed to allow Ollama usage within the Pieces sandbox.\n* Updates to the Snap definition file are planned to include `curl` as a dependency.\n* Work is ongoing to address the infrastructure limitations that caused delays.\n\n**Current Status/Outcome:**\n\n* The issue remains unresolved as of March 3, 2025.\n* A fix is expected to be released soon, but no specific timeframe is provided.\n* Users are advised that downloading Ollama models manually will not resolve the issue due to its impact on inference.\n\n**Additional Information:**\n\n* Users express frustration with the delay in resolving the issue.\n* Concerns about data security and reliance on cloud LLMs are highlighted.\n\n**Overall, the issue remains open and requires a prompt resolution to improve user experience and address security concerns.**",
           "activity_level": 5.65
+        },
+        {
+          "id": 644,
+          "title": "Long Term Memory engine makes piecesOs loop reload",
+          "text": "Long Term Memory engine makes piecesOs loop reload\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.1.2\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWhen I enable Long term memory engine on and use it on pieces for dev or vscode when I try to prompt anything, piecesOS shit's off and starts looping on restart until I manage in the seconds it stays on to disable the LTM engine.\n## GitHub Issue Conversation Summary\n\n**Issue:** LTM experiencing performance issues\n**Author:** rafael-a-g-n\n\n**Key points raised:**\n\n* User reported high CPU usage with LTM in Linux Mint 22.1.\n* User mentioned related issues with code visibility and dismissable overlays.\n\n**Problems identified:**\n\n* LTM performance impacting user experience.\n* Delayed response from support team due to LTM2 development sprint.\n\n**Solutions proposed/implemented:**\n\n* User advised to wait for release 11.2.0 of PiecesOS. \n* Future troubleshooting suggested by scheduling with the support team on a dedicated calendar app link provided.\n\n**Current status/outcome:**\n\n* Unclear if issue was resolved with PiecesOS update, though user advised to contact support if persists.\n\n**Additional notes:**\n\n*  Support team provided links to resources on troubleshooting and documentation.",
+          "activity_level": 3.21
         }
       ]
     }
   ],
   "recommendations": [
-    "**Prioritize PiecesOS Update and Installation Issues:** Focus on resolving the root causes of update and installation failures in PiecesOS, as they are causing significant user frustration and hindering adoption.",
-    "**Improve LTM and Ollama Installation:** Address the issues with Long Term Memory (LTM) and Ollama installation across different operating systems. This will enable users to leverage these features effectively.",
-    "**Enhance Communication on Known Issues:**  Keep users informed about the status of known issues, particularly the LTM and Ollama installation problems. Provide clear timelines for fixes and workarounds where possible.",
-    "**Investigate Sandbox Environment Configuration:**  The issue with `curl` not being available in the sandbox environment for Ollama installation suggests a need to review and potentially adjust the sandbox configuration to ensure necessary tools are accessible.",
-    "**Gather Detailed Logs and System Information:**  For issues like the PiecesOS update problem on macOS, encourage users to provide detailed logs and system information to aid in debugging and identifying potential solutions.",
-    "**Consider Automated Troubleshooting:** Explore options for automated troubleshooting steps or self-service resources to address common issues like update failures. This could involve providing clear instructions, FAQs, or diagnostic tools."
+    "**Prioritize Ollama Integration Issues:** Allocate additional resources to investigate and resolve the recurring issues related to Ollama installation, dependency conflicts, and performance within PiecesOS. This will directly address a significant portion of user complaints.",
+    "**Improve PiecesOS Update and Launch Experience:** Investigate the root causes behind PiecesOS update and launch failures, including potential looping issues. Enhance error messaging and troubleshooting documentation to guide users towards solutions.",
+    "**Optimize LTM Performance:** Address the performance issues associated with the Long Term Memory engine, including high CPU usage and system instability. This will improve overall user experience and reduce support requests.",
+    "**Enhance Sandbox Integration:** Review the sandbox environment within PiecesOS to ensure compatibility with essential tools and dependencies like 'curl'. This will prevent installation failures and improve the functionality of integrated features.",
+    "**Proactive Communication:** Keep users informed about the status of known issues, particularly those related to Ollama and PiecesOS updates. Provide clear timelines for resolutions and offer potential workarounds whenever possible.",
+    "**Gather Detailed Logs:** Implement a system for collecting detailed logs from users experiencing issues with PiecesOS, Ollama, and LTM. This will aid in faster diagnosis and resolution of problems.",
+    "**Expand Knowledge Base:** Create comprehensive troubleshooting articles and FAQs addressing common issues related to Ollama integration, PiecesOS updates, and LTM performance. This will empower users to resolve problems independently and reduce support ticket volume.",
+    "**Performance Monitoring:** Implement continuous monitoring of PiecesOS and its integrated features to proactively identify and address performance bottlenecks or stability issues before they escalate into major problems.",
+    "**Automated Testing:** Develop and implement automated tests to cover critical functionalities like PiecesOS updates, Ollama integration, and LTM performance. This will help prevent regressions and ensure the stability of future releases.",
+    "**User Feedback Loop:** Establish a system for collecting user feedback on PiecesOS and its features. Regularly analyze this feedback to identify pain points, prioritize improvements, and enhance the overall user experience."
   ],
   "message": "Daily support report generated successfully."
 }
