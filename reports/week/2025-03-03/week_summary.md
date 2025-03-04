@@ -1,51 +1,69 @@
 # Support Ticket Report
-- Generated: 2025-03-04 13:11:57
+- Generated: 2025-03-04 21:07:47
 - Period: 2025-03-03 to 2025-03-04
 
 ## Summary
-- **Total Tickets:** 4
+- **Total Tickets:** 8
 - **Resolved:** 0
-- **Open:** 4
+- **Open:** 8
 
 ## 5 Most Active Tickets
 | Issue # | Title | Activity Level |
 |---------|-------|----------------|
-| [#640](https://github.com/pieces-app/support/issues/640) | Installing Ollama - Forever | 6.92 |
-| [#645](https://github.com/pieces-app/support/issues/645) | Unable to launch Pieces as Pieces OS is not updating after multiple tries | 5.68 |
-| [#537](https://github.com/pieces-app/support/issues/537) | Ollama Fails to Install on Linux | 5.65 |
-| [#644](https://github.com/pieces-app/support/issues/644) | Long Term Memory engine makes piecesOs loop reload | 3.21 |
+| [#648](https://github.com/pieces-app/support/issues/648) | Pieces Desktop not Launching on my Windows PC | 14.51 |
+| [#640](https://github.com/pieces-app/support/issues/640) | Installing Ollama - Forever | 6.65 |
+| [#649](https://github.com/pieces-app/support/issues/649) | LTM-2 Icons not loading properly | 5.68 |
+| [#650](https://github.com/pieces-app/support/issues/650) | Long Term Memory still slows down my PC, even after updating to LTM-2 | 5.68 |
+| [#647](https://github.com/pieces-app/support/issues/647) | Filling out Personal Domain in Pieces OS causes gray space to appear | 5.68 |
 
 ## Common Issues
-### 1. PiecesOS Update and Launch Issues
-Users report PiecesOS failing to update or launch, often getting stuck in a loop. This prevents access to Pieces features. Proposed solutions include updating PiecesOS and the desktop app, checking logs, scheduling debugging sessions, and ensuring Ollama is properly installed and integrated.
+### 1. Pieces OS and Desktop App Launch and Update Issues
+Users are experiencing difficulties launching or updating Pieces OS and Desktop App on Windows and macOS. Issues include getting stuck during launch, update failures, and problems connecting to Pieces OS. Troubleshooting steps involve updating to the latest versions, providing logs, and replacing corrupted folders. Some cases require further debugging with support.
 
 **Related Issues:**
+- [#648](https://github.com/pieces-app/support/issues/648): Pieces Desktop not Launching on my Windows PC
 - [#645](https://github.com/pieces-app/support/issues/645): Unable to launch Pieces as Pieces OS is not updating after multiple tries
-- [#644](https://github.com/pieces-app/support/issues/644): Long Term Memory engine makes piecesOs loop reload
 - [#640](https://github.com/pieces-app/support/issues/640): Installing Ollama - Forever
 
-### 2. Ollama Integration Issues in PiecesOS
-Users are experiencing problems with Ollama installation and functionality within PiecesOS. This includes installation failures, dependency conflicts, and performance issues. Proposed solutions involve addressing dependency issues, improving sandbox integration, and optimizing LTM performance.
+### 2. Pieces OS and Desktop App Launch and Update Issues
+Users report Pieces OS failing to update, launch, or connect with the Desktop app. This can involve gray screens, boot errors, or connection problems. Solutions include updating both OS and app, providing logs, replacing corrupted folders, and troubleshooting custom GPU setups.
 
 **Related Issues:**
-- [#640](https://github.com/pieces-app/support/issues/640): Installing Ollama - Forever
+- [#647](https://github.com/pieces-app/support/issues/647): Filling out Personal Domain in Pieces OS causes gray space to appear
+- [#645](https://github.com/pieces-app/support/issues/645): Unable to launch Pieces as Pieces OS is not updating after multiple tries
+- [#648](https://github.com/pieces-app/support/issues/648): Pieces Desktop not Launching on my Windows PC
+
+### 3. Ollama Installation and Update Issues in Pieces OS
+Users are experiencing difficulties installing and updating Ollama within the Pieces OS environment across different operating systems.  Common problems include installation failures, update issues, and conflicts with the snap environment. Proposed solutions involve dependency management, bug fixes, and direct support from Pieces OS team.
+
+**Related Issues:**
 - [#537](https://github.com/pieces-app/support/issues/537): Ollama Fails to Install on Linux
+- [#640](https://github.com/pieces-app/support/issues/640): Installing Ollama - Forever
+- [#645](https://github.com/pieces-app/support/issues/645): Unable to launch Pieces as Pieces OS is not updating after multiple tries
+
+### 4. LTM Performance Issues and Icon Loading
+Users are experiencing performance problems with Long Term Memory (LTM) causing system slowdowns and application crashes. Additionally, there are reports of missing icons in the LTM Access Control panel.  Solutions include upgrading to the latest Pieces OS version, adjusting LTM settings, and waiting for hotfixes addressing high CPU usage.
+
+**Related Issues:**
+- [#649](https://github.com/pieces-app/support/issues/649): LTM-2 Icons not loading properly
 - [#644](https://github.com/pieces-app/support/issues/644): Long Term Memory engine makes piecesOs loop reload
+- [#650](https://github.com/pieces-app/support/issues/650): Long Term Memory still slows down my PC, even after updating to LTM-2
 
 
 ## Recommendations
-- **Prioritize Ollama Integration Issues:** Allocate additional resources to investigate and resolve the recurring issues related to Ollama installation, dependency conflicts, and performance within PiecesOS. This will directly address a significant portion of user complaints.
-- **Improve PiecesOS Update and Launch Experience:** Investigate the root causes behind PiecesOS update and launch failures, including potential looping issues. Enhance error messaging and troubleshooting documentation to guide users towards solutions.
-- **Optimize LTM Performance:** Address the performance issues associated with the Long Term Memory engine, including high CPU usage and system instability. This will improve overall user experience and reduce support requests.
-- **Enhance Sandbox Integration:** Review the sandbox environment within PiecesOS to ensure compatibility with essential tools and dependencies like 'curl'. This will prevent installation failures and improve the functionality of integrated features.
-- **Proactive Communication:** Keep users informed about the status of known issues, particularly those related to Ollama and PiecesOS updates. Provide clear timelines for resolutions and offer potential workarounds whenever possible.
-- **Gather Detailed Logs:** Implement a system for collecting detailed logs from users experiencing issues with PiecesOS, Ollama, and LTM. This will aid in faster diagnosis and resolution of problems.
-- **Expand Knowledge Base:** Create comprehensive troubleshooting articles and FAQs addressing common issues related to Ollama integration, PiecesOS updates, and LTM performance. This will empower users to resolve problems independently and reduce support ticket volume.
-- **Performance Monitoring:** Implement continuous monitoring of PiecesOS and its integrated features to proactively identify and address performance bottlenecks or stability issues before they escalate into major problems.
-- **Automated Testing:** Develop and implement automated tests to cover critical functionalities like PiecesOS updates, Ollama integration, and LTM performance. This will help prevent regressions and ensure the stability of future releases.
-- **User Feedback Loop:** Establish a system for collecting user feedback on PiecesOS and its features. Regularly analyze this feedback to identify pain points, prioritize improvements, and enhance the overall user experience.
+- **Prioritize launch and update issues:** Focus on resolving the common issues related to Pieces OS and Desktop App launch and update failures, as they are widespread and impact user experience.
+- **Improve Ollama installation process:** Address the difficulties users face while installing and updating Ollama within Pieces OS, ensuring a smoother integration process.
+- **Optimize LTM performance:** Investigate and resolve the performance issues caused by Long Term Memory, including high CPU usage and system slowdowns, to enhance stability and user experience.
+- **Address icon loading problems:** Fix the missing icons in the LTM Access Control panel to maintain a consistent and user-friendly interface.
+- **Proactive communication:** Keep users informed about ongoing issues, planned fixes, and estimated resolution times through release notes, blog posts, or in-app notifications.
+- **Enhance documentation and troubleshooting guides:** Provide clear and comprehensive documentation for common issues, including step-by-step troubleshooting guides, to empower users to resolve problems independently.
+- **Gather more detailed user feedback:** Encourage users to provide detailed bug reports, including system specifications, logs, and steps to reproduce the issue, to aid in faster diagnosis and resolution.
+- **Invest in automated testing:** Implement automated testing procedures to identify and address potential issues before they reach users, ensuring a more stable and reliable product experience.
+- **Consider a dedicated support forum:** Create a dedicated support forum or community platform where users can connect, share their experiences, and seek assistance from both the Pieces team and fellow users.
+- **Monitor and analyze support data:** Regularly analyze support tickets and user feedback to identify trends, prioritize issues, and proactively address emerging problems before they escalate.
 
 ## Daily Reports
 Here are the daily reports for this week:
 
+- [report_210609](daily/2025-03-04/report_210609.md)
 - [report_131107](daily/2025-03-04/report_131107.md)
