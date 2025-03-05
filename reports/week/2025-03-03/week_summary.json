@@ -2,31 +2,67 @@
   "success": true,
   "date_range": {
     "start": "2025-03-03T00:00:00+00:00",
-    "end": "2025-03-04T21:06:45.329704+00:00"
+    "end": "2025-03-05T05:07:47.552341+00:00"
   },
   "summary": {
-    "total_tickets": 8,
+    "total_tickets": 11,
     "resolved_tickets": 0,
-    "open_tickets": 8
+    "open_tickets": 11
   },
   "ticket_breakdown": [
     {
-      "category": "os:windows",
-      "received": 5,
+      "category": "bug",
+      "received": 10,
       "resolved": 0,
-      "pending": 5
+      "pending": 10
+    },
+    {
+      "category": "status:new",
+      "received": 4,
+      "resolved": 0,
+      "pending": 4
     },
     {
       "category": "app:desktop application",
+      "received": 9,
+      "resolved": 0,
+      "pending": 9
+    },
+    {
+      "category": "os:macos",
+      "received": 3,
+      "resolved": 0,
+      "pending": 3
+    },
+    {
+      "category": "app:pieces os",
       "received": 6,
       "resolved": 0,
       "pending": 6
     },
     {
-      "category": "os:macos",
-      "received": 2,
+      "category": "os:windows",
+      "received": 6,
       "resolved": 0,
-      "pending": 2
+      "pending": 6
+    },
+    {
+      "category": "status:waiting_on_user_responses",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:pieces copilot module",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:triaged",
+      "received": 5,
+      "resolved": 0,
+      "pending": 5
     },
     {
       "category": "os:linux",
@@ -39,30 +75,6 @@
       "received": 1,
       "resolved": 0,
       "pending": 1
-    },
-    {
-      "category": "status:triaged",
-      "received": 5,
-      "resolved": 0,
-      "pending": 5
-    },
-    {
-      "category": "bug",
-      "received": 7,
-      "resolved": 0,
-      "pending": 7
-    },
-    {
-      "category": "app:pieces os",
-      "received": 5,
-      "resolved": 0,
-      "pending": 5
-    },
-    {
-      "category": "status:new",
-      "received": 2,
-      "resolved": 0,
-      "pending": 2
     },
     {
       "category": "status:pending_release",
@@ -81,22 +93,22 @@
     {
       "number": 648,
       "title": "Pieces Desktop not Launching on my Windows PC",
-      "activity_level": 14.51
+      "activity_level": 15.77
+    },
+    {
+      "number": 650,
+      "title": "Long Term Memory still slows down my PC, even after updating to LTM-2",
+      "activity_level": 6.94
+    },
+    {
+      "number": 649,
+      "title": "LTM-2 Icons not loading properly",
+      "activity_level": 6.94
     },
     {
       "number": 640,
       "title": "Installing Ollama - Forever",
       "activity_level": 6.65
-    },
-    {
-      "number": 649,
-      "title": "LTM-2 Icons not loading properly",
-      "activity_level": 5.68
-    },
-    {
-      "number": 650,
-      "title": "Long Term Memory still slows down my PC, even after updating to LTM-2",
-      "activity_level": 5.68
     },
     {
       "number": 647,
@@ -114,124 +126,164 @@
       "activity_level": 4.5
     },
     {
+      "number": 652,
+      "title": "\"Secret Message\" Example doesn't work properly",
+      "activity_level": 4.42
+    },
+    {
+      "number": 651,
+      "title": "Pieces Copilot not working with local processing mode",
+      "activity_level": 4.42
+    },
+    {
       "number": 644,
       "title": "Long Term Memory engine makes piecesOs loop reload",
-      "activity_level": 3.74
+      "activity_level": 4.0
+    },
+    {
+      "number": 459,
+      "title": "Bug: unable to cancel the download of an LLLM",
+      "activity_level": 1.55
     }
   ],
   "common_issues": [
     {
       "title": "Pieces OS and Desktop App Launch and Update Issues",
-      "description": "Users are experiencing difficulties launching or updating Pieces OS and Desktop App on Windows and macOS. Issues include getting stuck during launch, update failures, and problems connecting to Pieces OS. Troubleshooting steps involve updating to the latest versions, providing logs, and replacing corrupted folders. Some cases require further debugging with support.",
+      "description": "Users are experiencing problems with Pieces OS and Desktop App launching, updating, and connecting. Issues often occur after updates and manifest as infinite loading screens or error messages. Proposed solutions include reinstalling apps, replacing corrupted folders, checking log files, and debugging connectivity issues with support staff.",
       "frequency": 3,
       "related_issues": [
         {
           "id": 648,
           "title": "Pieces Desktop not Launching on my Windows PC",
-          "text": "Pieces Desktop not Launching on my Windows PC\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows 11 Home, 24H2\n\n### Your Pieces OS Version\n\n11.2.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nMy Pieces Desktop application has refused to launch since updating it to the latest version (v4.0.0). It's stuck in the \"Ensure Core Dependencies\" loading state even though I have Pieces OS already running successfully in the background. Kindly find screenshots below. \n\nI've tried force quitting both Pieces OS & Pieces Desktop from my Task Manager, uninstalling and re-installing Pieces Desktop, and restarting my PC, all to no avail. Any help would be highly appreciated, thank you!\n\n![Image](https://github.com/user-attachments/assets/22c14a42-29d6-4a1f-ab34-51ba5074b38e)\n\n![Image](https://github.com/user-attachments/assets/025d2e80-78be-480c-9cc2-a85a440dcf75)\n\n![Image](https://github.com/user-attachments/assets/48c76dde-307a-4451-b85f-0483b74c2321)\n## Summary of GitHub Issue Conversation\n\n**Key points raised:**\n\n* MoyinShabi is experiencing issues connecting Pieces for Developers to Pieces OS.\n* Logs and \"com.pieces.pfd\" folder were shared for diagnosis.\n* A bug in the \"com.pieces.pfd\" folder might be impacting the connection.\n\n**Problems identified:**\n\n* Issue with MoyinShabi's desktop app's database.\n* Inability to reproduce the boot issue on the developer's end.\n* Uncertainty about other factors causing the problem on MoyinShabi's setup.\n\n**Solutions proposed/implemented:**\n\n* Sharing logs and folders for diagnosis.\n* Identification of a bug in the \"com.pieces.pfd\" folder.\n* Providing a repaired \"com.pieces.pfd\" folder for download and replacement.\n\n**Current status/outcome:**\n\n* Repaired folder provided for testing.\n* MoyinShabi will try the solution and report back.\n\n**Additional notes:**\n\n* The conversation happened on March 4, 2025.\n* The outcome of MoyinShabi's test is still pending.",
-          "activity_level": 14.51
+          "text": "Pieces Desktop not Launching on my Windows PC\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows 11 Home, 24H2\n\n### Your Pieces OS Version\n\n11.2.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nMy Pieces Desktop application has refused to launch since updating it to the latest version (v4.0.0). It's stuck in the \"Ensure Core Dependencies\" loading state even though I have Pieces OS already running successfully in the background. Kindly find screenshots below. \n\nI've tried force quitting both Pieces OS & Pieces Desktop from my Task Manager, uninstalling and re-installing Pieces Desktop, and restarting my PC, all to no avail. Any help would be highly appreciated, thank you!\n\n![Image](https://github.com/user-attachments/assets/22c14a42-29d6-4a1f-ab34-51ba5074b38e)\n\n![Image](https://github.com/user-attachments/assets/025d2e80-78be-480c-9cc2-a85a440dcf75)\n\n![Image](https://github.com/user-attachments/assets/48c76dde-307a-4451-b85f-0483b74c2321)\n## Summary of GitHub Issue Conversation\n\n**Key Points Raised:**\n\n* MoyinShabi is having issues connecting Pieces for Developers to Pieces OS.\n* The issue started after a recent update.\n* MoyinShabi is not getting any health check notifications.\n\n**Problems Identified:**\n\n* Issue with MoyinShabi's desktop app's database.\n* Unable to reproduce the inability to boot the app.\n* `GetIt` package encountering an error during initialization.\n\n**Solutions Proposed/Implemented:**\n\n* mack-at-pieces requested log files and the \"com.pieces.pfd\" folder.\n* A potential bug in the `com.pieces.pfd` folder was fixed and a repaired version was provided.\n\n**Current Status/Outcome:**\n\n* MoyinShabi replaced the `com.pieces.pfd` folder with the repaired version but the issue persists.\n* An error related to the `GetIt` package is being logged.\n\n**Additional Notes:**\n\n* MoyinShabi is located in an area with poor network connectivity.\n* mack-at-pieces was unable to fully reproduce the issue but believes the provided solution may resolve it.\n\n**Next Steps:**\n\n* MoyinShabi should continue to work with mack-at-pieces to troubleshoot the issue.\n* mack-at-pieces may need to investigate the `GetIt` package error further.",
+          "activity_level": 15.77
         },
         {
           "id": 645,
           "title": "Unable to launch Pieces as Pieces OS is not updating after multiple tries",
-          "text": "Unable to launch Pieces as Pieces OS is not updating after multiple tries\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nPieces OS\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\nUnable to launch it, so I am not aware\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI have been trying to use Pieces since Sunday and the OS shows need update, but it is not able to update.\n\nHow can I get it working?\n\n<img width=\"1058\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/7bad989f-2254-44f6-8508-9057cb23ea52\" />\n## Summary of GitHub Issue Conversation\n\n**Title:** (Missing) - Likely related to PiecesOS booting issues\n\n**Key Points:**\n\n* User @Haimantika reported an issue with PiecesOS not booting up.\n* Bot identified similar issues and provided helpful resources.\n* Pieces support representative @mark-at-pieces responded and offered troubleshooting steps.\n\n**Problems Identified:**\n\n* PiecesOS unable to boot up properly.\n\n**Solutions Proposed/Implemented:**\n\n* Update PiecesOS and Pieces Desktop Application to latest versions (1.1.2 and 3.3.8 respectively).\n* Provide logs in a zip file for further investigation.\n* Schedule a debugging session with @mark-at-pieces.\n\n**Current Status/Outcome:**\n\n* User has been instructed on troubleshooting steps.\n* Issue resolution pending further information from the user.\n\n**Additional Notes:**\n\n* Conversation is from March 2025.\n* Specific details about the issue are missing, likely contained in the original user report.",
+          "text": "Unable to launch Pieces as Pieces OS is not updating after multiple tries\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nPieces OS\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\nUnable to launch it, so I am not aware\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI have been trying to use Pieces since Sunday and the OS shows need update, but it is not able to update.\n\nHow can I get it working?\n\n<img width=\"1058\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/7bad989f-2254-44f6-8508-9057cb23ea52\" />\n## Summary of GitHub Issue Conversation:\n\n**Key Points Raised:**\n\n* User @Haimantika is experiencing issues with PiecesOS failing to launch.\n* The issue may be related to a known problem that was identified in a previous release.\n\n**Problems Identified:**\n\n* PiecesOS is unable to launch.\n* The cause of the problem is not identified in the conversation.\n\n**Solutions Proposed/Implemented:**\n\n* Ensure the latest versions of PiecesOS (1.1.2) and Pieces Desktop Application (3.3.8) are installed.\n* Provide logs from /Users/markwidman/Library/com.pieces.os/production/Support/logs if the issue persists.\n* Schedule a debugging session with @mark-at-pieces.\n\n**Current Status/Outcome:**\n\n* The conversation ends with proposed solutions, and the outcome is not explicitly stated. It is unclear whether the user attempted the suggested solutions or whether the issue was resolved.",
           "activity_level": 4.5
         },
         {
           "id": 640,
           "title": "Installing Ollama - Forever",
-          "text": "Installing Ollama - Forever\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.1.2\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n![Image](https://github.com/user-attachments/assets/677e938c-3198-4f1b-af00-b22543704fcc)\n\nI have Ollama installed and this is stuck like this forever. I even tried uninstalling Ollama. Still the same :-(\n## Key points and summary of GitHub support conversation:\n\n**Issue:** User (@waseem852) is unable to install Ollama in Pieces, despite attempting various methods (Pieces setup, manual installation, Winget).\n\n**Problems identified:**\n\n* Ollama installation fails regardless of the chosen method.\n* User has tried various troubleshooting steps: uninstalling/reinstalling, restarting apps and computer.\n\n**Solutions proposed:**\n\n* Support agent (@brian-at-pieces) suggests confirming proper shutdown of Pieces apps after uninstalling Ollama.\n* After confirming restarts, agent proposes a call to debug the issue further.\n\n**Solutions implemented:**\n\n* User confirms performing all suggested actions.\n* Call is scheduled for further debugging.\n\n**Current status/outcome:**\n\n* Call is scheduled for the user's convenience on 2025-02-24.\n* Issue remains unresolved as of 2025-03-04, based on user's comment. \n\n**Additional notes:**\n\n* User indicates that the issue persists even with Pieces version 11.2.0 as of the latest comment.",
+          "text": "Installing Ollama - Forever\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.1.2\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n![Image](https://github.com/user-attachments/assets/677e938c-3198-4f1b-af00-b22543704fcc)\n\nI have Ollama installed and this is stuck like this forever. I even tried uninstalling Ollama. Still the same :-(\n## GitHub Issue Conversation Summary\n\n**Problem:** User waseem852 is experiencing issues with Ollama not working correctly in Pieces. They installed Ollama via multiple methods, including set up, winget, and directly in Pieces, but are still facing the problem. \n\n**Solution:** Support representative brian-at-pieces offered to help troubleshoot the issue. They discussed restarting Pieces, uninstalling and reinstalling Ollama, and even scheduling a call to debug in person. \n\n**Outcome:** The conversation ends with waseem852 scheduling a call with brian-at-pieces, but there is no update past 2025-03-04 about whether the call happened, or if the problem was solved.  \n\n**Current Status:** The issue appears to be unresolved as of the last message in the conversation.",
           "activity_level": 6.65
         }
       ]
     },
     {
       "title": "Pieces OS and Desktop App Launch and Update Issues",
-      "description": "Users report Pieces OS failing to update, launch, or connect with the Desktop app. This can involve gray screens, boot errors, or connection problems. Solutions include updating both OS and app, providing logs, replacing corrupted folders, and troubleshooting custom GPU setups.",
+      "description": "Users are experiencing issues with Pieces OS and Desktop App launching, updating, and connecting.  Problems include gray spaces appearing in settings, OS not updating, and apps getting stuck during launch. Solutions involve checking for updates, providing logs, and replacing corrupted folders. Network connectivity might also play a role.",
       "frequency": 3,
       "related_issues": [
         {
           "id": 647,
           "title": "Filling out Personal Domain in Pieces OS causes gray space to appear",
-          "text": "Filling out Personal Domain in Pieces OS causes gray space to appear\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.2.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWhen I attempt to fill in the field for personal domain under Pieces OS settings, the moment I start typing an enormous empty gray space appears. \n\nhttps://github.com/user-attachments/assets/3ba417a8-9685-4379-b278-176715101c69\n## Summary of GitHub Issue Conversation\n\n**Key Points Raised:**\n\n* DailenG reported an issue with Pieces OS not properly detecting a custom GPU on their system.\n* The Pieces Support Bot provided helpful links to existing issues, documentation, and resources.\n* @mack-at-pieces from the Pieces team acknowledged the issue and confirmed a fix was identified and soon to be released.\n\n**Problems Identified:**\n\n* Pieces OS incorrectly detected the custom GPU configuration.\n\n**Solutions Proposed/Implemented:**\n\n* A patch was developed to address the issue with custom GPU detection.\n* The patch was scheduled for release within 24 hours.\n\n**Current Status/Outcome:**\n\n* The issue has been resolved and the patch is expected to be included in the next Pieces OS release.\n\n**Additional Notes:**\n\n* No further action is required from DailenG.\n\n**Overall, this conversation demonstrates the efficient issue resolution process within the Pieces community, facilitated by the Pieces Support Bot and active participation from the development team.**",
+          "text": "Filling out Personal Domain in Pieces OS causes gray space to appear\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.2.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWhen I attempt to fill in the field for personal domain under Pieces OS settings, the moment I start typing an enormous empty gray space appears. \n\nhttps://github.com/user-attachments/assets/3ba417a8-9685-4379-b278-176715101c69\n## GitHub Issue Summary\n\n**Key points:**\n\n* User DailenG reported an issue with Pieces OS not running.\n* Pieces support bot tagged the issue and suggested related issues and resources.\n* Mack-at-pieces identified the cause and implemented a patch.\n\n**Problems identified:**\n\n* Pieces OS was not running for DailenG.\n\n**Solutions proposed/implemented:**\n\n* Mack-at-pieces identified and patched the cause of the issue.\n\n**Current status/outcome:**\n\n* A patch release is scheduled within 24 hours to fix the issue. \n\n**Additional context:**\n\n* This issue appears to be related to other reported issues with Pieces OS and the Copilot chat window.",
           "activity_level": 5.68
         },
         {
           "id": 645,
           "title": "Unable to launch Pieces as Pieces OS is not updating after multiple tries",
-          "text": "Unable to launch Pieces as Pieces OS is not updating after multiple tries\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nPieces OS\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\nUnable to launch it, so I am not aware\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI have been trying to use Pieces since Sunday and the OS shows need update, but it is not able to update.\n\nHow can I get it working?\n\n<img width=\"1058\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/7bad989f-2254-44f6-8508-9057cb23ea52\" />\n## Summary of GitHub Issue Conversation\n\n**Title:** (Missing) - Likely related to PiecesOS booting issues\n\n**Key Points:**\n\n* User @Haimantika reported an issue with PiecesOS not booting up.\n* Bot identified similar issues and provided helpful resources.\n* Pieces support representative @mark-at-pieces responded and offered troubleshooting steps.\n\n**Problems Identified:**\n\n* PiecesOS unable to boot up properly.\n\n**Solutions Proposed/Implemented:**\n\n* Update PiecesOS and Pieces Desktop Application to latest versions (1.1.2 and 3.3.8 respectively).\n* Provide logs in a zip file for further investigation.\n* Schedule a debugging session with @mark-at-pieces.\n\n**Current Status/Outcome:**\n\n* User has been instructed on troubleshooting steps.\n* Issue resolution pending further information from the user.\n\n**Additional Notes:**\n\n* Conversation is from March 2025.\n* Specific details about the issue are missing, likely contained in the original user report.",
+          "text": "Unable to launch Pieces as Pieces OS is not updating after multiple tries\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nPieces OS\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\nUnable to launch it, so I am not aware\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI have been trying to use Pieces since Sunday and the OS shows need update, but it is not able to update.\n\nHow can I get it working?\n\n<img width=\"1058\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/7bad989f-2254-44f6-8508-9057cb23ea52\" />\n## Summary of GitHub Issue Conversation:\n\n**Key Points Raised:**\n\n* User @Haimantika is experiencing issues with PiecesOS failing to launch.\n* The issue may be related to a known problem that was identified in a previous release.\n\n**Problems Identified:**\n\n* PiecesOS is unable to launch.\n* The cause of the problem is not identified in the conversation.\n\n**Solutions Proposed/Implemented:**\n\n* Ensure the latest versions of PiecesOS (1.1.2) and Pieces Desktop Application (3.3.8) are installed.\n* Provide logs from /Users/markwidman/Library/com.pieces.os/production/Support/logs if the issue persists.\n* Schedule a debugging session with @mark-at-pieces.\n\n**Current Status/Outcome:**\n\n* The conversation ends with proposed solutions, and the outcome is not explicitly stated. It is unclear whether the user attempted the suggested solutions or whether the issue was resolved.",
           "activity_level": 4.5
         },
         {
           "id": 648,
           "title": "Pieces Desktop not Launching on my Windows PC",
-          "text": "Pieces Desktop not Launching on my Windows PC\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows 11 Home, 24H2\n\n### Your Pieces OS Version\n\n11.2.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nMy Pieces Desktop application has refused to launch since updating it to the latest version (v4.0.0). It's stuck in the \"Ensure Core Dependencies\" loading state even though I have Pieces OS already running successfully in the background. Kindly find screenshots below. \n\nI've tried force quitting both Pieces OS & Pieces Desktop from my Task Manager, uninstalling and re-installing Pieces Desktop, and restarting my PC, all to no avail. Any help would be highly appreciated, thank you!\n\n![Image](https://github.com/user-attachments/assets/22c14a42-29d6-4a1f-ab34-51ba5074b38e)\n\n![Image](https://github.com/user-attachments/assets/025d2e80-78be-480c-9cc2-a85a440dcf75)\n\n![Image](https://github.com/user-attachments/assets/48c76dde-307a-4451-b85f-0483b74c2321)\n## Summary of GitHub Issue Conversation\n\n**Key points raised:**\n\n* MoyinShabi is experiencing issues connecting Pieces for Developers to Pieces OS.\n* Logs and \"com.pieces.pfd\" folder were shared for diagnosis.\n* A bug in the \"com.pieces.pfd\" folder might be impacting the connection.\n\n**Problems identified:**\n\n* Issue with MoyinShabi's desktop app's database.\n* Inability to reproduce the boot issue on the developer's end.\n* Uncertainty about other factors causing the problem on MoyinShabi's setup.\n\n**Solutions proposed/implemented:**\n\n* Sharing logs and folders for diagnosis.\n* Identification of a bug in the \"com.pieces.pfd\" folder.\n* Providing a repaired \"com.pieces.pfd\" folder for download and replacement.\n\n**Current status/outcome:**\n\n* Repaired folder provided for testing.\n* MoyinShabi will try the solution and report back.\n\n**Additional notes:**\n\n* The conversation happened on March 4, 2025.\n* The outcome of MoyinShabi's test is still pending.",
-          "activity_level": 14.51
+          "text": "Pieces Desktop not Launching on my Windows PC\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows 11 Home, 24H2\n\n### Your Pieces OS Version\n\n11.2.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nMy Pieces Desktop application has refused to launch since updating it to the latest version (v4.0.0). It's stuck in the \"Ensure Core Dependencies\" loading state even though I have Pieces OS already running successfully in the background. Kindly find screenshots below. \n\nI've tried force quitting both Pieces OS & Pieces Desktop from my Task Manager, uninstalling and re-installing Pieces Desktop, and restarting my PC, all to no avail. Any help would be highly appreciated, thank you!\n\n![Image](https://github.com/user-attachments/assets/22c14a42-29d6-4a1f-ab34-51ba5074b38e)\n\n![Image](https://github.com/user-attachments/assets/025d2e80-78be-480c-9cc2-a85a440dcf75)\n\n![Image](https://github.com/user-attachments/assets/48c76dde-307a-4451-b85f-0483b74c2321)\n## Summary of GitHub Issue Conversation\n\n**Key Points Raised:**\n\n* MoyinShabi is having issues connecting Pieces for Developers to Pieces OS.\n* The issue started after a recent update.\n* MoyinShabi is not getting any health check notifications.\n\n**Problems Identified:**\n\n* Issue with MoyinShabi's desktop app's database.\n* Unable to reproduce the inability to boot the app.\n* `GetIt` package encountering an error during initialization.\n\n**Solutions Proposed/Implemented:**\n\n* mack-at-pieces requested log files and the \"com.pieces.pfd\" folder.\n* A potential bug in the `com.pieces.pfd` folder was fixed and a repaired version was provided.\n\n**Current Status/Outcome:**\n\n* MoyinShabi replaced the `com.pieces.pfd` folder with the repaired version but the issue persists.\n* An error related to the `GetIt` package is being logged.\n\n**Additional Notes:**\n\n* MoyinShabi is located in an area with poor network connectivity.\n* mack-at-pieces was unable to fully reproduce the issue but believes the provided solution may resolve it.\n\n**Next Steps:**\n\n* MoyinShabi should continue to work with mack-at-pieces to troubleshoot the issue.\n* mack-at-pieces may need to investigate the `GetIt` package error further.",
+          "activity_level": 15.77
         }
       ]
     },
     {
-      "title": "Ollama Installation and Update Issues in Pieces OS",
-      "description": "Users are experiencing difficulties installing and updating Ollama within the Pieces OS environment across different operating systems.  Common problems include installation failures, update issues, and conflicts with the snap environment. Proposed solutions involve dependency management, bug fixes, and direct support from Pieces OS team.",
-      "frequency": 3,
-      "related_issues": [
-        {
-          "id": 537,
-          "title": "Ollama Fails to Install on Linux",
-          "text": "Ollama Fails to Install on Linux\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nLinux\n\n### Your Pieces OS Version\n\n11.0.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nUser reports immediate \"Ollama failed to install\" diaglog upon clicking install Ollama install button in Pieces desktop app\n## Summary of GitHub Issue Conversation:\n\n**Key Points:**\n\n* The issue involves the inability to use Ollama (a large language model) within Pieces-OS, which is installed as a snap.\n* The snap environment restricts access to certain programs like `curl`, which is needed for Ollama installation.\n\n**Problems Identified:**\n\n* Pieces-OS snap lacks necessary dependencies like `curl`.\n* Ollama installation fails due to missing dependencies.\n\n**Solutions Proposed/Implemented:**\n\n* Add `curl` to the list of dependency packages in the Pieces-OS snap definition file.\n* Develop a patch that allows Ollama usage within the sandboxed environment.\n\n**Current Status/Outcome:**\n\n* The issue is still present in the latest version of Pieces-OS.\n* A fix is under development and expected to be released in the coming weeks.\n\n**Additional Points:**\n\n* The issue also impacts model inference, not just downloading.\n* Users are waiting for a resolution to use local LLMs without relying on cloud LLMs.\n\n**Note:** This summary is based on the information available until March 3, 2025.",
-          "activity_level": 5.63
-        },
-        {
-          "id": 640,
-          "title": "Installing Ollama - Forever",
-          "text": "Installing Ollama - Forever\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.1.2\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n![Image](https://github.com/user-attachments/assets/677e938c-3198-4f1b-af00-b22543704fcc)\n\nI have Ollama installed and this is stuck like this forever. I even tried uninstalling Ollama. Still the same :-(\n## Key points and summary of GitHub support conversation:\n\n**Issue:** User (@waseem852) is unable to install Ollama in Pieces, despite attempting various methods (Pieces setup, manual installation, Winget).\n\n**Problems identified:**\n\n* Ollama installation fails regardless of the chosen method.\n* User has tried various troubleshooting steps: uninstalling/reinstalling, restarting apps and computer.\n\n**Solutions proposed:**\n\n* Support agent (@brian-at-pieces) suggests confirming proper shutdown of Pieces apps after uninstalling Ollama.\n* After confirming restarts, agent proposes a call to debug the issue further.\n\n**Solutions implemented:**\n\n* User confirms performing all suggested actions.\n* Call is scheduled for further debugging.\n\n**Current status/outcome:**\n\n* Call is scheduled for the user's convenience on 2025-02-24.\n* Issue remains unresolved as of 2025-03-04, based on user's comment. \n\n**Additional notes:**\n\n* User indicates that the issue persists even with Pieces version 11.2.0 as of the latest comment.",
-          "activity_level": 6.65
-        },
-        {
-          "id": 645,
-          "title": "Unable to launch Pieces as Pieces OS is not updating after multiple tries",
-          "text": "Unable to launch Pieces as Pieces OS is not updating after multiple tries\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nPieces OS\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\nUnable to launch it, so I am not aware\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI have been trying to use Pieces since Sunday and the OS shows need update, but it is not able to update.\n\nHow can I get it working?\n\n<img width=\"1058\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/7bad989f-2254-44f6-8508-9057cb23ea52\" />\n## Summary of GitHub Issue Conversation\n\n**Title:** (Missing) - Likely related to PiecesOS booting issues\n\n**Key Points:**\n\n* User @Haimantika reported an issue with PiecesOS not booting up.\n* Bot identified similar issues and provided helpful resources.\n* Pieces support representative @mark-at-pieces responded and offered troubleshooting steps.\n\n**Problems Identified:**\n\n* PiecesOS unable to boot up properly.\n\n**Solutions Proposed/Implemented:**\n\n* Update PiecesOS and Pieces Desktop Application to latest versions (1.1.2 and 3.3.8 respectively).\n* Provide logs in a zip file for further investigation.\n* Schedule a debugging session with @mark-at-pieces.\n\n**Current Status/Outcome:**\n\n* User has been instructed on troubleshooting steps.\n* Issue resolution pending further information from the user.\n\n**Additional Notes:**\n\n* Conversation is from March 2025.\n* Specific details about the issue are missing, likely contained in the original user report.",
-          "activity_level": 4.5
-        }
-      ]
-    },
-    {
-      "title": "LTM Performance Issues and Icon Loading",
-      "description": "Users are experiencing performance problems with Long Term Memory (LTM) causing system slowdowns and application crashes. Additionally, there are reports of missing icons in the LTM Access Control panel.  Solutions include upgrading to the latest Pieces OS version, adjusting LTM settings, and waiting for hotfixes addressing high CPU usage.",
+      "title": "LTM-2 Performance Issues",
+      "description": "Users are reporting performance issues with the new LTM-2 update, including slowness, high CPU usage, and problems with specific features like the secret message example. Some users have tried switching to cloud processing mode or disabling LTM for specific apps, but the issues persist. The Pieces team is aware of the problems and is actively investigating and working on solutions.",
       "frequency": 3,
       "related_issues": [
         {
           "id": 649,
           "title": "LTM-2 Icons not loading properly",
-          "text": "LTM-2 Icons not loading properly\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n11.2.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nThe LTM Access Control panel has some issues with finding and loading the correct icons for applications:\n\n![Image](https://github.com/user-attachments/assets/3385a6b8-3df0-40e3-a4a3-0f20b7625a32)\n## Summary of GitHub Issue Conversation\n\n**Key Points:**\n\n* A user, `hra42`, reported an issue regarding missing iconography support for specific applications in Pieces.\n* The issue was automatically routed to the relevant team member within 24 hours.\n* The user was directed to helpful resources including existing issues, documentation, and a YouTube channel.\n* The Pieces support team member (`mack-at-pieces`) confirmed they will add the missing application support and encouraged the community to contribute additional application names requiring icon support.\n\n**Problems Identified:**\n\n* Pieces lacked iconography support for specific applications.\n\n**Solutions Proposed/Implemented:**\n\n* The Pieces support team member will add iconography support for the applications mentioned by `hra42`. \n* The community was encouraged to contribute additional application names for which icon support is needed.\n\n**Current Status/Outcome:**\n\n* The issue is acknowledged and is being addressed by the Pieces team.\n* The support team will provide updates on the progress of adding iconography support.\n\n**Additional Notes:**\n\n* The issue conversation was created on March 4, 2025 at 7:11 PM UTC.\n* The conversation highlights the collaborative nature of the Pieces community, encouraging users to report issues and contribute to improvements.\n\nThis summary focuses on the most important details while remaining concise and informative.",
-          "activity_level": 5.68
+          "text": "LTM-2 Icons not loading properly\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n11.2.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nThe LTM Access Control panel has some issues with finding and loading the correct icons for applications:\n\n![Image](https://github.com/user-attachments/assets/3385a6b8-3df0-40e3-a4a3-0f20b7625a32)\n## GitHub Issue Summary\n\n**Key Points:**\n\n* User @hra42 asks for iconography support for additional applications in the Pieces app.\n* @mack-at-pieces acknowledges the request and encourages others to provide application names if needed.\n* @hra42 suggests using the bundle identifier to read application icons on macOS and accessing the registry on Windows, potentially eliminating the need to add applications manually.\n\n**Problems Identified:**\n\n* Lack of iconography support for certain applications.\n* Potential inefficiency in adding applications manually.\n\n**Solutions Proposed/Implemented:**\n\n* Reading application icons from the bundle identifier on macOS.\n* Accessing the registry on Windows.\n\n**Current Status/Outcome:**\n\n* The proposed solutions have not yet been implemented. \n* The issue remains open for further discussion and potential implementation.",
+          "activity_level": 6.94
         },
         {
-          "id": 644,
-          "title": "Long Term Memory engine makes piecesOs loop reload",
-          "text": "Long Term Memory engine makes piecesOs loop reload\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.1.2\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWhen I enable Long term memory engine on and use it on pieces for dev or vscode when I try to prompt anything, piecesOS shit's off and starts looping on restart until I manage in the seconds it stays on to disable the LTM engine.\n## Issue Summary: LTM Issues\n\n**Key Points:**\n\n* User @rafael-a-g-n reported an issue with LTM.\n* The issue was related to LTM being unable to see code inside a sandbox.\n* Pieces Support Bot provided some related issues and resources for reference.\n* Mark-at-pieces responded and apologized for the delay, citing work on a major release with fixes and enhancements for LTM2.\n* The user was advised to wait for the release of PiecesOS 11.2.0, and offered a calendar link to discuss the issue further if it persisted.\n\n**Problems Identified:**\n\n* LTM was unable to see code inside a sandbox.\n* Delayed response from Pieces support due to development sprint.\n\n**Solutions Proposed/Implemented:**\n\n* Wait for the release of PiecesOS 11.2.0, which included LTM2 with fixes and enhancements.\n* Schedule a meeting with Mark-at-pieces to discuss the issue further if it continued.\n\n**Current Status/Outcome:**\n\n* The issue is currently unresolved, but the user will try again after the release of PiecesOS 11.2.0.\n* If the issue persists, they can schedule a meeting with Mark-at-pieces for further assistance.",
-          "activity_level": 3.74
+          "id": 652,
+          "title": "\"Secret Message\" Example doesn't work properly",
+          "text": "\"Secret Message\" Example doesn't work properly\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n11.2.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWhen using LTM-2 to test the secret message example:\nhttps://pieces.app/magic-moments/ltm\n\nI got a strange response from the LLM:\nClaude 3.5:\nFirst Try:\n![Image](https://github.com/user-attachments/assets/1962a3e4-8b02-4d3f-bc8c-4bdd72c80aa6)\n2. try: (waited longer on the website)\n![Image](https://github.com/user-attachments/assets/cd71c5c1-d5d5-4449-acd5-e070fb244fa9)\n\nGemini 2.0 Flash did fail completely:\n![Image](https://github.com/user-attachments/assets/50735f7a-28a1-4563-b490-e10c271eca23)\n## GitHub Issue Conversation Summary:\n\n**Author:** pieces-support-bot[bot]\n**Date:** 2025-03-05\n**Issue:** User (hra42) created an issue.\n\n**Key points:**\n\n* User's issue is automatically triaged and routed.\n* User will receive a follow-up within 24 hours.\n* Related issues and resources are provided for reference.\n\n**Problems identified:**\n\n* Specific problem not identified in provided conversation snippet.\n\n**Solutions proposed/implemented:**\n\n* pieces-support-bot[bot] suggests related issues and resources for user reference.\n\n**Current status/outcome:**\n\n* Issue is being routed to the relevant team member for follow-up.\n\n**Note:** Additional information about the specific problem or user's query is needed for a more detailed summary.",
+          "activity_level": 4.42
         },
         {
           "id": 650,
           "title": "Long Term Memory still slows down my PC, even after updating to LTM-2",
-          "text": "Long Term Memory still slows down my PC, even after updating to LTM-2\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.2.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nTurning on Long Term Memory has been slowing down my desktop computer, even before LTM-2. After updating today, it still happens. It's most noticeable when I use Slack and Discord, and disabling those apps on LTM doesn't work. Even after switching the Processing Mode to Cloud, as suggested by HRA42 on the Discord server, the lag still occurs. At some point, the total CPU usage went up by over 90%.\n\n![Image](https://github.com/user-attachments/assets/eaef0d65-b19b-41f0-bf8a-f143fa8d1e43)\n\nMy computer specs:\n- CPU: Intel(R) Core(TM) i3-6300 CPU @ 3.80GHz\n- RAM: DDR4 32 GB\n- Graphics: GeForce GTX 950 2 GB\n\nI'm yet to notice significant slowness on other programs, but if I'm getting a lot of lag on those chat apps, I can imagine I would get them too on something heavier like Visual Studio.\n## Summary of GitHub Issue Conversation:\n\n**Key Points:**\n\n* User `epikkoder` reported an issue with high CPU usage on Pieces OS.\n* The issue was automatically routed to the Pieces team.\n* Author `hra42` from the Pieces team responded that a hotfix is being worked on.\n\n**Problems Identified:**\n\n* High CPU usage on Pieces OS.\n\n**Solutions Proposed/Implemented:**\n\n* A hotfix is being developed by the Pieces team.\n\n**Current Status/Outcome:**\n\n* The issue is being addressed with a hotfix.\n\n**Additional Information:**\n\n* The author provided links to related issues and helpful resources.\n\n**Note:** This summary is based on the information provided in the conversation. As the conversation is ongoing, the status and outcome may change.",
-          "activity_level": 5.68
+          "text": "Long Term Memory still slows down my PC, even after updating to LTM-2\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.2.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nTurning on Long Term Memory has been slowing down my desktop computer, even before LTM-2. After updating today, it still happens. It's most noticeable when I use Slack and Discord, and disabling those apps on LTM doesn't work. Even after switching the Processing Mode to Cloud, as suggested by HRA42 on the Discord server, the lag still occurs. At some point, the total CPU usage went up by over 90%.\n\n![Image](https://github.com/user-attachments/assets/eaef0d65-b19b-41f0-bf8a-f143fa8d1e43)\n\nMy computer specs:\n- CPU: Intel(R) Core(TM) i3-6300 CPU @ 3.80GHz\n- RAM: DDR4 32 GB\n- Graphics: GeForce GTX 950 2 GB\n\nI'm yet to notice significant slowness on other programs, but if I'm getting a lot of lag on those chat apps, I can imagine I would get them too on something heavier like Visual Studio.\n## GitHub Issue Summary\n\n**Key Points:**\n\n* Issue: High CPU usage by Pieces OS on Linux Mint 22.1.\n* Opened by: epikkoder\n* Time: 2025-03-04T19:22:23+00:00\n\n**Problems Identified:**\n\n* Excessive CPU usage, potentially impacting system performance.\n\n**Solutions Proposed/Implemented:**\n\n* Hotfix developed and released by the Pieces team.\n\n**Current Status/Outcome:**\n\n* Hotfix available for installation. User confirmation needed to verify if performance improves.",
+          "activity_level": 6.94
+        }
+      ]
+    },
+    {
+      "title": "Long Term Memory causes high CPU usage and lag",
+      "description": "Users are reporting significant slowdowns and high CPU usage when Long Term Memory is enabled in Pieces OS, particularly with chat applications like Slack and Discord. The issue persists across different Pieces OS versions and processing modes. Some users experience system instability, with Pieces OS repeatedly restarting.  No definitive solution has been identified yet, but updating to the latest Pieces OS version (11.2.0 or higher) is recommended.",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 650,
+          "title": "Long Term Memory still slows down my PC, even after updating to LTM-2",
+          "text": "Long Term Memory still slows down my PC, even after updating to LTM-2\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.2.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nTurning on Long Term Memory has been slowing down my desktop computer, even before LTM-2. After updating today, it still happens. It's most noticeable when I use Slack and Discord, and disabling those apps on LTM doesn't work. Even after switching the Processing Mode to Cloud, as suggested by HRA42 on the Discord server, the lag still occurs. At some point, the total CPU usage went up by over 90%.\n\n![Image](https://github.com/user-attachments/assets/eaef0d65-b19b-41f0-bf8a-f143fa8d1e43)\n\nMy computer specs:\n- CPU: Intel(R) Core(TM) i3-6300 CPU @ 3.80GHz\n- RAM: DDR4 32 GB\n- Graphics: GeForce GTX 950 2 GB\n\nI'm yet to notice significant slowness on other programs, but if I'm getting a lot of lag on those chat apps, I can imagine I would get them too on something heavier like Visual Studio.\n## GitHub Issue Summary\n\n**Key Points:**\n\n* Issue: High CPU usage by Pieces OS on Linux Mint 22.1.\n* Opened by: epikkoder\n* Time: 2025-03-04T19:22:23+00:00\n\n**Problems Identified:**\n\n* Excessive CPU usage, potentially impacting system performance.\n\n**Solutions Proposed/Implemented:**\n\n* Hotfix developed and released by the Pieces team.\n\n**Current Status/Outcome:**\n\n* Hotfix available for installation. User confirmation needed to verify if performance improves.",
+          "activity_level": 6.94
+        },
+        {
+          "id": 644,
+          "title": "Long Term Memory engine makes piecesOs loop reload",
+          "text": "Long Term Memory engine makes piecesOs loop reload\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.1.2\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWhen I enable Long term memory engine on and use it on pieces for dev or vscode when I try to prompt anything, piecesOS shit's off and starts looping on restart until I manage in the seconds it stays on to disable the LTM engine.\n## Summary of GitHub Issue Conversation:\n\n**Key Points:**\n\n* User @rafael-a-g-n reported an issue with LTM (likely related to high CPU usage).\n* Pieces support bot provided helpful resources and suggested related issues.\n* Mark from Pieces acknowledged the issue and apologized for the delay, citing a major release.\n* Mark suggested waiting for the 11.2.0 PiecesOS release and offered a calendar link for individual assistance if needed.\n\n**Problems Identified:**\n\n* LTM appears to be experiencing high CPU usage.\n* Support response was delayed due to a major release.\n\n**Solutions Proposed/Implemented:**\n\n* Wait for the 11.2.0 PiecesOS release (already implemented).\n* Individual assistance offered via calendar link.\n\n**Current Status/Outcome:**\n\n* Issue remains open.\n* User encouraged to follow-up if the issue persists after the 11.2.0 update.\n\n**Additional Notes:**\n\n* No specific information on the nature of the LTM issue is provided in this conversation excerpt.",
+          "activity_level": 4.0
+        },
+        {
+          "id": 651,
+          "title": "Pieces Copilot not working with local processing mode",
+          "text": "Pieces Copilot not working with local processing mode\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.2.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWhen I set ML Processing Mode to Local, the pieces copilot stops working saying this feature works with blended processing. I sent a simple hello message and it mentions on website that I can use it on local.\n\n![Image](https://github.com/user-attachments/assets/aa9370bd-4089-41d3-8f79-dbc2fb654635)\n\n![Image](https://github.com/user-attachments/assets/57a6a86d-99e7-4354-ab47-47456155ada9)\n\nI tried using local modal (LLaMa 3.2 3B) which is relatively small size for fast response but it is stuck on thinking phase. This model is working on ollama but not on pieces desktop with local processing mode.\n![Image](https://github.com/user-attachments/assets/a3242cf3-831f-45ce-a1a2-222c73cb703d)\n\n## GitHub Issue Conversation Summary\n\n**Key points:**\n\n* User @AkhilTrivediX created an issue with Pieces.\n* The issue was automatically triaged and routed to the proper team member.\n* The bot suggests checking related issues and helpful resources.\n\n**Problems:**\n\n* The user's specific issue and details are not explicitly mentioned in the provided conversation.\n* No specific information about problems identified is available.\n\n**Solutions:**\n\n* No solutions are proposed or implemented within the provided conversation.\n* The bot suggests checking related issues and resources for potential solutions.\n\n**Current status/outcome:**\n\n* The issue has been acknowledged and routed to the appropriate team.\n* No further updates or outcomes are provided in the conversation.\n\n**Additional notes:**\n\n* For a more complete understanding, it is recommended to analyze the full issue thread including user descriptions and team responses.",
+          "activity_level": 4.42
+        }
+      ]
+    },
+    {
+      "title": "Ollama Installation and Download Issues in Pieces OS",
+      "description": "Users report various issues with Ollama in Pieces OS, including installation failures due to sandbox restrictions, download problems, and unresponsive UI. Proposed solutions involve patching the app for sandbox access, updating snap dependencies, and replacing the LLM infrastructure. Temporary fixes include reinstalling Pieces OS and deleting app data.",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 537,
+          "title": "Ollama Fails to Install on Linux",
+          "text": "Ollama Fails to Install on Linux\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nLinux\n\n### Your Pieces OS Version\n\n11.0.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nUser reports immediate \"Ollama failed to install\" diaglog upon clicking install Ollama install button in Pieces desktop app\n## Summary of GitHub Issue Conversation\n\n**Key points raised:**\n\n* Pieces-os is unable to install Ollama due to a lack of \"curl\" in the snap environment.\n* User has \"curl\" installed but it's unavailable within the sandboxed Pieces-os environment.\n* Manually downloading Ollama doesn't resolve the issue as Pieces-os cannot access it.\n* The issue impacts both downloading and inference of LLMs.\n\n**Problems identified:**\n\n* Pieces-os snap confinement restricts access to \"curl\" which is needed for downloading Ollama.\n* Strict confinement prevents Pieces-os from seeing externally installed Ollama.\n\n**Solutions proposed/implemented:**\n\n* Patching the package to allow Ollama usage from within the sandbox.\n* Updating the snap definition file to include \"curl\" as a dependency.\n\n**Current status/outcome:**\n\n* A fix is currently in development and expected to be released next week (as of January 23, 2025).\n* Users are advised to wait for the official update.\n\n**Additional notes:**\n\n* Users are encouraged to check the issue for updates.\n* Concerns are raised about the security implications of using cloud-based LLMs.",
+          "activity_level": 5.63
+        },
+        {
+          "id": 640,
+          "title": "Installing Ollama - Forever",
+          "text": "Installing Ollama - Forever\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.1.2\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n![Image](https://github.com/user-attachments/assets/677e938c-3198-4f1b-af00-b22543704fcc)\n\nI have Ollama installed and this is stuck like this forever. I even tried uninstalling Ollama. Still the same :-(\n## GitHub Issue Conversation Summary\n\n**Problem:** User waseem852 is experiencing issues with Ollama not working correctly in Pieces. They installed Ollama via multiple methods, including set up, winget, and directly in Pieces, but are still facing the problem. \n\n**Solution:** Support representative brian-at-pieces offered to help troubleshoot the issue. They discussed restarting Pieces, uninstalling and reinstalling Ollama, and even scheduling a call to debug in person. \n\n**Outcome:** The conversation ends with waseem852 scheduling a call with brian-at-pieces, but there is no update past 2025-03-04 about whether the call happened, or if the problem was solved.  \n\n**Current Status:** The issue appears to be unresolved as of the last message in the conversation.",
+          "activity_level": 6.65
+        },
+        {
+          "id": 459,
+          "title": "Bug: unable to cancel the download of an LLLM",
+          "text": "Bug: unable to cancel the download of an LLLM\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nlatest\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n![image](https://github.com/user-attachments/assets/6e730898-a168-4571-ab0d-6331c4d389a4)\r\n\r\ni want stop but its not working \r\n\n## GitHub Issue Discussion Summary: Mistral 8 7b Download Issues \n\n**Key points raised:**\n\n* The \"stop download\" button for the Mistral 8 7b model does not work in the Pieces OS and desktop app.\n* Clicking the button multiple times can lead to the model getting stuck on \"Initialization\".\n\n**Problems identified:**\n\n* This issue seems to affect multiple users and has been seen before with other models.\n* No clear explanation is provided for why the issue occurs.\n\n**Solutions proposed/implemented:**\n\n* **Temporary fix:** Delete all files in `C:/Users/[YOUR-USERNAME]/Documents/com.pieces.os/` and perform a fresh install of Pieces OS and the desktop app. This worked for one user but might not be a sustainable solution for everyone.\n* Other less successful attempts included reinstalling the desktop app & OS without deleting data, reinstalling Ollama, disconnecting from the internet, and restarting the machine.\n* The infrastructure for Large Language Models is being completely replaced with plans to implement this within 2-3 weeks. This could potentially resolve the issue.\n\n**Current status/outcome:**\n\n* The temporary fix mentioned by AkhilTrivediX might work for some users.\n* The long-term fix likely relies on the successful implementation of the new LLM infrastructure, expected within 2-3 weeks of the initial discussion.\n* Further updates are necessary to confirm if the new infrastructure resolves the download issues.",
+          "activity_level": 1.55
         }
       ]
     }
   ],
   "recommendations": [
-    "**Prioritize launch and update issues:** Focus on resolving the common issues related to Pieces OS and Desktop App launch and update failures, as they are widespread and impact user experience.",
-    "**Improve Ollama installation process:** Address the difficulties users face while installing and updating Ollama within Pieces OS, ensuring a smoother integration process.",
-    "**Optimize LTM performance:** Investigate and resolve the performance issues caused by Long Term Memory, including high CPU usage and system slowdowns, to enhance stability and user experience.",
-    "**Address icon loading problems:** Fix the missing icons in the LTM Access Control panel to maintain a consistent and user-friendly interface.",
-    "**Proactive communication:** Keep users informed about ongoing issues, planned fixes, and estimated resolution times through release notes, blog posts, or in-app notifications.",
-    "**Enhance documentation and troubleshooting guides:** Provide clear and comprehensive documentation for common issues, including step-by-step troubleshooting guides, to empower users to resolve problems independently.",
-    "**Gather more detailed user feedback:** Encourage users to provide detailed bug reports, including system specifications, logs, and steps to reproduce the issue, to aid in faster diagnosis and resolution.",
-    "**Invest in automated testing:** Implement automated testing procedures to identify and address potential issues before they reach users, ensuring a more stable and reliable product experience.",
-    "**Consider a dedicated support forum:** Create a dedicated support forum or community platform where users can connect, share their experiences, and seek assistance from both the Pieces team and fellow users.",
-    "**Monitor and analyze support data:** Regularly analyze support tickets and user feedback to identify trends, prioritize issues, and proactively address emerging problems before they escalate."
+    "**Prioritize LTM-2 Performance Issues:** Allocate additional resources to investigate and address the performance problems related to LTM-2, particularly high CPU usage and slowness reported by users.",
+    "**Improve Ollama Installation Process:** Review and enhance the Ollama installation process within Pieces OS to resolve issues related to sandbox restrictions, download failures, and UI responsiveness.",
+    "**Address Pieces OS and Desktop App Launch and Update Issues:** Investigate and resolve the recurring problems with Pieces OS and Desktop App launching and updating, including gray spaces in settings, OS update failures, and app launch failures.",
+    "**Enhance Communication on Known Issues:**  Keep users informed about the status and estimated resolution time for known issues, such as the LTM-2 performance problems and Ollama installation issues.",
+    "**Gather More Detailed User Feedback:** Encourage users to provide more specific details and system information when reporting issues to aid in faster troubleshooting and resolution.",
+    "**Improve Error Messaging:** Provide clearer and more informative error messages to users when issues occur, enabling them to understand the problem and potential solutions better.",
+    "**Expand Testing Coverage:** Implement more comprehensive testing procedures, including various hardware configurations and operating systems, to identify and address potential issues before release.",
+    "**Consider User Hardware Limitations:** Optimize LTM-2 and other resource-intensive features to run more efficiently on lower-end hardware configurations to prevent performance issues.",
+    "**Review Sandbox Permissions:** Evaluate the sandbox permissions for Pieces OS to ensure necessary access for functionalities like Ollama installation while maintaining security.",
+    "**Provide Troubleshooting Guides:** Create and maintain comprehensive troubleshooting guides for common issues, empowering users to resolve problems independently when possible."
   ],
   "message": "Daily support report generated successfully."
 }
