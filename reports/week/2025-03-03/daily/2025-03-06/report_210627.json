@@ -1,0 +1,113 @@
+{
+  "success": true,
+  "date_range": {
+    "start": "2025-03-06T00:00:00+00:00",
+    "end": "2025-03-06T21:06:27.870521+00:00"
+  },
+  "summary": {
+    "total_tickets": 3,
+    "resolved_tickets": 0,
+    "open_tickets": 3
+  },
+  "ticket_breakdown": [
+    {
+      "category": "bug",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "os:windows",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:new",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "app:desktop application",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "app:pieces os",
+      "received": 3,
+      "resolved": 0,
+      "pending": 3
+    },
+    {
+      "category": "os:macos",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "ongoing",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    }
+  ],
+  "most_active_tickets": [
+    {
+      "number": 650,
+      "title": "Long Term Memory still slows down my PC, even after updating to LTM-2",
+      "activity_level": 12.49
+    },
+    {
+      "number": 150,
+      "title": "PiecesOS using too much RAM/spike in CPU",
+      "activity_level": 6.62
+    },
+    {
+      "number": 652,
+      "title": "\"Secret Message\" Example doesn't work properly",
+      "activity_level": 5.5
+    }
+  ],
+  "common_issues": [
+    {
+      "title": "Pieces OS High CPU and Memory Usage",
+      "description": "Users report high CPU and memory consumption by Pieces OS, especially with Long Term Memory (LTM) enabled. This impacts performance on various apps and increases CPU usage significantly. Proposed solutions include restarting Pieces OS, disabling LTM, and using cloud processing mode. The Pieces team is investigating memory leaks and optimizing the software.",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 650,
+          "title": "Long Term Memory still slows down my PC, even after updating to LTM-2",
+          "text": "Long Term Memory still slows down my PC, even after updating to LTM-2\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.2.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nTurning on Long Term Memory has been slowing down my desktop computer, even before LTM-2. After updating today, it still happens. It's most noticeable when I use Slack and Discord, and disabling those apps on LTM doesn't work. Even after switching the Processing Mode to Cloud, as suggested by HRA42 on the Discord server, the lag still occurs. At some point, the total CPU usage went up by over 90%.\n\n![Image](https://github.com/user-attachments/assets/eaef0d65-b19b-41f0-bf8a-f143fa8d1e43)\n\nMy computer specs:\n- CPU: Intel(R) Core(TM) i3-6300 CPU @ 3.80GHz\n- RAM: DDR4 32 GB\n- Graphics: GeForce GTX 950 2 GB\n\nI'm yet to notice significant slowness on other programs, but if I'm getting a lot of lag on those chat apps, I can imagine I would get them too on something heavier like Visual Studio.\n## GitHub Issue Summary\n\n**Title:** High CPU usage and performance issues with Pieces OS\n**Author:** epikkoder\n\n**Key Points:**\n\n* User reported high CPU usage and performance issues in Pieces OS.\n* The issue appeared after the introduction of the Long-Term Memory (LTM) engine.\n* High CPU usage persisted even after the initial hotfix.\n* Microsoft Edge was particularly affected, with slow window movement and scrolling.\n* The issue seems to be related to the number of tabs open in Edge.\n\n**Solutions Proposed:**\n\n* Initial hotfix was rolled out by the Pieces team.\n* Additional patch was released to further address the issue.\n\n**Outcome:**\n\n* Patch improved the situation but did not fully resolve the high CPU usage.\n* It appears the issue may be related to the number of tabs open in Edge.\n* The Pieces team is investigating further.\n\n**Current Status:**\n\n* The issue is ongoing.\n* The Pieces team is actively working on a solution.\n\n**Additional Notes:**\n\n* The issue seems to be affecting other users as well.\n* Some users have reported spikes in CPU usage even after the patch.",
+          "activity_level": 12.49
+        },
+        {
+          "id": 150,
+          "title": "PiecesOS using too much RAM/spike in CPU",
+          "text": "PiecesOS using too much RAM/spike in CPU\nSeveral users have called in recently about Pieces using too much RAM or causing a spike in CPU up to 100%. We are trying to track down this issue, and would appreciate any feedback about your experience with this if you are experiencing it. \r\n\r\nWe have a hunch it has something to do with internet connections, but aren't fully sure yet. \r\n\r\nIf you're experiencing this and wouldn't mind hopping on a call with us to show us, we would really appreciate it to help us troubleshoot! You can schedule a call [here](https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2iaRWpd1kA2k_xg2KrVi_jiTHo0POiMZSI9WAYsxs5jJ9sU2Rd2zKitLuSFd7l3FhatGzy5Vgt\r\n). \r\n\r\nA short-term solution is to restart PiecesOS whenever this occurs. \n## Summary of GitHub Issue Conversation regarding Pieces OS High Memory Usage\n\n**Key Points Raised:**\n\n* High memory usage in Pieces OS, even when not actively used.\n* Concerns about potential mining activity.\n* Difficulty in identifying the root cause of the memory leak.\n* Significant impact on system performance (CPU and RAM usage).\n* Requests for a \"lite\" mode or configuration with reduced resource consumption.\n\n**Problems Identified:**\n\n* Memory leaks in Pieces OS leading to excessive RAM usage.\n* Unclear cause of the memory leaks.\n* High CPU usage in certain scenarios.\n* Negative impact on user experience due to slow performance.\n\n**Solutions Proposed/Implemented:**\n\n* **Database technology replacement:** Pieces OS version 11.1.0 replaced two heavy database technologies, which aimed to improve CPU and memory usage.\n* **Live Context optimization:** Disabling the Live Context feature can reduce RAM consumption.\n* **Memory optimization tool:** Pieces OS offers a \"Optimize Memory\" tool that unloads some ML models to free up RAM.\n* **\"Lite\" mode suggestion:** Users requested a streamlined version with reduced resource consumption.\n\n**Current Status/Outcome:**\n\n* **Version 11.1.0:** Initial release reported some improvement in CPU usage, but further fixes are planned.\n* **Memory leak investigation ongoing:** The root cause of the memory leak is still under investigation.\n* **\"Lite\" mode under consideration:** The development team is considering a \"lite\" mode with reduced functionality and resource usage.\n\n**Additional Notes:**\n\n* The issue remains open as of March 5, 2025.\n* Users report mixed experiences with the latest updates.\n* High CPU and memory usage persist for some users, particularly on M3 Pro devices.\n* The Pieces team continues to investigate and address the issue.\n\n**Overall, the issue of high memory usage in Pieces OS is acknowledged and actively being addressed. While some improvements have been implemented, the issue persists for some users. The team is committed to resolving the problem and providing a more efficient user experience.**",
+          "activity_level": 6.62
+        },
+        {
+          "id": 652,
+          "title": "\"Secret Message\" Example doesn't work properly",
+          "text": "\"Secret Message\" Example doesn't work properly\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n11.2.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWhen using LTM-2 to test the secret message example:\nhttps://pieces.app/magic-moments/ltm\n\nI got a strange response from the LLM:\nClaude 3.5:\nFirst Try:\n![Image](https://github.com/user-attachments/assets/1962a3e4-8b02-4d3f-bc8c-4bdd72c80aa6)\n2. try: (waited longer on the website)\n![Image](https://github.com/user-attachments/assets/cd71c5c1-d5d5-4449-acd5-e070fb244fa9)\n\nGemini 2.0 Flash did fail completely:\n![Image](https://github.com/user-attachments/assets/50735f7a-28a1-4563-b490-e10c271eca23)\n## Summary of GitHub Issue Conversation:\n\n**Key Points Raised:**\n\n* User (@hra42) encountered a menu item mentioning \"device constraints\" but couldn't find more information about it.\n* The user's machine is an m3 mac.\n\n**Problems Identified:**\n\n* Lack of information on \"device constraints\" mentioned in the menu item.\n* Potential issue specific to m3 macs.\n\n**Solutions Proposed/Implemented:**\n\n* User (@joelash) suggested a possible connection to the \"Long Term Memory engine\" issue.\n* User (@hra42) suggested creating a separate issue for the m3 mac-specific problem.\n\n**Current Status/Outcome:**\n\n* No further updates after user (@hra42) suggested creating a separate issue.\n\n**Next Steps:**\n\n* Create a new GitHub issue specifically addressing the \"device constraints\" issue on m3 macs.",
+          "activity_level": 5.5
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    "**Investigate and address the \"Pieces OS High CPU and Memory Usage\" issue:** This is the most common issue reported by users, impacting performance and causing frustration. Prioritize finding a solution and communicating updates to users.",
+    "**Provide clear documentation on Long Term Memory (LTM):** Many users experience issues with LTM, suggesting a need for clearer documentation on its functionality, limitations, and troubleshooting steps.",
+    "**Improve communication and transparency:** Keep users informed about ongoing issues, bug fixes, and planned improvements. Consider a dedicated space for known issues and their status.",
+    "**Gather more detailed system information:** Encourage users to provide their Pieces OS version, operating system, and hardware specifications when reporting issues to aid in troubleshooting.",
+    "**Consider a dedicated support channel for LTM-related issues:** Given the frequency of LTM-related problems, a dedicated support channel could help streamline troubleshooting and information sharing.",
+    "**Review and update the \"Secret Message\" example:** Ensure all examples and tutorials are up-to-date and functioning correctly to avoid user confusion and frustration.",
+    "**Monitor performance across different operating systems:** The data shows issues reported on both Windows and macOS, highlighting the importance of ensuring cross-platform compatibility and performance optimization.",
+    "**Analyze user feedback for potential feature improvements:** Use user feedback to identify areas for improvement, such as a \"lite\" mode with reduced resource consumption as suggested by some users.",
+    "**Proactively reach out to users experiencing issues:** Offer personalized support and guidance to users facing persistent problems, demonstrating a commitment to customer satisfaction.",
+    "**Implement a system for tracking and prioritizing bug fixes:**  This will help the development team address the most critical issues efficiently and effectively."
+  ],
+  "message": "Daily support report generated successfully."
+}
