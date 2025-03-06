@@ -1,5 +1,5 @@
 # Support Ticket Report
-- Generated: 2025-03-06 05:09:49
+- Generated: 2025-03-06 13:14:10
 - Period: 2025-03-03 to 2025-03-06
 
 ## Summary
@@ -10,63 +10,64 @@
 ## 5 Most Active Tickets
 | Issue # | Title | Activity Level |
 |---------|-------|----------------|
+| [#650](https://github.com/pieces-app/support/issues/650) | Long Term Memory still slows down my PC, even after updating to LTM-2 | 12.50 |
 | [#648](https://github.com/pieces-app/support/issues/648) | Pieces Desktop not Launching on my Windows PC | 12.50 |
-| [#650](https://github.com/pieces-app/support/issues/650) | Long Term Memory still slows down my PC, even after updating to LTM-2 | 8.50 |
-| [#653](https://github.com/pieces-app/support/issues/653) | Trojan Attack Updating Pieces OS to 11.2.1 Version | 8.20 |
-| [#640](https://github.com/pieces-app/support/issues/640) | Installing Ollama - Forever | 6.42 |
-| [#150](https://github.com/pieces-app/support/issues/150) | PiecesOS using too much RAM/spike in CPU | 6.38 |
+| [#150](https://github.com/pieces-app/support/issues/150) | PiecesOS using too much RAM/spike in CPU | 6.62 |
+| [#653](https://github.com/pieces-app/support/issues/653) | Trojan Attack Updating Pieces OS to 11.2.1 Version | 6.50 |
+| [#649](https://github.com/pieces-app/support/issues/649) | LTM-2 Icons not loading properly | 6.25 |
 
 ## Common Issues
-### 1. Pieces OS and Desktop App UI/Functionality Issues
-Users report UI glitches and functionality problems like uneditable fields in SQL Server Object Explorer and gray spaces appearing when filling forms. Troubleshooting includes disabling extensions, restarting applications, and updating to the latest version.
+### 1. Pieces OS and Desktop App Update and Launch Issues
+Users are experiencing issues with Pieces OS and Desktop app updates failing, getting stuck, or not launching. This often occurs after updating to the latest version. Solutions include checking for OS updates, reinstalling the app, and verifying Pieces OS is running in the background. Some issues are resolved with specific app updates or by replacing corrupted app folders.
+
+**Related Issues:**
+- [#647](https://github.com/pieces-app/support/issues/647): Filling out Personal Domain in Pieces OS causes gray space to appear
+- [#654](https://github.com/pieces-app/support/issues/654): Pieces OS Update fails
+- [#648](https://github.com/pieces-app/support/issues/648): Pieces Desktop not Launching on my Windows PC
+
+### 2. Pieces Desktop and Extension Conflicts and Launch Issues
+Users report conflicts between Pieces Visual Studio 2022 extension and SQL Server Object Explorer, causing uneditable database fields. Additionally, Pieces Desktop experiences launch issues, getting stuck in "Ensure Core Dependencies" state. Solutions include disabling the extension, restarting Visual Studio, and updating the Desktop application. Issues with the desktop app's database and potential errors with the GetIt flutter package are being investigated.
 
 **Related Issues:**
 - [#655](https://github.com/pieces-app/support/issues/655): Pieces Visual Studio 2022 extension conflict with SQL Server Object Explorer
 - [#647](https://github.com/pieces-app/support/issues/647): Filling out Personal Domain in Pieces OS causes gray space to appear
 - [#648](https://github.com/pieces-app/support/issues/648): Pieces Desktop not Launching on my Windows PC
 
-### 2. Pieces Desktop App and OS Connection and Update Issues
-Users report Pieces Desktop App failing to connect to Pieces OS, often after updates. Issues involve dependency conflicts, database errors, and update failures. Solutions include reinstalling, updating to the latest version, and providing logs for debugging. Some users require individual support to resolve the issue.
+### 3. PiecesOS High CPU Usage and Performance Issues
+Users are reporting high CPU usage and performance issues with PiecesOS, particularly after the LTM-2 update. The issue affects various applications like Discord, Slack, and Microsoft Edge, causing lag and slowdowns. While a hotfix was released, some users still experience problems. The Pieces team is actively investigating and working on optimization to address these issues. Users are encouraged to provide detailed feedback and reports to assist in resolving the problem.
+
+**Related Issues:**
+- [#650](https://github.com/pieces-app/support/issues/650): Long Term Memory still slows down my PC, even after updating to LTM-2
+- [#644](https://github.com/pieces-app/support/issues/644): Long Term Memory engine makes piecesOs loop reload
+- [#150](https://github.com/pieces-app/support/issues/150): PiecesOS using too much RAM/spike in CPU
+
+### 4. Pieces Desktop App fails to launch or connect
+Users are experiencing issues with the Pieces Desktop App failing to launch or connect to Pieces OS after updating to version 4.0.0. The issue seems to be related to database errors, dependency connection problems, and potential conflicts with the GetIt flutter package. Proposed solutions include checking for updates, reinstalling the app and OS, and replacing corrupted configuration folders. 
 
 **Related Issues:**
 - [#641](https://github.com/pieces-app/support/issues/641): Invalid port http://0.0.0.0:null/connect
 - [#648](https://github.com/pieces-app/support/issues/648): Pieces Desktop not Launching on my Windows PC
 - [#645](https://github.com/pieces-app/support/issues/645): Unable to launch Pieces as Pieces OS is not updating after multiple tries
 
-### 3. Pieces OS update and launch issues
-Users are experiencing issues with Pieces OS updates failing, being flagged as malicious by antivirus software, and failing to launch on Windows. Proposed solutions include adding Pieces OS as an exception in antivirus settings, updating App Installer on Windows, and reinstalling the app and OS.
+### 5. Pieces OS Update and Launch Issues
+Users are experiencing difficulties updating and launching Pieces OS.  These issues include antivirus software flagging the update as malicious, update failures with error messages, and inability to launch the application after attempted updates.  Solutions involve adding an exception for Pieces OS in antivirus settings, updating the Windows App Installer, reinstalling the Pieces OS and desktop application, and contacting support for further assistance.
 
 **Related Issues:**
 - [#653](https://github.com/pieces-app/support/issues/653): Trojan Attack Updating Pieces OS to 11.2.1 Version
 - [#654](https://github.com/pieces-app/support/issues/654): Pieces OS Update fails
 - [#645](https://github.com/pieces-app/support/issues/645): Unable to launch Pieces as Pieces OS is not updating after multiple tries
 
-### 4. PiecesOS High Resource Usage
-Users report high CPU and RAM usage by PiecesOS, particularly with Long Term Memory (LTM) enabled. This impacts system performance and causes slowdowns. Proposed solutions include restarting PiecesOS, disabling LTM, and updating to the latest version. The Pieces team is actively investigating and addressing these issues.
-
-**Related Issues:**
-- [#150](https://github.com/pieces-app/support/issues/150): PiecesOS using too much RAM/spike in CPU
-- [#650](https://github.com/pieces-app/support/issues/650): Long Term Memory still slows down my PC, even after updating to LTM-2
-- [#644](https://github.com/pieces-app/support/issues/644): Long Term Memory engine makes piecesOs loop reload
-
-### 5. Pieces OS Local LLM Installation and Functionality Issues
-Users report problems installing and using local LLMs like Ollama within Pieces OS, encountering errors due to missing dependencies in the sandboxed environment. Solutions involve adding dependencies, patching for sandbox access, and clarifying local LLM usage. Users are advised to use on-device LLMs while fixes are underway.
-
-**Related Issues:**
-- [#651](https://github.com/pieces-app/support/issues/651): Pieces Copilot not working with local processing mode
-- [#537](https://github.com/pieces-app/support/issues/537): Ollama Fails to Install on Linux
-- [#652](https://github.com/pieces-app/support/issues/652): "Secret Message" Example doesn't work properly
-
 
 ## Recommendations
-- **Prioritize resolution of Pieces Desktop App and OS connection issues:** This is the most common and active issue category, impacting user experience across platforms. Focus on identifying root causes and providing consistent solutions.
-- **Improve Pieces OS update process:** Address issues related to update failures, antivirus conflicts, and potential malware warnings. Ensure a smooth and secure update experience for users.
-- **Optimize Pieces OS resource usage:** Investigate and address high CPU and RAM usage, particularly with Long Term Memory enabled. Improve performance and reduce system slowdowns.
-- **Enhance local LLM installation and functionality:** Resolve issues with local LLM installation and usage within the Pieces OS sandboxed environment. Provide clear instructions and support for local LLM users.
-- **Proactively communicate known issues and workarounds:** Maintain a public knowledge base or FAQ section addressing common issues like antivirus conflicts and resource usage. Provide clear workarounds and solutions to minimize user frustration.
-- **Gather detailed logs and system information:** Encourage users to provide comprehensive logs and system details when reporting issues. This will help in faster diagnosis and resolution.
-- **Consider a dedicated support channel for local LLM issues:** Given the specific challenges and user interest in local LLMs, a dedicated support channel could streamline issue resolution and information sharing.
-- **Monitor user feedback and prioritize issues based on frequency and impact:** Continuously analyze support tickets and user feedback to identify recurring issues and prioritize them based on their frequency and impact on user experience.
+- **Prioritize high-impact issues:** Focus on resolving the **Pieces OS and Desktop App Update and Launch Issues**, and **PiecesOS High CPU Usage and Performance Issues** as they have the highest frequency and are impacting a significant number of users.
+- **Investigate database and dependency issues:** Several tickets point to potential problems with the desktop app's database and dependency management (GetIt flutter package). Allocate resources to investigate and address these underlying technical issues.
+- **Improve communication around updates:** The update to Pieces OS and Desktop App (v4.0.0) caused several issues. Enhance communication about updates, including known issues, workarounds, and rollback options.
+- **Review antivirus compatibility:** Address the issue of antivirus software flagging Pieces OS updates as malicious.  Collaborate with antivirus vendors or provide clear instructions to users on whitelisting Pieces OS.
+- **Gather detailed user feedback:** Encourage users to provide detailed system information, logs, and steps to reproduce issues. This will help in faster diagnosis and resolution of problems.
+- **Consider a dedicated support channel for EAP features:** Given the number of issues related to the Long Term Memory (LTM) feature, which is currently in Early Access, consider creating a dedicated support channel or forum for users testing EAP features.
+- **Proactively monitor system performance:** Implement monitoring and analytics to proactively identify performance issues and trends in Pieces OS and Desktop App. This will help in addressing problems before they become widespread.
+- **Create a knowledge base or FAQ section:** Develop a comprehensive knowledge base or FAQ section addressing common issues, troubleshooting steps, and workarounds. This will empower users to resolve issues independently and reduce support ticket volume.
+- **Analyze ticket trends for continuous improvement:** Regularly analyze support ticket data to identify recurring issues, common pain points, and areas for improvement in the software, documentation, or support processes.
 
 ## Daily Reports
 Here are the daily reports for this week:
@@ -77,3 +78,4 @@ Here are the daily reports for this week:
 - [report_210629](daily/2025-03-05/report_210629.md)
 - [report_050711](daily/2025-03-05/report_050711.md)
 - [report_050722](daily/2025-03-06/report_050722.md)
+- [report_131122](daily/2025-03-06/report_131122.md)
