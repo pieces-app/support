@@ -1,0 +1,56 @@
+{
+  "success": true,
+  "date_range": {
+    "start": "2025-03-06T00:00:00+00:00",
+    "end": "2025-03-06T05:07:22.204177+00:00"
+  },
+  "summary": {
+    "total_tickets": 1,
+    "resolved_tickets": 0,
+    "open_tickets": 1
+  },
+  "ticket_breakdown": [
+    {
+      "category": "app:pieces os",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "ongoing",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    }
+  ],
+  "most_active_tickets": [
+    {
+      "number": 150,
+      "title": "PiecesOS using too much RAM/spike in CPU",
+      "activity_level": 6.38
+    }
+  ],
+  "common_issues": [
+    {
+      "title": "PiecesOS High RAM and CPU Usage",
+      "description": "Users report PiecesOS consuming excessive RAM (up to 5GB) and causing CPU spikes to 100%, even without running models. This issue impacts system performance. While the root cause is unclear, it's potentially linked to internet connectivity or the Live Context feature.  Short-term solutions include restarting PiecesOS and using the Optimize Memory button. Version 11.1.0 and LTM-2 offer some improvements, but the issue persists for some users. The PiecesOS team is actively investigating and welcomes user feedback.",
+      "frequency": 1,
+      "related_issues": [
+        {
+          "id": 150,
+          "title": "PiecesOS using too much RAM/spike in CPU",
+          "text": "PiecesOS using too much RAM/spike in CPU\nSeveral users have called in recently about Pieces using too much RAM or causing a spike in CPU up to 100%. We are trying to track down this issue, and would appreciate any feedback about your experience with this if you are experiencing it. \r\n\r\nWe have a hunch it has something to do with internet connections, but aren't fully sure yet. \r\n\r\nIf you're experiencing this and wouldn't mind hopping on a call with us to show us, we would really appreciate it to help us troubleshoot! You can schedule a call [here](https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2iaRWpd1kA2k_xg2KrVi_jiTHo0POiMZSI9WAYsxs5jJ9sU2Rd2zKitLuSFd7l3FhatGzy5Vgt\r\n). \r\n\r\nA short-term solution is to restart PiecesOS whenever this occurs. \n## Summary of GitHub Issue #676: High Memory and CPU Usage in Pieces OS\n\n**Key points raised:**\n* High memory usage (up to 5GB) reported by multiple users, even with no models installed or running\n* Live Context feature speculated to contribute due to keeping track of all user actions\n* High CPU spikes (up to 50% and 100%) observed, slowing down entire systems\n\n**Problems identified:**\n* High resource consumption hindering user experience and system performance\n* Underlying cause not definitively identified\n* Memory leak suspected\n\n**Solutions proposed/implemented:**\n* Optimize Memory button to unload current models and free RAM\n* PiecesOS version 11.1.0 released, replacing heavy database technology\n* LTM-2 released with further improvements\n* User suggestion to use E-cores for PiecesOS to manage CPU load\n\n**Current status/outcome:**\n* Issue remains open, but marked as needing verification\n* Some users report reductions in RAM & CPU with 11.1.0 and LTM-2\n* Others still experience high resource usage, indicating ongoing problems\n\n## Additional Notes:\n* Memory usage expected for CPU/GPU LLM execution\n* PiecesOS team actively investigating the issue and encouraging user feedback\n\n## Conclusion:\nWhile improvements have been implemented, high resource usage remains a concern for some users. The PiecesOS team continues to work towards a resolution.",
+          "activity_level": 6.38
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    "**Investigate High Resource Usage:** Prioritize identifying the root cause of the 'PiecesOS High RAM and CPU Usage' issue, as it's the most frequent and impacts system performance. Focus on potential links to internet connectivity and the Live Context feature.",
+    "**Gather User Data:** Encourage users experiencing the resource issue to provide feedback, system specs, and usage patterns to aid in investigation and replication.",
+    "**Improve Communication:** Keep users informed about the progress of the investigation and any potential workarounds or solutions discovered.",
+    "**Monitor Ticket Trends:** Regularly analyze support ticket data to identify recurring issues, emerging trends, and areas for improvement in the product or support processes.",
+    "**Enhance Documentation:** Expand documentation on troubleshooting high resource usage, including known workarounds like restarting PiecesOS and using the Optimize Memory button."
+  ],
+  "message": "Daily support report generated successfully."
+}
