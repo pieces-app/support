@@ -1,0 +1,149 @@
+{
+  "success": true,
+  "date_range": {
+    "start": "2025-03-07T00:00:00+00:00",
+    "end": "2025-03-07T21:06:16.869897+00:00"
+  },
+  "summary": {
+    "total_tickets": 4,
+    "resolved_tickets": 0,
+    "open_tickets": 4
+  },
+  "ticket_breakdown": [
+    {
+      "category": "bug",
+      "received": 4,
+      "resolved": 0,
+      "pending": 4
+    },
+    {
+      "category": "os:windows",
+      "received": 3,
+      "resolved": 0,
+      "pending": 3
+    },
+    {
+      "category": "app:pieces os",
+      "received": 3,
+      "resolved": 0,
+      "pending": 3
+    },
+    {
+      "category": "status:triaged",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "app:desktop application",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "app:visual studio",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "os:macos",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:waiting_on_user_responses",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    }
+  ],
+  "most_active_tickets": [
+    {
+      "number": 650,
+      "title": "Long Term Memory still slows down my PC, even after updating to LTM-2",
+      "activity_level": 17.41
+    },
+    {
+      "number": 652,
+      "title": "\"Secret Message\" Example doesn't work properly",
+      "activity_level": 7.32
+    },
+    {
+      "number": 655,
+      "title": "Pieces Visual Studio 2022 extension conflict with SQL Server Object Explorer",
+      "activity_level": 4.74
+    },
+    {
+      "number": 654,
+      "title": "Pieces OS Update fails",
+      "activity_level": 3.88
+    }
+  ],
+  "common_issues": [
+    {
+      "title": "Pieces OS Performance and Functionality Issues",
+      "description": "Users report performance problems with Pieces OS, particularly slowness with Long Term Memory (LTM) impacting CPU usage. Issues are observed across Windows and macOS, affecting applications like Slack, Discord, and VSCode. Proposed solutions include Pieces OS updates, Microsoft Edge and WebView2 updates, and specific folder relocation. Additional functionality issues involve update failures on Windows and problems with the \"secret message\" example on macOS.",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 650,
+          "title": "Long Term Memory still slows down my PC, even after updating to LTM-2",
+          "text": "Long Term Memory still slows down my PC, even after updating to LTM-2\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.2.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nTurning on Long Term Memory has been slowing down my desktop computer, even before LTM-2. After updating today, it still happens. It's most noticeable when I use Slack and Discord, and disabling those apps on LTM doesn't work. Even after switching the Processing Mode to Cloud, as suggested by HRA42 on the Discord server, the lag still occurs. At some point, the total CPU usage went up by over 90%.\n\n![Image](https://github.com/user-attachments/assets/eaef0d65-b19b-41f0-bf8a-f143fa8d1e43)\n\nMy computer specs:\n- CPU: Intel(R) Core(TM) i3-6300 CPU @ 3.80GHz\n- RAM: DDR4 32 GB\n- Graphics: GeForce GTX 950 2 GB\n\nI'm yet to notice significant slowness on other programs, but if I'm getting a lot of lag on those chat apps, I can imagine I would get them too on something heavier like Visual Studio.\n## Summary of GitHub Issue Conversation\n\n**Key Points:**\n\n* High CPU usage reported with LTM2 (Long Term Memory) on various platforms and applications.\n* Microsoft Edge and VSCode were particularly affected.\n\n**Problems Identified:**\n\n* LTM2 causing significant performance issues.\n* WebView2 integration with Edge impacting performance.\n* VSCode plugin snapshotting data, leading to temporary CPU spikes.\n\n**Solutions Proposed/Implemented:**\n\n* Several fixes and optimizations by Pieces support team.\n* Updates to Microsoft Edge and WebView2 Runtime.\n* Moving com.pieces.os/com.pieces.pfd folders to a different drive and creating symbolic links.\n\n**Current Status/Outcome:**\n\n* Performance significantly improved in most cases after updates.\n* Remaining issue with VSCode plugin snapshotting causing temporary CPU spikes.\n* Solution of moving specific folders to a different drive reported to improve overall performance.\n\n**Additional Notes:**\n\n* Further investigation into the remaining CPU spikes issue with VSCode is ongoing.\n* User experience may vary based on individual hardware and software configurations.",
+          "activity_level": 17.41
+        },
+        {
+          "id": 654,
+          "title": "Pieces OS Update fails",
+          "text": "Pieces OS Update fails\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.2.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nThe notification popped up saying an update was available so I clicked Update and a few seconds later got this message box:\n\n![Image](https://github.com/user-attachments/assets/b14dc8ab-632a-4095-b45b-7bbaba3c70ce)\n\nThis is on a very fresh Windows 11 installation.\n## Summary of GitHub issue conversation:\n\n**Key Points:**\n\n* @ThatRendle reported an issue with PiecesOS failing to launch on Windows.\n* @pieces-support-bot provided helpful resources and related issues for reference.\n* @nathan-courtney-pieces identified the bug as potentially related to Windows App Installer.\n\n**Solutions Proposed:**\n\n* Update Microsoft App Installer.\n* Verify if the error occurs consistently when launching Pieces OS manually.\n* Clarify if other integrations or the desktop application work.\n\n**Current Status:**\n\n* No further information from @ThatRendle.\n* The issue remains unresolved.\n\n**Outcome:**\n\n* The root cause of the problem is unclear.\n* Further investigation and feedback from @ThatRendle are required to identify the solution.",
+          "activity_level": 3.88
+        },
+        {
+          "id": 652,
+          "title": "\"Secret Message\" Example doesn't work properly",
+          "text": "\"Secret Message\" Example doesn't work properly\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n11.2.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWhen using LTM-2 to test the secret message example:\nhttps://pieces.app/magic-moments/ltm\n\nI got a strange response from the LLM:\nClaude 3.5:\nFirst Try:\n![Image](https://github.com/user-attachments/assets/1962a3e4-8b02-4d3f-bc8c-4bdd72c80aa6)\n2. try: (waited longer on the website)\n![Image](https://github.com/user-attachments/assets/cd71c5c1-d5d5-4449-acd5-e070fb244fa9)\n\nGemini 2.0 Flash did fail completely:\n![Image](https://github.com/user-attachments/assets/50735f7a-28a1-4563-b490-e10c271eca23)\n## Summary of GitHub Issue Conversation:\n\n**Key Points Raised:**\n\n* User joelash encountered an error message mentioning \"device constraints\" in the menu item.\n* User hra42 reported encountering the same error message on their m3 Mac.\n* This issue is suspected to be related to the secret message functionality not working properly.\n\n**Problems Identified:**\n\n* The error message is unclear and provides no information about the specific device constraints causing the issue.\n* The \"device constraints\" issue seems to be affecting users with m3 Macs.\n* The secret message functionality is failing due to the underlying issue.\n\n**Solutions Proposed/Implemented:**\n\n* Mark-at-pieces suggested closing and reopening PiecesOS to potentially resolve the issue.\n* Mark-at-pieces requested details on the device joelash is using to further investigate the issue.\n* It is suspected that the issue is related to a different method of searching used in \"basic mode\".\n\n**Current Status/Outcome:**\n\n* The exact cause of the \"device constraints\" issue remains unclear.\n* The issue appears to be specific to m3 Macs.\n* Further investigation and troubleshooting are needed to resolve the issue and restore the secret message functionality.",
+          "activity_level": 7.32
+        }
+      ]
+    },
+    {
+      "title": "Pieces OS and Extension Performance Issues",
+      "description": "Users report performance issues and conflicts with Pieces OS and its Visual Studio extension. Issues include high CPU usage, application slowdowns, and VS extension conflicts with SQL Server Object Explorer. Proposed solutions involve updating Pieces OS, Microsoft Edge, and WebView2 Runtime, as well as disabling or configuring specific features.",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 655,
+          "title": "Pieces Visual Studio 2022 extension conflict with SQL Server Object Explorer",
+          "text": "Pieces Visual Studio 2022 extension conflict with SQL Server Object Explorer\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nVisual Studio\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.2.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWith Pieces Extension installed in Visual studio 2022, SQL database field is not editable (not clickable?)\n\nReproduce: \n- Connect to any SQL server with some table, choose a table and right click -> View Data\n- Try edit the database's table field (the field will be unable to focus, so unable to edit)\n\n* SQL database is editable again after disable pieces extension and restart VS.\n* Try turn off everything in the extension's UserPreference did not work.\n* While you can not edit a field, but delete a row is possible (so maybe some UI conflict?)\n\nHere are some picture\n\nWithout the extension: the edit cursor shown up when click on field\n![Image](https://github.com/user-attachments/assets/c45dbafe-29c7-4acd-9827-b34cd0cd76f7)\n\nWith the extension: the edit cursor did not show up. Clicking just selected the field.\n![Image](https://github.com/user-attachments/assets/8f430ff6-18f8-41fe-a58e-42ebbeec3be2)\n## Summary of GitHub Issue Conversation\n\n**Key points raised:**\n\n* User @hikineet98 reported an issue. \n* The issue was automatically routed to the Pieces team.\n\n**Problems identified:**\n\n* The root cause of the issue was not immediately clear.\n\n**Solutions proposed/implemented:**\n\n* Lead developer Robert investigated and replicated the issue.\n* Further investigation to identify the root cause is ongoing.\n\n**Current status/outcome:**\n\n* No solution has been implemented yet.\n* The development team is actively investigating the issue.\n\n**Additional notes:**\n\n* The user was provided with helpful resources while awaiting a response.\n\n**Next Steps:**\n\n* The development team will continue to investigate the issue and provide an update to the user.",
+          "activity_level": 4.74
+        },
+        {
+          "id": 654,
+          "title": "Pieces OS Update fails",
+          "text": "Pieces OS Update fails\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.2.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nThe notification popped up saying an update was available so I clicked Update and a few seconds later got this message box:\n\n![Image](https://github.com/user-attachments/assets/b14dc8ab-632a-4095-b45b-7bbaba3c70ce)\n\nThis is on a very fresh Windows 11 installation.\n## Summary of GitHub issue conversation:\n\n**Key Points:**\n\n* @ThatRendle reported an issue with PiecesOS failing to launch on Windows.\n* @pieces-support-bot provided helpful resources and related issues for reference.\n* @nathan-courtney-pieces identified the bug as potentially related to Windows App Installer.\n\n**Solutions Proposed:**\n\n* Update Microsoft App Installer.\n* Verify if the error occurs consistently when launching Pieces OS manually.\n* Clarify if other integrations or the desktop application work.\n\n**Current Status:**\n\n* No further information from @ThatRendle.\n* The issue remains unresolved.\n\n**Outcome:**\n\n* The root cause of the problem is unclear.\n* Further investigation and feedback from @ThatRendle are required to identify the solution.",
+          "activity_level": 3.88
+        },
+        {
+          "id": 650,
+          "title": "Long Term Memory still slows down my PC, even after updating to LTM-2",
+          "text": "Long Term Memory still slows down my PC, even after updating to LTM-2\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.2.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nTurning on Long Term Memory has been slowing down my desktop computer, even before LTM-2. After updating today, it still happens. It's most noticeable when I use Slack and Discord, and disabling those apps on LTM doesn't work. Even after switching the Processing Mode to Cloud, as suggested by HRA42 on the Discord server, the lag still occurs. At some point, the total CPU usage went up by over 90%.\n\n![Image](https://github.com/user-attachments/assets/eaef0d65-b19b-41f0-bf8a-f143fa8d1e43)\n\nMy computer specs:\n- CPU: Intel(R) Core(TM) i3-6300 CPU @ 3.80GHz\n- RAM: DDR4 32 GB\n- Graphics: GeForce GTX 950 2 GB\n\nI'm yet to notice significant slowness on other programs, but if I'm getting a lot of lag on those chat apps, I can imagine I would get them too on something heavier like Visual Studio.\n## Summary of GitHub Issue Conversation\n\n**Key Points:**\n\n* High CPU usage reported with LTM2 (Long Term Memory) on various platforms and applications.\n* Microsoft Edge and VSCode were particularly affected.\n\n**Problems Identified:**\n\n* LTM2 causing significant performance issues.\n* WebView2 integration with Edge impacting performance.\n* VSCode plugin snapshotting data, leading to temporary CPU spikes.\n\n**Solutions Proposed/Implemented:**\n\n* Several fixes and optimizations by Pieces support team.\n* Updates to Microsoft Edge and WebView2 Runtime.\n* Moving com.pieces.os/com.pieces.pfd folders to a different drive and creating symbolic links.\n\n**Current Status/Outcome:**\n\n* Performance significantly improved in most cases after updates.\n* Remaining issue with VSCode plugin snapshotting causing temporary CPU spikes.\n* Solution of moving specific folders to a different drive reported to improve overall performance.\n\n**Additional Notes:**\n\n* Further investigation into the remaining CPU spikes issue with VSCode is ongoing.\n* User experience may vary based on individual hardware and software configurations.",
+          "activity_level": 17.41
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    "**Prioritize performance issues:** Focus on resolving issues related to Pieces OS performance, particularly those impacting CPU usage and LTM functionality. This should be the top priority given its prevalence and impact on user experience.",
+    "**Investigate Windows-specific issues:** Address the update failures on Windows and the VS extension conflict with SQL Server Object Explorer. These issues seem specific to the Windows platform and require targeted investigation.",
+    "**Improve \"Secret Message\" functionality:** Investigate and resolve the problems with the \"Secret Message\" example on macOS to ensure its intended functionality and user experience.",
+    "**Gather more data on VS extension:** Collect more data and feedback on the VS extension's performance and potential conflicts to identify any underlying patterns or specific triggers.",
+    "**Optimize LTM for resource usage:** Explore ways to optimize LTM's resource consumption, potentially through configuration options or performance improvements, to minimize its impact on system resources.",
+    "**Improve error messaging:** Review and enhance error messages, particularly the \"device constraints\" error, to provide users with clearer information and facilitate troubleshooting.",
+    "**Proactive communication:** Keep users informed about the status of these common issues and any ongoing efforts to resolve them. This could be through in-app notifications, blog posts, or forum updates.",
+    "**Develop troubleshooting guides:** Create comprehensive troubleshooting guides for common issues, including step-by-step instructions and potential workarounds. This will empower users to resolve issues independently and reduce support requests.",
+    "**Performance testing and optimization:** Implement rigorous performance testing as part of the development process to identify and address performance bottlenecks early on. Regularly optimize the software to ensure smooth and efficient operation across different hardware and software configurations.",
+    "**User feedback mechanisms:** Establish robust channels for gathering user feedback, such as in-app surveys, forums, and social media monitoring. Actively solicit feedback on performance, usability, and any recurring issues to inform future development and support efforts."
+  ],
+  "message": "Daily support report generated successfully."
+}

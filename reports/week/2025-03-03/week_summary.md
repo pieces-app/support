@@ -1,5 +1,5 @@
 # Support Ticket Report
-- Generated: 2025-03-07 13:13:13
+- Generated: 2025-03-07 21:09:16
 - Period: 2025-03-03 to 2025-03-07
 
 ## Summary
@@ -10,65 +10,65 @@
 ## 5 Most Active Tickets
 | Issue # | Title | Activity Level |
 |---------|-------|----------------|
-| [#650](https://github.com/pieces-app/support/issues/650) | Long Term Memory still slows down my PC, even after updating to LTM-2 | 14.21 |
-| [#648](https://github.com/pieces-app/support/issues/648) | Pieces Desktop not Launching on my Windows PC | 9.91 |
+| [#650](https://github.com/pieces-app/support/issues/650) | Long Term Memory still slows down my PC, even after updating to LTM-2 | 17.41 |
+| [#648](https://github.com/pieces-app/support/issues/648) | Pieces Desktop not Launching on my Windows PC | 8.90 |
+| [#652](https://github.com/pieces-app/support/issues/652) | "Secret Message" Example doesn't work properly | 7.32 |
 | [#150](https://github.com/pieces-app/support/issues/150) | PiecesOS using too much RAM/spike in CPU | 6.62 |
-| [#640](https://github.com/pieces-app/support/issues/640) | Installing Ollama - Forever | 5.68 |
-| [#653](https://github.com/pieces-app/support/issues/653) | Trojan Attack Updating Pieces OS to 11.2.1 Version | 5.60 |
+| [#640](https://github.com/pieces-app/support/issues/640) | Installing Ollama - Forever | 5.52 |
 
 ## Common Issues
-### 1. Pieces OS High CPU Usage
-Users report high CPU usage and system slowness, particularly with Long Term Memory (LTM) enabled.  Issues persist across different hardware and Pieces OS versions.  Workarounds include disabling LTM, specific app integrations, or restarting Pieces OS.  The Pieces team is actively investigating and releasing updates to optimize resource usage.
+### 1. PiecesOS High Resource Usage
+Users report high CPU and RAM usage with PiecesOS, especially when Long Term Memory (LTM) is enabled. This impacts performance and causes lag. Proposed solutions include updating PiecesOS and Microsoft Edge, disabling LTM, and using Lite Mode. While updates have improved performance for some, the issue persists for others. Pieces developers are actively investigating and working on solutions.
 
 **Related Issues:**
 - [#650](https://github.com/pieces-app/support/issues/650): Long Term Memory still slows down my PC, even after updating to LTM-2
-- [#644](https://github.com/pieces-app/support/issues/644): Long Term Memory engine makes piecesOs loop reload
 - [#150](https://github.com/pieces-app/support/issues/150): PiecesOS using too much RAM/spike in CPU
+- [#644](https://github.com/pieces-app/support/issues/644): Long Term Memory engine makes piecesOs loop reload
 
-### 2. Performance Issues in Pieces OS
-Users are experiencing performance issues, particularly high CPU usage, in Pieces OS. This is primarily linked to the Long-Term Memory (LTM) engine and affects applications like Discord and Slack. While a hotfix and patch have brought some improvement, issues persist. Potential solutions involve optimizing LTM, investigating WebView2 usage, and addressing CPU spikes related to browser tabs.
-
-**Related Issues:**
-- [#649](https://github.com/pieces-app/support/issues/649): LTM-2 Icons not loading properly
-- [#652](https://github.com/pieces-app/support/issues/652): "Secret Message" Example doesn't work properly
-- [#650](https://github.com/pieces-app/support/issues/650): Long Term Memory still slows down my PC, even after updating to LTM-2
-
-### 3. Pieces Desktop App and Extension Conflicts
-Users report conflicts between Pieces Desktop app, VS extension, and Pieces OS, including UI glitches, connection issues, and app launch failures. Troubleshooting involves updating to the latest versions, checking dependencies, and replacing corrupted folders. Pieces team actively investigates and provides solutions through patches and updates.
+### 2. Pieces OS and Desktop App Conflicts
+Users report conflicts between Pieces OS and other applications, particularly Visual Studio 2022 and Pieces Desktop. These conflicts manifest as UI issues, functionality problems, and launch failures. Common solutions involve disabling extensions, restarting applications, and updating to the latest versions. Further investigation and troubleshooting are often required to identify and address the root causes.
 
 **Related Issues:**
 - [#655](https://github.com/pieces-app/support/issues/655): Pieces Visual Studio 2022 extension conflict with SQL Server Object Explorer
 - [#647](https://github.com/pieces-app/support/issues/647): Filling out Personal Domain in Pieces OS causes gray space to appear
 - [#648](https://github.com/pieces-app/support/issues/648): Pieces Desktop not Launching on my Windows PC
 
-### 4. Pieces OS and Desktop App Launch and Update Issues
-Users are experiencing difficulties launching or updating Pieces OS and the Pieces Desktop app on macOS and Windows. Issues include Pieces OS failing to update, getting stuck during launch, and the Desktop app failing to connect. Proposed solutions involve reinstalling the app and OS, updating App Installer on Windows, and troubleshooting potential dependency issues.
+### 3. Pieces OS and Desktop App Update and Launch Issues
+Users are experiencing difficulties updating Pieces OS and launching the desktop app on Windows and macOS.  Issues include update failures, app getting stuck during launch, and inability to connect to Pieces OS.  Suggested solutions involve updating the app, OS, and dependencies, checking log files, reinstalling the app and OS, and providing log files to support for analysis.
 
 **Related Issues:**
-- [#645](https://github.com/pieces-app/support/issues/645): Unable to launch Pieces as Pieces OS is not updating after multiple tries
 - [#654](https://github.com/pieces-app/support/issues/654): Pieces OS Update fails
+- [#645](https://github.com/pieces-app/support/issues/645): Unable to launch Pieces as Pieces OS is not updating after multiple tries
 - [#648](https://github.com/pieces-app/support/issues/648): Pieces Desktop not Launching on my Windows PC
 
-### 5. Ollama Installation and Update Issues in Pieces OS
-Users are experiencing difficulties installing and updating Ollama on Pieces OS across different operating systems.  Common problems include installation failures, update errors, and compatibility issues with the snap sandbox environment. Proposed solutions involve troubleshooting App Installer on Windows, providing dependency packages within the snap, and direct support from the Pieces team.
+### 4. Pieces fails to launch or connect
+Users report Pieces Desktop failing to launch or connect to Pieces OS after updates. Issues involve dependency errors, database problems, and update failures. Solutions include reinstalling, updating to the latest version, providing logs, and replacing the 'com.pieces.pfd' folder.
 
 **Related Issues:**
-- [#640](https://github.com/pieces-app/support/issues/640): Installing Ollama - Forever
-- [#537](https://github.com/pieces-app/support/issues/537): Ollama Fails to Install on Linux
-- [#654](https://github.com/pieces-app/support/issues/654): Pieces OS Update fails
+- [#641](https://github.com/pieces-app/support/issues/641): Invalid port http://0.0.0.0:null/connect
+- [#648](https://github.com/pieces-app/support/issues/648): Pieces Desktop not Launching on my Windows PC
+- [#645](https://github.com/pieces-app/support/issues/645): Unable to launch Pieces as Pieces OS is not updating after multiple tries
+
+### 5. PiecesOS LTM and Local Processing Issues
+Users report PiecesOS malfunctions including LTM causing reload loops and local processing mode errors. Proposed solutions involve disabling LTM, using cloud processing, or trying different LLMs. The Pieces team is investigating and working on solutions.
+
+**Related Issues:**
+- [#652](https://github.com/pieces-app/support/issues/652): "Secret Message" Example doesn't work properly
+- [#651](https://github.com/pieces-app/support/issues/651): Pieces Copilot not working with local processing mode
+- [#644](https://github.com/pieces-app/support/issues/644): Long Term Memory engine makes piecesOs loop reload
 
 
 ## Recommendations
-- **Prioritize High-Impact Issues:** Focus on resolving the **'Pieces OS High CPU Usage'** and **'Performance Issues in Pieces OS'** as they have the highest frequency and are linked to critical features like Long-Term Memory (LTM).
-- **Investigate LTM Thoroughly:** Conduct in-depth analysis of the LTM engine to identify the root cause of high CPU usage and performance degradation. Explore optimization strategies and potential conflicts with applications like Discord and Slack.
-- **Address App and Extension Conflicts:** Allocate resources to resolve conflicts between the Pieces Desktop app, VS extension, and Pieces OS.  This includes investigating UI glitches, connection issues, and app launch failures.
-- **Improve Ollama Installation Process:** Simplify and stabilize the Ollama installation and update process across all operating systems. Address installation failures, update errors, and compatibility issues with the snap sandbox environment.
-- **Enhance Launch and Update Stability:**  Focus on improving the stability of Pieces OS and Desktop app launches and updates. Investigate and address issues related to update failures, launch freezes, and connection problems.
-- **Proactive Communication:** Keep users informed about the status of known issues, particularly those related to performance and stability. Provide clear workarounds and timelines for resolutions.
-- **Gather Detailed Diagnostics:** Implement better logging and error reporting mechanisms to gather more detailed diagnostics from user systems. This will help in faster identification and resolution of issues.
-- **Expand Platform-Specific Testing:** Increase testing coverage across all supported operating systems (Windows, macOS, Linux) to identify and address platform-specific issues early on.
-- **Review Resource Management:**  Analyze the resource utilization of Pieces OS and its components. Optimize memory and CPU usage, especially for features like Live Context and LTM.
-- **Community Engagement:**  Actively engage with the Pieces community forum and Discord server to gather feedback, identify emerging issues, and provide timely support.
+- **Prioritize LTM-2 Issues:** Allocate additional resources to investigate and address the persistent issues related to LTM-2, particularly the high CPU and RAM usage. This includes optimizing performance, improving stability, and ensuring compatibility with different hardware configurations.
+- **Address App Conflicts:** Investigate and resolve conflicts between Pieces OS, Pieces Desktop, and other applications like Visual Studio 2022. This may involve improving interoperability, updating dependencies, and providing clearer guidance on configuration and troubleshooting.
+- **Improve Update and Launch Processes:** Enhance the update mechanism for Pieces OS and Desktop app to prevent failures and ensure smooth transitions. Provide clear instructions and troubleshooting steps for users experiencing launch issues.
+- **Review PiecesOS Resource Management:** Investigate and optimize PiecesOS resource management, particularly regarding CPU and RAM usage. Explore options for reducing the footprint of Live Context and other features, potentially through user-configurable settings.
+- **Enhance Error Messaging and Documentation:** Improve error messages to provide more specific information about the underlying issue and guidance on resolution. Update documentation with detailed troubleshooting steps for common problems, including launch failures, update errors, and app conflicts.
+- **Proactive Communication:**  Keep users informed about known issues, ongoing investigations, and planned fixes through release notes, blog posts, and social media updates. This will help manage expectations and reduce support requests related to known problems.
+- **Gather Detailed User Feedback:** Implement mechanisms to collect detailed user feedback on specific issues, including steps to reproduce, system configurations, and error messages. This will aid in identifying patterns, prioritizing bug fixes, and improving overall user experience.
+- **Expand Testing Coverage:** Increase the scope and rigor of testing, particularly for new features and updates, to identify and address issues before release. This includes testing on various hardware configurations, operating systems, and alongside popular third-party applications.
+- **Invest in Automation:** Explore opportunities to automate support tasks, such as triaging tickets, identifying known issues, and providing basic troubleshooting steps. This will free up support staff to focus on more complex issues and improve response times.
+- **Monitor User Forums and Social Media:** Actively monitor user forums, social media platforms, and other online communities to identify emerging issues, gather feedback, and provide timely support. This proactive approach can help address problems before they escalate and improve overall user satisfaction.
 
 ## Daily Reports
 Here are the daily reports for this week:
@@ -81,3 +81,4 @@ Here are the daily reports for this week:
 - [report_050722](daily/2025-03-06/report_050722.md)
 - [report_210627](daily/2025-03-06/report_210627.md)
 - [report_131122](daily/2025-03-06/report_131122.md)
+- [report_210616](daily/2025-03-07/report_210616.md)
