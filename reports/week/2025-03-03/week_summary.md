@@ -1,5 +1,5 @@
 # Support Ticket Report
-- Generated: 2025-03-08 05:08:23
+- Generated: 2025-03-08 13:09:23
 - Period: 2025-03-03 to 2025-03-08
 
 ## Summary
@@ -12,62 +12,63 @@
 |---------|-------|----------------|
 | [#650](https://github.com/pieces-app/support/issues/650) | Long Term Memory still slows down my PC, even after updating to LTM-2 | 17.41 |
 | [#648](https://github.com/pieces-app/support/issues/648) | Pieces Desktop not Launching on my Windows PC | 8.90 |
-| [#150](https://github.com/pieces-app/support/issues/150) | PiecesOS using too much RAM/spike in CPU | 6.61 |
 | [#652](https://github.com/pieces-app/support/issues/652) | "Secret Message" Example doesn't work properly | 6.58 |
+| [#150](https://github.com/pieces-app/support/issues/150) | PiecesOS using too much RAM/spike in CPU | 6.37 |
 | [#658](https://github.com/pieces-app/support/issues/658) | Personal Domain backup | 5.68 |
 
 ## Common Issues
-### 1. PiecesOS Long Term Memory High CPU Usage
-PiecesOS users report high CPU usage and slow performance when Long Term Memory (LTM) is enabled, especially on Windows with apps like Slack and Discord.  Disabling LTM, updating to LTM2, or switching to Cloud processing mode offered partial improvements. The Pieces team is actively investigating and releasing updates to address the issue.
+### 1. LTM-2 Performance Issues
+Users are experiencing performance issues, particularly slowness and high CPU usage, with LTM-2 on both Windows and macOS. The issue seems to be more prominent when using applications like Slack, Discord, and Microsoft Edge. While hotfixes and patches have been released, some users still face problems. Potential workarounds include disabling LTM-2 for specific apps, closing and reopening Pieces OS, and reducing the number of open tabs in Edge.
+
+**Related Issues:**
+- [#649](https://github.com/pieces-app/support/issues/649): LTM-2 Icons not loading properly
+- [#652](https://github.com/pieces-app/support/issues/652): "Secret Message" Example doesn't work properly
+- [#650](https://github.com/pieces-app/support/issues/650): Long Term Memory still slows down my PC, even after updating to LTM-2
+
+### 2. PiecesOS High CPU and Memory Usage
+PiecesOS users are experiencing high CPU and memory usage, particularly with Long Term Memory (LTM) enabled. This impacts performance, especially in apps like Slack and Discord. While updates like LTM-2 and 11.1.0 offered some improvements, the issue persists. Proposed solutions include optimizing LTM, investigating resource-intensive features, and exploring potential conflicts with specific applications and browser integrations.
 
 **Related Issues:**
 - [#650](https://github.com/pieces-app/support/issues/650): Long Term Memory still slows down my PC, even after updating to LTM-2
-- [#644](https://github.com/pieces-app/support/issues/644): Long Term Memory engine makes piecesOs loop reload
 - [#150](https://github.com/pieces-app/support/issues/150): PiecesOS using too much RAM/spike in CPU
+- [#644](https://github.com/pieces-app/support/issues/644): Long Term Memory engine makes piecesOs loop reload
 
-### 2. Pieces OS and Desktop App Issues
-Users report Pieces OS and Desktop app issues like failing to launch, sync, or save personal domain settings. Troubleshooting includes updating to the latest version, checking for corrupted files, and reinstalling. Contact support if issues persist.
+### 3. Pieces OS and Desktop App Sync Issues
+Users report problems with Pieces OS and Desktop app syncing, including personal domain changes not reflecting, gray spaces appearing in settings, and app launch failures. Troubleshooting steps include checking for existing issues, providing screenshots, and contacting support. Solutions involve bug fixes, patches, and software updates.
 
 **Related Issues:**
 - [#658](https://github.com/pieces-app/support/issues/658): Personal Domain backup
 - [#647](https://github.com/pieces-app/support/issues/647): Filling out Personal Domain in Pieces OS causes gray space to appear
 - [#648](https://github.com/pieces-app/support/issues/648): Pieces Desktop not Launching on my Windows PC
 
-### 3. Pieces OS and Desktop App Performance Issues
-Users report high RAM/CPU usage, launch failures, and connection issues with Pieces OS and Desktop app. Solutions include app updates, optimizing memory, and troubleshooting database/dependency errors. Developers are actively investigating and resolving these issues.
-
-**Related Issues:**
-- [#601](https://github.com/pieces-app/support/issues/601): How to change the font of the linux app?
-- [#150](https://github.com/pieces-app/support/issues/150): PiecesOS using too much RAM/spike in CPU
-- [#648](https://github.com/pieces-app/support/issues/648): Pieces Desktop not Launching on my Windows PC
-
-### 4. Pieces OS and Desktop App Integration Issues
-Users are experiencing conflicts between Pieces OS, Desktop App, and VS Code extension, including UI glitches, connection problems, and app launch failures. Troubleshooting steps include restarting apps, checking dependencies, and updating to the latest versions. Some issues persist, requiring further investigation by the Pieces team.
+### 4. Pieces OS and Desktop App UI/ Functionality Issues
+Users are experiencing UI conflicts and functionality issues with Pieces OS and Desktop app, including uneditable fields in SQL Server Object Explorer, gray space appearing in settings, and app launch failures. Troubleshooting steps include disabling extensions, restarting applications, and updating to the latest version. Developers are actively investigating and resolving reported issues.
 
 **Related Issues:**
 - [#655](https://github.com/pieces-app/support/issues/655): Pieces Visual Studio 2022 extension conflict with SQL Server Object Explorer
 - [#647](https://github.com/pieces-app/support/issues/647): Filling out Personal Domain in Pieces OS causes gray space to appear
 - [#648](https://github.com/pieces-app/support/issues/648): Pieces Desktop not Launching on my Windows PC
 
-### 5. Pieces OS and Desktop App Update and Launch Issues
-Users are reporting failures to update Pieces OS, launch the Pieces Desktop app, and connect to Pieces OS after updates. Issues appear on Windows and macOS.  Suggested solutions include checking for updates, reinstalling the app and OS, and troubleshooting the Windows App Installer.
+### 5. Pieces Desktop App Failing to Launch or Connect
+Users are reporting issues with the Pieces Desktop App failing to launch or connect to Pieces OS, often getting stuck during the dependency check. This problem appears on both Windows and Linux and across different app versions. Proposed solutions include checking log files, updating the app, and ensuring Pieces OS is running correctly.  Issues with the app's database and potential bugs have been identified as possible causes.
 
 **Related Issues:**
-- [#654](https://github.com/pieces-app/support/issues/654): Pieces OS Update fails
-- [#645](https://github.com/pieces-app/support/issues/645): Unable to launch Pieces as Pieces OS is not updating after multiple tries
+- [#641](https://github.com/pieces-app/support/issues/641): Invalid port http://0.0.0.0:null/connect
 - [#648](https://github.com/pieces-app/support/issues/648): Pieces Desktop not Launching on my Windows PC
+- [#654](https://github.com/pieces-app/support/issues/654): Pieces OS Update fails
 
 
 ## Recommendations
-- **Address High CPU Usage:** Investigate and resolve the root cause of high CPU usage reported in PiecesOS, especially related to Long Term Memory (LTM) and LTM2. This is a recurring issue with high activity and impacts a large number of users.
-- **Improve App Stability and Launch Success:** Troubleshoot and fix issues related to Pieces OS and Desktop app updates, launching, and connection problems. Ensure seamless update and launch experiences across Windows and macOS.
-- **Enhance Personal Domain Functionality:** Address issues with Personal Domain settings, including backup, syncing, and UI glitches. This feature is crucial for user experience and data management.
-- **Investigate Integration Conflicts:** Resolve conflicts between Pieces OS, Desktop App, and VS Code extension, particularly UI glitches and connection issues. Ensure smooth integration across the Pieces ecosystem.
-- **Provide Clear Troubleshooting Guidance:** Create comprehensive documentation or FAQs addressing common issues like high RAM/CPU usage, launch failures, and integration conflicts. Offer clear steps for users to troubleshoot independently.
-- **Prioritize Issues Based on Activity:** Focus on resolving issues with the highest activity levels first, such as ticket numbers 650, 648, 150, and 652. These issues likely impact a larger user base.
-- **Gather More Data on Persistent Issues:** For issues like "Trojan Attack" (ticket 653) and LTM-2 icons (ticket 649), gather more user data to understand the scope and potential security implications.
-- **Improve Communication on Updates:** Keep users informed about upcoming updates, bug fixes, and planned improvements. This can help manage expectations and reduce support requests related to known issues.
-- **Consider a Bug Bounty Program:** Incentivize users to report bugs and security vulnerabilities by implementing a bug bounty program. This can help identify and address issues more quickly.
+- **Prioritize LTM-2 Performance Issues:** Allocate resources to investigate and address the persistent performance issues related to LTM-2, especially high CPU usage on Windows and macOS. Focus on compatibility with applications like Slack, Discord, and Microsoft Edge.
+- **Improve Pieces OS and Desktop App Sync:** Investigate and resolve syncing problems, including personal domain changes not reflecting and gray spaces appearing in settings. Ensure seamless communication and data consistency between the OS and app.
+- **Address Pieces Desktop App Launch Failures:** Troubleshoot and fix issues preventing the Desktop App from launching or connecting to Pieces OS, particularly the dependency check problem. Review log files, database interactions, and potential bugs.
+- **Enhance Communication on Common Issues:**  Provide clear and timely updates to users experiencing common problems like high CPU usage and sync issues. Offer workarounds and solutions through various support channels.
+- **Gather More Data on UI/Functionality Issues:** Encourage users to report UI conflicts and functionality problems with detailed descriptions and screenshots. This information will help developers identify and resolve issues effectively.
+- **Review and Optimize Resource-Intensive Features:** Analyze the resource consumption of features like Long Term Memory and Live Context. Implement optimizations to reduce CPU and memory usage, improving overall performance.
+- **Investigate Potential Conflicts:** Explore possible conflicts between Pieces OS/Desktop App and specific applications, browser integrations (e.g., WebView2), and system configurations. Address compatibility issues to ensure smooth user experience.
+- **Improve Error Messaging and Logging:** Enhance error messages to provide more specific information, making it easier for both users and support teams to identify and troubleshoot problems. Improve logging mechanisms to capture relevant data for analysis.
+- **Expand Support Resources:** Create comprehensive documentation, FAQs, and troubleshooting guides addressing common issues and their solutions. This empowers users to resolve problems independently and reduces support requests.
+- **Consider a Bug Bounty Program:** Implement a bug bounty program to incentivize security researchers and users to identify and report vulnerabilities, ensuring a more secure and stable platform.
 
 ## Daily Reports
 Here are the daily reports for this week:
@@ -81,4 +82,5 @@ Here are the daily reports for this week:
 - [report_210627](daily/2025-03-06/report_210627.md)
 - [report_131122](daily/2025-03-06/report_131122.md)
 - [report_210616](daily/2025-03-07/report_210616.md)
+- [report_130619](daily/2025-03-08/report_130619.md)
 - [report_050549](daily/2025-03-08/report_050549.md)
