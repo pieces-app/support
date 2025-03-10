@@ -1,0 +1,153 @@
+{
+  "success": true,
+  "date_range": {
+    "start": "2025-03-10T00:00:00+00:00",
+    "end": "2025-03-10T21:06:33.732479+00:00"
+  },
+  "summary": {
+    "total_tickets": 4,
+    "resolved_tickets": 0,
+    "open_tickets": 4
+  },
+  "ticket_breakdown": [
+    {
+      "category": "bug",
+      "received": 4,
+      "resolved": 0,
+      "pending": 4
+    },
+    {
+      "category": "app:desktop application",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "os:macos",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "app:pieces os",
+      "received": 3,
+      "resolved": 0,
+      "pending": 3
+    },
+    {
+      "category": "status:waiting_on_user_responses",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "status:new",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:web extension",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "os:windows",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "status:triaged",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    }
+  ],
+  "most_active_tickets": [
+    {
+      "number": 652,
+      "title": "\"Secret Message\" Example doesn't work properly",
+      "activity_level": 7.0
+    },
+    {
+      "number": 658,
+      "title": "Personal Domain backup",
+      "activity_level": 6.46
+    },
+    {
+      "number": 659,
+      "title": "Chrome Extension messing out stackoverflow",
+      "activity_level": 4.5
+    },
+    {
+      "number": 654,
+      "title": "Pieces OS Update fails",
+      "activity_level": 3.67
+    }
+  ],
+  "common_issues": [
+    {
+      "title": "Pieces OS Errors and Unexpected Behavior",
+      "description": "Users report various issues with Pieces OS, including update failures on Windows, Chrome extension malfunctions, and unexpected LLM responses on macOS. Proposed solutions include updating the Windows App Installer, investigating Trojan detection messages, and clarifying device constraint limitations in the documentation. The root causes for some issues remain unclear and require further investigation by the Pieces team.",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 652,
+          "title": "\"Secret Message\" Example doesn't work properly",
+          "text": "\"Secret Message\" Example doesn't work properly\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n11.2.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWhen using LTM-2 to test the secret message example:\nhttps://pieces.app/magic-moments/ltm\n\nI got a strange response from the LLM:\nClaude 3.5:\nFirst Try:\n![Image](https://github.com/user-attachments/assets/1962a3e4-8b02-4d3f-bc8c-4bdd72c80aa6)\n2. try: (waited longer on the website)\n![Image](https://github.com/user-attachments/assets/cd71c5c1-d5d5-4449-acd5-e070fb244fa9)\n\nGemini 2.0 Flash did fail completely:\n![Image](https://github.com/user-attachments/assets/50735f7a-28a1-4563-b490-e10c271eca23)\n## Summary of the GitHub Issue Conversation\n\n**Key Points:**\n\n* The conversation focuses on an issue where PiecesOS is running in \"basic mode due to device constraints\" on newer Apple M-series devices. \n* This results in missing functionality, like the secret message not working and the agent not updating/rolling up.\n* Users report seeing a message about device constraints in the menu.\n\n**Problem Identified:**\n\n* PiecesOS functionality is limited on newer Apple M-series devices due to \"device constraints.\" \n* This issue seems to be specific to M-series Macs.\n* Users are unaware of what \"basic mode\" means or how to address the limitations.\n\n**Proposed Solutions:**\n\n* Users are advised to close and reopen PiecesOS, as this may resolve the issue.\n* Mark-at-pieces suggests this issue may be related to the secret message not working due to the usage of \"a different method of searching\" in the \"basic mode.\"\n\n**Current Status/Outcome:**\n\n* It is unclear if the proposed solution of closing and reopening PiecesOS is consistently effective.\n* The underlying cause of the device constraints and the specifics of \"basic mode\" remain unexplained.\n* The documentation lacks information about \"basic mode\" and the limitations it imposes. \n\n**Further Action:**\n\n* The Pieces team should provide more details about \"device constraints,\" explain the limitations of \"basic mode,\" and update the documentation accordingly. \n* Investigating the issue's reproducibility and identifying a permanent solution would be beneficial.",
+          "activity_level": 7.0
+        },
+        {
+          "id": 659,
+          "title": "Chrome Extension messing out stackoverflow",
+          "text": "Chrome Extension messing out stackoverflow\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Web Extension\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n11.2.2\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nIt fills this text endlessly...\n\n![Image](https://github.com/user-attachments/assets/6b5edb10-b7cf-4fa6-a523-aa73af94cbee)\n## GitHub Issue Summary:\n\n**Key Points:**\n\n* User luceat-lux-vestra reported an issue.\n* Pieces support bot acknowledged the issue and assigned it to the relevant team member.\n* rutvik-at-pieces confirmed the issue and informed it will be fixed in the next update.\n\n**Identified Problems:**\n\n* The specific issue reported by luceat-lux-vestra is not mentioned in the conversation.\n\n**Proposed/Implemented Solutions:**\n\n* The issue is expected to be resolved in the next update.\n\n**Current Status/Outcome:**\n\n* The issue is currently being investigated and is planned to be fixed in the next update.\n\n**Additional Notes:**\n\n* The conversation does not provide any details about the nature of the issue or the expected timeframe for the resolution.",
+          "activity_level": 4.5
+        },
+        {
+          "id": 654,
+          "title": "Pieces OS Update fails",
+          "text": "Pieces OS Update fails\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.2.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nThe notification popped up saying an update was available so I clicked Update and a few seconds later got this message box:\n\n![Image](https://github.com/user-attachments/assets/b14dc8ab-632a-4095-b45b-7bbaba3c70ce)\n\nThis is on a very fresh Windows 11 installation.\n## GitHub Issue Summary: Pieces OS Launch Error\n\n**Key Points:**\n\n* User @ThatRendle reported an error when launching Pieces OS on Windows.\n* The error message indicates a potential issue with the \"App Installer\" technology.\n* Another user, @bejokun, reported the same issue and shared a screenshot of a Trojan detection message.\n\n**Problems Identified:**\n\n* Difficulty launching Pieces OS on Windows.\n* Trojan detection message causing concern for users.\n\n**Solutions Proposed/Implemented:**\n\n* Updating the Windows App Installer through the Microsoft Store.\n* Investigating the cause of the Trojan detection message.\n\n**Current Status/Outcome:**\n\n* The issue remains unresolved.\n* The Pieces team is investigating the problem and potential solutions.\n\n**Additional Notes:**\n\n* The issue appears to be specific to Windows users.\n* The cause of the Trojan detection message is unclear.",
+          "activity_level": 3.67
+        }
+      ]
+    },
+    {
+      "title": "Pieces OS bugs and errors reported by users",
+      "description": "Users are experiencing various bugs and errors with Pieces OS, including issues with personal domain backups, failed updates, and Chrome extension conflicts. Troubleshooting steps include checking for existing issues, providing detailed bug descriptions, and updating software components. The Pieces team is actively investigating and addressing these issues.",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 658,
+          "title": "Personal Domain backup",
+          "text": "Personal Domain backup\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.2.2\n\n### Early Access Program\n\n- [x] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI want to sync this PC to another PC\uff0cbut i cann't backup the lastest data.\n![Image](https://github.com/user-attachments/assets/bfb4fb14-5e7f-45c7-828f-5f77f550453a)\n\nthis is another PC\n\n![Image](https://github.com/user-attachments/assets/3c2d880e-a1b2-40c1-82b1-9935bffbf8fb)\n## GitHub Issue Summary\n\n**Key Points Raised:**\n\n* `laborer123` is unable to change their personal domain after copying `com.pieces.os` and `com.pieces.pfd` to a new PC.\n* They are also facing issues restoring a backup from an older version.\n\n**Problems Identified:**\n\n* The chosen personal domain might already be registered.\n* The existing backup might be outdated and not compatible with the current version.\n\n**Solutions Proposed/Implemented:**\n\n* Registering a new personal domain.\n* Restoring a backup by clicking the refresh icon.\n\n**Current Status/Outcome:**\n\n* The user hasn't confirmed whether they were able to successfully register a new domain.\n* The user wants to create a new backup with their current personal domain, but it's unclear if this is possible.\n\n**Additional Notes:**\n\n* The user provided screenshots to illustrate the issues. \n* The support representative responded promptly and offered helpful advice.\n* The conversation is still ongoing.",
+          "activity_level": 6.46
+        },
+        {
+          "id": 654,
+          "title": "Pieces OS Update fails",
+          "text": "Pieces OS Update fails\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.2.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nThe notification popped up saying an update was available so I clicked Update and a few seconds later got this message box:\n\n![Image](https://github.com/user-attachments/assets/b14dc8ab-632a-4095-b45b-7bbaba3c70ce)\n\nThis is on a very fresh Windows 11 installation.\n## GitHub Issue Summary: Pieces OS Launch Error\n\n**Key Points:**\n\n* User @ThatRendle reported an error when launching Pieces OS on Windows.\n* The error message indicates a potential issue with the \"App Installer\" technology.\n* Another user, @bejokun, reported the same issue and shared a screenshot of a Trojan detection message.\n\n**Problems Identified:**\n\n* Difficulty launching Pieces OS on Windows.\n* Trojan detection message causing concern for users.\n\n**Solutions Proposed/Implemented:**\n\n* Updating the Windows App Installer through the Microsoft Store.\n* Investigating the cause of the Trojan detection message.\n\n**Current Status/Outcome:**\n\n* The issue remains unresolved.\n* The Pieces team is investigating the problem and potential solutions.\n\n**Additional Notes:**\n\n* The issue appears to be specific to Windows users.\n* The cause of the Trojan detection message is unclear.",
+          "activity_level": 3.67
+        },
+        {
+          "id": 659,
+          "title": "Chrome Extension messing out stackoverflow",
+          "text": "Chrome Extension messing out stackoverflow\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Web Extension\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n11.2.2\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nIt fills this text endlessly...\n\n![Image](https://github.com/user-attachments/assets/6b5edb10-b7cf-4fa6-a523-aa73af94cbee)\n## GitHub Issue Summary:\n\n**Key Points:**\n\n* User luceat-lux-vestra reported an issue.\n* Pieces support bot acknowledged the issue and assigned it to the relevant team member.\n* rutvik-at-pieces confirmed the issue and informed it will be fixed in the next update.\n\n**Identified Problems:**\n\n* The specific issue reported by luceat-lux-vestra is not mentioned in the conversation.\n\n**Proposed/Implemented Solutions:**\n\n* The issue is expected to be resolved in the next update.\n\n**Current Status/Outcome:**\n\n* The issue is currently being investigated and is planned to be fixed in the next update.\n\n**Additional Notes:**\n\n* The conversation does not provide any details about the nature of the issue or the expected timeframe for the resolution.",
+          "activity_level": 4.5
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    "**Investigate Pieces OS Errors:** Prioritize resolving the root causes of the 'Pieces OS Errors and Unexpected Behavior', particularly focusing on update failures, Chrome extension malfunctions, and LLM response inconsistencies on macOS.",
+    "**Improve Device Constraint Handling:** Provide clearer documentation and in-app guidance on 'basic mode' limitations for users with newer Apple M-series devices.",
+    "**Address Windows Update Issues:** Investigate and resolve the Windows update failures, including the 'App Installer' error and the Trojan detection message.",
+    "**Enhance Personal Domain Backup:** Review and improve the reliability of personal domain backups, ensuring users can seamlessly transfer data between devices.",
+    "**Monitor Chrome Extension Functionality:** Continue monitoring and addressing issues related to the Chrome extension, such as the reported conflict with Stack Overflow.",
+    "**Provide Proactive Communication:** Keep users informed about the status of bug fixes and improvements, especially for high-impact issues like the 'Secret Message' example and personal domain backups.",
+    "**Gather More Detailed User Reports:** Encourage users to provide comprehensive bug reports, including steps to reproduce the issue, screenshots, and system information, to aid in faster troubleshooting and resolution.",
+    "**Consider Automated Testing:** Implement automated testing for critical features like updates, backups, and extension functionality to catch issues early in the development cycle."
+  ],
+  "message": "Daily support report generated successfully."
+}

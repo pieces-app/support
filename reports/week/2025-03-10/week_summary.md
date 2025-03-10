@@ -1,38 +1,48 @@
 # Support Ticket Report
-- Generated: 2025-03-10 13:13:08
+- Generated: 2025-03-10 21:07:50
 - Period: 2025-03-10 to 2025-03-10
 
 ## Summary
-- **Total Tickets:** 3
+- **Total Tickets:** 4
 - **Resolved:** 0
-- **Open:** 3
+- **Open:** 4
 
 ## 5 Most Active Tickets
 | Issue # | Title | Activity Level |
 |---------|-------|----------------|
+| [#652](https://github.com/pieces-app/support/issues/652) | "Secret Message" Example doesn't work properly | 7.00 |
 | [#658](https://github.com/pieces-app/support/issues/658) | Personal Domain backup | 6.46 |
-| [#652](https://github.com/pieces-app/support/issues/652) | "Secret Message" Example doesn't work properly | 6.33 |
+| [#659](https://github.com/pieces-app/support/issues/659) | Chrome Extension messing out stackoverflow | 4.50 |
 | [#654](https://github.com/pieces-app/support/issues/654) | Pieces OS Update fails | 3.67 |
 
 ## Common Issues
-### 1. PiecesOS Errors and Unexpected Behavior
-Users report various issues with PiecesOS, including update failures, personal domain backup problems, and incorrect device compatibility detection.  Troubleshooting steps include checking for existing issues, updating software, and providing detailed bug descriptions. The Pieces team is actively investigating these issues and providing temporary solutions while working on permanent fixes.
+### 1. PiecesOS Bugs and Errors
+Users are experiencing various bugs in PiecesOS, including issues with secret messages, Chrome extension behavior, and update failures.  Suggested workarounds include restarting the application and updating Windows App Installer. The Pieces team is actively investigating these issues and working on permanent solutions.
 
 **Related Issues:**
-- [#654](https://github.com/pieces-app/support/issues/654): Pieces OS Update fails
-- [#658](https://github.com/pieces-app/support/issues/658): Personal Domain backup
 - [#652](https://github.com/pieces-app/support/issues/652): "Secret Message" Example doesn't work properly
+- [#659](https://github.com/pieces-app/support/issues/659): Chrome Extension messing out stackoverflow
+- [#654](https://github.com/pieces-app/support/issues/654): Pieces OS Update fails
+
+### 2. Pieces OS Update and Personal Domain Issues
+Users are reporting issues with Pieces OS updates failing to install and difficulties backing up and restoring data using the Personal Domain feature. Proposed solutions include updating Windows App Installer, registering new personal domains, and restoring from cloud backups.
+
+**Related Issues:**
+- [#658](https://github.com/pieces-app/support/issues/658): Personal Domain backup
+- [#654](https://github.com/pieces-app/support/issues/654): Pieces OS Update fails
+- [#659](https://github.com/pieces-app/support/issues/659): Chrome Extension messing out stackoverflow
 
 
 ## Recommendations
-- **Prioritize PiecesOS Issues:** Allocate additional resources to investigate and resolve the reported PiecesOS errors, including update failures, backup problems, and device compatibility issues.
-- **Improve Device Compatibility Detection:** Review and refine the device compatibility detection logic in PiecesOS to avoid incorrectly classifying compatible devices like MacBook Air M3s as incompatible.
-- **Enhance 'Secret Message' Functionality:** Investigate and address the issues encountered with the 'Secret Message' example in LTM-2, ensuring its functionality across different language models and platforms.
-- **Provide Clearer Communication on 'Basic Mode':** Improve communication around 'basic mode' in PiecesOS, explaining its limitations and the reasons why a device might be running in this mode.
-- **Gather More Information on Update Failures:** Request detailed logs and system information from users experiencing update failures to better diagnose and resolve the underlying causes.
-- **Consider a Bug Bounty Program:** Explore implementing a bug bounty program to incentivize users to report vulnerabilities and issues, potentially speeding up the identification and resolution process.
+- "Investigate and address the root cause of the 'basic mode due to device constraints' issue in PiecesOS, particularly on macOS devices."
+- "Improve documentation for PiecesOS, including information about 'basic mode due to device constraints' and its implications."
+- "Investigate and resolve the Chrome extension bug causing endless text filling on Stack Overflow."
+- "Provide clearer guidance or troubleshooting steps for users experiencing issues with Pieces OS updates, including potential conflicts with Windows App Installer or antivirus software."
+- "Investigate and address the issue preventing users from changing their personal domain after copying Pieces OS files to another PC."
+- "Provide more detailed instructions or FAQs on backing up and restoring data using the Personal Domain feature, addressing common user questions and concerns."
 
 ## Daily Reports
 Here are the daily reports for this week:
 
 - [report_131213](daily/2025-03-10/report_131213.md)
+- [report_210633](daily/2025-03-10/report_210633.md)
