@@ -1,5 +1,5 @@
 # Support Ticket Report
-- Generated: 2025-03-12 05:07:56
+- Generated: 2025-03-12 13:13:09
 - Period: 2025-03-10 to 2025-03-12
 
 ## Summary
@@ -10,50 +10,51 @@
 ## 5 Most Active Tickets
 | Issue # | Title | Activity Level |
 |---------|-------|----------------|
-| [#652](https://github.com/pieces-app/support/issues/652) | "Secret Message" Example doesn't work properly | 8.13 |
-| [#661](https://github.com/pieces-app/support/issues/661) | Pieces desktop this message is empty please try again | 6.94 |
-| [#658](https://github.com/pieces-app/support/issues/658) | Personal Domain backup | 5.34 |
-| [#659](https://github.com/pieces-app/support/issues/659) | Chrome Extension messing out stackoverflow | 4.74 |
-| [#654](https://github.com/pieces-app/support/issues/654) | Pieces OS Update fails | 4.10 |
+| [#652](https://github.com/pieces-app/support/issues/652) | "Secret Message" Example doesn't work properly | 8.73 |
+| [#661](https://github.com/pieces-app/support/issues/661) | Pieces desktop this message is empty please try again | 7.50 |
+| [#658](https://github.com/pieces-app/support/issues/658) | Personal Domain backup | 4.63 |
+| [#659](https://github.com/pieces-app/support/issues/659) | Chrome Extension messing out stackoverflow | 4.26 |
+| [#654](https://github.com/pieces-app/support/issues/654) | Pieces OS Update fails | 3.91 |
 
 ## Common Issues
-### 1. Pieces OS Errors and Unexpected Behavior
-Users report various errors like 'basic mode' limitations, 'empty message' prompts, and update failures. These issues appear on both Windows and macOS, potentially linked to recent updates or specific software configurations. Proposed solutions include restarting the app, updating Windows App Installer, and configuring antivirus settings.
+### 1. PiecesOS and Desktop App Bugs
+Users report various bugs including LTM example failures, extension issues on Stack Overflow, and 'empty message' errors.  Solutions involve bug fixes in upcoming releases, restarting PiecesOS as a temporary workaround, and gathering user information for debugging.
 
 **Related Issues:**
 - [#652](https://github.com/pieces-app/support/issues/652): "Secret Message" Example doesn't work properly
+- [#659](https://github.com/pieces-app/support/issues/659): Chrome Extension messing out stackoverflow
 - [#661](https://github.com/pieces-app/support/issues/661): Pieces desktop this message is empty please try again
-- [#654](https://github.com/pieces-app/support/issues/654): Pieces OS Update fails
 
 ### 2. Pieces OS Update and Functionality Issues
-Users report difficulties with Pieces OS updates failing on Windows, potential conflicts with antivirus software, and errors related to personal domain registration and data backup/restore. Suggested solutions include updating the Windows App Installer, configuring antivirus exceptions, and ensuring personal domain availability and backup recency.
+Users report problems with Pieces OS updates failing, Personal Domain backup/restore not working, and error messages like "This message is empty."  Solutions include updating Windows App Installer, configuring antivirus settings, and waiting for patch releases. Issues persist with Personal Domain registration and direct backup creation.
 
 **Related Issues:**
 - [#658](https://github.com/pieces-app/support/issues/658): Personal Domain backup
 - [#654](https://github.com/pieces-app/support/issues/654): Pieces OS Update fails
 - [#661](https://github.com/pieces-app/support/issues/661): Pieces desktop this message is empty please try again
 
-### 3. Pieces OS Desktop and Extension Bugs
-Users report various issues with Pieces OS desktop and extensions, including 'empty message' errors on copy-paste, update failures, and extension conflicts. Troubleshooting steps include checking for updates, configuring antivirus software, and providing detailed bug reports to the Pieces team.
+### 3. Pieces OS Update and Functionality Issues
+Users report various issues with Pieces OS, including failed updates, error messages like "This message is empty please try again", and problems with specific features.  Suggested solutions include checking for updates, configuring antivirus settings, and providing detailed bug reports to the Pieces team.
 
 **Related Issues:**
 - [#661](https://github.com/pieces-app/support/issues/661): Pieces desktop this message is empty please try again
-- [#654](https://github.com/pieces-app/support/issues/654): Pieces OS Update fails
 - [#659](https://github.com/pieces-app/support/issues/659): Chrome Extension messing out stackoverflow
+- [#654](https://github.com/pieces-app/support/issues/654): Pieces OS Update fails
 
 
 ## Recommendations
-- **Prioritize 'Pieces OS Errors and Unexpected Behavior'**: This issue has the highest frequency and activity, suggesting a widespread impact. Focus on identifying the root cause and providing a permanent fix.
-- **Address 'Pieces OS Update and Functionality Issues'**: This issue also has high frequency and involves critical functionalities like updates and backups. Investigate potential conflicts with antivirus software and domain registration processes.
-- **Improve communication around 'basic mode'**: Users are confused about its limitations and triggers. Update documentation and provide clearer in-app messaging.
-- **Investigate 'empty message' error**: This error appears in multiple contexts and platforms. Thoroughly test copy-paste functionality and recent updates to pinpoint the cause.
-- **Gather more data on extension conflicts**: While the frequency is lower, extension issues can significantly impact user experience. Implement better error logging and user feedback mechanisms for extensions.
-- **Proactively monitor for update failures**: Update failures are disruptive and deter users from accessing new features and fixes. Implement robust monitoring and rollback mechanisms to minimize impact.
-- **Consider a dedicated knowledge base article for common issues**: Provide users with a central resource for troubleshooting common problems like update failures and antivirus conflicts.
-- **Improve error messages and guidance**: Vague error messages like 'this message is empty' are unhelpful. Provide specific, actionable guidance to help users resolve issues independently.
+- **Prioritize bug fixes:** Focus on resolving the bugs related to LTM example failures, extension issues, and 'empty message' errors as these are causing significant user frustration.
+- **Improve Pieces OS update process:** Investigate and address the issues causing Pieces OS updates to fail, ensuring a smooth and reliable update experience for users.
+- **Provide clear documentation on Personal Domain:** Create comprehensive documentation that explains the Personal Domain backup/restore process, addressing user confusion and issues encountered.
+- **Gather more information on 'empty message' error:** Investigate the root cause of the 'empty message' error, collecting user data such as OS version, Pieces OS version, and specific actions taken to reproduce and resolve the issue.
+- **Enhance communication with users:** Keep users informed about the status of bug fixes and upcoming releases, providing temporary workarounds where applicable to minimize disruption.
+- **Consider a dedicated support channel for EAP features:** Given the issues reported with Personal Domain, an Early Access Program feature, consider creating a dedicated support channel or forum for users testing new features to provide more focused assistance.
+- **Analyze antivirus compatibility:** Investigate the reported conflict with Kaspersky antivirus and explore potential solutions to ensure Pieces OS functions correctly with popular antivirus software.
+- **Review and update Chrome extension functionality:** Address the issue with the Chrome extension causing problems on Stack Overflow, ensuring it integrates seamlessly with the platform and does not disrupt user experience.
 
 ## Daily Reports
 Here are the daily reports for this week:
 
 - [report_131158](daily/2025-03-11/report_131158.md)
 - [report_210609](daily/2025-03-11/report_210609.md)
+- [report_131205](daily/2025-03-12/report_131205.md)

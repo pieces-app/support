@@ -1,0 +1,97 @@
+{
+  "success": true,
+  "date_range": {
+    "start": "2025-03-12T00:00:00+00:00",
+    "end": "2025-03-12T13:12:05.679855+00:00"
+  },
+  "summary": {
+    "total_tickets": 2,
+    "resolved_tickets": 0,
+    "open_tickets": 2
+  },
+  "ticket_breakdown": [
+    {
+      "category": "bug",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "os:windows",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:desktop application",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "status:triaged",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:pending_release",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "os:macos",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:pieces os",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    }
+  ],
+  "most_active_tickets": [
+    {
+      "number": 652,
+      "title": "\"Secret Message\" Example doesn't work properly",
+      "activity_level": 8.73
+    },
+    {
+      "number": 661,
+      "title": "Pieces desktop this message is empty please try again",
+      "activity_level": 7.5
+    }
+  ],
+  "common_issues": [
+    {
+      "title": "Error messages and unexpected behavior in Pieces",
+      "description": "Users report error messages like \"this message is empty please try again\" and unexpected behavior with features like Secret Message. Issues appear on both Windows and MacOS, potentially related to device constraints or recent updates. Workarounds include restarting Pieces or waiting for a patch release.",
+      "frequency": 2,
+      "related_issues": [
+        {
+          "id": 661,
+          "title": "Pieces desktop this message is empty please try again",
+          "text": "Pieces desktop this message is empty please try again\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nPieces for Developers 4.0.2\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWhen copy paste code sencond time in Ask anything give error  this message is empty please try again\n## Summary of GitHub Issue Conversation\n\n**Key Points:**\n\n* Users are experiencing an error message \"Pieces desktop this message is empty please try again show error pieces desktop\" after updating to the latest version.\n* This issue affects both Mac and Windows versions of the app.\n* Users are unable to send messages after receiving the error message.\n\n**Problems Identified:**\n\n* Bug in the latest update prevents users from sending messages.\n* This issue affects a significant number of users across different platforms.\n\n**Solutions Proposed/Implemented:**\n\n* A patch release is being deployed to fix the bug.\n\n**Current Status/Outcome:**\n\n* Patch release is expected to be available soon.\n* The issue should be resolved after the patch is installed.\n\n**Additional Information:**\n\n* Related issues and helpful resources are provided in the conversation.\n\n**Overall:**\n\n* This issue appears to be resolved with the upcoming patch release.\n* Users should expect a fix soon.",
+          "activity_level": 7.5
+        },
+        {
+          "id": 652,
+          "title": "\"Secret Message\" Example doesn't work properly",
+          "text": "\"Secret Message\" Example doesn't work properly\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n11.2.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWhen using LTM-2 to test the secret message example:\nhttps://pieces.app/magic-moments/ltm\n\nI got a strange response from the LLM:\nClaude 3.5:\nFirst Try:\n![Image](https://github.com/user-attachments/assets/1962a3e4-8b02-4d3f-bc8c-4bdd72c80aa6)\n2. try: (waited longer on the website)\n![Image](https://github.com/user-attachments/assets/cd71c5c1-d5d5-4449-acd5-e070fb244fa9)\n\nGemini 2.0 Flash did fail completely:\n![Image](https://github.com/user-attachments/assets/50735f7a-28a1-4563-b490-e10c271eca23)\n## Conversation Summary\n\n**Key points raised:**\n\n* Users are experiencing \"basic mode due to device constraints\" message in PiecesOS.\n* This issue leads to problems with the secret message and Workstream activity functionalities.\n* It seems to affect M3 Macs specifically.\n\n**Problems identified:**\n\n* Difficulty in reproducing the issue internally.\n* Lack of information about \"device constraints\" in documentation.\n\n**Solutions proposed/implemented:**\n\n* Restarting PiecesOS as a temporary fix.\n* Providing a fix in the next version of PiecesOS.\n\n**Current status/outcome:**\n\n* The issue persists on some M3 Macs.\n* A fix is planned for the next version of PiecesOS.\n* Restarting PiecesOS is a temporary workaround.\n* Information about \"device constraints\" and vector support is needed.\n\n## Additional Points:\n\n* The issue likely pertains to vector search capabilities being unsupported on user devices.\n* There is confusion regarding the \"Unknown Origin\" item in the telemetry browser.\n* Users are awaiting a permanent solution and further clarification on the issue.",
+          "activity_level": 8.73
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    "**Investigate Error Messages and Unexpected Behavior:** Prioritize resolving the common issue \"Error messages and unexpected behavior in Pieces.\" This issue has a high frequency and impacts both Windows and MacOS users. Focus on identifying the root cause, whether related to device constraints or recent updates, and provide a permanent fix.",
+    "**Improve \"Secret Message\" Functionality:** Address the issue with the \"Secret Message\" example not working properly. This problem, particularly affecting M3 Macs, might indicate underlying issues with device compatibility or vector search capabilities. Investigate and resolve the issue to ensure smooth user experience.",
+    "**Enhance Error Messaging:** Provide more informative error messages to users, such as explaining \"device constraints\" and offering specific troubleshooting steps. This will empower users to self-resolve issues and reduce support tickets.",
+    "**Gather More Data on Device Constraints:** Investigate and document the \"device constraints\" issue affecting features like \"Secret Message.\" Clearly define these constraints and communicate them to users, potentially through in-app messages or documentation.",
+    "**Monitor Patch Release Effectiveness:** Closely monitor the effectiveness of the upcoming patch release in resolving the reported error messages and unexpected behavior. Gather user feedback to assess if the fix adequately addresses the issue."
+  ],
+  "message": "Daily support report generated successfully."
+}
