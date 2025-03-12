@@ -1,6 +1,6 @@
 # Support Ticket Report
-- Generated: 2025-03-11 21:07:25
-- Period: 2025-03-10 to 2025-03-11
+- Generated: 2025-03-12 05:07:56
+- Period: 2025-03-10 to 2025-03-12
 
 ## Summary
 - **Total Tickets:** 5
@@ -10,31 +10,31 @@
 ## 5 Most Active Tickets
 | Issue # | Title | Activity Level |
 |---------|-------|----------------|
-| [#652](https://github.com/pieces-app/support/issues/652) | "Secret Message" Example doesn't work properly | 8.52 |
+| [#652](https://github.com/pieces-app/support/issues/652) | "Secret Message" Example doesn't work properly | 8.13 |
 | [#661](https://github.com/pieces-app/support/issues/661) | Pieces desktop this message is empty please try again | 6.94 |
-| [#658](https://github.com/pieces-app/support/issues/658) | Personal Domain backup | 5.80 |
+| [#658](https://github.com/pieces-app/support/issues/658) | Personal Domain backup | 5.34 |
 | [#659](https://github.com/pieces-app/support/issues/659) | Chrome Extension messing out stackoverflow | 4.74 |
 | [#654](https://github.com/pieces-app/support/issues/654) | Pieces OS Update fails | 4.10 |
 
 ## Common Issues
-### 1. Pieces OS: Intermittent Errors and Unexpected Behavior
-Users report various issues with Pieces OS, including the 'secret message' example not working, error messages like 'this message is empty,' and extension conflicts. These problems appear across different operating systems and Pieces OS versions. Proposed solutions include restarting the app, waiting for updates, and providing detailed bug reports to the Pieces team for investigation.
+### 1. Pieces OS Errors and Unexpected Behavior
+Users report various errors like 'basic mode' limitations, 'empty message' prompts, and update failures. These issues appear on both Windows and macOS, potentially linked to recent updates or specific software configurations. Proposed solutions include restarting the app, updating Windows App Installer, and configuring antivirus settings.
 
 **Related Issues:**
 - [#652](https://github.com/pieces-app/support/issues/652): "Secret Message" Example doesn't work properly
 - [#661](https://github.com/pieces-app/support/issues/661): Pieces desktop this message is empty please try again
-- [#659](https://github.com/pieces-app/support/issues/659): Chrome Extension messing out stackoverflow
+- [#654](https://github.com/pieces-app/support/issues/654): Pieces OS Update fails
 
-### 2. Pieces OS Update and Personal Domain Issues
-Users report issues with Pieces OS updates failing on Windows and problems with Personal Domain backup/restore functionality.  Suggested solutions include updating the Windows App Installer, configuring antivirus software, and verifying Personal Domain registration.
+### 2. Pieces OS Update and Functionality Issues
+Users report difficulties with Pieces OS updates failing on Windows, potential conflicts with antivirus software, and errors related to personal domain registration and data backup/restore. Suggested solutions include updating the Windows App Installer, configuring antivirus exceptions, and ensuring personal domain availability and backup recency.
 
 **Related Issues:**
 - [#658](https://github.com/pieces-app/support/issues/658): Personal Domain backup
 - [#654](https://github.com/pieces-app/support/issues/654): Pieces OS Update fails
 - [#661](https://github.com/pieces-app/support/issues/661): Pieces desktop this message is empty please try again
 
-### 3. Pieces OS Errors and Bugs
-Users report various errors like 'message empty' when copy-pasting, update failures with error messages on Windows, and Chrome extension issues causing repetitive text on specific websites. Proposed solutions include checking for Pieces OS updates, antivirus configuration, and providing detailed logs for debugging.
+### 3. Pieces OS Desktop and Extension Bugs
+Users report various issues with Pieces OS desktop and extensions, including 'empty message' errors on copy-paste, update failures, and extension conflicts. Troubleshooting steps include checking for updates, configuring antivirus software, and providing detailed bug reports to the Pieces team.
 
 **Related Issues:**
 - [#661](https://github.com/pieces-app/support/issues/661): Pieces desktop this message is empty please try again
@@ -43,11 +43,14 @@ Users report various errors like 'message empty' when copy-pasting, update failu
 
 
 ## Recommendations
-- "Investigate and address the root cause of intermittent errors and unexpected behavior in Pieces OS, such as the 'secret message' example not working and error messages like 'this message is empty'. This may involve reviewing code, testing different operating systems and Pieces OS versions, and analyzing user reports."
-- "Provide clearer documentation or in-app guidance on Personal Domain backup/restore functionality to help users avoid issues and ensure data is properly synced between devices."
-- "Improve the Pieces OS update process, particularly on Windows, to reduce update failures and provide more informative error messages. This may involve testing updates on various Windows configurations and working with the Windows App Installer team to address compatibility issues."
-- "Investigate and resolve the Chrome extension issue causing repetitive text on specific websites. This may involve reviewing the extension's code, testing on different browsers and websites, and potentially implementing website-specific fixes or blacklisting."
-- "Consider implementing a system to proactively identify and address common issues, such as monitoring error logs and user reports for patterns. This could help resolve issues more quickly and prevent them from affecting a large number of users."
+- **Prioritize 'Pieces OS Errors and Unexpected Behavior'**: This issue has the highest frequency and activity, suggesting a widespread impact. Focus on identifying the root cause and providing a permanent fix.
+- **Address 'Pieces OS Update and Functionality Issues'**: This issue also has high frequency and involves critical functionalities like updates and backups. Investigate potential conflicts with antivirus software and domain registration processes.
+- **Improve communication around 'basic mode'**: Users are confused about its limitations and triggers. Update documentation and provide clearer in-app messaging.
+- **Investigate 'empty message' error**: This error appears in multiple contexts and platforms. Thoroughly test copy-paste functionality and recent updates to pinpoint the cause.
+- **Gather more data on extension conflicts**: While the frequency is lower, extension issues can significantly impact user experience. Implement better error logging and user feedback mechanisms for extensions.
+- **Proactively monitor for update failures**: Update failures are disruptive and deter users from accessing new features and fixes. Implement robust monitoring and rollback mechanisms to minimize impact.
+- **Consider a dedicated knowledge base article for common issues**: Provide users with a central resource for troubleshooting common problems like update failures and antivirus conflicts.
+- **Improve error messages and guidance**: Vague error messages like 'this message is empty' are unhelpful. Provide specific, actionable guidance to help users resolve issues independently.
 
 ## Daily Reports
 Here are the daily reports for this week:
