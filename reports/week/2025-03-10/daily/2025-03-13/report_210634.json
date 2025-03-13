@@ -1,0 +1,200 @@
+{
+  "success": true,
+  "date_range": {
+    "start": "2025-03-13T00:00:00+00:00",
+    "end": "2025-03-13T21:06:34.245254+00:00"
+  },
+  "summary": {
+    "total_tickets": 6,
+    "resolved_tickets": 0,
+    "open_tickets": 6
+  },
+  "ticket_breakdown": [
+    {
+      "category": "bug",
+      "received": 5,
+      "resolved": 0,
+      "pending": 5
+    },
+    {
+      "category": "os:windows",
+      "received": 3,
+      "resolved": 0,
+      "pending": 3
+    },
+    {
+      "category": "app:desktop application",
+      "received": 5,
+      "resolved": 0,
+      "pending": 5
+    },
+    {
+      "category": "app:visual studio",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:triaged",
+      "received": 3,
+      "resolved": 0,
+      "pending": 3
+    },
+    {
+      "category": "status:new",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "os:macos",
+      "received": 3,
+      "resolved": 0,
+      "pending": 3
+    },
+    {
+      "category": "enhancement",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:pieces os",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "app:web extension",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:pending_release",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    }
+  ],
+  "most_active_tickets": [
+    {
+      "number": 652,
+      "title": "\"Secret Message\" Example doesn't work properly",
+      "activity_level": 8.82
+    },
+    {
+      "number": 661,
+      "title": "Pieces desktop this message is empty please try again",
+      "activity_level": 7.32
+    },
+    {
+      "number": 659,
+      "title": "Chrome Extension messing out stackoverflow",
+      "activity_level": 4.63
+    },
+    {
+      "number": 666,
+      "title": "Response \"I'll get back to you with my findings as soon as possible\"",
+      "activity_level": 4.42
+    },
+    {
+      "number": 665,
+      "title": "Installation doesn't follow the System Apps default location",
+      "activity_level": 4.42
+    },
+    {
+      "number": 655,
+      "title": "Pieces Visual Studio 2022 extension conflict with SQL Server Object Explorer",
+      "activity_level": 4.19
+    }
+  ],
+  "common_issues": [
+    {
+      "title": "Pieces OS Bug: Vague Responses and Errors",
+      "description": "Users report Pieces OS providing vague responses like \"I'll get back to you...\" instead of actionable answers. Other errors include \"basic mode due to device constraints\" on capable machines and \"this message is empty.\" Temporary solutions involve restarting the app or waiting for updates.",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 666,
+          "title": "Response \"I'll get back to you with my findings as soon as possible\"",
+          "text": "Response \"I'll get back to you with my findings as soon as possible\"\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n11.2.2\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n**The Bug**\nThe chat assistant will respond claiming that it's working on a solution and will get back to you at a later date. \n\n**Expected Behaviour**\nGet an actionable response with some suggested action/code.\n\n**Details**\nMost recent example of this kind of response (\"_\" is not part of the response just a redaction):\n\n> \"I'll carefully examine the data flow related to _, _, _, _, and _  to see if any inconsistencies could lead to bugs. Please give me a few minutes to review the code thoroughly with this specific focus in mind. I'll get back to you with my findings as soon as possible.\"\n\nThis has happened in three different conversations. I first noticed the behaviour this month, so not before updates preceding March. I promise I'm not trying to be lazy on this one, it's difficult to offer reproduction steps.\n\nI use Claude 3.5 more than any option regularly.\n\nThe last conversation where this happened:\n\n- I loaded 15 files into the context menu\n- I sent 22 requests (and received 22 responses where it happened on the 22nd response)\n\nI'll update this issue if there's anything I can do to make the reproduction more narrow.\n## GitHub Issue Conversation Summary\n\n**Key Points Raised:**\n\n* User @seantiz created an issue.\n* The issue was automatically triaged and routed to the appropriate team member.\n* The user might find related issues and resources helpful.\n\n**Problems Identified:**\n\n* The issue description is not provided in the conversation snippet.\n\n**Solutions Proposed/Implemented:**\n\n* The bot provided helpful resources and suggested related issues.\n\n**Current Status/Outcome:**\n\n* The user should expect a follow-up within 24 hours.\n\n**Additional Notes:**\n\n* This summary is based on the provided conversation snippet and may not reflect the full context of the issue.",
+          "activity_level": 4.42
+        },
+        {
+          "id": 652,
+          "title": "\"Secret Message\" Example doesn't work properly",
+          "text": "\"Secret Message\" Example doesn't work properly\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n11.2.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWhen using LTM-2 to test the secret message example:\nhttps://pieces.app/magic-moments/ltm\n\nI got a strange response from the LLM:\nClaude 3.5:\nFirst Try:\n![Image](https://github.com/user-attachments/assets/1962a3e4-8b02-4d3f-bc8c-4bdd72c80aa6)\n2. try: (waited longer on the website)\n![Image](https://github.com/user-attachments/assets/cd71c5c1-d5d5-4449-acd5-e070fb244fa9)\n\nGemini 2.0 Flash did fail completely:\n![Image](https://github.com/user-attachments/assets/50735f7a-28a1-4563-b490-e10c271eca23)\n## Summary of GitHub Issue Conversation about \"Basic Mode due to Device Constraints\"\n\n**Key Points Raised:**\n\n* Users reported encountering a \"basic mode due to device constraints\" message on M3 Macs.\n* The cause of the issue was unclear, as the device should support vector search.\n* The issue also seemed to prevent access to workstream activity and LTM agent updates.\n* An \"unknown origin\" element version 1.0.10 was observed in the telemetry browser.\n\n**Problems Identified:**\n\n* The \"basic mode\" message was appearing on M3 Macs that should support vector search.\n* This mode limited functionality, preventing access to workstream activity and LTM updates.\n* The cause of the problem was unknown.\n* The presence of an \"unknown origin\" element was concerning.\n\n**Solutions Proposed/Implemented:**\n\n* Restarting PiecesOS temporarily resolved the issue.\n* Closing and re-opening PiecesOS also seemed to resolve the issue.\n* A fix was promised for the next version of PiecesOS.\n\n**Current Status/Outcome:**\n\n* The issue can be temporarily resolved by restarting or closing/re-opening PiecesOS.\n* A permanent fix is expected in the next version of PiecesOS.\n* The cause of the problem and the meaning of the \"unknown origin\" element remain unclear.\n\n**Additional Notes:**\n\n* It is recommended to use the latest version of PiecesOS.\n* If the issue persists, contacting Pieces support is advised.\n\n**Overall, the issue was related to a bug causing \"basic mode\" to be triggered on devices that should support vector search. While a temporary solution exists, a permanent fix is expected in the next version of PiecesOS.**",
+          "activity_level": 8.82
+        },
+        {
+          "id": 661,
+          "title": "Pieces desktop this message is empty please try again",
+          "text": "Pieces desktop this message is empty please try again\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nPieces for Developers 4.0.2\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWhen copy paste code sencond time in Ask anything give error  this message is empty please try again\n## Github Issue Summary: \"Pieces Desktop: Message is empty, please try again\" \n\n**Key Points:**\n\n* Users reported an error message \"Pieces desktop this message is empty please try again show error pieces desktop\" after updating to the latest version.\n* The issue affected users on Mac, Windows and possibly other platforms.\n* The issue prevented users from sending messages after the first message in a new chat.\n\n**Solutions:**\n\n* The Pieces team identified the issue and prepared a patch release.\n* The patch release was deployed on March 12, 2025.\n\n**Outcome:**\n\n* The patch release successfully resolved the issue for affected users.\n\n**Current Status:**\n\n* The issue is closed and marked as resolved.",
+          "activity_level": 7.32
+        }
+      ]
+    },
+    {
+      "title": "Pieces extension conflicts causing UI/Functionality issues",
+      "description": "Users report conflicts between Pieces extensions and other software, particularly in Visual Studio and web browsers. These conflicts manifest as UI glitches, functionality limitations (editing, cursor issues), or unexpected behavior. Solutions vary but often involve disabling the extension, restarting the affected application, or waiting for a patch from the Pieces team.",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 655,
+          "title": "Pieces Visual Studio 2022 extension conflict with SQL Server Object Explorer",
+          "text": "Pieces Visual Studio 2022 extension conflict with SQL Server Object Explorer\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nVisual Studio\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.2.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWith Pieces Extension installed in Visual studio 2022, SQL database field is not editable (not clickable?)\n\nReproduce: \n- Connect to any SQL server with some table, choose a table and right click -> View Data\n- Try edit the database's table field (the field will be unable to focus, so unable to edit)\n\n* SQL database is editable again after disable pieces extension and restart VS.\n* Try turn off everything in the extension's UserPreference did not work.\n* While you can not edit a field, but delete a row is possible (so maybe some UI conflict?)\n\nHere are some picture\n\nWithout the extension: the edit cursor shown up when click on field\n![Image](https://github.com/user-attachments/assets/c45dbafe-29c7-4acd-9827-b34cd0cd76f7)\n\nWith the extension: the edit cursor did not show up. Clicking just selected the field.\n![Image](https://github.com/user-attachments/assets/8f430ff6-18f8-41fe-a58e-42ebbeec3be2)\n## GitHub Issue Summary\n\n\n**Key Points Raised:**\n\n* User reported an issue where the cursor disappears after being removed from a cell entered via a script file.\n* The issue seems to be specific to the Pieces for Visual Studio plugin and Tool Window.\n\n\n**Problems Identified:**\n\n* Cursor disappears, making further editing impossible.\n* Cause of the issue is unclear and appears to be a conflict between the Pieces for Visual Studio plugin and Tool Window.\n\n\n**Solutions Proposed/Implemented:**\n\n* No solution implemented yet. The developer is still investigating the cause of the issue.\n\n\n**Current Status/Outcome:**\n\n* The issue is being actively investigated by the developer.\n* No updates on a potential fix are available as of now.\n* The user is still unable to edit cells after the cursor disappears.",
+          "activity_level": 4.19
+        },
+        {
+          "id": 659,
+          "title": "Chrome Extension messing out stackoverflow",
+          "text": "Chrome Extension messing out stackoverflow\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Web Extension\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n11.2.2\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nIt fills this text endlessly...\n\n![Image](https://github.com/user-attachments/assets/6b5edb10-b7cf-4fa6-a523-aa73af94cbee)\n## GitHub Issue Summary\n\n**Key Points:**\n\n* User @luceat-lux-vestra reported an issue with embed buttons on a specific page.\n* Pieces Support Bot provided initial information and resources.\n* Rutvik from the Pieces team investigated the issue and requested additional information from the user.\n* The user provided the PWE version and confirmed that embed buttons were enabled on the page.\n\n**Problems Identified:**\n\n* Embed buttons were not working on a specific page.\n\n**Solutions Proposed/Implemented:**\n\n* Rutvik proposed to blacklist the page to prevent the issue.\n\n**Current Status/Outcome:**\n\n* The issue is not yet resolved. Rutvik is investigating further.\n\n**Additional Notes:**\n\n* The user has provided the requested information, but the issue persists.\n* No further updates are available at this time.",
+          "activity_level": 4.63
+        },
+        {
+          "id": 661,
+          "title": "Pieces desktop this message is empty please try again",
+          "text": "Pieces desktop this message is empty please try again\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nPieces for Developers 4.0.2\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWhen copy paste code sencond time in Ask anything give error  this message is empty please try again\n## Github Issue Summary: \"Pieces Desktop: Message is empty, please try again\" \n\n**Key Points:**\n\n* Users reported an error message \"Pieces desktop this message is empty please try again show error pieces desktop\" after updating to the latest version.\n* The issue affected users on Mac, Windows and possibly other platforms.\n* The issue prevented users from sending messages after the first message in a new chat.\n\n**Solutions:**\n\n* The Pieces team identified the issue and prepared a patch release.\n* The patch release was deployed on March 12, 2025.\n\n**Outcome:**\n\n* The patch release successfully resolved the issue for affected users.\n\n**Current Status:**\n\n* The issue is closed and marked as resolved.",
+          "activity_level": 7.32
+        }
+      ]
+    },
+    {
+      "title": "Pieces OS and Extension Integration Issues",
+      "description": "Users report conflicts between Pieces OS, its extensions, and system settings. This includes default installation paths being ignored, error messages appearing when pasting code, and UI conflicts with other applications like SQL Server Object Explorer in Visual Studio. Solutions vary depending on the specific issue, ranging from bug fixes to configuration changes.",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 665,
+          "title": "Installation doesn't follow the System Apps default location",
+          "text": "Installation doesn't follow the System Apps default location\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.2.2\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nThere's no opportunity for the User to choose where the Pieces OS is installed or where any data that's collected is stored. From Windows 10 onwards there is a system feature to set where new content is to be stored by default. This is in Settings/System/Storage.\n\nYou can set where new Apps will be installed, new documents are stored, Music, etc.\n\nOnce this is set I would expect a current application to follow the default installation setting rather than hardcode it for the Boot drive.\n## GitHub Issue Conversation Summary\n\n**Key Points:**\n\n* User bpluly reported an issue with their Pieces app.\n* The Pieces support bot automatically triaged the issue and assigned it to the appropriate team member.\n* The bot suggested related issues and resources for the user to explore.\n\n**Problems Identified:**\n\n* The user experienced a problem with their Pieces app, but the specific nature of the problem is not explicitly stated in the provided conversation excerpt.\n\n**Solutions Proposed/Implemented:**\n\n* The Pieces support bot automatically assigned the issue to the appropriate team member, indicating that a solution will be investigated and implemented.\n\n**Current Status/Outcome:**\n\n* The issue is currently being reviewed by the Pieces team. No further updates or resolution are provided in the given excerpt. \n\n**Additional Notes:**\n\n* For a more comprehensive understanding of the issue and its resolution, please refer to the entire conversation thread on GitHub.",
+          "activity_level": 4.42
+        },
+        {
+          "id": 661,
+          "title": "Pieces desktop this message is empty please try again",
+          "text": "Pieces desktop this message is empty please try again\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nPieces for Developers 4.0.2\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWhen copy paste code sencond time in Ask anything give error  this message is empty please try again\n## Github Issue Summary: \"Pieces Desktop: Message is empty, please try again\" \n\n**Key Points:**\n\n* Users reported an error message \"Pieces desktop this message is empty please try again show error pieces desktop\" after updating to the latest version.\n* The issue affected users on Mac, Windows and possibly other platforms.\n* The issue prevented users from sending messages after the first message in a new chat.\n\n**Solutions:**\n\n* The Pieces team identified the issue and prepared a patch release.\n* The patch release was deployed on March 12, 2025.\n\n**Outcome:**\n\n* The patch release successfully resolved the issue for affected users.\n\n**Current Status:**\n\n* The issue is closed and marked as resolved.",
+          "activity_level": 7.32
+        },
+        {
+          "id": 655,
+          "title": "Pieces Visual Studio 2022 extension conflict with SQL Server Object Explorer",
+          "text": "Pieces Visual Studio 2022 extension conflict with SQL Server Object Explorer\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nVisual Studio\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.2.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWith Pieces Extension installed in Visual studio 2022, SQL database field is not editable (not clickable?)\n\nReproduce: \n- Connect to any SQL server with some table, choose a table and right click -> View Data\n- Try edit the database's table field (the field will be unable to focus, so unable to edit)\n\n* SQL database is editable again after disable pieces extension and restart VS.\n* Try turn off everything in the extension's UserPreference did not work.\n* While you can not edit a field, but delete a row is possible (so maybe some UI conflict?)\n\nHere are some picture\n\nWithout the extension: the edit cursor shown up when click on field\n![Image](https://github.com/user-attachments/assets/c45dbafe-29c7-4acd-9827-b34cd0cd76f7)\n\nWith the extension: the edit cursor did not show up. Clicking just selected the field.\n![Image](https://github.com/user-attachments/assets/8f430ff6-18f8-41fe-a58e-42ebbeec3be2)\n## GitHub Issue Summary\n\n\n**Key Points Raised:**\n\n* User reported an issue where the cursor disappears after being removed from a cell entered via a script file.\n* The issue seems to be specific to the Pieces for Visual Studio plugin and Tool Window.\n\n\n**Problems Identified:**\n\n* Cursor disappears, making further editing impossible.\n* Cause of the issue is unclear and appears to be a conflict between the Pieces for Visual Studio plugin and Tool Window.\n\n\n**Solutions Proposed/Implemented:**\n\n* No solution implemented yet. The developer is still investigating the cause of the issue.\n\n\n**Current Status/Outcome:**\n\n* The issue is being actively investigated by the developer.\n* No updates on a potential fix are available as of now.\n* The user is still unable to edit cells after the cursor disappears.",
+          "activity_level": 4.19
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    "**Prioritize bug fixes related to Pieces OS core functionality:** Address the vague responses, \"basic mode\" errors, and \"empty message\" issues as they significantly impact user experience.",
+    "**Improve extension compatibility:** Investigate and resolve conflicts between Pieces extensions and popular software like Visual Studio and web browsers, focusing on UI glitches and functionality limitations.",
+    "**Review installation procedures:** Ensure Pieces OS respects system settings for default installation paths and provide users with clear options during setup.",
+    "**Enhance communication on common issues:** Create dedicated support articles or FAQs addressing the identified common issues, offering workarounds and updates on permanent solutions.",
+    "**Gather more detailed user feedback:** Encourage users to provide specific details and reproduction steps when reporting issues to aid in faster debugging and resolution.",
+    "**Consider a dedicated testing phase for new features and updates:** Implement a robust testing process, potentially involving beta testers, to identify and address issues before major releases.",
+    "**Improve error messaging:** Replace vague error messages like \"I'll get back to you...\" with more informative messages that guide users towards potential solutions or workarounds.",
+    "**Monitor extension interactions:** Develop mechanisms to proactively detect and address conflicts between Pieces extensions and other software, potentially through compatibility checks or user feedback analysis."
+  ],
+  "message": "Daily support report generated successfully."
+}
