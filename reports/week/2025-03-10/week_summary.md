@@ -1,5 +1,5 @@
 # Support Ticket Report
-- Generated: 2025-03-13 05:08:09
+- Generated: 2025-03-13 13:13:24
 - Period: 2025-03-10 to 2025-03-13
 
 ## Summary
@@ -11,51 +11,43 @@
 | Issue # | Title | Activity Level |
 |---------|-------|----------------|
 | [#652](https://github.com/pieces-app/support/issues/652) | "Secret Message" Example doesn't work properly | 8.38 |
-| [#661](https://github.com/pieces-app/support/issues/661) | Pieces desktop this message is empty please try again | 7.50 |
+| [#661](https://github.com/pieces-app/support/issues/661) | Pieces desktop this message is empty please try again | 7.32 |
+| [#659](https://github.com/pieces-app/support/issues/659) | Chrome Extension messing out stackoverflow | 4.63 |
 | [#663](https://github.com/pieces-app/support/issues/663) | Kaspersky Internet Security flags Pieces OS as a virus | 4.42 |
-| [#654](https://github.com/pieces-app/support/issues/654) | Pieces OS Update fails | 4.36 |
 | [#658](https://github.com/pieces-app/support/issues/658) | Personal Domain backup | 4.33 |
 
 ## Common Issues
-### 1. PiecesOS Errors and Update Failures
-Users report various errors including 'secret message' malfunctions, 'message is empty' prompts, and update failures. These issues appear across macOS and Windows platforms, on different PiecesOS versions. Proposed solutions involve restarting the app, waiting for patch releases, or configuring antivirus settings.
-
-**Related Issues:**
-- [#652](https://github.com/pieces-app/support/issues/652): "Secret Message" Example doesn't work properly
-- [#661](https://github.com/pieces-app/support/issues/661): Pieces desktop this message is empty please try again
-- [#654](https://github.com/pieces-app/support/issues/654): Pieces OS Update fails
-
-### 2. Pieces OS Update and Launch Issues
-Users are experiencing issues with Pieces OS updates failing or the application not launching on Windows. Potential solutions include updating the App Installer, configuring antivirus software like Kaspersky to allow Pieces OS, and checking for updates to the Pieces OS application.
-
-**Related Issues:**
-- [#663](https://github.com/pieces-app/support/issues/663): Kaspersky Internet Security flags Pieces OS as a virus
-- [#654](https://github.com/pieces-app/support/issues/654): Pieces OS Update fails
-- [#661](https://github.com/pieces-app/support/issues/661): Pieces desktop this message is empty please try again
-
-### 3. Pieces OS and application errors and bugs
-Users are experiencing various errors with Pieces OS and its applications, including update failures, error messages like "this message is empty please try again", and embed button malfunctions. Proposed solutions include updating App Installer, configuring antivirus settings, and providing detailed bug reports with screenshots and steps to reproduce.
+### 1. PiecesOS Errors and Bugs
+Users report various errors like 'message is empty' when pasting code, embed buttons not working on certain pages, and LTM examples failing. Solutions include patch releases, restarting PiecesOS, or waiting for a fix in the next version.
 
 **Related Issues:**
 - [#659](https://github.com/pieces-app/support/issues/659): Chrome Extension messing out stackoverflow
 - [#661](https://github.com/pieces-app/support/issues/661): Pieces desktop this message is empty please try again
-- [#654](https://github.com/pieces-app/support/issues/654): Pieces OS Update fails
+- [#652](https://github.com/pieces-app/support/issues/652): "Secret Message" Example doesn't work properly
 
-### 4. Pieces OS Update and Installation Issues
-Users are experiencing problems with Pieces OS updates and installations, including failures, errors, and conflicts with antivirus software like Kaspersky. Suggested solutions include checking for existing issues, updating App Installer, configuring antivirus exceptions, and contacting Pieces support.
+### 2. Pieces OS installation and update issues
+Users are experiencing issues with Pieces OS installation and updates, including antivirus software (Kaspersky) flagging it as a virus and update failures. Suggested solutions include configuring antivirus exceptions, updating the App Installer, and waiting for patch releases.
+
+**Related Issues:**
+- [#663](https://github.com/pieces-app/support/issues/663): Kaspersky Internet Security flags Pieces OS as a virus
+- [#654](https://github.com/pieces-app/support/issues/654): Pieces OS Update fails
+- [#661](https://github.com/pieces-app/support/issues/661): Pieces desktop this message is empty please try again
+
+### 3. Pieces OS update and data sync issues
+Users report issues with Pieces OS updates failing on Windows, potentially due to antivirus software or App Installer issues. Additionally, users encounter problems with personal domain backup and restore functionality, specifically when transferring data to a new device. Solutions include updating App Installer, configuring antivirus settings, and clarifying the personal domain registration and restore process.
 
 **Related Issues:**
 - [#658](https://github.com/pieces-app/support/issues/658): Personal Domain backup
 - [#654](https://github.com/pieces-app/support/issues/654): Pieces OS Update fails
-- [#663](https://github.com/pieces-app/support/issues/663): Kaspersky Internet Security flags Pieces OS as a virus
+- [#661](https://github.com/pieces-app/support/issues/661): Pieces desktop this message is empty please try again
 
 
 ## Recommendations
-- "Investigate and address the root cause of Pieces OS errors and update failures, particularly the 'secret message' malfunctions, 'message is empty' prompts, and update failures across macOS and Windows platforms."
-- "Provide clear guidance and documentation on 'basic mode' in Pieces OS, its limitations, and how users can resolve issues related to it."
-- "Collaborate with Kaspersky and other antivirus vendors to address compatibility issues and prevent false positives when installing or updating Pieces OS."
-- "Improve communication with users regarding ongoing issues, planned fixes, and workarounds for problems like Pieces OS update failures and antivirus conflicts."
-- "Enhance error messages and logging in Pieces OS to provide more specific information, making it easier for both users and support teams to diagnose and troubleshoot problems."
+- **Prioritize bug fixes related to PiecesOS errors:** The most frequent issue category is 'PiecesOS Errors and Bugs', impacting core functionalities. Focus on resolving these errors to improve user experience.
+- **Investigate and address Pieces OS installation and update issues:** Issues with antivirus software and update failures are causing friction for users. Collaborate with security software providers and ensure a smooth update process.
+- **Improve communication and documentation for personal domain backup and restore:** Users are facing challenges with data sync and personal domain management. Provide clearer instructions and troubleshooting guides.
+- **Consider creating a dedicated troubleshooting guide for common issues:** This will empower users to self-serve and potentially reduce support ticket volume.
+- **Monitor the effectiveness of patch releases:** Track whether implemented solutions effectively address reported issues and communicate updates to users proactively.
 
 ## Daily Reports
 Here are the daily reports for this week:
@@ -64,3 +56,4 @@ Here are the daily reports for this week:
 - [report_210609](daily/2025-03-11/report_210609.md)
 - [report_210625](daily/2025-03-12/report_210625.md)
 - [report_131205](daily/2025-03-12/report_131205.md)
+- [report_131206](daily/2025-03-13/report_131206.md)

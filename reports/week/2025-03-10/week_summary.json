@@ -2,7 +2,7 @@
   "success": true,
   "date_range": {
     "start": "2025-03-10T00:00:00+00:00",
-    "end": "2025-03-13T05:07:23.682672+00:00"
+    "end": "2025-03-13T13:12:34.618685+00:00"
   },
   "summary": {
     "total_tickets": 6,
@@ -17,16 +17,22 @@
       "pending": 6
     },
     {
-      "category": "os:windows",
-      "received": 4,
+      "category": "os:macos",
+      "received": 2,
       "resolved": 0,
-      "pending": 4
+      "pending": 2
     },
     {
-      "category": "status:new",
+      "category": "app:web extension",
       "received": 1,
       "resolved": 0,
       "pending": 1
+    },
+    {
+      "category": "status:triaged",
+      "received": 4,
+      "resolved": 0,
+      "pending": 4
     },
     {
       "category": "app:desktop application",
@@ -41,25 +47,19 @@
       "pending": 4
     },
     {
-      "category": "status:triaged",
-      "received": 4,
-      "resolved": 0,
-      "pending": 4
-    },
-    {
       "category": "status:pending_release",
       "received": 2,
       "resolved": 0,
       "pending": 2
     },
     {
-      "category": "os:macos",
-      "received": 2,
+      "category": "os:windows",
+      "received": 4,
       "resolved": 0,
-      "pending": 2
+      "pending": 4
     },
     {
-      "category": "app:web extension",
+      "category": "status:new",
       "received": 1,
       "resolved": 0,
       "pending": 1
@@ -74,7 +74,12 @@
     {
       "number": 661,
       "title": "Pieces desktop this message is empty please try again",
-      "activity_level": 7.5
+      "activity_level": 7.32
+    },
+    {
+      "number": 659,
+      "title": "Chrome Extension messing out stackoverflow",
+      "activity_level": 4.63
     },
     {
       "number": 663,
@@ -82,129 +87,99 @@
       "activity_level": 4.42
     },
     {
-      "number": 654,
-      "title": "Pieces OS Update fails",
-      "activity_level": 4.36
-    },
-    {
       "number": 658,
       "title": "Personal Domain backup",
       "activity_level": 4.33
     },
     {
-      "number": 659,
-      "title": "Chrome Extension messing out stackoverflow",
-      "activity_level": 4.26
+      "number": 654,
+      "title": "Pieces OS Update fails",
+      "activity_level": 4.19
     }
   ],
   "common_issues": [
     {
-      "title": "PiecesOS Errors and Update Failures",
-      "description": "Users report various errors including 'secret message' malfunctions, 'message is empty' prompts, and update failures. These issues appear across macOS and Windows platforms, on different PiecesOS versions. Proposed solutions involve restarting the app, waiting for patch releases, or configuring antivirus settings.",
-      "frequency": 3,
-      "related_issues": [
-        {
-          "id": 652,
-          "title": "\"Secret Message\" Example doesn't work properly",
-          "text": "\"Secret Message\" Example doesn't work properly\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n11.2.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWhen using LTM-2 to test the secret message example:\nhttps://pieces.app/magic-moments/ltm\n\nI got a strange response from the LLM:\nClaude 3.5:\nFirst Try:\n![Image](https://github.com/user-attachments/assets/1962a3e4-8b02-4d3f-bc8c-4bdd72c80aa6)\n2. try: (waited longer on the website)\n![Image](https://github.com/user-attachments/assets/cd71c5c1-d5d5-4449-acd5-e070fb244fa9)\n\nGemini 2.0 Flash did fail completely:\n![Image](https://github.com/user-attachments/assets/50735f7a-28a1-4563-b490-e10c271eca23)\n## Conversation Summary: PiecesOS Basic Mode Issue\n\n**Key Points:**\n\n* Users are reporting encountering PiecesOS running in \"basic mode due to device constraints\" on M3 Macs.\n* This issue affects secret message functionality and potentially the LTM engine updates and \"Workstream Activity\" visibility.\n* Closing and reopening PiecesOS seems to temporarily resolve the issue.\n\n**Problems Identified:**\n\n* Unclear reason for PiecesOS running in basic mode on certain devices.\n* Lack of information about \"basic mode\" and its limitations in the documentation.\n* Potential impact on functionality like secret messages and LTM engine updates.\n\n**Solutions Proposed/Implemented:**\n\n* Restarting PiecesOS as a temporary fix.\n* A fix for the next version of PiecesOS is planned.\n\n**Current Status/Outcome:**\n\n* The issue is under investigation and a fix is planned for the next version of PiecesOS.\n* Users can continue using the temporary workaround of restarting PiecesOS.\n\n**Additional Notes:**\n\n* The exact cause of the issue is still being investigated.\n* It is unclear if the issue is related to the \"Unknown Origin\" element version mentioned by one user.\n\n\nI hope this summary is helpful. Please let me know if you have any questions.",
-          "activity_level": 8.38
-        },
-        {
-          "id": 661,
-          "title": "Pieces desktop this message is empty please try again",
-          "text": "Pieces desktop this message is empty please try again\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nPieces for Developers 4.0.2\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWhen copy paste code sencond time in Ask anything give error  this message is empty please try again\n## GitHub Issue Summary: \"Pieces desktop this message is empty please try again show error pieces desktop\"\n\n**Key Points:**\n\n* Users reported an error message \"Pieces desktop this message is empty please try again\" after updating to the latest version.\n* The error prevented users from sending messages in the desktop app.\n* The issue affected users on Windows and Mac platforms.\n\n**Problems Identified:**\n\n* Bug in the latest version of the Pieces desktop app.\n\n**Solutions Proposed/Implemented:**\n\n* A patch release was developed and deployed to fix the bug.\n\n**Current Status/Outcome:**\n\n* The issue has been resolved with the patch release.\n\n**Additional Notes:**\n\n* The issue was automatically triaged and routed to the proper Pieces team member.\n* Users were advised to review related issues and documentation for further assistance. \n* The Pieces support bot provided helpful resources while the issue was being addressed.\n\nI hope this summary is concise and helpful!",
-          "activity_level": 7.5
-        },
-        {
-          "id": 654,
-          "title": "Pieces OS Update fails",
-          "text": "Pieces OS Update fails\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.2.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nThe notification popped up saying an update was available so I clicked Update and a few seconds later got this message box:\n\n![Image](https://github.com/user-attachments/assets/b14dc8ab-632a-4095-b45b-7bbaba3c70ce)\n\nThis is on a very fresh Windows 11 installation.\n## GitHub Issue Summary: PiecesOS Won't Launch\n\n**Key Points:**\n\n* @ThatRendle reported an issue with PiecesOS not launching on Windows.\n* @nathan-courtney-pieces suggested updating App Installer and checking if the error persists.\n* @bejokun reported the same issue with PiecesOS being detected as a trojan by Kaspersky antivirus.\n\n**Problems Identified:**\n\n* PiecesOS not launching on Windows.\n* PiecesOS misidentified as a trojan by Kaspersky antivirus.\n\n**Solutions Proposed/Implemented:**\n\n* Update Microsoft's App Installer.\n* Configure Kaspersky to allow PiecesOS processes.\n\n**Current Status/Outcome:**\n\n* Issue not resolved for @ThatRendle.\n* Issue resolved for @bejokun by configuring Kaspersky.\n\n**Additional Notes:**\n\n* Other users experienced similar issues with PiecesOS not launching.\n* Support resources provided by @pieces-support-bot.",
-          "activity_level": 4.36
-        }
-      ]
-    },
-    {
-      "title": "Pieces OS Update and Launch Issues",
-      "description": "Users are experiencing issues with Pieces OS updates failing or the application not launching on Windows. Potential solutions include updating the App Installer, configuring antivirus software like Kaspersky to allow Pieces OS, and checking for updates to the Pieces OS application.",
-      "frequency": 3,
-      "related_issues": [
-        {
-          "id": 663,
-          "title": "Kaspersky Internet Security flags Pieces OS as a virus",
-          "text": "Kaspersky Internet Security flags Pieces OS as a virus\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nPiecesOS_11.2.2.0_x64\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n![Image](https://github.com/user-attachments/assets/160ed12d-f0a1-46be-bf36-05502353405e)\n## Pieces OS Update Issue - Summary\n\n**Key Points Raised:**\n\n* User @uwascan is experiencing issues with Pieces OS updates.\n* The issue has been automatically routed to the Pieces support team.\n\n**Problems Identified:**\n\n* The specific nature of the update issue is unclear from the conversation excerpt.\n\n**Solutions Proposed/Implemented:**\n\n* The support bot has suggested checking existing related issues and documentation resources. \n\n**Current Status/Outcome:**\n\n* The issue is currently being investigated by the Pieces support team. A follow-up response is expected within 24 hours.\n\n**Additional Information:**\n\n* To provide a more specific and comprehensive summary, access to the full conversation thread is required.",
-          "activity_level": 4.42
-        },
-        {
-          "id": 654,
-          "title": "Pieces OS Update fails",
-          "text": "Pieces OS Update fails\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.2.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nThe notification popped up saying an update was available so I clicked Update and a few seconds later got this message box:\n\n![Image](https://github.com/user-attachments/assets/b14dc8ab-632a-4095-b45b-7bbaba3c70ce)\n\nThis is on a very fresh Windows 11 installation.\n## GitHub Issue Summary: PiecesOS Won't Launch\n\n**Key Points:**\n\n* @ThatRendle reported an issue with PiecesOS not launching on Windows.\n* @nathan-courtney-pieces suggested updating App Installer and checking if the error persists.\n* @bejokun reported the same issue with PiecesOS being detected as a trojan by Kaspersky antivirus.\n\n**Problems Identified:**\n\n* PiecesOS not launching on Windows.\n* PiecesOS misidentified as a trojan by Kaspersky antivirus.\n\n**Solutions Proposed/Implemented:**\n\n* Update Microsoft's App Installer.\n* Configure Kaspersky to allow PiecesOS processes.\n\n**Current Status/Outcome:**\n\n* Issue not resolved for @ThatRendle.\n* Issue resolved for @bejokun by configuring Kaspersky.\n\n**Additional Notes:**\n\n* Other users experienced similar issues with PiecesOS not launching.\n* Support resources provided by @pieces-support-bot.",
-          "activity_level": 4.36
-        },
-        {
-          "id": 661,
-          "title": "Pieces desktop this message is empty please try again",
-          "text": "Pieces desktop this message is empty please try again\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nPieces for Developers 4.0.2\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWhen copy paste code sencond time in Ask anything give error  this message is empty please try again\n## GitHub Issue Summary: \"Pieces desktop this message is empty please try again show error pieces desktop\"\n\n**Key Points:**\n\n* Users reported an error message \"Pieces desktop this message is empty please try again\" after updating to the latest version.\n* The error prevented users from sending messages in the desktop app.\n* The issue affected users on Windows and Mac platforms.\n\n**Problems Identified:**\n\n* Bug in the latest version of the Pieces desktop app.\n\n**Solutions Proposed/Implemented:**\n\n* A patch release was developed and deployed to fix the bug.\n\n**Current Status/Outcome:**\n\n* The issue has been resolved with the patch release.\n\n**Additional Notes:**\n\n* The issue was automatically triaged and routed to the proper Pieces team member.\n* Users were advised to review related issues and documentation for further assistance. \n* The Pieces support bot provided helpful resources while the issue was being addressed.\n\nI hope this summary is concise and helpful!",
-          "activity_level": 7.5
-        }
-      ]
-    },
-    {
-      "title": "Pieces OS and application errors and bugs",
-      "description": "Users are experiencing various errors with Pieces OS and its applications, including update failures, error messages like \"this message is empty please try again\", and embed button malfunctions. Proposed solutions include updating App Installer, configuring antivirus settings, and providing detailed bug reports with screenshots and steps to reproduce.",
+      "title": "PiecesOS Errors and Bugs",
+      "description": "Users report various errors like 'message is empty' when pasting code, embed buttons not working on certain pages, and LTM examples failing. Solutions include patch releases, restarting PiecesOS, or waiting for a fix in the next version.",
       "frequency": 3,
       "related_issues": [
         {
           "id": 659,
           "title": "Chrome Extension messing out stackoverflow",
-          "text": "Chrome Extension messing out stackoverflow\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Web Extension\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n11.2.2\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nIt fills this text endlessly...\n\n![Image](https://github.com/user-attachments/assets/6b5edb10-b7cf-4fa6-a523-aa73af94cbee)\n## GitHub Issue Conversation Summary\n\n**Key Points:**\n\n* @luceat-lux-vestra reported an issue with embed buttons appearing where they shouldn't.\n* Pieces team member @rutvik-at-pieces acknowledged the issue and requested further details for debugging.\n\n**Problems Identified:**\n\n* Embed buttons were appearing on a page where they shouldn't have been, potentially due to the page not being blacklisted.\n\n**Solutions Proposed/Implemented:**\n\n* @rutvik-at-pieces requested PWE version and embed button status to investigate the issue.\n\n**Current Status/Outcome:**\n\n* The issue is still being investigated. No further updates are available.",
-          "activity_level": 4.26
+          "text": "Chrome Extension messing out stackoverflow\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Web Extension\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n11.2.2\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nIt fills this text endlessly...\n\n![Image](https://github.com/user-attachments/assets/6b5edb10-b7cf-4fa6-a523-aa73af94cbee)\n## GitHub Issue Summary\n\n**Key Points:**\n\n* User @luceat-lux-vestra reported an issue with embed buttons not working on a specific page.\n* The issue was automatically triaged and routed to the Pieces team.\n* The team identified the page as previously blacklisted due to a similar issue.\n* The user confirmed that embed buttons were enabled on the page.\n\n**Problems Identified:**\n\n* Embed buttons were not working on a specific page.\n* This page was previously blacklisted due to a similar issue.\n\n**Solutions Proposed/Implemented:**\n\n* The team requested further details from the user to help debug the issue.\n* The user provided their PWE version and confirmed that embed buttons were enabled.\n\n**Current Status/Outcome:**\n\n* The issue is still under investigation.\n* The team is working on a solution.\n\n**Additional Information:**\n\n* The user is using PWE version 4.0.4.\n* Embed buttons are enabled on the affected page.\n\n**Next Steps:**\n\n* The team will continue to investigate the issue and provide an update to the user.",
+          "activity_level": 4.63
         },
         {
           "id": 661,
           "title": "Pieces desktop this message is empty please try again",
-          "text": "Pieces desktop this message is empty please try again\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nPieces for Developers 4.0.2\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWhen copy paste code sencond time in Ask anything give error  this message is empty please try again\n## GitHub Issue Summary: \"Pieces desktop this message is empty please try again show error pieces desktop\"\n\n**Key Points:**\n\n* Users reported an error message \"Pieces desktop this message is empty please try again\" after updating to the latest version.\n* The error prevented users from sending messages in the desktop app.\n* The issue affected users on Windows and Mac platforms.\n\n**Problems Identified:**\n\n* Bug in the latest version of the Pieces desktop app.\n\n**Solutions Proposed/Implemented:**\n\n* A patch release was developed and deployed to fix the bug.\n\n**Current Status/Outcome:**\n\n* The issue has been resolved with the patch release.\n\n**Additional Notes:**\n\n* The issue was automatically triaged and routed to the proper Pieces team member.\n* Users were advised to review related issues and documentation for further assistance. \n* The Pieces support bot provided helpful resources while the issue was being addressed.\n\nI hope this summary is concise and helpful!",
-          "activity_level": 7.5
+          "text": "Pieces desktop this message is empty please try again\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nPieces for Developers 4.0.2\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWhen copy paste code sencond time in Ask anything give error  this message is empty please try again\n## GitHub Issue Conversation Summary\n\n**Key Points:**\n\n* Multiple users (amarranjan1, veerendranath0312, govard108) reported experiencing an error message \"Pieces desktop this message is empty please try again show error\" when trying to send messages in the desktop app.\n* The issue was identified to be related to a recent update. \n*  users were facing the issue across different platforms: Mac, Windows 10.\n\n**Solutions Proposed/Implemented:**\n\n* The Pieces support bot provided links to relevant resources and suggested checking existing issues and documentation.\n* The Pieces team acknowledged the issue and announced a patch release to resolve it.\n\n**Current Status/Outcome:**\n\n* The patch release has been deployed and the issue is confirmed to be resolved by one user (govard108). \n* The issue is likely resolved for all affected users.\n\n**Additional Notes:**\n\n* The specific details of the patch and the cause of the issue were not discussed in the conversation.",
+          "activity_level": 7.32
         },
         {
-          "id": 654,
-          "title": "Pieces OS Update fails",
-          "text": "Pieces OS Update fails\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.2.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nThe notification popped up saying an update was available so I clicked Update and a few seconds later got this message box:\n\n![Image](https://github.com/user-attachments/assets/b14dc8ab-632a-4095-b45b-7bbaba3c70ce)\n\nThis is on a very fresh Windows 11 installation.\n## GitHub Issue Summary: PiecesOS Won't Launch\n\n**Key Points:**\n\n* @ThatRendle reported an issue with PiecesOS not launching on Windows.\n* @nathan-courtney-pieces suggested updating App Installer and checking if the error persists.\n* @bejokun reported the same issue with PiecesOS being detected as a trojan by Kaspersky antivirus.\n\n**Problems Identified:**\n\n* PiecesOS not launching on Windows.\n* PiecesOS misidentified as a trojan by Kaspersky antivirus.\n\n**Solutions Proposed/Implemented:**\n\n* Update Microsoft's App Installer.\n* Configure Kaspersky to allow PiecesOS processes.\n\n**Current Status/Outcome:**\n\n* Issue not resolved for @ThatRendle.\n* Issue resolved for @bejokun by configuring Kaspersky.\n\n**Additional Notes:**\n\n* Other users experienced similar issues with PiecesOS not launching.\n* Support resources provided by @pieces-support-bot.",
-          "activity_level": 4.36
+          "id": 652,
+          "title": "\"Secret Message\" Example doesn't work properly",
+          "text": "\"Secret Message\" Example doesn't work properly\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n11.2.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWhen using LTM-2 to test the secret message example:\nhttps://pieces.app/magic-moments/ltm\n\nI got a strange response from the LLM:\nClaude 3.5:\nFirst Try:\n![Image](https://github.com/user-attachments/assets/1962a3e4-8b02-4d3f-bc8c-4bdd72c80aa6)\n2. try: (waited longer on the website)\n![Image](https://github.com/user-attachments/assets/cd71c5c1-d5d5-4449-acd5-e070fb244fa9)\n\nGemini 2.0 Flash did fail completely:\n![Image](https://github.com/user-attachments/assets/50735f7a-28a1-4563-b490-e10c271eca23)\n## GitHub Issue Conversation Summary\n\n**Key Points:**\n\n* Some users (hra42, joelash, bartonfriedland) reported seeing a \"basic mode due to device constraints\" message in the PiecesOS menu. This is caused by a bug related to vector support.\n* The bug can also prevent users from seeing updates from the Long Term Memory (LTM) engine and accessing the \"Workstream Activity\" view.\n* Rebooting PiecesOS temporarily resolves the issue, but users will need to restart until the bug is fixed in the next version.\n* The issue is only related to vector support, which is not available on certain devices (e.g., M3 Macs).\n* There is an \"Unknown Origin\" element in the Pieces telemetry browser with version 1.0.10. This will be investigated further.\n\n**Problems Identified:**\n\n* Bug in PiecesOS related to vector support causes devices to incorrectly run in \"basic mode\".\n* Users in \"basic mode\" cannot see updates from the LTM engine or access the \"Workstream Activity\" view.\n\n**Solutions Proposed/Implemented:**\n\n* Restarting PiecesOS temporarily resolves the issue.\n* A fix will be implemented in the next version of PiecesOS.\n\n**Current Status/Outcome:**\n\n* The bug is still present in the current version of PiecesOS.\n* Users experiencing the issue should restart PiecesOS until the fix is released.\n* The \"Unknown Origin\" element will be investigated further.",
+          "activity_level": 8.38
         }
       ]
     },
     {
-      "title": "Pieces OS Update and Installation Issues",
-      "description": "Users are experiencing problems with Pieces OS updates and installations, including failures, errors, and conflicts with antivirus software like Kaspersky. Suggested solutions include checking for existing issues, updating App Installer, configuring antivirus exceptions, and contacting Pieces support.",
+      "title": "Pieces OS installation and update issues",
+      "description": "Users are experiencing issues with Pieces OS installation and updates, including antivirus software (Kaspersky) flagging it as a virus and update failures. Suggested solutions include configuring antivirus exceptions, updating the App Installer, and waiting for patch releases.",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 663,
+          "title": "Kaspersky Internet Security flags Pieces OS as a virus",
+          "text": "Kaspersky Internet Security flags Pieces OS as a virus\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nPiecesOS_11.2.2.0_x64\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n![Image](https://github.com/user-attachments/assets/160ed12d-f0a1-46be-bf36-05502353405e)\n## GitHub Issue Conversation Summary\n\n**Key Points Raised:**\n\n* User @uwascan reported an issue with Pieces OS.\n* The issue was automatically triaged and routed to the proper team member.\n\n**Problems Identified:**\n\n* The specific problem reported by @uwascan is not explicitly mentioned.\n\n**Solutions Proposed/Implemented:**\n\n* No solutions are proposed or implemented in this conversation.\n\n**Current Status/Outcome:**\n\n* The user is informed to expect a follow-up within 24 hours.\n* Resources like existing issues, documentation, and YouTube channel are suggested for further assistance.\n\n**Additional Notes:**\n\n* This conversation only shows the initial interaction. Further updates might be found in subsequent comments.",
+          "activity_level": 4.42
+        },
+        {
+          "id": 654,
+          "title": "Pieces OS Update fails",
+          "text": "Pieces OS Update fails\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.2.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nThe notification popped up saying an update was available so I clicked Update and a few seconds later got this message box:\n\n![Image](https://github.com/user-attachments/assets/b14dc8ab-632a-4095-b45b-7bbaba3c70ce)\n\nThis is on a very fresh Windows 11 installation.\n## Summary of GitHub Issue Conversation\n\n**Key points raised:**\n\n* @ThatRendle reported an issue with PiecesOS not launching on Windows.\n* @bejokun reported the same issue and received a Trojan warning from Kaspersky.\n\n**Problems identified:**\n\n* Bug on Windows using App Installer technology.\n* Potential blocking by antivirus software (Kaspersky).\n\n**Solutions proposed/implemented:**\n\n* Updating App Installer through Microsoft Store.\n* Configuring Kaspersky to allow PiecesOS processes.\n\n**Current status/outcome:**\n\n* Unclear if the solutions resolved the issue for both users. \n* Further communication is needed to confirm the outcome. \n\n**Additional details:**\n\n* Related issues on GitHub were shared.\n* Helpful resources like documentation and YouTube channel were provided. \n* The issue was identified as a potential bug and antivirus interference.",
+          "activity_level": 4.19
+        },
+        {
+          "id": 661,
+          "title": "Pieces desktop this message is empty please try again",
+          "text": "Pieces desktop this message is empty please try again\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nPieces for Developers 4.0.2\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWhen copy paste code sencond time in Ask anything give error  this message is empty please try again\n## GitHub Issue Conversation Summary\n\n**Key Points:**\n\n* Multiple users (amarranjan1, veerendranath0312, govard108) reported experiencing an error message \"Pieces desktop this message is empty please try again show error\" when trying to send messages in the desktop app.\n* The issue was identified to be related to a recent update. \n*  users were facing the issue across different platforms: Mac, Windows 10.\n\n**Solutions Proposed/Implemented:**\n\n* The Pieces support bot provided links to relevant resources and suggested checking existing issues and documentation.\n* The Pieces team acknowledged the issue and announced a patch release to resolve it.\n\n**Current Status/Outcome:**\n\n* The patch release has been deployed and the issue is confirmed to be resolved by one user (govard108). \n* The issue is likely resolved for all affected users.\n\n**Additional Notes:**\n\n* The specific details of the patch and the cause of the issue were not discussed in the conversation.",
+          "activity_level": 7.32
+        }
+      ]
+    },
+    {
+      "title": "Pieces OS update and data sync issues",
+      "description": "Users report issues with Pieces OS updates failing on Windows, potentially due to antivirus software or App Installer issues. Additionally, users encounter problems with personal domain backup and restore functionality, specifically when transferring data to a new device. Solutions include updating App Installer, configuring antivirus settings, and clarifying the personal domain registration and restore process.",
       "frequency": 3,
       "related_issues": [
         {
           "id": 658,
           "title": "Personal Domain backup",
-          "text": "Personal Domain backup\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.2.2\n\n### Early Access Program\n\n- [x] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI want to sync this PC to another PC\uff0cbut i cann't backup the lastest data.\n![Image](https://github.com/user-attachments/assets/bfb4fb14-5e7f-45c7-828f-5f77f550453a)\n\nthis is another PC\n\n![Image](https://github.com/user-attachments/assets/3c2d880e-a1b2-40c1-82b1-9935bffbf8fb)\n## Summary of GitHub Issue Conversation\n\n**Issue:**\n\n- User is experiencing two issues:\n    - Unable to register a personal domain.\n    - Unable to back up current computer and restore it to a new one.\n\n**Key Points:**\n\n- User copied `com.pieces.os` and `com.pieces.pfd` to another PC.\n- User is unable to change their personal domain.\n- User's current backup is outdated.\n- User wants to back up their current computer and restore it to a new one.\n\n**Problems Identified:**\n\n- Personal domain is already registered.\n- User's current backup is outdated.\n\n**Solutions Proposed/Implemented:**\n\n- User should attempt to register a new domain.\n- User should click the \"refresh\" button to initiate a restore from the cloud.\n- If issues persist, user should contact support.\n\n**Current Status/Outcome:**\n\n- User is still unable to register a new domain.\n- User is unable to back up their current computer.\n- User is awaiting further assistance from support.\n\n**Additional Notes:**\n\n- The user's initial issue with changing their personal domain was likely caused by the fact that the domain was already registered.\n- The user's inability to back up their current computer is likely due to the outdated backup.\n- The user can contact support for further assistance with registering a new domain and backing up their computer.",
+          "text": "Personal Domain backup\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.2.2\n\n### Early Access Program\n\n- [x] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI want to sync this PC to another PC\uff0cbut i cann't backup the lastest data.\n![Image](https://github.com/user-attachments/assets/bfb4fb14-5e7f-45c7-828f-5f77f550453a)\n\nthis is another PC\n\n![Image](https://github.com/user-attachments/assets/3c2d880e-a1b2-40c1-82b1-9935bffbf8fb)\n## GitHub Issue Summary: Transferring Personal Domain and Restoring Backup\n\n### Key Points:\n\n* User @laborer123 encountering issues with registering a personal domain and restoring a backup on a new PC.\n* User copied `com.pieces.os` and `com.pieces.pfd` to the new PC.\n* User's desired outcome: Back up current computer with existing Personal Domain and restore it to the new PC.\n\n### Problems Identified:\n\n* Unable to change personal domain after copying files to new PC.\n* Existing Personal Domain already registered.\n* Difficulty in restoring backup from a long time ago.\n\n### Solutions Proposed/Implemented:\n\n* Register a new Personal Domain to ensure proper functionality.\n* Utilize the refresh button to initiate the restore process, overwriting local data with the cloud backup.\n* Clarification on using existing Personal Domain for backup and restore.\n\n### Current Status/Outcome:\n\n* User informed about existing Personal Domain registration and encouraged to try registering a new one.\n* Instructed on the restore process using the refresh button.\n* User seeks clarification on directly backing up and creating a new Personal Domain.\n\n### Next Steps:\n\n* User to attempt registering a new Personal Domain and confirm functionality.\n* If issues persist, user to provide further details about the encountered problems.\n* User to clarify the intended action regarding their existing Personal Domain backup and restore.",
           "activity_level": 4.33
         },
         {
           "id": 654,
           "title": "Pieces OS Update fails",
-          "text": "Pieces OS Update fails\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.2.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nThe notification popped up saying an update was available so I clicked Update and a few seconds later got this message box:\n\n![Image](https://github.com/user-attachments/assets/b14dc8ab-632a-4095-b45b-7bbaba3c70ce)\n\nThis is on a very fresh Windows 11 installation.\n## GitHub Issue Summary: PiecesOS Won't Launch\n\n**Key Points:**\n\n* @ThatRendle reported an issue with PiecesOS not launching on Windows.\n* @nathan-courtney-pieces suggested updating App Installer and checking if the error persists.\n* @bejokun reported the same issue with PiecesOS being detected as a trojan by Kaspersky antivirus.\n\n**Problems Identified:**\n\n* PiecesOS not launching on Windows.\n* PiecesOS misidentified as a trojan by Kaspersky antivirus.\n\n**Solutions Proposed/Implemented:**\n\n* Update Microsoft's App Installer.\n* Configure Kaspersky to allow PiecesOS processes.\n\n**Current Status/Outcome:**\n\n* Issue not resolved for @ThatRendle.\n* Issue resolved for @bejokun by configuring Kaspersky.\n\n**Additional Notes:**\n\n* Other users experienced similar issues with PiecesOS not launching.\n* Support resources provided by @pieces-support-bot.",
-          "activity_level": 4.36
+          "text": "Pieces OS Update fails\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.2.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nThe notification popped up saying an update was available so I clicked Update and a few seconds later got this message box:\n\n![Image](https://github.com/user-attachments/assets/b14dc8ab-632a-4095-b45b-7bbaba3c70ce)\n\nThis is on a very fresh Windows 11 installation.\n## Summary of GitHub Issue Conversation\n\n**Key points raised:**\n\n* @ThatRendle reported an issue with PiecesOS not launching on Windows.\n* @bejokun reported the same issue and received a Trojan warning from Kaspersky.\n\n**Problems identified:**\n\n* Bug on Windows using App Installer technology.\n* Potential blocking by antivirus software (Kaspersky).\n\n**Solutions proposed/implemented:**\n\n* Updating App Installer through Microsoft Store.\n* Configuring Kaspersky to allow PiecesOS processes.\n\n**Current status/outcome:**\n\n* Unclear if the solutions resolved the issue for both users. \n* Further communication is needed to confirm the outcome. \n\n**Additional details:**\n\n* Related issues on GitHub were shared.\n* Helpful resources like documentation and YouTube channel were provided. \n* The issue was identified as a potential bug and antivirus interference.",
+          "activity_level": 4.19
         },
         {
-          "id": 663,
-          "title": "Kaspersky Internet Security flags Pieces OS as a virus",
-          "text": "Kaspersky Internet Security flags Pieces OS as a virus\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nPiecesOS_11.2.2.0_x64\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n![Image](https://github.com/user-attachments/assets/160ed12d-f0a1-46be-bf36-05502353405e)\n## Pieces OS Update Issue - Summary\n\n**Key Points Raised:**\n\n* User @uwascan is experiencing issues with Pieces OS updates.\n* The issue has been automatically routed to the Pieces support team.\n\n**Problems Identified:**\n\n* The specific nature of the update issue is unclear from the conversation excerpt.\n\n**Solutions Proposed/Implemented:**\n\n* The support bot has suggested checking existing related issues and documentation resources. \n\n**Current Status/Outcome:**\n\n* The issue is currently being investigated by the Pieces support team. A follow-up response is expected within 24 hours.\n\n**Additional Information:**\n\n* To provide a more specific and comprehensive summary, access to the full conversation thread is required.",
-          "activity_level": 4.42
+          "id": 661,
+          "title": "Pieces desktop this message is empty please try again",
+          "text": "Pieces desktop this message is empty please try again\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nPieces for Developers 4.0.2\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWhen copy paste code sencond time in Ask anything give error  this message is empty please try again\n## GitHub Issue Conversation Summary\n\n**Key Points:**\n\n* Multiple users (amarranjan1, veerendranath0312, govard108) reported experiencing an error message \"Pieces desktop this message is empty please try again show error\" when trying to send messages in the desktop app.\n* The issue was identified to be related to a recent update. \n*  users were facing the issue across different platforms: Mac, Windows 10.\n\n**Solutions Proposed/Implemented:**\n\n* The Pieces support bot provided links to relevant resources and suggested checking existing issues and documentation.\n* The Pieces team acknowledged the issue and announced a patch release to resolve it.\n\n**Current Status/Outcome:**\n\n* The patch release has been deployed and the issue is confirmed to be resolved by one user (govard108). \n* The issue is likely resolved for all affected users.\n\n**Additional Notes:**\n\n* The specific details of the patch and the cause of the issue were not discussed in the conversation.",
+          "activity_level": 7.32
         }
       ]
     }
   ],
   "recommendations": [
-    "\"Investigate and address the root cause of Pieces OS errors and update failures, particularly the 'secret message' malfunctions, 'message is empty' prompts, and update failures across macOS and Windows platforms.\"",
-    "\"Provide clear guidance and documentation on 'basic mode' in Pieces OS, its limitations, and how users can resolve issues related to it.\"",
-    "\"Collaborate with Kaspersky and other antivirus vendors to address compatibility issues and prevent false positives when installing or updating Pieces OS.\"",
-    "\"Improve communication with users regarding ongoing issues, planned fixes, and workarounds for problems like Pieces OS update failures and antivirus conflicts.\"",
-    "\"Enhance error messages and logging in Pieces OS to provide more specific information, making it easier for both users and support teams to diagnose and troubleshoot problems.\""
+    "**Prioritize bug fixes related to PiecesOS errors:** The most frequent issue category is 'PiecesOS Errors and Bugs', impacting core functionalities. Focus on resolving these errors to improve user experience.",
+    "**Investigate and address Pieces OS installation and update issues:** Issues with antivirus software and update failures are causing friction for users. Collaborate with security software providers and ensure a smooth update process.",
+    "**Improve communication and documentation for personal domain backup and restore:** Users are facing challenges with data sync and personal domain management. Provide clearer instructions and troubleshooting guides.",
+    "**Consider creating a dedicated troubleshooting guide for common issues:** This will empower users to self-serve and potentially reduce support ticket volume.",
+    "**Monitor the effectiveness of patch releases:** Track whether implemented solutions effectively address reported issues and communicate updates to users proactively."
   ],
   "message": "Daily support report generated successfully."
 }
