@@ -1,0 +1,227 @@
+{
+  "success": true,
+  "date_range": {
+    "start": "2025-03-14T00:00:00+00:00",
+    "end": "2025-03-14T21:06:16.259976+00:00"
+  },
+  "summary": {
+    "total_tickets": 7,
+    "resolved_tickets": 2,
+    "open_tickets": 5
+  },
+  "ticket_breakdown": [
+    {
+      "category": "bug",
+      "received": 6,
+      "resolved": 2,
+      "pending": 4
+    },
+    {
+      "category": "os:macos",
+      "received": 2,
+      "resolved": 1,
+      "pending": 1
+    },
+    {
+      "category": "app:web extension",
+      "received": 3,
+      "resolved": 2,
+      "pending": 1
+    },
+    {
+      "category": "status:triaged",
+      "received": 2,
+      "resolved": 2,
+      "pending": 0
+    },
+    {
+      "category": "status:new",
+      "received": 3,
+      "resolved": 0,
+      "pending": 3
+    },
+    {
+      "category": "app:desktop application",
+      "received": 5,
+      "resolved": 0,
+      "pending": 5
+    },
+    {
+      "category": "os:windows",
+      "received": 3,
+      "resolved": 0,
+      "pending": 3
+    },
+    {
+      "category": "app:pieces os",
+      "received": 3,
+      "resolved": 0,
+      "pending": 3
+    },
+    {
+      "category": "app:vs code",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:waiting_on_user_responses",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "blocked",
+      "received": 1,
+      "resolved": 1,
+      "pending": 0
+    }
+  ],
+  "most_active_tickets": [
+    {
+      "number": 659,
+      "title": "Chrome Extension messing out stackoverflow",
+      "activity_level": 6.33
+    },
+    {
+      "number": 666,
+      "title": "Response \"I'll get back to you with my findings as soon as possible\"",
+      "activity_level": 4.5
+    },
+    {
+      "number": 668,
+      "title": "Pieces stuck on 70% CPU on one processor interfering with other keyboard chain handlers. System became unresponsive",
+      "activity_level": 4.42
+    },
+    {
+      "number": 667,
+      "title": "Opening Issue",
+      "activity_level": 4.42
+    },
+    {
+      "number": 315,
+      "title": "Pieces desktop application is very slow/laggy, not generating any response in copilot chat.",
+      "activity_level": 4.16
+    },
+    {
+      "number": 562,
+      "title": "Chrome Extension Fills Developer Console with Errors",
+      "activity_level": 3.16
+    },
+    {
+      "number": 460,
+      "title": "pieces desktop and its extension not working",
+      "activity_level": 1.53
+    }
+  ],
+  "common_issues": [
+    {
+      "title": "Pieces Chrome Extension Causing Console Errors",
+      "description": "The Pieces Chrome extension is scanning local ports to connect to the Pieces OS, causing console errors and impacting developer experience. This issue was addressed in extension version 4.0.4. Users can update the extension or temporarily hide network messages in the console to mitigate the issue.",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 659,
+          "title": "Chrome Extension messing out stackoverflow",
+          "text": "Chrome Extension messing out stackoverflow\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Web Extension\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n11.2.2\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nIt fills this text endlessly...\n\n![Image](https://github.com/user-attachments/assets/6b5edb10-b7cf-4fa6-a523-aa73af94cbee)\n## Summary of GitHub Issue Conversation\n\n**Key Points:**\n\n* User @luceat-lux-vestra reported an issue on 2025-03-09 where embed buttons weren't working.\n* Pieces support bot acknowledged the issue and assigned it to the team.\n* The issue was caused by a previously fixed bug related to blacklisting certain pages.\n* Enabling embed buttons on the affected page caused the problem.\n\n**Solutions:**\n\n* Disable embed buttons for the specific page via the side panel settings.\n\n**Implementation:**\n\nThe user confirmed disabling embed buttons resolved the issue.\n\n**Outcome:**\n\nThe user is happy with the workaround. The team documented the fix for future reference.\n\n**Status:**\n\nThe issue is closed as resolved.",
+          "activity_level": 6.33
+        },
+        {
+          "id": 562,
+          "title": "Chrome Extension Fills Developer Console with Errors",
+          "text": "Chrome Extension Fills Developer Console with Errors\n### Software\n\nWeb Extension\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n11.0.3\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nIt appears the browser extension is sniffing a bunch of local ports - starting with 1000.  This is a bit concerning, and a little invasive, but I do have the Pieces OS running, and it does finally get a response at a high port.\n\nThis fills my devtools console tab, degrading my development experience by clouding errors I'm looking for in my own app.\n\nFor a product designed to enhance my development experience I'm marking this as a bug.\n\n<img width=\"753\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/6b95b2c4-881c-4682-a544-3ae138e644ae\" />\n\n## Summary of Pieces OS API issue on GitHub\n\n**Key points raised:**\n\n- Following Pieces OS updates, API port is no longer fixed, leading to automatic port checks.\n- Checks only target Pieces OS endpoints and do not scan other ports.\n- User concerned about console flooding due to failing port checks, impacting development workflow.\n\n**Problems identified:**\n\n- Flooding of dev console with error logs from failed port checks.\n- Difficulty distinguishing real errors from false positives.\n\n**Solutions proposed/implemented:**\n\n- Hiding/better handling errors from inactive Pieces OS ports to reduce dev console clutter. (**Pending**)\n- Extension patch update to address the issue (**released in March 2025 as version 4.0.4**).\n\n**Current status/outcome:**\n\n- The problem appears to have been resolved with the latest web extension update (version 4.0.4), which should prevent further flooding of the dev console with error messages.\n\n**Additional notes:**\n\n- Potential Chrome bug might be contributing to the issue, but there's no clear fix at present.\n- Users can temporarily hide network messages in the dev console to reduce clutter.",
+          "activity_level": 3.16
+        },
+        {
+          "id": 460,
+          "title": "pieces desktop and its extension not working",
+          "text": "pieces desktop and its extension not working\n### Software\n\nDesktop Application, Pieces OS, Web Extension, VS Code\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nlatest\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nthe pieces os is working but the desktop app is saying it is not working and launch pieces os but when I click pieces od it take forever and still does not start, please fix this issue\n## GitHub Issue Summary\n\n**Issue:** Desktop application reports as \"not working\"\n\n**Key Points:**\n\n* User reports issue with the desktop application.\n* User did not provide a screenshot or video for further diagnosis.\n* Developer offered a real-time call for diagnosis. (Link provided)\n* Follow-up from developer to confirm if issue persists in latest builds.\n\n**Problems Identified:**\n\n* Application malfunctioning, potentially causing user frustration.\n* Cause of the malfunction unknown due to lack of details from user.\n\n**Solutions Proposed/Implemented:**\n\n* Real-time call offered to diagnose the issue.\n* User advised to check the latest application and plugin builds.\n\n**Current Status/Outcome:**\n\n* Unclear if the issue has been resolved. Follow-up required from user.\n\n**Additional Notes:**\n\n* The issue seems to be specific to the user reporting it. No other users have reported the same issue.",
+          "activity_level": 1.53
+        }
+      ]
+    },
+    {
+      "title": "Pieces OS and Desktop App Integration Issues",
+      "description": "Users report the Pieces desktop application fails to launch or interact with Pieces OS. This might involve the app reporting OS as not working, failing to connect, or causing system slowdowns. Proposed solutions include checking for updates, real-time diagnosis with support, and reinstalling the app.",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 667,
+          "title": "Opening Issue",
+          "text": "Opening Issue\n### Checked for Existing Issues?\n\n- [ ] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nlatest\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\npieses for developers can not find the pieses OS. so it not opening.\n## GitHub Issue Summary\n\n**Issue:** User fardin631 created an issue but the specific problem is unclear.\n\n**Key points:**\n\n* User thanked Pieces-Support-Bot for responding.\n* Bot routed the issue to the appropriate team.\n* Bot suggested related issues and helpful resources.\n\n**Problems:**\n\n* The specific issue faced by fardin631 is not described.\n* It's unclear if fardin631 received further assistance.\n\n**Solutions:**\n\n* Bot offered related issues and helpful resources for potential self-help.\n\n**Current status:**\n\n* No updates from fardin631 or further responses from Pieces-Support-Bot. \n* Outcome unknown.",
+          "activity_level": 4.42
+        },
+        {
+          "id": 460,
+          "title": "pieces desktop and its extension not working",
+          "text": "pieces desktop and its extension not working\n### Software\n\nDesktop Application, Pieces OS, Web Extension, VS Code\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nlatest\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nthe pieces os is working but the desktop app is saying it is not working and launch pieces os but when I click pieces od it take forever and still does not start, please fix this issue\n## GitHub Issue Summary\n\n**Issue:** Desktop application reports as \"not working\"\n\n**Key Points:**\n\n* User reports issue with the desktop application.\n* User did not provide a screenshot or video for further diagnosis.\n* Developer offered a real-time call for diagnosis. (Link provided)\n* Follow-up from developer to confirm if issue persists in latest builds.\n\n**Problems Identified:**\n\n* Application malfunctioning, potentially causing user frustration.\n* Cause of the malfunction unknown due to lack of details from user.\n\n**Solutions Proposed/Implemented:**\n\n* Real-time call offered to diagnose the issue.\n* User advised to check the latest application and plugin builds.\n\n**Current Status/Outcome:**\n\n* Unclear if the issue has been resolved. Follow-up required from user.\n\n**Additional Notes:**\n\n* The issue seems to be specific to the user reporting it. No other users have reported the same issue.",
+          "activity_level": 1.53
+        },
+        {
+          "id": 668,
+          "title": "Pieces stuck on 70% CPU on one processor interfering with other keyboard chain handlers. System became unresponsive",
+          "text": "Pieces stuck on 70% CPU on one processor interfering with other keyboard chain handlers. System became unresponsive\n### Checked for Existing Issues?\n\n- [ ] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nCurrent\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nA specific keyboard chain handler that was affected and incapacitated was zvirtualDesktop which has been in use for several years and behaves well with other handlers.\n\nEventually I was able to kill the Pieces OS instance but as I didn''t know what, if any, other effects there had been I restarted the machine. In logging in the MS new machine set of dialogs started, it evidently believed that this was the first run. I restarted again and so far the machine is working normally.\n\nI uninstalled the Pieces OS and Pieces Desktop before the initial reboot. It's possible there was a dirty Registry on the first restart as it was a warm restart.\n\nI do not believe that this product is suitable for public use without a considerable warning that there may be trouble ahead. As it is I don't think it's a product ready for market given the other points I've observed, (the inability to install it to other than the boot drive, the lack of information or control of where data is stored and so on.\n## GitHub Issue Conversation Summary\n\n**Key Points:**\n\n* User (@bpluly) created an issue regarding problems with PiecesOS.\n* The issue was automatically routed to the Pieces support team.\n\n**Problems Identified:**\n\n* Details of the specific problem are not provided in the excerpt.\n\n**Solutions Proposed/Implemented:**\n\n* No solutions are proposed or implemented in the provided excerpt.\n\n**Current Status/Outcome:**\n\n* User is advised to wait for a follow-up from the Pieces team within 24 hours.\n* User is directed to similar issues and helpful resources.\n\n**Additional Notes:**\n\n* The conversation excerpt only shows the initial message from the Pieces support bot.\n* Further information is needed to understand the specific problem and proposed solutions.",
+          "activity_level": 4.42
+        }
+      ]
+    },
+    {
+      "title": "Pieces Copilot Unresponsive or Slow",
+      "description": "Users report Pieces Copilot becoming unresponsive or slow, often after multiple requests or extended use. This might involve the Copilot taking a long time to respond or providing vague responses instead of actionable code suggestions. Proposed solutions include restarting the application, updating to the latest version, or contacting support for further assistance.",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 666,
+          "title": "Response \"I'll get back to you with my findings as soon as possible\"",
+          "text": "Response \"I'll get back to you with my findings as soon as possible\"\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n11.2.2\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n**The Bug**\nThe chat assistant will respond claiming that it's working on a solution and will get back to you at a later date. \n\n**Expected Behaviour**\nGet an actionable response with some suggested action/code.\n\n**Details**\nMost recent example of this kind of response (\"_\" is not part of the response just a redaction):\n\n> \"I'll carefully examine the data flow related to _, _, _, _, and _  to see if any inconsistencies could lead to bugs. Please give me a few minutes to review the code thoroughly with this specific focus in mind. I'll get back to you with my findings as soon as possible.\"\n\nThis has happened in three different conversations. I first noticed the behaviour this month, so not before updates preceding March. I promise I'm not trying to be lazy on this one, it's difficult to offer reproduction steps.\n\nI use Claude 3.5 more than any option regularly.\n\nThe last conversation where this happened:\n\n- I loaded 15 files into the context menu\n- I sent 22 requests (and received 22 responses where it happened on the 22nd response)\n\nI'll update this issue if there's anything I can do to make the reproduction more narrow.\n## GitHub Issue Summary: \"Secret Message\" Example not Functioning\n\n**Key Points:**\n\n* \"Secret Message\" example in Pieces app is not working correctly.\n* User experienced issue after sending 11 requests and receiving 11 responses.\n* No files were loaded into the context.\n* User was unable to reproduce the issue on their end.\n\n**Problems Identified:**\n\n* \"Secret Message\" example functionality is broken.\n* Potential issue with context loading after multiple requests/responses.\n\n**Solutions Proposed/Implemented:**\n\n* No specific solutions proposed in the conversation.\n\n**Current Status/Outcome:**\n\n* Issue acknowledged and routed to the Pieces team.\n* User directed to relevant resources for potential solutions and troubleshooting.\n\n**Additional Notes:**\n\n* User provided link to related issue (#652).\n* Timeframe for resolution is unclear.",
+          "activity_level": 4.5
+        },
+        {
+          "id": 315,
+          "title": "Pieces desktop application is very slow/laggy, not generating any response in copilot chat.",
+          "text": "Pieces desktop application is very slow/laggy, not generating any response in copilot chat.\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n10.0.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nPieces desktop application is working very much slow after latest update, takes very much time to give any response. Even after doing a hard reset active runtime, it just do not work. \n## Summary of GitHub Issue Conversation:\n\n**Key point:** Copilot responsiveness was significantly slower than expected.\n\n**Problem:** A bug in the copilot's \"Hard-Reset Active Runtime\" function prevented proper re-initialization of a websocket. This caused the copilot to hang indefinitely while trying to load.\n\n**Solution:**\n\n* **Fix implemented:** The bug was fixed and released in a patch update (Pieces OS 10.0.2 & Pieces Desktop 3.0.2).\n* **Further performance improvements:** A subsequent update to the Desktop app (version 3.1.0) included further performance enhancements.\n\n**Current status/outcome:**\n\n* **Mixed feedback:** While some users reported improved performance after the updates, others (e.g., JerryBenChizzy, navdeepdev459) continued to experience lag. This suggests the issue might not be fully resolved for everyone.\n* **Call for troubleshooting:** Users experiencing lag were encouraged to schedule a chat with the development team for further investigation.\n\n**Additional notes:**\n\n* The issue persisted even after hard resets were performed by users.\n* The problem appeared to affect various operating systems, including Windows 11.",
+          "activity_level": 4.16
+        },
+        {
+          "id": 460,
+          "title": "pieces desktop and its extension not working",
+          "text": "pieces desktop and its extension not working\n### Software\n\nDesktop Application, Pieces OS, Web Extension, VS Code\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nlatest\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nthe pieces os is working but the desktop app is saying it is not working and launch pieces os but when I click pieces od it take forever and still does not start, please fix this issue\n## GitHub Issue Summary\n\n**Issue:** Desktop application reports as \"not working\"\n\n**Key Points:**\n\n* User reports issue with the desktop application.\n* User did not provide a screenshot or video for further diagnosis.\n* Developer offered a real-time call for diagnosis. (Link provided)\n* Follow-up from developer to confirm if issue persists in latest builds.\n\n**Problems Identified:**\n\n* Application malfunctioning, potentially causing user frustration.\n* Cause of the malfunction unknown due to lack of details from user.\n\n**Solutions Proposed/Implemented:**\n\n* Real-time call offered to diagnose the issue.\n* User advised to check the latest application and plugin builds.\n\n**Current Status/Outcome:**\n\n* Unclear if the issue has been resolved. Follow-up required from user.\n\n**Additional Notes:**\n\n* The issue seems to be specific to the user reporting it. No other users have reported the same issue.",
+          "activity_level": 1.53
+        }
+      ]
+    },
+    {
+      "title": "Pieces OS and Desktop App Performance Issues",
+      "description": "Users report slow performance, unresponsiveness, and application crashes with Pieces OS and Desktop app. Some experience conflicts with keyboard handlers. Rebooting, reinstalling, and updating to the latest versions are suggested solutions.  Further investigation and troubleshooting may be needed for persistent issues.",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 668,
+          "title": "Pieces stuck on 70% CPU on one processor interfering with other keyboard chain handlers. System became unresponsive",
+          "text": "Pieces stuck on 70% CPU on one processor interfering with other keyboard chain handlers. System became unresponsive\n### Checked for Existing Issues?\n\n- [ ] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nCurrent\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nA specific keyboard chain handler that was affected and incapacitated was zvirtualDesktop which has been in use for several years and behaves well with other handlers.\n\nEventually I was able to kill the Pieces OS instance but as I didn''t know what, if any, other effects there had been I restarted the machine. In logging in the MS new machine set of dialogs started, it evidently believed that this was the first run. I restarted again and so far the machine is working normally.\n\nI uninstalled the Pieces OS and Pieces Desktop before the initial reboot. It's possible there was a dirty Registry on the first restart as it was a warm restart.\n\nI do not believe that this product is suitable for public use without a considerable warning that there may be trouble ahead. As it is I don't think it's a product ready for market given the other points I've observed, (the inability to install it to other than the boot drive, the lack of information or control of where data is stored and so on.\n## GitHub Issue Conversation Summary\n\n**Key Points:**\n\n* User (@bpluly) created an issue regarding problems with PiecesOS.\n* The issue was automatically routed to the Pieces support team.\n\n**Problems Identified:**\n\n* Details of the specific problem are not provided in the excerpt.\n\n**Solutions Proposed/Implemented:**\n\n* No solutions are proposed or implemented in the provided excerpt.\n\n**Current Status/Outcome:**\n\n* User is advised to wait for a follow-up from the Pieces team within 24 hours.\n* User is directed to similar issues and helpful resources.\n\n**Additional Notes:**\n\n* The conversation excerpt only shows the initial message from the Pieces support bot.\n* Further information is needed to understand the specific problem and proposed solutions.",
+          "activity_level": 4.42
+        },
+        {
+          "id": 460,
+          "title": "pieces desktop and its extension not working",
+          "text": "pieces desktop and its extension not working\n### Software\n\nDesktop Application, Pieces OS, Web Extension, VS Code\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nlatest\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nthe pieces os is working but the desktop app is saying it is not working and launch pieces os but when I click pieces od it take forever and still does not start, please fix this issue\n## GitHub Issue Summary\n\n**Issue:** Desktop application reports as \"not working\"\n\n**Key Points:**\n\n* User reports issue with the desktop application.\n* User did not provide a screenshot or video for further diagnosis.\n* Developer offered a real-time call for diagnosis. (Link provided)\n* Follow-up from developer to confirm if issue persists in latest builds.\n\n**Problems Identified:**\n\n* Application malfunctioning, potentially causing user frustration.\n* Cause of the malfunction unknown due to lack of details from user.\n\n**Solutions Proposed/Implemented:**\n\n* Real-time call offered to diagnose the issue.\n* User advised to check the latest application and plugin builds.\n\n**Current Status/Outcome:**\n\n* Unclear if the issue has been resolved. Follow-up required from user.\n\n**Additional Notes:**\n\n* The issue seems to be specific to the user reporting it. No other users have reported the same issue.",
+          "activity_level": 1.53
+        },
+        {
+          "id": 315,
+          "title": "Pieces desktop application is very slow/laggy, not generating any response in copilot chat.",
+          "text": "Pieces desktop application is very slow/laggy, not generating any response in copilot chat.\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n10.0.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nPieces desktop application is working very much slow after latest update, takes very much time to give any response. Even after doing a hard reset active runtime, it just do not work. \n## Summary of GitHub Issue Conversation:\n\n**Key point:** Copilot responsiveness was significantly slower than expected.\n\n**Problem:** A bug in the copilot's \"Hard-Reset Active Runtime\" function prevented proper re-initialization of a websocket. This caused the copilot to hang indefinitely while trying to load.\n\n**Solution:**\n\n* **Fix implemented:** The bug was fixed and released in a patch update (Pieces OS 10.0.2 & Pieces Desktop 3.0.2).\n* **Further performance improvements:** A subsequent update to the Desktop app (version 3.1.0) included further performance enhancements.\n\n**Current status/outcome:**\n\n* **Mixed feedback:** While some users reported improved performance after the updates, others (e.g., JerryBenChizzy, navdeepdev459) continued to experience lag. This suggests the issue might not be fully resolved for everyone.\n* **Call for troubleshooting:** Users experiencing lag were encouraged to schedule a chat with the development team for further investigation.\n\n**Additional notes:**\n\n* The issue persisted even after hard resets were performed by users.\n* The problem appeared to affect various operating systems, including Windows 11.",
+          "activity_level": 4.16
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    "**Prioritize resolving Chrome Extension errors:** The high frequency of issues related to console errors and performance suggests this is a significant pain point for users. Focus on addressing the root cause and improving communication about updates.",
+    "**Investigate Pieces OS and Desktop App Integration:** Issues with launching, connecting, and performance impact core functionality. Prioritize diagnosing and resolving these issues to ensure a seamless user experience.",
+    "**Improve Copilot responsiveness and clarity:** Address reports of unresponsiveness and vague responses. Optimize performance and enhance the Copilot's ability to provide actionable code suggestions.",
+    "**Proactively monitor performance and stability:** Implement monitoring systems to detect and address performance issues, crashes, and conflicts with other applications. ",
+    "**Enhance communication about known issues and workarounds:** Provide clear and concise information about known issues, potential workarounds, and expected resolution timelines. "
+  ],
+  "message": "Daily support report generated successfully."
+}
