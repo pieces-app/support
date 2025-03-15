@@ -1,0 +1,67 @@
+{
+  "success": true,
+  "date_range": {
+    "start": "2025-03-15T00:00:00+00:00",
+    "end": "2025-03-15T13:08:44.409030+00:00"
+  },
+  "summary": {
+    "total_tickets": 1,
+    "resolved_tickets": 0,
+    "open_tickets": 1
+  },
+  "ticket_breakdown": [
+    {
+      "category": "bug",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "os:windows",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:pieces os",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:triaged",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    }
+  ],
+  "most_active_tickets": [
+    {
+      "number": 654,
+      "title": "Pieces OS Update fails",
+      "activity_level": 4.86
+    }
+  ],
+  "common_issues": [
+    {
+      "title": "Pieces OS Update Fails on Windows",
+      "description": "Users are experiencing issues with Pieces OS update failing on Windows. The issue seems to stem from either a bug in the Windows App Installer or antivirus software (specifically Kaspersky) blocking the update. Updating the App Installer through the Microsoft Store and configuring Kaspersky to allow Pieces OS are potential solutions.",
+      "frequency": 1,
+      "related_issues": [
+        {
+          "id": 654,
+          "title": "Pieces OS Update fails",
+          "text": "Pieces OS Update fails\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.2.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nThe notification popped up saying an update was available so I clicked Update and a few seconds later got this message box:\n\n![Image](https://github.com/user-attachments/assets/b14dc8ab-632a-4095-b45b-7bbaba3c70ce)\n\nThis is on a very fresh Windows 11 installation.\n## Summary of GitHub Issue Conversation\n\n**Key Points Raised:**\n\n* @ThatRendle reported an issue with PiecesOS failing to launch on Windows.\n* @bejokun reported the same issue and an additional antivirus detection of PiecesOS as a Trojan.\n\n**Problems Identified:**\n\n* **App Installer bug:** PiecesOS might not launch due to a bug in Windows App Installer.\n* **Kaspersky blocking PiecesOS:** Kaspersky detects PiecesOS as a Trojan and blocks its execution.\n\n**Solutions Proposed/Implemented:**\n\n* Update App Installer through the Microsoft Store to potentially fix launch issues.\n* Configure Kaspersky antivirus to allow PiecesOS to run.\n\n**Current Status/Outcome:**\n\n* It's unclear if updating App Installer resolved @ThatRendle's issue.\n* @bejokun needs to configure Kaspersky to use PiecesOS.\n* No further updates from @ThatRendle or @bejokun are available in the conversation.\n\n**Additional Notes:**\n\n* The conversation highlights potential compatibility issues with Windows App Installer and antivirus software.\n* PiecesOS developers should investigate the Trojan detection issue and possibly contact Kaspersky for clarification.\n* More information is needed to determine the final resolution for both users.",
+          "activity_level": 4.86
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    "**Investigate Windows App Installer Compatibility:** Investigate potential bugs in the Windows App Installer that might be causing Pieces OS update failures. Consider reaching out to Microsoft for support or guidance.",
+    "**Address Kaspersky False Positive:** Contact Kaspersky and work towards resolving the false positive detection of Pieces OS as a Trojan. Provide necessary information and documentation to clear the software's reputation.",
+    "**Improve Update Process Communication:** Provide clearer communication to users about potential conflicts with antivirus software and the Pieces OS update process. Consider adding in-app guidance or FAQs addressing common issues.",
+    "**Monitor Update Success Rate:** Implement tracking and monitoring of the Pieces OS update success rate on different operating systems and antivirus configurations. This data can help identify and address future issues proactively."
+  ],
+  "message": "Daily support report generated successfully."
+}

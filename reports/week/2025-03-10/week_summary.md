@@ -1,5 +1,5 @@
 # Support Ticket Report
-- Generated: 2025-03-15 05:08:15
+- Generated: 2025-03-15 13:10:44
 - Period: 2025-03-10 to 2025-03-15
 
 ## Summary
@@ -10,65 +10,60 @@
 ## 5 Most Active Tickets
 | Issue # | Title | Activity Level |
 |---------|-------|----------------|
-| [#652](https://github.com/pieces-app/support/issues/652) | "Secret Message" Example doesn't work properly | 8.24 |
-| [#661](https://github.com/pieces-app/support/issues/661) | Pieces desktop this message is empty please try again | 6.58 |
-| [#659](https://github.com/pieces-app/support/issues/659) | Chrome Extension messing out stackoverflow | 6.33 |
+| [#652](https://github.com/pieces-app/support/issues/652) | "Secret Message" Example doesn't work properly | 7.70 |
+| [#659](https://github.com/pieces-app/support/issues/659) | Chrome Extension messing out stackoverflow | 5.99 |
+| [#661](https://github.com/pieces-app/support/issues/661) | Pieces desktop this message is empty please try again | 5.34 |
+| [#654](https://github.com/pieces-app/support/issues/654) | Pieces OS Update fails | 4.86 |
 | [#666](https://github.com/pieces-app/support/issues/666) | Response "I'll get back to you with my findings as soon as possible" | 4.50 |
-| [#668](https://github.com/pieces-app/support/issues/668) | Pieces stuck on 70% CPU on one processor interfering with other keyboard chain handlers. System became unresponsive | 4.42 |
 
 ## Common Issues
-### 1. Vague Responses from Chat Assistant
-Users report the chat assistant provides unhelpful responses like "I'll get back to you."  This occurs after approximately 20 interactions and across different prompts.  The issue lacks clear reproduction steps.  No solutions have been identified.
+### 1. PiecesOS Performance and Functionality Issues
+Users report slow performance, unexpected behavior, and bugs in PiecesOS, particularly with LTM and specific hardware configurations. Proposed solutions include rebooting, waiting for updates, and providing detailed bug reports for investigation by the Pieces team.
 
 **Related Issues:**
-- [#666](https://github.com/pieces-app/support/issues/666): Response "I'll get back to you with my findings as soon as possible"
 - [#652](https://github.com/pieces-app/support/issues/652): "Secret Message" Example doesn't work properly
-- [#661](https://github.com/pieces-app/support/issues/661): Pieces desktop this message is empty please try again
+- [#666](https://github.com/pieces-app/support/issues/666): Response "I'll get back to you with my findings as soon as possible"
+- [#668](https://github.com/pieces-app/support/issues/668): Pieces stuck on 70% CPU on one processor interfering with other keyboard chain handlers. System became unresponsive
 
-### 2. Pieces extension conflicts and UI issues
-Users report conflicts between Pieces extension for Visual Studio and SQL Server Object Explorer, causing difficulties editing database fields.  Suggested workarounds include disabling the extension or specific features. Other UI issues involve cursor malfunction after closing tool windows and embed button conflicts on websites, addressed by temporary disabling or blacklisting.
+### 2. Pieces OS & Extension Bugs
+Users reported issues with the Pieces Chrome extension and Pieces OS, including console errors due to port sniffing, issues with saving highlights on specific websites, and the chat assistant not providing helpful responses. Solutions varied from workarounds to extension updates and bug fixes in newer versions.
 
 **Related Issues:**
-- [#655](https://github.com/pieces-app/support/issues/655): Pieces Visual Studio 2022 extension conflict with SQL Server Object Explorer
-- [#460](https://github.com/pieces-app/support/issues/460): pieces desktop and its extension not working
 - [#659](https://github.com/pieces-app/support/issues/659): Chrome Extension messing out stackoverflow
+- [#562](https://github.com/pieces-app/support/issues/562): Chrome Extension Fills Developer Console with Errors
+- [#666](https://github.com/pieces-app/support/issues/666): Response "I'll get back to you with my findings as soon as possible"
 
 ### 3. Pieces OS Installation and Update Issues
-Users report Pieces OS installation ignoring default system app locations and update failures. Suggested solutions include checking for App Installer updates on Windows and configuring antivirus software to allow Pieces OS processes.
-
-**Related Issues:**
-- [#665](https://github.com/pieces-app/support/issues/665): Installation doesn't follow the System Apps default location
-- [#654](https://github.com/pieces-app/support/issues/654): Pieces OS Update fails
-- [#667](https://github.com/pieces-app/support/issues/667): Opening Issue
-
-### 4. Pieces OS Update and Installation Issues
-Users are experiencing issues with Pieces OS updates and installations. Problems include update failures, inability to choose installation location, and conflicts with antivirus software. Suggested solutions involve updating the App Installer, configuring antivirus settings, and checking related issues for potential workarounds.
+Users report problems with Pieces OS installation, updates, and personal domain backup. Issues include failure to install in custom locations, update failures with error messages, and difficulties restoring from outdated backups. Solutions involve checking antivirus settings, updating the app installer, and contacting support for personalized assistance.
 
 **Related Issues:**
 - [#658](https://github.com/pieces-app/support/issues/658): Personal Domain backup
 - [#665](https://github.com/pieces-app/support/issues/665): Installation doesn't follow the System Apps default location
 - [#654](https://github.com/pieces-app/support/issues/654): Pieces OS Update fails
 
-### 5. Pieces OS Extension Conflicts and Errors
-Users reported Pieces OS extension causing conflicts on specific websites or flooding the developer console with network errors. Solutions included blacklisting problematic sites, suppressing errors in the extension, and updating to the latest version. The Pieces team actively worked with users to diagnose and resolve these issues.
+### 4. Pieces OS Installation and Update Issues on Windows
+Users report problems with Pieces OS installation and updates not respecting default system settings for app and data locations. This leads to conflicts, failed updates, and potential security alerts from antivirus software. Solutions include allowing Pieces OS in antivirus settings and ensuring system app installers are up-to-date.
 
 **Related Issues:**
-- [#659](https://github.com/pieces-app/support/issues/659): Chrome Extension messing out stackoverflow
-- [#562](https://github.com/pieces-app/support/issues/562): Chrome Extension Fills Developer Console with Errors
+- [#665](https://github.com/pieces-app/support/issues/665): Installation doesn't follow the System Apps default location
+- [#654](https://github.com/pieces-app/support/issues/654): Pieces OS Update fails
+- [#667](https://github.com/pieces-app/support/issues/667): Opening Issue
+
+### 5. Pieces extension conflicts with Visual Studio
+Users reported conflicts between the Pieces extension and Visual Studio, particularly with SQL Server Object Explorer and script editing. Issues include uneditable database fields and disappearing cursors. Proposed solutions involve investigating conflicts and potential UI interference. Some issues were resolved with patches, while others remain under investigation.
+
+**Related Issues:**
+- [#655](https://github.com/pieces-app/support/issues/655): Pieces Visual Studio 2022 extension conflict with SQL Server Object Explorer
 - [#460](https://github.com/pieces-app/support/issues/460): pieces desktop and its extension not working
+- [#661](https://github.com/pieces-app/support/issues/661): Pieces desktop this message is empty please try again
 
 
 ## Recommendations
-- **Address Common Issues:** Prioritize resolving the top three common issues: vague chat assistant responses, extension conflicts and UI issues, and Pieces OS installation/update problems.
-- **Improve Chat Assistant:** Investigate and address the root cause of vague responses from the chat assistant, particularly after multiple interactions. Provide clearer guidance and solutions instead of generic replies.
-- **Enhance Extension Compatibility:** Focus on resolving conflicts between the Pieces extension and other software, such as Visual Studio and SQL Server Object Explorer. Ensure seamless integration and functionality.
-- **Streamline Installation and Updates:** Simplify the Pieces OS installation process and make it easier for users to update the software. Address issues related to default installation locations and antivirus conflicts.
-- **Provide Clearer Documentation:** Create comprehensive documentation and FAQs that address common issues, including installation problems, extension conflicts, and chat assistant troubleshooting.
-- **Gather Detailed User Feedback:** Encourage users to provide specific details and reproduction steps when reporting issues. This will help in faster diagnosis and resolution.
-- **Proactive Communication:** Keep users informed about the status of reported issues, planned updates, and bug fixes. Regular communication can improve user satisfaction and manage expectations.
-- **Prioritize Active Tickets:** Focus on resolving the most active support tickets with high activity levels, as they indicate issues affecting multiple users or requiring urgent attention.
-- **Monitor Antivirus Compatibility:** Stay updated on antivirus software updates and proactively address any compatibility issues with Pieces OS. Collaborate with antivirus vendors to prevent false positives.
-- **Continuous Improvement:** Regularly analyze support data, identify trends, and implement improvements to support processes, documentation, and software functionality based on user feedback and common issues.
+- **Prioritize PiecesOS Performance:** Allocate additional resources to investigate and address the performance issues in PiecesOS, particularly those related to LTM and specific hardware configurations. This will directly impact a significant number of users and improve the overall user experience.
+- **Improve Pieces OS Installation Experience:** Review the Pieces OS installation process on Windows, ensuring compatibility with system settings for app and data locations. Address conflicts with antivirus software and provide clearer guidance during installation.
+- **Enhance Communication on Existing Issues:**  Keep users informed about the progress of ongoing investigations and bug fixes, especially for issues like the unresponsive chat assistant and Visual Studio conflicts. Provide temporary workarounds where possible.
+- **Review and Update Documentation:** Update the documentation to include information about "basic mode" functionality in PiecesOS, its triggers, and how users can troubleshoot related issues. Ensure documentation on installation, updates, and personal domain backup is comprehensive and up-to-date.
+- **Investigate Extension Conflicts:** Allocate resources to thoroughly investigate and address the reported conflicts between the Pieces extension and Visual Studio, particularly those affecting SQL Server Object Explorer and script editing. 
 
 ## Daily Reports
 Here are the daily reports for this week:
@@ -81,3 +76,4 @@ Here are the daily reports for this week:
 - [report_131206](daily/2025-03-13/report_131206.md)
 - [report_131035](daily/2025-03-14/report_131035.md)
 - [report_210616](daily/2025-03-14/report_210616.md)
+- [report_130844](daily/2025-03-15/report_130844.md)
