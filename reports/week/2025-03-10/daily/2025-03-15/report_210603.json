@@ -1,0 +1,83 @@
+{
+  "success": true,
+  "date_range": {
+    "start": "2025-03-15T00:00:00+00:00",
+    "end": "2025-03-15T21:06:03.788566+00:00"
+  },
+  "summary": {
+    "total_tickets": 2,
+    "resolved_tickets": 1,
+    "open_tickets": 1
+  },
+  "ticket_breakdown": [
+    {
+      "category": "bug",
+      "received": 2,
+      "resolved": 1,
+      "pending": 1
+    },
+    {
+      "category": "status:triaged",
+      "received": 2,
+      "resolved": 1,
+      "pending": 1
+    },
+    {
+      "category": "ollama",
+      "received": 1,
+      "resolved": 1,
+      "pending": 0
+    },
+    {
+      "category": "os:windows",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:pieces os",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    }
+  ],
+  "most_active_tickets": [
+    {
+      "number": 654,
+      "title": "Pieces OS Update fails",
+      "activity_level": 4.86
+    },
+    {
+      "number": 570,
+      "title": "Pieces OS conflicting with Installed Ollama Server?",
+      "activity_level": 4.47
+    }
+  ],
+  "common_issues": [
+    {
+      "title": "Pieces OS Conflicts and Launch Errors",
+      "description": "Users report conflicts between Pieces OS and external Ollama installations causing Cuda errors. Solutions include reinstalling Ollama, managing PATH variables, and updating Pieces OS. Additionally, some users experience launch errors on Windows, potentially due to App Installer issues or antivirus software conflicts. Updating App Installer and configuring antivirus software are suggested workarounds.",
+      "frequency": 2,
+      "related_issues": [
+        {
+          "id": 570,
+          "title": "Pieces OS conflicting with Installed Ollama Server?",
+          "text": "Pieces OS conflicting with Installed Ollama Server?\n### Software\n\nPieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.0.3\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nMy Pieces OS instance's Ollama server would always give errors regarding various Cuda dll files not being registered or not found, so I then installed Ollama server from its source which works and Pieces OS could also connect too and use, the problem I'm facing now is that Pieces OS on startup seems to keep starting its own Ollama instance rather than using the externally installed Ollama server instance which means I see the Cuda dll errors again.  My workaround is that I must quit Pieces OS completely then start Ollama server from its own shortcut then start Pieces OS??\n\nAny Ideas??\n## Summary of GitHub Issue Conversation about Ollama Errors\n\n**Key Points:**\n\n* User johnkennyuk was experiencing Cuda errors with Ollama on Pieces OS.\n* The issue seemed to be related to a conflict between the Ollama installations on Pieces OS and the user's own installation.\n* The user tried various solutions, including uninstalling and reinstalling both Ollama and Pieces OS, but the problem persisted intermittently.\n* It was suspected that a race condition between the two Ollama instances was causing the issue.\n* Pieces OS was updated to version 11.1.2 to address the race condition.\n\n**Problems Identified:**\n\n* Conflicting Ollama installations.\n* Race condition between Pieces OS and user's Ollama instance.\n\n**Solutions Proposed/Implemented:**\n\n* Uninstalling and reinstalling Ollama and Pieces OS.\n* Checking and cleaning up PATH environment variables.\n* Updating Pieces OS to version 11.1.2.\n\n**Current Status/Outcome:**\n\n* The issue appears to be resolved after the Pieces OS update.\n\n**Additional Notes:**\n\n* The user reported experiencing the issue again after updating to 11.1.2, but it seems to have been resolved since then.\n* The user prefers to use Winget for installations, updates, and uninstalls.",
+          "activity_level": 4.47
+        },
+        {
+          "id": 654,
+          "title": "Pieces OS Update fails",
+          "text": "Pieces OS Update fails\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.2.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nThe notification popped up saying an update was available so I clicked Update and a few seconds later got this message box:\n\n![Image](https://github.com/user-attachments/assets/b14dc8ab-632a-4095-b45b-7bbaba3c70ce)\n\nThis is on a very fresh Windows 11 installation.\n## Summary of GitHub Issue Conversation: PiecesOS launch error\n\n**Key points raised:**\n\n* Some users are experiencing an error when launching PiecesOS on Windows, likely due to an issue with the App Installer technology.\n* Another user reported the application being detected as a trojan by Kaspersky antivirus software.\n\n**Problems identified:**\n\n* PiecesOS fails to launch for some users on Windows.\n* Kaspersky antivirus flags PiecesOS as a potential threat.\n\n**Solutions proposed/implemented:**\n\n* Users are advised to update App Installer through the Microsoft Store.\n* For Kaspersky users, it is suggested to configure the software to allow PiecesOS processes.\n\n**Current status/outcome:**\n\n* The root cause of the launch error on Windows remains unclear. \n* It is unknown if the issue with Kaspersky antivirus has been resolved.\n\n**Additional notes:**\n\n* The conversation highlights the importance of user feedback in identifying and resolving issues.\n* It also demonstrates the potential challenges associated with antivirus software and application compatibility.",
+          "activity_level": 4.86
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    "\"Investigate and address the root cause of Pieces OS launch errors on Windows, specifically focusing on App Installer issues and antivirus software conflicts.\"",
+    "\"Develop clearer guidance for users on managing Ollama installations alongside Pieces OS, including best practices for PATH variables and potential conflict resolution steps.\"",
+    "\"Explore options to improve the Pieces OS update process and reduce the occurrence of update failures.\""
+  ],
+  "message": "Daily support report generated successfully."
+}
