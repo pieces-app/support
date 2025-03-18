@@ -2,98 +2,262 @@
   "success": true,
   "date_range": {
     "start": "2025-03-17T00:00:00+00:00",
-    "end": "2025-03-18T13:12:35.065774+00:00"
+    "end": "2025-03-18T21:07:30.634561+00:00"
   },
   "summary": {
-    "total_tickets": 3,
-    "resolved_tickets": 1,
-    "open_tickets": 2
+    "total_tickets": 10,
+    "resolved_tickets": 2,
+    "open_tickets": 8
   },
   "ticket_breakdown": [
     {
       "category": "bug",
-      "received": 3,
-      "resolved": 1,
-      "pending": 2
+      "received": 9,
+      "resolved": 2,
+      "pending": 7
     },
     {
       "category": "os:windows",
-      "received": 2,
+      "received": 8,
+      "resolved": 2,
+      "pending": 6
+    },
+    {
+      "category": "app:desktop application",
+      "received": 9,
+      "resolved": 2,
+      "pending": 7
+    },
+    {
+      "category": "status:triaged",
+      "received": 7,
       "resolved": 1,
+      "pending": 6
+    },
+    {
+      "category": "status:resolved",
+      "received": 1,
+      "resolved": 1,
+      "pending": 0
+    },
+    {
+      "category": "os:macos",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "app:pieces os",
+      "received": 6,
+      "resolved": 0,
+      "pending": 6
+    },
+    {
+      "category": "duplicate",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "enhancement",
+      "received": 1,
+      "resolved": 0,
       "pending": 1
     },
     {
       "category": "status:new",
-      "received": 3,
-      "resolved": 1,
-      "pending": 2
-    },
-    {
-      "category": "app:desktop application",
-      "received": 3,
-      "resolved": 1,
-      "pending": 2
-    },
-    {
-      "category": "os:macos",
       "received": 1,
-      "resolved": 0,
-      "pending": 1
+      "resolved": 1,
+      "pending": 0
     }
   ],
   "most_active_tickets": [
     {
-      "number": 672,
-      "title": "Invalid Port (at character 18) http://127.0.0.1:null/connect",
-      "activity_level": 4.42
+      "number": 648,
+      "title": "Pieces Desktop not Launching on my Windows PC",
+      "activity_level": 7.34
     },
     {
-      "number": 671,
+      "number": 667,
+      "title": "Unable to open Pieces for Developers",
+      "activity_level": 5.7
+    },
+    {
+      "number": 661,
+      "title": "Pieces desktop this message is empty please try again",
+      "activity_level": 5.12
+    },
+    {
+      "number": 672,
       "title": "Invalid Port (at character 18) http://127.0.0.1:null/connect",
-      "activity_level": 4.42
+      "activity_level": 4.5
+    },
+    {
+      "number": 669,
+      "title": "Pieces OS unable to enable LTM",
+      "activity_level": 4.5
     },
     {
       "number": 666,
       "title": "Response \"I'll get back to you with my findings as soon as possible\"",
-      "activity_level": 3.21
+      "activity_level": 4.33
+    },
+    {
+      "number": 668,
+      "title": "Pieces stuck on 70% CPU on one processor interfering with other keyboard chain handlers. System became unresponsive",
+      "activity_level": 3.74
+    },
+    {
+      "number": 671,
+      "title": "Invalid Port (at character 18) http://127.0.0.1:null/connect",
+      "activity_level": 3.5
+    },
+    {
+      "number": 665,
+      "title": "Installation doesn't follow the System Apps default location",
+      "activity_level": 3.0
+    },
+    {
+      "number": 663,
+      "title": "Kaspersky Internet Security flags Pieces OS as a virus",
+      "activity_level": 2.84
     }
   ],
   "common_issues": [
     {
-      "title": "Invalid Port Error",
-      "description": "Users are experiencing \"Invalid Port\" errors, particularly \"http://127.0.0.1:null/connect\" and \"http://0.0.0.0:null/connect\", during application initialization. This might be caused by antivirus software interference or issues with dependency connections. Rebooting and reinstalling have proven ineffective. The Pieces team is actively investigating these issues.",
+      "title": "Pieces Desktop Launch and Connection Issues",
+      "description": "Users report Pieces Desktop failing to launch or connect to Pieces OS after updates. Issues involve \"Ensure Core Dependencies\" loading state, error messages about empty messages, and Pieces OS not being found. Troubleshooting includes checking for existing issues, providing logs and system information, and reinstalling Pieces Desktop.",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 661,
+          "title": "Pieces desktop this message is empty please try again",
+          "text": "Pieces desktop this message is empty please try again\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nPieces for Developers 4.0.2\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWhen copy paste code sencond time in Ask anything give error  this message is empty please try again\n## GitHub Issue Summary: \"Pieces Desktop Shows Error Message 'Empty Please Try Again'\" \n\n**Key Points Raised:**\n\n* Users are encountering an error message saying \"Pieces desktop this message is empty please try again\" when attempting to send messages.\n* This issue appears to be affecting users on both macOS and Windows after updating to the latest version. \n* Sending the first message in a new chat seems possible, but subsequent messages fail.\n\n**Solutions Proposed/Implemented:**\n\n* Pieces support bot provided links to related issues and resources.\n* Pieces team acknowledged the issue and released a patch to address it.\n\n**Current Status/Outcome:**\n\n* The patch has been released and the issue has been resolved according to user confirmation.\n\n**Additional Notes:**\n\n* The specific cause of the error message is not explicitly mentioned in the conversation.\n\n## Overall, this conversation demonstrates effective communication and issue resolution by the Pieces team.",
+          "activity_level": 5.12
+        },
+        {
+          "id": 648,
+          "title": "Pieces Desktop not Launching on my Windows PC",
+          "text": "Pieces Desktop not Launching on my Windows PC\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows 11 Home, 24H2\n\n### Your Pieces OS Version\n\n11.2.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nMy Pieces Desktop application has refused to launch since updating it to the latest version (v4.0.0). It's stuck in the \"Ensure Core Dependencies\" loading state even though I have Pieces OS already running successfully in the background. Kindly find screenshots below. \n\nI've tried force quitting both Pieces OS & Pieces Desktop from my Task Manager, uninstalling and re-installing Pieces Desktop, and restarting my PC, all to no avail. Any help would be highly appreciated, thank you!\n\n![Image](https://github.com/user-attachments/assets/22c14a42-29d6-4a1f-ab34-51ba5074b38e)\n\n![Image](https://github.com/user-attachments/assets/025d2e80-78be-480c-9cc2-a85a440dcf75)\n\n![Image](https://github.com/user-attachments/assets/48c76dde-307a-4451-b85f-0483b74c2321)\n## Issue Summary: \n\n**Key points:**\n* MoyinShabi was experiencing problems when trying to connect Pieces for Developers to Pieces OS after a recent update.\n* They reported not receiving any notification regarding a Health Check.\n* They shared log files and folders with Pieces team members for troubleshooting.\n\n**Identified problems:**\n* Database issue with Pieces for Developers.\n* Inability to reproduce the original issue of the application not booting.\n\n**Proposed/Implemented solutions:**\n* A repaired \"com.pieces.pfd\" folder was shared for replacement.\n* A video call was suggested for further live troubleshooting.\n\n**Current status/Outcome:**\n* MoyinShabi reported the issue persisting even after replacing the \"com.pieces.pfd\" folder.\n* They provided additional information about the error message observed in the logs.\n* A video call is scheduled for further troubleshooting.\n\n**Additional notes:**\n* The specific cause of the problem is still being investigated.\n* Pieces team members are actively engaged in resolving the issue.",
+          "activity_level": 7.34
+        },
+        {
+          "id": 667,
+          "title": "Unable to open Pieces for Developers",
+          "text": "Unable to open Pieces for Developers\n### Checked for Existing Issues?\n\n- [ ] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nlatest\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\npieses for developers can not find the pieses OS. so it not opening.\n## Summary of GitHub Issue #667\n\n**Key Points:**\n\n* fardin631 reported an issue with PiecesOS not launching.\n* The issue was identified as a potential duplicate of issue #648.\n* Nathan Courtney, a Pieces team member, requested logs and hardware information for further investigation.\n* fardin631 agreed to share the requested information.\n\n**Problems Identified:**\n\n* PiecesOS was unable to launch on fardin631's machine.\n* The cause of the issue was unclear.\n\n**Solutions Proposed/Implemented:**\n\n* Nathan asked fardin631 to provide logs and hardware information for troubleshooting.\n* fardin631 agreed to share the requested information.\n\n**Current Status/Outcome:**\n\n* The issue is still under investigation.\n* fardin631 is providing the requested information to assist with troubleshooting.\n\n**Additional Notes:**\n\n* The bot initially suggested some related issues and resources, which might be helpful for fardin631.\n* Mark considered the issue a duplicate of issue #648, but further investigation is needed to confirm.",
+          "activity_level": 5.7
+        }
+      ]
+    },
+    {
+      "title": "Pieces OS and Desktop App Launch and Performance Issues",
+      "description": "Users are experiencing issues with Pieces OS and Desktop app launching, freezing, and high CPU usage.  This appears to be related to permissions, LTM engine activation, and recent updates.  Suggested solutions include checking permissions, reinstalling the app, and providing logs for further analysis by the Pieces team.",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 669,
+          "title": "Pieces OS unable to enable LTM",
+          "text": "Pieces OS unable to enable LTM\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nPieces OS\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n11.2.2\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWhen attempting to enable the LTM engine, either in the Pieces desktop app by clicking \"Allow\" for \"Periodic Application Indexing\" or in the Pieces OS directly, clicking \"Enable Long Term Memory Engine\", nothing happens. Even after multiple Pieces OS restarts and a clean install. \n\nTailed the local log while doing both operations, only clicking \"Enable Long Term Memory Engine\" resulted in logs:\n```\n[D]  Sentry Error Event: 351d4b13dbae46589cabd593569f9049\n```\n\n[piecesOS-03162025log.txt](https://github.com/user-attachments/files/19275571/piecesOS-03162025log.txt)\nAlso confirmed permissions were granted appropriately:\n![Image](https://github.com/user-attachments/assets/2fa7002e-0c18-46fe-abaf-288350a90b1b)\n\nLoop in Detail:\n\nhttps://github.com/user-attachments/assets/c964a15d-2307-4d83-a9f8-0d82d7b608b8\n\nI can reproduce quickly and easily if you need more details/fresh logs!\n## Summary of GitHub Issue Conversation\n\n**Key Points Raised:**\n* User (@kwburgess) is experiencing issues activating LTM (Long Term Memory) in PiecesOs.\n* The support bot flagged the issue and suggested relevant resources.\n* Mark from Pieces support reached out and identified a potential permission issue.\n\n**Problems Identified:**\n* LTM activation is failing, likely due to insufficient permissions.\n\n**Solutions Proposed/Implemented:**\n* Mark requested confirmation of PiecesOS having necessary permissions for screen recording, system recording, and accessibility.\n* Mark offered real-time assistance through a calendar link.\n\n**Current Status/Outcome:**\n* The issue is unresolved and awaiting user response.\n\n**Additional Notes:**\n* The conversation is ongoing and may provide further insights into the problem and solution.\n* Consider reviewing the suggested resources for additional information.",
+          "activity_level": 4.5
+        },
+        {
+          "id": 668,
+          "title": "Pieces stuck on 70% CPU on one processor interfering with other keyboard chain handlers. System became unresponsive",
+          "text": "Pieces stuck on 70% CPU on one processor interfering with other keyboard chain handlers. System became unresponsive\n### Checked for Existing Issues?\n\n- [ ] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nCurrent\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nA specific keyboard chain handler that was affected and incapacitated was zvirtualDesktop which has been in use for several years and behaves well with other handlers.\n\nEventually I was able to kill the Pieces OS instance but as I didn''t know what, if any, other effects there had been I restarted the machine. In logging in the MS new machine set of dialogs started, it evidently believed that this was the first run. I restarted again and so far the machine is working normally.\n\nI uninstalled the Pieces OS and Pieces Desktop before the initial reboot. It's possible there was a dirty Registry on the first restart as it was a warm restart.\n\nI do not believe that this product is suitable for public use without a considerable warning that there may be trouble ahead. As it is I don't think it's a product ready for market given the other points I've observed, (the inability to install it to other than the boot drive, the lack of information or control of where data is stored and so on.\n## Summary of GitHub Conversation regarding Pieces App Issues\n\n**Key points raised:**\n\n- User @bpluly reported several issues with the Pieces app: slowdown after LTM-2 update, inability to launch PiecesOS, and lengthy boot-up times.\n- User uninstalled the product due to a negative first experience.\n\n**Problems Identified:**\n\n- The LTM-2 update caused performance slowdown.\n- The app experienced launch issues with PiecesOS.\n- Boot-up times were unacceptably slow.\n\n**Solutions proposed/implemented:**\n\n- Offer helpful resources for common issues.\n- Reach out to user for further discussion and debugging.\n\n**Current status/outcome:**\n\n- User has uninstalled the product.\n- The Pieces team is attempting to contact the user to learn more about their experience and debug the issues they encountered.\n\n**Notes:**\n\nThe conversation is ongoing, and it is unclear if the user will respond to the offer of a call or if any solutions have been found for the identified problems. \n\nI hope this summary provides a concise overview of the most important discussion points in the GitHub conversation. Please let me know if you have any further questions.",
+          "activity_level": 3.74
+        },
+        {
+          "id": 648,
+          "title": "Pieces Desktop not Launching on my Windows PC",
+          "text": "Pieces Desktop not Launching on my Windows PC\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows 11 Home, 24H2\n\n### Your Pieces OS Version\n\n11.2.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nMy Pieces Desktop application has refused to launch since updating it to the latest version (v4.0.0). It's stuck in the \"Ensure Core Dependencies\" loading state even though I have Pieces OS already running successfully in the background. Kindly find screenshots below. \n\nI've tried force quitting both Pieces OS & Pieces Desktop from my Task Manager, uninstalling and re-installing Pieces Desktop, and restarting my PC, all to no avail. Any help would be highly appreciated, thank you!\n\n![Image](https://github.com/user-attachments/assets/22c14a42-29d6-4a1f-ab34-51ba5074b38e)\n\n![Image](https://github.com/user-attachments/assets/025d2e80-78be-480c-9cc2-a85a440dcf75)\n\n![Image](https://github.com/user-attachments/assets/48c76dde-307a-4451-b85f-0483b74c2321)\n## Issue Summary: \n\n**Key points:**\n* MoyinShabi was experiencing problems when trying to connect Pieces for Developers to Pieces OS after a recent update.\n* They reported not receiving any notification regarding a Health Check.\n* They shared log files and folders with Pieces team members for troubleshooting.\n\n**Identified problems:**\n* Database issue with Pieces for Developers.\n* Inability to reproduce the original issue of the application not booting.\n\n**Proposed/Implemented solutions:**\n* A repaired \"com.pieces.pfd\" folder was shared for replacement.\n* A video call was suggested for further live troubleshooting.\n\n**Current status/Outcome:**\n* MoyinShabi reported the issue persisting even after replacing the \"com.pieces.pfd\" folder.\n* They provided additional information about the error message observed in the logs.\n* A video call is scheduled for further troubleshooting.\n\n**Additional notes:**\n* The specific cause of the problem is still being investigated.\n* Pieces team members are actively engaged in resolving the issue.",
+          "activity_level": 7.34
+        }
+      ]
+    },
+    {
+      "title": "Pieces Desktop Failing to Launch",
+      "description": "Users are reporting that the Pieces Desktop application is failing to launch or getting stuck during the initialization process. This issue seems to occur after a recent update, and users have reported error messages related to invalid ports or problems connecting to Pieces Core Services. Reinstalling the application and restarting the system have not resolved the issue for most users.",
       "frequency": 3,
       "related_issues": [
         {
           "id": 672,
           "title": "Invalid Port (at character 18) http://127.0.0.1:null/connect",
-          "text": "Invalid Port (at character 18) http://127.0.0.1:null/connect\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nLatest from 17032025 (can't find it)\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nHi I am stuck at the initial stages. Where the desktop app is being initialized. I am at verify dependency connections and it says unable to open pieces core services. \"FormatException: Invalid Port (at character 18) http://127.0.0.1:null/connect.\n\nIt might be an antivirus stopping it. I am not sure. But I have restarted and reinstalled to no effect.\n## GitHub Issue Conversation Summary:\n\n**Key Points:**\n\n* User @SherlockSol reported an issue with invalid port (http://0.0.0.0:null/connect).\n* Support bot provided helpful resources and similar issues for reference.\n\n**Problems Identified:**\n\n* User reported an invalid port, potentially preventing them from using Pieces.\n\n**Solutions Proposed/Implemented:**\n\n* Support bot offered relevant resources like similar issues, documentation, and YouTube channel.\n* No immediate solution proposed, likely awaiting investigation by the Pieces team.\n\n**Current Status/Outcome:**\n\n* Issue acknowledged and routed to the appropriate team member.\n* User awaits further updates within 24 hours.\n\n**Note:** This summary focuses on the essential details within the provided conversation excerpt.  For a complete understanding, reviewing the entire conversation on GitHub is recommended.",
-          "activity_level": 4.42
+          "text": "Invalid Port (at character 18) http://127.0.0.1:null/connect\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nLatest from 17032025 (can't find it)\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nHi I am stuck at the initial stages. Where the desktop app is being initialized. I am at verify dependency connections and it says unable to open pieces core services. \"FormatException: Invalid Port (at character 18) http://127.0.0.1:null/connect.\n\nIt might be an antivirus stopping it. I am not sure. But I have restarted and reinstalled to no effect.\n## Summary of GitHub Issue Conversation\n\n**Key points raised:**\n\n* SherlockSol created an issue regarding a problem with Pieces.\n* Pieces support bot automatically triaged and routed the issue.\n* Nathan from the Pieces team requested log files and hardware information to diagnose the problem.\n\n**Problems identified:**\n\n* SherlockSol was experiencing an issue with Pieces.\n* The specific details of the problem were not provided in the conversation snippet.\n\n**Solutions proposed/implemented:**\n\n* Nathan suggested checking log files in two locations:\n    * C:\\Users\\<your_user_name>\\Documents\\com.pieces.os\\production\\Support\\logs\n    * C:\\Users\\<your_user_name>\\Documents\\com.pieces.pfd\\production\\logs\n* Nathan requested hardware information and Windows Build Number.\n\n**Current status/outcome:**\n\n* The conversation ends with SherlockSol needing to provide additional information.\n* It is unclear whether SherlockSol provided the requested information or if the issue was resolved. \n\n**Additional notes:**\n\n* The provided conversation snippet is only a portion of the full conversation. \n* More context might be needed to understand the exact nature of the problem and the outcome.",
+          "activity_level": 4.5
         },
         {
           "id": 671,
           "title": "Invalid Port (at character 18) http://127.0.0.1:null/connect",
-          "text": "Invalid Port (at character 18) http://127.0.0.1:null/connect\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nLatest from 17032025 (can't find it)\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nHi I am stuck at the initial stages. Where the desktop app is being initialized. I am at verify dependency connections and it says unable to open pieces core services. \"FormatException: Invalid Port (at character 18) http://127.0.0.1:null/connect.\n\nIt might be an antivirus stopping it. I am not sure. But I have restarted and reinstalled to no effect.\n## GitHub Issue Summary: Invalid port http://0.0.0.0:null/connect\n\n**Key Points:**\n\n* User @SherlockSol reported an issue with an invalid port \"http://0.0.0.0:null/connect\".\n* The issue was automatically triaged and assigned to the appropriate team member.\n\n**Problems Identified:**\n\n* The reported port is invalid and likely causing connection problems.\n\n**Solutions Proposed/Implemented:**\n\n* No specific solutions are proposed in the conversation excerpt.\n* The bot suggests checking related issues and documentation for potential solutions.\n\n**Current Status/Outcome:**\n\n* The issue has been acknowledged and assigned to the relevant team member for further investigation.\n* The conversation ends without a resolution.\n\n**Additional Notes:**\n\n* The provided information is limited to the initial bot response.\n* More context about the issue and potential solutions might be available in subsequent comments.",
-          "activity_level": 4.42
+          "text": "Invalid Port (at character 18) http://127.0.0.1:null/connect\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nLatest from 17032025 (can't find it)\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nHi I am stuck at the initial stages. Where the desktop app is being initialized. I am at verify dependency connections and it says unable to open pieces core services. \"FormatException: Invalid Port (at character 18) http://127.0.0.1:null/connect.\n\nIt might be an antivirus stopping it. I am not sure. But I have restarted and reinstalled to no effect.\n## Summary of GitHub Issue Conversation\n\n**Key Points:**\n\n* User @SherlockSol reported an issue with PIECES OS not launching.\n* The issue has been automatically triaged and routed to the appropriate team member.\n* The user can expect a follow-up within 24 hours.\n* The bot recommends checking related issues and resources for potential solutions.\n\n**Problems Identified:**\n\n* PIECES OS fails to launch.\n\n**Solutions Proposed/Implemented:**\n\n* Automatic routing of the issue to the relevant team member.\n* Suggestion to review related issues and resources.\n\n**Current Status/Outcome:**\n\n* The issue is being investigated by the PIECES team.\n* The user is awaiting further updates.\n\n**Additional Notes:**\n\n* The issue was reported on March 17, 2025.\n* The bot provided several helpful resources, including existing issues, documentation, and a YouTube channel.",
+          "activity_level": 3.5
         },
+        {
+          "id": 648,
+          "title": "Pieces Desktop not Launching on my Windows PC",
+          "text": "Pieces Desktop not Launching on my Windows PC\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows 11 Home, 24H2\n\n### Your Pieces OS Version\n\n11.2.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nMy Pieces Desktop application has refused to launch since updating it to the latest version (v4.0.0). It's stuck in the \"Ensure Core Dependencies\" loading state even though I have Pieces OS already running successfully in the background. Kindly find screenshots below. \n\nI've tried force quitting both Pieces OS & Pieces Desktop from my Task Manager, uninstalling and re-installing Pieces Desktop, and restarting my PC, all to no avail. Any help would be highly appreciated, thank you!\n\n![Image](https://github.com/user-attachments/assets/22c14a42-29d6-4a1f-ab34-51ba5074b38e)\n\n![Image](https://github.com/user-attachments/assets/025d2e80-78be-480c-9cc2-a85a440dcf75)\n\n![Image](https://github.com/user-attachments/assets/48c76dde-307a-4451-b85f-0483b74c2321)\n## Issue Summary: \n\n**Key points:**\n* MoyinShabi was experiencing problems when trying to connect Pieces for Developers to Pieces OS after a recent update.\n* They reported not receiving any notification regarding a Health Check.\n* They shared log files and folders with Pieces team members for troubleshooting.\n\n**Identified problems:**\n* Database issue with Pieces for Developers.\n* Inability to reproduce the original issue of the application not booting.\n\n**Proposed/Implemented solutions:**\n* A repaired \"com.pieces.pfd\" folder was shared for replacement.\n* A video call was suggested for further live troubleshooting.\n\n**Current status/Outcome:**\n* MoyinShabi reported the issue persisting even after replacing the \"com.pieces.pfd\" folder.\n* They provided additional information about the error message observed in the logs.\n* A video call is scheduled for further troubleshooting.\n\n**Additional notes:**\n* The specific cause of the problem is still being investigated.\n* Pieces team members are actively engaged in resolving the issue.",
+          "activity_level": 7.34
+        }
+      ]
+    },
+    {
+      "title": "Pieces App Bugs and Unexpected Behavior",
+      "description": "Users report various issues with the Pieces app, including unexpected responses, error messages, and performance problems. Some common solutions include using alternative LLMs, reinstalling the app, or waiting for a patch from the Pieces team. Further investigation and debugging are often required to identify the root causes.",
+      "frequency": 3,
+      "related_issues": [
         {
           "id": 666,
           "title": "Response \"I'll get back to you with my findings as soon as possible\"",
-          "text": "Response \"I'll get back to you with my findings as soon as possible\"\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n11.2.2\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n**The Bug**\nThe chat assistant will respond claiming that it's working on a solution and will get back to you at a later date. \n\n**Expected Behaviour**\nGet an actionable response with some suggested action/code.\n\n**Details**\nMost recent example of this kind of response (\"_\" is not part of the response just a redaction):\n\n> \"I'll carefully examine the data flow related to _, _, _, _, and _  to see if any inconsistencies could lead to bugs. Please give me a few minutes to review the code thoroughly with this specific focus in mind. I'll get back to you with my findings as soon as possible.\"\n\nThis has happened in three different conversations. I first noticed the behaviour this month, so not before updates preceding March. I promise I'm not trying to be lazy on this one, it's difficult to offer reproduction steps.\n\nI use Claude 3.5 more than any option regularly.\n\nThe last conversation where this happened:\n\n- I loaded 15 files into the context menu\n- I sent 22 requests (and received 22 responses where it happened on the 22nd response)\n\nI'll update this issue if there's anything I can do to make the reproduction more narrow.\n## GitHub Issue Summary\n\n**Key points raised:**\n\n* User encountered a bug where files were not loaded into the context after sending and receiving 11 requests each.\n* User is unable to reproduce the bug on their end.\n\n**Problems identified:**\n\n* Files are not loaded into context, potentially causing unexpected behavior.\n\n**Solutions proposed/implemented:**\n\n* No solutions proposed or implemented yet.\n\n**Current status/outcome:**\n\n* Issue has been acknowledged and routed to the relevant team.\n* User is awaiting further follow-up within 24 hours.\n\n**Additional information:**\n\n* The user was directed to related issues and helpful resources.\n* The issue may be related to \"[Secret Message\" Example doesn't work properly](https://github.com/pieces-app/support/issues/652).",
-          "activity_level": 3.21
+          "text": "Response \"I'll get back to you with my findings as soon as possible\"\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n11.2.2\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n**The Bug**\nThe chat assistant will respond claiming that it's working on a solution and will get back to you at a later date. \n\n**Expected Behaviour**\nGet an actionable response with some suggested action/code.\n\n**Details**\nMost recent example of this kind of response (\"_\" is not part of the response just a redaction):\n\n> \"I'll carefully examine the data flow related to _, _, _, _, and _  to see if any inconsistencies could lead to bugs. Please give me a few minutes to review the code thoroughly with this specific focus in mind. I'll get back to you with my findings as soon as possible.\"\n\nThis has happened in three different conversations. I first noticed the behaviour this month, so not before updates preceding March. I promise I'm not trying to be lazy on this one, it's difficult to offer reproduction steps.\n\nI use Claude 3.5 more than any option regularly.\n\nThe last conversation where this happened:\n\n- I loaded 15 files into the context menu\n- I sent 22 requests (and received 22 responses where it happened on the 22nd response)\n\nI'll update this issue if there's anything I can do to make the reproduction more narrow.\n## Summary of GitHub Issue Conversation\n\n**Key points raised:**\n\n* User `seantiz` reported a bug where the Copilot wasn't responding properly to questions after 11 requests and responses.\n* No files were loaded into the context.\n* User was unable to narrow down the steps to reproduce the bug.\n\n**Problems identified:**\n\n* Copilot malfunctioning and not responding to user requests.\n* Context not being loaded into the conversation.\n\n**Solutions proposed/implemented:**\n\n* `mark-at-pieces` suggested switching to the Gemini 2.0 Flash LLM.\n* User confirmed that the bug did not occur with Flash.\n\n**Current status/outcome:**\n\n* The bug seems to be resolved by using the Gemini 2.0 Flash LLM.\n* Further investigation into the root cause of the bug is likely needed.\n\n**Additional notes:**\n\n* The user was directed to some helpful resources, including existing issues, documentation, and the YouTube channel.\n* The issue was automatically triaged and routed to the proper Pieces team member.\n\n## Conclusion\n\nThe issue appears to be resolved by switching to the Gemini 2.0 Flash LLM. Further investigation into the root cause of the bug is likely warranted.",
+          "activity_level": 4.33
+        },
+        {
+          "id": 661,
+          "title": "Pieces desktop this message is empty please try again",
+          "text": "Pieces desktop this message is empty please try again\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nPieces for Developers 4.0.2\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWhen copy paste code sencond time in Ask anything give error  this message is empty please try again\n## GitHub Issue Summary: \"Pieces Desktop Shows Error Message 'Empty Please Try Again'\" \n\n**Key Points Raised:**\n\n* Users are encountering an error message saying \"Pieces desktop this message is empty please try again\" when attempting to send messages.\n* This issue appears to be affecting users on both macOS and Windows after updating to the latest version. \n* Sending the first message in a new chat seems possible, but subsequent messages fail.\n\n**Solutions Proposed/Implemented:**\n\n* Pieces support bot provided links to related issues and resources.\n* Pieces team acknowledged the issue and released a patch to address it.\n\n**Current Status/Outcome:**\n\n* The patch has been released and the issue has been resolved according to user confirmation.\n\n**Additional Notes:**\n\n* The specific cause of the error message is not explicitly mentioned in the conversation.\n\n## Overall, this conversation demonstrates effective communication and issue resolution by the Pieces team.",
+          "activity_level": 5.12
+        },
+        {
+          "id": 668,
+          "title": "Pieces stuck on 70% CPU on one processor interfering with other keyboard chain handlers. System became unresponsive",
+          "text": "Pieces stuck on 70% CPU on one processor interfering with other keyboard chain handlers. System became unresponsive\n### Checked for Existing Issues?\n\n- [ ] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nCurrent\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nA specific keyboard chain handler that was affected and incapacitated was zvirtualDesktop which has been in use for several years and behaves well with other handlers.\n\nEventually I was able to kill the Pieces OS instance but as I didn''t know what, if any, other effects there had been I restarted the machine. In logging in the MS new machine set of dialogs started, it evidently believed that this was the first run. I restarted again and so far the machine is working normally.\n\nI uninstalled the Pieces OS and Pieces Desktop before the initial reboot. It's possible there was a dirty Registry on the first restart as it was a warm restart.\n\nI do not believe that this product is suitable for public use without a considerable warning that there may be trouble ahead. As it is I don't think it's a product ready for market given the other points I've observed, (the inability to install it to other than the boot drive, the lack of information or control of where data is stored and so on.\n## Summary of GitHub Conversation regarding Pieces App Issues\n\n**Key points raised:**\n\n- User @bpluly reported several issues with the Pieces app: slowdown after LTM-2 update, inability to launch PiecesOS, and lengthy boot-up times.\n- User uninstalled the product due to a negative first experience.\n\n**Problems Identified:**\n\n- The LTM-2 update caused performance slowdown.\n- The app experienced launch issues with PiecesOS.\n- Boot-up times were unacceptably slow.\n\n**Solutions proposed/implemented:**\n\n- Offer helpful resources for common issues.\n- Reach out to user for further discussion and debugging.\n\n**Current status/outcome:**\n\n- User has uninstalled the product.\n- The Pieces team is attempting to contact the user to learn more about their experience and debug the issues they encountered.\n\n**Notes:**\n\nThe conversation is ongoing, and it is unclear if the user will respond to the offer of a call or if any solutions have been found for the identified problems. \n\nI hope this summary provides a concise overview of the most important discussion points in the GitHub conversation. Please let me know if you have any further questions.",
+          "activity_level": 3.74
+        }
+      ]
+    },
+    {
+      "title": "Pieces OS Installation and Launch Issues",
+      "description": "Users report issues installing Pieces OS to a desired location and launching Pieces OS and Pieces for Developers. This seems to stem from installer limitations and potential conflicts with system resources. Solutions include using alternative installers, adjusting system settings, and providing logs for debugging.",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 665,
+          "title": "Installation doesn't follow the System Apps default location",
+          "text": "Installation doesn't follow the System Apps default location\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.2.2\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nThere's no opportunity for the User to choose where the Pieces OS is installed or where any data that's collected is stored. From Windows 10 onwards there is a system feature to set where new content is to be stored by default. This is in Settings/System/Storage.\n\nYou can set where new Apps will be installed, new documents are stored, Music, etc.\n\nOnce this is set I would expect a current application to follow the default installation setting rather than hardcode it for the Boot drive.\n## Summary of GitHub issue conversation\n\n**Key Points:**\n\n* User reported an issue being unable to choose the installation location for Pieces OS.\n* Pieces support bot triaged the issue and suggested related issues and resources.\n* Pieces support representative nathan-courtney-pieces identified two potential causes:\n    * Installing via App Installer (MSIX) package prevents location choice.\n    * Installing via Pieces for Developers might not offer location choice.\n* Suggested solutions:\n    * Install using InnoSetup (EXE) installer to choose location.\n    * If installed via Pieces for Developers, uninstall and reinstall using the Setup Executable.\n* Current status: User data location choice is not yet available, planned for future release.\n\n**Outcome:**\n\nThe user can now choose the Pieces OS installation location by using the InnoSetup installer. User data location choice is not yet available but will be rolled out in the future.",
+          "activity_level": 3.0
+        },
+        {
+          "id": 668,
+          "title": "Pieces stuck on 70% CPU on one processor interfering with other keyboard chain handlers. System became unresponsive",
+          "text": "Pieces stuck on 70% CPU on one processor interfering with other keyboard chain handlers. System became unresponsive\n### Checked for Existing Issues?\n\n- [ ] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nCurrent\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nA specific keyboard chain handler that was affected and incapacitated was zvirtualDesktop which has been in use for several years and behaves well with other handlers.\n\nEventually I was able to kill the Pieces OS instance but as I didn''t know what, if any, other effects there had been I restarted the machine. In logging in the MS new machine set of dialogs started, it evidently believed that this was the first run. I restarted again and so far the machine is working normally.\n\nI uninstalled the Pieces OS and Pieces Desktop before the initial reboot. It's possible there was a dirty Registry on the first restart as it was a warm restart.\n\nI do not believe that this product is suitable for public use without a considerable warning that there may be trouble ahead. As it is I don't think it's a product ready for market given the other points I've observed, (the inability to install it to other than the boot drive, the lack of information or control of where data is stored and so on.\n## Summary of GitHub Conversation regarding Pieces App Issues\n\n**Key points raised:**\n\n- User @bpluly reported several issues with the Pieces app: slowdown after LTM-2 update, inability to launch PiecesOS, and lengthy boot-up times.\n- User uninstalled the product due to a negative first experience.\n\n**Problems Identified:**\n\n- The LTM-2 update caused performance slowdown.\n- The app experienced launch issues with PiecesOS.\n- Boot-up times were unacceptably slow.\n\n**Solutions proposed/implemented:**\n\n- Offer helpful resources for common issues.\n- Reach out to user for further discussion and debugging.\n\n**Current status/outcome:**\n\n- User has uninstalled the product.\n- The Pieces team is attempting to contact the user to learn more about their experience and debug the issues they encountered.\n\n**Notes:**\n\nThe conversation is ongoing, and it is unclear if the user will respond to the offer of a call or if any solutions have been found for the identified problems. \n\nI hope this summary provides a concise overview of the most important discussion points in the GitHub conversation. Please let me know if you have any further questions.",
+          "activity_level": 3.74
+        },
+        {
+          "id": 667,
+          "title": "Unable to open Pieces for Developers",
+          "text": "Unable to open Pieces for Developers\n### Checked for Existing Issues?\n\n- [ ] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nlatest\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\npieses for developers can not find the pieses OS. so it not opening.\n## Summary of GitHub Issue #667\n\n**Key Points:**\n\n* fardin631 reported an issue with PiecesOS not launching.\n* The issue was identified as a potential duplicate of issue #648.\n* Nathan Courtney, a Pieces team member, requested logs and hardware information for further investigation.\n* fardin631 agreed to share the requested information.\n\n**Problems Identified:**\n\n* PiecesOS was unable to launch on fardin631's machine.\n* The cause of the issue was unclear.\n\n**Solutions Proposed/Implemented:**\n\n* Nathan asked fardin631 to provide logs and hardware information for troubleshooting.\n* fardin631 agreed to share the requested information.\n\n**Current Status/Outcome:**\n\n* The issue is still under investigation.\n* fardin631 is providing the requested information to assist with troubleshooting.\n\n**Additional Notes:**\n\n* The bot initially suggested some related issues and resources, which might be helpful for fardin631.\n* Mark considered the issue a duplicate of issue #648, but further investigation is needed to confirm.",
+          "activity_level": 5.7
         }
       ]
     }
   ],
   "recommendations": [
-    "**Prioritize 'Invalid Port' errors:** Investigate and resolve the root cause of the 'Invalid Port' errors during application initialization. This issue is affecting multiple users on Windows and requires immediate attention.",
-    "**Improve error messaging:** Provide more informative error messages to users experiencing the 'Invalid Port' issue. Include potential causes and troubleshooting steps.",
-    "**Investigate antivirus conflicts:** Determine if specific antivirus software is interfering with the application's port connections and provide workarounds or solutions.",
-    "**Review dependency connections:** Thoroughly examine the dependency connections during application initialization to ensure they are correctly established.",
-    "**Gather more information on macOS issue:** Investigate the issue reported on macOS where the chat assistant provides a generic response instead of an actionable solution. Gather more details and logs to reproduce and debug the problem effectively.",
-    "**Monitor and analyze common issues:** Continuously track and analyze common issues reported by users to identify trends and prioritize bug fixes and improvements.",
-    "**Improve support bot responses:** Enhance the support bot's responses to provide more specific solutions, relevant documentation links, and helpful resources based on user inquiries.",
-    "**Consider a knowledge base:** Develop a comprehensive knowledge base or FAQ section addressing common issues, troubleshooting steps, and known workarounds. This can empower users to resolve issues independently and reduce support ticket volume."
+    "**Prioritize resolution of launch and connection issues:** The most frequent issues revolve around Pieces Desktop failing to launch or connect to Pieces OS. Focus on identifying the root causes and implementing fixes for these issues to improve user experience.",
+    "**Investigate and address LTM engine activation problems:** Issues related to LTM engine activation are causing user frustration. Investigate the permissions issues and other potential causes to ensure smooth LTM functionality.",
+    "**Improve communication around updates:** Many issues arise after updates. Enhance communication about upcoming updates, including potential impacts and troubleshooting steps, to prepare users.",
+    "**Provide clear guidance on installation and data storage:** Users are seeking more control over installation locations and data storage. Provide clear documentation and options to address these concerns.",
+    "**Review and address antivirus compatibility:** Investigate reports of antivirus software flagging Pieces OS as a virus. Collaborate with antivirus vendors or adjust the software to prevent false positives and ensure compatibility.",
+    "**Continue monitoring and addressing bugs and unexpected behavior:**  Maintain a system for tracking and addressing bugs and unexpected behavior reported by users. Prioritize issues based on frequency and severity to ensure continuous improvement of the app's stability and functionality.",
+    "**Consider user feedback for future development:**  Incorporate user feedback, such as requests for installation location choices and data storage options, into future development plans to enhance user experience and address evolving needs."
   ],
   "message": "Daily support report generated successfully."
 }
