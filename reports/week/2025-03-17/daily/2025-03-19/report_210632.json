@@ -1,0 +1,119 @@
+{
+  "success": true,
+  "date_range": {
+    "start": "2025-03-19T00:00:00+00:00",
+    "end": "2025-03-19T21:06:32.098575+00:00"
+  },
+  "summary": {
+    "total_tickets": 3,
+    "resolved_tickets": 0,
+    "open_tickets": 3
+  },
+  "ticket_breakdown": [
+    {
+      "category": "bug",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "app:desktop application",
+      "received": 3,
+      "resolved": 0,
+      "pending": 3
+    },
+    {
+      "category": "os:macos",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:pieces os",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:pending_release",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:new",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "os:linux",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "known_issue",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    }
+  ],
+  "most_active_tickets": [
+    {
+      "number": 652,
+      "title": "\"Secret Message\" Example doesn't work properly",
+      "activity_level": 8.81
+    },
+    {
+      "number": 537,
+      "title": "Ollama Fails to Install on Linux",
+      "activity_level": 5.72
+    },
+    {
+      "number": 315,
+      "title": "Pieces desktop application is very slow/laggy, not generating any response in copilot chat.",
+      "activity_level": 4.4
+    }
+  ],
+  "common_issues": [
+    {
+      "title": "Pieces OS Bugs and Performance Issues",
+      "description": "Users report various issues with Pieces OS, including slow performance, LLM integration problems, and installation errors. Common solutions involve updating to the latest version, restarting the application, or waiting for a patch from the Pieces team. Issues often stem from bugs, missing dependencies, or compatibility problems.",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 652,
+          "title": "\"Secret Message\" Example doesn't work properly",
+          "text": "\"Secret Message\" Example doesn't work properly\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n11.2.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWhen using LTM-2 to test the secret message example:\nhttps://pieces.app/magic-moments/ltm\n\nI got a strange response from the LLM:\nClaude 3.5:\nFirst Try:\n![Image](https://github.com/user-attachments/assets/1962a3e4-8b02-4d3f-bc8c-4bdd72c80aa6)\n2. try: (waited longer on the website)\n![Image](https://github.com/user-attachments/assets/cd71c5c1-d5d5-4449-acd5-e070fb244fa9)\n\nGemini 2.0 Flash did fail completely:\n![Image](https://github.com/user-attachments/assets/50735f7a-28a1-4563-b490-e10c271eca23)\n## Summary of GitHub Issue Conversation:\n\n**Key Points Raised:**\n\n* Users on M3 Macs are encountering \"basic mode due to device constraints\" message in PiecesOS.\n* Affected users report various issues, including:\n    * Lack of Workstream Activity view.\n    * LTM not showing any activity updates.\n\n**Problem Identified:**\n\n* Bug causing PiecesOS to enter \"basic mode\" on M3 Macs, even if they are capable of supporting vector search.\n\n**Solutions Proposed/Implemented:**\n\n* Mark from Pieces will include a fix in the next PiecesOS version to address the bug causing \"basic mode\".\n* Restarting PiecesOS temporarily resolves the \"basic mode\" issue.\n\n**Current Status/Outcome:**\n\n* The bug fix is scheduled for the next PiecesOS release.\n* The issue with Workstream Activity and LTM updates remains unresolved. \n\n**Additional Information:**\n\n* Mark clarifies that \"basic mode\" means vector search is not supported on the device.\n* Barton has an \"Unknown Origin\" element version 1.0.10 in their telemetry browser. \n\n**Further Steps:**\n\n* Mark is investigating the issues with Workstream Activity and LTM updates.\n* Users are encouraged to check for the next PiecesOS update to resolve the \"basic mode\" issue.",
+          "activity_level": 8.81
+        },
+        {
+          "id": 315,
+          "title": "Pieces desktop application is very slow/laggy, not generating any response in copilot chat.",
+          "text": "Pieces desktop application is very slow/laggy, not generating any response in copilot chat.\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n10.0.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nPieces desktop application is working very much slow after latest update, takes very much time to give any response. Even after doing a hard reset active runtime, it just do not work. \n## Summary of GitHub Issue Discussion: Copilot Performance Issues\n\n**Key Points Raised:**\n\n* Users reported copilot lag and slow response times after the Pieces OS 10.0.2 and Pieces Desktop 3.0.2 updates.\n* The issue was confirmed by multiple users, including g0ldyy, JerryBenChizzy, and Carmine19.\n* JerryBenChizzy and Carmine19 reported experiencing high CPU usage and blocked responses.\n* Harshilsodani reported the issue being resolved for them on Windows 11.\n* Navdeepdev459 reported experiencing lag even after updating.\n\n**Problems Identified:**\n\n* A bug in the copilot experience after clicking \"Hard-Reset Active Runtime\" caused infinite loading.\n* Updated versions were identified as causing performance issues and slow responses.\n\n**Solutions Proposed/Implemented:**\n\n* A fix for the \"Hard-Reset Active Runtime\" bug was implemented and released in a patch.\n* Pieces OS 10.0.2 and Pieces Desktop 3.0.2 were released with fixes for performance issues.\n* Pieces Desktop version 3.1.0 was released with further performance improvements.\n\n**Current Status/Outcome:**\n\n* The bug causing infinite loading after hard reset is fixed.\n* Performance issues and slow responses reported after the initial updates are addressed in later versions.\n* Some users still reported lag with updated versions.\n\n**For further troubleshooting:**\n\n* Users experiencing lag should ensure they are running the latest versions of Pieces OS and Desktop app.\n* Users facing persistent issues are encouraged to contact Pieces support and provide detailed information about their system and the issues encountered.",
+          "activity_level": 4.4
+        },
+        {
+          "id": 537,
+          "title": "Ollama Fails to Install on Linux",
+          "text": "Ollama Fails to Install on Linux\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nLinux\n\n### Your Pieces OS Version\n\n11.0.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nUser reports immediate \"Ollama failed to install\" diaglog upon clicking install Ollama install button in Pieces desktop app\n## Summary of GitHub Issue Conversation: Ollama Installation Issues in Pieces-OS\n\n**Key Points Raised:**\n\n* `curl` is required for Ollama installation, but missing in the sandboxed Pieces-OS environment.\n* Manual Ollama installation has no effect as Pieces-OS operates in a sandbox.\n* The issue persists as of January 23, 2025.\n* The issue affects both Ollama installation and inference.\n\n**Problems Identified:**\n\n* Missing `curl` dependency in Pieces-OS.\n* Sandboxed environment prevents external access to Ollama instances.\n\n**Solutions Proposed/Implemented:**\n\n* Add `curl` to the list of dependency packages in the Pieces-OS snap definition file.\n* Develop a patch allowing Ollama usage from within the sandbox.\n\n**Current Status/Outcome:**\n\n* Fix is on a branch and expected to be released in the following week (as of January 23, 2025).\n* Work has resumed on the fix after infrastructure updates (as of January 28, 2025).\n\n**Additional Information:**\n\n* User concerns regarding data privacy and reliance on cloud LLMs are acknowledged.\n\n**Overall, the conversation highlights the ongoing efforts to resolve the Ollama installation issue within Pieces-OS.**",
+          "activity_level": 5.72
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    "**Prioritize bug fixes related to Pieces OS performance and LLM integration:** The data shows a high frequency of issues related to Pieces OS, particularly its performance and LLM integration. Addressing these issues should be a top priority to improve user experience.",
+    "**Investigate and resolve the \"basic mode\" issue on M3 Macs:** Users on M3 Macs are experiencing limitations due to Pieces OS entering \"basic mode.\" This issue needs immediate attention to ensure all users have access to full functionality.",
+    "**Improve Ollama installation process on Linux:** The data highlights persistent issues with Ollama installation on Linux. Simplifying this process and addressing the sandbox-related challenges will enhance user experience for Linux users.",
+    "**Address slow response times and lag in the desktop application:** Several users have reported slow performance and unresponsiveness in the desktop application. Optimizing the application's performance will significantly improve user satisfaction.",
+    "**Provide clear and detailed documentation for troubleshooting common issues:** Creating comprehensive troubleshooting guides for common issues, such as those related to LLM integration and Ollama installation, will empower users to resolve problems independently and reduce the support workload.",
+    "**Consider implementing a system for tracking known issues and informing users of their status:** This will help manage user expectations and reduce the number of tickets related to already identified problems.",
+    "**Gather more detailed system information from users experiencing issues:** This will aid in identifying patterns and potential causes for issues like slow performance, enabling more effective troubleshooting and resolution.",
+    "**Analyze the impact of recent updates on application performance and stability:** This will help identify potential regressions introduced by updates and allow for quicker fixes and rollbacks if necessary.",
+    "**Encourage users to report issues through the appropriate channels:** This will ensure that all issues are documented and addressed in a timely manner.",
+    "**Regularly review and analyze support tickets to identify trends and areas for improvement:** This will provide valuable insights into recurring problems and areas where support processes can be optimized."
+  ],
+  "message": "Daily support report generated successfully."
+}
