@@ -1,0 +1,173 @@
+{
+  "success": true,
+  "date_range": {
+    "start": "2025-03-20T00:00:00+00:00",
+    "end": "2025-03-20T21:06:33.828344+00:00"
+  },
+  "summary": {
+    "total_tickets": 5,
+    "resolved_tickets": 1,
+    "open_tickets": 4
+  },
+  "ticket_breakdown": [
+    {
+      "category": "bug",
+      "received": 4,
+      "resolved": 1,
+      "pending": 3
+    },
+    {
+      "category": "os:windows",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "app:pieces os",
+      "received": 3,
+      "resolved": 1,
+      "pending": 2
+    },
+    {
+      "category": "status:triaged",
+      "received": 3,
+      "resolved": 1,
+      "pending": 2
+    },
+    {
+      "category": "os:macos",
+      "received": 2,
+      "resolved": 1,
+      "pending": 1
+    },
+    {
+      "category": "app:desktop application",
+      "received": 3,
+      "resolved": 0,
+      "pending": 3
+    },
+    {
+      "category": "status:pending_release",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    }
+  ],
+  "most_active_tickets": [
+    {
+      "number": 650,
+      "title": "Long Term Memory still slows down my PC, even after updating to LTM-2",
+      "activity_level": 12.36
+    },
+    {
+      "number": 652,
+      "title": "\"Secret Message\" Example doesn't work properly",
+      "activity_level": 11.03
+    },
+    {
+      "number": 672,
+      "title": "Invalid Port (at character 18) http://127.0.0.1:null/connect",
+      "activity_level": 5.03
+    },
+    {
+      "number": 315,
+      "title": "Pieces desktop application is very slow/laggy, not generating any response in copilot chat.",
+      "activity_level": 4.65
+    },
+    {
+      "number": 669,
+      "title": "Pieces OS unable to enable LTM",
+      "activity_level": 4.26
+    }
+  ],
+  "common_issues": [
+    {
+      "title": "PiecesOS LTM Performance Issues and Activation Errors",
+      "description": "Users report PiecesOS LTM causing high CPU usage, system slowdowns, and activation problems. Some experience lag in specific applications like Slack, Discord, and browsers. Proposed solutions include restarting LTM, updating Edge and WebView2, and moving PiecesOS folders to a ReFS drive. The Pieces team is actively investigating and working on a permanent fix.",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 652,
+          "title": "\"Secret Message\" Example doesn't work properly",
+          "text": "\"Secret Message\" Example doesn't work properly\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n11.2.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWhen using LTM-2 to test the secret message example:\nhttps://pieces.app/magic-moments/ltm\n\nI got a strange response from the LLM:\nClaude 3.5:\nFirst Try:\n![Image](https://github.com/user-attachments/assets/1962a3e4-8b02-4d3f-bc8c-4bdd72c80aa6)\n2. try: (waited longer on the website)\n![Image](https://github.com/user-attachments/assets/cd71c5c1-d5d5-4449-acd5-e070fb244fa9)\n\nGemini 2.0 Flash did fail completely:\n![Image](https://github.com/user-attachments/assets/50735f7a-28a1-4563-b490-e10c271eca23)\n## Summary of GitHub Issue Conversation\n\n**Key Points Raised:**\n\n* Some users are experiencing an issue where PiecesOS enters \"basic mode\" on M3 MacBooks, leading to limited functionality.\n* The issue seems to be caused by a bug that occasionally triggers even on devices that support vector search.\n* Users are also reporting an inability to access the Workstream Activity view and see updates from the LTM engine.\n* An unknown origin application with version 1.0.10 is also present on one user's machine.\n\n**Problems Identified:**\n\n* PiecesOS entering basic mode unexpectedly on some M3 MacBooks.\n* Users unable to access Workstream Activity and LTM updates.\n* Unknown origin application present on one user's machine.\n\n**Solutions Proposed/Implemented:**\n\n* Mark-at-pieces will release a PiecesOS patch to fix the basic mode bug.\n* Mack-at-pieces will investigate the Workstream Activity and LTM issue.\n* Mark-at-pieces suggests restarting PiecesOS as a temporary solution.\n\n**Current Status/Outcome:**\n\n* The fix for the basic mode bug is expected to be released this week.\n* The Workstream Activity and LTM issue is being investigated.\n* Mark-at-pieces is requesting information about potential involvement with other Pieces extensions to understand the unknown origin application.\n\n**Additional Notes:**\n\n* Users experiencing the basic mode issue can temporarily resolve it by restarting PiecesOS.\n* The unknown origin application needs further investigation.",
+          "activity_level": 11.03
+        },
+        {
+          "id": 669,
+          "title": "Pieces OS unable to enable LTM",
+          "text": "Pieces OS unable to enable LTM\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nPieces OS\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n11.2.2\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWhen attempting to enable the LTM engine, either in the Pieces desktop app by clicking \"Allow\" for \"Periodic Application Indexing\" or in the Pieces OS directly, clicking \"Enable Long Term Memory Engine\", nothing happens. Even after multiple Pieces OS restarts and a clean install. \n\nTailed the local log while doing both operations, only clicking \"Enable Long Term Memory Engine\" resulted in logs:\n```\n[D]  Sentry Error Event: 351d4b13dbae46589cabd593569f9049\n```\n\n[piecesOS-03162025log.txt](https://github.com/user-attachments/files/19275571/piecesOS-03162025log.txt)\nAlso confirmed permissions were granted appropriately:\n![Image](https://github.com/user-attachments/assets/2fa7002e-0c18-46fe-abaf-288350a90b1b)\n\nLoop in Detail:\n\nhttps://github.com/user-attachments/assets/c964a15d-2307-4d83-a9f8-0d82d7b608b8\n\nI can reproduce quickly and easily if you need more details/fresh logs!\n## Conversation Summary for GitHub Issue on LTM Activation\n\n**Key points raised:**\n\n* User is unable to activate LTM in PiecesOS.\n* User reports that PiecesOS indicates all necessary permissions are already enabled.\n\n**Problems identified:**\n\n* User might have missed enabling some specific permissions for PiecesOS.\n\n**Solutions proposed/implemented:**\n\n* Support representative requests confirmation of specific permissions being enabled for PiecesOS related to screen recording, system recording, and accessibility.\n* Support representative shares resources for further troubleshooting and offers a calendar link for real-time support.\n* User confirms they missed enabling the required permissions and resolves the issue.\n\n**Current status/outcome:**\n\n* Issue is resolved. LTM is now activated in PiecesOS.\n\n**Summary:**\n\nThis conversation highlights the importance of providing clear information about necessary permissions for specific features. It also showcases the responsive nature of Pieces support, offering both self-help resources and real-time assistance to address user issues.",
+          "activity_level": 4.26
+        },
+        {
+          "id": 650,
+          "title": "Long Term Memory still slows down my PC, even after updating to LTM-2",
+          "text": "Long Term Memory still slows down my PC, even after updating to LTM-2\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.2.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nTurning on Long Term Memory has been slowing down my desktop computer, even before LTM-2. After updating today, it still happens. It's most noticeable when I use Slack and Discord, and disabling those apps on LTM doesn't work. Even after switching the Processing Mode to Cloud, as suggested by HRA42 on the Discord server, the lag still occurs. At some point, the total CPU usage went up by over 90%.\n\n![Image](https://github.com/user-attachments/assets/eaef0d65-b19b-41f0-bf8a-f143fa8d1e43)\n\nMy computer specs:\n- CPU: Intel(R) Core(TM) i3-6300 CPU @ 3.80GHz\n- RAM: DDR4 32 GB\n- Graphics: GeForce GTX 950 2 GB\n\nI'm yet to notice significant slowness on other programs, but if I'm getting a lot of lag on those chat apps, I can imagine I would get them too on something heavier like Visual Studio.\n## Summary of GitHub Issue conversation: High CPU usage in Pieces OS\n\n**Key points raised:**\n\n* High CPU usage in Pieces OS, especially when Long Term Memory (LTM) is active.\n* Issues observed on both Windows and macOS.\n* Specific applications affected include Microsoft Edge, Discord, and VSCode.\n\n**Problems identified:**\n\n* Continuous high CPU usage, even after hotfixes were released.\n* Spikes in CPU usage up to 100%, causing performance issues and slowdowns.\n* Problems exacerbated with certain browser configurations (e.g., many open tabs in Edge).\n\n**Solutions proposed/implemented:**\n\n* Hotfix released, but only offered minor improvement.\n* Updates to Microsoft Edge and WebView2 Runtime seem to resolve the issue for some users.\n* Restarting LTM temporarily reduces CPU usage for some.\n* Moving com.pieces.os/com.pieces.pfd folders to ReFS drive with symbolic links showed some positive results.\n\n**Current status/outcome:**\n\n* The issue seems to be related to LTM and WebView2 components.\n* The Pieces team is actively investigating the issue and expects to release a fix next week.\n* Some users have found workarounds that can alleviate the problem until a permanent solution is implemented.\n\n**Note:** As of March 20, 2025, the issue appears to be ongoing, but the Pieces team is actively working on a resolution.",
+          "activity_level": 12.36
+        }
+      ]
+    },
+    {
+      "title": "Pieces OS Performance Issues and LTM Activation Problems",
+      "description": "Users report slow performance and high CPU usage, often linked to Long Term Memory (LTM). Issues occur across Windows and macOS, impacting various apps. Solutions include hotfixes, updating Edge and WebView2, restarting LTM, and specific drive configurations. LTM activation problems arise from missing permissions, resolved by granting necessary access.",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 650,
+          "title": "Long Term Memory still slows down my PC, even after updating to LTM-2",
+          "text": "Long Term Memory still slows down my PC, even after updating to LTM-2\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.2.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nTurning on Long Term Memory has been slowing down my desktop computer, even before LTM-2. After updating today, it still happens. It's most noticeable when I use Slack and Discord, and disabling those apps on LTM doesn't work. Even after switching the Processing Mode to Cloud, as suggested by HRA42 on the Discord server, the lag still occurs. At some point, the total CPU usage went up by over 90%.\n\n![Image](https://github.com/user-attachments/assets/eaef0d65-b19b-41f0-bf8a-f143fa8d1e43)\n\nMy computer specs:\n- CPU: Intel(R) Core(TM) i3-6300 CPU @ 3.80GHz\n- RAM: DDR4 32 GB\n- Graphics: GeForce GTX 950 2 GB\n\nI'm yet to notice significant slowness on other programs, but if I'm getting a lot of lag on those chat apps, I can imagine I would get them too on something heavier like Visual Studio.\n## Summary of GitHub Issue conversation: High CPU usage in Pieces OS\n\n**Key points raised:**\n\n* High CPU usage in Pieces OS, especially when Long Term Memory (LTM) is active.\n* Issues observed on both Windows and macOS.\n* Specific applications affected include Microsoft Edge, Discord, and VSCode.\n\n**Problems identified:**\n\n* Continuous high CPU usage, even after hotfixes were released.\n* Spikes in CPU usage up to 100%, causing performance issues and slowdowns.\n* Problems exacerbated with certain browser configurations (e.g., many open tabs in Edge).\n\n**Solutions proposed/implemented:**\n\n* Hotfix released, but only offered minor improvement.\n* Updates to Microsoft Edge and WebView2 Runtime seem to resolve the issue for some users.\n* Restarting LTM temporarily reduces CPU usage for some.\n* Moving com.pieces.os/com.pieces.pfd folders to ReFS drive with symbolic links showed some positive results.\n\n**Current status/outcome:**\n\n* The issue seems to be related to LTM and WebView2 components.\n* The Pieces team is actively investigating the issue and expects to release a fix next week.\n* Some users have found workarounds that can alleviate the problem until a permanent solution is implemented.\n\n**Note:** As of March 20, 2025, the issue appears to be ongoing, but the Pieces team is actively working on a resolution.",
+          "activity_level": 12.36
+        },
+        {
+          "id": 315,
+          "title": "Pieces desktop application is very slow/laggy, not generating any response in copilot chat.",
+          "text": "Pieces desktop application is very slow/laggy, not generating any response in copilot chat.\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n10.0.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nPieces desktop application is working very much slow after latest update, takes very much time to give any response. Even after doing a hard reset active runtime, it just do not work. \n## GitHub Issue Conversation Summary\n\n**Key Points Raised:**\n\n* Copilot was significantly slower than before.\n* Hard-resetting the active runtime did not resolve the issue.\n* High CPU usage and blocked responses were observed.\n* Context files were not being read, even when specified.\n\n**Problems Identified:**\n\n* A bug in the Copilot experience caused an infinitely hanging loading indicator.\n* Performance issues persisted after the latest updates.\n\n**Solutions Proposed/Implemented:**\n\n* A fix was implemented and released in a patch.\n* Pieces OS 10.0.2 & Pieces Desktop 3.0.2 were released with additional fixes.\n* Significant performance improvements were added in Desktop app version 3.1.0.\n\n**Current Status/Outcome:**\n\n* The issue with the hanging loading indicator was resolved.\n* Performance improvements were implemented, but some users still experience lag.\n* The team is actively investigating and addressing remaining issues.\n\n**Additional Notes:**\n\n* The team offered to chat in real-time to troubleshoot specific user issues.\n* Users are encouraged to provide feedback and details about their system configuration.",
+          "activity_level": 4.65
+        },
+        {
+          "id": 669,
+          "title": "Pieces OS unable to enable LTM",
+          "text": "Pieces OS unable to enable LTM\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nPieces OS\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n11.2.2\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWhen attempting to enable the LTM engine, either in the Pieces desktop app by clicking \"Allow\" for \"Periodic Application Indexing\" or in the Pieces OS directly, clicking \"Enable Long Term Memory Engine\", nothing happens. Even after multiple Pieces OS restarts and a clean install. \n\nTailed the local log while doing both operations, only clicking \"Enable Long Term Memory Engine\" resulted in logs:\n```\n[D]  Sentry Error Event: 351d4b13dbae46589cabd593569f9049\n```\n\n[piecesOS-03162025log.txt](https://github.com/user-attachments/files/19275571/piecesOS-03162025log.txt)\nAlso confirmed permissions were granted appropriately:\n![Image](https://github.com/user-attachments/assets/2fa7002e-0c18-46fe-abaf-288350a90b1b)\n\nLoop in Detail:\n\nhttps://github.com/user-attachments/assets/c964a15d-2307-4d83-a9f8-0d82d7b608b8\n\nI can reproduce quickly and easily if you need more details/fresh logs!\n## Conversation Summary for GitHub Issue on LTM Activation\n\n**Key points raised:**\n\n* User is unable to activate LTM in PiecesOS.\n* User reports that PiecesOS indicates all necessary permissions are already enabled.\n\n**Problems identified:**\n\n* User might have missed enabling some specific permissions for PiecesOS.\n\n**Solutions proposed/implemented:**\n\n* Support representative requests confirmation of specific permissions being enabled for PiecesOS related to screen recording, system recording, and accessibility.\n* Support representative shares resources for further troubleshooting and offers a calendar link for real-time support.\n* User confirms they missed enabling the required permissions and resolves the issue.\n\n**Current status/outcome:**\n\n* Issue is resolved. LTM is now activated in PiecesOS.\n\n**Summary:**\n\nThis conversation highlights the importance of providing clear information about necessary permissions for specific features. It also showcases the responsive nature of Pieces support, offering both self-help resources and real-time assistance to address user issues.",
+          "activity_level": 4.26
+        }
+      ]
+    },
+    {
+      "title": "Pieces OS and Desktop App Performance Issues",
+      "description": "Users report slow performance, lag, and errors related to invalid ports or services. Troubleshooting includes checking logs, verifying dependencies, and ensuring necessary permissions are granted. Solutions involve software updates, configuration adjustments, and direct support from the Pieces team.",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 672,
+          "title": "Invalid Port (at character 18) http://127.0.0.1:null/connect",
+          "text": "Invalid Port (at character 18) http://127.0.0.1:null/connect\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nLatest from 17032025 (can't find it)\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nHi I am stuck at the initial stages. Where the desktop app is being initialized. I am at verify dependency connections and it says unable to open pieces core services. \"FormatException: Invalid Port (at character 18) http://127.0.0.1:null/connect.\n\nIt might be an antivirus stopping it. I am not sure. But I have restarted and reinstalled to no effect.\n## GitHub Issue Summary: Invalid port http://0.0.0.0:null/connect\n\n**Key Points:**\n\n* User @SherlockSol reported an issue with an invalid port \"http://0.0.0.0:null/connect\".\n* Pieces support bot provided initial information and suggested related issues.\n* Pieces team member @nathan-courtney-pieces requested additional information including logs and hardware details.\n* User @SherlockSol provided the requested information.\n* Another team member @mack-at-pieces requested a video call for further troubleshooting.\n\n**Problems Identified:**\n\n* The user encountered an invalid port error.\n* The specific cause of the error was unclear.\n\n**Solutions Proposed/Implemented:**\n\n* Gathering additional information including logs, hardware details, and Windows build number.\n* Scheduling a video call for further troubleshooting.\n\n**Current Status/Outcome:**\n\n* The issue is being investigated by the Pieces team.\n* A video call is scheduled to gather more information and troubleshoot the problem.\n\n**Additional Notes:**\n\n* The provided information is limited to the initial conversation.\n* No further updates or resolution are mentioned in the excerpt.",
+          "activity_level": 5.03
+        },
+        {
+          "id": 315,
+          "title": "Pieces desktop application is very slow/laggy, not generating any response in copilot chat.",
+          "text": "Pieces desktop application is very slow/laggy, not generating any response in copilot chat.\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n10.0.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nPieces desktop application is working very much slow after latest update, takes very much time to give any response. Even after doing a hard reset active runtime, it just do not work. \n## GitHub Issue Conversation Summary\n\n**Key Points Raised:**\n\n* Copilot was significantly slower than before.\n* Hard-resetting the active runtime did not resolve the issue.\n* High CPU usage and blocked responses were observed.\n* Context files were not being read, even when specified.\n\n**Problems Identified:**\n\n* A bug in the Copilot experience caused an infinitely hanging loading indicator.\n* Performance issues persisted after the latest updates.\n\n**Solutions Proposed/Implemented:**\n\n* A fix was implemented and released in a patch.\n* Pieces OS 10.0.2 & Pieces Desktop 3.0.2 were released with additional fixes.\n* Significant performance improvements were added in Desktop app version 3.1.0.\n\n**Current Status/Outcome:**\n\n* The issue with the hanging loading indicator was resolved.\n* Performance improvements were implemented, but some users still experience lag.\n* The team is actively investigating and addressing remaining issues.\n\n**Additional Notes:**\n\n* The team offered to chat in real-time to troubleshoot specific user issues.\n* Users are encouraged to provide feedback and details about their system configuration.",
+          "activity_level": 4.65
+        },
+        {
+          "id": 669,
+          "title": "Pieces OS unable to enable LTM",
+          "text": "Pieces OS unable to enable LTM\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nPieces OS\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n11.2.2\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWhen attempting to enable the LTM engine, either in the Pieces desktop app by clicking \"Allow\" for \"Periodic Application Indexing\" or in the Pieces OS directly, clicking \"Enable Long Term Memory Engine\", nothing happens. Even after multiple Pieces OS restarts and a clean install. \n\nTailed the local log while doing both operations, only clicking \"Enable Long Term Memory Engine\" resulted in logs:\n```\n[D]  Sentry Error Event: 351d4b13dbae46589cabd593569f9049\n```\n\n[piecesOS-03162025log.txt](https://github.com/user-attachments/files/19275571/piecesOS-03162025log.txt)\nAlso confirmed permissions were granted appropriately:\n![Image](https://github.com/user-attachments/assets/2fa7002e-0c18-46fe-abaf-288350a90b1b)\n\nLoop in Detail:\n\nhttps://github.com/user-attachments/assets/c964a15d-2307-4d83-a9f8-0d82d7b608b8\n\nI can reproduce quickly and easily if you need more details/fresh logs!\n## Conversation Summary for GitHub Issue on LTM Activation\n\n**Key points raised:**\n\n* User is unable to activate LTM in PiecesOS.\n* User reports that PiecesOS indicates all necessary permissions are already enabled.\n\n**Problems identified:**\n\n* User might have missed enabling some specific permissions for PiecesOS.\n\n**Solutions proposed/implemented:**\n\n* Support representative requests confirmation of specific permissions being enabled for PiecesOS related to screen recording, system recording, and accessibility.\n* Support representative shares resources for further troubleshooting and offers a calendar link for real-time support.\n* User confirms they missed enabling the required permissions and resolves the issue.\n\n**Current status/outcome:**\n\n* Issue is resolved. LTM is now activated in PiecesOS.\n\n**Summary:**\n\nThis conversation highlights the importance of providing clear information about necessary permissions for specific features. It also showcases the responsive nature of Pieces support, offering both self-help resources and real-time assistance to address user issues.",
+          "activity_level": 4.26
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    "**Prioritize resolving LTM performance issues:** This is the most frequent and impactful problem reported by users. Focus development efforts on optimizing LTM for better performance and lower resource consumption.",
+    "**Improve LTM activation process:** Provide clearer instructions and in-app guidance for enabling LTM, ensuring users understand and grant necessary permissions. This can reduce activation-related support tickets.",
+    "**Create a comprehensive troubleshooting guide for performance issues:** Develop a detailed guide addressing common performance problems, including steps to check logs, verify dependencies, and adjust configurations. This empowers users to resolve issues independently.",
+    "**Enhance communication about ongoing issues:** Keep users informed about the status of known issues, particularly LTM performance, through in-app notifications, blog posts, or a dedicated status page. Transparency builds trust and reduces support inquiries.",
+    "**Consider expanding support channels:** Offer real-time support options like live chat or video calls to address complex issues more effectively. This can lead to faster resolutions and improved user satisfaction.",
+    "**Proactively gather user feedback on LTM:** Conduct surveys or focus groups to gather specific feedback on LTM performance and usability. This helps identify areas for improvement and prioritize future development efforts.",
+    "**Implement error tracking and analysis:** Utilize error tracking tools to monitor and analyze application errors, including those related to LTM. This data can help identify root causes and develop targeted fixes more efficiently.",
+    "**Develop automated tests for critical features:** Implement automated testing for core features like LTM activation and performance to catch regressions early in the development cycle. This ensures a more stable and reliable user experience.",
+    "**Optimize resource utilization:** Investigate and optimize the resource consumption of Pieces OS and related components, particularly LTM. This can improve overall system performance and reduce the likelihood of slowdowns or high CPU usage.",
+    "**Provide clear and concise error messages:** Ensure error messages are user-friendly and provide actionable information, such as potential causes and troubleshooting steps. This helps users understand and resolve issues more effectively."
+  ],
+  "message": "Daily support report generated successfully."
+}
