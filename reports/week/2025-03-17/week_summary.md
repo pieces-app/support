@@ -1,5 +1,5 @@
 # Support Ticket Report
-- Generated: 2025-03-21 13:13:57
+- Generated: 2025-03-21 21:08:20
 - Period: 2025-03-17 to 2025-03-21
 
 ## Summary
@@ -10,60 +10,65 @@
 ## 5 Most Active Tickets
 | Issue # | Title | Activity Level |
 |---------|-------|----------------|
-| [#650](https://github.com/pieces-app/support/issues/650) | Long Term Memory still slows down my PC, even after updating to LTM-2 | 12.36 |
+| [#650](https://github.com/pieces-app/support/issues/650) | Long Term Memory still slows down my PC, even after updating to LTM-2 | 12.15 |
 | [#652](https://github.com/pieces-app/support/issues/652) | "Secret Message" Example doesn't work properly | 10.83 |
-| [#648](https://github.com/pieces-app/support/issues/648) | Pieces Desktop not Launching on my Windows PC | 6.59 |
+| [#648](https://github.com/pieces-app/support/issues/648) | Pieces Desktop not Launching on my Windows PC | 6.48 |
 | [#677](https://github.com/pieces-app/support/issues/677) | Personal cloud connects itself after shutdown and start of app | 5.68 |
-| [#537](https://github.com/pieces-app/support/issues/537) | Ollama Fails to Install on Linux | 5.40 |
+| [#537](https://github.com/pieces-app/support/issues/537) | Ollama Fails to Install on Linux | 5.39 |
 
 ## Common Issues
-### 1. PiecesOS Feature Activation Failures
-Users report various PiecesOS features, such as Ollama, LTM, and Workstream activity, fail to activate or function correctly.  This is often linked to permission issues, software bugs, or compatibility problems with specific hardware or operating systems. Solutions include granting permissions, restarting PiecesOS, waiting for bug fixes, or contacting support for assistance.
+### 1. Pieces OS LTM and High CPU Usage Issues
+Users report issues enabling Long Term Memory (LTM) and experiencing high CPU usage, particularly in Windows with apps like Slack, Discord, and Edge. Proposed solutions include verifying permissions, restarting Pieces OS, updating to the latest version, and waiting for upcoming patches addressing LTM2 performance and WebView2 conflicts.
 
 **Related Issues:**
-- [#537](https://github.com/pieces-app/support/issues/537): Ollama Fails to Install on Linux
 - [#669](https://github.com/pieces-app/support/issues/669): Pieces OS unable to enable LTM
 - [#652](https://github.com/pieces-app/support/issues/652): "Secret Message" Example doesn't work properly
+- [#650](https://github.com/pieces-app/support/issues/650): Long Term Memory still slows down my PC, even after updating to LTM-2
 
-### 2. Copilot Vague Responses
-Users report Copilot responding with vague promises of future solutions instead of actionable responses. This occurs across different LLMs and OS versions.  Issue is difficult to reproduce and may be related to specific data or workflows.  No definitive solution yet, but restarting PiecesOS or trying different LLMs like Gemini 2.0 Flash might help.
+### 2. Copilot Vague Response and Performance Issues
+Users report the Pieces Copilot responding with vague promises of future solutions instead of actionable responses. This occurs after approximately 20 requests in a session. Additionally, slow performance, unresponsiveness, and file loading issues are frequently reported. Proposed solutions include switching to the Gemini 2.0 Flash LLM and updates to the Pieces OS and Desktop applications.
 
 **Related Issues:**
 - [#666](https://github.com/pieces-app/support/issues/666): Response "I'll get back to you with my findings as soon as possible"
 - [#652](https://github.com/pieces-app/support/issues/652): "Secret Message" Example doesn't work properly
 - [#315](https://github.com/pieces-app/support/issues/315): Pieces desktop application is very slow/laggy, not generating any response in copilot chat.
 
-### 3. PiecesOS High CPU Usage and Performance Issues
-Users report high CPU usage, slow performance, and lag, particularly with Long Term Memory (LTM) enabled. Issues are more prominent on Windows with apps like Slack, Discord, and Edge. Workarounds include disabling LTM, restarting LTM, and moving specific folders to ReFS drives. The Pieces team is actively working on solutions, with some fixes already released.
+### 3. Pieces OS High CPU Usage and Performance Issues
+Users report slow performance and high CPU usage with Pieces OS, particularly after the LTM-2 update. Issues are prevalent on Windows, affecting apps like Slack, Discord, and Edge. Proposed solutions include hotfixes, patches, and disabling LTM-2, with varying degrees of success. The Pieces team is actively investigating and working on a permanent fix.
 
 **Related Issues:**
 - [#650](https://github.com/pieces-app/support/issues/650): Long Term Memory still slows down my PC, even after updating to LTM-2
 - [#668](https://github.com/pieces-app/support/issues/668): Pieces stuck on 70% CPU on one processor interfering with other keyboard chain handlers. System became unresponsive
 - [#315](https://github.com/pieces-app/support/issues/315): Pieces desktop application is very slow/laggy, not generating any response in copilot chat.
 
-### 4. PiecesOS Functionality Issues and Errors
-Users report various issues with PiecesOS, including LTM activation failures, performance problems, and unexpected behavior. Common solutions involve checking permissions, restarting PiecesOS or the system, and contacting support for troubleshooting and bug fixes.
+### 4. PiecesOS Installation and Functionality Bugs
+Users are experiencing various bugs in PiecesOS, including installation failures with Ollama on Linux due to sandbox limitations, issues with LTM-2 example on macOS, and launch problems on Windows. Proposed solutions involve dependency updates, UI enhancements, and bug fixes in upcoming releases.
 
 **Related Issues:**
-- [#669](https://github.com/pieces-app/support/issues/669): Pieces OS unable to enable LTM
+- [#537](https://github.com/pieces-app/support/issues/537): Ollama Fails to Install on Linux
 - [#652](https://github.com/pieces-app/support/issues/652): "Secret Message" Example doesn't work properly
-- [#668](https://github.com/pieces-app/support/issues/668): Pieces stuck on 70% CPU on one processor interfering with other keyboard chain handlers. System became unresponsive
+- [#671](https://github.com/pieces-app/support/issues/671): Invalid Port (at character 18) http://127.0.0.1:null/connect
 
-### 5. Pieces OS and Desktop App Connection Issues
-Users are experiencing difficulties connecting Pieces OS and the Desktop app, particularly after updates. Issues include personal domain backup/restore failures, automatic personal cloud connections, and app launch failures. Solutions involve bug fixes, database repairs, and individual troubleshooting through video calls.
+### 5. Pieces Desktop and OS Connection and Startup Issues
+Users report Pieces Desktop failing to launch, remaining stuck in loading states, or experiencing slow startup times. Issues often involve Pieces OS and Developer connections, database errors, and dependency conflicts. Proposed solutions include reinstalling, restarting, replacing corrupted files, and troubleshooting via video calls with support.
 
 **Related Issues:**
 - [#658](https://github.com/pieces-app/support/issues/658): Personal Domain backup
-- [#677](https://github.com/pieces-app/support/issues/677): Personal cloud connects itself after shutdown and start of app
 - [#648](https://github.com/pieces-app/support/issues/648): Pieces Desktop not Launching on my Windows PC
+- [#677](https://github.com/pieces-app/support/issues/677): Personal cloud connects itself after shutdown and start of app
 
 
 ## Recommendations
-- **Prioritize resolving high CPU usage and performance issues:** This is a recurring problem, especially on Windows, and significantly impacts user experience. Focus on optimizing LTM functionality and resource consumption.
-- **Improve PiecesOS and Desktop app connection stability:** Address issues related to personal domain backup/restore, automatic cloud connections, and app launch failures to ensure seamless integration.
-- **Investigate and resolve Copilot's vague responses:** Determine the root cause of Copilot providing unhelpful responses and implement solutions to ensure accurate and actionable assistance.
-- **Provide clearer communication and documentation on PiecesOS features:** Many issues stem from users struggling with LTM activation, permissions, and functionality. Enhance user guides and in-app instructions.
-- **Proactively monitor and address common issues:** Use the data on frequent issues and active tickets to anticipate problems, prepare solutions, and update users proactively.
+- **Prioritize resolution of high-frequency issues:** Focus on addressing the 'Pieces OS High CPU Usage and Performance Issues', 'Copilot Vague Response and Performance Issues', and 'PiecesOS Installation and Functionality Bugs' as they have the highest frequency and impact user experience.
+- **Investigate LTM-2 related problems:** Many reported issues are linked to LTM-2, suggesting a need for thorough investigation and potential optimization or bug fixes.
+- **Improve Pieces OS and Desktop application stability:** Address launch failures, slow startup times, and connection issues to ensure a seamless user experience.
+- **Enhance communication about known issues:** Proactively inform users about known issues like Ollama installation failures on Linux and sandbox limitations to manage expectations.
+- **Provide clear guidance on troubleshooting:** Offer detailed instructions for common issues, including reinstalling, restarting, and replacing corrupted files.
+- **Consider expanding support resources:** Given the volume of issues and user activity, explore options for scaling support operations, such as additional staff or improved self-service resources.
+- **Analyze and address root causes:** Implement a system for tracking and analyzing the root causes of support tickets to identify recurring problems and implement permanent solutions.
+- **Gather user feedback on proposed solutions:** Encourage users to provide feedback on the effectiveness of proposed solutions to ensure they adequately address the reported problems.
+- **Monitor and address performance issues proactively:** Implement monitoring tools to detect and address performance issues before they escalate into widespread problems.
+- **Improve error messaging and logging:** Enhance error messages to provide users with more specific information and improve logging to facilitate faster and more efficient troubleshooting.
 
 ## Daily Reports
 Here are the daily reports for this week:
