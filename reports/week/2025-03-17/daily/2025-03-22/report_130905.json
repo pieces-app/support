@@ -1,0 +1,62 @@
+{
+  "success": true,
+  "date_range": {
+    "start": "2025-03-22T00:00:00+00:00",
+    "end": "2025-03-22T13:09:05.397277+00:00"
+  },
+  "summary": {
+    "total_tickets": 1,
+    "resolved_tickets": 0,
+    "open_tickets": 1
+  },
+  "ticket_breakdown": [
+    {
+      "category": "bug",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:desktop application",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:waiting_on_user_responses",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    }
+  ],
+  "most_active_tickets": [
+    {
+      "number": 459,
+      "title": "Bug: unable to cancel the download of an LLLM",
+      "activity_level": 1.79
+    }
+  ],
+  "common_issues": [
+    {
+      "title": "LLM Download Cancellation Failure",
+      "description": "Users are unable to cancel downloading LLMs like Mistral 8 7b. The \"Stop Downloading\" button is unresponsive, sometimes leading to stuck initialization. This issue affects both Windows and macOS. A temporary fix involves deleting all files in \"C:/Users/[YOUR-USERNAME]/Documents/com.pieces.os\" and reinstalling Pieces OS and the desktop app. The Pieces team is working on a permanent solution.",
+      "frequency": 1,
+      "related_issues": [
+        {
+          "id": 459,
+          "title": "Bug: unable to cancel the download of an LLLM",
+          "text": "Bug: unable to cancel the download of an LLLM\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nlatest\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n![image](https://github.com/user-attachments/assets/6e730898-a168-4571-ab0d-6331c4d389a4)\r\n\r\ni want stop but its not working \r\n\n## Summary of GitHub Issue Conversation\n\n**Key points raised:**\n\n* Users are experiencing issues with downloading the Mistral 8 7b model. \n* The Stop Downloading button does not work and can lead to the model being stuck in the Initialization state.\n* The issue has been observed on both Windows and macOS platforms.\n\n**Problems identified:**\n\n* The root cause of the download issue is unclear.\n* Potential contributing factors include corrupted cache files or a bug in the Pieces OS or desktop app.\n\n**Solutions proposed/implemented:**\n\n* **Temporary fix:** Delete all files from the `C:/Users/[YOUR-USERNAME]/Documents/com.pieces.os` folder and reinstall Pieces OS and the desktop app.\n* Other attempted fixes (unsuccessful):\n    * Simply reinstalling Pieces OS and the desktop app without deleting data.\n    * Reinstalling Ollama.\n    * Disconnecting from the internet.\n    * Restarting the machine.\n\n**Current status/outcome:**\n\n* The issue is still under investigation.\n* The Pieces team is actively working on a permanent fix.\n* Users are advised to use the temporary fix until a permanent solution is available. \n\n**Additional notes:**\n\n* The Pieces team plans to completely replace the Local Large Language Model stack within the next 2-3 weeks.\n* Users can schedule a meeting with the developer via the provided calendar link for real-time support.",
+          "activity_level": 1.79
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    "**Prioritize a fix for LLM download cancellations:** This issue is highly disruptive and affects multiple platforms. Allocate resources to identify the root cause and implement a permanent solution urgently.",
+    "**Improve \"Stop Downloading\" button functionality:** Investigate why the button is unresponsive and ensure it reliably stops LLM downloads to prevent initialization issues.",
+    "**Consider providing clearer download progress and cancellation instructions:** Enhance the user experience by making it easier to monitor and manage LLM downloads.",
+    "**Review and update the temporary fix instructions:** Ensure the provided steps for deleting files and reinstalling are accurate, safe, and easy for users to follow.",
+    "**Proactively communicate the upcoming Local LLM stack replacement:** Inform users about the planned update and its potential impact on the reported issue. This can manage expectations and reduce support requests."
+  ],
+  "message": "Daily support report generated successfully."
+}
