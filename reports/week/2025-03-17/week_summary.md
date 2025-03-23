@@ -1,5 +1,5 @@
 # Support Ticket Report
-- Generated: 2025-03-23 13:12:03
+- Generated: 2025-03-23 21:08:43
 - Period: 2025-03-17 to 2025-03-23
 
 ## Summary
@@ -10,65 +10,63 @@
 ## 5 Most Active Tickets
 | Issue # | Title | Activity Level |
 |---------|-------|----------------|
-| [#650](https://github.com/pieces-app/support/issues/650) | Long Term Memory still slows down my PC, even after updating to LTM-2 | 12.86 |
+| [#650](https://github.com/pieces-app/support/issues/650) | Long Term Memory still slows down my PC, even after updating to LTM-2 | 12.67 |
 | [#652](https://github.com/pieces-app/support/issues/652) | "Secret Message" Example doesn't work properly | 10.02 |
-| [#648](https://github.com/pieces-app/support/issues/648) | Pieces Desktop not Launching on my Windows PC | 6.37 |
-| [#537](https://github.com/pieces-app/support/issues/537) | Ollama Fails to Install on Linux | 5.38 |
+| [#648](https://github.com/pieces-app/support/issues/648) | Pieces Desktop not Launching on my Windows PC | 6.28 |
+| [#537](https://github.com/pieces-app/support/issues/537) | Ollama Fails to Install on Linux | 5.37 |
 | [#315](https://github.com/pieces-app/support/issues/315) | Pieces desktop application is very slow/laggy, not generating any response in copilot chat. | 4.39 |
 
 ## Common Issues
-### 1. Pieces OS Performance Issues and High CPU Usage
-Users report slow performance, lag, and high CPU usage with Pieces OS, particularly after enabling Long Term Memory. Issues are linked to specific versions, WebView applications, and hardware configurations. Solutions include updating Pieces OS and related components, applying hotfixes, and troubleshooting specific configurations. While resolved for some, the development team continues to investigate and address remaining cases.
+### 1. Pieces OS High CPU Usage and Performance Issues
+Users report high CPU usage, slow performance, and lagging, primarily with Long Term Memory (LTM) feature. Issues persist across different hardware and OS versions. Temporary solutions include disabling LTM or moving Pieces folders to a separate drive. Pieces OS v11.2.3 reportedly resolves the issue for most users.
 
 **Related Issues:**
 - [#650](https://github.com/pieces-app/support/issues/650): Long Term Memory still slows down my PC, even after updating to LTM-2
 - [#668](https://github.com/pieces-app/support/issues/668): Pieces stuck on 70% CPU on one processor interfering with other keyboard chain handlers. System became unresponsive
 - [#315](https://github.com/pieces-app/support/issues/315): Pieces desktop application is very slow/laggy, not generating any response in copilot chat.
 
-### 2. Pieces Copilot Vague Responses
-Users report Pieces Copilot providing vague responses instead of actionable solutions. This occurs after multiple interactions, with Copilot claiming to be examining data flow. Switching to Gemini 2.0 Flash LLM temporarily resolved the issue for some users. The bug may be related to specific LLM versions or resource constraints.
+### 2. Pieces Copilot Slow or Unresponsive
+Users report Pieces Copilot becoming slow, unresponsive, or failing to provide expected code suggestions. This occurs across macOS and Windows, potentially due to bugs in LLM integration or resource constraints. Updating to the latest Pieces OS and Desktop application versions, restarting the application, or hard-resetting the runtime are suggested workarounds. The Pieces team actively addresses these issues with patches and updates.
 
 **Related Issues:**
 - [#666](https://github.com/pieces-app/support/issues/666): Response "I'll get back to you with my findings as soon as possible"
 - [#652](https://github.com/pieces-app/support/issues/652): "Secret Message" Example doesn't work properly
 - [#315](https://github.com/pieces-app/support/issues/315): Pieces desktop application is very slow/laggy, not generating any response in copilot chat.
 
-### 3. Pieces OS LTM and Performance Issues
-Users report issues with Pieces OS, particularly with the Long Term Memory (LTM) feature causing performance problems, failing to activate, or conflicting with other applications. Solutions include verifying permissions, restarting Pieces OS, waiting for updates, and contacting support for troubleshooting.
+### 3. Pieces OS Functionality Issues and Errors
+Users are experiencing various issues with Pieces OS, including problems enabling Long Term Memory (LTM), unexpected errors with specific LLM responses, and performance problems leading to system unresponsiveness.  Solutions vary depending on the specific issue, but often involve checking permissions, restarting Pieces OS, or waiting for a bug fix in a future release.
 
 **Related Issues:**
 - [#669](https://github.com/pieces-app/support/issues/669): Pieces OS unable to enable LTM
 - [#652](https://github.com/pieces-app/support/issues/652): "Secret Message" Example doesn't work properly
 - [#668](https://github.com/pieces-app/support/issues/668): Pieces stuck on 70% CPU on one processor interfering with other keyboard chain handlers. System became unresponsive
 
-### 4. Pieces OS Functionality Issues
-Users report various issues with Pieces OS functionality, including Ollama installation failures due to missing dependencies in the snap package, and persistent problems with generating and using shareable links. Solutions involve patching the snap, upgrading to the latest Pieces OS version, and investigating individual user configurations.
+### 4. Pieces Desktop Failing to Launch
+Users are reporting that the Pieces Desktop application is failing to launch after a recent update. The app gets stuck in the "Ensure Core Dependencies" loading state.  Suggested workarounds such as restarting the app, restarting the machine, and reinstalling the app have proven unsuccessful.  The issue may stem from database errors or dependency issues with Pieces OS.
 
 **Related Issues:**
-- [#537](https://github.com/pieces-app/support/issues/537): Ollama Fails to Install on Linux
-- [#443](https://github.com/pieces-app/support/issues/443): Unable to generate personal shareable links for 6+ months
+- [#648](https://github.com/pieces-app/support/issues/648): Pieces Desktop not Launching on my Windows PC
 - [#667](https://github.com/pieces-app/support/issues/667): Unable to open Pieces for Developers
+- [#671](https://github.com/pieces-app/support/issues/671): Invalid Port (at character 18) http://127.0.0.1:null/connect
 
-### 5. Pieces Desktop App Errors and Performance Issues
-Users report various issues with the Pieces desktop app, including 'message is empty' errors, slow performance, and failure to launch. These problems occur across Windows and Mac and persist after updates. Solutions involve patch releases, bug fixes, and performance improvements.  The Pieces team actively investigates and addresses these issues.
+### 5. Pieces OS Download and Installation Issues
+Users report problems downloading, installing, and running Pieces OS components, including LLM models and Ollama. Issues include unresponsive downloads, slow performance, and installation failures. Proposed solutions involve infrastructure updates, package patching, and temporary workarounds like manual downloads and data deletion.
 
 **Related Issues:**
-- [#661](https://github.com/pieces-app/support/issues/661): Pieces desktop this message is empty please try again
-- [#667](https://github.com/pieces-app/support/issues/667): Unable to open Pieces for Developers
+- [#459](https://github.com/pieces-app/support/issues/459): Bug: unable to cancel the download of an LLLM
 - [#315](https://github.com/pieces-app/support/issues/315): Pieces desktop application is very slow/laggy, not generating any response in copilot chat.
+- [#537](https://github.com/pieces-app/support/issues/537): Ollama Fails to Install on Linux
 
 
 ## Recommendations
-- **Address Pieces OS Performance Issues:** Investigate and address the root causes of high CPU usage, slow performance, and lag in Pieces OS, particularly related to Long Term Memory (LTM).  Prioritize resolving issues linked to specific versions, WebView applications, and hardware configurations.
-- **Improve Pieces Copilot Responsiveness and Accuracy:** Address the issue of Pieces Copilot providing vague responses instead of actionable solutions. Investigate potential links to specific LLM versions, resource constraints, or data flow issues.
-- **Enhance Pieces OS LTM Stability and Reliability:** Focus on resolving issues related to LTM activation failures, conflicts with other applications, and performance problems. Improve user guidance and troubleshooting steps for LTM-related issues.
-- **Resolve Pieces OS Functionality Problems:** Address issues such as Ollama installation failures on Linux and persistent problems with generating and using shareable links. Ensure timely patching and updates for critical functionality.
-- **Improve Pieces Desktop App Stability and Performance:** Address 'message is empty' errors, slow performance, and launch failures in the Pieces desktop app across Windows and Mac. Prioritize bug fixes, performance improvements, and thorough testing before releasing updates.
-- **Proactive Communication and Updates:** Provide timely and transparent communication to users regarding known issues, bug fixes, and planned updates.  Keep users informed about the progress of issue resolution and expected timelines.
-- **Enhanced Troubleshooting Resources:** Expand troubleshooting documentation and resources for common issues, including detailed steps, FAQs, and known workarounds. Make it easy for users to find solutions and self-serve whenever possible.
-- **Prioritize Issues Based on Impact and Frequency:** Use data on ticket volume, activity levels, and user impact to prioritize issue resolution. Focus on addressing widespread problems and those causing significant disruption first.
-- **Gather Detailed User Feedback:** Implement mechanisms to collect detailed user feedback on specific issues, including steps to reproduce, system configurations, and expected behavior. This will aid in faster and more effective bug fixing.
-- **Continuous Testing and Quality Assurance:** Strengthen testing procedures to catch issues early in the development cycle. Implement rigorous regression testing to prevent recurring problems after updates and new feature releases.
+- **Address Top Issues:** Prioritize resolving the common issues related to Pieces OS high CPU usage, Pieces Copilot slowness, Pieces OS functionality errors, and Pieces Desktop launch failures. These issues have the highest frequency and are likely impacting a significant number of users.
+- **Improve Installation and Download Experience:** Investigate and resolve issues related to Pieces OS downloads, installations, and LLM model integration. This includes addressing unresponsive downloads, slow performance, and installation failures to ensure a smooth user onboarding process.
+- **Enhance Copilot Performance and Reliability:** Investigate and optimize Pieces Copilot performance, particularly its responsiveness and code suggestion accuracy. Address bugs in LLM integration and explore solutions for resource constraints to improve the user experience.
+- **Proactive Communication:**  Keep users informed about ongoing issues, particularly those impacting core functionality like Pieces OS and Copilot. Provide clear timelines for fixes and workarounds to manage user expectations and reduce support ticket volume.
+- **Review Resource Requirements:**  Investigate if the high CPU usage and performance issues are related to minimum system requirements. Provide clear guidelines to users about the necessary hardware and software configurations for optimal performance.
+- **Improve Error Messaging:** Review error messages related to Pieces OS and Desktop application failures to make them more informative and actionable for users. This will help users troubleshoot issues independently and reduce support requests.
+- **Gather Detailed System Information:**  During support interactions, ensure sufficient system information is collected from users experiencing issues, including OS version, Pieces OS version, hardware specs, and relevant log files. This will aid in faster diagnosis and resolution.
+- **Develop Robust Testing Procedures:** Implement rigorous testing procedures for new releases and updates to catch issues like the Pieces Desktop launch failure before they reach users. This will help maintain the stability and reliability of the application.
 
 ## Daily Reports
 Here are the daily reports for this week:
@@ -81,4 +79,5 @@ Here are the daily reports for this week:
 - [report_050639](daily/2025-03-22/report_050639.md)
 - [report_210557](daily/2025-03-22/report_210557.md)
 - [report_130905](daily/2025-03-22/report_130905.md)
+- [report_210559](daily/2025-03-23/report_210559.md)
 - [report_130908](daily/2025-03-23/report_130908.md)
