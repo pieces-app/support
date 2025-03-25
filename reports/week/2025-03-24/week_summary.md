@@ -1,5 +1,5 @@
 # Support Ticket Report
-- Generated: 2025-03-25 05:07:53
+- Generated: 2025-03-25 13:13:18
 - Period: 2025-03-24 to 2025-03-25
 
 ## Summary
@@ -16,7 +16,7 @@
 
 ## Common Issues
 ### 1. Pieces OS users report various bugs and performance issues
-Users are experiencing issues with Pieces OS, including slow performance with Long Term Memory, inability to cancel LLLM downloads, and problems generating shareable links. Troubleshooting steps vary depending on the specific problem, and some users have reported unsuccessful attempts at resolving these issues.
+Users are experiencing issues with the Pieces OS desktop application, including slow performance with Long Term Memory, inability to cancel LLLM downloads, and problems generating shareable links. Troubleshooting steps include updating to the latest version, checking system resources, and contacting support for persistent issues.
 
 **Related Issues:**
 - [#650](https://github.com/pieces-app/support/issues/650): Long Term Memory still slows down my PC, even after updating to LTM-2
@@ -25,11 +25,11 @@ Users are experiencing issues with Pieces OS, including slow performance with Lo
 
 
 ## Recommendations
-- Investigate and address the performance issues with Long Term Memory reported by Pieces OS users, particularly the slow down experienced even after updating to LTM-2.
-- Develop a solution to allow users to cancel LLLM downloads, as the inability to do so is causing frustration.
-- Prioritize resolving the long-standing issue of users being unable to generate personal shareable links, which has persisted for over 6 months.
-- Improve communication with users who report issues, ensuring their concerns are addressed and not disregarded, especially for recurring problems like the shareable links bug.
-- Consider creating more specific categories for bug reports, such as 'Performance Issues' or 'Shareable Links', to better categorize and track similar issues in the future.
+- "Investigate and address the performance issues with Long Term Memory reported by users, particularly the high CPU usage. This is a recurring issue with high activity and impacts user experience."
+- "Look into the bug preventing users from canceling LLLM downloads. While the activity level is lower, it still hinders the user experience."
+- "Prioritize resolving the issue with generating personal shareable links. This bug has persisted for over 6 months and significantly impacts users' ability to share content."
+- "Improve communication and avoid disregarding user issues. The user who reported the shareable link problem had their previous report closed without resolution, leading to frustration."
+- "Consider creating dedicated troubleshooting guides or FAQs for common issues like slow performance and shareable link problems. This can help users resolve issues independently and reduce support tickets."
 
 ## Daily Reports
 Here are the daily reports for this week:
