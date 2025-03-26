@@ -2,7 +2,7 @@
   "success": true,
   "date_range": {
     "start": "2025-03-24T00:00:00+00:00",
-    "end": "2025-03-25T21:06:26.229529+00:00"
+    "end": "2025-03-26T05:07:46.159692+00:00"
   },
   "summary": {
     "total_tickets": 3,
@@ -17,24 +17,6 @@
       "pending": 2
     },
     {
-      "category": "os:windows",
-      "received": 1,
-      "resolved": 1,
-      "pending": 0
-    },
-    {
-      "category": "app:pieces os",
-      "received": 2,
-      "resolved": 1,
-      "pending": 1
-    },
-    {
-      "category": "status:triaged",
-      "received": 2,
-      "resolved": 1,
-      "pending": 1
-    },
-    {
       "category": "on the roadmap",
       "received": 1,
       "resolved": 0,
@@ -47,6 +29,12 @@
       "pending": 2
     },
     {
+      "category": "app:pieces os",
+      "received": 2,
+      "resolved": 1,
+      "pending": 1
+    },
+    {
       "category": "P0",
       "received": 1,
       "resolved": 0,
@@ -56,6 +44,18 @@
       "category": "app:sharing web app",
       "received": 1,
       "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "os:windows",
+      "received": 1,
+      "resolved": 1,
+      "pending": 0
+    },
+    {
+      "category": "status:triaged",
+      "received": 2,
+      "resolved": 1,
       "pending": 1
     }
   ],
@@ -68,7 +68,7 @@
     {
       "number": 443,
       "title": "Unable to generate personal shareable links for 6+ months",
-      "activity_level": 4.48
+      "activity_level": 5.04
     },
     {
       "number": 459,
@@ -76,7 +76,41 @@
       "activity_level": 1.78
     }
   ],
-  "common_issues": [],
-  "recommendations": [],
+  "common_issues": [
+    {
+      "title": "Pieces OS Performance Issues and Bugs",
+      "description": "Users report various issues with Pieces OS, including slow performance with Long Term Memory, problems with shareable links, and difficulties downloading LLM models. Solutions include software updates, temporary workarounds like disabling LTM2, and deleting specific folders. The Pieces team actively investigates and addresses these issues, releasing patches and updates to improve user experience.",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 443,
+          "title": "Unable to generate personal shareable links for 6+ months",
+          "text": "Unable to generate personal shareable links for 6+ months\n### Software\n\nDesktop Application, Web Extension, VS Code, Sharing Web App\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n10.1.12\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI've been unable to generate shareable personal links and utilize the web sharing app since before June '24. I've created an issue about this twice before, and the last time was just completely disregarded and it was closed out.\r\n\r\nHere is the screenshot from within my Pieces Desktop when trying to generate a personal link, as well as generate a GitHub Gist:\r\n\r\n![image](https://github.com/user-attachments/assets/0966a1a9-3076-4d9b-9006-88a14673cc9f)\n## Summary of GitHub Issue Conversation: Shareable Links\n\n**Key Points Raised:**\n\n* Tombinga reported issues with shareable links not working.\n* Mark acknowledged the problem and offered a meeting to discuss it.\n\n**Problems Identified:**\n\n* Stale infrastructure powering shareable links was causing failures.\n* The original issue was fixed, but a new issue with GitHub Gist generation emerged.\n\n**Solutions Proposed/Implemented:**\n\n* Mark investigated the issue and determined the cause.\n* Mark advised Tombinga to clean up their personal cloud or wait for infrastructure upgrades in December.\n* Shareable links were upgraded and included in the December update.\n* Tombinga reported a new issue with GitHub Gist in January.\n* Rutvik requested additional information (logs, software versions) from Tombinga.\n* In March, it was clarified that the Shareable Links feature is still in Beta and has ongoing issues. A v2 is planned.\n\n**Current Status/Outcome:**\n\n* The original shareable link problem has been resolved with infrastructure updates.\n* A new issue exists with GitHub Gist generation. A separate issue has been filed for this problem.\n* Shareable Links v2 is currently being planned.\n\n**Additional notes:**\n\n* It's important to keep in mind that this issue was reported in 2024 and 2025, and I don't have information beyond November 2023. The current status and outcome may have changed since then.\n* Om-Nandurkar reported the same issue in March 2025 and was advised to share additional information for troubleshooting.",
+          "activity_level": 5.04
+        },
+        {
+          "id": 459,
+          "title": "Bug: unable to cancel the download of an LLLM",
+          "text": "Bug: unable to cancel the download of an LLLM\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nlatest\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n![image](https://github.com/user-attachments/assets/6e730898-a168-4571-ab0d-6331c4d389a4)\r\n\r\ni want stop but its not working \r\n\n## Summary of GitHub Issue Conversation\n\n**Key Points Raised:**\n\n* Issue: Download button for Mistral 8 7b model not working for users.\n* Symptoms: Download button unresponsive, stuck on initialization or \"Please wait\".\n* Reproduced by: @AkhilTrivediX and @jaybuidl.\n* Occurred on: Windows and macOS.\n\n**Problems Identified:**\n\n* Bug in the Mistral 8 7b model download functionality.\n* Possible caching issues causing download to get stuck.\n\n**Solutions Proposed/Implemented:**\n\n* **Temporary fix:** Delete all files from `C:/Users/[YOUR-USERNAME]/Documents/com.pieces.os/` and reinstall the Pieces OS and desktop app.\n* **Other fixes attempted without success:** Reinstalling Pieces OS & desktop app without deleting data, reinstalling ollama, disconnecting from internet, restarting machine.\n\n**Current Status/Outcome:**\n\n* Issue acknowledged by @mark-at-pieces.\n* A permanent fix is being developed and will be included in the upcoming Local Large Language Model stack replacement within 2-3 weeks.\n* Users can try the temporary fix or wait for the official update.\n\n**Additional Notes:**\n\n* Real-time communication offered by @mark-at-pieces via their calendar link.\n* Users can provide more information about their machines to aid investigation.",
+          "activity_level": 1.78
+        },
+        {
+          "id": 650,
+          "title": "Long Term Memory still slows down my PC, even after updating to LTM-2",
+          "text": "Long Term Memory still slows down my PC, even after updating to LTM-2\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.2.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nTurning on Long Term Memory has been slowing down my desktop computer, even before LTM-2. After updating today, it still happens. It's most noticeable when I use Slack and Discord, and disabling those apps on LTM doesn't work. Even after switching the Processing Mode to Cloud, as suggested by HRA42 on the Discord server, the lag still occurs. At some point, the total CPU usage went up by over 90%.\n\n![Image](https://github.com/user-attachments/assets/eaef0d65-b19b-41f0-bf8a-f143fa8d1e43)\n\nMy computer specs:\n- CPU: Intel(R) Core(TM) i3-6300 CPU @ 3.80GHz\n- RAM: DDR4 32 GB\n- Graphics: GeForce GTX 950 2 GB\n\nI'm yet to notice significant slowness on other programs, but if I'm getting a lot of lag on those chat apps, I can imagine I would get them too on something heavier like Visual Studio.\n## Summary of the GitHub Issue Conversation\n**Key Points Raised:**\n* High CPU usage while using Pieces OS, particularly with LTM2 enabled.\n* Discord and Microsoft Edge are most affected.\n* Issue occurs on both Windows 10 and 11.\n* Issue seems related to WebView2 and Edge versions.\n\n**Problems Identified:**\n* LTM2 causes high CPU usage, hindering performance.\n* Discord and Edge experience significant lag due to high CPU usage.\n\n**Solutions Proposed/Implemented:**\n* Initial hotfix released.\n* Subsequent patches released for 11.2.2 and v11.2.3.\n* LTM2 disabled temporarily as a workaround.\n\n**Current Status/Outcome:**\n* v11.2.3 seems to have resolved the issue for most users.\n* CPU usage remains high in some cases, but significantly improved.\n* Further investigation ongoing to identify the exact cause.\n\n**Additional Notes:**\n* Moving com.pieces.os/com.pieces.pfd folders to ReFS and creating Symbolic Links reportedly improves performance.\n* Restarting LTM2 can temporarily alleviate the issue.\n\n**Overall, the issue of high CPU usage with LTM2 has been largely resolved with the release of v11.2.3. However, further investigation is ongoing to address remaining cases of high CPU usage.**",
+          "activity_level": 13.63
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    "**Investigate Pieces OS Performance:** Prioritize addressing the recurring issue of slow performance and bugs within Pieces OS, particularly related to Long Term Memory (LTM) and shareable links. This will directly impact a large portion of user complaints.",
+    "**Improve LTM-2 Stability:** While LTM-2 aimed to improve performance, users still report slowdowns. Focus on stabilizing LTM-2 to ensure a smoother user experience.",
+    "**Enhance Shareable Link Functionality:** Address the ongoing issues with shareable links, including the GitHub Gist integration problem. This feature is important for collaboration and user experience.",
+    "**Review LLM Download Process:** Investigate the bug preventing users from canceling LLM downloads. This can be frustrating and disrupt workflow.",
+    "**Gather Detailed System Information:** When users report performance issues, request detailed system specifications to help identify potential correlations and optimize Pieces OS for various hardware configurations.",
+    "**Improve Communication on Beta Features:** Clearly communicate to users which features are in beta and manage expectations regarding potential issues. Provide timelines for full release and bug fixes.",
+    "**Consider a Bug Bounty Program:** Incentivize users to report bugs and security vulnerabilities by implementing a bug bounty program. This can help identify and resolve issues more quickly."
+  ],
   "message": "Daily support report generated successfully."
 }
