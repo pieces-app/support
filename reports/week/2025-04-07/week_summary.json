@@ -1,0 +1,74 @@
+{
+  "success": true,
+  "date_range": {
+    "start": "2025-04-07T00:00:00+00:00",
+    "end": "2025-04-10T21:06:56.548508+00:00"
+  },
+  "summary": {
+    "total_tickets": 1,
+    "resolved_tickets": 0,
+    "open_tickets": 1
+  },
+  "ticket_breakdown": [
+    {
+      "category": "bug",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "os:windows",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:desktop application",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:pieces os",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:triaged",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    }
+  ],
+  "most_active_tickets": [
+    {
+      "number": 663,
+      "title": "Kaspersky Internet Security flags Pieces OS as a virus",
+      "activity_level": 4.2
+    }
+  ],
+  "common_issues": [
+    {
+      "title": "Antivirus software falsely flags Pieces OS as a virus",
+      "description": "Multiple users report antivirus software (Kaspersky, Nod32, Malwarebytes, ESET) blocking Pieces OS downloads or flagging it as malicious. This is likely due to Pieces' newness and its writing of files to the user Documents directory. Workarounds include adding Pieces to the antivirus allowlist or downloading from the Microsoft Store. The Pieces team is working on a permanent solution.",
+      "frequency": 1,
+      "related_issues": [
+        {
+          "id": 663,
+          "title": "Kaspersky Internet Security flags Pieces OS as a virus",
+          "text": "Kaspersky Internet Security flags Pieces OS as a virus\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nPiecesOS_11.2.2.0_x64\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n![Image](https://github.com/user-attachments/assets/160ed12d-f0a1-46be-bf36-05502353405e)\n## GitHub Issue Conversation Summary\n\n**Key Points Raised:**\n\n* Users are experiencing issues downloading/updating Pieces OS due to their antivirus software (Kaspersky, Nod32, Malwerbytes, ESET) flagging it as malicious.\n* The issue seems to be specific to downloads from the Pieces website, as installations from the Microsoft Store work for some users.\n* Anti-virus software is deleting downloaded files or preventing the app from running. \n\n**Problems Identified:**\n\n* False positive detection by antivirus software, potentially due to Pieces' novelty and writing of files to the user Documents directory.\n* Lack of control over the location where user-generated data is stored. \n\n**Solutions Proposed/Implemented:**\n\n* Download and install Pieces OS from the Microsoft Store, where the software is validated by Microsoft.\n* Add the Pieces executable to the antivirus allowlist.\n\n**Current Status/Outcome:**\n\n* The issue persists for some users.\n* The Pieces team is working on a solution to prevent false positive detections.\n* Users currently need to add the executable to their allowlist or download from the Microsoft Store.\n* Future updates will allow users to choose the location for user-generated data storage.",
+          "activity_level": 4.2
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    "Investigate why antivirus software is flagging Pieces OS and work with vendors (Kaspersky, Nod32, Malwarebytes, ESET) to resolve the false positives.",
+    "Provide clear and concise instructions on how to whitelist Pieces OS in common antivirus software.",
+    "Explore giving users the option to change the installation directory for Pieces OS to avoid writing to the user Documents directory.",
+    "Consider prioritizing the development of a permanent solution to prevent false positive detections by antivirus software.",
+    "Monitor the effectiveness of the Microsoft Store as an alternative download source and promote it if it significantly reduces antivirus issues."
+  ],
+  "message": "Daily support report generated successfully."
+}
