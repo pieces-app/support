@@ -2,40 +2,40 @@
   "success": true,
   "date_range": {
     "start": "2025-04-07T00:00:00+00:00",
-    "end": "2025-04-11T13:13:00.215818+00:00"
+    "end": "2025-04-11T21:06:41.931871+00:00"
   },
   "summary": {
-    "total_tickets": 1,
+    "total_tickets": 2,
     "resolved_tickets": 0,
-    "open_tickets": 1
+    "open_tickets": 2
   },
   "ticket_breakdown": [
     {
       "category": "bug",
-      "received": 1,
+      "received": 2,
       "resolved": 0,
-      "pending": 1
+      "pending": 2
     },
     {
       "category": "os:windows",
-      "received": 1,
+      "received": 2,
       "resolved": 0,
-      "pending": 1
+      "pending": 2
     },
     {
       "category": "app:desktop application",
-      "received": 1,
+      "received": 2,
       "resolved": 0,
-      "pending": 1
-    },
-    {
-      "category": "app:pieces os",
-      "received": 1,
-      "resolved": 0,
-      "pending": 1
+      "pending": 2
     },
     {
       "category": "status:triaged",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "app:pieces os",
       "received": 1,
       "resolved": 0,
       "pending": 1
@@ -45,29 +45,41 @@
     {
       "number": 663,
       "title": "Kaspersky Internet Security flags Pieces OS as a virus",
-      "activity_level": 4.2
+      "activity_level": 4.16
+    },
+    {
+      "number": 672,
+      "title": "Invalid Port (at character 18) http://127.0.0.1:null/connect",
+      "activity_level": 3.54
     }
   ],
   "common_issues": [
     {
-      "title": "Antivirus software falsely flags Pieces OS updates",
-      "description": "Multiple antivirus programs (Kaspersky, Nod32, Malwarebytes, ESET) are incorrectly identifying Pieces OS updates as malicious, preventing users from updating. This primarily affects updates downloaded from the Pieces website.  Workarounds include whitelisting Pieces OS in the antivirus software or downloading the app from the Microsoft Store.",
-      "frequency": 1,
+      "title": "Antivirus Software Blocking Pieces OS",
+      "description": "Users report antivirus software, including Kaspersky, Nod32, and Malwarebytes, falsely flagging Pieces OS as malicious, preventing installation and use. Workarounds include adding Pieces OS to the antivirus allow list or downloading from the Microsoft Store. The Pieces team is working on a permanent solution.",
+      "frequency": 2,
       "related_issues": [
+        {
+          "id": 672,
+          "title": "Invalid Port (at character 18) http://127.0.0.1:null/connect",
+          "text": "Invalid Port (at character 18) http://127.0.0.1:null/connect\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nLatest from 17032025 (can't find it)\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nHi I am stuck at the initial stages. Where the desktop app is being initialized. I am at verify dependency connections and it says unable to open pieces core services. \"FormatException: Invalid Port (at character 18) http://127.0.0.1:null/connect.\n\nIt might be an antivirus stopping it. I am not sure. But I have restarted and reinstalled to no effect.\n## Summary of GitHub Issue Conversation\n\n**Key Points Raised:**\n\n* @SherlockSol encountered an issue with Pieces Desktop not launching.\n* They were instructed to check for log files and provide additional information about their hardware and Windows build.\n* Logs and information were provided, but the issue still persisted.\n* @mack-at-pieces requested a video call to troubleshoot live.\n* @uzaxirr reported facing the same issue.\n\n**Problems Identified:**\n\n* Pieces Desktop not launching on @SherlockSol's machine.\n* Unable to reproduce the issue on the Pieces team's side.\n* Root cause of the issue remained unidentified.\n\n**Solutions Proposed/Implemented:**\n\n* Reviewing logs and system information.\n* Scheduling a video call for live troubleshooting.\n\n**Current Status/Outcome:**\n\n* A video call with @SherlockSol is scheduled for further investigation.\n* @uzaxirr's issue was acknowledged and will likely be addressed during the call.\n\n**Additional Notes:**\n\n* The issue is ongoing and requires further investigation.\n* Other users may be experiencing the same issue.",
+          "activity_level": 3.54
+        },
         {
           "id": 663,
           "title": "Kaspersky Internet Security flags Pieces OS as a virus",
-          "text": "Kaspersky Internet Security flags Pieces OS as a virus\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nPiecesOS_11.2.2.0_x64\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n![Image](https://github.com/user-attachments/assets/160ed12d-f0a1-46be-bf36-05502353405e)\n## Summary of GitHub Issue Conversation\n\n**Key Points Raised:**\n\n* Users are experiencing issues with antivirus software (Kaspersky, Nod32, Malwerbytes, ESET) blocking or deleting Pieces OS updates.\n* The issue seems to be specific to updates downloaded from the Pieces website, not the Microsoft Store.\n\n**Problems Identified:**\n\n* Antivirus software mistakenly flags Pieces OS as malicious.\n* This prevents users from updating to the latest version and using the app.\n\n**Solutions Proposed/Implemented:**\n\n* Add Pieces OS to the antivirus whitelist.\n* Download and install Pieces OS from the Microsoft Store, where it has been validated as safe.\n\n**Current Status/Outcome:**\n\n* The issue is ongoing and Pieces is working on a solution to prevent their software from being flagged as malicious by antivirus software.\n* Users can currently avoid the issue by using the Microsoft Store version or by whitelisting Pieces OS in their antivirus software.",
-          "activity_level": 4.2
+          "text": "Kaspersky Internet Security flags Pieces OS as a virus\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nPiecesOS_11.2.2.0_x64\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n![Image](https://github.com/user-attachments/assets/160ed12d-f0a1-46be-bf36-05502353405e)\n## Summary of GitHub Issue Conversation\n\n**Key Points:**\n\n* Users are experiencing issues with antivirus software blocking or deleting Pieces OS during download and installation. \n* Affected antivirus software includes Kaspersky, Nod32, Malwarebytes, and ESET.\n* The issue appears to be related to false positive detection of Pieces OS as malicious.\n\n**Problems Identified:**\n\n* Pieces OS is flagged as a false positive by some antivirus software. \n* This prevents users from downloading, installing, and updating Pieces OS.\n\n**Solutions Proposed/Implemented:**\n\n* Configure antivirus software to allow Pieces OS processes (for Kaspersky). \n* Download Pieces OS and Pieces for Developers from the Microsoft Store, where Microsoft verifies the software is free of malware. \n* Add Pieces OS executable to the antivirus software's allow list.\n\n**Current Status/Outcome:**\n\n* The issue is ongoing and the Pieces team is actively working on a solution to prevent false positive detections. \n* Users can work around the problem by adding Pieces OS to the allow list or downloading from the Microsoft Store. \n\n**Additional Notes:**\n\n* The Pieces team plans to allow users to select the location where user-generated data is stored in the future. This may address concerns about antivirus software flagging the application for writing files to the User/Documents directory. \n\n## Overall\n\nThe issue of antivirus software blocking Pieces OS is a significant inconvenience for users. While workarounds exist, a permanent solution is needed. The Pieces team is actively working on resolving this issue and users are encouraged to stay updated.",
+          "activity_level": 4.16
         }
       ]
     }
   ],
   "recommendations": [
-    "Investigate and resolve the root cause of antivirus software falsely flagging Pieces OS updates.",
-    "Update support documentation and FAQs to include a section on how to whitelist Pieces OS in common antivirus programs.",
-    "Consider proactively reaching out to antivirus vendors like Kaspersky, Nod32, Malwarebytes, and ESET to address the false positive detections.",
-    "Monitor the effectiveness of downloading Pieces OS from the Microsoft Store and promote this method if it consistently avoids antivirus issues."
+    "**Proactively address antivirus compatibility:** Investigate and resolve the false positive detections by antivirus software like Kaspersky, Nod32, and Malwarebytes. This could involve reaching out to antivirus vendors and/or refining Pieces OS's code or installation process.",
+    "**Improve error messaging:** The \"Invalid Port (at character 18) http://127.0.0.1:null/connect\" error message is unclear for users. Provide more user-friendly guidance, potentially suggesting antivirus interference as a possible cause.",
+    "**Document workarounds:** Clearly document workarounds for known issues, such as adding Pieces OS to antivirus allow lists or downloading from the Microsoft Store. Make this information easily accessible to users.",
+    "**Monitor and analyze common issues:** Continuously track and analyze common issues to identify trends and prioritize solutions. This will help to proactively address recurring problems and improve the overall user experience.",
+    "**Consider user feedback:** Explore the possibility of allowing users to choose the location for storing user-generated data, as this has been raised as a potential concern related to antivirus software."
   ],
   "message": "Daily support report generated successfully."
 }
