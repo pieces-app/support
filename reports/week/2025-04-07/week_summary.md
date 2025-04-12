@@ -1,6 +1,6 @@
 # Support Ticket Report
-- Generated: 2025-04-11 21:07:04
-- Period: 2025-04-07 to 2025-04-11
+- Generated: 2025-04-12 05:07:12
+- Period: 2025-04-07 to 2025-04-12
 
 ## Summary
 - **Total Tickets:** 2
@@ -15,7 +15,7 @@
 
 ## Common Issues
 ### 1. Antivirus Software Blocking Pieces OS
-Users report antivirus software, including Kaspersky, Nod32, and Malwarebytes, falsely flagging Pieces OS as malicious, preventing installation and use. Workarounds include adding Pieces OS to the antivirus allow list or downloading from the Microsoft Store. The Pieces team is working on a permanent solution.
+Users report various antivirus software, including Kaspersky, Nod32, Malwarebytes, and ESET, are blocking Pieces OS installation or flagging it as a virus. This is likely due to false positives. Suggested workarounds include adding Pieces OS to the antivirus allow list or downloading it from the Microsoft Store, which might bypass the issue for some users.
 
 **Related Issues:**
 - [#672](https://github.com/pieces-app/support/issues/672): Invalid Port (at character 18) http://127.0.0.1:null/connect
@@ -23,11 +23,11 @@ Users report antivirus software, including Kaspersky, Nod32, and Malwarebytes, f
 
 
 ## Recommendations
-- **Proactively address antivirus compatibility:** Investigate and resolve the false positive detections by antivirus software like Kaspersky, Nod32, and Malwarebytes. This could involve reaching out to antivirus vendors and/or refining Pieces OS's code or installation process.
-- **Improve error messaging:** The "Invalid Port (at character 18) http://127.0.0.1:null/connect" error message is unclear for users. Provide more user-friendly guidance, potentially suggesting antivirus interference as a possible cause.
-- **Document workarounds:** Clearly document workarounds for known issues, such as adding Pieces OS to antivirus allow lists or downloading from the Microsoft Store. Make this information easily accessible to users.
-- **Monitor and analyze common issues:** Continuously track and analyze common issues to identify trends and prioritize solutions. This will help to proactively address recurring problems and improve the overall user experience.
-- **Consider user feedback:** Explore the possibility of allowing users to choose the location for storing user-generated data, as this has been raised as a potential concern related to antivirus software.
+- Investigate and address the false positive triggers with antivirus software like Kaspersky, Nod32, Malwarebytes, and ESET to prevent Pieces OS installation blocks.
+- Troubleshoot and resolve the "Invalid Port (at character 18) http://127.0.0.1:null/connect" error during Pieces OS initialization to improve user experience.
+- Provide clear and accessible guidance on adding Pieces OS to antivirus allow lists or recommend downloading from the Microsoft Store as a workaround for antivirus issues.
+- Investigate the root cause of the "Unable to open Pieces Core Services" error and provide a permanent fix, considering potential antivirus conflicts and software dependencies.
+- Monitor the effectiveness of implemented solutions and update support documentation and communication channels accordingly to keep users informed and minimize recurring issues.
 
 ## Daily Reports
 Here are the daily reports for this week:
