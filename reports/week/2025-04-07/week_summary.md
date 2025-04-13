@@ -1,6 +1,6 @@
 # Support Ticket Report
-- Generated: 2025-04-12 21:06:47
-- Period: 2025-04-07 to 2025-04-12
+- Generated: 2025-04-13 05:12:07
+- Period: 2025-04-07 to 2025-04-13
 
 ## Summary
 - **Total Tickets:** 3
@@ -15,8 +15,8 @@
 | [#672](https://github.com/pieces-app/support/issues/672) | Invalid Port (at character 18) http://127.0.0.1:null/connect | 3.50 |
 
 ## Common Issues
-### 1. Pieces OS Installation and Update Issues
-Users are experiencing issues with Pieces OS installation, updates, and authentication, primarily due to antivirus software falsely flagging it as malicious and potential conflicts with specific Pieces OS versions.  Suggested workarounds include adding Pieces OS to the antivirus allow list, downloading from the Microsoft Store, and waiting for a permanent fix from the Pieces team.
+### 1. Pieces OS Installation and Login Issues
+Users are experiencing issues with Pieces OS installation, updates, and login processes. Antivirus software flagging the app as a false positive, infinite loading on the login page, and problems with Google account linking are among the reported issues. Proposed solutions include whitelisting the app in antivirus settings, downloading from the Microsoft Store, and waiting for a fix from the Pieces team.
 
 **Related Issues:**
 - [#685](https://github.com/pieces-app/support/issues/685): Stuck at https://authentication.pieces.services/
@@ -25,12 +25,12 @@ Users are experiencing issues with Pieces OS installation, updates, and authenti
 
 
 ## Recommendations
-- **Prioritize resolving Pieces OS installation and update issues:** This is the most common issue reported by users and is causing significant friction. Focus on addressing the root cause of antivirus software falsely flagging Pieces OS.
-- **Improve communication with users regarding antivirus conflicts:** Provide clear and concise instructions on how to whitelist Pieces OS in common antivirus software. Consider creating help articles or videos demonstrating the process.
-- **Investigate the authentication issue with Pieces OS 11.3.0:** This issue is preventing users from accessing their accounts and needs to be addressed urgently. Gather more data from affected users and prioritize debugging efforts.
-- **Monitor and address the "Invalid Port" error:** While this issue has a lower frequency, it still impacts users. Investigate the root cause and provide a solution or workaround.
-- **Consider allowing users to choose the installation directory for Pieces OS:** This could potentially mitigate conflicts with antivirus software and provide users with more control over their setup.
-- **Continue to engage with users experiencing issues:** Respond to support tickets promptly and provide regular updates on the progress of bug fixes and improvements.
+- **Prioritize resolution of Pieces OS installation and login issues:** This appears to be the most common problem, impacting multiple users. Focus on addressing antivirus false positives, login page loading errors, and Google account linking problems.
+- **Improve communication around known issues:** Provide clear and concise instructions on how to whitelist Pieces OS in antivirus software. Consider creating a dedicated FAQ or knowledge base article addressing installation and login troubleshooting.
+- **Investigate and resolve the "Invalid Port" error:** This issue, while less frequent, seems to be blocking users from even launching the application. Gather more information from affected users and prioritize finding a solution.
+- **Monitor antivirus software compatibility:**  Given the recurring issue with antivirus software, establish a process for proactively monitoring and addressing compatibility issues with popular antivirus programs.
+- **Gather more detailed user data:** Encourage users to provide system information, logs, and steps to reproduce the issue. This will help in diagnosing and resolving problems more efficiently.
+- **Consider alternative distribution channels:** Given the challenges with antivirus software, explore alternative distribution channels like the Microsoft Store, which might offer a more streamlined installation experience.
 
 ## Daily Reports
 Here are the daily reports for this week:
