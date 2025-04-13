@@ -2,43 +2,43 @@
   "success": true,
   "date_range": {
     "start": "2025-04-07T00:00:00+00:00",
-    "end": "2025-04-13T05:11:40.053553+00:00"
+    "end": "2025-04-13T13:10:30.518096+00:00"
   },
   "summary": {
-    "total_tickets": 3,
+    "total_tickets": 4,
     "resolved_tickets": 0,
-    "open_tickets": 3
+    "open_tickets": 4
   },
   "ticket_breakdown": [
     {
       "category": "bug",
-      "received": 3,
+      "received": 4,
       "resolved": 0,
-      "pending": 3
+      "pending": 4
     },
     {
       "category": "os:windows",
-      "received": 3,
+      "received": 4,
       "resolved": 0,
-      "pending": 3
+      "pending": 4
     },
     {
       "category": "status:new",
-      "received": 1,
+      "received": 2,
       "resolved": 0,
-      "pending": 1
+      "pending": 2
+    },
+    {
+      "category": "app:pieces os",
+      "received": 3,
+      "resolved": 0,
+      "pending": 3
     },
     {
       "category": "app:desktop application",
       "received": 3,
       "resolved": 0,
       "pending": 3
-    },
-    {
-      "category": "app:pieces os",
-      "received": 2,
-      "resolved": 0,
-      "pending": 2
     },
     {
       "category": "status:triaged",
@@ -51,7 +51,12 @@
     {
       "number": 685,
       "title": "Stuck at https://authentication.pieces.services/",
-      "activity_level": 5.68
+      "activity_level": 4.5
+    },
+    {
+      "number": 686,
+      "title": "Pieces OS doesn't start because it's unable to open database due to corruption: LateInitializationError: Field 'database' has not been initialized.",
+      "activity_level": 4.42
     },
     {
       "number": 663,
@@ -66,38 +71,62 @@
   ],
   "common_issues": [
     {
-      "title": "Pieces OS Installation and Login Issues",
-      "description": "Users are experiencing issues with Pieces OS installation, updates, and login processes. Antivirus software flagging the app as a false positive, infinite loading on the login page, and problems with Google account linking are among the reported issues. Proposed solutions include whitelisting the app in antivirus settings, downloading from the Microsoft Store, and waiting for a fix from the Pieces team.",
+      "title": "Pieces OS startup failures on Windows",
+      "description": "Users report Pieces OS failing to launch on Windows due to database corruption, invalid port errors, or authentication issues after updates. Suggested solutions include checking log files, verifying dependencies, and troubleshooting network connectivity. Pieces team is actively investigating and providing support.",
       "frequency": 3,
       "related_issues": [
         {
-          "id": 685,
-          "title": "Stuck at https://authentication.pieces.services/",
-          "text": "Stuck at https://authentication.pieces.services/\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.3.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nAfter updating pieces to latest version, I was loggged out (This was part of the update, which I saw in the update / release notes.). But when I try to log in, always end up at https://authentication.pieces.services/ without moving forward. that page keep loading and nothing happens.\n## Summary of GitHub Issue Conversation\n\n**Issue:** User @AlexanderSLoburev reports being unable to log in after updating to Pieces OS version 11.3.0 on Windows 11. The user is unable to link their Google account and experiences infinite loading on the https://authentication.pieces.services/ login page. \n\n**Key Points:**\n\n* Issue appeared after updating to Pieces OS version 11.3.0\n* User cannot link their Google account\n* Login page https://authentication.pieces.services/ is stuck in an infinite loading loop\n\n**Problems Identified:**\n\n* Potential bug in Pieces OS 11.3.0 related to Google account linking\n* Login process is not functioning properly on https://authentication.pieces.services/\n\n**Solutions Proposed/Implemented:**\n\n* No specific solutions proposed or implemented yet.\n\n**Current Status/Outcome:**\n\n* Issue acknowledged by Pieces support bot.\n* Team member assigned to investigate the issue within 24 hours.\n* User advised to check related issues and resources in the meantime.\n\n**Next Steps:**\n\n* Wait for the assigned team member to investigate and provide further assistance.\n* Monitor the issue thread for updates and potential solutions.",
-          "activity_level": 5.68
+          "id": 686,
+          "title": "Pieces OS doesn't start because it's unable to open database due to corruption: LateInitializationError: Field 'database' has not been initialized.",
+          "text": "Pieces OS doesn't start because it's unable to open database due to corruption: LateInitializationError: Field 'database' has not been initialized.\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.3.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nThe latest version doesn't start. \n\nHere is the log in com.pieces.os/production/Support/logs:\n\n[D]  2025-04-12T16:16:01.605235  Starting OS_Server!\n[D]  2025-04-12T16:16:01.605235  Starting EnvConf\n[D]  2025-04-12T16:16:01.605235  Starting DeploymentInfo\n[D]  2025-04-12T16:16:01.619237  Number: 218\n[D]  2025-04-12T16:16:01.619237  Tag: 11.3.0\n[D]  2025-04-12T16:16:01.619237  Branch: 11.3.0\n[D]  2025-04-12T16:16:01.619237  SHA1: a59a1f114c021e83a6f42e696223dba9a670faa2\n[D]  2025-04-12T16:16:01.619237  WinDeployType: exe\n[D]  2025-04-12T16:16:01.619237  Channel : production\n[D]  2025-04-12T16:16:01.619237  Process ID: 2076\n[D]  Setting Url Protocol Scheme for Inno Setup/ Squirrel Installs\n[D]  2025-04-12T16:16:01.625235  Logging to file: C:\\Users\\antoine\\Documents\\com.pieces.os\\production\\Support/logs/log-04122025.txt\n[D]  2025-04-12T16:16:01.634236  Copying the vocab file to the data directory\n[D]  2025-04-12T16:16:01.634236  Successfully copied the vocab file\n[D]  2025-04-12T16:16:01.634236  Starting OS\n[D]  2025-04-12T16:16:01.660235  Starting OS\n[D]  2025-04-12T16:16:01.660235  Starting UI\n[D]  2025-04-12T16:16:01.665241  UI#builder, hasData: false, hasError: false\n[D]  2025-04-12T16:16:01.665241  stateStream#onListen\n[D]  2025-04-12T16:16:01.665241  OS#boot\n[D]  2025-04-12T16:16:01.665241  OS#attach\n\u001b[38;5;12m[I]\u001b[0m  initializeDataSingletons\n[D]  2025-04-12T16:16:01.991237  Created our Tagify Files Locally.\n[D]  2025-04-12T16:16:01.991237  User added tagify files now exist.\n[D]  Setting WinToast Dismissed Callback\n[D]  Setting WinToast Dismissed Callback\n[D]  Sentry Error Event: 1ba7ab308a4b470ab996b360cc956398\n\u001b[38;5;12m[I]\u001b[0m  _controller.addError Unable to open database due to corruption LateInitializationError: Field 'database' has not been initialized. #0      InternalCouchBaseDatabases.initializeCouchbase (package:database_facade/couchbase/singletons/internal_databases.dart)\n<asynchronous suspension>\n#1      OS.initializeDataSingletons (package:os_server/os.dart:909)\n<asynchronous suspension>\n#2      OS.boot (package:os_server/os.dart:652)\n<asynchronous suspension>\n#3      OS._controller.<anonymous closure>.<anonymous closure>.<anonymous closure> (package:os_server/os.dart:275)\n<asynchronous suspension>\n\n[D]  Sentry Error Event: 2a48d07355694369b880fa84ef743112\n[D]  Sentry Error Event: 9f79ad8b81a1493c955f24b3cf97db7e\n[D]  2025-04-12T16:16:05.956756  UI#builder, hasData: false, hasError: true\n[D]  Windows: onNotificationDismissed: timeout\n[D]  Windows: onNotificationDismissed: \n[D]  Windows: onNotificationDismissed: \n[D]  Windows: Notification Timeout: Went into side panel\n[D]  Windows: onNotificationDismissed: timeout\n[D]  Windows: onNotificationDismissed: \n[D]  Windows: onNotificationDismissed: \n[D]  Windows: Notification Timeout: Went into side panel\n## GitHub Issue Conversation Summary\n\n**Key points raised:**\n\n* User reported an issue with Pieces Desktop not launching on their Windows PC.\n* User provided additional details about the problem.\n\n**Problems identified:**\n\n* User is unable to launch Pieces Desktop.\n\n**Solutions proposed/implemented:**\n\n* Pieces Support Bot flagged the issue and assigned it to the appropriate team member.\n* Pieces Support Bot provided links to potentially helpful resources:\n    * Existing Issues on GitHub\n    * Documentation\n    * YouTube channel\n* No solutions were proposed or implemented yet, as the issue is being looked into by the Pieces team.\n\n**Current status/outcome:**\n\n* The Pieces support team is investigating the issue.\n* The user will receive a follow-up within 24 hours.",
+          "activity_level": 4.42
         },
         {
           "id": 672,
           "title": "Invalid Port (at character 18) http://127.0.0.1:null/connect",
-          "text": "Invalid Port (at character 18) http://127.0.0.1:null/connect\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nLatest from 17032025 (can't find it)\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nHi I am stuck at the initial stages. Where the desktop app is being initialized. I am at verify dependency connections and it says unable to open pieces core services. \"FormatException: Invalid Port (at character 18) http://127.0.0.1:null/connect.\n\nIt might be an antivirus stopping it. I am not sure. But I have restarted and reinstalled to no effect.\n## Summary of GitHub Issue Conversation\n\n**Key Points Raised:**\n\n* SherlockSol is experiencing issues with Pieces Desktop not launching on their Windows PC.\n* The issue has not been able to be reproduced or fully identified.\n\n**Problems Identified:**\n\n* Pieces Desktop is not launching.\n* The cause of the issue is unknown.\n\n**Solutions Proposed/Implemented:**\n\n* **Request for additional information:**\n    * nathan-courtney-pieces requested log files and hardware information from SherlockSol.\n* **Troubleshooting call:**\n    * mack-at-pieces requested a video call with SherlockSol for live troubleshooting.\n\n**Current Status/Outcome:**\n\n* SherlockSol has provided log files and hardware information.\n* A video call with SherlockSol has been scheduled to further troubleshoot the issue.\n* uzaxirr reported experiencing the same issue and has scheduled a video call with the Pieces team.\n\n**Additional Notes:**\n\n* Related issues have been suggested in the conversation for reference.\n\n**Overall:**\n\n* The issue is still ongoing and being actively investigated by the Pieces team. \n* A further troubleshooting call with SherlockSol has been scheduled to gather more information and hopefully identify the cause of the problem.",
+          "text": "Invalid Port (at character 18) http://127.0.0.1:null/connect\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nLatest from 17032025 (can't find it)\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nHi I am stuck at the initial stages. Where the desktop app is being initialized. I am at verify dependency connections and it says unable to open pieces core services. \"FormatException: Invalid Port (at character 18) http://127.0.0.1:null/connect.\n\nIt might be an antivirus stopping it. I am not sure. But I have restarted and reinstalled to no effect.\n## GitHub Issue Summary: Pieces Desktop Crashing\n\n**Issue:** Pieces Desktop crashes on Windows.\n\n**Key Points:**\n\n* User reported crashes without providing specific details.\n* Support bot suggested related issues and resources.\n* Pieces representative requested log files, hardware details, and Windows build number.\n* User provided log files and build number.\n* Pieces representative requested a video call for further troubleshooting.\n* Another user reported the same issue.\n* Pieces representative offered a scheduled video call to assist the second user.\n\n**Problems Identified:**\n\n* Unclear cause of the crash.\n* Difficulty reproducing the issue.\n\n**Solutions Proposed/Implemented:**\n\n* Analyzing log files.\n* Gathering hardware and system information.\n* Scheduling video call for troubleshooting.\n\n**Current Status/Outcome:**\n\n* Investigation ongoing.\n* Second user scheduled for troubleshooting assistance.\n\n**Additional Notes:**\n\n* The issue appears to be affecting multiple users.\n* Pieces is actively investigating and supporting users to resolve the crashes.",
           "activity_level": 3.5
         },
         {
+          "id": 685,
+          "title": "Stuck at https://authentication.pieces.services/",
+          "text": "Stuck at https://authentication.pieces.services/\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.3.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nAfter updating pieces to latest version, I was loggged out (This was part of the update, which I saw in the update / release notes.). But when I try to log in, always end up at https://authentication.pieces.services/ without moving forward. that page keep loading and nothing happens.\n## GitHub Issue Summary: Authentication Issues After Update\n\n**Key Points:**\n\n* @waseem852 created the issue, experiencing authentication problems after a Pieces OS update on Windows 11.\n* @AlexanderSLoburev reported the same issue after an update to version 11.3.0, experiencing infinite loading on the authentication page.\n\n**Problems Identified:**\n\n* Users are unable to link their Google accounts after the update.\n* The authentication page is stuck in an infinite loading loop.\n\n**Proposed/Implemented Solutions:**\n\n* Related issues were suggested for reference.\n*  No explicit solutions were proposed or implemented within the provided conversation segment.\n\n**Current Status/Outcome:**\n\n* Issue remains unresolved. Users are still experiencing authentication challenges.\n* No further updates or information is provided in the conversation snippet.\n\n**Additional Notes:**\n\n* The conversation only includes the initial issue report and acknowledgement from the Pieces support bot.\n* No response or updates from the Pieces team are included in the provided excerpt.",
+          "activity_level": 4.5
+        }
+      ]
+    },
+    {
+      "title": "Pieces OS Startup Issues on Windows",
+      "description": "Users are experiencing difficulties launching Pieces OS on Windows due to antivirus software flagging, database corruption, and dependency connection problems. Solutions include adding Pieces OS to antivirus allow lists, downloading from the Microsoft Store, and reinstalling the application. Pieces team is actively investigating and providing support to resolve these issues.",
+      "frequency": 3,
+      "related_issues": [
+        {
           "id": 663,
           "title": "Kaspersky Internet Security flags Pieces OS as a virus",
-          "text": "Kaspersky Internet Security flags Pieces OS as a virus\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nPiecesOS_11.2.2.0_x64\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n![Image](https://github.com/user-attachments/assets/160ed12d-f0a1-46be-bf36-05502353405e)\n## Summary of GitHub Issue Conversation:\n\n**Key Points Raised:**\n\n* User @crimso is experiencing issues with their antivirus software (Nod32 and Malwarebytes) blocking Pieces OS updates and installations.\n* User @merlauz is also facing similar issues with ESET Antivirus.\n* @crimso confirmed the issue persists even when installing from the Microsoft Store.\n\n**Problems Identified:**\n\n* Certain antivirus software incorrectly flags Pieces OS as a false positive.\n* The issue prevents users from updating and using the latest version of the app.\n* The problem seems to be related to the app writing files to the User/Documents directory.\n\n**Solutions Proposed/Implemented:**\n\n* Manually add the Pieces OS executable to the antivirus allowlist.\n* Download and install from the Microsoft Store, where Microsoft validates the software.\n\n**Current Status/Outcome:**\n\n* The issue remains unresolved.\n* Users are advised to add the executable to their allowlist or download from the Microsoft Store.\n* The Pieces team is actively working on preventing their software from being flagged as malicious by antivirus software.\n* Future updates may allow users to choose where the User/Documents directory is stored.\n\n**Additional Notes:**\n\n* The issue discussion spanned from March 12th, 2025 to April 10th, 2025.\n* The Pieces support bot initially responded with related resources, aiming to help the user.\n* Technical support representative Nathan-Courtney-Pieces offered solutions and explanations throughout the conversation.\n* The user, @crimso, seeks a definitive resolution to the problem and awaits further updates.",
+          "text": "Kaspersky Internet Security flags Pieces OS as a virus\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nPiecesOS_11.2.2.0_x64\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n![Image](https://github.com/user-attachments/assets/160ed12d-f0a1-46be-bf36-05502353405e)\n## GitHub Issue Conversation Summary: Anti-virus Flagging Pieces OS\n\n**Key Points:**\n\n* Users are experiencing their antivirus software (Kaspersky, NOD32, ESET) blocking Pieces OS installation or updates.\n* The app is being flagged as a false positive by antivirus software.\n* This issue is preventing users from using the app.\n\n**Problems:**\n\n* Antivirus software is blocking Pieces OS due to false positives.\n* This is causing user frustration and preventing them from using the app.\n\n**Proposed Solutions:**\n\n* Download Pieces OS from the Microsoft Store, where it has been validated as safe.\n* Add the executable to the antivirus software's allow list.\n* Allow users to choose where user-generated data is stored.\n\n**Current Status/Outcome:**\n\n* The Pieces team is actively working on preventing the app from being flagged as malicious by antivirus software.\n* In the meantime, users can download the app from the Microsoft Store or add the executable to their allow list.\n\n**Additional Notes:**\n\n* This issue is not a bug, but rather a compatibility issue with certain antivirus software.\n* The Pieces team is working on a solution that will allow users to choose where their data is stored, which should help mitigate this issue.",
           "activity_level": 3.73
+        },
+        {
+          "id": 672,
+          "title": "Invalid Port (at character 18) http://127.0.0.1:null/connect",
+          "text": "Invalid Port (at character 18) http://127.0.0.1:null/connect\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nLatest from 17032025 (can't find it)\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nHi I am stuck at the initial stages. Where the desktop app is being initialized. I am at verify dependency connections and it says unable to open pieces core services. \"FormatException: Invalid Port (at character 18) http://127.0.0.1:null/connect.\n\nIt might be an antivirus stopping it. I am not sure. But I have restarted and reinstalled to no effect.\n## GitHub Issue Summary: Pieces Desktop Crashing\n\n**Issue:** Pieces Desktop crashes on Windows.\n\n**Key Points:**\n\n* User reported crashes without providing specific details.\n* Support bot suggested related issues and resources.\n* Pieces representative requested log files, hardware details, and Windows build number.\n* User provided log files and build number.\n* Pieces representative requested a video call for further troubleshooting.\n* Another user reported the same issue.\n* Pieces representative offered a scheduled video call to assist the second user.\n\n**Problems Identified:**\n\n* Unclear cause of the crash.\n* Difficulty reproducing the issue.\n\n**Solutions Proposed/Implemented:**\n\n* Analyzing log files.\n* Gathering hardware and system information.\n* Scheduling video call for troubleshooting.\n\n**Current Status/Outcome:**\n\n* Investigation ongoing.\n* Second user scheduled for troubleshooting assistance.\n\n**Additional Notes:**\n\n* The issue appears to be affecting multiple users.\n* Pieces is actively investigating and supporting users to resolve the crashes.",
+          "activity_level": 3.5
+        },
+        {
+          "id": 686,
+          "title": "Pieces OS doesn't start because it's unable to open database due to corruption: LateInitializationError: Field 'database' has not been initialized.",
+          "text": "Pieces OS doesn't start because it's unable to open database due to corruption: LateInitializationError: Field 'database' has not been initialized.\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.3.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nThe latest version doesn't start. \n\nHere is the log in com.pieces.os/production/Support/logs:\n\n[D]  2025-04-12T16:16:01.605235  Starting OS_Server!\n[D]  2025-04-12T16:16:01.605235  Starting EnvConf\n[D]  2025-04-12T16:16:01.605235  Starting DeploymentInfo\n[D]  2025-04-12T16:16:01.619237  Number: 218\n[D]  2025-04-12T16:16:01.619237  Tag: 11.3.0\n[D]  2025-04-12T16:16:01.619237  Branch: 11.3.0\n[D]  2025-04-12T16:16:01.619237  SHA1: a59a1f114c021e83a6f42e696223dba9a670faa2\n[D]  2025-04-12T16:16:01.619237  WinDeployType: exe\n[D]  2025-04-12T16:16:01.619237  Channel : production\n[D]  2025-04-12T16:16:01.619237  Process ID: 2076\n[D]  Setting Url Protocol Scheme for Inno Setup/ Squirrel Installs\n[D]  2025-04-12T16:16:01.625235  Logging to file: C:\\Users\\antoine\\Documents\\com.pieces.os\\production\\Support/logs/log-04122025.txt\n[D]  2025-04-12T16:16:01.634236  Copying the vocab file to the data directory\n[D]  2025-04-12T16:16:01.634236  Successfully copied the vocab file\n[D]  2025-04-12T16:16:01.634236  Starting OS\n[D]  2025-04-12T16:16:01.660235  Starting OS\n[D]  2025-04-12T16:16:01.660235  Starting UI\n[D]  2025-04-12T16:16:01.665241  UI#builder, hasData: false, hasError: false\n[D]  2025-04-12T16:16:01.665241  stateStream#onListen\n[D]  2025-04-12T16:16:01.665241  OS#boot\n[D]  2025-04-12T16:16:01.665241  OS#attach\n\u001b[38;5;12m[I]\u001b[0m  initializeDataSingletons\n[D]  2025-04-12T16:16:01.991237  Created our Tagify Files Locally.\n[D]  2025-04-12T16:16:01.991237  User added tagify files now exist.\n[D]  Setting WinToast Dismissed Callback\n[D]  Setting WinToast Dismissed Callback\n[D]  Sentry Error Event: 1ba7ab308a4b470ab996b360cc956398\n\u001b[38;5;12m[I]\u001b[0m  _controller.addError Unable to open database due to corruption LateInitializationError: Field 'database' has not been initialized. #0      InternalCouchBaseDatabases.initializeCouchbase (package:database_facade/couchbase/singletons/internal_databases.dart)\n<asynchronous suspension>\n#1      OS.initializeDataSingletons (package:os_server/os.dart:909)\n<asynchronous suspension>\n#2      OS.boot (package:os_server/os.dart:652)\n<asynchronous suspension>\n#3      OS._controller.<anonymous closure>.<anonymous closure>.<anonymous closure> (package:os_server/os.dart:275)\n<asynchronous suspension>\n\n[D]  Sentry Error Event: 2a48d07355694369b880fa84ef743112\n[D]  Sentry Error Event: 9f79ad8b81a1493c955f24b3cf97db7e\n[D]  2025-04-12T16:16:05.956756  UI#builder, hasData: false, hasError: true\n[D]  Windows: onNotificationDismissed: timeout\n[D]  Windows: onNotificationDismissed: \n[D]  Windows: onNotificationDismissed: \n[D]  Windows: Notification Timeout: Went into side panel\n[D]  Windows: onNotificationDismissed: timeout\n[D]  Windows: onNotificationDismissed: \n[D]  Windows: onNotificationDismissed: \n[D]  Windows: Notification Timeout: Went into side panel\n## GitHub Issue Conversation Summary\n\n**Key points raised:**\n\n* User reported an issue with Pieces Desktop not launching on their Windows PC.\n* User provided additional details about the problem.\n\n**Problems identified:**\n\n* User is unable to launch Pieces Desktop.\n\n**Solutions proposed/implemented:**\n\n* Pieces Support Bot flagged the issue and assigned it to the appropriate team member.\n* Pieces Support Bot provided links to potentially helpful resources:\n    * Existing Issues on GitHub\n    * Documentation\n    * YouTube channel\n* No solutions were proposed or implemented yet, as the issue is being looked into by the Pieces team.\n\n**Current status/outcome:**\n\n* The Pieces support team is investigating the issue.\n* The user will receive a follow-up within 24 hours.",
+          "activity_level": 4.42
         }
       ]
     }
   ],
   "recommendations": [
-    "**Prioritize resolution of Pieces OS installation and login issues:** This appears to be the most common problem, impacting multiple users. Focus on addressing antivirus false positives, login page loading errors, and Google account linking problems.",
-    "**Improve communication around known issues:** Provide clear and concise instructions on how to whitelist Pieces OS in antivirus software. Consider creating a dedicated FAQ or knowledge base article addressing installation and login troubleshooting.",
-    "**Investigate and resolve the \"Invalid Port\" error:** This issue, while less frequent, seems to be blocking users from even launching the application. Gather more information from affected users and prioritize finding a solution.",
-    "**Monitor antivirus software compatibility:**  Given the recurring issue with antivirus software, establish a process for proactively monitoring and addressing compatibility issues with popular antivirus programs.",
-    "**Gather more detailed user data:** Encourage users to provide system information, logs, and steps to reproduce the issue. This will help in diagnosing and resolving problems more efficiently.",
-    "**Consider alternative distribution channels:** Given the challenges with antivirus software, explore alternative distribution channels like the Microsoft Store, which might offer a more streamlined installation experience."
+    "Investigate the recurring 'Pieces OS startup failures on Windows' issue, focusing on database corruption, invalid port errors, and authentication issues after updates.",
+    "Develop troubleshooting guides or FAQs addressing common startup issues, including database checks, dependency verification, and network connectivity.",
+    "Collaborate with security software vendors like Kaspersky to address false positive detections of Pieces OS.",
+    "Explore options for improving error messaging and logging related to database interactions and port configurations.",
+    "Consider implementing a more robust authentication recovery mechanism to assist users experiencing login issues after updates."
   ],
   "message": "Daily support report generated successfully."
 }
