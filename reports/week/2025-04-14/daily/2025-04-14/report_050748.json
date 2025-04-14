@@ -1,0 +1,68 @@
+{
+  "success": true,
+  "date_range": {
+    "start": "2025-04-14T00:00:00+00:00",
+    "end": "2025-04-14T05:07:48.559165+00:00"
+  },
+  "summary": {
+    "total_tickets": 1,
+    "resolved_tickets": 0,
+    "open_tickets": 1
+  },
+  "ticket_breakdown": [
+    {
+      "category": "bug",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "os:windows",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:desktop application",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:pieces os",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    }
+  ],
+  "most_active_tickets": [
+    {
+      "number": 685,
+      "title": "Stuck at https://authentication.pieces.services/",
+      "activity_level": 9.5
+    }
+  ],
+  "common_issues": [
+    {
+      "title": "Infinite loading on authentication page after update",
+      "description": "Users on Pieces OS 11.3.0 (Windows) experience infinite loading at https://authentication.pieces.services/ after the update, preventing login. This might be due to a new authentication flow.  Suggested workarounds include logging in via the Pieces toolbar. The Pieces team is investigating and encourages users to share screen recordings for debugging.",
+      "frequency": 1,
+      "related_issues": [
+        {
+          "id": 685,
+          "title": "Stuck at https://authentication.pieces.services/",
+          "text": "Stuck at https://authentication.pieces.services/\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.3.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nAfter updating pieces to latest version, I was loggged out (This was part of the update, which I saw in the update / release notes.). But when I try to log in, always end up at https://authentication.pieces.services/ without moving forward. that page keep loading and nothing happens.\n## Summary of GitHub Issue Conversation\n\n**Key Points:**\n\n* Users are experiencing infinite loading on https://authentication.pieces.services/ after updating to Pieces OS version 11.3.0 on Windows 11. \n* This issue prevents users from linking their Google account.\n* The problem seems to be related to a new authentication flow released the previous week.\n\n**Problems Identified:**\n\n* Infinite loading on the authentication page.\n* Inability to link Google account.\n* Debugging issue due to user refreshing the page manually.\n\n**Solutions Proposed/Implemented:**\n\n* Attempting login from Pieces toolbar.\n* Sharing screen recordings for further investigation.\n* Double-checking all authentication pipelines by the Pieces team.\n\n**Current Status/Outcome:**\n\n* The Pieces team is actively investigating the issue.\n* No finalized solution has been implemented yet.\n* Users are encouraged to share screen recordings for troubleshooting.\n\n**Additional Notes:**\n\n* The issue seems widespread among users who updated to Pieces OS version 11.3.0 on Windows 11.\n* The infinite loading suggests a problem with the authentication flow or server-side issue.",
+          "activity_level": 9.5
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    "**Prioritize the authentication bug:** The infinite loading issue on the authentication page is severely impacting users. Allocate resources to investigate and resolve this urgently.",
+    "**Improve communication:** Keep users informed about the authentication issue, acknowledge the problem, and provide updates on the resolution progress. Consider a temporary banner or notification within the Pieces OS and desktop application.",
+    "**Gather more data:** Request affected users to share screen recordings to help reproduce and debug the authentication issue effectively.",
+    "**Review update procedures:** Investigate why the latest Pieces OS update led to the authentication issue. Review and enhance update testing procedures to prevent similar problems in future releases.",
+    "**Enhance documentation:** Create or update documentation to guide users on alternative login methods, such as using the Pieces toolbar, while the authentication issue is being resolved."
+  ],
+  "message": "Daily support report generated successfully."
+}
