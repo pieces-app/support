@@ -1,0 +1,67 @@
+{
+  "success": true,
+  "date_range": {
+    "start": "2025-04-15T00:00:00+00:00",
+    "end": "2025-04-15T05:07:35.481236+00:00"
+  },
+  "summary": {
+    "total_tickets": 1,
+    "resolved_tickets": 0,
+    "open_tickets": 1
+  },
+  "ticket_breakdown": [
+    {
+      "category": "bug",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "os:windows",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:pieces os",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:triaged",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    }
+  ],
+  "most_active_tickets": [
+    {
+      "number": 686,
+      "title": "Pieces OS doesn't start because it's unable to open database due to corruption: LateInitializationError: Field 'database' has not been initialized.",
+      "activity_level": 11.0
+    }
+  ],
+  "common_issues": [
+    {
+      "title": "Pieces OS Fails to Start Due to Database Corruption",
+      "description": "Users are reporting that Pieces OS fails to start after updating to version 11.3.0. The error message \"LateInitializationError: Field 'database' has not been initialized\" suggests database corruption. A potential fix is included in version 11.3.1 with additional logging. Users experiencing this issue should update to the latest version and provide logs if the problem persists.",
+      "frequency": 1,
+      "related_issues": [
+        {
+          "id": 686,
+          "title": "Pieces OS doesn't start because it's unable to open database due to corruption: LateInitializationError: Field 'database' has not been initialized.",
+          "text": "Pieces OS doesn't start because it's unable to open database due to corruption: LateInitializationError: Field 'database' has not been initialized.\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.3.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nThe latest version doesn't start. \n\nHere is the log in com.pieces.os/production/Support/logs:\n\n[D]  2025-04-12T16:16:01.605235  Starting OS_Server!\n[D]  2025-04-12T16:16:01.605235  Starting EnvConf\n[D]  2025-04-12T16:16:01.605235  Starting DeploymentInfo\n[D]  2025-04-12T16:16:01.619237  Number: 218\n[D]  2025-04-12T16:16:01.619237  Tag: 11.3.0\n[D]  2025-04-12T16:16:01.619237  Branch: 11.3.0\n[D]  2025-04-12T16:16:01.619237  SHA1: a59a1f114c021e83a6f42e696223dba9a670faa2\n[D]  2025-04-12T16:16:01.619237  WinDeployType: exe\n[D]  2025-04-12T16:16:01.619237  Channel : production\n[D]  2025-04-12T16:16:01.619237  Process ID: 2076\n[D]  Setting Url Protocol Scheme for Inno Setup/ Squirrel Installs\n[D]  2025-04-12T16:16:01.625235  Logging to file: C:\\Users\\antoine\\Documents\\com.pieces.os\\production\\Support/logs/log-04122025.txt\n[D]  2025-04-12T16:16:01.634236  Copying the vocab file to the data directory\n[D]  2025-04-12T16:16:01.634236  Successfully copied the vocab file\n[D]  2025-04-12T16:16:01.634236  Starting OS\n[D]  2025-04-12T16:16:01.660235  Starting OS\n[D]  2025-04-12T16:16:01.660235  Starting UI\n[D]  2025-04-12T16:16:01.665241  UI#builder, hasData: false, hasError: false\n[D]  2025-04-12T16:16:01.665241  stateStream#onListen\n[D]  2025-04-12T16:16:01.665241  OS#boot\n[D]  2025-04-12T16:16:01.665241  OS#attach\n\u001b[38;5;12m[I]\u001b[0m  initializeDataSingletons\n[D]  2025-04-12T16:16:01.991237  Created our Tagify Files Locally.\n[D]  2025-04-12T16:16:01.991237  User added tagify files now exist.\n[D]  Setting WinToast Dismissed Callback\n[D]  Setting WinToast Dismissed Callback\n[D]  Sentry Error Event: 1ba7ab308a4b470ab996b360cc956398\n\u001b[38;5;12m[I]\u001b[0m  _controller.addError Unable to open database due to corruption LateInitializationError: Field 'database' has not been initialized. #0      InternalCouchBaseDatabases.initializeCouchbase (package:database_facade/couchbase/singletons/internal_databases.dart)\n<asynchronous suspension>\n#1      OS.initializeDataSingletons (package:os_server/os.dart:909)\n<asynchronous suspension>\n#2      OS.boot (package:os_server/os.dart:652)\n<asynchronous suspension>\n#3      OS._controller.<anonymous closure>.<anonymous closure>.<anonymous closure> (package:os_server/os.dart:275)\n<asynchronous suspension>\n\n[D]  Sentry Error Event: 2a48d07355694369b880fa84ef743112\n[D]  Sentry Error Event: 9f79ad8b81a1493c955f24b3cf97db7e\n[D]  2025-04-12T16:16:05.956756  UI#builder, hasData: false, hasError: true\n[D]  Windows: onNotificationDismissed: timeout\n[D]  Windows: onNotificationDismissed: \n[D]  Windows: onNotificationDismissed: \n[D]  Windows: Notification Timeout: Went into side panel\n[D]  Windows: onNotificationDismissed: timeout\n[D]  Windows: onNotificationDismissed: \n[D]  Windows: onNotificationDismissed: \n[D]  Windows: Notification Timeout: Went into side panel\n## Summary of GitHub Issue Conversation\n\n**Key Points Raised:**\n\n* User `antoine79` experiencing an issue with initial database bootup in Pieces OS.\n* Mark Widman from Pieces support responded and scheduled a debug session.\n* Antoine still faced the issue even after uninstalling and deleting the database folder.\n* Mark informed about a potential fix in the upcoming release (11.3.1) with additional logging.\n\n**Problems Identified:**\n\n* Database bootup issue in Pieces OS, preventing the application from starting.\n\n**Solutions Proposed/Implemented:**\n\n* Mark offered a debug session to troubleshoot the issue.\n* A potential fix with additional logging was implemented in version 11.3.1.\n\n**Current Status/Outcome:**\n\n* User needs to test the latest version (11.3.1) with additional logging to see if the issue persists.\n* A debug session is scheduled for further investigation if the problem continues.",
+          "activity_level": 11.0
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    "**Investigate and resolve database corruption issue:** The most pressing issue is the database corruption preventing Pieces OS from starting. Prioritize identifying the root cause and implementing a permanent fix. ",
+    "**Improve error messaging and logging:** The error message \"LateInitializationError: Field 'database' has not been initialized\" is not user-friendly. Provide clearer error messages and enhance logging to aid in troubleshooting. ",
+    "**Consider a database recovery mechanism:** Explore options for database recovery or repair to minimize data loss and downtime for users experiencing corruption issues.",
+    "**Monitor the effectiveness of version 11.3.1:** Track the number of users still encountering the issue after updating to ensure the implemented fix is effective. "
+  ],
+  "message": "Daily support report generated successfully."
+}
