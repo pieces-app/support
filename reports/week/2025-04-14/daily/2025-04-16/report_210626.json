@@ -1,0 +1,69 @@
+{
+  "success": true,
+  "date_range": {
+    "start": "2025-04-16T00:00:00+00:00",
+    "end": "2025-04-16T21:06:26.888591+00:00"
+  },
+  "summary": {
+    "total_tickets": 1,
+    "resolved_tickets": 0,
+    "open_tickets": 1
+  },
+  "ticket_breakdown": [
+    {
+      "category": "bug",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "os:windows",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:desktop application",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:triaged",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    }
+  ],
+  "most_active_tickets": [
+    {
+      "number": 672,
+      "title": "Invalid Port (at character 18) http://127.0.0.1:null/connect",
+      "activity_level": 4.16
+    }
+  ],
+  "common_issues": [
+    {
+      "title": "Invalid Port Error",
+      "description": "Users are encountering an \"Invalid Port\" error during the Pieces desktop app initialization. This issue arises when the app attempts to connect to Pieces core services but fails due to an invalid port configuration. Potential solutions include verifying firewall settings, ensuring the Pieces app is allowed to communicate on the network, and checking for any conflicting applications.",
+      "frequency": 1,
+      "related_issues": [
+        {
+          "id": 672,
+          "title": "Invalid Port (at character 18) http://127.0.0.1:null/connect",
+          "text": "Invalid Port (at character 18) http://127.0.0.1:null/connect\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nLatest from 17032025 (can't find it)\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nHi I am stuck at the initial stages. Where the desktop app is being initialized. I am at verify dependency connections and it says unable to open pieces core services. \"FormatException: Invalid Port (at character 18) http://127.0.0.1:null/connect.\n\nIt might be an antivirus stopping it. I am not sure. But I have restarted and reinstalled to no effect.\nError generating summary: Cannot get the response text.\nCannot get the Candidate text.\nResponse candidate content has no parts (and thus no text). The candidate is likely blocked by the safety filters.\nContent:\n{}\nCandidate:\n{\n  \"content\": {},\n  \"finish_reason\": \"SAFETY\",\n  \"safety_ratings\": [\n    {\n      \"category\": \"HARM_CATEGORY_HATE_SPEECH\",\n      \"probability\": \"NEGLIGIBLE\",\n      \"probability_score\": 0.18457031,\n      \"severity\": \"HARM_SEVERITY_MEDIUM\",\n      \"severity_score\": 0.45507812\n    },\n    {\n      \"category\": \"HARM_CATEGORY_DANGEROUS_CONTENT\",\n      \"probability\": \"MEDIUM\",\n      \"blocked\": true,\n      \"probability_score\": 0.64453125,\n      \"severity\": \"HARM_SEVERITY_LOW\",\n      \"severity_score\": 0.28515625\n    },\n    {\n      \"category\": \"HARM_CATEGORY_HARASSMENT\",\n      \"probability\": \"NEGLIGIBLE\",\n      \"probability_score\": 0.040771484,\n      \"severity\": \"HARM_SEVERITY_NEGLIGIBLE\",\n      \"severity_score\": 0.09423828\n    },\n    {\n      \"category\": \"HARM_CATEGORY_SEXUALLY_EXPLICIT\",\n      \"probability\": \"NEGLIGIBLE\",\n      \"probability_score\": 0.01586914,\n      \"severity\": \"HARM_SEVERITY_NEGLIGIBLE\",\n      \"severity_score\": 0.05493164\n    }\n  ]\n}\nResponse:\n{\n  \"candidates\": [\n    {\n      \"content\": {},\n      \"finish_reason\": \"SAFETY\",\n      \"safety_ratings\": [\n        {\n          \"category\": \"HARM_CATEGORY_HATE_SPEECH\",\n          \"probability\": \"NEGLIGIBLE\",\n          \"probability_score\": 0.18457031,\n          \"severity\": \"HARM_SEVERITY_MEDIUM\",\n          \"severity_score\": 0.45507812\n        },\n        {\n          \"category\": \"HARM_CATEGORY_DANGEROUS_CONTENT\",\n          \"probability\": \"MEDIUM\",\n          \"blocked\": true,\n          \"probability_score\": 0.64453125,\n          \"severity\": \"HARM_SEVERITY_LOW\",\n          \"severity_score\": 0.28515625\n        },\n        {\n          \"category\": \"HARM_CATEGORY_HARASSMENT\",\n          \"probability\": \"NEGLIGIBLE\",\n          \"probability_score\": 0.040771484,\n          \"severity\": \"HARM_SEVERITY_NEGLIGIBLE\",\n          \"severity_score\": 0.09423828\n        },\n        {\n          \"category\": \"HARM_CATEGORY_SEXUALLY_EXPLICIT\",\n          \"probability\": \"NEGLIGIBLE\",\n          \"probability_score\": 0.01586914,\n          \"severity\": \"HARM_SEVERITY_NEGLIGIBLE\",\n          \"severity_score\": 0.05493164\n        }\n      ]\n    }\n  ],\n  \"usage_metadata\": {\n    \"prompt_token_count\": 1269,\n    \"total_token_count\": 1269\n  },\n  \"model_version\": \"gemini-1.0-pro-002\"\n}",
+          "activity_level": 4.16
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    "**Investigate and resolve the 'Invalid Port' error:** This issue appears to be the primary concern for users. Prioritize identifying the root cause and providing a solution. Update documentation or FAQs to address this common problem.",
+    "**Improve communication about Pieces OS version:** Ensure users understand how to locate and provide their Pieces OS version, as this information is crucial for troubleshooting.",
+    "**Review and address potential firewall and antivirus conflicts:** Guide users on configuring their security software to avoid interference with the Pieces desktop app.",
+    "**Gather more information about the 'Invalid Port' error:** Analyze logs and error messages to pinpoint the source of the port configuration issue. Consider collecting user feedback on their network setup and any recent software changes.",
+    "**Develop a system for tracking and prioritizing common issues:** Implement a process to identify recurring problems and allocate resources effectively for timely resolution.",
+    "**Enhance error messages:** Provide more informative and user-friendly error messages to help users understand and troubleshoot issues independently."
+  ],
+  "message": "Daily support report generated successfully."
+}
