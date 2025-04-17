@@ -1,0 +1,106 @@
+{
+  "success": true,
+  "date_range": {
+    "start": "2025-04-15T00:00:00+00:00",
+    "end": "2025-04-15T21:06:37.795445+00:00"
+  },
+  "summary": {
+    "total_tickets": 3,
+    "resolved_tickets": 3,
+    "open_tickets": 0
+  },
+  "ticket_breakdown": [
+    {
+      "category": "bug",
+      "received": 3,
+      "resolved": 3,
+      "pending": 0
+    },
+    {
+      "category": "app:desktop application",
+      "received": 2,
+      "resolved": 2,
+      "pending": 0
+    },
+    {
+      "category": "os:macos",
+      "received": 2,
+      "resolved": 2,
+      "pending": 0
+    },
+    {
+      "category": "app:pieces os",
+      "received": 3,
+      "resolved": 3,
+      "pending": 0
+    },
+    {
+      "category": "status:triaged",
+      "received": 2,
+      "resolved": 2,
+      "pending": 0
+    },
+    {
+      "category": "os:windows",
+      "received": 1,
+      "resolved": 1,
+      "pending": 0
+    },
+    {
+      "category": "duplicate",
+      "received": 1,
+      "resolved": 1,
+      "pending": 0
+    }
+  ],
+  "most_active_tickets": [
+    {
+      "number": 686,
+      "title": "Pieces OS doesn't start because it's unable to open database due to corruption: LateInitializationError: Field 'database' has not been initialized.",
+      "activity_level": 12.92
+    },
+    {
+      "number": 688,
+      "title": "Pieces OS doesn't start due to database corruption: LateInitializationError: Field 'database' has not been initialized. #686",
+      "activity_level": 5.68
+    },
+    {
+      "number": 687,
+      "title": "Application Crash on Startup",
+      "activity_level": 5.6
+    }
+  ],
+  "common_issues": [
+    {
+      "title": "Pieces OS Database Corruption on Startup",
+      "description": "Users report Pieces OS failing to start due to database corruption on macOS and Windows.  Error messages indicate database initialization failure.  Solutions include updating to the latest version, deleting the database folder, and ensuring CPU compatibility (AVX2 support).",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 687,
+          "title": "Application Crash on Startup",
+          "text": "Application Crash on Startup\n### Checked for Existing Issues?\n\n- [ ] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n11.0.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nUpon launching the application, it crashes immediately with an error message stating \"Unexpected error occurred.\" This issue started occurring after updating to version 11.0.0. The crash seems to be related to the new plugin integration. Steps to reproduce:\n\n\n## GitHub Issue Summary\n\n**Key Points Raised:**\n\n* @moazzem-pixel experienced the Pieces application crashing on their macOS 12.3 MacBook Air (M2) after updating to version 11.3.1.\n* Previous version (10.9.5) worked without issues.\n* Crash logs and error messages were provided.\n\n**Problems Identified:**\n\n* The application crashed upon launch.\n\n**Solutions Proposed/Implemented:**\n\n* @mark-at-pieces suggested checking a similar issue (#686) and potentially scheduling a support call.\n* The issue was resolved with the release of version 11.3.2.\n\n**Current Status/Outcome:**\n\n* The issue has been resolved with the update to version 11.3.2. \n* Users are encouraged to reopen the ticket if the issue persists after updating.",
+          "activity_level": 5.6
+        },
+        {
+          "id": 688,
+          "title": "Pieces OS doesn't start due to database corruption: LateInitializationError: Field 'database' has not been initialized. #686",
+          "text": "Pieces OS doesn't start due to database corruption: LateInitializationError: Field 'database' has not been initialized. #686\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\nEarly Access Program\n\n### Early Access Program\n\n- [x] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nPieces OS fails to start because it is unable to open the database due to corruption. The error message displayed is: LateInitializationError: Field 'database' has not been initialized.\n\nSteps to Reproduce:\n\nAttempt to start Pieces OS on macOS.\nObserve the error message indicating database corruption.\nExpected Behavior: I expected Pieces OS to start normally and access the database without any issues.\n## GitHub Conversation Summary:\n\n**Problem:** moazzem-pixel reported an issue with their Pieces OS unable to start due to database corruption.\n\n**Key Points:**\n* The issue was automatically tagged and routed to the proper team for investigation within 24 hours.\n* Related issue suggestions were provided for potential resolution.\n* Additional resources were shared to assist with identifying solutions.\n\n**Solution:** The user was directed to continue discussion on a pre-existing, related issue covering the same topic: https://github.com/pieces-app/support/issues/686\n\n**Outcome:** The user's conversation will be moved to the relevant thread for centralized discussion and coordinated troubleshooting.\n\n**Current Status:** The issue remains open, with further discussion expected.",
+          "activity_level": 5.68
+        },
+        {
+          "id": 686,
+          "title": "Pieces OS doesn't start because it's unable to open database due to corruption: LateInitializationError: Field 'database' has not been initialized.",
+          "text": "Pieces OS doesn't start because it's unable to open database due to corruption: LateInitializationError: Field 'database' has not been initialized.\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.3.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nThe latest version doesn't start. \n\nHere is the log in com.pieces.os/production/Support/logs:\n\n[D]  2025-04-12T16:16:01.605235  Starting OS_Server!\n[D]  2025-04-12T16:16:01.605235  Starting EnvConf\n[D]  2025-04-12T16:16:01.605235  Starting DeploymentInfo\n[D]  2025-04-12T16:16:01.619237  Number: 218\n[D]  2025-04-12T16:16:01.619237  Tag: 11.3.0\n[D]  2025-04-12T16:16:01.619237  Branch: 11.3.0\n[D]  2025-04-12T16:16:01.619237  SHA1: a59a1f114c021e83a6f42e696223dba9a670faa2\n[D]  2025-04-12T16:16:01.619237  WinDeployType: exe\n[D]  2025-04-12T16:16:01.619237  Channel : production\n[D]  2025-04-12T16:16:01.619237  Process ID: 2076\n[D]  Setting Url Protocol Scheme for Inno Setup/ Squirrel Installs\n[D]  2025-04-12T16:16:01.625235  Logging to file: C:\\Users\\antoine\\Documents\\com.pieces.os\\production\\Support/logs/log-04122025.txt\n[D]  2025-04-12T16:16:01.634236  Copying the vocab file to the data directory\n[D]  2025-04-12T16:16:01.634236  Successfully copied the vocab file\n[D]  2025-04-12T16:16:01.634236  Starting OS\n[D]  2025-04-12T16:16:01.660235  Starting OS\n[D]  2025-04-12T16:16:01.660235  Starting UI\n[D]  2025-04-12T16:16:01.665241  UI#builder, hasData: false, hasError: false\n[D]  2025-04-12T16:16:01.665241  stateStream#onListen\n[D]  2025-04-12T16:16:01.665241  OS#boot\n[D]  2025-04-12T16:16:01.665241  OS#attach\n\u001b[38;5;12m[I]\u001b[0m  initializeDataSingletons\n[D]  2025-04-12T16:16:01.991237  Created our Tagify Files Locally.\n[D]  2025-04-12T16:16:01.991237  User added tagify files now exist.\n[D]  Setting WinToast Dismissed Callback\n[D]  Setting WinToast Dismissed Callback\n[D]  Sentry Error Event: 1ba7ab308a4b470ab996b360cc956398\n\u001b[38;5;12m[I]\u001b[0m  _controller.addError Unable to open database due to corruption LateInitializationError: Field 'database' has not been initialized. #0      InternalCouchBaseDatabases.initializeCouchbase (package:database_facade/couchbase/singletons/internal_databases.dart)\n<asynchronous suspension>\n#1      OS.initializeDataSingletons (package:os_server/os.dart:909)\n<asynchronous suspension>\n#2      OS.boot (package:os_server/os.dart:652)\n<asynchronous suspension>\n#3      OS._controller.<anonymous closure>.<anonymous closure>.<anonymous closure> (package:os_server/os.dart:275)\n<asynchronous suspension>\n\n[D]  Sentry Error Event: 2a48d07355694369b880fa84ef743112\n[D]  Sentry Error Event: 9f79ad8b81a1493c955f24b3cf97db7e\n[D]  2025-04-12T16:16:05.956756  UI#builder, hasData: false, hasError: true\n[D]  Windows: onNotificationDismissed: timeout\n[D]  Windows: onNotificationDismissed: \n[D]  Windows: onNotificationDismissed: \n[D]  Windows: Notification Timeout: Went into side panel\n[D]  Windows: onNotificationDismissed: timeout\n[D]  Windows: onNotificationDismissed: \n[D]  Windows: onNotificationDismissed: \n[D]  Windows: Notification Timeout: Went into side panel\n## GitHub Issue Conversation Summary:\n\n**Key Points Raised:**\n\n* Antoine, a user, experienced an issue with the initial boot-up of his database.\n* The issue persisted even after uninstalling and deleting the database folder.\n* The user was using an Intel CPU i7-2600 which doesn't support AVX2, causing problems with CouchbaseLiteVectorSearch extension.\n\n**Problem Identified:**\n\n* Initial boot-up database error due to corrupted or missing database files.\n* Lack of AVX2 support in the user's CPU causing compatibility issues.\n\n**Solutions Proposed/Implemented:**\n\n* Mark, a Pieces support representative, suggested the user delete the entire database folder.\n* Mark investigated the issue internally and proposed a potential fix with additional logging.\n* A new version (11.3.1) with the fix was released.\n* Antoine identified the core issue as the missing \"com.pieces.os\\production\\Pieces\\couchbase.cblite2\" folder and the lack of AVX2 support on his CPU.\n* Mark planned to release a new version (11.3.2) addressing these issues.\n\n**Current Status/Outcome:**\n\n* Version 11.3.2 was released, fixing the database error and addressing compatibility issues with older CPUs.\n\n**Additional Notes:**\n\n* This summary highlights the collaborative effort between the user and Pieces support in identifying and resolving the issue. \n* It demonstrates the value of detailed troubleshooting information provided by Antoine, enabling Mark to pinpoint the root cause.",
+          "activity_level": 12.92
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    "\"Investigate and address the root cause of database corruption issues to prevent recurrence.\"",
+    "\"Improve communication around CPU compatibility requirements (AVX2 support) to avoid similar issues.\"",
+    "\"Consider providing a more user-friendly way to resolve database corruption, such as a built-in repair tool.\""
+  ],
+  "message": "Daily support report generated successfully."
+}
