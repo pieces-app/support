@@ -32,5 +32,14 @@ Users reported unresponsiveness and errors with the Pieces plugin for UltraEdit 
 ## Daily Reports
 Here are the daily reports for this week:
 
-- [report_131045](daily/2025-01-13/report_131045.md)
-- [report_210557](daily/2025-01-13/report_210557.md)
+- [report_210608](daily/2025-01-14/report_210608.md)
+- [report_210557](daily/2025-01-15/report_210557.md)
+- [report_130931](daily/2025-01-15/report_130931.md)
+- [report_210557](daily/2025-01-16/report_210557.md)
+- [report_050643](daily/2025-01-16/report_050643.md)
+- [report_130918](daily/2025-01-16/report_130918.md)
+- [report_130901](daily/2025-01-17/report_130901.md)
+- [report_210610](daily/2025-01-17/report_210610.md)
+- [report_050629](daily/2025-01-17/report_050629.md)
+- [report_210628](daily/2025-01-18/report_210628.md)
+- [report_130733](daily/2025-01-18/report_130733.md)
