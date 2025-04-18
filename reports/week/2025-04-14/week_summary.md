@@ -1,6 +1,6 @@
 # Support Ticket Report
-- Generated: 2025-04-17 21:08:06
-- Period: 2025-04-14 to 2025-04-17
+- Generated: 2025-04-18 05:08:42
+- Period: 2025-04-14 to 2025-04-18
 
 ## Summary
 - **Total Tickets:** 7
@@ -12,47 +12,50 @@
 |---------|-------|----------------|
 | [#685](https://github.com/pieces-app/support/issues/685) | Stuck at https://authentication.pieces.services/ | 12.17 |
 | [#686](https://github.com/pieces-app/support/issues/686) | Pieces OS doesn't start because it's unable to open database due to corruption: LateInitializationError: Field 'database' has not been initialized. | 10.51 |
-| [#610](https://github.com/pieces-app/support/issues/610) | Pieces Desktop app, account linking never acheived for several years? | 6.50 |
-| [#691](https://github.com/pieces-app/support/issues/691) | OS: login does not work ( /os/sign_in HTTP 500) | 5.68 |
+| [#691](https://github.com/pieces-app/support/issues/691) | OS: login does not work ( /os/sign_in HTTP 500) | 6.94 |
+| [#610](https://github.com/pieces-app/support/issues/610) | Pieces Desktop app, account linking never acheived for several years? | 6.48 |
 | [#672](https://github.com/pieces-app/support/issues/672) | Invalid Port (at character 18) http://127.0.0.1:null/connect | 4.13 |
 
 ## Common Issues
-### 1. Pieces OS Authentication Issues
-Users reported various authentication issues, including infinite loading loops and HTTP 500 errors, primarily on Windows and Linux systems after version 11.3.0 update. Solutions involved bug fixes, account resets, and waiting for new authentication service releases.
+### 1. Pieces OS Login and Database Errors
+Users reported issues with login failures and database corruption after updating to Pieces OS 11.3.x.  Login issues involved infinite loading screens and 500 errors. Database errors prevented application launch. Solutions included bug fixes, database resets, and addressing AVX2 CPU compatibility.
+
+**Related Issues:**
+- [#691](https://github.com/pieces-app/support/issues/691): OS: login does not work ( /os/sign_in HTTP 500)
+- [#685](https://github.com/pieces-app/support/issues/685): Stuck at https://authentication.pieces.services/
+- [#686](https://github.com/pieces-app/support/issues/686): Pieces OS doesn't start because it's unable to open database due to corruption: LateInitializationError: Field 'database' has not been initialized.
+
+### 2. Pieces OS login and account linking issues
+Users reported various login and account linking problems, including infinite loading, 500 errors, and single account linking limitations. These issues were often tied to specific Pieces OS versions or platforms. Solutions involved bug fixes, manual account merging by support, and the development of a new authentication system.
 
 **Related Issues:**
 - [#610](https://github.com/pieces-app/support/issues/610): Pieces Desktop app, account linking never acheived for several years?
 - [#685](https://github.com/pieces-app/support/issues/685): Stuck at https://authentication.pieces.services/
 - [#691](https://github.com/pieces-app/support/issues/691): OS: login does not work ( /os/sign_in HTTP 500)
 
-### 2. Pieces OS and Desktop App Installation Issues
-Users reported issues with Pieces OS and Desktop App installation and startup on Windows and Linux. Problems included invalid port errors, database corruption, and login failures. Solutions involved running installations with admin rights, manual folder creation, and updates addressing hardware compatibility and installation processes.
+### 3. Pieces OS Startup and Authentication Issues
+Users reported issues with Pieces OS failing to start or encountering authentication errors. Problems included invalid port errors, database corruption, and HTTP 500 errors during login. Solutions involved ensuring admin privileges during installation, addressing database dependencies, and ongoing investigation by the Pieces support team.
 
 **Related Issues:**
 - [#672](https://github.com/pieces-app/support/issues/672): Invalid Port (at character 18) http://127.0.0.1:null/connect
 - [#686](https://github.com/pieces-app/support/issues/686): Pieces OS doesn't start because it's unable to open database due to corruption: LateInitializationError: Field 'database' has not been initialized.
 - [#691](https://github.com/pieces-app/support/issues/691): OS: login does not work ( /os/sign_in HTTP 500)
 
-### 3. Pieces OS Database Corruption on Startup
-Users are experiencing crashes or failures to launch Pieces OS due to database corruption. The issue appears across different OS versions (11.0.0, 11.3.0, 11.3.1) and operating systems (macOS, Windows). Error messages point to an uninitialized database. Proposed solutions include bug fixes in later versions (11.3.2) and manually creating missing subfolders.
+### 4. Pieces OS Crash on Startup: Database Corruption
+Users report Pieces OS crashing on startup due to database corruption on macOS and Windows. Error messages indicate failure to initialize the database. Issue linked to new plugin integration, missing subfolders in database directory, and AVX2 CPU incompatibility. Solutions include updating to the latest version (11.3.2), which addresses AVX2 dependency and includes fixes for database initialization.
 
 **Related Issues:**
 - [#687](https://github.com/pieces-app/support/issues/687): Application Crash on Startup
-- [#686](https://github.com/pieces-app/support/issues/686): Pieces OS doesn't start because it's unable to open database due to corruption: LateInitializationError: Field 'database' has not been initialized.
 - [#688](https://github.com/pieces-app/support/issues/688): Pieces OS doesn't start due to database corruption: LateInitializationError: Field 'database' has not been initialized. #686
+- [#686](https://github.com/pieces-app/support/issues/686): Pieces OS doesn't start because it's unable to open database due to corruption: LateInitializationError: Field 'database' has not been initialized.
 
 
 ## Recommendations
-- **Prioritize Authentication Issues:** Allocate additional resources to address the high volume of authentication-related tickets, particularly those stemming from the 11.3.0 update.
-- **Improve Installation Experience:** Investigate and resolve issues related to installation and startup failures on Windows and Linux, focusing on admin rights, folder creation, and hardware compatibility.
-- **Address Database Corruption:** Implement robust solutions to prevent and resolve database corruption issues, which are causing crashes and startup failures across multiple OS versions.
-- **Review Account Linking Process:** Simplify and streamline the account linking process to prevent issues with simultaneous Google and GitHub account connections.
-- **Enhance Documentation:** Update installation guides to explicitly mention admin rights requirements and promote MSIX/Winget installation methods for Pieces OS and Desktop App.
-- **Proactive Communication:** Keep users informed about ongoing issues, planned fixes, and estimated resolution times, especially for high-impact problems like authentication failures and database corruption.
-- **Monitor New Releases:** Pay close attention to support tickets following new releases, like 11.3.0, to quickly identify and address any emerging issues or regressions.
-- **Gather Detailed Logs:** Encourage users to provide comprehensive logs and system information when reporting issues to facilitate faster troubleshooting and resolution.
-- **Consider Automated Testing:** Implement automated testing for critical functionalities, such as installation, authentication, and database interaction, to catch issues early in the development cycle.
-- **Collect User Feedback:** Establish channels for gathering user feedback on support experiences to identify areas for improvement and enhance overall satisfaction.
+- **Prioritize database and authentication issues:** The most frequent and active support tickets revolve around Pieces OS login, account linking, and database errors. Allocating more resources to investigate and resolve these root causes will significantly impact overall support volume.
+- **Investigate platform-specific problems:** Several issues are reported specifically on Windows and Linux. Focused testing and debugging on these platforms can help identify and address platform-specific bugs.
+- **Improve documentation for account linking and installation:** Issues related to account linking and installation (like the invalid port error) suggest a need for clearer documentation. Providing step-by-step guides and troubleshooting tips can empower users to resolve these issues independently.
+- **Proactively address CPU compatibility:** The AVX2 CPU incompatibility issue caused significant problems. Implementing a system to detect incompatible hardware and offer alternative solutions or guidance can prevent similar issues in the future.
+- **Monitor and analyze support trends:** Regularly analyze support data to identify recurring issues, emerging trends, and areas for improvement. This will enable proactive problem-solving and resource allocation for optimal support operations.
 
 ## Daily Reports
 Here are the daily reports for this week:
