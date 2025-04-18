@@ -1,5 +1,5 @@
 # Support Ticket Report
-- Generated: 2025-04-18 05:08:42
+- Generated: 2025-04-18 13:12:59
 - Period: 2025-04-14 to 2025-04-18
 
 ## Summary
@@ -10,52 +10,55 @@
 ## 5 Most Active Tickets
 | Issue # | Title | Activity Level |
 |---------|-------|----------------|
-| [#685](https://github.com/pieces-app/support/issues/685) | Stuck at https://authentication.pieces.services/ | 12.17 |
-| [#686](https://github.com/pieces-app/support/issues/686) | Pieces OS doesn't start because it's unable to open database due to corruption: LateInitializationError: Field 'database' has not been initialized. | 10.51 |
-| [#691](https://github.com/pieces-app/support/issues/691) | OS: login does not work ( /os/sign_in HTTP 500) | 6.94 |
+| [#685](https://github.com/pieces-app/support/issues/685) | Stuck at https://authentication.pieces.services/ | 11.51 |
+| [#686](https://github.com/pieces-app/support/issues/686) | Pieces OS doesn't start because it's unable to open database due to corruption: LateInitializationError: Field 'database' has not been initialized. | 9.83 |
+| [#691](https://github.com/pieces-app/support/issues/691) | OS: login does not work ( /os/sign_in HTTP 500) | 8.20 |
 | [#610](https://github.com/pieces-app/support/issues/610) | Pieces Desktop app, account linking never acheived for several years? | 6.48 |
 | [#672](https://github.com/pieces-app/support/issues/672) | Invalid Port (at character 18) http://127.0.0.1:null/connect | 4.13 |
 
 ## Common Issues
-### 1. Pieces OS Login and Database Errors
-Users reported issues with login failures and database corruption after updating to Pieces OS 11.3.x.  Login issues involved infinite loading screens and 500 errors. Database errors prevented application launch. Solutions included bug fixes, database resets, and addressing AVX2 CPU compatibility.
+### 1. Authentication and Database Issues in Pieces OS
+Users reported issues with login and database corruption after updating to Pieces OS 11.3.0. Authentication issues were resolved with a hotfix. Database problems were linked to missing AVX2 support and fixed in version 11.3.2. Users facing similar issues should update to the latest version or provide detailed logs for support.
 
 **Related Issues:**
 - [#691](https://github.com/pieces-app/support/issues/691): OS: login does not work ( /os/sign_in HTTP 500)
 - [#685](https://github.com/pieces-app/support/issues/685): Stuck at https://authentication.pieces.services/
 - [#686](https://github.com/pieces-app/support/issues/686): Pieces OS doesn't start because it's unable to open database due to corruption: LateInitializationError: Field 'database' has not been initialized.
 
-### 2. Pieces OS login and account linking issues
-Users reported various login and account linking problems, including infinite loading, 500 errors, and single account linking limitations. These issues were often tied to specific Pieces OS versions or platforms. Solutions involved bug fixes, manual account merging by support, and the development of a new authentication system.
+### 2. Authentication Issues in Pieces OS
+Users reported issues with account linking and login failures, particularly after updating to version 11.3.0. The authentication process would get stuck, resulting in an error or infinite loading. The Pieces team identified issues in the authentication pipeline and deployed fixes. Users facing persistent problems were advised to provide support logs for further assistance.
 
 **Related Issues:**
 - [#610](https://github.com/pieces-app/support/issues/610): Pieces Desktop app, account linking never acheived for several years?
 - [#685](https://github.com/pieces-app/support/issues/685): Stuck at https://authentication.pieces.services/
 - [#691](https://github.com/pieces-app/support/issues/691): OS: login does not work ( /os/sign_in HTTP 500)
 
-### 3. Pieces OS Startup and Authentication Issues
-Users reported issues with Pieces OS failing to start or encountering authentication errors. Problems included invalid port errors, database corruption, and HTTP 500 errors during login. Solutions involved ensuring admin privileges during installation, addressing database dependencies, and ongoing investigation by the Pieces support team.
+### 3. Pieces OS and Desktop Launch Issues
+Users report "Invalid Port" errors during Pieces Desktop launch and Pieces OS startup failures due to database corruption or missing dependencies. Proposed solutions include running installers with elevated permissions, ensuring AVX2 processor support, and reinstalling Pieces OS. The Pieces team is actively investigating these issues and improving documentation.
 
 **Related Issues:**
 - [#672](https://github.com/pieces-app/support/issues/672): Invalid Port (at character 18) http://127.0.0.1:null/connect
 - [#686](https://github.com/pieces-app/support/issues/686): Pieces OS doesn't start because it's unable to open database due to corruption: LateInitializationError: Field 'database' has not been initialized.
 - [#691](https://github.com/pieces-app/support/issues/691): OS: login does not work ( /os/sign_in HTTP 500)
 
-### 4. Pieces OS Crash on Startup: Database Corruption
-Users report Pieces OS crashing on startup due to database corruption on macOS and Windows. Error messages indicate failure to initialize the database. Issue linked to new plugin integration, missing subfolders in database directory, and AVX2 CPU incompatibility. Solutions include updating to the latest version (11.3.2), which addresses AVX2 dependency and includes fixes for database initialization.
+### 4. Pieces OS Database Corruption on Startup
+Multiple users reported Pieces OS failing to start due to database corruption on both macOS and Windows. The issue seems to be linked to specific versions (11.0.0, 11.3.0, EAP) and potentially related to plugin integration or missing AVX2 support. Proposed solutions included updating to the latest version (11.3.2), checking for similar issues (#686), and contacting support.
 
 **Related Issues:**
 - [#687](https://github.com/pieces-app/support/issues/687): Application Crash on Startup
-- [#688](https://github.com/pieces-app/support/issues/688): Pieces OS doesn't start due to database corruption: LateInitializationError: Field 'database' has not been initialized. #686
 - [#686](https://github.com/pieces-app/support/issues/686): Pieces OS doesn't start because it's unable to open database due to corruption: LateInitializationError: Field 'database' has not been initialized.
+- [#688](https://github.com/pieces-app/support/issues/688): Pieces OS doesn't start due to database corruption: LateInitializationError: Field 'database' has not been initialized. #686
 
 
 ## Recommendations
-- **Prioritize database and authentication issues:** The most frequent and active support tickets revolve around Pieces OS login, account linking, and database errors. Allocating more resources to investigate and resolve these root causes will significantly impact overall support volume.
-- **Investigate platform-specific problems:** Several issues are reported specifically on Windows and Linux. Focused testing and debugging on these platforms can help identify and address platform-specific bugs.
-- **Improve documentation for account linking and installation:** Issues related to account linking and installation (like the invalid port error) suggest a need for clearer documentation. Providing step-by-step guides and troubleshooting tips can empower users to resolve these issues independently.
-- **Proactively address CPU compatibility:** The AVX2 CPU incompatibility issue caused significant problems. Implementing a system to detect incompatible hardware and offer alternative solutions or guidance can prevent similar issues in the future.
-- **Monitor and analyze support trends:** Regularly analyze support data to identify recurring issues, emerging trends, and areas for improvement. This will enable proactive problem-solving and resource allocation for optimal support operations.
+- **Prioritize Authentication Issues:** Investigate and address the root causes of authentication issues, particularly those related to account linking and login failures after the 11.3.0 update. This will directly impact a large number of users and improve their onboarding experience.
+- **Improve Database Stability:** Address the recurring issue of database corruption on startup, which affects both macOS and Windows users. Investigate potential links to specific versions, plugin integration, and AVX2 support to provide a permanent solution.
+- **Enhance Launch Procedures:** Provide clearer instructions and documentation for Pieces Desktop and Pieces OS installation, emphasizing the importance of elevated permissions and addressing "Invalid Port" errors. This will prevent similar issues for new users.
+- **Review AVX2 Dependency:** Evaluate the necessity of AVX2 support for Pieces OS, considering its impact on older hardware. Explore alternative solutions or provide clear communication to users regarding system requirements.
+- **Proactive Communication:**  Keep users informed about ongoing issues, especially those impacting core functionalities like authentication and database stability. Provide updates on fixes, workarounds, and estimated resolution times to manage expectations and reduce support tickets.
+- **Analyze Support Trends:** Regularly analyze support tickets to identify recurring issues, common pain points, and areas for improvement in the software or documentation. This will help prioritize development efforts and enhance user experience over time.
+- **Automated Troubleshooting:** Explore options for automated troubleshooting within the Pieces Desktop application. This could include built-in diagnostics, log file analysis, and potential solutions for common issues, reducing the need for manual support intervention.
+- **User Feedback Mechanisms:** Implement a system for gathering user feedback directly within the application. This could include bug reporting tools, feature requests, and satisfaction surveys to proactively identify and address user pain points.
 
 ## Daily Reports
 Here are the daily reports for this week:
@@ -65,3 +68,4 @@ Here are the daily reports for this week:
 - [report_131349](daily/2025-04-15/report_131349.md)
 - [report_210626](daily/2025-04-16/report_210626.md)
 - [report_210642](daily/2025-04-17/report_210642.md)
+- [report_131135](daily/2025-04-18/report_131135.md)

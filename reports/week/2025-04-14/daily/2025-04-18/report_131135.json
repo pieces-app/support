@@ -1,0 +1,74 @@
+{
+  "success": true,
+  "date_range": {
+    "start": "2025-04-18T00:00:00+00:00",
+    "end": "2025-04-18T13:11:35.406742+00:00"
+  },
+  "summary": {
+    "total_tickets": 1,
+    "resolved_tickets": 0,
+    "open_tickets": 1
+  },
+  "ticket_breakdown": [
+    {
+      "category": "bug",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:desktop application",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "os:linux",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:pieces os",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:triaged",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    }
+  ],
+  "most_active_tickets": [
+    {
+      "number": 691,
+      "title": "OS: login does not work ( /os/sign_in HTTP 500)",
+      "activity_level": 8.2
+    }
+  ],
+  "common_issues": [
+    {
+      "title": "Pieces OS Login Failure with HTTP 500 Error",
+      "description": "Users on Linux experience login failures with Pieces OS. The desktop application fails to authenticate, displaying an error page. Logs show a 500 error for '/os/sign_in'. This could be due to various factors like network issues, server-side problems, or application bugs. Check Pieces OS server status, network connectivity, and application logs for troubleshooting.",
+      "frequency": 1,
+      "related_issues": [
+        {
+          "id": 691,
+          "title": "OS: login does not work ( /os/sign_in HTTP 500)",
+          "text": "OS: login does not work ( /os/sign_in HTTP 500)\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nLinux\n\n### Your Pieces OS Version\n\n11.3.3\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWhen I try to log in via PFD, the spinner loads indefinitely before opening an error page in the browser:\n\nhttps://pieces.app/authentication-error?sentry_id=00000000000000000000000000000000&os=bb009f04-7e79-44cb-8376-aba647cd2c98&platform=linux\n\nIn the OS logs (Documents/com.pieces.os/Support/logs) I see this entry:\n\n```\n[D]  2025-04-17T15:53:02.391819  0:00:01.425625 POST    [500] /os/sign_in: port:39300\n```\n\nIt is surrounded by HTTP 200s like this:\n\n```\n[D]  2025-04-17T15:52:53.075570  0:00:00.000685 GET     [200] /.well-known/version: port:39301\n[D]  2025-04-17T15:52:54.038635  0:00:00.001700 POST    [200] /websites/exists: port:39300\n[D]  2025-04-17T15:52:54.043187  0:00:00.000732 GET     [200] /.well-known/version: port:39300\n[D]  2025-04-17T15:52:54.335453  0:00:00.001876 POST    [200] /websites/exists: port:39300\n[D]  2025-04-17T15:52:56.077590  0:00:00.000695 GET     [200] /.well-known/version: port:39301\n[D]  2025-04-17T15:52:59.079649  0:00:00.000662 GET     [200] /.well-known/version: port:39301\n[D]  2025-04-17T15:53:02.081551  0:00:00.000486 GET     [200] /.well-known/version: port:39301\n[D]  2025-04-17T15:53:02.391819  0:00:01.425625 POST    [500] /os/sign_in: port:39300\n[D]  2025-04-17T15:53:04.272493  0:00:00.001839 POST    [200] /websites/exists: port:39300\n[D]  2025-04-17T15:53:04.334258  0:00:00.000938 GET     [200] /.well-known/version: port:39300\n[D]  2025-04-17T15:53:04.457128  0:00:00.001378 POST    [200] /websites/exists: port:39300\n[D]  2025-04-17T15:53:05.083569  0:00:00.000541 GET     [200] /.well-known/version: port:39301\n[D]  2025-04-17T15:53:08.085902  0:00:00.000518 GET     [200] /.well-known/version: port:39301\n[D]  2025-04-17T15:53:08.094713  0:00:00.001812 POST    [200] /websites/exists: port:39300\n```\n## GitHub Issue Conversation Summary\n\n**Problem:** The user, @utrack, is experiencing authentication issues with Pieces on their Linux machine.\n\n**Key Points:**\n\n* User provides link to their calendar for real-time debugging.\n* User confirms colleague, @nathan-courtney-pieces, has verified authentication works on Linux.\n* User shares log files from their Arch Linux system.\n* User requests assistance in enabling debug logs.\n\n**Solutions:**\n\n* Pieces support team member will investigate and follow up within 24 hours.\n* User is provided with links to similar issues, documentation, and support resources.\n* User is asked to provide additional logs and system information.\n\n**Current Status:** Open. Pieces support team is investigating the issue.\n\n**Outcome:** To be determined. The support team will provide an update within 24 hours.",
+          "activity_level": 8.2
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    "Investigate the root cause of the HTTP 500 error on '/os/sign_in' affecting Linux users.",
+    "Improve logging and error messages for easier troubleshooting of login issues.",
+    "Consider creating a dedicated troubleshooting guide for Pieces OS login failures on Linux.",
+    "Monitor the affected systems and logs closely to identify any patterns or potential solutions.",
+    "Provide timely updates to the affected user (ticket #691) regarding the investigation and resolution progress."
+  ],
+  "message": "Daily support report generated successfully."
+}
