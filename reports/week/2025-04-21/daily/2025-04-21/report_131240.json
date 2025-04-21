@@ -1,0 +1,74 @@
+{
+  "success": true,
+  "date_range": {
+    "start": "2025-04-21T00:00:00+00:00",
+    "end": "2025-04-21T13:12:40.026482+00:00"
+  },
+  "summary": {
+    "total_tickets": 1,
+    "resolved_tickets": 0,
+    "open_tickets": 1
+  },
+  "ticket_breakdown": [
+    {
+      "category": "bug",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "os:windows",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:new",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:desktop application",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:pieces os",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    }
+  ],
+  "most_active_tickets": [
+    {
+      "number": 693,
+      "title": "Crash due to native_extensions_plugin.dll",
+      "activity_level": 5.68
+    }
+  ],
+  "common_issues": [
+    {
+      "title": "Pieces OS crashes due to native_extensions_plugin.dll",
+      "description": "Pieces OS desktop application crashes on Windows due to the native_extensions_plugin.dll.  Reinstalling, disabling antivirus/firewall, and updating graphics drivers do not resolve the issue.  Users experience consistent crashes.  A temporary workaround involves replacing the DLL with a stub, but this disables the plugin's functionality. The root cause is unknown and a permanent solution is needed.",
+      "frequency": 1,
+      "related_issues": [
+        {
+          "id": 693,
+          "title": "Crash due to native_extensions_plugin.dll",
+          "text": "Crash due to native_extensions_plugin.dll\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.3.3\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nPieces OS crashes. I\u2019ve reinstalled the program, turned off the antivirus and firewall, updated the graphics driver, but nothing helps, it crashes consistently.\nWindows 10, 64 bit, i3-12100F, RAM: 32 Gb, GTX 950.\nIf there's no solution, how can I disable this plugin so that it simply doesn't crash?\n\nHere are the debug details:\n```\n0:000> r rcx\nrcx=0000000000000000\n0:000> k\n # Child-SP          RetAddr               Call Site\n00 0000000e`28deeb00 00007ff9`9365e0ea     native_extensions_plugin!NativeExtensionsPluginCApiRegisterWithRegistrar+0x13796\n01 0000000e`28deed20 00007ff9`9365fabf     native_extensions_plugin!NativeExtensionsPluginCApiRegisterWithRegistrar+0xc97a\n02 0000000e`28deee50 00007ff9`9365d196     native_extensions_plugin!NativeExtensionsPluginCApiRegisterWithRegistrar+0xe34f\n03 0000000e`28deee80 00007ff9`9365fa77     native_extensions_plugin!NativeExtensionsPluginCApiRegisterWithRegistrar+0xba26\n04 0000000e`28deef90 00007ff9`93667b11     native_extensions_plugin!NativeExtensionsPluginCApiRegisterWithRegistrar+0xe307\n05 0000000e`28def000 00007ff9`92bad9fd     native_extensions_plugin!NativeExtensionsPluginCApiRegisterWithRegistrar+0x163a1\n06 0000000e`28def110 00007ff9`9231900e     flutter_windows!InternalFlutterGpu_Texture_AsImage+0x1622b9\n07 0000000e`28def1a0 00007ff9`923d0647     flutter_windows!FlutterDesktopTextureRegistrarMarkExternalTextureFrameAvailable+0x2c56\n08 0000000e`28def350 00007ff9`923ddddc     flutter_windows!FlutterDesktopTextureRegistrarMarkExternalTextureFrameAvailable+0xba28f\n09 0000000e`28def3d0 00007ff9`923ddd7a     flutter_windows!FlutterDesktopTextureRegistrarMarkExternalTextureFrameAvailable+0xc7a24\n0a 0000000e`28def400 00007ff9`923de4e4     flutter_windows!FlutterDesktopTextureRegistrarMarkExternalTextureFrameAvailable+0xc79c2\n0b 0000000e`28def440 00007ff9`923db45b     flutter_windows!FlutterDesktopTextureRegistrarMarkExternalTextureFrameAvailable+0xc812c\n0c 0000000e`28def480 00007ff9`923dc9e7     flutter_windows!FlutterDesktopTextureRegistrarMarkExternalTextureFrameAvailable+0xc50a3\n0d 0000000e`28def630 00007ff9`923c7f88     flutter_windows!FlutterDesktopTextureRegistrarMarkExternalTextureFrameAvailable+0xc662f\n0e 0000000e`28def680 00007ff9`9231a521     flutter_windows!FlutterDesktopTextureRegistrarMarkExternalTextureFrameAvailable+0xb1bd0\n0f 0000000e`28def6b0 00007ff9`9232e2e9     flutter_windows!FlutterDesktopTextureRegistrarMarkExternalTextureFrameAvailable+0x4169\n10 0000000e`28def7f0 00007ff9`9232fb4d     flutter_windows!FlutterDesktopTextureRegistrarMarkExternalTextureFrameAvailable+0x17f31\n11 0000000e`28def880 00007ff9`9232fc35     flutter_windows!FlutterDesktopTextureRegistrarMarkExternalTextureFrameAvailable+0x19795\n12 0000000e`28def900 00007ffa`188bef5c     flutter_windows!FlutterDesktopTextureRegistrarMarkExternalTextureFrameAvailable+0x1987d\n13 0000000e`28def930 00007ffa`188be684     USER32!CallWindowProcW+0x60c\n14 0000000e`28defac0 00007ff7`59bf52e6     USER32!DispatchMessageW+0x4a4\n15 0000000e`28defb40 00007ff7`59c0063a     os_server+0x52e6\n16 0000000e`28defd90 00007ffa`18e07374     os_server+0x1063a\n17 0000000e`28defdd0 00007ffa`19d1cc91     KERNEL32!BaseThreadInitThunk+0x14\n18 0000000e`28defe00 00000000`00000000     ntdll!RtlUserThreadStart+0x21\n```\n\n\nI would appreciate any help :3\n## Summary of GitHub Issue Conversation\n\n**Issue:** Pieces extension is crashing in Visual Studio Code.\n\n**Key points raised:**\n\n* The user (@KiberAndy) reported crashes in the Pieces extension.\n* The issue was automatically triaged and routed to the Pieces team.\n* The support bot suggested related issues and helpful resources.\n\n**Problems identified:**\n\n* The Pieces extension was crashing due to a corrupted database.\n* The extension was not loading in Visual Studio Code.\n\n**Solutions proposed/implemented:**\n\n* The user created a stub and replaced the DLL, preventing crashes.\n* The main problem of the extension not loading still needs to be fixed.\n\n**Current status/outcome:**\n\n* Crashes are temporarily prevented, but the extension is not functional.\n* The user is waiting for further assistance from the Pieces team.\n\n**Additional notes:**\n\n* The conversation took place on April 20th and 21st, 2025.\n* The user was provided with links to documentation, YouTube channel, and related issues.",
+          "activity_level": 5.68
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    "Investigate the root cause of the crash related to native_extensions_plugin.dll.  Prioritize this as it's the only open issue and has high activity.",
+    "Provide users with a more robust workaround than replacing the DLL with a stub, or expedite a permanent fix.",
+    "Update support documentation and resources with information about the native_extensions_plugin.dll crash and potential solutions.",
+    "Consider improving crash reporting to capture more detailed information for faster debugging.",
+    "Monitor the effectiveness of implemented solutions and track the number of recurring crashes related to this issue over time. "
+  ],
+  "message": "Daily support report generated successfully."
+}
