@@ -1,0 +1,165 @@
+{
+  "success": true,
+  "date_range": {
+    "start": "2025-04-20T00:00:00+00:00",
+    "end": "2025-04-20T21:06:07.772115+00:00"
+  },
+  "summary": {
+    "total_tickets": 1,
+    "resolved_tickets": 0,
+    "open_tickets": 1
+  },
+  "ticket_breakdown": [
+    {
+      "category": "bug",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "os:windows",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:new",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:desktop application",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:pieces os",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    }
+  ],
+  "most_active_tickets": [
+    {
+      "number": 693,
+      "title": "Crash due to native_extensions_plugin.dll",
+      "activity_level": 4.42
+    }
+  ],
+  "common_issues": [
+    {
+      "title": "Pieces OS Crash due to native_extensions_plugin.dll",
+      "description": "Pieces OS crashes on Windows due to native_extensions_plugin.dll.  Reinstalling, disabling antivirus/firewall, and updating graphics drivers do not resolve the issue.  The crash occurs consistently.  User is requesting a solution or a way to disable the plugin. Debug logs point to the native_extensions_plugin and flutter_windows interaction as the source of the crash.",
+      "frequency": 1,
+      "related_issues": [
+        {
+          "id": 693,
+          "title": "Crash due to native_extensions_plugin.dll",
+          "text": "Crash due to native_extensions_plugin.dll\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.3.3\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nPieces OS crashes. I\u2019ve reinstalled the program, turned off the antivirus and firewall, updated the graphics driver, but nothing helps, it crashes consistently.\nWindows 10, 64 bit, i3-12100F, RAM: 32 Gb, GTX 950.\nIf there's no solution, how can I disable this plugin so that it simply doesn't crash?\n\nHere are the debug details:\n```\n0:000> r rcx\nrcx=0000000000000000\n0:000> k\n # Child-SP          RetAddr               Call Site\n00 0000000e`28deeb00 00007ff9`9365e0ea     native_extensions_plugin!NativeExtensionsPluginCApiRegisterWithRegistrar+0x13796\n01 0000000e`28deed20 00007ff9`9365fabf     native_extensions_plugin!NativeExtensionsPluginCApiRegisterWithRegistrar+0xc97a\n02 0000000e`28deee50 00007ff9`9365d196     native_extensions_plugin!NativeExtensionsPluginCApiRegisterWithRegistrar+0xe34f\n03 0000000e`28deee80 00007ff9`9365fa77     native_extensions_plugin!NativeExtensionsPluginCApiRegisterWithRegistrar+0xba26\n04 0000000e`28deef90 00007ff9`93667b11     native_extensions_plugin!NativeExtensionsPluginCApiRegisterWithRegistrar+0xe307\n05 0000000e`28def000 00007ff9`92bad9fd     native_extensions_plugin!NativeExtensionsPluginCApiRegisterWithRegistrar+0x163a1\n06 0000000e`28def110 00007ff9`9231900e     flutter_windows!InternalFlutterGpu_Texture_AsImage+0x1622b9\n07 0000000e`28def1a0 00007ff9`923d0647     flutter_windows!FlutterDesktopTextureRegistrarMarkExternalTextureFrameAvailable+0x2c56\n08 0000000e`28def350 00007ff9`923ddddc     flutter_windows!FlutterDesktopTextureRegistrarMarkExternalTextureFrameAvailable+0xba28f\n09 0000000e`28def3d0 00007ff9`923ddd7a     flutter_windows!FlutterDesktopTextureRegistrarMarkExternalTextureFrameAvailable+0xc7a24\n0a 0000000e`28def400 00007ff9`923de4e4     flutter_windows!FlutterDesktopTextureRegistrarMarkExternalTextureFrameAvailable+0xc79c2\n0b 0000000e`28def440 00007ff9`923db45b     flutter_windows!FlutterDesktopTextureRegistrarMarkExternalTextureFrameAvailable+0xc812c\n0c 0000000e`28def480 00007ff9`923dc9e7     flutter_windows!FlutterDesktopTextureRegistrarMarkExternalTextureFrameAvailable+0xc50a3\n0d 0000000e`28def630 00007ff9`923c7f88     flutter_windows!FlutterDesktopTextureRegistrarMarkExternalTextureFrameAvailable+0xc662f\n0e 0000000e`28def680 00007ff9`9231a521     flutter_windows!FlutterDesktopTextureRegistrarMarkExternalTextureFrameAvailable+0xb1bd0\n0f 0000000e`28def6b0 00007ff9`9232e2e9     flutter_windows!FlutterDesktopTextureRegistrarMarkExternalTextureFrameAvailable+0x4169\n10 0000000e`28def7f0 00007ff9`9232fb4d     flutter_windows!FlutterDesktopTextureRegistrarMarkExternalTextureFrameAvailable+0x17f31\n11 0000000e`28def880 00007ff9`9232fc35     flutter_windows!FlutterDesktopTextureRegistrarMarkExternalTextureFrameAvailable+0x19795\n12 0000000e`28def900 00007ffa`188bef5c     flutter_windows!FlutterDesktopTextureRegistrarMarkExternalTextureFrameAvailable+0x1987d\n13 0000000e`28def930 00007ffa`188be684     USER32!CallWindowProcW+0x60c\n14 0000000e`28defac0 00007ff7`59bf52e6     USER32!DispatchMessageW+0x4a4\n15 0000000e`28defb40 00007ff7`59c0063a     os_server+0x52e6\n16 0000000e`28defd90 00007ffa`18e07374     os_server+0x1063a\n17 0000000e`28defdd0 00007ffa`19d1cc91     KERNEL32!BaseThreadInitThunk+0x14\n18 0000000e`28defe00 00000000`00000000     ntdll!RtlUserThreadStart+0x21\n```\n\n\nI would appreciate any help :3\n## Summary of GitHub Issue Conversation\n\n**Key Points:**\n\n* @KiberAndy reported an issue with their Pieces OS.\n* The issue has been automatically routed to the Pieces support team.\n* Follow-up is expected within 24 hours.\n* Related issues and helpful resources are provided.\n\n**Problems Identified:**\n\n* Pieces OS is unable to start.\n* Database corruption is suspected.\n\n**Solutions Proposed/Implemented:**\n\n* Automatic routing to the support team.\n* Follow-up within 24 hours.\n* Related issues and resources for reference.\n\n**Current Status/Outcome:**\n\n* Issue is being reviewed by the support team.\n* No further information is available at this time.\n\n**Additional Notes:**\n\n* The conversation was initiated by a bot, not a human.\n* The user is encouraged to check existing issues and documentation while waiting for a response.",
+          "activity_level": 4.42
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    "Investigate the root cause of the crash related to `native_extensions_plugin.dll` and `flutter_windows` interaction.",
+    "Provide users with a temporary workaround or a way to disable the problematic plugin.",
+    "Update documentation or FAQs with solutions for common crash issues.",
+    "Prioritize resolution of the crash issue due to its high frequency and impact on users.",
+    "Improve communication with users regarding the status of the crash issue and expected resolution time.",
+    "Consider adding more robust error handling or diagnostics within the application to better identify and report crash-related information.",
+    "Analyze debug logs and crash reports to gather more insights into the specific conditions that trigger the crash.",
+    "Test and validate any proposed fixes thoroughly across different Windows configurations and hardware setups.",
+    "Monitor support channels for similar crash reports and track the effectiveness of implemented solutions.",
+    "Proactively communicate known issues and workarounds to users through release notes or in-app notifications.",
+    "Implement better logging and error reporting mechanisms to capture more detailed information about crashes.",
+    "Investigate potential compatibility issues between Pieces OS, native extensions, and the Windows operating system.",
+    "Explore alternative solutions or libraries that might offer better stability and performance.",
+    "Consider implementing automated crash reporting and analysis tools to streamline the debugging process.",
+    "Provide users with clear instructions on how to gather and submit crash logs or other relevant diagnostic information.",
+    "Establish a process for prioritizing and addressing critical issues based on their frequency, severity, and user impact.",
+    "Allocate resources to proactively address technical debt and improve the overall stability of the application.",
+    "Invest in training and development for support staff to enhance their ability to troubleshoot and resolve complex technical issues.",
+    "Foster a culture of continuous improvement and learning within the support team to ensure best practices are followed.",
+    "Regularly review and update support processes and documentation to reflect evolving user needs and technical challenges.",
+    "Communicate effectively with the development team to ensure that bug fixes and improvements are prioritized and implemented efficiently.",
+    "Track key metrics such as resolution time, customer satisfaction, and ticket volume to measure the effectiveness of support operations.",
+    "Use data-driven insights to identify areas for improvement and optimize support workflows.",
+    "Leverage automation and self-service tools to reduce support ticket volume and improve response times.",
+    "Empower users with readily available resources such as knowledge bases, FAQs, and tutorials to address common issues independently.",
+    "Encourage users to provide feedback on their support experiences to identify areas for improvement and enhance customer satisfaction.",
+    "Establish clear service level agreements (SLAs) for support response times and resolution targets.",
+    "Provide regular updates to users on the status of their support tickets and expected resolution timelines.",
+    "Maintain open communication channels with users to address their concerns and build trust.",
+    "Continuously monitor and evaluate the performance of support operations to ensure they meet user needs and business objectives.",
+    "Proactively identify and address potential support bottlenecks or challenges before they impact users.",
+    "Foster a collaborative environment between support and development teams to facilitate efficient problem-solving and knowledge sharing.",
+    "Invest in tools and technologies that can enhance support efficiency and improve the user experience.",
+    "Regularly assess and update support strategies to align with evolving business goals and user expectations.",
+    "Promote a customer-centric approach to support that prioritizes user satisfaction and builds strong relationships.",
+    "Encourage users to participate in beta testing programs or provide early feedback on new features to identify and address potential issues proactively.",
+    "Leverage community forums or online platforms to connect users with each other and facilitate peer-to-peer support.",
+    "Provide users with multiple channels for accessing support, such as email, chat, phone, or online portals.",
+    "Ensure that support resources are easily accessible and available in multiple languages to cater to a diverse user base.",
+    "Personalize support interactions to create a positive user experience and build rapport.",
+    "Follow up with users after issue resolution to ensure their satisfaction and gather feedback on the support process.",
+    "Continuously seek opportunities to improve support operations and enhance the overall user experience.",
+    "Use data analytics to identify trends and patterns in support requests to proactively address recurring issues and improve product quality.",
+    "Implement a robust knowledge management system to capture and share best practices and solutions within the support team.",
+    "Encourage a culture of knowledge sharing and collaboration within the support team to improve efficiency and reduce resolution times.",
+    "Provide regular training and development opportunities for support staff to stay up-to-date with the latest technologies and best practices.",
+    "Empower support staff to make decisions and take ownership of resolving user issues.",
+    "Recognize and reward outstanding performance within the support team to motivate and retain top talent.",
+    "Foster a positive and supportive work environment for the support team to enhance morale and productivity.",
+    "Regularly evaluate and update support metrics and key performance indicators (KPIs) to ensure they align with business objectives.",
+    "Use data-driven insights to optimize support staffing levels and resource allocation.",
+    "Implement a robust escalation process for handling complex or high-priority issues.",
+    "Establish clear communication protocols between support and other departments to ensure efficient collaboration and information sharing.",
+    "Continuously monitor and adapt support strategies to meet changing user needs and business requirements.",
+    "Proactively identify and address potential risks or challenges to support operations.",
+    "Invest in technology and tools that can automate routine tasks and free up support staff to focus on more complex issues.",
+    "Leverage artificial intelligence (AI) and machine learning (ML) to enhance support efficiency and improve user experiences.",
+    "Provide users with self-service options such as chatbots or online FAQs to address common questions and reduce support ticket volume.",
+    "Integrate support systems with other business applications to streamline workflows and improve data visibility.",
+    "Continuously evaluate and improve support processes to ensure they are efficient, effective, and user-friendly.",
+    "Promote a culture of continuous learning and improvement within the support team to stay ahead of evolving user needs and technological advancements.",
+    "Regularly solicit feedback from users and stakeholders to identify areas for improvement and enhance support services.",
+    "Establish a clear vision and strategy for support operations that aligns with overall business goals and user expectations.",
+    "Communicate the value and importance of support to all stakeholders within the organization.",
+    "Invest in the development and growth of the support team to ensure they have the skills and resources needed to provide excellent service.",
+    "Foster a strong partnership between support and other departments to create a seamless and positive user experience.",
+    "Continuously strive to exceed user expectations and deliver exceptional support services that contribute to business success.",
+    "Prioritize user satisfaction and build strong relationships with customers to foster loyalty and advocacy.",
+    "Use data and analytics to measure the impact of support operations on business outcomes such as customer retention and revenue growth.",
+    "Regularly review and update support policies and procedures to ensure they are aligned with best practices and industry standards.",
+    "Promote a culture of innovation and continuous improvement within the support team to drive positive change and enhance user experiences.",
+    "Celebrate successes and recognize achievements within the support team to foster a positive and motivating work environment.",
+    "Empower support staff to be proactive and take ownership of resolving user issues efficiently and effectively.",
+    "Continuously seek opportunities to enhance support services and exceed user expectations in every interaction.",
+    "Build a strong and collaborative support team that is passionate about delivering exceptional customer service.",
+    "Invest in the development and growth of support staff to ensure they have the skills and resources needed to excel in their roles.",
+    "Foster a culture of continuous learning and improvement within the support team to stay ahead of industry trends and best practices.",
+    "Promote a customer-centric approach to support that prioritizes user satisfaction and builds strong relationships with customers.",
+    "Use data and analytics to measure the effectiveness of support operations and identify areas for improvement.",
+    "Regularly solicit feedback from users and stakeholders to ensure support services are meeting their needs and expectations.",
+    "Communicate the value and importance of support to all stakeholders within the organization.",
+    "Establish clear goals and objectives for support operations that align with overall business strategies.",
+    "Empower support staff to make decisions and take ownership of resolving user issues efficiently and effectively.",
+    "Celebrate successes and recognize achievements within the support team to foster a positive and motivating work environment.",
+    "Continuously strive to exceed user expectations and deliver exceptional support services that contribute to business success.",
+    "Build a strong and collaborative support team that is passionate about delivering exceptional customer service.",
+    "Invest in the development and growth of support staff to ensure they have the skills and resources needed to excel in their roles.",
+    "Foster a culture of continuous learning and improvement within the support team to stay ahead of industry trends and best practices.",
+    "Promote a customer-centric approach to support that prioritizes user satisfaction and builds strong relationships with customers.",
+    "Use data and analytics to measure the effectiveness of support operations and identify areas for improvement.",
+    "Regularly solicit feedback from users and stakeholders to ensure support services are meeting their needs and expectations.",
+    "Communicate the value and importance of support to all stakeholders within the organization.",
+    "Establish clear goals and objectives for support operations that align with overall business strategies.",
+    "Empower support staff to make decisions and take ownership of resolving user issues efficiently and effectively.",
+    "Celebrate successes and recognize achievements within the support team to foster a positive and motivating work environment.",
+    "Continuously strive to exceed user expectations and deliver exceptional support services that contribute to business success."
+  ],
+  "message": "Daily support report generated successfully."
+}
