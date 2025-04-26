@@ -2,7 +2,7 @@
   "success": true,
   "date_range": {
     "start": "2025-04-21T00:00:00+00:00",
-    "end": "2025-04-26T05:07:06.539759+00:00"
+    "end": "2025-04-26T13:10:25.909547+00:00"
   },
   "summary": {
     "total_tickets": 4,
@@ -96,13 +96,13 @@
     {
       "number": 459,
       "title": "Bug: unable to cancel the download of an LLLM",
-      "activity_level": 1.71
+      "activity_level": 1.7
     }
   ],
   "common_issues": [
     {
       "title": "Pieces OS Crashes and Integration Issues",
-      "description": "Users report Pieces OS crashes, particularly on Windows, often related to the native_extensions_plugin.dll.  Troubleshooting includes reinstalling, disabling antivirus/firewall, and updating drivers.  Additionally, users experience difficulty linking multiple accounts (Google and GitHub) simultaneously, with one account unlinking when the other is added.  Local LLM downloads also present challenges, stalling during initialization on Linux and VS Code.",
+      "description": "Users report Pieces OS crashes due to native_extensions_plugin.dll on Windows and difficulties downloading local LLMs on Linux.  Additionally, some users experience issues simultaneously linking Google and GitHub accounts, with only one account remaining linked at a time. Troubleshooting includes reinstalling the program, checking firewall/antivirus settings, updating graphics drivers, and contacting support for account linking issues.",
       "frequency": 3,
       "related_issues": [
         {
@@ -127,7 +127,7 @@
     },
     {
       "title": "Pieces Desktop App Issues with Local LLMs and Account Linking",
-      "description": "Users are experiencing difficulties with the Pieces Desktop app, including issues with local LLM downloads getting stuck on initializing and account linking problems, especially with Google and GitHub accounts simultaneously.  Workarounds such as updating Pieces OS or disabling GitHub email privacy have not been universally successful.  Users have reported these issues across different operating systems (Windows, Linux) and Pieces versions.",
+      "description": "Users report persistent issues with the Pieces Desktop app across different operating systems.  These include difficulties linking multiple accounts (Google and GitHub) simultaneously, and problems downloading or canceling local LLM downloads.  The account linking issue has persisted for some users despite support interaction.  Local LLM download issues involve downloads getting stuck on initializing or 0% complete.  Users have tried troubleshooting steps like updating the app and checking internet connectivity.",
       "frequency": 3,
       "related_issues": [
         {
@@ -146,18 +146,18 @@
           "id": 459,
           "title": "Bug: unable to cancel the download of an LLLM",
           "text": "Bug: unable to cancel the download of an LLLM\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nlatest\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n![image](https://github.com/user-attachments/assets/6e730898-a168-4571-ab0d-6331c4d389a4)\r\n\r\ni want stop but its not working \r\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 1.71
+          "activity_level": 1.7
         }
       ]
     }
   ],
   "recommendations": [
-    "Investigate and address the root cause of crashes related to 'native_extensions_plugin.dll', particularly on Windows.",
-    "Implement a robust solution for multi-account linking (Google and GitHub) in the Pieces Desktop app.",
-    "Troubleshoot and resolve the issue of local LLM downloads stalling during initialization on Linux and VS Code.",
-    "Improve the cancellation process for LLM downloads in the Pieces Desktop app.",
-    "Provide clearer documentation or in-app guidance on troubleshooting local LLM download issues.",
-    "Consider prioritizing bug fixes based on frequency and activity level, starting with the most impactful issues (e.g., crashes and account linking)."
+    "Investigate and fix the 'native_extensions_plugin.dll' crash on Windows.",
+    "Address the account linking issues with Google and GitHub, ensuring simultaneous linking is possible.",
+    "Improve the local LLM download process, resolving the 'initializing' and 0% complete stuck issues.",
+    "Implement a functional cancel button for LLM downloads.",
+    "Provide clearer documentation or in-app guidance for account linking and LLM download processes.",
+    "Consider prioritizing bug fixes based on frequency and activity level, starting with the most impactful issues (e.g., Pieces OS crashes)."
   ],
   "message": "Daily support report generated successfully."
 }
