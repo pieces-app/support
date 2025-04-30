@@ -1,0 +1,74 @@
+{
+  "success": true,
+  "date_range": {
+    "start": "2025-04-30T00:00:00+00:00",
+    "end": "2025-04-30T21:06:51.271209+00:00"
+  },
+  "summary": {
+    "total_tickets": 1,
+    "resolved_tickets": 0,
+    "open_tickets": 1
+  },
+  "ticket_breakdown": [
+    {
+      "category": "bug",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:desktop application",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "os:macos",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:pieces copilot module",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:triaged",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    }
+  ],
+  "most_active_tickets": [
+    {
+      "number": 584,
+      "title": "Copilot is not giving any feedback",
+      "activity_level": 3.23
+    }
+  ],
+  "common_issues": [
+    {
+      "title": "Copilot not generating feedback, stuck loading",
+      "description": "Users report Copilot not generating any feedback on macOS Desktop Application (Pieces for Developers 3.3.3).  Copilot continuously loads without producing output.  Error messages indicate a 404 for the Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro`.  This suggests an issue with model access or availability.",
+      "frequency": 1,
+      "related_issues": [
+        {
+          "id": 584,
+          "title": "Copilot is not giving any feedback",
+          "text": "Copilot is not giving any feedback\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\nPieces for Developers 3.3.3\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nThe copilot is not generating anything, it just keeps on loading.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 3.23
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    "Investigate the 404 error for the Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` to restore Copilot functionality on macOS.",
+    "Prioritize resolution of issue #584, \"Copilot is not giving any feedback,\" as it blocks Copilot usage on macOS Desktop Application.",
+    "Monitor Copilot stability and performance on macOS after implementing the fix for issue #584.",
+    "Consider adding improved error handling and user messaging within the application for model access issues to provide a better user experience.",
+    "Proactively communicate the resolution of the Copilot issue to affected users once the fix is deployed."
+  ],
+  "message": "Daily support report generated successfully."
+}
