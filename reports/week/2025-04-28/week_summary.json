@@ -2,34 +2,46 @@
   "success": true,
   "date_range": {
     "start": "2025-04-28T00:00:00+00:00",
-    "end": "2025-04-30T05:07:38.372055+00:00"
+    "end": "2025-04-30T13:14:26.748410+00:00"
   },
   "summary": {
-    "total_tickets": 3,
+    "total_tickets": 4,
     "resolved_tickets": 0,
-    "open_tickets": 3
+    "open_tickets": 4
   },
   "ticket_breakdown": [
     {
       "category": "bug",
-      "received": 3,
+      "received": 4,
       "resolved": 0,
-      "pending": 3
+      "pending": 4
     },
     {
       "category": "app:desktop application",
+      "received": 4,
+      "resolved": 0,
+      "pending": 4
+    },
+    {
+      "category": "os:macos",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:pieces copilot module",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:triaged",
       "received": 3,
       "resolved": 0,
       "pending": 3
     },
     {
       "category": "os:linux",
-      "received": 2,
-      "resolved": 0,
-      "pending": 2
-    },
-    {
-      "category": "status:triaged",
       "received": 2,
       "resolved": 0,
       "pending": 2
@@ -74,12 +86,42 @@
       "number": 641,
       "title": "Invalid port http://0.0.0.0:null/connect",
       "activity_level": 3.3
+    },
+    {
+      "number": 584,
+      "title": "Copilot is not giving any feedback",
+      "activity_level": 3.23
     }
   ],
   "common_issues": [
     {
+      "title": "Pieces software malfunctions across platforms",
+      "description": "Users report Pieces features malfunctioning on MacOS, Windows, and Linux. Copilot fails to generate output, the Visual Studio extension blanks the diagnostic tools pane, and Pieces OS login fails with a 500 error.  Check logs for specific error messages related to Copilot, disable Pieces VS extension as a workaround, and investigate OS logs for login failures.",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 584,
+          "title": "Copilot is not giving any feedback",
+          "text": "Copilot is not giving any feedback\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\nPieces for Developers 3.3.3\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nThe copilot is not generating anything, it just keeps on loading.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 3.23
+        },
+        {
+          "id": 697,
+          "title": "Visual Studio 2022 extension interfering with Diagnostic tool output",
+          "text": "Visual Studio 2022 extension interfering with Diagnostic tool output\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Visual Studio\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nPiecesOS 11.3.3\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nThe Diagnostic tools pane that, by default, opens when you begin debugging in Visual Studio ends up entirely blank with the Pieces plugin enabled in Visual Studio Version 17.14.0 Preview 4.0. Disabling the plugin restores the Diagnostic tools output.\n\n<img width=\"166\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/beb0d90f-7544-4f26-9516-8e4165b782ce\" />\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 4.25
+        },
+        {
+          "id": 691,
+          "title": "OS: login does not work ( /os/sign_in HTTP 500)",
+          "text": "OS: login does not work ( /os/sign_in HTTP 500)\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nLinux\n\n### Your Pieces OS Version\n\n11.3.3\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWhen I try to log in via PFD, the spinner loads indefinitely before opening an error page in the browser:\n\nhttps://pieces.app/authentication-error?sentry_id=00000000000000000000000000000000&os=bb009f04-7e79-44cb-8376-aba647cd2c98&platform=linux\n\nIn the OS logs (Documents/com.pieces.os/Support/logs) I see this entry:\n\n```\n[D]  2025-04-17T15:53:02.391819  0:00:01.425625 POST    [500] /os/sign_in: port:39300\n```\n\nIt is surrounded by HTTP 200s like this:\n\n```\n[D]  2025-04-17T15:52:53.075570  0:00:00.000685 GET     [200] /.well-known/version: port:39301\n[D]  2025-04-17T15:52:54.038635  0:00:00.001700 POST    [200] /websites/exists: port:39300\n[D]  2025-04-17T15:52:54.043187  0:00:00.000732 GET     [200] /.well-known/version: port:39300\n[D]  2025-04-17T15:52:54.335453  0:00:00.001876 POST    [200] /websites/exists: port:39300\n[D]  2025-04-17T15:52:56.077590  0:00:00.000695 GET     [200] /.well-known/version: port:39301\n[D]  2025-04-17T15:52:59.079649  0:00:00.000662 GET     [200] /.well-known/version: port:39301\n[D]  2025-04-17T15:53:02.081551  0:00:00.000486 GET     [200] /.well-known/version: port:39301\n[D]  2025-04-17T15:53:02.391819  0:00:01.425625 POST    [500] /os/sign_in: port:39300\n[D]  2025-04-17T15:53:04.272493  0:00:00.001839 POST    [200] /websites/exists: port:39300\n[D]  2025-04-17T15:53:04.334258  0:00:00.000938 GET     [200] /.well-known/version: port:39300\n[D]  2025-04-17T15:53:04.457128  0:00:00.001378 POST    [200] /websites/exists: port:39300\n[D]  2025-04-17T15:53:05.083569  0:00:00.000541 GET     [200] /.well-known/version: port:39301\n[D]  2025-04-17T15:53:08.085902  0:00:00.000518 GET     [200] /.well-known/version: port:39301\n[D]  2025-04-17T15:53:08.094713  0:00:00.001812 POST    [200] /websites/exists: port:39300\n```\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 3.84
+        }
+      ]
+    },
+    {
       "title": "Pieces for Developers and OS connection issues",
-      "description": "Users are experiencing connection issues between Pieces for Developers and Pieces OS on Linux and Windows.  Symptoms include invalid port errors, HTTP 500 errors during login, and blank diagnostic tool panes in Visual Studio with the Pieces plugin enabled.  Check Pieces OS logs for error messages and ensure proper port configuration.  Disabling the Pieces plugin in Visual Studio may temporarily resolve the diagnostic tool issue.",
+      "description": "Users are experiencing connection issues between Pieces for Developers and Pieces OS on Linux and macOS.  Problems include invalid port errors, login failures with HTTP 500 errors, and Copilot failing to provide feedback.  Check Pieces OS logs for error messages and ensure proper port configuration. Verify Pieces for Developers and OS versions for compatibility.",
       "frequency": 3,
       "related_issues": [
         {
@@ -95,14 +137,25 @@
           "activity_level": 3.84
         },
         {
-          "id": 697,
-          "title": "Visual Studio 2022 extension interfering with Diagnostic tool output",
-          "text": "Visual Studio 2022 extension interfering with Diagnostic tool output\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Visual Studio\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nPiecesOS 11.3.3\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nThe Diagnostic tools pane that, by default, opens when you begin debugging in Visual Studio ends up entirely blank with the Pieces plugin enabled in Visual Studio Version 17.14.0 Preview 4.0. Disabling the plugin restores the Diagnostic tools output.\n\n<img width=\"166\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/beb0d90f-7544-4f26-9516-8e4165b782ce\" />\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 4.25
+          "id": 584,
+          "title": "Copilot is not giving any feedback",
+          "text": "Copilot is not giving any feedback\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\nPieces for Developers 3.3.3\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nThe copilot is not generating anything, it just keeps on loading.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 3.23
         }
       ]
     }
   ],
-  "recommendations": [],
+  "recommendations": [
+    "Investigate the root cause of Pieces software malfunctions across platforms (MacOS, Windows, and Linux). Prioritize issues related to Copilot output generation, Visual Studio extension interference, and Pieces OS login failures.",
+    "Address connection issues between Pieces for Developers and Pieces OS, focusing on invalid port errors, HTTP 500 login errors, and Copilot feedback failures. Ensure compatibility between Pieces for Developers and OS versions.",
+    "Review logs for specific error messages related to Copilot, Visual Studio extension, and Pieces OS login failures.",
+    "Provide users with temporary workarounds, such as disabling the Pieces VS extension, while investigating the root cause of the issue.",
+    "Improve communication with users regarding ongoing investigations and estimated resolution times for reported issues.",
+    "Implement better error handling and logging to capture more detailed information about the issues encountered by users.",
+    "Consider increasing testing coverage across different platforms and configurations to identify and address potential issues earlier in the development cycle.",
+    "Develop a more robust process for tracking and prioritizing bug reports to ensure timely resolution of critical issues.",
+    "Investigate the high frequency of issues related to Copilot, Pieces OS login, and the Visual Studio extension to identify underlying patterns or systemic problems.",
+    "Allocate additional resources to support operations to handle the current influx of bug reports and improve response times. "
+  ],
   "message": "Daily support report generated successfully."
 }
