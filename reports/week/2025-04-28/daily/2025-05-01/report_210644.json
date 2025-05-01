@@ -1,0 +1,120 @@
+{
+  "success": true,
+  "date_range": {
+    "start": "2025-05-01T00:00:00+00:00",
+    "end": "2025-05-01T21:06:44.108067+00:00"
+  },
+  "summary": {
+    "total_tickets": 3,
+    "resolved_tickets": 0,
+    "open_tickets": 3
+  },
+  "ticket_breakdown": [
+    {
+      "category": "bug",
+      "received": 3,
+      "resolved": 0,
+      "pending": 3
+    },
+    {
+      "category": "os:windows",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:new",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "app:desktop application",
+      "received": 3,
+      "resolved": 0,
+      "pending": 3
+    },
+    {
+      "category": "app:vs code",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:web extension",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "os:macos",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:pieces copilot module",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:triaged",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "os:linux",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    }
+  ],
+  "most_active_tickets": [
+    {
+      "number": 701,
+      "title": "Copilot not responding",
+      "activity_level": 5.68
+    },
+    {
+      "number": 700,
+      "title": "Issues with local llm models",
+      "activity_level": 4.42
+    },
+    {
+      "number": 584,
+      "title": "Copilot is not giving any feedback",
+      "activity_level": 3.15
+    }
+  ],
+  "common_issues": [
+    {
+      "title": "Copilot Unresponsive, Constant Loading",
+      "description": "Users across different operating systems (Windows, macOS, Linux) report Copilot unresponsiveness.  Copilot continuously loads without generating responses in conversations within the app or extensions. Some conversations may show summaries or name updates, but no chat responses.  Troubleshooting steps like resetting, restarting, reinstalling, and switching between On-Device and Cloud LLMs have been unsuccessful.  Log files contain repeated Sentry Event Errors. Further investigation into these errors is needed.",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 701,
+          "title": "Copilot not responding",
+          "text": "Copilot not responding\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nPiecesOS: 11.3.3 - Pieces for Developers: 4.1.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nHey all,\nPieces Copilot no longer responds in conversations in the app, or through any of the extensions (VS Code/Chrome). It just keeps loading. I've tried hard-resetting, restarting, reinstalling, On-Device LLMs, and Cloud LLMs. The weird thing is, some of the conversations will have a summary or will update the name of the conversation, but it never responds in the chat. I looked at the logs and saw repeated Sentry Event Errors, but not sure what to do with that.  I attached the log file from the day before yesterday (yesterday's is too large and won't upload). What should I do?\n\nThanks!\n\n[log-04292025.txt](https://github.com/user-attachments/files/19997109/log-04292025.txt)\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 5.68
+        },
+        {
+          "id": 584,
+          "title": "Copilot is not giving any feedback",
+          "text": "Copilot is not giving any feedback\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\nPieces for Developers 3.3.3\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nThe copilot is not generating anything, it just keeps on loading.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 3.15
+        },
+        {
+          "id": 700,
+          "title": "Issues with local llm models",
+          "text": "Issues with local llm models\n### Checked for Existing Issues?\n\n- [ ] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nLinux\n\n### Your Pieces OS Version\n\n11.3.3\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n![Image](https://github.com/user-attachments/assets/5a5358da-6109-41e2-8ae0-8e2c50e9a2b6)\n\nPieces will not let me install locally hosted models.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 4.42
+        }
+      ]
+    }
+  ],
+  "recommendations": [],
+  "message": "Daily support report generated successfully."
+}
