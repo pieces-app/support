@@ -1,40 +1,48 @@
 # Support Ticket Report
-- Generated: 2025-05-01 21:09:16
-- Period: 2025-04-28 to 2025-05-01
+- Generated: 2025-05-02 05:09:45
+- Period: 2025-04-28 to 2025-05-02
 
 ## Summary
-- **Total Tickets:** 6
-- **Resolved:** 0
+- **Total Tickets:** 7
+- **Resolved:** 1
 - **Open:** 6
 
 ## 5 Most Active Tickets
 | Issue # | Title | Activity Level |
 |---------|-------|----------------|
-| [#701](https://github.com/pieces-app/support/issues/701) | Copilot not responding | 5.68 |
-| [#700](https://github.com/pieces-app/support/issues/700) | Issues with local llm models | 4.42 |
-| [#691](https://github.com/pieces-app/support/issues/691) | OS: login does not work ( /os/sign_in HTTP 500) | 3.91 |
-| [#641](https://github.com/pieces-app/support/issues/641) | Invalid port http://0.0.0.0:null/connect | 3.27 |
-| [#584](https://github.com/pieces-app/support/issues/584) | Copilot is not giving any feedback | 3.15 |
+| [#702](https://github.com/pieces-app/support/issues/702) | I'm unable to do Handshake with asana | 6.94 |
+| [#701](https://github.com/pieces-app/support/issues/701) | Copilot not responding | 6.94 |
+| [#691](https://github.com/pieces-app/support/issues/691) | OS: login does not work ( /os/sign_in HTTP 500) | 4.28 |
+| [#700](https://github.com/pieces-app/support/issues/700) | Issues with local llm models | 3.50 |
+| [#584](https://github.com/pieces-app/support/issues/584) | Copilot is not giving any feedback | 3.14 |
 
 ## Common Issues
-### 1. Copilot Unresponsive, Not Generating Feedback
-Users report Copilot not responding in conversations or extensions (VS Code, Chrome) across Windows, macOS, and Linux. Copilot continuously loads, sometimes updating conversation summaries or names, but doesn't respond in chat.  Troubleshooting steps like resetting, restarting, reinstalling, and switching between On-Device and Cloud LLMs have been unsuccessful.  Log files contain Sentry Event Errors.  One user also reported issues installing locally hosted models.
+### 1. Pieces OS and Integrations Failing
+Users report various failures in Pieces OS and integrations like Asana and Copilot. Issues include Handshake failures with Asana, login failures with a 500 error on /os/sign_in, and Copilot unresponsiveness despite conversation summaries updating.  Suggested troubleshooting includes checking logs for errors, ensuring valid model versions, and verifying network connectivity.
 
 **Related Issues:**
+- [#702](https://github.com/pieces-app/support/issues/702): I'm unable to do Handshake with asana
+- [#691](https://github.com/pieces-app/support/issues/691): OS: login does not work ( /os/sign_in HTTP 500)
 - [#701](https://github.com/pieces-app/support/issues/701): Copilot not responding
+
+### 2. Copilot not responding or generating output
+Users across different operating systems (macOS, Windows, Linux) are reporting that Copilot is not generating any output, often getting stuck in a loading state.  Some users report partial functionality, such as conversation summaries generating but no chat responses.  A common error message points to a 404 for the Gemini-pro model.  Suggested troubleshooting includes restarting, reinstalling, checking logs, and verifying model access.
+
+**Related Issues:**
 - [#584](https://github.com/pieces-app/support/issues/584): Copilot is not giving any feedback
+- [#701](https://github.com/pieces-app/support/issues/701): Copilot not responding
 - [#700](https://github.com/pieces-app/support/issues/700): Issues with local llm models
 
-### 2. Pieces Copilot not responding or generating output
-Users report Pieces Copilot not responding in conversations within the app or extensions (VS Code, Chrome).  Symptoms include continuous loading, lack of responses in chat, and potential Sentry Event Errors in logs.  Some conversation summaries or name updates may still function.  Issue affects Windows and macOS, across various Pieces OS and extension versions.  Troubleshooting steps like resets, restarts, reinstalls, and switching between On-Device and Cloud LLMs have been unsuccessful.  One user reported a conflict with Visual Studio's Diagnostic Tools, resolved by disabling the Pieces plugin.
+### 3. Pieces Copilot not responding or generating output
+Users report Pieces Copilot not responding in conversations within the app or extensions (VS Code, Chrome).  Symptoms include continuous loading, lack of responses in chat, and potential Sentry Event Errors in logs.  Some conversation summaries or name updates may still function.  Issue affects Windows and macOS, across various Pieces OS and extension versions.  Troubleshooting steps like resets, restarts, reinstalls, and switching between On-Device and Cloud LLMs have been unsuccessful.  One user reported a conflict with the Visual Studio Diagnostic tool output.
 
 **Related Issues:**
 - [#697](https://github.com/pieces-app/support/issues/697): Visual Studio 2022 extension interfering with Diagnostic tool output
 - [#701](https://github.com/pieces-app/support/issues/701): Copilot not responding
 - [#584](https://github.com/pieces-app/support/issues/584): Copilot is not giving any feedback
 
-### 3. Pieces for Developers and OS connection issues
-Users are experiencing connection issues between Pieces for Developers and Pieces OS on Linux and macOS.  Problems include invalid port errors, login failures with HTTP 500 errors, and Copilot failing to provide feedback.  Check Pieces OS logs for error messages and ensure proper port configuration. Verify Pieces for Developers and OS versions for compatibility.
+### 4. Pieces for Developers and OS connection issues
+Users are experiencing connection issues between Pieces for Developers and Pieces OS on Linux and macOS.  Problems include invalid port errors, login failures with HTTP 500 errors, and Copilot failing to provide feedback.  Check Pieces OS logs for error messages and ensure the correct port is configured. Verify Pieces for Developers and OS compatibility.
 
 **Related Issues:**
 - [#641](https://github.com/pieces-app/support/issues/641): Invalid port http://0.0.0.0:null/connect
@@ -43,18 +51,13 @@ Users are experiencing connection issues between Pieces for Developers and Piece
 
 
 ## Recommendations
-- Prioritize resolving the "Copilot Unresponsive" issue affecting Windows, macOS, and Linux users across VS Code, Chrome, and Desktop app. Investigate Sentry Event Errors and local model installation issues.
-- Address Pieces Copilot and OS connection problems on Linux and macOS. Check port configurations, logs, and version compatibility between Pieces for Developers and OS.
-- Investigate the HTTP 500 error during OS login on Linux.  Review related logs and error messages.
-- Look into the invalid port error ("http://0.0.0.0:null/connect") reported on Linux. Ensure correct port configuration in Pieces for Developers and OS.
-- Address the Visual Studio 2022 extension conflict with Diagnostic Tools on Windows. Ensure compatibility and consider a workaround or fix for affected users.
-- Proactively monitor and address the "Copilot not giving any feedback" issue on macOS and other platforms. This may be related to the broader Copilot unresponsiveness problem.
-- Improve communication with users experiencing Copilot issues. Provide updates, workarounds, or temporary solutions while a fix is being developed.
-- Collect more detailed logs and system information from affected users to aid in debugging and resolution of Copilot and connection issues.
-- Consider adding troubleshooting steps for common Copilot issues to the Pieces documentation or support resources.
-- Review and update the local LLM model installation process on Linux to address reported issues and improve user experience.
-- Analyze support tickets for trends and patterns to identify potential areas for improvement in the software or documentation.
-- Prioritize bug fixes and improvements based on the frequency and impact of reported issues, focusing on those affecting the most users and core functionality like Copilot responsiveness and OS connectivity.
+- Prioritize resolving Copilot issues impacting multiple operating systems and extensions, focusing on the "Copilot not responding or generating output" common issue and the potential Gemini-pro model access problem.
+- Investigate and address the Pieces OS and integrations failures, particularly the Asana handshake and login issues, potentially related to server-side errors ("/os/sign_in HTTP 500").
+- Improve documentation and communication around Pieces OS and Pieces for Developers port configuration and compatibility to mitigate connection issues on Linux and macOS.
+- Gather more data on local LLM model installation failures on Linux to understand the root cause and provide better support.
+- Review and address the Visual Studio 2022 extension conflict with the Diagnostic tool output to improve the developer experience for Windows users.
+- Monitor the frequency and activity levels of reported issues to identify and address emerging trends proactively.
+- Consider implementing automated troubleshooting steps or self-service resources for common issues like Copilot unresponsiveness and connection problems to reduce support ticket volume.
 
 ## Daily Reports
 Here are the daily reports for this week:
@@ -65,3 +68,4 @@ Here are the daily reports for this week:
 - [report_131300](daily/2025-05-01/report_131300.md)
 - [report_210644](daily/2025-05-01/report_210644.md)
 - [report_050802](daily/2025-05-01/report_050802.md)
+- [report_050756](daily/2025-05-02/report_050756.md)
