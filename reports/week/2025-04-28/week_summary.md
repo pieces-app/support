@@ -1,40 +1,40 @@
 # Support Ticket Report
-- Generated: 2025-05-02 21:07:59
-- Period: 2025-04-28 to 2025-05-02
+- Generated: 2025-05-03 05:08:12
+- Period: 2025-04-28 to 2025-05-03
 
 ## Summary
-- **Total Tickets:** 7
+- **Total Tickets:** 8
 - **Resolved:** 1
-- **Open:** 6
+- **Open:** 7
 
 ## 5 Most Active Tickets
 | Issue # | Title | Activity Level |
 |---------|-------|----------------|
-| [#702](https://github.com/pieces-app/support/issues/702) | I'm unable to do Handshake with asana | 6.94 |
+| [#702](https://github.com/pieces-app/support/issues/702) | I'm unable to do Handshake with asana | 6.50 |
 | [#701](https://github.com/pieces-app/support/issues/701) | Copilot not responding | 5.50 |
 | [#691](https://github.com/pieces-app/support/issues/691) | OS: login does not work ( /os/sign_in HTTP 500) | 4.20 |
-| [#700](https://github.com/pieces-app/support/issues/700) | Issues with local llm models | 3.50 |
-| [#584](https://github.com/pieces-app/support/issues/584) | Copilot is not giving any feedback | 3.14 |
+| [#700](https://github.com/pieces-app/support/issues/700) | Issues with local llm models | 3.88 |
+| [#697](https://github.com/pieces-app/support/issues/697) | Visual Studio 2022 extension interfering with Diagnostic tool output | 3.74 |
 
 ## Common Issues
-### 1. Pieces Integrations and Core Features Malfunctioning
-Users report issues with Asana handshake, Pieces OS login (HTTP 500 error), and Copilot unresponsiveness.  Asana issue involves webhook creation and header handling. OS login failure points to a backend error during sign-in. Copilot problem manifests as infinite loading, despite conversation summaries updating.  Suggested solutions include verifying Asana integration setup, checking OS logs for login errors, and examining Copilot logs for Sentry errors or connectivity issues. Reinstallation and resets have been attempted by users with limited success.
+### 1. Pieces OS and Integrations Failing
+Users report various failures in Pieces OS and integrations like Asana and Copilot. Issues include Handshake failures with Asana, login failures with a 500 error on /os/sign_in, and Copilot unresponsiveness despite conversation summaries updating.  Suggested troubleshooting includes checking logs for errors, ensuring valid model versions, and verifying network connectivity.
 
 **Related Issues:**
 - [#702](https://github.com/pieces-app/support/issues/702): I'm unable to do Handshake with asana
 - [#691](https://github.com/pieces-app/support/issues/691): OS: login does not work ( /os/sign_in HTTP 500)
 - [#701](https://github.com/pieces-app/support/issues/701): Copilot not responding
 
-### 2. Copilot not responding or generating output
-Users across different operating systems (macOS, Windows, Linux) are reporting that Copilot is unresponsive, not generating any output, or continuously loading.  Some users observe partial functionality like conversation summaries updating.  A common error message points to a 404 for the Gemini-pro model.  Suggested troubleshooting includes restarting, reinstalling, checking logs, and verifying model access.
+### 2. Local and Cloud LLM Model Issues
+Users are experiencing issues with both locally hosted and cloud-based LLMs.  Symptoms include failure to install local models, Copilot unresponsiveness, and continuous loading.  A common error message points to a 404 for the Gemini Pro model.  Suggested troubleshooting includes checking model validity and project access.
 
 **Related Issues:**
+- [#700](https://github.com/pieces-app/support/issues/700): Issues with local llm models
 - [#584](https://github.com/pieces-app/support/issues/584): Copilot is not giving any feedback
 - [#701](https://github.com/pieces-app/support/issues/701): Copilot not responding
-- [#700](https://github.com/pieces-app/support/issues/700): Issues with local llm models
 
 ### 3. Pieces Copilot not responding or generating output
-Users report Pieces Copilot not responding in conversations within the app or extensions (VS Code, Chrome).  Symptoms include continuous loading, lack of responses in chat, and potential interference with Visual Studio's Diagnostic tools.  Some conversation summaries or name updates may still function.  Troubleshooting steps include hard resets, restarts, reinstalls, toggling On-Device/Cloud LLMs, and checking logs for errors.
+Users report Pieces Copilot not responding in conversations within the app or extensions (VS Code, Chrome).  Symptoms include continuous loading, lack of responses in chat, and potential Sentry Event Errors in logs.  Some conversation summaries or name updates may still function.  Issue observed across Windows and macOS, impacting VS Code extension and Diagnostic tools output in Visual Studio.  Troubleshooting steps like resets, restarts, reinstalls, and switching LLMs have been unsuccessful.
 
 **Related Issues:**
 - [#697](https://github.com/pieces-app/support/issues/697): Visual Studio 2022 extension interfering with Diagnostic tool output
@@ -42,97 +42,107 @@ Users report Pieces Copilot not responding in conversations within the app or ex
 - [#584](https://github.com/pieces-app/support/issues/584): Copilot is not giving any feedback
 
 ### 4. Pieces for Developers and OS connection issues
-Users are experiencing connection issues between Pieces for Developers and Pieces OS on Linux and macOS.  Symptoms include invalid port errors, login failures with HTTP 500 errors, and Copilot failing to provide feedback.  Check Pieces OS logs for error messages. Ensure Pieces OS and Pieces for Developers are on compatible versions and network connectivity is not blocked by firewalls.
+Users are experiencing connection issues between Pieces for Developers and Pieces OS on Linux and macOS.  Symptoms include invalid port errors, login failures with HTTP 500 errors, and Copilot failing to provide feedback.  Check Pieces OS logs for error messages and ensure proper port configuration. Verify Pieces for Developers and OS versions for compatibility.
 
 **Related Issues:**
 - [#641](https://github.com/pieces-app/support/issues/641): Invalid port http://0.0.0.0:null/connect
 - [#691](https://github.com/pieces-app/support/issues/691): OS: login does not work ( /os/sign_in HTTP 500)
 - [#584](https://github.com/pieces-app/support/issues/584): Copilot is not giving any feedback
 
+### 5. Issues with LLM Download and Functionality
+Users are experiencing problems with LLM interaction, including failed downloads, inability to cancel downloads, and lack of Copilot response.  Issues span Windows, Linux, and macOS platforms. Further investigation needed to pinpoint root cause and solutions.  Error messages suggest potential access or model version problems.
+
+**Related Issues:**
+- [#459](https://github.com/pieces-app/support/issues/459): Bug: unable to cancel the download of an LLLM
+- [#700](https://github.com/pieces-app/support/issues/700): Issues with local llm models
+- [#584](https://github.com/pieces-app/support/issues/584): Copilot is not giving any feedback
+
 
 ## Recommendations
-- Prioritize resolving the 'Copilot not responding' issue due to its high frequency and impact on users across different operating systems.
-- Investigate the root cause of the 'OS: login does not work' issue, focusing on the HTTP 500 error and potential backend problems.
-- Address the Asana integration handshake issue, ensuring proper webhook creation and header handling to resolve integration failures.
-- Provide clear documentation or troubleshooting steps for users experiencing issues with local LLM models.
-- Review and improve error messaging related to invalid ports and connection issues between Pieces for Developers and Pieces OS.
-- Investigate the interference between the Visual Studio 2022 extension and Diagnostic tools output.
-- Monitor and address the 404 error related to the Gemini-pro model, ensuring users have proper access and configuration.
-- Proactively communicate known issues and workarounds to users through a status page or other channels.
-- Improve logging and error reporting to facilitate faster identification and resolution of issues.
-- Gather more data on user environments and configurations to identify potential patterns or contributing factors to issues.
-- Consider implementing automated testing to catch integration and compatibility issues earlier in the development process.
-- Prioritize issues based on frequency, severity, and user impact to optimize resource allocation.
-- Develop a standardized process for triaging and escalating support tickets to ensure timely resolution.
-- Provide training to support staff on common issues and troubleshooting techniques.
-- Collect user feedback on support interactions to identify areas for improvement and enhance customer satisfaction.
-- Establish service level agreements (SLAs) for different types of support requests to manage user expectations.
-- Implement a system for tracking and analyzing support metrics to monitor performance and identify trends.
-- Explore the use of chatbots or other automation tools to handle common support requests and free up support staff.
-- Foster a culture of continuous improvement in support operations by regularly reviewing processes and seeking feedback.
-- Encourage users to submit detailed bug reports with steps to reproduce issues to aid in debugging and resolution.
-- Consider offering premium support options for users with more complex needs or critical issues.
-- Develop a knowledge base or FAQ section to address common questions and issues.
-- Create a community forum or other platform for users to share tips, workarounds, and support each other.
-- Integrate support tools with other systems, such as CRM or project management software, to streamline workflows.
-- Regularly review and update documentation to ensure accuracy and relevance.
-- Conduct user surveys to gather feedback on product usability and identify potential pain points.
-- Analyze support data to identify areas for product improvement and reduce the occurrence of common issues.
-- Proactively monitor system performance and identify potential issues before they impact users.
-- Implement a robust incident management process to handle major outages or critical issues effectively.
-- Establish clear communication channels between support, development, and product teams to facilitate collaboration and issue resolution.
-- Invest in tools and resources to improve support efficiency and effectiveness.
-- Regularly assess and update support processes to align with evolving user needs and business goals.
-- Recognize and reward exceptional support performance to motivate and retain staff.
-- Promote a customer-centric approach to support by prioritizing user satisfaction and building strong relationships.
-- Continuously evaluate and adapt support strategies to meet the changing demands of the business and user base.
-- Leverage data analytics to identify trends, predict future issues, and optimize support operations.
-- Embrace automation and AI-powered tools to enhance support efficiency and improve user experience.
-- Foster a collaborative environment between support and other teams to ensure seamless issue resolution and product improvement.
-- Prioritize proactive support measures to prevent issues from occurring and minimize user disruption.
-- Strive to provide personalized and empathetic support to build trust and enhance customer loyalty.
-- Continuously seek feedback and iterate on support processes to deliver exceptional service and exceed user expectations.
-- Embrace a data-driven approach to support by using metrics to track performance, identify areas for improvement, and demonstrate the value of support operations to the business.
-- Build a strong support team by hiring skilled individuals, providing ongoing training, and fostering a positive and supportive work environment.
-- Empower support staff to take ownership of issues and provide timely and effective solutions to users.
-- Develop a clear career path for support professionals to encourage growth and development within the organization.
-- Promote a culture of knowledge sharing and collaboration within the support team to improve overall performance and efficiency.
-- Recognize and celebrate support successes to boost morale and reinforce a sense of accomplishment within the team.
-- Encourage innovation and creativity within the support team to identify new and improved ways to serve users.
-- Continuously evaluate and adapt support strategies to align with industry best practices and emerging trends.
-- Invest in cutting-edge support technologies to enhance efficiency, improve user experience, and stay ahead of the competition.
-- Foster a strong partnership between support and product development to ensure that user feedback is incorporated into future product releases.
-- Develop a comprehensive support strategy that aligns with the overall business goals and objectives.
-- Regularly communicate support performance metrics and key insights to stakeholders to demonstrate the value and impact of support operations.
-- Build a strong reputation for exceptional customer support to enhance brand loyalty and attract new users.
-- Strive to create a seamless and positive support experience for every user interaction.
-- Embrace a culture of continuous learning and improvement within the support team to ensure that they are equipped to handle the evolving needs of users and the business.
-- Empower users with self-service resources and tools to enable them to resolve common issues independently.
-- Proactively identify and address potential support bottlenecks to ensure timely and efficient issue resolution.
-- Develop a robust escalation process for complex or critical issues to ensure that they are handled by the appropriate experts.
-- Foster a strong sense of community among users by providing opportunities for them to connect, share knowledge, and support each other.
-- Continuously monitor and analyze user feedback to identify areas for improvement and enhance the overall support experience.
-- Embrace a proactive approach to support by anticipating user needs and providing solutions before issues arise.
-- Strive to exceed user expectations by providing exceptional service and building strong relationships.
-- Develop a comprehensive set of support metrics to track performance, identify trends, and measure the impact of support operations on the business.
-- Use data analytics to identify areas for optimization and improve the efficiency and effectiveness of support processes.
-- Embrace automation and AI-powered tools to streamline workflows, reduce response times, and enhance the overall user experience.
-- Foster a culture of collaboration and knowledge sharing between support and other teams to ensure seamless issue resolution and product improvement.
-- Prioritize user satisfaction and build strong relationships to enhance brand loyalty and attract new users.
-- Continuously evaluate and adapt support strategies to meet the changing demands of the business and user base.
-- Invest in training and development programs to equip support staff with the skills and knowledge they need to provide exceptional service.
-- Empower support staff to take ownership of issues and provide timely and effective solutions to users.
-- Develop a clear career path for support professionals to encourage growth and development within the organization.
-- Recognize and celebrate support successes to boost morale and reinforce a sense of accomplishment within the team.
-- Encourage innovation and creativity within the support team to identify new and improved ways to serve users.
-- Continuously evaluate and adapt support strategies to align with industry best practices and emerging trends.
-- Invest in cutting-edge support technologies to enhance efficiency, improve user experience, and stay ahead of the competition.
-- Foster a strong partnership between support and product development to ensure that user feedback is incorporated into future product releases.
-- Develop a comprehensive support strategy that aligns with the overall business goals and objectives.
-- Regularly communicate support performance metrics and key insights to stakeholders to demonstrate the value and impact of support operations.
-- Build a strong reputation for exceptional customer support to enhance brand loyalty and attract new users.
-- Strive to create a seamless and positive support experience for every user interaction.
-- Embrace a culture of continuous learning and improvement within the support team to ensure that they are equipped to handle the evolving needs of users and the business.
+- Prioritize resolving Copilot unresponsiveness and LLM integration issues as they affect multiple users across different platforms.
+- Investigate and address the HTTP 500 errors on /os/sign_in impacting login functionality on Linux.
+- Provide clear guidance on local model installation and troubleshooting steps for LLM download issues.
+- Improve Asana integration handshake process and documentation to prevent user errors.
+- Review and address the Visual Studio 2022 extension's interference with Diagnostic tool output.
+- Ensure Pieces OS and Pieces for Developers version compatibility and provide solutions for invalid port errors.
+- Implement a more robust LLM download cancellation process to avoid user frustration.
+- Monitor logs and Sentry events for recurring errors and patterns to proactively address emerging issues.
+- Consider creating dedicated FAQs or troubleshooting guides for common issues like Copilot unresponsiveness and LLM integration problems.
+- Collect user feedback on specific error messages and troubleshooting steps to improve their clarity and effectiveness.
+- Prioritize issues based on frequency, activity level, and potential impact on user workflows.
+- Investigate the root cause of the "404 Publisher Model" error related to Gemini Pro and ensure users have proper access and valid model versions.
+- Implement better error handling and messaging within the application to provide users with more informative and actionable feedback.
+- Improve communication with users regarding ongoing investigations and expected resolution timelines for reported issues.
+- Proactively monitor system performance and stability to identify and address potential issues before they impact users.
+- Encourage users to provide detailed bug reports with steps to reproduce the issue, relevant logs, and screenshots to facilitate faster troubleshooting.
+- Establish a clear escalation path for critical issues to ensure timely resolution by the appropriate development teams.
+- Regularly review and update documentation and tutorials to reflect the latest software versions and features.
+- Provide users with alternative solutions or workarounds while critical issues are being investigated and resolved.
+- Analyze user feedback and support tickets to identify areas for improvement in the product and documentation.
+- Track the effectiveness of implemented solutions and make adjustments as needed to continuously improve support operations.
+- Foster a collaborative environment between support and development teams to facilitate knowledge sharing and faster issue resolution.
+- Invest in automated testing and monitoring tools to proactively identify and prevent potential issues.
+- Consider implementing a user forum or community platform to facilitate peer-to-peer support and knowledge sharing.
+- Regularly analyze support metrics such as resolution time, ticket volume, and customer satisfaction to identify trends and areas for improvement.
+- Provide support staff with regular training on new features, troubleshooting techniques, and communication best practices.
+- Empower support staff to take ownership of user issues and provide timely and effective solutions.
+- Develop a system for tracking and prioritizing feature requests based on user feedback and support tickets.
+- Continuously evaluate and refine support processes to ensure they are efficient, scalable, and user-centered.
+- Communicate planned maintenance or downtime to users in advance to minimize disruption and manage expectations effectively.
+- Maintain a comprehensive knowledge base of known issues, solutions, and troubleshooting steps for common problems.
+- Encourage users to submit feature requests and provide feedback on the product through dedicated channels.
+- Regularly review and update the support team's tools and resources to ensure they have the necessary information and technology to effectively assist users.
+- Promote self-service support options such as FAQs, tutorials, and knowledge base articles to empower users to resolve common issues independently.
+- Provide support staff with access to relevant documentation, code repositories, and development tools to facilitate faster troubleshooting and issue resolution.
+- Establish clear service level agreements (SLAs) for different types of support requests to manage user expectations and ensure timely responses.
+- Track and analyze user behavior and support interactions to identify areas where the product can be improved to reduce user errors and support requests.
+- Implement a system for proactively identifying and addressing potential issues based on user feedback, support tickets, and system logs.
+- Continuously monitor industry best practices and emerging technologies to identify opportunities for improving support operations and user experience.
+- Foster a culture of continuous improvement within the support team by encouraging feedback, innovation, and knowledge sharing.
+- Regularly assess the effectiveness of support channels and make adjustments as needed to ensure users can easily access the support they need.
+- Provide support staff with opportunities for professional development and training to enhance their skills and knowledge.
+- Encourage users to participate in beta programs and provide feedback on new features to identify and address potential issues early in the development cycle.
+- Develop a system for tracking and analyzing user sentiment and feedback to identify areas where the product or support experience can be improved.
+- Establish clear communication channels between support, development, and product teams to facilitate collaboration and information sharing.
+- Regularly review and update support policies and procedures to ensure they are aligned with business goals and user needs.
+- Proactively identify and address potential accessibility issues to ensure the product is usable by individuals with disabilities.
+- Provide multilingual support options to cater to a diverse user base and improve accessibility.
+- Develop a system for collecting and analyzing user feedback on the support experience to identify areas for improvement.
+- Implement a feedback loop to gather input from support staff on how to improve processes, tools, and resources.
+- Continuously evaluate and refine support metrics to ensure they are aligned with business objectives and user needs.
+- Encourage users to provide feedback on the support experience through surveys, feedback forms, and other channels.
+- Develop a system for recognizing and rewarding support staff for outstanding performance and contributions.
+- Foster a positive and supportive work environment for the support team to promote employee satisfaction and retention.
+- Regularly review and update the support team's knowledge base and training materials to ensure they are up-to-date and relevant.
+- Provide support staff with access to mentorship and coaching programs to help them develop their skills and advance their careers.
+- Encourage collaboration and knowledge sharing within the support team through regular team meetings, training sessions, and other activities.
+- Develop a system for tracking and analyzing support costs to identify opportunities for optimization and efficiency improvements.
+- Continuously evaluate and refine support strategies to ensure they are aligned with evolving user needs and business objectives.
+- Promote a customer-centric approach to support by empowering support staff to go above and beyond to meet user needs and exceed expectations.
+- Develop a system for measuring and reporting on support performance metrics to track progress and identify areas for improvement.
+- Regularly communicate support updates and performance metrics to stakeholders to keep them informed of progress and challenges.
+- Foster a culture of innovation within the support team by encouraging experimentation and the adoption of new technologies and best practices.
+- Continuously seek feedback from users and stakeholders to identify opportunities for improving support operations and user experience.
+- Develop a long-term vision for support operations that aligns with the company's overall business strategy and goals.
+- Invest in the development and growth of the support team to ensure they have the skills and resources to provide exceptional user support.
+- Promote a culture of continuous learning and development within the support team to encourage ongoing skill development and professional growth.
+- Empower the support team to take ownership of support operations and drive continuous improvement initiatives.
+- Celebrate successes and recognize the contributions of the support team to foster a positive and motivating work environment.
+- Continuously strive to exceed user expectations and provide world-class support that contributes to the overall success of the company.
+- Regularly assess the effectiveness of support technologies and tools and make adjustments as needed to ensure the team has the best resources available.
+- Develop a system for proactively identifying and addressing potential support challenges before they impact users.
+- Foster a strong partnership between support and other departments within the company to ensure alignment and collaboration on user-related issues.
+- Continuously monitor and analyze support trends and industry best practices to identify opportunities for innovation and improvement.
+- Develop a comprehensive support strategy that addresses all aspects of the user experience, from onboarding to ongoing support and issue resolution.
+- Empower users to become product experts and advocates by providing them with the resources and support they need to succeed.
+- Foster a community of users who can share knowledge, best practices, and support each other.
+- Continuously evaluate and refine support processes to ensure they are efficient, effective, and user-centered.
+- Develop a system for measuring and reporting on the impact of support operations on user satisfaction, retention, and overall business success.
+- Celebrate the achievements of the support team and recognize their contributions to the company's success.
+- Continuously strive to improve the support experience and create a positive and supportive environment for both users and support staff.
+- Develop a long-term vision for support operations that aligns with the company's mission and values.
+- Empower the support team to be proactive, innovative, and customer-focused in their approach to user support.
+- Foster a culture of continuous improvement and learning within the support team to ensure they are always providing the best possible support experience.
 
 ## Daily Reports
 Here are the daily reports for this week:
