@@ -2,43 +2,49 @@
   "success": true,
   "date_range": {
     "start": "2025-04-28T00:00:00+00:00",
-    "end": "2025-05-03T21:06:02.725797+00:00"
+    "end": "2025-05-04T05:07:28.812201+00:00"
   },
   "summary": {
-    "total_tickets": 8,
-    "resolved_tickets": 1,
+    "total_tickets": 9,
+    "resolved_tickets": 2,
     "open_tickets": 7
   },
   "ticket_breakdown": [
     {
-      "category": "os:windows",
-      "received": 3,
-      "resolved": 1,
-      "pending": 2
+      "category": "bug",
+      "received": 8,
+      "resolved": 2,
+      "pending": 6
     },
     {
       "category": "app:desktop application",
-      "received": 8,
-      "resolved": 1,
+      "received": 9,
+      "resolved": 2,
       "pending": 7
-    },
-    {
-      "category": "status:triaged",
-      "received": 6,
-      "resolved": 0,
-      "pending": 6
-    },
-    {
-      "category": "bug",
-      "received": 7,
-      "resolved": 1,
-      "pending": 6
     },
     {
       "category": "os:linux",
       "received": 3,
       "resolved": 0,
       "pending": 3
+    },
+    {
+      "category": "status:triaged",
+      "received": 7,
+      "resolved": 1,
+      "pending": 6
+    },
+    {
+      "category": "os:windows",
+      "received": 4,
+      "resolved": 2,
+      "pending": 2
+    },
+    {
+      "category": "app:pieces os",
+      "received": 2,
+      "resolved": 1,
+      "pending": 1
     },
     {
       "category": "app:visual studio",
@@ -75,24 +81,23 @@
       "received": 1,
       "resolved": 0,
       "pending": 1
-    },
-    {
-      "category": "app:pieces os",
-      "received": 1,
-      "resolved": 0,
-      "pending": 1
     }
   ],
   "most_active_tickets": [
     {
-      "number": 702,
-      "title": "I'm unable to do Handshake with asana",
-      "activity_level": 6.5
+      "number": 648,
+      "title": "Pieces Desktop not Launching on my Windows PC",
+      "activity_level": 6.02
     },
     {
-      "number": 701,
-      "title": "Copilot not responding",
-      "activity_level": 4.74
+      "number": 702,
+      "title": "I'm unable to do Handshake with asana",
+      "activity_level": 5.6
+    },
+    {
+      "number": 700,
+      "title": "Issues with local llm models",
+      "activity_level": 4.26
     },
     {
       "number": 691,
@@ -100,8 +105,8 @@
       "activity_level": 4.12
     },
     {
-      "number": 700,
-      "title": "Issues with local llm models",
+      "number": 701,
+      "title": "Copilot not responding",
       "activity_level": 3.88
     },
     {
@@ -127,15 +132,40 @@
   ],
   "common_issues": [
     {
+      "title": "Pieces Desktop and Copilot not responding after update",
+      "description": "Users report Pieces Desktop and Copilot become unresponsive after updating to recent versions on Windows and Linux. Issues include app failing to launch, getting stuck during loading, and Copilot not responding in conversations. Troubleshooting steps like restarting, reinstalling, and checking logs haven't resolved the problems. Some users observe partial functionality like conversation summaries updating despite unresponsiveness. ",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 648,
+          "title": "Pieces Desktop not Launching on my Windows PC",
+          "text": "Pieces Desktop not Launching on my Windows PC\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows 11 Home, 24H2\n\n### Your Pieces OS Version\n\n11.2.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nMy Pieces Desktop application has refused to launch since updating it to the latest version (v4.0.0). It's stuck in the \"Ensure Core Dependencies\" loading state even though I have Pieces OS already running successfully in the background. Kindly find screenshots below. \n\nI've tried force quitting both Pieces OS & Pieces Desktop from my Task Manager, uninstalling and re-installing Pieces Desktop, and restarting my PC, all to no avail. Any help would be highly appreciated, thank you!\n\n![Image](https://github.com/user-attachments/assets/22c14a42-29d6-4a1f-ab34-51ba5074b38e)\n\n![Image](https://github.com/user-attachments/assets/025d2e80-78be-480c-9cc2-a85a440dcf75)\n\n![Image](https://github.com/user-attachments/assets/48c76dde-307a-4451-b85f-0483b74c2321)\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 6.02
+        },
+        {
+          "id": 701,
+          "title": "Copilot not responding",
+          "text": "Copilot not responding\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nPiecesOS: 11.3.3 - Pieces for Developers: 4.1.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nHey all,\nPieces Copilot no longer responds in conversations in the app, or through any of the extensions (VS Code/Chrome). It just keeps loading. I've tried hard-resetting, restarting, reinstalling, On-Device LLMs, and Cloud LLMs. The weird thing is, some of the conversations will have a summary or will update the name of the conversation, but it never responds in the chat. I looked at the logs and saw repeated Sentry Event Errors, but not sure what to do with that.  I attached the log file from the day before yesterday (yesterday's is too large and won't upload). What should I do?\n\nThanks!\n\n[log-04292025.txt](https://github.com/user-attachments/files/19997109/log-04292025.txt)\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 3.88
+        },
+        {
+          "id": 700,
+          "title": "Issues with local llm models",
+          "text": "Issues with local llm models\n### Checked for Existing Issues?\n\n- [ ] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nLinux\n\n### Your Pieces OS Version\n\n11.3.3\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n![Image](https://github.com/user-attachments/assets/5a5358da-6109-41e2-8ae0-8e2c50e9a2b6)\n\nPieces will not let me install locally hosted models.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 4.26
+        }
+      ]
+    },
+    {
       "title": "Pieces OS and Integrations Failing",
-      "description": "Users report various failures across Pieces OS and integrations like Asana and Copilot. Issues include Handshake failures with Asana, login failures with Pieces OS (HTTP 500 errors on /os/sign_in), and Copilot unresponsiveness.  Check logs for errors, ensure network connectivity, and try restarting or reinstalling Pieces components.  For Asana, verify webhook setup and configuration.",
+      "description": "Users report various failures across Pieces OS and integrations like Asana and Copilot. Issues include Handshake failures with Asana, login failures with a 500 error on /os/sign_in, and Copilot unresponsiveness despite conversation summaries updating.  Suggested troubleshooting includes checking logs for errors, ensuring valid model versions, and verifying network connectivity.",
       "frequency": 3,
       "related_issues": [
         {
           "id": 702,
           "title": "I'm unable to do Handshake with asana",
           "text": "I'm unable to do Handshake with asana\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nLatest Version from Github\n\n### Early Access Program\n\n- [x] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nSee I'm trying to create a handshake with asana But getting error that failed to do handshake , Here Is my code import {\n  createTrigger,\n  TriggerStrategy,\n  type OAuth2PropertyValue,\n  WebhookHandshakeStrategy,\n} from '@activepieces/pieces-framework';\n\nimport { asanaCommon, callAsanaApi, callWebhookApi } from '../common';\nimport { HttpMethod } from '@activepieces/pieces-common';\nimport { asanaAuth } from '../../index';\n\nexport const projectTaskActivity = createTrigger({\n  name: 'project_task_activity',\n  displayName: 'Any Task Activity in Project',\n  description: 'Triggers when any task is added, updated, removed, or deleted in a selected project.',\n  auth: asanaAuth,\n  type: TriggerStrategy.WEBHOOK,\n\n \n\n  props: {\n    workspace: asanaCommon.workspace,\n    project: asanaCommon.project,\n  },\n\n  sampleData: {\n    events: [\n      {\n        user: { gid: '12345', resource_type: 'user', name: 'John Doe' },\n        created_at: '2023-05-15T15:00:00.000Z',\n        action: 'added',\n        resource: { gid: '67890', resource_type: 'task', name: 'Complete project documentation' },\n        parent: { gid: '54321', resource_type: 'project', name: 'Marketing Campaign' },\n      },\n    ],\n  },\n\n \n\n  async onEnable({ propsValue, auth, webhookUrl, store }) {\n    const projectId = propsValue.project;\n    const accessToken = (auth as OAuth2PropertyValue).access_token;\n\n    console.log('[Enable] Creating webhook for project:', projectId, 'Webhook URL:', webhookUrl);\n\n    try {\n      const response = await callWebhookApi(\n        HttpMethod.POST,\n        'webhooks',\n        accessToken,\n        {\n          resource: '1210132224773890',\n          target:webhookUrl,\n          filters: [\n            {\n              resource_type: 'task',\n              action: 'added',\n            },\n            {\n              resource_type: 'task',\n              action: 'changed'\n            }\n          ]\n        }\n      );\n      const webhookId = response.body?.data?.gid;\n      if (!webhookId) {\n        throw new Error('[Enable] Asana webhook creation succeeded but no webhook ID was returned.');\n      }\n\n      await store.put('asana_webhook_gid', webhookId);\n      console.log(`[Enable] Asana webhook created successfully: ${webhookId}`);\n    } catch (err) {\n      console.error('[Enable] Failed to create Asana webhook:', err);\n      // throw err;\n    }\n  },\n\n  async onDisable({ auth, store }) {\n    const accessToken = (auth as OAuth2PropertyValue).access_token;\n    const webhookId = await store.get('asana_webhook_gid');\n\n    // if (!webhookId) {\n    //   console.warn('[Disable] No stored webhook ID found.');\n    //   return;\n    // }\n\n    // try {\n    //   await callAsanaApi(HttpMethod.DELETE, `webhooks/${webhookId}`, accessToken, undefined);\n    //   console.log(`[Disable] Deleted Asana webhook: ${webhookId}`);\n    // } catch (err) {\n    //   console.error(`[Disable] Failed to delete Asana webhook (${webhookId}):`, err);\n    // }\n  },\n\n  async run({ payload }) {\n    console.log('[Run] Received headers:', payload.headers);\n    console.log('[Run] Received body:', payload.body);\n\n    const secret = payload.headers?.['x-hook-secret'];\n    console.log(secret,\"secret for asana is here\")\n    if (secret) {\n      return [{ 'x-hook-secret': secret }];\n    }\n\n    return [payload.body];\n  },\n  handshakeConfiguration: {\n    strategy: WebhookHandshakeStrategy.HEADER_PRESENT,\n    paramName: 'x-hook-secret',\n  },\n  async onHandshake(context) {\n    const secret = context.payload.headers?.['x-hook-secret'];\n    \n    if (!secret) {\n      console.error('[Handshake Error] Missing x-hook-secret header:', context.payload.headers);\n      return {\n        status: 400,\n        body: 'Missing x-hook-secret',\n      };\n    }\n  \n    console.log('[Handshake] Responding with x-hook-secret:', secret);\n  \n    return {\n      status: 200,\n      headers: {\n        'X-Hook-Secret': context.payload.headers?.['x-hook-secret'] // Fixed header name and value\n      },\n      // body: {} // Add empty body\n    };\n  },\n});\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 6.5
+          "activity_level": 5.6
         },
         {
           "id": 691,
@@ -147,38 +177,13 @@
           "id": 701,
           "title": "Copilot not responding",
           "text": "Copilot not responding\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nPiecesOS: 11.3.3 - Pieces for Developers: 4.1.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nHey all,\nPieces Copilot no longer responds in conversations in the app, or through any of the extensions (VS Code/Chrome). It just keeps loading. I've tried hard-resetting, restarting, reinstalling, On-Device LLMs, and Cloud LLMs. The weird thing is, some of the conversations will have a summary or will update the name of the conversation, but it never responds in the chat. I looked at the logs and saw repeated Sentry Event Errors, but not sure what to do with that.  I attached the log file from the day before yesterday (yesterday's is too large and won't upload). What should I do?\n\nThanks!\n\n[log-04292025.txt](https://github.com/user-attachments/files/19997109/log-04292025.txt)\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 4.74
-        }
-      ]
-    },
-    {
-      "title": "Local and Cloud LLM Model Issues",
-      "description": "Users are experiencing issues with both locally hosted and cloud-based LLMs.  Symptoms include failure to install local models, Copilot unresponsiveness, and continuous loading.  A common error message points to a 404 for the Gemini Pro model.  Suggested troubleshooting includes checking model validity and project access.",
-      "frequency": 3,
-      "related_issues": [
-        {
-          "id": 700,
-          "title": "Issues with local llm models",
-          "text": "Issues with local llm models\n### Checked for Existing Issues?\n\n- [ ] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nLinux\n\n### Your Pieces OS Version\n\n11.3.3\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n![Image](https://github.com/user-attachments/assets/5a5358da-6109-41e2-8ae0-8e2c50e9a2b6)\n\nPieces will not let me install locally hosted models.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
           "activity_level": 3.88
-        },
-        {
-          "id": 584,
-          "title": "Copilot is not giving any feedback",
-          "text": "Copilot is not giving any feedback\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\nPieces for Developers 3.3.3\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nThe copilot is not generating anything, it just keeps on loading.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 2.84
-        },
-        {
-          "id": 701,
-          "title": "Copilot not responding",
-          "text": "Copilot not responding\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nPiecesOS: 11.3.3 - Pieces for Developers: 4.1.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nHey all,\nPieces Copilot no longer responds in conversations in the app, or through any of the extensions (VS Code/Chrome). It just keeps loading. I've tried hard-resetting, restarting, reinstalling, On-Device LLMs, and Cloud LLMs. The weird thing is, some of the conversations will have a summary or will update the name of the conversation, but it never responds in the chat. I looked at the logs and saw repeated Sentry Event Errors, but not sure what to do with that.  I attached the log file from the day before yesterday (yesterday's is too large and won't upload). What should I do?\n\nThanks!\n\n[log-04292025.txt](https://github.com/user-attachments/files/19997109/log-04292025.txt)\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 4.74
         }
       ]
     },
     {
-      "title": "Pieces Copilot not responding or generating output",
-      "description": "Users report Pieces Copilot not responding in conversations within the app or extensions (VS Code, Chrome).  Symptoms include continuous loading, lack of responses in chat, and potential Sentry Event Errors in logs.  Some conversation summaries or name updates may still function.  Issue affects Windows and macOS, across various Pieces OS and extension versions.  Troubleshooting steps like resets, restarts, reinstalls, and switching between On-Device and Cloud LLMs have been unsuccessful.  One user also reported a conflict with the Pieces plugin and Visual Studio's Diagnostic tools.",
+      "title": "Pieces for Windows: Extension and App Functionality Issues",
+      "description": "Users report Pieces for Windows extensions and apps malfunctioning. Issues include Visual Studio's diagnostic tools pane blanking with Pieces plugin enabled, Pieces Copilot unresponsiveness in conversations, and Pieces Desktop app failing to launch past \"Ensure Core Dependencies\" stage.  Troubleshooting steps like reinstalling, restarting, and checking logs have been attempted.  Issues span Pieces OS versions 11.2.0 and 11.3.3, and Pieces for Developers 4.1.1.",
       "frequency": 3,
       "related_issues": [
         {
@@ -191,19 +196,19 @@
           "id": 701,
           "title": "Copilot not responding",
           "text": "Copilot not responding\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nPiecesOS: 11.3.3 - Pieces for Developers: 4.1.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nHey all,\nPieces Copilot no longer responds in conversations in the app, or through any of the extensions (VS Code/Chrome). It just keeps loading. I've tried hard-resetting, restarting, reinstalling, On-Device LLMs, and Cloud LLMs. The weird thing is, some of the conversations will have a summary or will update the name of the conversation, but it never responds in the chat. I looked at the logs and saw repeated Sentry Event Errors, but not sure what to do with that.  I attached the log file from the day before yesterday (yesterday's is too large and won't upload). What should I do?\n\nThanks!\n\n[log-04292025.txt](https://github.com/user-attachments/files/19997109/log-04292025.txt)\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 4.74
+          "activity_level": 3.88
         },
         {
-          "id": 584,
-          "title": "Copilot is not giving any feedback",
-          "text": "Copilot is not giving any feedback\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\nPieces for Developers 3.3.3\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nThe copilot is not generating anything, it just keeps on loading.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 2.84
+          "id": 648,
+          "title": "Pieces Desktop not Launching on my Windows PC",
+          "text": "Pieces Desktop not Launching on my Windows PC\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows 11 Home, 24H2\n\n### Your Pieces OS Version\n\n11.2.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nMy Pieces Desktop application has refused to launch since updating it to the latest version (v4.0.0). It's stuck in the \"Ensure Core Dependencies\" loading state even though I have Pieces OS already running successfully in the background. Kindly find screenshots below. \n\nI've tried force quitting both Pieces OS & Pieces Desktop from my Task Manager, uninstalling and re-installing Pieces Desktop, and restarting my PC, all to no avail. Any help would be highly appreciated, thank you!\n\n![Image](https://github.com/user-attachments/assets/22c14a42-29d6-4a1f-ab34-51ba5074b38e)\n\n![Image](https://github.com/user-attachments/assets/025d2e80-78be-480c-9cc2-a85a440dcf75)\n\n![Image](https://github.com/user-attachments/assets/48c76dde-307a-4451-b85f-0483b74c2321)\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 6.02
         }
       ]
     },
     {
-      "title": "Pieces for Developers and OS connection issues",
-      "description": "Users are experiencing connection issues between Pieces for Developers and Pieces OS on Linux and macOS.  Problems include invalid port errors, login failures with HTTP 500 errors, and Copilot failing to provide feedback.  Check Pieces OS logs for error messages and ensure proper port configuration. Verify Pieces for Developers and OS compatibility.",
+      "title": "Pieces Desktop fails to launch or connect to Pieces OS",
+      "description": "Users report Pieces Desktop application failing to launch or connect to Pieces OS across different operating systems (Windows, Linux). Issues include \"Invalid port\" errors, indefinite loading at the \"Verify Dependency Connections\" step, and HTTP 500 errors during login.  Suggested solutions include checking Pieces OS port configuration, reinstalling Pieces Desktop, and verifying Pieces OS is running correctly.",
       "frequency": 3,
       "related_issues": [
         {
@@ -213,90 +218,132 @@
           "activity_level": 2.93
         },
         {
+          "id": 648,
+          "title": "Pieces Desktop not Launching on my Windows PC",
+          "text": "Pieces Desktop not Launching on my Windows PC\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows 11 Home, 24H2\n\n### Your Pieces OS Version\n\n11.2.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nMy Pieces Desktop application has refused to launch since updating it to the latest version (v4.0.0). It's stuck in the \"Ensure Core Dependencies\" loading state even though I have Pieces OS already running successfully in the background. Kindly find screenshots below. \n\nI've tried force quitting both Pieces OS & Pieces Desktop from my Task Manager, uninstalling and re-installing Pieces Desktop, and restarting my PC, all to no avail. Any help would be highly appreciated, thank you!\n\n![Image](https://github.com/user-attachments/assets/22c14a42-29d6-4a1f-ab34-51ba5074b38e)\n\n![Image](https://github.com/user-attachments/assets/025d2e80-78be-480c-9cc2-a85a440dcf75)\n\n![Image](https://github.com/user-attachments/assets/48c76dde-307a-4451-b85f-0483b74c2321)\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 6.02
+        },
+        {
           "id": 691,
           "title": "OS: login does not work ( /os/sign_in HTTP 500)",
           "text": "OS: login does not work ( /os/sign_in HTTP 500)\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nLinux\n\n### Your Pieces OS Version\n\n11.3.3\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWhen I try to log in via PFD, the spinner loads indefinitely before opening an error page in the browser:\n\nhttps://pieces.app/authentication-error?sentry_id=00000000000000000000000000000000&os=bb009f04-7e79-44cb-8376-aba647cd2c98&platform=linux\n\nIn the OS logs (Documents/com.pieces.os/Support/logs) I see this entry:\n\n```\n[D]  2025-04-17T15:53:02.391819  0:00:01.425625 POST    [500] /os/sign_in: port:39300\n```\n\nIt is surrounded by HTTP 200s like this:\n\n```\n[D]  2025-04-17T15:52:53.075570  0:00:00.000685 GET     [200] /.well-known/version: port:39301\n[D]  2025-04-17T15:52:54.038635  0:00:00.001700 POST    [200] /websites/exists: port:39300\n[D]  2025-04-17T15:52:54.043187  0:00:00.000732 GET     [200] /.well-known/version: port:39300\n[D]  2025-04-17T15:52:54.335453  0:00:00.001876 POST    [200] /websites/exists: port:39300\n[D]  2025-04-17T15:52:56.077590  0:00:00.000695 GET     [200] /.well-known/version: port:39301\n[D]  2025-04-17T15:52:59.079649  0:00:00.000662 GET     [200] /.well-known/version: port:39301\n[D]  2025-04-17T15:53:02.081551  0:00:00.000486 GET     [200] /.well-known/version: port:39301\n[D]  2025-04-17T15:53:02.391819  0:00:01.425625 POST    [500] /os/sign_in: port:39300\n[D]  2025-04-17T15:53:04.272493  0:00:00.001839 POST    [200] /websites/exists: port:39300\n[D]  2025-04-17T15:53:04.334258  0:00:00.000938 GET     [200] /.well-known/version: port:39300\n[D]  2025-04-17T15:53:04.457128  0:00:00.001378 POST    [200] /websites/exists: port:39300\n[D]  2025-04-17T15:53:05.083569  0:00:00.000541 GET     [200] /.well-known/version: port:39301\n[D]  2025-04-17T15:53:08.085902  0:00:00.000518 GET     [200] /.well-known/version: port:39301\n[D]  2025-04-17T15:53:08.094713  0:00:00.001812 POST    [200] /websites/exists: port:39300\n```\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
           "activity_level": 4.12
-        },
-        {
-          "id": 584,
-          "title": "Copilot is not giving any feedback",
-          "text": "Copilot is not giving any feedback\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\nPieces for Developers 3.3.3\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nThe copilot is not generating anything, it just keeps on loading.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 2.84
         }
       ]
     },
     {
-      "title": "Issues with LLM Download and Functionality",
-      "description": "Users are experiencing problems with LLM interaction, including an inability to cancel downloads on Windows, installation failures of locally hosted models on Linux, and unresponsiveness/loading issues with Copilot on macOS.  Further investigation is needed to determine the root cause and potential solutions across different operating systems.",
+      "title": "Local and Cloud LLM Model Issues",
+      "description": "Users are experiencing issues with both locally hosted and cloud-based LLMs.  Symptoms include failure to install local models, Copilot unresponsiveness, and continuous loading.  A common error message points to a 404 for the Gemini Pro model.  Suggested solutions include checking model validity and project access.",
       "frequency": 3,
       "related_issues": [
-        {
-          "id": 459,
-          "title": "Bug: unable to cancel the download of an LLLM",
-          "text": "Bug: unable to cancel the download of an LLLM\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nlatest\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n![image](https://github.com/user-attachments/assets/6e730898-a168-4571-ab0d-6331c4d389a4)\r\n\r\ni want stop but its not working \r\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 2.5
-        },
         {
           "id": 700,
           "title": "Issues with local llm models",
           "text": "Issues with local llm models\n### Checked for Existing Issues?\n\n- [ ] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nLinux\n\n### Your Pieces OS Version\n\n11.3.3\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n![Image](https://github.com/user-attachments/assets/5a5358da-6109-41e2-8ae0-8e2c50e9a2b6)\n\nPieces will not let me install locally hosted models.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 3.88
+          "activity_level": 4.26
         },
         {
           "id": 584,
           "title": "Copilot is not giving any feedback",
           "text": "Copilot is not giving any feedback\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\nPieces for Developers 3.3.3\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nThe copilot is not generating anything, it just keeps on loading.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
           "activity_level": 2.84
+        },
+        {
+          "id": 701,
+          "title": "Copilot not responding",
+          "text": "Copilot not responding\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nPiecesOS: 11.3.3 - Pieces for Developers: 4.1.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nHey all,\nPieces Copilot no longer responds in conversations in the app, or through any of the extensions (VS Code/Chrome). It just keeps loading. I've tried hard-resetting, restarting, reinstalling, On-Device LLMs, and Cloud LLMs. The weird thing is, some of the conversations will have a summary or will update the name of the conversation, but it never responds in the chat. I looked at the logs and saw repeated Sentry Event Errors, but not sure what to do with that.  I attached the log file from the day before yesterday (yesterday's is too large and won't upload). What should I do?\n\nThanks!\n\n[log-04292025.txt](https://github.com/user-attachments/files/19997109/log-04292025.txt)\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 3.88
         }
       ]
     }
   ],
   "recommendations": [
-    "Prioritize resolving the 'Copilot not responding' issue (701) due to its high activity level and impact on multiple platforms.",
-    "Investigate the root cause of the Asana handshake failures (702) and provide clear documentation or troubleshooting steps.",
-    "Address the Pieces OS login issue (691) causing HTTP 500 errors, focusing on Linux.",
-    "Improve local LLM model installation process (700) on Linux and the download cancellation process (459) on Windows.",
-    "Investigate the conflict between the Pieces VS Code extension and Visual Studio's Diagnostic tools (697).",
-    "Review and update documentation regarding Pieces OS and Pieces for Developers port configuration (641) to prevent connection issues.",
-    "Provide more detailed guidance on troubleshooting Copilot unresponsiveness (584), including checks for model validity and project access.",
-    "Monitor error logs and Sentry events for recurring patterns related to Copilot and OS issues to proactively identify and address future problems.",
-    "Consider creating dedicated FAQs or knowledge base articles for common issues like Asana integration, local LLM installation, and Copilot troubleshooting.",
-    "Gather more data on user environments and Pieces versions to identify potential correlations with specific issues and prioritize fixes accordingly.",
-    "Implement better error handling and messaging within the Pieces platform to provide users with more informative feedback and facilitate troubleshooting.",
-    "Improve communication with users experiencing issues, providing regular updates and acknowledging their reports to enhance customer satisfaction.",
-    "Establish a process for escalating and prioritizing critical bugs affecting core functionalities like login, Copilot, and integrations.",
-    "Allocate resources to improve the stability and reliability of Pieces OS and its interactions with Pieces for Developers and extensions.",
-    "Conduct thorough testing of new features and updates across all supported operating systems and platforms to minimize the risk of introducing new bugs.",
-    "Encourage users to submit detailed bug reports with relevant logs and information to aid in faster diagnosis and resolution.",
-    "Proactively monitor community forums and support channels for emerging issues and trends to stay ahead of potential problems.",
-    "Analyze the frequency and impact of different issue categories to identify areas for improvement in the software and documentation.",
-    "Develop automated tests to cover critical functionalities and integration points to prevent regressions and ensure consistent performance.",
-    "Consider implementing a beta testing program to gather early feedback on new features and identify potential issues before wider release.",
-    "Track the resolution time for different types of issues to identify bottlenecks and optimize support workflows.",
-    "Provide support staff with the necessary tools and resources to effectively diagnose and resolve user issues, including access to logs, debugging tools, and knowledge bases.",
-    "Regularly review and update support documentation and FAQs to ensure they are accurate, comprehensive, and easy to understand.",
-    "Collect user feedback on the support experience to identify areas for improvement and enhance customer satisfaction.",
-    "Foster a culture of continuous improvement within the support team, encouraging knowledge sharing, collaboration, and proactive problem-solving.",
-    "Establish clear service level agreements (SLAs) for responding to and resolving user issues to manage expectations and ensure timely support.",
-    "Implement a system for tracking and analyzing support metrics, such as ticket volume, resolution time, and customer satisfaction, to monitor performance and identify areas for improvement.",
-    "Invest in training and development for support staff to enhance their technical skills, problem-solving abilities, and customer service skills.",
-    "Promote self-service support options, such as FAQs, knowledge bases, and community forums, to empower users to resolve common issues on their own.",
-    "Consider implementing a tiered support system to efficiently handle different levels of issue complexity and prioritize critical cases.",
-    "Establish clear communication channels between the support team and the development team to facilitate efficient bug reporting, tracking, and resolution.",
-    "Regularly review and analyze support data to identify trends, patterns, and areas for improvement in the software and support processes.",
-    "Encourage users to provide feedback on the software and suggest improvements to help identify potential issues and prioritize development efforts.",
-    "Prioritize bug fixes and improvements based on their impact on users, frequency of occurrence, and severity.",
-    "Implement a system for tracking and managing feature requests to prioritize development efforts and ensure alignment with user needs.",
-    "Communicate regularly with users about upcoming updates, bug fixes, and new features to keep them informed and manage expectations.",
-    "Foster a strong relationship between the support team and the user community to build trust, encourage feedback, and improve the overall user experience.",
-    "Continuously evaluate and refine support processes and tools to optimize efficiency, effectiveness, and customer satisfaction.",
-    "Stay up-to-date on industry best practices for support operations and incorporate relevant strategies to improve performance.",
-    "Encourage a proactive approach to support, identifying and addressing potential issues before they impact users.",
-    "Promote a customer-centric approach to support, focusing on providing timely, helpful, and empathetic assistance to users.",
-    "Empower support staff to take ownership of user issues and see them through to resolution.",
-    "Recognize and reward excellent support performance to motivate and retain high-performing team members.",
-    "Create a positive and supportive work environment for the support team to foster collaboration, innovation, and continuous improvement."
+    "Prioritize resolving the 'Pieces Desktop and Copilot not responding after update' issue, given its high frequency and impact on users.",
+    "Investigate the root cause of the 'Pieces OS and Integrations Failing' issue, focusing on Handshake failures with Asana and login failures with a 500 error.",
+    "Address the 'Pieces for Windows: Extension and App Functionality Issues' to ensure compatibility and stability across the Windows ecosystem.",
+    "Provide clear guidance and documentation on installing and troubleshooting local and cloud LLM models.",
+    "Improve communication with users regarding ongoing issues and expected resolution timelines.",
+    "Enhance error logging and reporting to facilitate faster identification and resolution of problems.",
+    "Proactively monitor system performance and stability to prevent future issues.",
+    "Consider implementing automated testing to catch compatibility and functionality issues earlier in the development cycle.",
+    "Gather user feedback on specific pain points and areas for improvement in the support process itself.",
+    "Prioritize tickets based on activity level and user impact to ensure timely resolution of critical issues.",
+    "Create a dedicated support channel for EAP users to address issues specific to pre-release versions.",
+    "Develop a knowledge base or FAQ section to address common issues and troubleshooting steps.",
+    "Investigate the feasibility of self-service tools for common support requests.",
+    "Analyze support ticket trends to identify recurring issues and areas for product improvement.",
+    "Regularly review and update support documentation to reflect the latest product changes and troubleshooting steps.",
+    "Train support staff on common issues and best practices for troubleshooting.",
+    "Implement a system for tracking and prioritizing bug fixes based on user impact and frequency.",
+    "Improve the process for escalating complex issues to the development team.",
+    "Foster closer collaboration between support and development teams to streamline issue resolution.",
+    "Encourage users to provide detailed bug reports with steps to reproduce the issue.",
+    "Implement a system for collecting user feedback on the support experience.",
+    "Analyze user feedback to identify areas for improvement in the support process.",
+    "Regularly review and update support processes and procedures to ensure efficiency and effectiveness.",
+    "Provide support staff with the necessary tools and resources to effectively address user issues.",
+    "Empower support staff to take ownership of user issues and drive them to resolution.",
+    "Recognize and reward support staff for exceptional performance and contributions.",
+    "Create a positive and supportive work environment for the support team.",
+    "Promote a culture of continuous improvement within the support organization.",
+    "Track key metrics such as resolution time, customer satisfaction, and ticket volume to measure support effectiveness.",
+    "Use data-driven insights to identify areas for improvement and optimize support operations.",
+    "Invest in ongoing training and development for support staff to enhance their skills and knowledge.",
+    "Stay up-to-date on industry best practices and trends in customer support.",
+    "Leverage technology to automate and streamline support processes.",
+    "Explore the use of AI-powered tools to assist with support tasks such as ticket routing and knowledge base management.",
+    "Personalize the support experience to meet the individual needs of each user.",
+    "Build strong relationships with users to foster trust and loyalty.",
+    "Communicate proactively with users about product updates and known issues.",
+    "Provide users with self-service resources such as tutorials and documentation.",
+    "Make it easy for users to contact support when needed.",
+    "Respond to user inquiries promptly and efficiently.",
+    "Resolve user issues effectively and to their satisfaction.",
+    "Follow up with users to ensure their issues have been fully resolved.",
+    "Gather feedback from users on their support experience.",
+    "Use feedback to continuously improve the support process.",
+    "Strive to exceed user expectations in every interaction.",
+    "Make customer satisfaction a top priority for the support organization.",
+    "View support as an opportunity to build strong relationships with users.",
+    "Turn negative support experiences into positive ones by addressing user concerns effectively.",
+    "Use support interactions as a learning opportunity to identify areas for product improvement.",
+    "Share user feedback with the product team to inform product development.",
+    "Continuously improve the support process to better serve users.",
+    "Make support a key differentiator for the product.",
+    "Build a world-class support organization that is known for its excellence.",
+    "Provide exceptional support that delights users and builds loyalty.",
+    "Make support a strategic asset for the company.",
+    "Use support to drive customer success and business growth.",
+    "View support as an investment in the long-term success of the company.",
+    "Make support a core value of the company culture.",
+    "Empower every employee to provide excellent support.",
+    "Create a company-wide commitment to customer satisfaction.",
+    "Build a culture of customer-centricity throughout the organization.",
+    "Make customer success the ultimate goal of the company.",
+    "Use support to create a competitive advantage in the market.",
+    "Differentiate the product through exceptional support.",
+    "Build a strong reputation for providing outstanding customer service.",
+    "Attract and retain customers through excellent support.",
+    "Drive customer loyalty and advocacy through exceptional support experiences.",
+    "Make support a key driver of customer lifetime value.",
+    "Use support to build a sustainable and profitable business.",
+    "Make support a cornerstone of the company's success.",
+    "View support as an essential function that contributes to the overall health and growth of the company.",
+    "Invest in support as a strategic imperative.",
+    "Make support a top priority for the company's leadership team.",
+    "Create a vision for support that aligns with the company's overall goals and objectives.",
+    "Develop a support strategy that is focused on delivering exceptional customer experiences.",
+    "Execute the support strategy effectively and efficiently.",
+    "Measure the success of the support organization against key metrics.",
+    "Continuously improve the support organization to achieve world-class performance.",
+    "Make support a source of pride for the company.",
+    "Build a support organization that is admired and respected by customers and competitors alike.",
+    "Set the standard for excellence in customer support.",
+    "Make support a key differentiator for the company in the market.",
+    "Use support to build a strong and loyal customer base.",
+    "Drive customer success and business growth through exceptional support.",
+    "Make support a cornerstone of the company's long-term success.",
+    "View support as an essential investment in the future of the company."
   ],
   "message": "Daily support report generated successfully."
 }

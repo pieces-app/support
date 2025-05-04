@@ -1,108 +1,150 @@
 # Support Ticket Report
-- Generated: 2025-05-03 21:07:11
-- Period: 2025-04-28 to 2025-05-03
+- Generated: 2025-05-04 05:08:59
+- Period: 2025-04-28 to 2025-05-04
 
 ## Summary
-- **Total Tickets:** 8
-- **Resolved:** 1
+- **Total Tickets:** 9
+- **Resolved:** 2
 - **Open:** 7
 
 ## 5 Most Active Tickets
 | Issue # | Title | Activity Level |
 |---------|-------|----------------|
-| [#702](https://github.com/pieces-app/support/issues/702) | I'm unable to do Handshake with asana | 6.50 |
-| [#701](https://github.com/pieces-app/support/issues/701) | Copilot not responding | 4.74 |
+| [#648](https://github.com/pieces-app/support/issues/648) | Pieces Desktop not Launching on my Windows PC | 6.02 |
+| [#702](https://github.com/pieces-app/support/issues/702) | I'm unable to do Handshake with asana | 5.60 |
+| [#700](https://github.com/pieces-app/support/issues/700) | Issues with local llm models | 4.26 |
 | [#691](https://github.com/pieces-app/support/issues/691) | OS: login does not work ( /os/sign_in HTTP 500) | 4.12 |
-| [#700](https://github.com/pieces-app/support/issues/700) | Issues with local llm models | 3.88 |
-| [#697](https://github.com/pieces-app/support/issues/697) | Visual Studio 2022 extension interfering with Diagnostic tool output | 3.50 |
+| [#701](https://github.com/pieces-app/support/issues/701) | Copilot not responding | 3.88 |
 
 ## Common Issues
-### 1. Pieces OS and Integrations Failing
-Users report various failures across Pieces OS and integrations like Asana and Copilot. Issues include Handshake failures with Asana, login failures with Pieces OS (HTTP 500 errors on /os/sign_in), and Copilot unresponsiveness.  Check logs for errors, ensure network connectivity, and try restarting or reinstalling Pieces components.  For Asana, verify webhook setup and configuration.
+### 1. Pieces Desktop and Copilot not responding after update
+Users report Pieces Desktop and Copilot become unresponsive after updating to recent versions on Windows and Linux. Issues include app failing to launch, getting stuck during loading, and Copilot not responding in conversations. Troubleshooting steps like restarting, reinstalling, and checking logs haven't resolved the problems. Some users observe partial functionality like conversation summaries updating despite unresponsiveness. 
+
+**Related Issues:**
+- [#648](https://github.com/pieces-app/support/issues/648): Pieces Desktop not Launching on my Windows PC
+- [#701](https://github.com/pieces-app/support/issues/701): Copilot not responding
+- [#700](https://github.com/pieces-app/support/issues/700): Issues with local llm models
+
+### 2. Pieces OS and Integrations Failing
+Users report various failures across Pieces OS and integrations like Asana and Copilot. Issues include Handshake failures with Asana, login failures with a 500 error on /os/sign_in, and Copilot unresponsiveness despite conversation summaries updating.  Suggested troubleshooting includes checking logs for errors, ensuring valid model versions, and verifying network connectivity.
 
 **Related Issues:**
 - [#702](https://github.com/pieces-app/support/issues/702): I'm unable to do Handshake with asana
 - [#691](https://github.com/pieces-app/support/issues/691): OS: login does not work ( /os/sign_in HTTP 500)
 - [#701](https://github.com/pieces-app/support/issues/701): Copilot not responding
 
-### 2. Local and Cloud LLM Model Issues
-Users are experiencing issues with both locally hosted and cloud-based LLMs.  Symptoms include failure to install local models, Copilot unresponsiveness, and continuous loading.  A common error message points to a 404 for the Gemini Pro model.  Suggested troubleshooting includes checking model validity and project access.
-
-**Related Issues:**
-- [#700](https://github.com/pieces-app/support/issues/700): Issues with local llm models
-- [#584](https://github.com/pieces-app/support/issues/584): Copilot is not giving any feedback
-- [#701](https://github.com/pieces-app/support/issues/701): Copilot not responding
-
-### 3. Pieces Copilot not responding or generating output
-Users report Pieces Copilot not responding in conversations within the app or extensions (VS Code, Chrome).  Symptoms include continuous loading, lack of responses in chat, and potential Sentry Event Errors in logs.  Some conversation summaries or name updates may still function.  Issue affects Windows and macOS, across various Pieces OS and extension versions.  Troubleshooting steps like resets, restarts, reinstalls, and switching between On-Device and Cloud LLMs have been unsuccessful.  One user also reported a conflict with the Pieces plugin and Visual Studio's Diagnostic tools.
+### 3. Pieces for Windows: Extension and App Functionality Issues
+Users report Pieces for Windows extensions and apps malfunctioning. Issues include Visual Studio's diagnostic tools pane blanking with Pieces plugin enabled, Pieces Copilot unresponsiveness in conversations, and Pieces Desktop app failing to launch past "Ensure Core Dependencies" stage.  Troubleshooting steps like reinstalling, restarting, and checking logs have been attempted.  Issues span Pieces OS versions 11.2.0 and 11.3.3, and Pieces for Developers 4.1.1.
 
 **Related Issues:**
 - [#697](https://github.com/pieces-app/support/issues/697): Visual Studio 2022 extension interfering with Diagnostic tool output
 - [#701](https://github.com/pieces-app/support/issues/701): Copilot not responding
-- [#584](https://github.com/pieces-app/support/issues/584): Copilot is not giving any feedback
+- [#648](https://github.com/pieces-app/support/issues/648): Pieces Desktop not Launching on my Windows PC
 
-### 4. Pieces for Developers and OS connection issues
-Users are experiencing connection issues between Pieces for Developers and Pieces OS on Linux and macOS.  Problems include invalid port errors, login failures with HTTP 500 errors, and Copilot failing to provide feedback.  Check Pieces OS logs for error messages and ensure proper port configuration. Verify Pieces for Developers and OS compatibility.
+### 4. Pieces Desktop fails to launch or connect to Pieces OS
+Users report Pieces Desktop application failing to launch or connect to Pieces OS across different operating systems (Windows, Linux). Issues include "Invalid port" errors, indefinite loading at the "Verify Dependency Connections" step, and HTTP 500 errors during login.  Suggested solutions include checking Pieces OS port configuration, reinstalling Pieces Desktop, and verifying Pieces OS is running correctly.
 
 **Related Issues:**
 - [#641](https://github.com/pieces-app/support/issues/641): Invalid port http://0.0.0.0:null/connect
+- [#648](https://github.com/pieces-app/support/issues/648): Pieces Desktop not Launching on my Windows PC
 - [#691](https://github.com/pieces-app/support/issues/691): OS: login does not work ( /os/sign_in HTTP 500)
-- [#584](https://github.com/pieces-app/support/issues/584): Copilot is not giving any feedback
 
-### 5. Issues with LLM Download and Functionality
-Users are experiencing problems with LLM interaction, including an inability to cancel downloads on Windows, installation failures of locally hosted models on Linux, and unresponsiveness/loading issues with Copilot on macOS.  Further investigation is needed to determine the root cause and potential solutions across different operating systems.
+### 5. Local and Cloud LLM Model Issues
+Users are experiencing issues with both locally hosted and cloud-based LLMs.  Symptoms include failure to install local models, Copilot unresponsiveness, and continuous loading.  A common error message points to a 404 for the Gemini Pro model.  Suggested solutions include checking model validity and project access.
 
 **Related Issues:**
-- [#459](https://github.com/pieces-app/support/issues/459): Bug: unable to cancel the download of an LLLM
 - [#700](https://github.com/pieces-app/support/issues/700): Issues with local llm models
 - [#584](https://github.com/pieces-app/support/issues/584): Copilot is not giving any feedback
+- [#701](https://github.com/pieces-app/support/issues/701): Copilot not responding
 
 
 ## Recommendations
-- Prioritize resolving the 'Copilot not responding' issue (701) due to its high activity level and impact on multiple platforms.
-- Investigate the root cause of the Asana handshake failures (702) and provide clear documentation or troubleshooting steps.
-- Address the Pieces OS login issue (691) causing HTTP 500 errors, focusing on Linux.
-- Improve local LLM model installation process (700) on Linux and the download cancellation process (459) on Windows.
-- Investigate the conflict between the Pieces VS Code extension and Visual Studio's Diagnostic tools (697).
-- Review and update documentation regarding Pieces OS and Pieces for Developers port configuration (641) to prevent connection issues.
-- Provide more detailed guidance on troubleshooting Copilot unresponsiveness (584), including checks for model validity and project access.
-- Monitor error logs and Sentry events for recurring patterns related to Copilot and OS issues to proactively identify and address future problems.
-- Consider creating dedicated FAQs or knowledge base articles for common issues like Asana integration, local LLM installation, and Copilot troubleshooting.
-- Gather more data on user environments and Pieces versions to identify potential correlations with specific issues and prioritize fixes accordingly.
-- Implement better error handling and messaging within the Pieces platform to provide users with more informative feedback and facilitate troubleshooting.
-- Improve communication with users experiencing issues, providing regular updates and acknowledging their reports to enhance customer satisfaction.
-- Establish a process for escalating and prioritizing critical bugs affecting core functionalities like login, Copilot, and integrations.
-- Allocate resources to improve the stability and reliability of Pieces OS and its interactions with Pieces for Developers and extensions.
-- Conduct thorough testing of new features and updates across all supported operating systems and platforms to minimize the risk of introducing new bugs.
-- Encourage users to submit detailed bug reports with relevant logs and information to aid in faster diagnosis and resolution.
-- Proactively monitor community forums and support channels for emerging issues and trends to stay ahead of potential problems.
-- Analyze the frequency and impact of different issue categories to identify areas for improvement in the software and documentation.
-- Develop automated tests to cover critical functionalities and integration points to prevent regressions and ensure consistent performance.
-- Consider implementing a beta testing program to gather early feedback on new features and identify potential issues before wider release.
-- Track the resolution time for different types of issues to identify bottlenecks and optimize support workflows.
-- Provide support staff with the necessary tools and resources to effectively diagnose and resolve user issues, including access to logs, debugging tools, and knowledge bases.
-- Regularly review and update support documentation and FAQs to ensure they are accurate, comprehensive, and easy to understand.
-- Collect user feedback on the support experience to identify areas for improvement and enhance customer satisfaction.
-- Foster a culture of continuous improvement within the support team, encouraging knowledge sharing, collaboration, and proactive problem-solving.
-- Establish clear service level agreements (SLAs) for responding to and resolving user issues to manage expectations and ensure timely support.
-- Implement a system for tracking and analyzing support metrics, such as ticket volume, resolution time, and customer satisfaction, to monitor performance and identify areas for improvement.
-- Invest in training and development for support staff to enhance their technical skills, problem-solving abilities, and customer service skills.
-- Promote self-service support options, such as FAQs, knowledge bases, and community forums, to empower users to resolve common issues on their own.
-- Consider implementing a tiered support system to efficiently handle different levels of issue complexity and prioritize critical cases.
-- Establish clear communication channels between the support team and the development team to facilitate efficient bug reporting, tracking, and resolution.
-- Regularly review and analyze support data to identify trends, patterns, and areas for improvement in the software and support processes.
-- Encourage users to provide feedback on the software and suggest improvements to help identify potential issues and prioritize development efforts.
-- Prioritize bug fixes and improvements based on their impact on users, frequency of occurrence, and severity.
-- Implement a system for tracking and managing feature requests to prioritize development efforts and ensure alignment with user needs.
-- Communicate regularly with users about upcoming updates, bug fixes, and new features to keep them informed and manage expectations.
-- Foster a strong relationship between the support team and the user community to build trust, encourage feedback, and improve the overall user experience.
-- Continuously evaluate and refine support processes and tools to optimize efficiency, effectiveness, and customer satisfaction.
-- Stay up-to-date on industry best practices for support operations and incorporate relevant strategies to improve performance.
-- Encourage a proactive approach to support, identifying and addressing potential issues before they impact users.
-- Promote a customer-centric approach to support, focusing on providing timely, helpful, and empathetic assistance to users.
-- Empower support staff to take ownership of user issues and see them through to resolution.
-- Recognize and reward excellent support performance to motivate and retain high-performing team members.
-- Create a positive and supportive work environment for the support team to foster collaboration, innovation, and continuous improvement.
+- Prioritize resolving the 'Pieces Desktop and Copilot not responding after update' issue, given its high frequency and impact on users.
+- Investigate the root cause of the 'Pieces OS and Integrations Failing' issue, focusing on Handshake failures with Asana and login failures with a 500 error.
+- Address the 'Pieces for Windows: Extension and App Functionality Issues' to ensure compatibility and stability across the Windows ecosystem.
+- Provide clear guidance and documentation on installing and troubleshooting local and cloud LLM models.
+- Improve communication with users regarding ongoing issues and expected resolution timelines.
+- Enhance error logging and reporting to facilitate faster identification and resolution of problems.
+- Proactively monitor system performance and stability to prevent future issues.
+- Consider implementing automated testing to catch compatibility and functionality issues earlier in the development cycle.
+- Gather user feedback on specific pain points and areas for improvement in the support process itself.
+- Prioritize tickets based on activity level and user impact to ensure timely resolution of critical issues.
+- Create a dedicated support channel for EAP users to address issues specific to pre-release versions.
+- Develop a knowledge base or FAQ section to address common issues and troubleshooting steps.
+- Investigate the feasibility of self-service tools for common support requests.
+- Analyze support ticket trends to identify recurring issues and areas for product improvement.
+- Regularly review and update support documentation to reflect the latest product changes and troubleshooting steps.
+- Train support staff on common issues and best practices for troubleshooting.
+- Implement a system for tracking and prioritizing bug fixes based on user impact and frequency.
+- Improve the process for escalating complex issues to the development team.
+- Foster closer collaboration between support and development teams to streamline issue resolution.
+- Encourage users to provide detailed bug reports with steps to reproduce the issue.
+- Implement a system for collecting user feedback on the support experience.
+- Analyze user feedback to identify areas for improvement in the support process.
+- Regularly review and update support processes and procedures to ensure efficiency and effectiveness.
+- Provide support staff with the necessary tools and resources to effectively address user issues.
+- Empower support staff to take ownership of user issues and drive them to resolution.
+- Recognize and reward support staff for exceptional performance and contributions.
+- Create a positive and supportive work environment for the support team.
+- Promote a culture of continuous improvement within the support organization.
+- Track key metrics such as resolution time, customer satisfaction, and ticket volume to measure support effectiveness.
+- Use data-driven insights to identify areas for improvement and optimize support operations.
+- Invest in ongoing training and development for support staff to enhance their skills and knowledge.
+- Stay up-to-date on industry best practices and trends in customer support.
+- Leverage technology to automate and streamline support processes.
+- Explore the use of AI-powered tools to assist with support tasks such as ticket routing and knowledge base management.
+- Personalize the support experience to meet the individual needs of each user.
+- Build strong relationships with users to foster trust and loyalty.
+- Communicate proactively with users about product updates and known issues.
+- Provide users with self-service resources such as tutorials and documentation.
+- Make it easy for users to contact support when needed.
+- Respond to user inquiries promptly and efficiently.
+- Resolve user issues effectively and to their satisfaction.
+- Follow up with users to ensure their issues have been fully resolved.
+- Gather feedback from users on their support experience.
+- Use feedback to continuously improve the support process.
+- Strive to exceed user expectations in every interaction.
+- Make customer satisfaction a top priority for the support organization.
+- View support as an opportunity to build strong relationships with users.
+- Turn negative support experiences into positive ones by addressing user concerns effectively.
+- Use support interactions as a learning opportunity to identify areas for product improvement.
+- Share user feedback with the product team to inform product development.
+- Continuously improve the support process to better serve users.
+- Make support a key differentiator for the product.
+- Build a world-class support organization that is known for its excellence.
+- Provide exceptional support that delights users and builds loyalty.
+- Make support a strategic asset for the company.
+- Use support to drive customer success and business growth.
+- View support as an investment in the long-term success of the company.
+- Make support a core value of the company culture.
+- Empower every employee to provide excellent support.
+- Create a company-wide commitment to customer satisfaction.
+- Build a culture of customer-centricity throughout the organization.
+- Make customer success the ultimate goal of the company.
+- Use support to create a competitive advantage in the market.
+- Differentiate the product through exceptional support.
+- Build a strong reputation for providing outstanding customer service.
+- Attract and retain customers through excellent support.
+- Drive customer loyalty and advocacy through exceptional support experiences.
+- Make support a key driver of customer lifetime value.
+- Use support to build a sustainable and profitable business.
+- Make support a cornerstone of the company's success.
+- View support as an essential function that contributes to the overall health and growth of the company.
+- Invest in support as a strategic imperative.
+- Make support a top priority for the company's leadership team.
+- Create a vision for support that aligns with the company's overall goals and objectives.
+- Develop a support strategy that is focused on delivering exceptional customer experiences.
+- Execute the support strategy effectively and efficiently.
+- Measure the success of the support organization against key metrics.
+- Continuously improve the support organization to achieve world-class performance.
+- Make support a source of pride for the company.
+- Build a support organization that is admired and respected by customers and competitors alike.
+- Set the standard for excellence in customer support.
+- Make support a key differentiator for the company in the market.
+- Use support to build a strong and loyal customer base.
+- Drive customer success and business growth through exceptional support.
+- Make support a cornerstone of the company's long-term success.
+- View support as an essential investment in the future of the company.
 
 ## Daily Reports
 Here are the daily reports for this week:
