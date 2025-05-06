@@ -1,0 +1,119 @@
+{
+  "success": true,
+  "date_range": {
+    "start": "2025-05-06T00:00:00+00:00",
+    "end": "2025-05-06T13:16:07.646933+00:00"
+  },
+  "summary": {
+    "total_tickets": 2,
+    "resolved_tickets": 1,
+    "open_tickets": 1
+  },
+  "ticket_breakdown": [
+    {
+      "category": "bug",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "os:windows",
+      "received": 2,
+      "resolved": 1,
+      "pending": 1
+    },
+    {
+      "category": "app:desktop application",
+      "received": 2,
+      "resolved": 1,
+      "pending": 1
+    },
+    {
+      "category": "app:pieces os",
+      "received": 2,
+      "resolved": 1,
+      "pending": 1
+    },
+    {
+      "category": "status:triaged",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "LLM",
+      "received": 1,
+      "resolved": 1,
+      "pending": 0
+    },
+    {
+      "category": "os:macos",
+      "received": 1,
+      "resolved": 1,
+      "pending": 0
+    },
+    {
+      "category": "os:linux",
+      "received": 1,
+      "resolved": 1,
+      "pending": 0
+    },
+    {
+      "category": "app:vs code",
+      "received": 1,
+      "resolved": 1,
+      "pending": 0
+    },
+    {
+      "category": "ongoing",
+      "received": 1,
+      "resolved": 1,
+      "pending": 0
+    },
+    {
+      "category": "P2",
+      "received": 1,
+      "resolved": 1,
+      "pending": 0
+    }
+  ],
+  "most_active_tickets": [
+    {
+      "number": 663,
+      "title": "Kaspersky Internet Security flags Pieces OS as a virus",
+      "activity_level": 3.94
+    },
+    {
+      "number": 113,
+      "title": "Download of local LLM's initializes, but never proceeds ",
+      "activity_level": 2.74
+    }
+  ],
+  "common_issues": [
+    {
+      "title": "Pieces OS download and antivirus issues",
+      "description": "Users reported Kaspersky flagging Pieces OS as a virus and local LLM downloads getting stuck on initializing. The antivirus issue might require whitelisting Pieces OS.  The download issue appears on different OS versions (Windows, Linux) and affects both the desktop app and VS Code extension.  Check internet connection and consider updating Pieces OS and related extensions.",
+      "frequency": 2,
+      "related_issues": [
+        {
+          "id": 663,
+          "title": "Kaspersky Internet Security flags Pieces OS as a virus",
+          "text": "Kaspersky Internet Security flags Pieces OS as a virus\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nPiecesOS_11.2.2.0_x64\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n![Image](https://github.com/user-attachments/assets/160ed12d-f0a1-46be-bf36-05502353405e)\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 3.94
+        },
+        {
+          "id": 113,
+          "title": "Download of local LLM's initializes, but never proceeds ",
+          "text": "Download of local LLM's initializes, but never proceeds \n### Software\n\nDesktop Application, Pieces OS, VS Code\n\n### Operating System\n\nLinux\n\n### Your Pieces OS Version\n\n8.0.1\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI was trying to download a local LLM, but any one of them that I try it is stuck on initialising. It does not start downloading the model. I have tried downloading all the available models, but it does not move further than initialising. I have seen a similar issue on GitHub for somebody using windows, but for them, it went away after updating to version 8.0.0. of pieces OS. This is their GitHub issue https://github.com/pieces-app/support/issues/84 I am already on 8.0.1 but on Linux. I am pretty sure my internet is not an issue. The rest of the app functions perfectly. It's just that I cannot download local LLMs. I have also tried to install local LLMs through VS Code, but there instead of getting stuck on initializing it gets stuck on 0% complete.\r\n\r\nI am on Linux\r\npieces OS : 8.0.1\r\npieces for developers : 2.10.0\r\nOS : Ubuntu 22.04 LTS\r\nCPU: Ryzen 5800H\r\nRam: 16gb\r\nGPU: RTX 3050 mobile (4gbvram)\r\n\r\n![image](https://github.com/pieces-app/support/assets/106009563/a0d2900b-276a-4450-a0f4-100e1f8391d7)\r\n![image](https://github.com/pieces-app/support/assets/106009563/32fc5059-a497-4b5f-9be7-e498cd56329c)\r\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 2.74
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    "Investigate Kaspersky antivirus flagging Pieces OS as a virus and provide a solution (e.g., whitelisting instructions).",
+    "Troubleshoot and resolve the issue of local LLM downloads getting stuck on initializing, considering OS and application compatibility.",
+    "Improve documentation and communication regarding local LLM download issues, including troubleshooting steps for different operating systems and applications (Desktop app, VS Code)."
+  ],
+  "message": "Daily support report generated successfully."
+}
