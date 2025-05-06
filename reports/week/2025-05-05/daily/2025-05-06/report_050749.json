@@ -1,0 +1,98 @@
+{
+  "success": true,
+  "date_range": {
+    "start": "2025-05-06T00:00:00+00:00",
+    "end": "2025-05-06T05:07:49.859768+00:00"
+  },
+  "summary": {
+    "total_tickets": 1,
+    "resolved_tickets": 1,
+    "open_tickets": 0
+  },
+  "ticket_breakdown": [
+    {
+      "category": "os:windows",
+      "received": 1,
+      "resolved": 1,
+      "pending": 0
+    },
+    {
+      "category": "LLM",
+      "received": 1,
+      "resolved": 1,
+      "pending": 0
+    },
+    {
+      "category": "app:desktop application",
+      "received": 1,
+      "resolved": 1,
+      "pending": 0
+    },
+    {
+      "category": "os:macos",
+      "received": 1,
+      "resolved": 1,
+      "pending": 0
+    },
+    {
+      "category": "os:linux",
+      "received": 1,
+      "resolved": 1,
+      "pending": 0
+    },
+    {
+      "category": "app:pieces os",
+      "received": 1,
+      "resolved": 1,
+      "pending": 0
+    },
+    {
+      "category": "app:vs code",
+      "received": 1,
+      "resolved": 1,
+      "pending": 0
+    },
+    {
+      "category": "ongoing",
+      "received": 1,
+      "resolved": 1,
+      "pending": 0
+    },
+    {
+      "category": "P2",
+      "received": 1,
+      "resolved": 1,
+      "pending": 0
+    }
+  ],
+  "most_active_tickets": [
+    {
+      "number": 113,
+      "title": "Download of local LLM's initializes, but never proceeds ",
+      "activity_level": 2.74
+    }
+  ],
+  "common_issues": [
+    {
+      "title": "Local LLM download stuck on initializing",
+      "description": "Users on Linux (Ubuntu 22.04) and Windows experience local LLM downloads getting stuck on \"Initializing\" or 0% in Pieces OS 8.0.1 and VS Code extension.  Issue persists across different LLMs. Potential solutions include checking internet connectivity and ensuring access to Google Cloud project resources (models/gemini-pro).",
+      "frequency": 1,
+      "related_issues": [
+        {
+          "id": 113,
+          "title": "Download of local LLM's initializes, but never proceeds ",
+          "text": "Download of local LLM's initializes, but never proceeds \n### Software\n\nDesktop Application, Pieces OS, VS Code\n\n### Operating System\n\nLinux\n\n### Your Pieces OS Version\n\n8.0.1\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI was trying to download a local LLM, but any one of them that I try it is stuck on initialising. It does not start downloading the model. I have tried downloading all the available models, but it does not move further than initialising. I have seen a similar issue on GitHub for somebody using windows, but for them, it went away after updating to version 8.0.0. of pieces OS. This is their GitHub issue https://github.com/pieces-app/support/issues/84 I am already on 8.0.1 but on Linux. I am pretty sure my internet is not an issue. The rest of the app functions perfectly. It's just that I cannot download local LLMs. I have also tried to install local LLMs through VS Code, but there instead of getting stuck on initializing it gets stuck on 0% complete.\r\n\r\nI am on Linux\r\npieces OS : 8.0.1\r\npieces for developers : 2.10.0\r\nOS : Ubuntu 22.04 LTS\r\nCPU: Ryzen 5800H\r\nRam: 16gb\r\nGPU: RTX 3050 mobile (4gbvram)\r\n\r\n![image](https://github.com/pieces-app/support/assets/106009563/a0d2900b-276a-4450-a0f4-100e1f8391d7)\r\n![image](https://github.com/pieces-app/support/assets/106009563/32fc5059-a497-4b5f-9be7-e498cd56329c)\r\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 2.74
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    "Investigate and resolve the Local LLM download issue, focusing on initialization failures on Linux (Ubuntu 22.04) and Windows. Check internet connectivity requirements and Google Cloud project resource access (models/gemini-pro).",
+    "Review support ticket #113 for additional details and user-reported solutions related to the Local LLM download issue.",
+    "Proactively monitor Local LLM downloads to identify and address any recurring issues or trends.",
+    "Consider adding troubleshooting steps or FAQs to the Pieces OS and VS Code extension documentation regarding Local LLM download issues.",
+    "Communicate the resolution or workaround for the Local LLM download issue to affected users through appropriate channels (e.g., release notes, support articles)."
+  ],
+  "message": "Daily support report generated successfully."
+}

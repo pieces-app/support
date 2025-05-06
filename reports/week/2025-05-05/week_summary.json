@@ -1,0 +1,232 @@
+{
+  "success": true,
+  "date_range": {
+    "start": "2025-05-05T00:00:00+00:00",
+    "end": "2025-05-06T05:08:04.027478+00:00"
+  },
+  "summary": {
+    "total_tickets": 3,
+    "resolved_tickets": 1,
+    "open_tickets": 2
+  },
+  "ticket_breakdown": [
+    {
+      "category": "os:windows",
+      "received": 3,
+      "resolved": 1,
+      "pending": 2
+    },
+    {
+      "category": "LLM",
+      "received": 1,
+      "resolved": 1,
+      "pending": 0
+    },
+    {
+      "category": "app:desktop application",
+      "received": 2,
+      "resolved": 1,
+      "pending": 1
+    },
+    {
+      "category": "os:macos",
+      "received": 1,
+      "resolved": 1,
+      "pending": 0
+    },
+    {
+      "category": "os:linux",
+      "received": 1,
+      "resolved": 1,
+      "pending": 0
+    },
+    {
+      "category": "app:pieces os",
+      "received": 2,
+      "resolved": 1,
+      "pending": 1
+    },
+    {
+      "category": "app:vs code",
+      "received": 1,
+      "resolved": 1,
+      "pending": 0
+    },
+    {
+      "category": "ongoing",
+      "received": 1,
+      "resolved": 1,
+      "pending": 0
+    },
+    {
+      "category": "P2",
+      "received": 1,
+      "resolved": 1,
+      "pending": 0
+    },
+    {
+      "category": "bug",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "status:triaged",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "status:waiting_on_user_responses",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:visual studio",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    }
+  ],
+  "most_active_tickets": [
+    {
+      "number": 693,
+      "title": "Crash due to native_extensions_plugin.dll",
+      "activity_level": 7.79
+    },
+    {
+      "number": 697,
+      "title": "Visual Studio 2022 extension interfering with Diagnostic tool output",
+      "activity_level": 3.76
+    },
+    {
+      "number": 113,
+      "title": "Download of local LLM's initializes, but never proceeds ",
+      "activity_level": 2.74
+    }
+  ],
+  "common_issues": [
+    {
+      "title": "Pieces OS and VS Code Integration Issues",
+      "description": "Users are experiencing problems with Pieces OS integration with VS Code and desktop application. Issues include failure to download local LLMs getting stuck during initialization or at 0% completion, and crashes due to native_extensions_plugin.dll.  Suggested solutions include checking internet connection, updating Pieces OS, and disabling the Pieces plugin in VS Code.",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 113,
+          "title": "Download of local LLM's initializes, but never proceeds ",
+          "text": "Download of local LLM's initializes, but never proceeds \n### Software\n\nDesktop Application, Pieces OS, VS Code\n\n### Operating System\n\nLinux\n\n### Your Pieces OS Version\n\n8.0.1\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI was trying to download a local LLM, but any one of them that I try it is stuck on initialising. It does not start downloading the model. I have tried downloading all the available models, but it does not move further than initialising. I have seen a similar issue on GitHub for somebody using windows, but for them, it went away after updating to version 8.0.0. of pieces OS. This is their GitHub issue https://github.com/pieces-app/support/issues/84 I am already on 8.0.1 but on Linux. I am pretty sure my internet is not an issue. The rest of the app functions perfectly. It's just that I cannot download local LLMs. I have also tried to install local LLMs through VS Code, but there instead of getting stuck on initializing it gets stuck on 0% complete.\r\n\r\nI am on Linux\r\npieces OS : 8.0.1\r\npieces for developers : 2.10.0\r\nOS : Ubuntu 22.04 LTS\r\nCPU: Ryzen 5800H\r\nRam: 16gb\r\nGPU: RTX 3050 mobile (4gbvram)\r\n\r\n![image](https://github.com/pieces-app/support/assets/106009563/a0d2900b-276a-4450-a0f4-100e1f8391d7)\r\n![image](https://github.com/pieces-app/support/assets/106009563/32fc5059-a497-4b5f-9be7-e498cd56329c)\r\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 2.74
+        },
+        {
+          "id": 697,
+          "title": "Visual Studio 2022 extension interfering with Diagnostic tool output",
+          "text": "Visual Studio 2022 extension interfering with Diagnostic tool output\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Visual Studio\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nPiecesOS 11.3.3\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nThe Diagnostic tools pane that, by default, opens when you begin debugging in Visual Studio ends up entirely blank with the Pieces plugin enabled in Visual Studio Version 17.14.0 Preview 4.0. Disabling the plugin restores the Diagnostic tools output.\n\n<img width=\"166\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/beb0d90f-7544-4f26-9516-8e4165b782ce\" />\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 3.76
+        },
+        {
+          "id": 693,
+          "title": "Crash due to native_extensions_plugin.dll",
+          "text": "Crash due to native_extensions_plugin.dll\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.3.3\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nPieces OS crashes. I\u2019ve reinstalled the program, turned off the antivirus and firewall, updated the graphics driver, but nothing helps, it crashes consistently.\nWindows 10, 64 bit, i3-12100F, RAM: 32 Gb, GTX 950.\nIf there's no solution, how can I disable this plugin so that it simply doesn't crash?\n\nHere are the debug details:\n```\n0:000> r rcx\nrcx=0000000000000000\n0:000> k\n # Child-SP          RetAddr               Call Site\n00 0000000e`28deeb00 00007ff9`9365e0ea     native_extensions_plugin!NativeExtensionsPluginCApiRegisterWithRegistrar+0x13796\n01 0000000e`28deed20 00007ff9`9365fabf     native_extensions_plugin!NativeExtensionsPluginCApiRegisterWithRegistrar+0xc97a\n02 0000000e`28deee50 00007ff9`9365d196     native_extensions_plugin!NativeExtensionsPluginCApiRegisterWithRegistrar+0xe34f\n03 0000000e`28deee80 00007ff9`9365fa77     native_extensions_plugin!NativeExtensionsPluginCApiRegisterWithRegistrar+0xba26\n04 0000000e`28deef90 00007ff9`93667b11     native_extensions_plugin!NativeExtensionsPluginCApiRegisterWithRegistrar+0xe307\n05 0000000e`28def000 00007ff9`92bad9fd     native_extensions_plugin!NativeExtensionsPluginCApiRegisterWithRegistrar+0x163a1\n06 0000000e`28def110 00007ff9`9231900e     flutter_windows!InternalFlutterGpu_Texture_AsImage+0x1622b9\n07 0000000e`28def1a0 00007ff9`923d0647     flutter_windows!FlutterDesktopTextureRegistrarMarkExternalTextureFrameAvailable+0x2c56\n08 0000000e`28def350 00007ff9`923ddddc     flutter_windows!FlutterDesktopTextureRegistrarMarkExternalTextureFrameAvailable+0xba28f\n09 0000000e`28def3d0 00007ff9`923ddd7a     flutter_windows!FlutterDesktopTextureRegistrarMarkExternalTextureFrameAvailable+0xc7a24\n0a 0000000e`28def400 00007ff9`923de4e4     flutter_windows!FlutterDesktopTextureRegistrarMarkExternalTextureFrameAvailable+0xc79c2\n0b 0000000e`28def440 00007ff9`923db45b     flutter_windows!FlutterDesktopTextureRegistrarMarkExternalTextureFrameAvailable+0xc812c\n0c 0000000e`28def480 00007ff9`923dc9e7     flutter_windows!FlutterDesktopTextureRegistrarMarkExternalTextureFrameAvailable+0xc50a3\n0d 0000000e`28def630 00007ff9`923c7f88     flutter_windows!FlutterDesktopTextureRegistrarMarkExternalTextureFrameAvailable+0xc662f\n0e 0000000e`28def680 00007ff9`9231a521     flutter_windows!FlutterDesktopTextureRegistrarMarkExternalTextureFrameAvailable+0xb1bd0\n0f 0000000e`28def6b0 00007ff9`9232e2e9     flutter_windows!FlutterDesktopTextureRegistrarMarkExternalTextureFrameAvailable+0x4169\n10 0000000e`28def7f0 00007ff9`9232fb4d     flutter_windows!FlutterDesktopTextureRegistrarMarkExternalTextureFrameAvailable+0x17f31\n11 0000000e`28def880 00007ff9`9232fc35     flutter_windows!FlutterDesktopTextureRegistrarMarkExternalTextureFrameAvailable+0x19795\n12 0000000e`28def900 00007ffa`188bef5c     flutter_windows!FlutterDesktopTextureRegistrarMarkExternalTextureFrameAvailable+0x1987d\n13 0000000e`28def930 00007ffa`188be684     USER32!CallWindowProcW+0x60c\n14 0000000e`28defac0 00007ff7`59bf52e6     USER32!DispatchMessageW+0x4a4\n15 0000000e`28defb40 00007ff7`59c0063a     os_server+0x52e6\n16 0000000e`28defd90 00007ffa`18e07374     os_server+0x1063a\n17 0000000e`28defdd0 00007ffa`19d1cc91     KERNEL32!BaseThreadInitThunk+0x14\n18 0000000e`28defe00 00000000`00000000     ntdll!RtlUserThreadStart+0x21\n```\n\n\nI would appreciate any help :3\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 7.79
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    "Investigate and address the root cause of the native_extensions_plugin.dll crash.",
+    "Improve the download process for local LLMs to prevent initialization and 0% completion issues.",
+    "Ensure compatibility between Pieces OS, VS Code, and desktop application to resolve integration problems.",
+    "Fix the conflict between the Pieces plugin and Visual Studio's Diagnostic tool output.",
+    "Provide clearer documentation or troubleshooting steps for users experiencing LLM download issues and VS Code integration problems.",
+    "Prioritize bug fixes related to crashes and integration issues to improve user experience.",
+    "Monitor open tickets, especially those with high activity levels, to ensure timely resolution and gather additional information for debugging.",
+    "Consider adding more specific error messages or logging to help diagnose and resolve issues more efficiently.",
+    "Collect user feedback on the reported issues to identify any underlying patterns or common pain points.",
+    "Proactively communicate known issues and workarounds to users through release notes or support channels.",
+    "Implement automated testing to catch integration and compatibility issues before they reach users.",
+    "Investigate the \"Error generating summary: 404 Publisher Model\" error and ensure the support system has access to the required model versions.",
+    "Analyze support tickets for trends and common issues to identify areas for improvement in the software or documentation.",
+    "Provide training to support staff on common issues and troubleshooting steps to improve response times and resolution rates.",
+    "Implement a system for tracking and prioritizing bug fixes based on frequency and impact to ensure the most critical issues are addressed first.",
+    "Encourage users to submit detailed bug reports with steps to reproduce the issue to facilitate faster debugging and resolution.",
+    "Consider creating a dedicated support channel or forum for issues related to specific integrations, such as VS Code or desktop applications.",
+    "Regularly update dependencies and libraries to ensure compatibility and address any known vulnerabilities.",
+    "Implement a versioning system for plugins and extensions to allow users to easily revert to previous versions if compatibility issues arise.",
+    "Monitor application performance and stability to identify and address potential issues before they impact users.",
+    "Develop a process for escalating complex or critical issues to the appropriate development teams.",
+    "Collect user feedback on the support process itself to identify areas for improvement in communication, response times, and overall satisfaction.",
+    "Analyze the time to resolution for different types of issues to identify bottlenecks and areas for optimization in the support workflow.",
+    "Create a knowledge base or FAQ section with solutions to common issues to empower users to self-serve and reduce support ticket volume.",
+    "Implement a system for tracking user satisfaction with support interactions to measure the effectiveness of support operations and identify areas for improvement.",
+    "Regularly review and update support documentation and troubleshooting guides to ensure they are accurate and up-to-date.",
+    "Provide support staff with access to the necessary tools and resources, such as debugging tools and log files, to effectively diagnose and resolve issues.",
+    "Encourage collaboration between support and development teams to share information and improve communication about reported issues.",
+    "Implement a system for proactively identifying and addressing potential issues before they are reported by users, such as through monitoring and automated testing.",
+    "Continuously evaluate and improve support processes and tools to ensure they are meeting the needs of users and contributing to a positive support experience.",
+    "Consider offering different support channels, such as email, chat, or phone, to cater to different user preferences and communication styles.",
+    "Provide support staff with regular training on new features and updates to ensure they are knowledgeable about the latest product developments.",
+    "Develop a clear escalation path for critical issues to ensure they are handled promptly and efficiently.",
+    "Establish service level agreements (SLAs) for different types of support requests to manage user expectations and ensure timely resolution.",
+    "Regularly analyze support metrics, such as ticket volume, resolution time, and customer satisfaction, to identify trends and areas for improvement.",
+    "Use support data to inform product development and prioritize bug fixes and feature enhancements that address user needs and pain points.",
+    "Foster a culture of continuous improvement in the support organization by encouraging feedback, innovation, and collaboration.",
+    "Promote self-service support options, such as knowledge bases and FAQs, to empower users and reduce support ticket volume.",
+    "Proactively communicate known issues and workarounds to users through various channels, such as blog posts, social media, and email newsletters.",
+    "Develop a system for tracking and analyzing user feedback to identify areas for improvement in the product and support processes.",
+    "Regularly review and update support procedures and documentation to ensure they are aligned with best practices and industry standards.",
+    "Provide support staff with opportunities for professional development and training to enhance their skills and knowledge.",
+    "Encourage collaboration and knowledge sharing among support team members to improve efficiency and consistency in support interactions.",
+    "Implement a system for recognizing and rewarding outstanding support performance to motivate and retain high-performing support staff.",
+    "Continuously monitor and evaluate the effectiveness of support operations to ensure they are meeting the needs of users and contributing to a positive customer experience.",
+    "Use support data to identify and address potential product defects or usability issues before they impact a wider user base.",
+    "Develop a clear communication plan for major incidents or outages to keep users informed and minimize disruption.",
+    "Establish a process for gathering and analyzing user feedback on the support experience to identify areas for improvement and measure customer satisfaction.",
+    "Provide support staff with access to relevant product documentation and training materials to ensure they are equipped to handle user inquiries effectively.",
+    "Encourage users to provide feedback on the support experience through surveys, feedback forms, or other channels.",
+    "Regularly review and update support metrics and reporting dashboards to track performance and identify areas for improvement.",
+    "Develop a system for prioritizing support requests based on severity and impact to ensure critical issues are addressed first.",
+    "Provide support staff with clear guidelines and procedures for handling different types of support requests.",
+    "Encourage users to submit bug reports or feature requests through a dedicated channel to facilitate product improvement and development.",
+    "Continuously evaluate and improve support tools and technologies to enhance efficiency and effectiveness.",
+    "Develop a comprehensive support strategy that aligns with overall business goals and objectives.",
+    "Foster a customer-centric culture within the support organization to ensure users receive a positive and helpful support experience.",
+    "Use support data to identify and address common user pain points and improve the overall user experience.",
+    "Proactively communicate updates and changes to support processes or policies to users to ensure transparency and manage expectations.",
+    "Regularly assess and update support staffing levels to ensure adequate coverage and responsiveness to user inquiries.",
+    "Develop a system for tracking and managing support costs to optimize resource allocation and efficiency.",
+    "Provide support staff with regular performance feedback and coaching to help them improve their skills and performance.",
+    "Encourage collaboration and communication between support and other departments, such as product development and marketing, to ensure alignment and improve the overall customer experience.",
+    "Continuously seek feedback from users and stakeholders to identify areas for improvement and ensure support operations are meeting their needs and expectations.",
+    "Develop a clear vision and mission for the support organization that reflects its commitment to providing excellent customer service.",
+    "Establish a culture of continuous learning and improvement within the support organization to stay ahead of industry trends and best practices.",
+    "Use support data to identify and address potential security vulnerabilities or risks.",
+    "Develop a disaster recovery plan for support operations to ensure continuity of service in the event of an emergency or outage.",
+    "Provide support staff with access to the latest security updates and training to protect user data and privacy.",
+    "Regularly review and update support security protocols and procedures to ensure they are aligned with industry best practices.",
+    "Implement a system for monitoring and reporting security incidents or breaches related to support operations.",
+    "Develop a clear communication plan for security incidents or breaches to keep users informed and minimize potential damage.",
+    "Provide support staff with clear guidelines and procedures for handling sensitive user data and information.",
+    "Ensure compliance with relevant data privacy regulations and laws in all support operations.",
+    "Continuously evaluate and improve support security measures to protect user data and maintain the integrity of the support system.",
+    "Develop a security awareness program for support staff to educate them about potential security threats and best practices for protecting user data.",
+    "Encourage users to report any suspicious activity or security concerns related to support interactions.",
+    "Implement a system for tracking and managing security vulnerabilities or risks related to support operations.",
+    "Regularly audit support systems and processes to identify and address potential security weaknesses.",
+    "Provide support staff with access to security tools and resources to help them identify and mitigate potential threats.",
+    "Develop a clear escalation path for security incidents or breaches to ensure they are handled promptly and effectively.",
+    "Establish a security incident response team to manage and respond to security incidents or breaches related to support operations.",
+    "Continuously monitor and evaluate the effectiveness of support security measures to ensure they are meeting the needs of the organization and protecting user data.",
+    "Use support data to identify and address potential security threats or vulnerabilities before they can be exploited.",
+    "Develop a clear communication plan for security updates and patches to keep users informed and ensure they are applying the latest security measures.",
+    "Provide support staff with regular security training and awareness updates to keep them informed about the latest threats and best practices.",
+    "Encourage users to adopt strong passwords and other security measures to protect their accounts and data.",
+    "Implement multi-factor authentication for support systems and accounts to enhance security and prevent unauthorized access.",
+    "Regularly review and update support security policies and procedures to ensure they are aligned with industry best practices and regulatory requirements.",
+    "Develop a security risk assessment framework for support operations to identify and prioritize potential security risks.",
+    "Provide support staff with clear guidelines and procedures for handling security incidents or breaches.",
+    "Encourage collaboration and communication between support and security teams to ensure alignment and improve overall security posture.",
+    "Continuously evaluate and improve support security measures to protect user data and maintain the confidentiality, integrity, and availability of support systems and information."
+  ],
+  "message": "Daily support report generated successfully."
+}
