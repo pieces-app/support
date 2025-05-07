@@ -2,7 +2,7 @@
   "success": true,
   "date_range": {
     "start": "2025-05-05T00:00:00+00:00",
-    "end": "2025-05-07T13:16:42.971080+00:00"
+    "end": "2025-05-07T21:06:53.261446+00:00"
   },
   "summary": {
     "total_tickets": 4,
@@ -93,17 +93,17 @@
     {
       "number": 693,
       "title": "Crash due to native_extensions_plugin.dll",
-      "activity_level": 7.65
+      "activity_level": 7.06
     },
     {
       "number": 663,
       "title": "Kaspersky Internet Security flags Pieces OS as a virus",
-      "activity_level": 3.93
+      "activity_level": 3.91
     },
     {
       "number": 697,
       "title": "Visual Studio 2022 extension interfering with Diagnostic tool output",
-      "activity_level": 3.61
+      "activity_level": 2.93
     },
     {
       "number": 113,
@@ -114,32 +114,32 @@
   "common_issues": [
     {
       "title": "Pieces OS conflicts and crashes on Windows",
-      "description": "Multiple users report conflicts between Pieces OS and other software on Windows. Kaspersky flags Pieces OS as a virus. The Pieces VS extension blanks the Diagnostic Tools pane.  The native_extensions_plugin.dll causes crashes.  Reinstalling, disabling antivirus/firewall, and updating drivers haven't resolved the crashes.  Disabling the VS extension restores Diagnostics output. Further investigation into native_extensions_plugin.dll is needed.",
+      "description": "Multiple users report conflicts between Pieces OS and other software on Windows. Kaspersky flags Pieces OS as a virus. The Pieces VS extension blanks the Diagnostic Tools pane.  native_extensions_plugin.dll causes crashes. Reinstalling, disabling antivirus/firewall, and updating drivers haven't resolved the crashes.  Disabling the VS extension restores diagnostics output. Further investigation into native_extensions_plugin.dll is needed.",
       "frequency": 3,
       "related_issues": [
         {
           "id": 663,
           "title": "Kaspersky Internet Security flags Pieces OS as a virus",
           "text": "Kaspersky Internet Security flags Pieces OS as a virus\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nPiecesOS_11.2.2.0_x64\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n![Image](https://github.com/user-attachments/assets/160ed12d-f0a1-46be-bf36-05502353405e)\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 3.93
+          "activity_level": 3.91
         },
         {
           "id": 697,
           "title": "Visual Studio 2022 extension interfering with Diagnostic tool output",
           "text": "Visual Studio 2022 extension interfering with Diagnostic tool output\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Visual Studio\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nPiecesOS 11.3.3\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nThe Diagnostic tools pane that, by default, opens when you begin debugging in Visual Studio ends up entirely blank with the Pieces plugin enabled in Visual Studio Version 17.14.0 Preview 4.0. Disabling the plugin restores the Diagnostic tools output.\n\n<img width=\"166\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/beb0d90f-7544-4f26-9516-8e4165b782ce\" />\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 3.61
+          "activity_level": 2.93
         },
         {
           "id": 693,
           "title": "Crash due to native_extensions_plugin.dll",
           "text": "Crash due to native_extensions_plugin.dll\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.3.3\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nPieces OS crashes. I\u2019ve reinstalled the program, turned off the antivirus and firewall, updated the graphics driver, but nothing helps, it crashes consistently.\nWindows 10, 64 bit, i3-12100F, RAM: 32 Gb, GTX 950.\nIf there's no solution, how can I disable this plugin so that it simply doesn't crash?\n\nHere are the debug details:\n```\n0:000> r rcx\nrcx=0000000000000000\n0:000> k\n # Child-SP          RetAddr               Call Site\n00 0000000e`28deeb00 00007ff9`9365e0ea     native_extensions_plugin!NativeExtensionsPluginCApiRegisterWithRegistrar+0x13796\n01 0000000e`28deed20 00007ff9`9365fabf     native_extensions_plugin!NativeExtensionsPluginCApiRegisterWithRegistrar+0xc97a\n02 0000000e`28deee50 00007ff9`9365d196     native_extensions_plugin!NativeExtensionsPluginCApiRegisterWithRegistrar+0xe34f\n03 0000000e`28deee80 00007ff9`9365fa77     native_extensions_plugin!NativeExtensionsPluginCApiRegisterWithRegistrar+0xba26\n04 0000000e`28deef90 00007ff9`93667b11     native_extensions_plugin!NativeExtensionsPluginCApiRegisterWithRegistrar+0xe307\n05 0000000e`28def000 00007ff9`92bad9fd     native_extensions_plugin!NativeExtensionsPluginCApiRegisterWithRegistrar+0x163a1\n06 0000000e`28def110 00007ff9`9231900e     flutter_windows!InternalFlutterGpu_Texture_AsImage+0x1622b9\n07 0000000e`28def1a0 00007ff9`923d0647     flutter_windows!FlutterDesktopTextureRegistrarMarkExternalTextureFrameAvailable+0x2c56\n08 0000000e`28def350 00007ff9`923ddddc     flutter_windows!FlutterDesktopTextureRegistrarMarkExternalTextureFrameAvailable+0xba28f\n09 0000000e`28def3d0 00007ff9`923ddd7a     flutter_windows!FlutterDesktopTextureRegistrarMarkExternalTextureFrameAvailable+0xc7a24\n0a 0000000e`28def400 00007ff9`923de4e4     flutter_windows!FlutterDesktopTextureRegistrarMarkExternalTextureFrameAvailable+0xc79c2\n0b 0000000e`28def440 00007ff9`923db45b     flutter_windows!FlutterDesktopTextureRegistrarMarkExternalTextureFrameAvailable+0xc812c\n0c 0000000e`28def480 00007ff9`923dc9e7     flutter_windows!FlutterDesktopTextureRegistrarMarkExternalTextureFrameAvailable+0xc50a3\n0d 0000000e`28def630 00007ff9`923c7f88     flutter_windows!FlutterDesktopTextureRegistrarMarkExternalTextureFrameAvailable+0xc662f\n0e 0000000e`28def680 00007ff9`9231a521     flutter_windows!FlutterDesktopTextureRegistrarMarkExternalTextureFrameAvailable+0xb1bd0\n0f 0000000e`28def6b0 00007ff9`9232e2e9     flutter_windows!FlutterDesktopTextureRegistrarMarkExternalTextureFrameAvailable+0x4169\n10 0000000e`28def7f0 00007ff9`9232fb4d     flutter_windows!FlutterDesktopTextureRegistrarMarkExternalTextureFrameAvailable+0x17f31\n11 0000000e`28def880 00007ff9`9232fc35     flutter_windows!FlutterDesktopTextureRegistrarMarkExternalTextureFrameAvailable+0x19795\n12 0000000e`28def900 00007ffa`188bef5c     flutter_windows!FlutterDesktopTextureRegistrarMarkExternalTextureFrameAvailable+0x1987d\n13 0000000e`28def930 00007ffa`188be684     USER32!CallWindowProcW+0x60c\n14 0000000e`28defac0 00007ff7`59bf52e6     USER32!DispatchMessageW+0x4a4\n15 0000000e`28defb40 00007ff7`59c0063a     os_server+0x52e6\n16 0000000e`28defd90 00007ffa`18e07374     os_server+0x1063a\n17 0000000e`28defdd0 00007ffa`19d1cc91     KERNEL32!BaseThreadInitThunk+0x14\n18 0000000e`28defe00 00000000`00000000     ntdll!RtlUserThreadStart+0x21\n```\n\n\nI would appreciate any help :3\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 7.65
+          "activity_level": 7.06
         }
       ]
     },
     {
       "title": "Software Conflicts and Download Issues",
-      "description": "Users report software conflicts (Kaspersky, VS Code, Pieces OS) and download issues with local LLMs.  Conflicts manifest as blank diagnostic panes or false virus flags. Download issues involve LLMs getting stuck on initializing, potentially due to network or compatibility problems.  Check network connectivity, software versions, and OS compatibility for potential solutions.",
+      "description": "Users report software conflicts (Kaspersky, VS Code, Pieces OS) and download issues with local LLMs.  Conflicts manifest as blank diagnostic panes or false virus flags. Download issues involve LLMs getting stuck on initializing, potentially due to network issues or version incompatibility.  Check network connectivity, update Pieces OS and VS Code extensions, and whitelist Pieces OS in antivirus software.",
       "frequency": 3,
       "related_issues": [
         {
@@ -152,24 +152,24 @@
           "id": 697,
           "title": "Visual Studio 2022 extension interfering with Diagnostic tool output",
           "text": "Visual Studio 2022 extension interfering with Diagnostic tool output\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Visual Studio\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nPiecesOS 11.3.3\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nThe Diagnostic tools pane that, by default, opens when you begin debugging in Visual Studio ends up entirely blank with the Pieces plugin enabled in Visual Studio Version 17.14.0 Preview 4.0. Disabling the plugin restores the Diagnostic tools output.\n\n<img width=\"166\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/beb0d90f-7544-4f26-9516-8e4165b782ce\" />\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 3.61
+          "activity_level": 2.93
         },
         {
           "id": 663,
           "title": "Kaspersky Internet Security flags Pieces OS as a virus",
           "text": "Kaspersky Internet Security flags Pieces OS as a virus\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nPiecesOS_11.2.2.0_x64\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n![Image](https://github.com/user-attachments/assets/160ed12d-f0a1-46be-bf36-05502353405e)\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 3.93
+          "activity_level": 3.91
         }
       ]
     }
   ],
   "recommendations": [
-    "Investigate and fix the 'native_extensions_plugin.dll' crash on Windows. This is the most frequent and impactful issue.",
-    "Address Kaspersky flagging Pieces OS as a virus. This is a recurring problem affecting Windows users.",
-    "Resolve the Visual Studio 2022 extension conflict causing blank Diagnostic tool output.",
-    "Troubleshoot and fix the local LLM download issue, especially for Linux users where it gets stuck on initializing.",
-    "Improve communication with users awaiting responses, given the pending tickets in the 'status:waiting_on_user_responses' category.",
-    "Consider adding more specific documentation or troubleshooting steps for software conflicts and download issues on different operating systems (Windows, macOS, Linux)."
+    "Investigate and address the 'native_extensions_plugin.dll' crash on Windows. This is the most frequent and impactful issue.",
+    "Develop a workaround or solution for the Kaspersky antivirus software falsely flagging Pieces OS as a virus.",
+    "Fix the Visual Studio 2022 extension conflict that blanks the Diagnostic Tools pane.",
+    "Troubleshoot and resolve the local LLM download issue, checking for network connectivity problems and version compatibility.",
+    "Improve communication with users experiencing the 'waiting_on_user_responses' status, providing clear instructions or requesting necessary information.",
+    "Monitor and address any emerging trends in bug reports or user feedback related to specific operating systems (Windows, macOS, Linux) or applications (VS Code, Visual Studio, Desktop Application)."
   ],
   "message": "Daily support report generated successfully."
 }
