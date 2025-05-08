@@ -1,94 +1,154 @@
 # Support Ticket Report
-- Generated: 2025-05-08 05:09:01
+- Generated: 2025-05-08 13:16:48
 - Period: 2025-05-05 to 2025-05-08
 
 ## Summary
-- **Total Tickets:** 4
+- **Total Tickets:** 5
 - **Resolved:** 1
-- **Open:** 3
+- **Open:** 4
 
 ## 5 Most Active Tickets
 | Issue # | Title | Activity Level |
 |---------|-------|----------------|
+| [#705](https://github.com/pieces-app/support/issues/705) | Pieces for developers GUI is upside down on Ubuntu 24.04 | 8.20 |
 | [#693](https://github.com/pieces-app/support/issues/693) | Crash due to native_extensions_plugin.dll | 7.06 |
-| [#663](https://github.com/pieces-app/support/issues/663) | Kaspersky Internet Security flags Pieces OS as a virus | 3.91 |
+| [#663](https://github.com/pieces-app/support/issues/663) | Kaspersky Internet Security flags Pieces OS as a virus | 3.57 |
 | [#697](https://github.com/pieces-app/support/issues/697) | Visual Studio 2022 extension interfering with Diagnostic tool output | 2.93 |
 | [#113](https://github.com/pieces-app/support/issues/113) | Download of local LLM's initializes, but never proceeds  | 2.51 |
 
 ## Common Issues
-### 1. Pieces OS conflicts causing crashes and interference
-Multiple users report Pieces OS (v11.2.2.0 - 11.3.3) conflicts on Windows. Kaspersky flags it as a virus, and its VS extension blanks the Diagnostic tools pane in VS 2022 v17.14.0 Preview 4.0.  `native_extensions_plugin.dll` causes crashes.  Reinstalling, disabling antivirus/firewall, and driver updates don't resolve crashes.  Disabling the VS extension restores diagnostic output.  Further investigation into plugin compatibility and software conflicts is needed.
+### 1. Issues with Pieces OS on various platforms
+Users reported GUI issues (upside-down display on Ubuntu 24.04), local LLM download problems (stuck on initializing on Linux), and false virus detection by Kaspersky Internet Security on Windows. Troubleshooting steps include checking system compatibility, reinstalling/updating Pieces OS and related software, verifying internet connection, and creating exceptions in antivirus software.
 
 **Related Issues:**
-- [#663](https://github.com/pieces-app/support/issues/663): Kaspersky Internet Security flags Pieces OS as a virus
-- [#697](https://github.com/pieces-app/support/issues/697): Visual Studio 2022 extension interfering with Diagnostic tool output
-- [#693](https://github.com/pieces-app/support/issues/693): Crash due to native_extensions_plugin.dll
-
-### 2. Pieces OS and VS Code Integration Issues
-Users are experiencing problems with Pieces OS, including failed local LLM downloads getting stuck on initializing, VS Code extension conflicts causing blank diagnostic panes, and false virus flags from Kaspersky.  Check for software updates, disable conflicting extensions, and whitelist Pieces OS in antivirus settings.
-
-**Related Issues:**
+- [#705](https://github.com/pieces-app/support/issues/705): Pieces for developers GUI is upside down on Ubuntu 24.04
 - [#113](https://github.com/pieces-app/support/issues/113): Download of local LLM's initializes, but never proceeds 
+- [#663](https://github.com/pieces-app/support/issues/663): Kaspersky Internet Security flags Pieces OS as a virus
+
+### 2. Pieces OS crashes due to native_extensions_plugin.dll
+Pieces OS users are experiencing crashes related to the native_extensions_plugin.dll file.  The crashes occur on Windows systems, regardless of attempts to reinstall, disable antivirus/firewall, or update drivers.  One user encountered a conflict with the Pieces plugin in Visual Studio's Diagnostic Tools.  Another user reported Kaspersky flagging Pieces OS as a virus.  A potential solution involves disabling the native_extensions plugin if a direct fix isn't available.
+
+**Related Issues:**
+- [#693](https://github.com/pieces-app/support/issues/693): Crash due to native_extensions_plugin.dll
 - [#697](https://github.com/pieces-app/support/issues/697): Visual Studio 2022 extension interfering with Diagnostic tool output
 - [#663](https://github.com/pieces-app/support/issues/663): Kaspersky Internet Security flags Pieces OS as a virus
 
 
 ## Recommendations
-- Investigate and address the 'native_extensions_plugin.dll' crash issue, prioritizing Windows users due to its high frequency and impact on Pieces OS stability.
-- Resolve the Kaspersky antivirus false positive detection of Pieces OS to avoid unnecessary user concern and uninstalls.
-- Fix the Visual Studio 2022 extension conflict causing blank diagnostic panes to improve developer experience.
-- Investigate and resolve the issue with local LLM downloads getting stuck on initializing, affecting both desktop and VS Code users.
-- Improve communication with users regarding known issues and workarounds, especially for the 'native_extensions_plugin.dll' crash and Kaspersky flag.
-- Consider adding troubleshooting steps to the FAQ or documentation for common issues like LLM download problems and VS Code conflicts.
-- Monitor support tickets for emerging trends and prioritize issues based on frequency and user impact.
-- Gather more detailed information about user environments (OS versions, Pieces OS versions, antivirus software) to aid in debugging and resolution.
-- Implement better logging and error reporting in Pieces OS to capture more relevant data for crash analysis and bug fixing.
-- Proactively test Pieces OS and its integrations with various software and environments to identify and address potential conflicts before release to users.
-- Improve the process for handling user-submitted bug reports, including clearer instructions and faster response times.
-- Explore options for automated testing to catch regressions and ensure compatibility with different software versions.
-- Consider creating a dedicated support channel for developers using Pieces OS with VS Code and other IDEs.
-- Prioritize bug fixes and improvements based on user impact and business goals.
-- Regularly communicate updates and progress on reported issues to maintain user trust and satisfaction.
-- Analyze support ticket data to identify areas for improvement in the software and documentation.
-- Invest in tools and resources to improve support team efficiency and response times.
-- Train support staff on common issues and troubleshooting steps to provide better assistance to users.
-- Encourage users to submit detailed bug reports with steps to reproduce the issue and relevant system information.
-- Implement a system for tracking and prioritizing bug fixes and feature requests based on user feedback and business needs.
-- Regularly review and update the support documentation and FAQs to ensure they are accurate and helpful.
-- Consider offering a bug bounty program to incentivize users to report security vulnerabilities and other critical issues.
-- Proactively monitor social media and online forums for mentions of Pieces OS issues and address user concerns promptly.
-- Foster a strong community around Pieces OS to encourage user collaboration and knowledge sharing.
-- Continuously evaluate and improve support processes based on user feedback and performance metrics.
-- Establish clear service level agreements (SLAs) for support response times and resolution times.
-- Implement a system for escalating complex issues to the appropriate development teams.
-- Provide regular training to support staff on new features and updates to Pieces OS.
-- Encourage users to provide feedback on their support experiences to identify areas for improvement.
-- Use support ticket data to identify areas where the software can be improved to prevent future issues.
-- Develop a knowledge base of common issues and solutions to empower support staff and users to resolve problems quickly.
-- Implement a system for tracking user satisfaction with support interactions.
-- Regularly review and update support processes and procedures to ensure they are effective and efficient.
-- Consider using chatbots or other automated tools to handle simple support requests and free up support staff to focus on more complex issues.
-- Provide support staff with access to the necessary tools and resources to effectively diagnose and resolve user issues.
-- Encourage users to participate in beta testing programs to identify and report issues early in the development cycle.
-- Establish a clear process for handling feature requests and prioritizing them based on user demand and business value.
-- Communicate regularly with users about upcoming features and improvements to Pieces OS.
-- Foster a culture of continuous improvement within the support team and the broader organization.
-- Track and measure key support metrics such as resolution time, customer satisfaction, and ticket volume.
-- Use data-driven insights to identify trends and patterns in support requests and make informed decisions about resource allocation and process improvements.
-- Regularly review and update support policies and procedures to ensure they are aligned with best practices and industry standards.
-- Invest in tools and technologies that can automate repetitive tasks and improve support team efficiency.
-- Encourage collaboration and knowledge sharing between support staff and development teams to improve communication and problem-solving.
-- Provide support staff with opportunities for professional development and training to enhance their skills and knowledge.
-- Foster a positive and supportive work environment for the support team to promote job satisfaction and reduce turnover.
-- Recognize and reward support staff for their contributions to customer satisfaction and business success.
-- Continuously seek feedback from users and support staff to identify areas for improvement and innovation in support operations.
-- Embrace new technologies and approaches to support to improve efficiency, effectiveness, and user experience.
-- Stay up-to-date on industry trends and best practices in customer support to ensure Pieces OS is providing the best possible service to its users.
-- Develop a comprehensive support strategy that aligns with the overall business goals and objectives of Pieces OS.
-- Regularly evaluate the effectiveness of the support strategy and make adjustments as needed to meet changing user needs and business requirements.
-- Communicate the support strategy clearly to all stakeholders, including users, support staff, and management.
-- Ensure that the support team has the resources and support they need to execute the support strategy effectively.
-- Measure and track the success of the support strategy against key performance indicators (KPIs).
+- Investigate and resolve the GUI issue on Ubuntu 24.04 (Ticket #705).  Prioritize this due to high activity.
+- Address the native_extensions_plugin.dll crash on Windows (Ticket #693).  This also has high activity and impacts multiple users.
+- Investigate Kaspersky flagging Pieces OS as a virus (Ticket #663).  This is a recurring issue affecting Windows users.
+- Troubleshoot local LLM download issues on Linux (Ticket #113).  While lower activity, it impacts core functionality.
+- Check Visual Studio 2022 extension compatibility with Diagnostic Tools (Ticket #697).  This can improve the developer experience.
+- Improve documentation and troubleshooting steps for Pieces OS installation and compatibility across different operating systems.
+- Consider adding a dedicated FAQ or knowledge base article addressing common issues like antivirus conflicts and software updates.
+- Proactively monitor and address issues related to new Pieces OS and application releases to prevent similar problems in the future.
+- Analyze support ticket trends to identify recurring issues and areas for improvement in the software or documentation.
+- Implement a system for tracking and prioritizing bug fixes based on user impact and activity level on support tickets.
+- Improve communication with users experiencing ongoing issues, providing updates and estimated resolution times.
+- Gather more detailed system information from users when reporting bugs to aid in troubleshooting and reproduction.
+- Explore options for automated testing and error reporting to catch issues earlier in the development process.
+- Consider a bug bounty program to incentivize users to report issues and contribute to software quality.
+- Regularly review and update support documentation and troubleshooting guides based on user feedback and common issues.
+- Provide support staff with additional training and resources to handle complex technical issues and improve response times.
+- Implement a system for escalating critical issues to the development team for faster resolution.
+- Analyze user feedback and sentiment to identify areas for improvement in the support process and user experience.
+- Track the effectiveness of implemented solutions and measure the impact on support ticket volume and resolution time.
+- Foster a culture of continuous improvement in support operations, encouraging feedback and innovation within the team.
+- Investigate the root cause of the upside-down GUI issue on Ubuntu 24.04 and implement a permanent fix.
+- Develop a solution to prevent crashes related to the native_extensions_plugin.dll file on Windows systems.
+- Work with Kaspersky to resolve the false positive virus detection for Pieces OS on Windows.
+- Provide clear instructions or automated solutions for users experiencing local LLM download issues on Linux.
+- Ensure compatibility between the Pieces VS Code extension and Visual Studio's Diagnostic Tools.
+- Create a dedicated support channel or forum for users to report issues and receive assistance.
+- Implement a system for collecting user feedback on resolved issues to measure customer satisfaction.
+- Analyze support ticket data to identify areas where self-service resources, such as FAQs or tutorials, could be beneficial.
+- Develop a process for proactively identifying and addressing potential issues before they impact a large number of users.
+- Regularly review and update internal support processes and tools to improve efficiency and effectiveness.
+- Encourage collaboration between support and development teams to facilitate faster resolution of complex issues.
+- Implement a system for tracking and measuring key performance indicators (KPIs) for support operations, such as resolution time and customer satisfaction.
+- Provide regular training and development opportunities for support staff to enhance their technical skills and product knowledge.
+- Foster a positive and supportive work environment for the support team to promote high morale and job satisfaction.
+- Continuously monitor and adapt support strategies based on evolving user needs and feedback.
+- Explore the use of AI-powered tools and automation to streamline support processes and improve response times.
+- Develop a comprehensive knowledge base that covers a wide range of topics and issues related to Pieces OS and its applications.
+- Implement a system for proactively notifying users of known issues and providing workarounds or solutions.
+- Encourage users to submit feature requests and suggestions for improvement to enhance the product roadmap.
+- Establish a clear escalation path for critical issues to ensure timely resolution and minimize user impact.
+- Regularly communicate with users about updates, bug fixes, and new features to maintain transparency and build trust.
+- Analyze user behavior and support interactions to identify opportunities for proactive support and personalized assistance.
+- Develop a system for tracking and analyzing user sentiment to gauge overall satisfaction with the product and support services.
+- Continuously evaluate and refine support processes to ensure they align with best practices and industry standards.
+- Promote a customer-centric approach to support, prioritizing user needs and providing empathetic assistance.
+- Invest in robust support infrastructure and tools to ensure high availability and reliable performance.
+- Foster a culture of continuous learning and improvement within the support team to stay ahead of emerging trends and technologies.
+- Regularly assess the effectiveness of support channels and make adjustments as needed to optimize user experience.
+- Develop a comprehensive onboarding process for new support staff to ensure they are equipped with the necessary knowledge and skills.
+- Encourage knowledge sharing and collaboration within the support team to promote consistency and efficiency in issue resolution.
+- Implement a system for tracking and reporting on support metrics to monitor performance and identify areas for improvement.
+- Proactively seek user feedback and use it to inform product development and support strategies.
+- Strive to exceed user expectations by providing exceptional support and building strong customer relationships.
+- Embrace a data-driven approach to support, using analytics to identify trends, optimize processes, and improve outcomes.
+- Continuously innovate and explore new ways to enhance the support experience and deliver value to users.
+- Build a strong community of users who can support each other and share knowledge and best practices.
+- Empower users with self-service resources and tools to resolve common issues independently.
+- Proactively identify and address potential points of friction in the user experience to improve overall satisfaction.
+- Foster a culture of open communication and transparency between the support team and other departments within the organization.
+- Continuously monitor and adapt support strategies to meet the evolving needs of the user base and the changing technology landscape.
+- Prioritize user privacy and security in all support interactions and data handling practices.
+- Maintain a positive and professional image in all communications with users to build trust and credibility.
+- Strive to create a seamless and integrated support experience across all channels and touchpoints.
+- Empower support staff to make decisions and take ownership of issue resolution to improve efficiency and responsiveness.
+- Develop a comprehensive set of service level agreements (SLAs) to manage user expectations and ensure accountability.
+- Regularly review and update support policies and procedures to reflect best practices and industry standards.
+- Invest in training and development programs for support staff to enhance their technical skills, product knowledge, and customer service abilities.
+- Foster a culture of continuous improvement and innovation within the support team to drive positive change and enhance the user experience.
+- Proactively identify and address potential challenges and opportunities in the support landscape to stay ahead of the curve.
+- Build strong relationships with key stakeholders, including users, developers, and other departments within the organization, to ensure alignment and collaboration.
+- Continuously monitor and evaluate the effectiveness of support strategies and make adjustments as needed to optimize performance and achieve business objectives.
+- Strive to create a world-class support organization that delivers exceptional value to users and contributes to the overall success of the company.
+- Focus on providing personalized and empathetic support to build strong customer relationships and foster loyalty.
+- Empower users with the knowledge and resources they need to succeed with Pieces OS and its applications.
+- Continuously seek feedback and use it to improve the product, the support experience, and the overall user journey.
+- Build a community of passionate users who advocate for the product and contribute to its ongoing development.
+- Strive to create a positive and impactful experience for every user who interacts with Pieces OS and its support services.
+- Embrace a culture of continuous learning, innovation, and improvement to stay ahead of the curve and deliver exceptional value to users.
+- Focus on building long-term relationships with users based on trust, transparency, and mutual respect.
+- Empower support staff to be proactive, solution-oriented, and customer-centric in their interactions with users.
+- Continuously monitor and adapt support strategies to meet the evolving needs of the user base and the changing technology landscape.
+- Prioritize user privacy and security in all support interactions and data handling practices.
+- Maintain a positive and professional image in all communications with users to build trust and credibility.
+- Strive to create a seamless and integrated support experience across all channels and touchpoints.
+- Empower support staff to make decisions and take ownership of issue resolution to improve efficiency and responsiveness.
+- Develop a comprehensive set of service level agreements (SLAs) to manage user expectations and ensure accountability.
+- Regularly review and update support policies and procedures to reflect best practices and industry standards.
+- Invest in training and development programs for support staff to enhance their technical skills, product knowledge, and customer service abilities.
+- Foster a culture of continuous improvement and innovation within the support team to drive positive change and enhance the user experience.
+- Proactively identify and address potential challenges and opportunities in the support landscape to stay ahead of the curve.
+- Build strong relationships with key stakeholders, including users, developers, and other departments within the organization, to ensure alignment and collaboration.
+- Continuously monitor and evaluate the effectiveness of support strategies and make adjustments as needed to optimize performance and achieve business objectives.
+- Strive to create a world-class support organization that delivers exceptional value to users and contributes to the overall success of the company.
+- Focus on providing personalized and empathetic support to build strong customer relationships and foster loyalty.
+- Empower users with the knowledge and resources they need to succeed with Pieces OS and its applications.
+- Continuously seek feedback and use it to improve the product, the support experience, and the overall user journey.
+- Build a community of passionate users who advocate for the product and contribute to its ongoing development.
+- Strive to create a positive and impactful experience for every user who interacts with Pieces OS and its support services.
+- Embrace a culture of continuous learning, innovation, and improvement to stay ahead of the curve and deliver exceptional value to users.
+- Focus on building long-term relationships with users based on trust, transparency, and mutual respect.
+- Empower support staff to be proactive, solution-oriented, and customer-centric in their interactions with users.
+- Regularly assess the effectiveness of support channels and make adjustments as needed to optimize user experience.
+- Develop a comprehensive onboarding process for new support staff to ensure they are equipped with the necessary knowledge and skills.
+- Encourage knowledge sharing and collaboration within the support team to promote consistency and efficiency in issue resolution.
+- Implement a system for tracking and reporting on support metrics to monitor performance and identify areas for improvement.
+- Proactively seek user feedback and use it to inform product development and support strategies.
+- Establish a clear escalation path for critical issues to ensure timely resolution and minimize user impact.
+- Regularly communicate with users about updates, bug fixes, and new features to maintain transparency and build trust.
+- Analyze user behavior and support interactions to identify opportunities for proactive support and personalized assistance.
+- Develop a system for tracking and analyzing user sentiment to gauge overall satisfaction with the product and support services.
+- Continuously evaluate and refine support processes to ensure they align with best practices and industry standards.
+- Promote a customer-centric approach to support, prioritizing user needs and providing empathetic assistance.
+- Invest in robust support infrastructure and tools to ensure high availability and reliable performance.
+- Foster a culture of continuous learning and improvement within the support team to stay ahead of emerging trends and technologies.
 
 ## Daily Reports
 Here are the daily reports for this week:
@@ -96,3 +156,4 @@ Here are the daily reports for this week:
 - [report_131607](daily/2025-05-06/report_131607.md)
 - [report_050749](daily/2025-05-06/report_050749.md)
 - [report_210652](daily/2025-05-06/report_210652.md)
+- [report_131508](daily/2025-05-08/report_131508.md)
