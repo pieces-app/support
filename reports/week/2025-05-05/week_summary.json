@@ -2,7 +2,7 @@
   "success": true,
   "date_range": {
     "start": "2025-05-05T00:00:00+00:00",
-    "end": "2025-05-10T05:07:44.812970+00:00"
+    "end": "2025-05-10T13:11:12.681544+00:00"
   },
   "summary": {
     "total_tickets": 9,
@@ -91,14 +91,14 @@
   ],
   "most_active_tickets": [
     {
-      "number": 705,
-      "title": "Pieces for developers GUI is upside down on Ubuntu 24.04",
-      "activity_level": 8.5
-    },
-    {
       "number": 706,
       "title": "Pieces for Developers doesn't support .vue files",
       "activity_level": 8.2
+    },
+    {
+      "number": 705,
+      "title": "Pieces for developers GUI is upside down on Ubuntu 24.04",
+      "activity_level": 7.32
     },
     {
       "number": 693,
@@ -139,7 +139,7 @@
   "common_issues": [
     {
       "title": "Pieces OS and Desktop App Crashes and Errors",
-      "description": "Multiple users reported crashes and errors across Pieces OS and Desktop App. Issues include Asana handshake failures, login failures with HTTP 500 errors on `/os/sign_in`, and crashes related to `native_extensions_plugin.dll`.  Troubleshooting steps like reinstallation, antivirus/firewall checks, and driver updates have been attempted. Further investigation into logs and plugin functionality is needed.",
+      "description": "Users report crashes in Pieces OS and Desktop App across Windows and Linux, including Handshake errors with Asana integration, login failures with HTTP 500 errors, and crashes related to native_extensions_plugin.dll.  Troubleshooting includes checking logs, reinstalling, disabling antivirus/firewall, and updating drivers. Further investigation is needed to identify the root causes and provide targeted solutions.",
       "frequency": 3,
       "related_issues": [
         {
@@ -163,33 +163,8 @@
       ]
     },
     {
-      "title": "Pieces OS/PFD Issues on Linux",
-      "description": "Users on Ubuntu Linux are experiencing various issues with Pieces OS and Pieces for Developers (PFD). These include an upside-down GUI, login failures with HTTP 500 errors, and local LLM downloads getting stuck during initialization.  Troubleshooting steps include reinstalling/updating software, checking logs, and verifying internet connectivity.  One user reported a similar LLM download issue on Windows that was resolved by updating to Pieces OS 8.0.0.",
-      "frequency": 3,
-      "related_issues": [
-        {
-          "id": 705,
-          "title": "Pieces for developers GUI is upside down on Ubuntu 24.04",
-          "text": "Pieces for developers GUI is upside down on Ubuntu 24.04\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nLinux\n\n### Your Pieces OS Version\n\n11.3.6\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nHello All, I just installed Pieces OS and Pieces for developers on My Ubuntu 24.04 VMWare image. I was able to install it but its GUI is upside down. I reinstalled it several times and update everything - no luck. I tried to login with xorg and wayland - no luck as well. Can You help me?\n\n![Image](https://github.com/user-attachments/assets/0bab5b51-82c8-4872-913a-a32a063d1b9f)\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 8.5
-        },
-        {
-          "id": 691,
-          "title": "OS: login does not work ( /os/sign_in HTTP 500)",
-          "text": "OS: login does not work ( /os/sign_in HTTP 500)\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nLinux\n\n### Your Pieces OS Version\n\n11.3.3\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWhen I try to log in via PFD, the spinner loads indefinitely before opening an error page in the browser:\n\nhttps://pieces.app/authentication-error?sentry_id=00000000000000000000000000000000&os=bb009f04-7e79-44cb-8376-aba647cd2c98&platform=linux\n\nIn the OS logs (Documents/com.pieces.os/Support/logs) I see this entry:\n\n```\n[D]  2025-04-17T15:53:02.391819  0:00:01.425625 POST    [500] /os/sign_in: port:39300\n```\n\nIt is surrounded by HTTP 200s like this:\n\n```\n[D]  2025-04-17T15:52:53.075570  0:00:00.000685 GET     [200] /.well-known/version: port:39301\n[D]  2025-04-17T15:52:54.038635  0:00:00.001700 POST    [200] /websites/exists: port:39300\n[D]  2025-04-17T15:52:54.043187  0:00:00.000732 GET     [200] /.well-known/version: port:39300\n[D]  2025-04-17T15:52:54.335453  0:00:00.001876 POST    [200] /websites/exists: port:39300\n[D]  2025-04-17T15:52:56.077590  0:00:00.000695 GET     [200] /.well-known/version: port:39301\n[D]  2025-04-17T15:52:59.079649  0:00:00.000662 GET     [200] /.well-known/version: port:39301\n[D]  2025-04-17T15:53:02.081551  0:00:00.000486 GET     [200] /.well-known/version: port:39301\n[D]  2025-04-17T15:53:02.391819  0:00:01.425625 POST    [500] /os/sign_in: port:39300\n[D]  2025-04-17T15:53:04.272493  0:00:00.001839 POST    [200] /websites/exists: port:39300\n[D]  2025-04-17T15:53:04.334258  0:00:00.000938 GET     [200] /.well-known/version: port:39300\n[D]  2025-04-17T15:53:04.457128  0:00:00.001378 POST    [200] /websites/exists: port:39300\n[D]  2025-04-17T15:53:05.083569  0:00:00.000541 GET     [200] /.well-known/version: port:39301\n[D]  2025-04-17T15:53:08.085902  0:00:00.000518 GET     [200] /.well-known/version: port:39301\n[D]  2025-04-17T15:53:08.094713  0:00:00.001812 POST    [200] /websites/exists: port:39300\n```\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 4.63
-        },
-        {
-          "id": 113,
-          "title": "Download of local LLM's initializes, but never proceeds ",
-          "text": "Download of local LLM's initializes, but never proceeds \n### Software\n\nDesktop Application, Pieces OS, VS Code\n\n### Operating System\n\nLinux\n\n### Your Pieces OS Version\n\n8.0.1\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI was trying to download a local LLM, but any one of them that I try it is stuck on initialising. It does not start downloading the model. I have tried downloading all the available models, but it does not move further than initialising. I have seen a similar issue on GitHub for somebody using windows, but for them, it went away after updating to version 8.0.0. of pieces OS. This is their GitHub issue https://github.com/pieces-app/support/issues/84 I am already on 8.0.1 but on Linux. I am pretty sure my internet is not an issue. The rest of the app functions perfectly. It's just that I cannot download local LLMs. I have also tried to install local LLMs through VS Code, but there instead of getting stuck on initializing it gets stuck on 0% complete.\r\n\r\nI am on Linux\r\npieces OS : 8.0.1\r\npieces for developers : 2.10.0\r\nOS : Ubuntu 22.04 LTS\r\nCPU: Ryzen 5800H\r\nRam: 16gb\r\nGPU: RTX 3050 mobile (4gbvram)\r\n\r\n![image](https://github.com/pieces-app/support/assets/106009563/a0d2900b-276a-4450-a0f4-100e1f8391d7)\r\n![image](https://github.com/pieces-app/support/assets/106009563/32fc5059-a497-4b5f-9be7-e498cd56329c)\r\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 2.51
-        }
-      ]
-    },
-    {
-      "title": "Pieces OS conflicts with other software",
-      "description": "Multiple users reported conflicts between Pieces OS and other applications. Kaspersky flags Pieces OS as a virus. The Pieces VS Code extension blanks the Diagnostic Tools pane. The Pieces Desktop app doesn't support .vue files.  Users should check for updates or consider compatibility issues.",
+      "title": "Pieces OS compatibility issues with other software",
+      "description": "Multiple users reported conflicts between Pieces OS and other applications. Kaspersky flags Pieces OS as a virus. The Pieces VS extension blanks the Diagnostic Tools pane.  The Pieces for Developers extension doesn't support .vue files.  Troubleshooting steps include disabling the Pieces extension, checking for updates, and reporting the issue to Pieces support.",
       "frequency": 3,
       "related_issues": [
         {
@@ -213,8 +188,33 @@
       ]
     },
     {
+      "title": "Pieces OS/PFD Issues on Linux",
+      "description": "Users on Ubuntu Linux are experiencing various issues with Pieces OS and Pieces for Developers. These include an upside-down GUI, login failures with HTTP 500 errors, and local LLM downloads getting stuck during initialization.  Troubleshooting steps include reinstalling/updating software, checking logs, and verifying internet connectivity.  Consider compatibility issues between Pieces and specific Ubuntu versions.",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 705,
+          "title": "Pieces for developers GUI is upside down on Ubuntu 24.04",
+          "text": "Pieces for developers GUI is upside down on Ubuntu 24.04\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nLinux\n\n### Your Pieces OS Version\n\n11.3.6\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nHello All, I just installed Pieces OS and Pieces for developers on My Ubuntu 24.04 VMWare image. I was able to install it but its GUI is upside down. I reinstalled it several times and update everything - no luck. I tried to login with xorg and wayland - no luck as well. Can You help me?\n\n![Image](https://github.com/user-attachments/assets/0bab5b51-82c8-4872-913a-a32a063d1b9f)\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 7.32
+        },
+        {
+          "id": 691,
+          "title": "OS: login does not work ( /os/sign_in HTTP 500)",
+          "text": "OS: login does not work ( /os/sign_in HTTP 500)\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nLinux\n\n### Your Pieces OS Version\n\n11.3.3\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWhen I try to log in via PFD, the spinner loads indefinitely before opening an error page in the browser:\n\nhttps://pieces.app/authentication-error?sentry_id=00000000000000000000000000000000&os=bb009f04-7e79-44cb-8376-aba647cd2c98&platform=linux\n\nIn the OS logs (Documents/com.pieces.os/Support/logs) I see this entry:\n\n```\n[D]  2025-04-17T15:53:02.391819  0:00:01.425625 POST    [500] /os/sign_in: port:39300\n```\n\nIt is surrounded by HTTP 200s like this:\n\n```\n[D]  2025-04-17T15:52:53.075570  0:00:00.000685 GET     [200] /.well-known/version: port:39301\n[D]  2025-04-17T15:52:54.038635  0:00:00.001700 POST    [200] /websites/exists: port:39300\n[D]  2025-04-17T15:52:54.043187  0:00:00.000732 GET     [200] /.well-known/version: port:39300\n[D]  2025-04-17T15:52:54.335453  0:00:00.001876 POST    [200] /websites/exists: port:39300\n[D]  2025-04-17T15:52:56.077590  0:00:00.000695 GET     [200] /.well-known/version: port:39301\n[D]  2025-04-17T15:52:59.079649  0:00:00.000662 GET     [200] /.well-known/version: port:39301\n[D]  2025-04-17T15:53:02.081551  0:00:00.000486 GET     [200] /.well-known/version: port:39301\n[D]  2025-04-17T15:53:02.391819  0:00:01.425625 POST    [500] /os/sign_in: port:39300\n[D]  2025-04-17T15:53:04.272493  0:00:00.001839 POST    [200] /websites/exists: port:39300\n[D]  2025-04-17T15:53:04.334258  0:00:00.000938 GET     [200] /.well-known/version: port:39300\n[D]  2025-04-17T15:53:04.457128  0:00:00.001378 POST    [200] /websites/exists: port:39300\n[D]  2025-04-17T15:53:05.083569  0:00:00.000541 GET     [200] /.well-known/version: port:39301\n[D]  2025-04-17T15:53:08.085902  0:00:00.000518 GET     [200] /.well-known/version: port:39301\n[D]  2025-04-17T15:53:08.094713  0:00:00.001812 POST    [200] /websites/exists: port:39300\n```\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 4.63
+        },
+        {
+          "id": 113,
+          "title": "Download of local LLM's initializes, but never proceeds ",
+          "text": "Download of local LLM's initializes, but never proceeds \n### Software\n\nDesktop Application, Pieces OS, VS Code\n\n### Operating System\n\nLinux\n\n### Your Pieces OS Version\n\n8.0.1\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI was trying to download a local LLM, but any one of them that I try it is stuck on initialising. It does not start downloading the model. I have tried downloading all the available models, but it does not move further than initialising. I have seen a similar issue on GitHub for somebody using windows, but for them, it went away after updating to version 8.0.0. of pieces OS. This is their GitHub issue https://github.com/pieces-app/support/issues/84 I am already on 8.0.1 but on Linux. I am pretty sure my internet is not an issue. The rest of the app functions perfectly. It's just that I cannot download local LLMs. I have also tried to install local LLMs through VS Code, but there instead of getting stuck on initializing it gets stuck on 0% complete.\r\n\r\nI am on Linux\r\npieces OS : 8.0.1\r\npieces for developers : 2.10.0\r\nOS : Ubuntu 22.04 LTS\r\nCPU: Ryzen 5800H\r\nRam: 16gb\r\nGPU: RTX 3050 mobile (4gbvram)\r\n\r\n![image](https://github.com/pieces-app/support/assets/106009563/a0d2900b-276a-4450-a0f4-100e1f8391d7)\r\n![image](https://github.com/pieces-app/support/assets/106009563/32fc5059-a497-4b5f-9be7-e498cd56329c)\r\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 2.51
+        }
+      ]
+    },
+    {
       "title": "Pieces OS crashes or freezes during login or LLM download",
-      "description": "Users experience crashes during login or when downloading LLMs. Login attempts result in HTTP 500 errors, infinite spinners, or authentication error pages. LLM downloads get stuck on initializing. Issues appear across different OS versions (8.0.1, 11.3.3) and platforms (Linux, Windows).  Logs may contain clues about failing endpoints (/os/sign_in).  Reinstallation, antivirus/firewall checks, and driver updates haven't resolved the problems.  One user found a similar LLM download issue on GitHub related to Windows.",
+      "description": "Users experience crashes during login or when downloading LLMs. Login attempts result in HTTP 500 errors, infinite spinners, or authentication error pages. LLM downloads get stuck on initializing. Issues appear across different OS versions (8.0.1, 11.3.3) and platforms (Linux, Windows).  Logs may contain clues like 'native_extensions_plugin' errors or 500 errors on '/os/sign_in'. Reinstallation, antivirus/firewall checks, and driver updates haven't resolved the problems. Further investigation into logs and plugin functionality is needed.",
       "frequency": 3,
       "related_issues": [
         {
@@ -239,7 +239,7 @@
     },
     {
       "title": "Pieces for Developers has various bugs across platforms",
-      "description": "Users reported issues with Pieces for Developers on Windows, including .vue file incompatibility and Visual Studio 2022 extension conflicts. On Linux, local LLM downloads stall.  These problems may stem from software or extension conflicts, requiring updates or compatibility checks. Further investigation is needed to pinpoint the root causes and provide solutions.",
+      "description": "Users reported issues with Pieces for Developers on Windows, including .vue file incompatibility and Visual Studio 2022 extension conflicts. On Linux, local LLM downloads stall.  These issues span different Pieces OS versions and software integrations, suggesting potential broader compatibility problems.",
       "frequency": 3,
       "related_issues": [
         {
