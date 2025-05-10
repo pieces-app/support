@@ -2,43 +2,43 @@
   "success": true,
   "date_range": {
     "start": "2025-05-05T00:00:00+00:00",
-    "end": "2025-05-09T21:07:29.198969+00:00"
+    "end": "2025-05-10T05:07:44.812970+00:00"
   },
   "summary": {
     "total_tickets": 9,
-    "resolved_tickets": 3,
-    "open_tickets": 6
+    "resolved_tickets": 4,
+    "open_tickets": 5
   },
   "ticket_breakdown": [
     {
       "category": "bug",
       "received": 6,
-      "resolved": 0,
-      "pending": 6
+      "resolved": 1,
+      "pending": 5
     },
     {
       "category": "os:windows",
+      "received": 6,
+      "resolved": 3,
+      "pending": 3
+    },
+    {
+      "category": "app:desktop application",
+      "received": 7,
+      "resolved": 3,
+      "pending": 4
+    },
+    {
+      "category": "app:pieces os",
       "received": 6,
       "resolved": 2,
       "pending": 4
     },
     {
-      "category": "app:desktop application",
-      "received": 7,
-      "resolved": 2,
-      "pending": 5
-    },
-    {
-      "category": "app:pieces os",
-      "received": 6,
-      "resolved": 1,
-      "pending": 5
-    },
-    {
       "category": "status:triaged",
       "received": 8,
-      "resolved": 2,
-      "pending": 6
+      "resolved": 3,
+      "pending": 5
     },
     {
       "category": "status:waiting_on_user_responses",
@@ -98,7 +98,7 @@
     {
       "number": 706,
       "title": "Pieces for Developers doesn't support .vue files",
-      "activity_level": 6.94
+      "activity_level": 8.2
     },
     {
       "number": 693,
@@ -113,7 +113,7 @@
     {
       "number": 702,
       "title": "I'm unable to do Handshake with asana",
-      "activity_level": 4.52
+      "activity_level": 4.34
     },
     {
       "number": 663,
@@ -139,14 +139,14 @@
   "common_issues": [
     {
       "title": "Pieces OS and Desktop App Crashes and Errors",
-      "description": "Users report crashes in Pieces OS and Desktop App across Windows and Linux. Issues include Handshake errors with Asana integration, login failures with HTTP 500 errors on /os/sign_in, and crashes related to native_extensions_plugin.dll.  Troubleshooting steps include checking logs, reinstalling the application, disabling antivirus/firewall, and updating graphics drivers. Further investigation is needed to identify the root causes and provide targeted solutions.",
+      "description": "Multiple users reported crashes and errors across Pieces OS and Desktop App. Issues include Asana handshake failures, login failures with HTTP 500 errors on `/os/sign_in`, and crashes related to `native_extensions_plugin.dll`.  Troubleshooting steps like reinstallation, antivirus/firewall checks, and driver updates have been attempted. Further investigation into logs and plugin functionality is needed.",
       "frequency": 3,
       "related_issues": [
         {
           "id": 702,
           "title": "I'm unable to do Handshake with asana",
           "text": "I'm unable to do Handshake with asana\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nLatest Version from Github\n\n### Early Access Program\n\n- [x] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nSee I'm trying to create a handshake with asana But getting error that failed to do handshake , Here Is my code import {\n  createTrigger,\n  TriggerStrategy,\n  type OAuth2PropertyValue,\n  WebhookHandshakeStrategy,\n} from '@activepieces/pieces-framework';\n\nimport { asanaCommon, callAsanaApi, callWebhookApi } from '../common';\nimport { HttpMethod } from '@activepieces/pieces-common';\nimport { asanaAuth } from '../../index';\n\nexport const projectTaskActivity = createTrigger({\n  name: 'project_task_activity',\n  displayName: 'Any Task Activity in Project',\n  description: 'Triggers when any task is added, updated, removed, or deleted in a selected project.',\n  auth: asanaAuth,\n  type: TriggerStrategy.WEBHOOK,\n\n \n\n  props: {\n    workspace: asanaCommon.workspace,\n    project: asanaCommon.project,\n  },\n\n  sampleData: {\n    events: [\n      {\n        user: { gid: '12345', resource_type: 'user', name: 'John Doe' },\n        created_at: '2023-05-15T15:00:00.000Z',\n        action: 'added',\n        resource: { gid: '67890', resource_type: 'task', name: 'Complete project documentation' },\n        parent: { gid: '54321', resource_type: 'project', name: 'Marketing Campaign' },\n      },\n    ],\n  },\n\n \n\n  async onEnable({ propsValue, auth, webhookUrl, store }) {\n    const projectId = propsValue.project;\n    const accessToken = (auth as OAuth2PropertyValue).access_token;\n\n    console.log('[Enable] Creating webhook for project:', projectId, 'Webhook URL:', webhookUrl);\n\n    try {\n      const response = await callWebhookApi(\n        HttpMethod.POST,\n        'webhooks',\n        accessToken,\n        {\n          resource: '1210132224773890',\n          target:webhookUrl,\n          filters: [\n            {\n              resource_type: 'task',\n              action: 'added',\n            },\n            {\n              resource_type: 'task',\n              action: 'changed'\n            }\n          ]\n        }\n      );\n      const webhookId = response.body?.data?.gid;\n      if (!webhookId) {\n        throw new Error('[Enable] Asana webhook creation succeeded but no webhook ID was returned.');\n      }\n\n      await store.put('asana_webhook_gid', webhookId);\n      console.log(`[Enable] Asana webhook created successfully: ${webhookId}`);\n    } catch (err) {\n      console.error('[Enable] Failed to create Asana webhook:', err);\n      // throw err;\n    }\n  },\n\n  async onDisable({ auth, store }) {\n    const accessToken = (auth as OAuth2PropertyValue).access_token;\n    const webhookId = await store.get('asana_webhook_gid');\n\n    // if (!webhookId) {\n    //   console.warn('[Disable] No stored webhook ID found.');\n    //   return;\n    // }\n\n    // try {\n    //   await callAsanaApi(HttpMethod.DELETE, `webhooks/${webhookId}`, accessToken, undefined);\n    //   console.log(`[Disable] Deleted Asana webhook: ${webhookId}`);\n    // } catch (err) {\n    //   console.error(`[Disable] Failed to delete Asana webhook (${webhookId}):`, err);\n    // }\n  },\n\n  async run({ payload }) {\n    console.log('[Run] Received headers:', payload.headers);\n    console.log('[Run] Received body:', payload.body);\n\n    const secret = payload.headers?.['x-hook-secret'];\n    console.log(secret,\"secret for asana is here\")\n    if (secret) {\n      return [{ 'x-hook-secret': secret }];\n    }\n\n    return [payload.body];\n  },\n  handshakeConfiguration: {\n    strategy: WebhookHandshakeStrategy.HEADER_PRESENT,\n    paramName: 'x-hook-secret',\n  },\n  async onHandshake(context) {\n    const secret = context.payload.headers?.['x-hook-secret'];\n    \n    if (!secret) {\n      console.error('[Handshake Error] Missing x-hook-secret header:', context.payload.headers);\n      return {\n        status: 400,\n        body: 'Missing x-hook-secret',\n      };\n    }\n  \n    console.log('[Handshake] Responding with x-hook-secret:', secret);\n  \n    return {\n      status: 200,\n      headers: {\n        'X-Hook-Secret': context.payload.headers?.['x-hook-secret'] // Fixed header name and value\n      },\n      // body: {} // Add empty body\n    };\n  },\n});\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 4.52
+          "activity_level": 4.34
         },
         {
           "id": 691,
@@ -163,8 +163,8 @@
       ]
     },
     {
-      "title": "Pieces OS and PFD Issues on Linux",
-      "description": "Users on Ubuntu Linux are experiencing various issues with Pieces OS and Pieces for Developers (PFD). These include an upside-down GUI, login failures with HTTP 500 errors, and local LLM downloads getting stuck during initialization.  The affected versions range from 8.0.1 to 11.3.6.  Reinstallation and system updates have not resolved the problems. Further investigation is needed to identify the root cause and solutions.",
+      "title": "Pieces OS/PFD Issues on Linux",
+      "description": "Users on Ubuntu Linux are experiencing various issues with Pieces OS and Pieces for Developers (PFD). These include an upside-down GUI, login failures with HTTP 500 errors, and local LLM downloads getting stuck during initialization.  Troubleshooting steps include reinstalling/updating software, checking logs, and verifying internet connectivity.  One user reported a similar LLM download issue on Windows that was resolved by updating to Pieces OS 8.0.0.",
       "frequency": 3,
       "related_issues": [
         {
@@ -188,8 +188,33 @@
       ]
     },
     {
-      "title": "Pieces OS crashes or gets stuck",
-      "description": "Users report Pieces OS crashing or specific functions getting stuck. Issues include login failing with HTTP 500 errors on Linux, local LLM downloads freezing on Linux and Windows, and crashes related to native_extensions_plugin.dll on Windows.  Reinstallation, antivirus/firewall checks, and driver updates haven't resolved all issues. Further investigation into logs and plugin functionality is needed.",
+      "title": "Pieces OS conflicts with other software",
+      "description": "Multiple users reported conflicts between Pieces OS and other applications. Kaspersky flags Pieces OS as a virus. The Pieces VS Code extension blanks the Diagnostic Tools pane. The Pieces Desktop app doesn't support .vue files.  Users should check for updates or consider compatibility issues.",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 663,
+          "title": "Kaspersky Internet Security flags Pieces OS as a virus",
+          "text": "Kaspersky Internet Security flags Pieces OS as a virus\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nPiecesOS_11.2.2.0_x64\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n![Image](https://github.com/user-attachments/assets/160ed12d-f0a1-46be-bf36-05502353405e)\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 3.54
+        },
+        {
+          "id": 697,
+          "title": "Visual Studio 2022 extension interfering with Diagnostic tool output",
+          "text": "Visual Studio 2022 extension interfering with Diagnostic tool output\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Visual Studio\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nPiecesOS 11.3.3\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nThe Diagnostic tools pane that, by default, opens when you begin debugging in Visual Studio ends up entirely blank with the Pieces plugin enabled in Visual Studio Version 17.14.0 Preview 4.0. Disabling the plugin restores the Diagnostic tools output.\n\n<img width=\"166\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/beb0d90f-7544-4f26-9516-8e4165b782ce\" />\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 2.76
+        },
+        {
+          "id": 706,
+          "title": "Pieces for Developers doesn't support .vue files",
+          "text": "Pieces for Developers doesn't support .vue files\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.3.6\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nUnable to add Vue SFC (.vue) files to the context due to extension restrictions for the file selector\n\n![Image](https://github.com/user-attachments/assets/14dc4b29-7328-4db0-a801-422320290163)\n\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 8.2
+        }
+      ]
+    },
+    {
+      "title": "Pieces OS crashes or freezes during login or LLM download",
+      "description": "Users experience crashes during login or when downloading LLMs. Login attempts result in HTTP 500 errors, infinite spinners, or authentication error pages. LLM downloads get stuck on initializing. Issues appear across different OS versions (8.0.1, 11.3.3) and platforms (Linux, Windows).  Logs may contain clues about failing endpoints (/os/sign_in).  Reinstallation, antivirus/firewall checks, and driver updates haven't resolved the problems.  One user found a similar LLM download issue on GitHub related to Windows.",
       "frequency": 3,
       "related_issues": [
         {
@@ -213,40 +238,15 @@
       ]
     },
     {
-      "title": "Pieces OS conflicts with other software",
-      "description": "Multiple users reported conflicts between Pieces OS and other applications. Kaspersky flags Pieces OS as a virus. The Pieces VS Code extension blanks the Diagnostic Tools pane. The Pieces Desktop app doesn't support adding .vue files.  Users should check for updates or consider compatibility issues.",
-      "frequency": 3,
-      "related_issues": [
-        {
-          "id": 663,
-          "title": "Kaspersky Internet Security flags Pieces OS as a virus",
-          "text": "Kaspersky Internet Security flags Pieces OS as a virus\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nPiecesOS_11.2.2.0_x64\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n![Image](https://github.com/user-attachments/assets/160ed12d-f0a1-46be-bf36-05502353405e)\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 3.54
-        },
-        {
-          "id": 697,
-          "title": "Visual Studio 2022 extension interfering with Diagnostic tool output",
-          "text": "Visual Studio 2022 extension interfering with Diagnostic tool output\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Visual Studio\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nPiecesOS 11.3.3\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nThe Diagnostic tools pane that, by default, opens when you begin debugging in Visual Studio ends up entirely blank with the Pieces plugin enabled in Visual Studio Version 17.14.0 Preview 4.0. Disabling the plugin restores the Diagnostic tools output.\n\n<img width=\"166\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/beb0d90f-7544-4f26-9516-8e4165b782ce\" />\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 2.76
-        },
-        {
-          "id": 706,
-          "title": "Pieces for Developers doesn't support .vue files",
-          "text": "Pieces for Developers doesn't support .vue files\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.3.6\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nUnable to add Vue SFC (.vue) files to the context due to extension restrictions for the file selector\n\n![Image](https://github.com/user-attachments/assets/14dc4b29-7328-4db0-a801-422320290163)\n\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 6.94
-        }
-      ]
-    },
-    {
       "title": "Pieces for Developers has various bugs across platforms",
-      "description": "Users reported issues with Pieces for Developers on Windows, including .vue file incompatibility and Visual Studio 2022 extension conflicts. On Linux, local LLM downloads stall.  These issues span different Pieces OS versions and software integrations, suggesting potential broader compatibility problems.",
+      "description": "Users reported issues with Pieces for Developers on Windows, including .vue file incompatibility and Visual Studio 2022 extension conflicts. On Linux, local LLM downloads stall.  These problems may stem from software or extension conflicts, requiring updates or compatibility checks. Further investigation is needed to pinpoint the root causes and provide solutions.",
       "frequency": 3,
       "related_issues": [
         {
           "id": 706,
           "title": "Pieces for Developers doesn't support .vue files",
           "text": "Pieces for Developers doesn't support .vue files\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.3.6\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nUnable to add Vue SFC (.vue) files to the context due to extension restrictions for the file selector\n\n![Image](https://github.com/user-attachments/assets/14dc4b29-7328-4db0-a801-422320290163)\n\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 6.94
+          "activity_level": 8.2
         },
         {
           "id": 697,
@@ -263,49 +263,6 @@
       ]
     }
   ],
-  "recommendations": [
-    "Investigate crashes related to native_extensions_plugin.dll on Windows, prioritizing solutions for affected users and exploring plugin stability improvements.",
-    "Address login issues on Linux causing HTTP 500 errors on /os/sign_in, focusing on server-side fixes and authentication flow improvements.",
-    "Resolve the problem of local LLM downloads getting stuck during initialization on both Linux and Windows, potentially by optimizing download processes or providing clearer error messages.",
-    "Improve Pieces OS and Desktop App stability on Windows and Linux, addressing crashes and handshake errors with Asana integration, and exploring compatibility issues.",
-    "Investigate GUI issues on Ubuntu 24.04 where the Pieces for Developers interface appears upside down, focusing on display settings and compatibility fixes.",
-    "Address the incompatibility of Pieces for Developers with .vue files on Windows, potentially by expanding supported file types or providing alternative import methods.",
-    "Investigate the conflict between the Pieces VS Code extension and the Diagnostic Tools pane in Visual Studio 2022, focusing on extension compatibility and minimizing interference.",
-    "Review Kaspersky's flagging of Pieces OS as a virus, ensuring false positive reporting and addressing any potential security concerns.",
-    "Improve communication with users experiencing issues, providing updates on progress, workarounds, and estimated resolution times.",
-    "Collect more detailed logs and user feedback to better understand the root causes of reported issues and prioritize development efforts accordingly.",
-    "Consider expanding the Pieces for Developers file selector to include .vue files for improved Vue.js development workflows.",
-    "Implement more robust error handling and reporting for local LLM downloads to provide users with more informative messages and facilitate troubleshooting.",
-    "Investigate and address the issue of incorrect summaries and mixed-up topics in task lists (LTM-2) to improve user experience and task management.",
-    "Proactively monitor system stability and performance to identify and address potential issues before they impact a large number of users.",
-    "Develop a more comprehensive troubleshooting guide for common issues to empower users with self-service solutions and reduce support ticket volume.",
-    "Prioritize bug fixes and stability improvements based on the frequency and impact of reported issues to maximize user satisfaction and product reliability.",
-    "Consider implementing automated testing and continuous integration/continuous deployment (CI/CD) pipelines to improve software quality and reduce the likelihood of regressions.",
-    "Regularly review and update support documentation and FAQs to ensure they are accurate, up-to-date, and address common user questions and concerns.",
-    "Provide training to support staff on common issues and troubleshooting techniques to improve their efficiency and ability to resolve user problems effectively.",
-    "Gather user feedback on support operations to identify areas for improvement and enhance the overall support experience.",
-    "Analyze support ticket trends over time to identify recurring issues and prioritize development efforts to address systemic problems.",
-    "Implement a system for tracking and categorizing support tickets to facilitate analysis and reporting on support operations.",
-    "Establish service level agreements (SLAs) for support response times to manage user expectations and ensure timely resolution of issues.",
-    "Explore the use of chatbots or other automated support tools to handle common inquiries and free up support staff to focus on more complex issues.",
-    "Foster a culture of continuous improvement in support operations, encouraging feedback, innovation, and data-driven decision-making.",
-    "Regularly communicate with the development team about reported issues to ensure they are aware of user pain points and prioritize bug fixes accordingly.",
-    "Develop a process for escalating complex or critical issues to the appropriate development teams to ensure timely resolution.",
-    "Encourage users to submit bug reports and feature requests through a dedicated channel to gather valuable feedback and prioritize development efforts.",
-    "Monitor social media and online forums for mentions of Pieces OS and related products to identify and address potential issues proactively.",
-    "Maintain open communication with users, providing regular updates on product development, bug fixes, and new features to foster transparency and trust.",
-    "Consider implementing a user forum or community platform to facilitate peer-to-peer support and knowledge sharing among users.",
-    "Conduct regular user surveys to gather feedback on product satisfaction, support experiences, and feature requests to inform product development and support strategies.",
-    "Analyze user behavior and usage patterns to identify areas for product improvement and optimize user workflows.",
-    "Invest in tools and resources to improve support efficiency, such as knowledge bases, ticketing systems, and remote support software.",
-    "Track key performance indicators (KPIs) for support operations, such as ticket resolution time, customer satisfaction, and support costs, to measure effectiveness and identify areas for improvement.",
-    "Regularly review and update support processes and procedures to ensure they are aligned with best practices and meet evolving user needs.",
-    "Provide support staff with ongoing training and development opportunities to enhance their skills and knowledge and improve their ability to provide effective support.",
-    "Promote a positive and supportive work environment for support staff to foster job satisfaction and encourage high-quality performance.",
-    "Recognize and reward outstanding performance in support operations to motivate staff and reinforce a culture of customer service excellence.",
-    "Establish clear communication channels between support and development teams to facilitate collaboration and ensure timely resolution of issues.",
-    "Develop a system for tracking and managing feature requests to prioritize development efforts and ensure alignment with user needs.",
-    "Continuously evaluate and improve support operations based on user feedback, data analysis, and industry best practices to provide the best possible support experience for users."
-  ],
+  "recommendations": [],
   "message": "Daily support report generated successfully."
 }
