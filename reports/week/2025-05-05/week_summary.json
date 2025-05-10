@@ -2,43 +2,43 @@
   "success": true,
   "date_range": {
     "start": "2025-05-05T00:00:00+00:00",
-    "end": "2025-05-10T13:11:12.681544+00:00"
+    "end": "2025-05-10T21:06:47.589534+00:00"
   },
   "summary": {
-    "total_tickets": 9,
+    "total_tickets": 10,
     "resolved_tickets": 4,
-    "open_tickets": 5
+    "open_tickets": 6
   },
   "ticket_breakdown": [
     {
       "category": "bug",
-      "received": 6,
+      "received": 7,
       "resolved": 1,
-      "pending": 5
+      "pending": 6
     },
     {
       "category": "os:windows",
-      "received": 6,
-      "resolved": 3,
-      "pending": 3
-    },
-    {
-      "category": "app:desktop application",
       "received": 7,
       "resolved": 3,
       "pending": 4
+    },
+    {
+      "category": "app:desktop application",
+      "received": 8,
+      "resolved": 3,
+      "pending": 5
+    },
+    {
+      "category": "status:triaged",
+      "received": 9,
+      "resolved": 3,
+      "pending": 6
     },
     {
       "category": "app:pieces os",
       "received": 6,
       "resolved": 2,
       "pending": 4
-    },
-    {
-      "category": "status:triaged",
-      "received": 8,
-      "resolved": 3,
-      "pending": 5
     },
     {
       "category": "status:waiting_on_user_responses",
@@ -91,11 +91,6 @@
   ],
   "most_active_tickets": [
     {
-      "number": 706,
-      "title": "Pieces for Developers doesn't support .vue files",
-      "activity_level": 8.2
-    },
-    {
       "number": 705,
       "title": "Pieces for developers GUI is upside down on Ubuntu 24.04",
       "activity_level": 7.32
@@ -103,12 +98,17 @@
     {
       "number": 693,
       "title": "Crash due to native_extensions_plugin.dll",
-      "activity_level": 6.84
+      "activity_level": 6.74
+    },
+    {
+      "number": 706,
+      "title": "Pieces for Developers doesn't support .vue files",
+      "activity_level": 6.5
     },
     {
       "number": 691,
       "title": "OS: login does not work ( /os/sign_in HTTP 500)",
-      "activity_level": 4.63
+      "activity_level": 4.57
     },
     {
       "number": 702,
@@ -116,14 +116,19 @@
       "activity_level": 4.34
     },
     {
+      "number": 672,
+      "title": "Invalid Port (at character 18) http://127.0.0.1:null/connect",
+      "activity_level": 4.29
+    },
+    {
       "number": 663,
       "title": "Kaspersky Internet Security flags Pieces OS as a virus",
-      "activity_level": 3.54
+      "activity_level": 3.53
     },
     {
       "number": 697,
       "title": "Visual Studio 2022 extension interfering with Diagnostic tool output",
-      "activity_level": 2.76
+      "activity_level": 2.69
     },
     {
       "number": 113,
@@ -133,13 +138,13 @@
     {
       "number": 680,
       "title": "LTM-2: Mixed Up Topics and Incorrect Summaries in Task List",
-      "activity_level": 2.03
+      "activity_level": 2.01
     }
   ],
   "common_issues": [
     {
       "title": "Pieces OS and Desktop App Crashes and Errors",
-      "description": "Users report crashes in Pieces OS and Desktop App across Windows and Linux, including Handshake errors with Asana integration, login failures with HTTP 500 errors, and crashes related to native_extensions_plugin.dll.  Troubleshooting includes checking logs, reinstalling, disabling antivirus/firewall, and updating drivers. Further investigation is needed to identify the root causes and provide targeted solutions.",
+      "description": "Multiple users report crashes and errors across Pieces OS and Desktop App. Issues include Asana handshake failures, login failures with HTTP 500 errors on `/os/sign_in`, and crashes related to `native_extensions_plugin.dll`.  Troubleshooting steps like reinstallation, antivirus/firewall checks, and driver updates have been attempted. Further investigation into logs and plugin functionality is needed.",
       "frequency": 3,
       "related_issues": [
         {
@@ -152,44 +157,19 @@
           "id": 691,
           "title": "OS: login does not work ( /os/sign_in HTTP 500)",
           "text": "OS: login does not work ( /os/sign_in HTTP 500)\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nLinux\n\n### Your Pieces OS Version\n\n11.3.3\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWhen I try to log in via PFD, the spinner loads indefinitely before opening an error page in the browser:\n\nhttps://pieces.app/authentication-error?sentry_id=00000000000000000000000000000000&os=bb009f04-7e79-44cb-8376-aba647cd2c98&platform=linux\n\nIn the OS logs (Documents/com.pieces.os/Support/logs) I see this entry:\n\n```\n[D]  2025-04-17T15:53:02.391819  0:00:01.425625 POST    [500] /os/sign_in: port:39300\n```\n\nIt is surrounded by HTTP 200s like this:\n\n```\n[D]  2025-04-17T15:52:53.075570  0:00:00.000685 GET     [200] /.well-known/version: port:39301\n[D]  2025-04-17T15:52:54.038635  0:00:00.001700 POST    [200] /websites/exists: port:39300\n[D]  2025-04-17T15:52:54.043187  0:00:00.000732 GET     [200] /.well-known/version: port:39300\n[D]  2025-04-17T15:52:54.335453  0:00:00.001876 POST    [200] /websites/exists: port:39300\n[D]  2025-04-17T15:52:56.077590  0:00:00.000695 GET     [200] /.well-known/version: port:39301\n[D]  2025-04-17T15:52:59.079649  0:00:00.000662 GET     [200] /.well-known/version: port:39301\n[D]  2025-04-17T15:53:02.081551  0:00:00.000486 GET     [200] /.well-known/version: port:39301\n[D]  2025-04-17T15:53:02.391819  0:00:01.425625 POST    [500] /os/sign_in: port:39300\n[D]  2025-04-17T15:53:04.272493  0:00:00.001839 POST    [200] /websites/exists: port:39300\n[D]  2025-04-17T15:53:04.334258  0:00:00.000938 GET     [200] /.well-known/version: port:39300\n[D]  2025-04-17T15:53:04.457128  0:00:00.001378 POST    [200] /websites/exists: port:39300\n[D]  2025-04-17T15:53:05.083569  0:00:00.000541 GET     [200] /.well-known/version: port:39301\n[D]  2025-04-17T15:53:08.085902  0:00:00.000518 GET     [200] /.well-known/version: port:39301\n[D]  2025-04-17T15:53:08.094713  0:00:00.001812 POST    [200] /websites/exists: port:39300\n```\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 4.63
+          "activity_level": 4.57
         },
         {
           "id": 693,
           "title": "Crash due to native_extensions_plugin.dll",
           "text": "Crash due to native_extensions_plugin.dll\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.3.3\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nPieces OS crashes. I\u2019ve reinstalled the program, turned off the antivirus and firewall, updated the graphics driver, but nothing helps, it crashes consistently.\nWindows 10, 64 bit, i3-12100F, RAM: 32 Gb, GTX 950.\nIf there's no solution, how can I disable this plugin so that it simply doesn't crash?\n\nHere are the debug details:\n```\n0:000> r rcx\nrcx=0000000000000000\n0:000> k\n # Child-SP          RetAddr               Call Site\n00 0000000e`28deeb00 00007ff9`9365e0ea     native_extensions_plugin!NativeExtensionsPluginCApiRegisterWithRegistrar+0x13796\n01 0000000e`28deed20 00007ff9`9365fabf     native_extensions_plugin!NativeExtensionsPluginCApiRegisterWithRegistrar+0xc97a\n02 0000000e`28deee50 00007ff9`9365d196     native_extensions_plugin!NativeExtensionsPluginCApiRegisterWithRegistrar+0xe34f\n03 0000000e`28deee80 00007ff9`9365fa77     native_extensions_plugin!NativeExtensionsPluginCApiRegisterWithRegistrar+0xba26\n04 0000000e`28deef90 00007ff9`93667b11     native_extensions_plugin!NativeExtensionsPluginCApiRegisterWithRegistrar+0xe307\n05 0000000e`28def000 00007ff9`92bad9fd     native_extensions_plugin!NativeExtensionsPluginCApiRegisterWithRegistrar+0x163a1\n06 0000000e`28def110 00007ff9`9231900e     flutter_windows!InternalFlutterGpu_Texture_AsImage+0x1622b9\n07 0000000e`28def1a0 00007ff9`923d0647     flutter_windows!FlutterDesktopTextureRegistrarMarkExternalTextureFrameAvailable+0x2c56\n08 0000000e`28def350 00007ff9`923ddddc     flutter_windows!FlutterDesktopTextureRegistrarMarkExternalTextureFrameAvailable+0xba28f\n09 0000000e`28def3d0 00007ff9`923ddd7a     flutter_windows!FlutterDesktopTextureRegistrarMarkExternalTextureFrameAvailable+0xc7a24\n0a 0000000e`28def400 00007ff9`923de4e4     flutter_windows!FlutterDesktopTextureRegistrarMarkExternalTextureFrameAvailable+0xc79c2\n0b 0000000e`28def440 00007ff9`923db45b     flutter_windows!FlutterDesktopTextureRegistrarMarkExternalTextureFrameAvailable+0xc812c\n0c 0000000e`28def480 00007ff9`923dc9e7     flutter_windows!FlutterDesktopTextureRegistrarMarkExternalTextureFrameAvailable+0xc50a3\n0d 0000000e`28def630 00007ff9`923c7f88     flutter_windows!FlutterDesktopTextureRegistrarMarkExternalTextureFrameAvailable+0xc662f\n0e 0000000e`28def680 00007ff9`9231a521     flutter_windows!FlutterDesktopTextureRegistrarMarkExternalTextureFrameAvailable+0xb1bd0\n0f 0000000e`28def6b0 00007ff9`9232e2e9     flutter_windows!FlutterDesktopTextureRegistrarMarkExternalTextureFrameAvailable+0x4169\n10 0000000e`28def7f0 00007ff9`9232fb4d     flutter_windows!FlutterDesktopTextureRegistrarMarkExternalTextureFrameAvailable+0x17f31\n11 0000000e`28def880 00007ff9`9232fc35     flutter_windows!FlutterDesktopTextureRegistrarMarkExternalTextureFrameAvailable+0x19795\n12 0000000e`28def900 00007ffa`188bef5c     flutter_windows!FlutterDesktopTextureRegistrarMarkExternalTextureFrameAvailable+0x1987d\n13 0000000e`28def930 00007ffa`188be684     USER32!CallWindowProcW+0x60c\n14 0000000e`28defac0 00007ff7`59bf52e6     USER32!DispatchMessageW+0x4a4\n15 0000000e`28defb40 00007ff7`59c0063a     os_server+0x52e6\n16 0000000e`28defd90 00007ffa`18e07374     os_server+0x1063a\n17 0000000e`28defdd0 00007ffa`19d1cc91     KERNEL32!BaseThreadInitThunk+0x14\n18 0000000e`28defe00 00000000`00000000     ntdll!RtlUserThreadStart+0x21\n```\n\n\nI would appreciate any help :3\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 6.84
-        }
-      ]
-    },
-    {
-      "title": "Pieces OS compatibility issues with other software",
-      "description": "Multiple users reported conflicts between Pieces OS and other applications. Kaspersky flags Pieces OS as a virus. The Pieces VS extension blanks the Diagnostic Tools pane.  The Pieces for Developers extension doesn't support .vue files.  Troubleshooting steps include disabling the Pieces extension, checking for updates, and reporting the issue to Pieces support.",
-      "frequency": 3,
-      "related_issues": [
-        {
-          "id": 663,
-          "title": "Kaspersky Internet Security flags Pieces OS as a virus",
-          "text": "Kaspersky Internet Security flags Pieces OS as a virus\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nPiecesOS_11.2.2.0_x64\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n![Image](https://github.com/user-attachments/assets/160ed12d-f0a1-46be-bf36-05502353405e)\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 3.54
-        },
-        {
-          "id": 697,
-          "title": "Visual Studio 2022 extension interfering with Diagnostic tool output",
-          "text": "Visual Studio 2022 extension interfering with Diagnostic tool output\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Visual Studio\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nPiecesOS 11.3.3\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nThe Diagnostic tools pane that, by default, opens when you begin debugging in Visual Studio ends up entirely blank with the Pieces plugin enabled in Visual Studio Version 17.14.0 Preview 4.0. Disabling the plugin restores the Diagnostic tools output.\n\n<img width=\"166\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/beb0d90f-7544-4f26-9516-8e4165b782ce\" />\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 2.76
-        },
-        {
-          "id": 706,
-          "title": "Pieces for Developers doesn't support .vue files",
-          "text": "Pieces for Developers doesn't support .vue files\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.3.6\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nUnable to add Vue SFC (.vue) files to the context due to extension restrictions for the file selector\n\n![Image](https://github.com/user-attachments/assets/14dc4b29-7328-4db0-a801-422320290163)\n\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 8.2
+          "activity_level": 6.74
         }
       ]
     },
     {
       "title": "Pieces OS/PFD Issues on Linux",
-      "description": "Users on Ubuntu Linux are experiencing various issues with Pieces OS and Pieces for Developers. These include an upside-down GUI, login failures with HTTP 500 errors, and local LLM downloads getting stuck during initialization.  Troubleshooting steps include reinstalling/updating software, checking logs, and verifying internet connectivity.  Consider compatibility issues between Pieces and specific Ubuntu versions.",
+      "description": "Users on Ubuntu Linux are experiencing various issues with Pieces OS and Pieces for Developers. These include an upside-down GUI, login failures with HTTP 500 errors, and local LLM downloads getting stuck during initialization.  Troubleshooting steps include reinstalling/updating software, checking logs, and verifying internet connectivity.  One user reported a similar LLM download issue on Windows that was resolved by updating to Pieces OS 8.0.0.",
       "frequency": 3,
       "related_issues": [
         {
@@ -202,7 +182,7 @@
           "id": 691,
           "title": "OS: login does not work ( /os/sign_in HTTP 500)",
           "text": "OS: login does not work ( /os/sign_in HTTP 500)\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nLinux\n\n### Your Pieces OS Version\n\n11.3.3\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWhen I try to log in via PFD, the spinner loads indefinitely before opening an error page in the browser:\n\nhttps://pieces.app/authentication-error?sentry_id=00000000000000000000000000000000&os=bb009f04-7e79-44cb-8376-aba647cd2c98&platform=linux\n\nIn the OS logs (Documents/com.pieces.os/Support/logs) I see this entry:\n\n```\n[D]  2025-04-17T15:53:02.391819  0:00:01.425625 POST    [500] /os/sign_in: port:39300\n```\n\nIt is surrounded by HTTP 200s like this:\n\n```\n[D]  2025-04-17T15:52:53.075570  0:00:00.000685 GET     [200] /.well-known/version: port:39301\n[D]  2025-04-17T15:52:54.038635  0:00:00.001700 POST    [200] /websites/exists: port:39300\n[D]  2025-04-17T15:52:54.043187  0:00:00.000732 GET     [200] /.well-known/version: port:39300\n[D]  2025-04-17T15:52:54.335453  0:00:00.001876 POST    [200] /websites/exists: port:39300\n[D]  2025-04-17T15:52:56.077590  0:00:00.000695 GET     [200] /.well-known/version: port:39301\n[D]  2025-04-17T15:52:59.079649  0:00:00.000662 GET     [200] /.well-known/version: port:39301\n[D]  2025-04-17T15:53:02.081551  0:00:00.000486 GET     [200] /.well-known/version: port:39301\n[D]  2025-04-17T15:53:02.391819  0:00:01.425625 POST    [500] /os/sign_in: port:39300\n[D]  2025-04-17T15:53:04.272493  0:00:00.001839 POST    [200] /websites/exists: port:39300\n[D]  2025-04-17T15:53:04.334258  0:00:00.000938 GET     [200] /.well-known/version: port:39300\n[D]  2025-04-17T15:53:04.457128  0:00:00.001378 POST    [200] /websites/exists: port:39300\n[D]  2025-04-17T15:53:05.083569  0:00:00.000541 GET     [200] /.well-known/version: port:39301\n[D]  2025-04-17T15:53:08.085902  0:00:00.000518 GET     [200] /.well-known/version: port:39301\n[D]  2025-04-17T15:53:08.094713  0:00:00.001812 POST    [200] /websites/exists: port:39300\n```\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 4.63
+          "activity_level": 4.57
         },
         {
           "id": 113,
@@ -214,14 +194,14 @@
     },
     {
       "title": "Pieces OS crashes or freezes during login or LLM download",
-      "description": "Users experience crashes during login or when downloading LLMs. Login attempts result in HTTP 500 errors, infinite spinners, or authentication error pages. LLM downloads get stuck on initializing. Issues appear across different OS versions (8.0.1, 11.3.3) and platforms (Linux, Windows).  Logs may contain clues like 'native_extensions_plugin' errors or 500 errors on '/os/sign_in'. Reinstallation, antivirus/firewall checks, and driver updates haven't resolved the problems. Further investigation into logs and plugin functionality is needed.",
+      "description": "Users experience crashes during login or when downloading LLMs. Login attempts result in HTTP 500 errors, infinite spinners, or authentication error pages. LLM downloads get stuck on initializing. Issues appear across different OS versions (8.0.1, 11.3.3) and platforms (Linux, Windows).  Suggested solutions include checking logs, reinstalling the app, disabling antivirus/firewall, updating graphics drivers, or checking internet connection. A related issue on Windows was resolved by updating to 8.0.0.",
       "frequency": 3,
       "related_issues": [
         {
           "id": 691,
           "title": "OS: login does not work ( /os/sign_in HTTP 500)",
           "text": "OS: login does not work ( /os/sign_in HTTP 500)\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nLinux\n\n### Your Pieces OS Version\n\n11.3.3\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWhen I try to log in via PFD, the spinner loads indefinitely before opening an error page in the browser:\n\nhttps://pieces.app/authentication-error?sentry_id=00000000000000000000000000000000&os=bb009f04-7e79-44cb-8376-aba647cd2c98&platform=linux\n\nIn the OS logs (Documents/com.pieces.os/Support/logs) I see this entry:\n\n```\n[D]  2025-04-17T15:53:02.391819  0:00:01.425625 POST    [500] /os/sign_in: port:39300\n```\n\nIt is surrounded by HTTP 200s like this:\n\n```\n[D]  2025-04-17T15:52:53.075570  0:00:00.000685 GET     [200] /.well-known/version: port:39301\n[D]  2025-04-17T15:52:54.038635  0:00:00.001700 POST    [200] /websites/exists: port:39300\n[D]  2025-04-17T15:52:54.043187  0:00:00.000732 GET     [200] /.well-known/version: port:39300\n[D]  2025-04-17T15:52:54.335453  0:00:00.001876 POST    [200] /websites/exists: port:39300\n[D]  2025-04-17T15:52:56.077590  0:00:00.000695 GET     [200] /.well-known/version: port:39301\n[D]  2025-04-17T15:52:59.079649  0:00:00.000662 GET     [200] /.well-known/version: port:39301\n[D]  2025-04-17T15:53:02.081551  0:00:00.000486 GET     [200] /.well-known/version: port:39301\n[D]  2025-04-17T15:53:02.391819  0:00:01.425625 POST    [500] /os/sign_in: port:39300\n[D]  2025-04-17T15:53:04.272493  0:00:00.001839 POST    [200] /websites/exists: port:39300\n[D]  2025-04-17T15:53:04.334258  0:00:00.000938 GET     [200] /.well-known/version: port:39300\n[D]  2025-04-17T15:53:04.457128  0:00:00.001378 POST    [200] /websites/exists: port:39300\n[D]  2025-04-17T15:53:05.083569  0:00:00.000541 GET     [200] /.well-known/version: port:39301\n[D]  2025-04-17T15:53:08.085902  0:00:00.000518 GET     [200] /.well-known/version: port:39301\n[D]  2025-04-17T15:53:08.094713  0:00:00.001812 POST    [200] /websites/exists: port:39300\n```\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 4.63
+          "activity_level": 4.57
         },
         {
           "id": 113,
@@ -233,26 +213,26 @@
           "id": 693,
           "title": "Crash due to native_extensions_plugin.dll",
           "text": "Crash due to native_extensions_plugin.dll\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.3.3\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nPieces OS crashes. I\u2019ve reinstalled the program, turned off the antivirus and firewall, updated the graphics driver, but nothing helps, it crashes consistently.\nWindows 10, 64 bit, i3-12100F, RAM: 32 Gb, GTX 950.\nIf there's no solution, how can I disable this plugin so that it simply doesn't crash?\n\nHere are the debug details:\n```\n0:000> r rcx\nrcx=0000000000000000\n0:000> k\n # Child-SP          RetAddr               Call Site\n00 0000000e`28deeb00 00007ff9`9365e0ea     native_extensions_plugin!NativeExtensionsPluginCApiRegisterWithRegistrar+0x13796\n01 0000000e`28deed20 00007ff9`9365fabf     native_extensions_plugin!NativeExtensionsPluginCApiRegisterWithRegistrar+0xc97a\n02 0000000e`28deee50 00007ff9`9365d196     native_extensions_plugin!NativeExtensionsPluginCApiRegisterWithRegistrar+0xe34f\n03 0000000e`28deee80 00007ff9`9365fa77     native_extensions_plugin!NativeExtensionsPluginCApiRegisterWithRegistrar+0xba26\n04 0000000e`28deef90 00007ff9`93667b11     native_extensions_plugin!NativeExtensionsPluginCApiRegisterWithRegistrar+0xe307\n05 0000000e`28def000 00007ff9`92bad9fd     native_extensions_plugin!NativeExtensionsPluginCApiRegisterWithRegistrar+0x163a1\n06 0000000e`28def110 00007ff9`9231900e     flutter_windows!InternalFlutterGpu_Texture_AsImage+0x1622b9\n07 0000000e`28def1a0 00007ff9`923d0647     flutter_windows!FlutterDesktopTextureRegistrarMarkExternalTextureFrameAvailable+0x2c56\n08 0000000e`28def350 00007ff9`923ddddc     flutter_windows!FlutterDesktopTextureRegistrarMarkExternalTextureFrameAvailable+0xba28f\n09 0000000e`28def3d0 00007ff9`923ddd7a     flutter_windows!FlutterDesktopTextureRegistrarMarkExternalTextureFrameAvailable+0xc7a24\n0a 0000000e`28def400 00007ff9`923de4e4     flutter_windows!FlutterDesktopTextureRegistrarMarkExternalTextureFrameAvailable+0xc79c2\n0b 0000000e`28def440 00007ff9`923db45b     flutter_windows!FlutterDesktopTextureRegistrarMarkExternalTextureFrameAvailable+0xc812c\n0c 0000000e`28def480 00007ff9`923dc9e7     flutter_windows!FlutterDesktopTextureRegistrarMarkExternalTextureFrameAvailable+0xc50a3\n0d 0000000e`28def630 00007ff9`923c7f88     flutter_windows!FlutterDesktopTextureRegistrarMarkExternalTextureFrameAvailable+0xc662f\n0e 0000000e`28def680 00007ff9`9231a521     flutter_windows!FlutterDesktopTextureRegistrarMarkExternalTextureFrameAvailable+0xb1bd0\n0f 0000000e`28def6b0 00007ff9`9232e2e9     flutter_windows!FlutterDesktopTextureRegistrarMarkExternalTextureFrameAvailable+0x4169\n10 0000000e`28def7f0 00007ff9`9232fb4d     flutter_windows!FlutterDesktopTextureRegistrarMarkExternalTextureFrameAvailable+0x17f31\n11 0000000e`28def880 00007ff9`9232fc35     flutter_windows!FlutterDesktopTextureRegistrarMarkExternalTextureFrameAvailable+0x19795\n12 0000000e`28def900 00007ffa`188bef5c     flutter_windows!FlutterDesktopTextureRegistrarMarkExternalTextureFrameAvailable+0x1987d\n13 0000000e`28def930 00007ffa`188be684     USER32!CallWindowProcW+0x60c\n14 0000000e`28defac0 00007ff7`59bf52e6     USER32!DispatchMessageW+0x4a4\n15 0000000e`28defb40 00007ff7`59c0063a     os_server+0x52e6\n16 0000000e`28defd90 00007ffa`18e07374     os_server+0x1063a\n17 0000000e`28defdd0 00007ffa`19d1cc91     KERNEL32!BaseThreadInitThunk+0x14\n18 0000000e`28defe00 00000000`00000000     ntdll!RtlUserThreadStart+0x21\n```\n\n\nI would appreciate any help :3\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 6.84
+          "activity_level": 6.74
         }
       ]
     },
     {
-      "title": "Pieces for Developers has various bugs across platforms",
-      "description": "Users reported issues with Pieces for Developers on Windows, including .vue file incompatibility and Visual Studio 2022 extension conflicts. On Linux, local LLM downloads stall.  These issues span different Pieces OS versions and software integrations, suggesting potential broader compatibility problems.",
+      "title": "Pieces Desktop App and OS Issues",
+      "description": "Users are experiencing various issues with the Pieces desktop app, including connection problems (\"Invalid Port\"), file type restrictions (.vue files not supported), and local LLM download failures.  Troubleshooting steps include checking antivirus software, restarting/reinstalling the app, and verifying internet connectivity.  Further investigation is needed for the LLM download issue on Linux systems, despite a similar Windows issue being resolved with an update.",
       "frequency": 3,
       "related_issues": [
+        {
+          "id": 672,
+          "title": "Invalid Port (at character 18) http://127.0.0.1:null/connect",
+          "text": "Invalid Port (at character 18) http://127.0.0.1:null/connect\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nLatest from 17032025 (can't find it)\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nHi I am stuck at the initial stages. Where the desktop app is being initialized. I am at verify dependency connections and it says unable to open pieces core services. \"FormatException: Invalid Port (at character 18) http://127.0.0.1:null/connect.\n\nIt might be an antivirus stopping it. I am not sure. But I have restarted and reinstalled to no effect.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 4.29
+        },
         {
           "id": 706,
           "title": "Pieces for Developers doesn't support .vue files",
           "text": "Pieces for Developers doesn't support .vue files\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.3.6\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nUnable to add Vue SFC (.vue) files to the context due to extension restrictions for the file selector\n\n![Image](https://github.com/user-attachments/assets/14dc4b29-7328-4db0-a801-422320290163)\n\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 8.2
-        },
-        {
-          "id": 697,
-          "title": "Visual Studio 2022 extension interfering with Diagnostic tool output",
-          "text": "Visual Studio 2022 extension interfering with Diagnostic tool output\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Visual Studio\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nPiecesOS 11.3.3\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nThe Diagnostic tools pane that, by default, opens when you begin debugging in Visual Studio ends up entirely blank with the Pieces plugin enabled in Visual Studio Version 17.14.0 Preview 4.0. Disabling the plugin restores the Diagnostic tools output.\n\n<img width=\"166\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/beb0d90f-7544-4f26-9516-8e4165b782ce\" />\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 2.76
+          "activity_level": 6.5
         },
         {
           "id": 113,
@@ -261,8 +241,44 @@
           "activity_level": 2.51
         }
       ]
+    },
+    {
+      "title": "Pieces OS conflicts and errors",
+      "description": "Users report conflicts with Kaspersky, Visual Studio, and connection issues. Kaspersky flags Pieces OS as a virus. The Visual Studio extension interferes with diagnostic tools. Connection errors arise with invalid port configurations.  Troubleshooting includes antivirus exclusions, disabling extensions, and verifying port settings.",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 663,
+          "title": "Kaspersky Internet Security flags Pieces OS as a virus",
+          "text": "Kaspersky Internet Security flags Pieces OS as a virus\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nPiecesOS_11.2.2.0_x64\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n![Image](https://github.com/user-attachments/assets/160ed12d-f0a1-46be-bf36-05502353405e)\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 3.53
+        },
+        {
+          "id": 697,
+          "title": "Visual Studio 2022 extension interfering with Diagnostic tool output",
+          "text": "Visual Studio 2022 extension interfering with Diagnostic tool output\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Visual Studio\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nPiecesOS 11.3.3\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nThe Diagnostic tools pane that, by default, opens when you begin debugging in Visual Studio ends up entirely blank with the Pieces plugin enabled in Visual Studio Version 17.14.0 Preview 4.0. Disabling the plugin restores the Diagnostic tools output.\n\n<img width=\"166\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/beb0d90f-7544-4f26-9516-8e4165b782ce\" />\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 2.69
+        },
+        {
+          "id": 672,
+          "title": "Invalid Port (at character 18) http://127.0.0.1:null/connect",
+          "text": "Invalid Port (at character 18) http://127.0.0.1:null/connect\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nLatest from 17032025 (can't find it)\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nHi I am stuck at the initial stages. Where the desktop app is being initialized. I am at verify dependency connections and it says unable to open pieces core services. \"FormatException: Invalid Port (at character 18) http://127.0.0.1:null/connect.\n\nIt might be an antivirus stopping it. I am not sure. But I have restarted and reinstalled to no effect.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 4.29
+        }
+      ]
     }
   ],
-  "recommendations": [],
+  "recommendations": [
+    "Prioritize resolving login issues on Linux (HTTP 500 errors) impacting Pieces OS and PFD.",
+    "Investigate and address crashes related to `native_extensions_plugin.dll` on Windows.",
+    "Troubleshoot LLM download issues on Linux (stuck on initializing) and ensure compatibility with Pieces OS 8.0.1 and later.",
+    "Address Asana handshake failures and ensure proper integration with Pieces OS.",
+    "Investigate and resolve the upside-down GUI issue affecting Pieces for Developers on Ubuntu 24.04.",
+    "Add support for .vue files in Pieces for Developers.",
+    "Resolve the \"Invalid Port\" connection error in the Pieces desktop app.",
+    "Address Kaspersky Internet Security flagging Pieces OS as a virus.",
+    "Fix the conflict between the Pieces Visual Studio 2022 extension and the Diagnostic tools pane.",
+    "Improve communication with users experiencing issues and provide clear troubleshooting steps or workarounds. Provide updates on timelines and progress of fixes for reported bugs and issues"
+  ],
   "message": "Daily support report generated successfully."
 }
