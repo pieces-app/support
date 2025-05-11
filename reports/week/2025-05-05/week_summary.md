@@ -1,5 +1,5 @@
 # Support Ticket Report
-- Generated: 2025-05-11 05:08:29
+- Generated: 2025-05-11 13:12:26
 - Period: 2025-05-05 to 2025-05-11
 
 ## Summary
@@ -10,47 +10,47 @@
 ## 5 Most Active Tickets
 | Issue # | Title | Activity Level |
 |---------|-------|----------------|
-| [#705](https://github.com/pieces-app/support/issues/705) | Pieces for developers GUI is upside down on Ubuntu 24.04 | 7.32 |
 | [#693](https://github.com/pieces-app/support/issues/693) | Crash due to native_extensions_plugin.dll | 6.74 |
 | [#706](https://github.com/pieces-app/support/issues/706) | Pieces for Developers doesn't support .vue files | 6.50 |
+| [#705](https://github.com/pieces-app/support/issues/705) | Pieces for developers GUI is upside down on Ubuntu 24.04 | 5.80 |
 | [#691](https://github.com/pieces-app/support/issues/691) | OS: login does not work ( /os/sign_in HTTP 500) | 4.57 |
 | [#672](https://github.com/pieces-app/support/issues/672) | Invalid Port (at character 18) http://127.0.0.1:null/connect | 4.29 |
 
 ## Common Issues
 ### 1. Pieces OS and Desktop App Crashes and Errors
-Multiple users reported crashes and errors across Pieces OS and Desktop app. Issues include Asana handshake failures, login failures with HTTP 500 errors on `/os/sign_in`, and crashes related to `native_extensions_plugin.dll`.  Troubleshooting steps like reinstallation, antivirus/firewall checks, and driver updates have been attempted. Further investigation into logs and plugin functionality is needed.
+Multiple users reported crashes and errors across Pieces OS and Desktop App. Issues include Asana handshake failures, login failures with HTTP 500 errors on `/os/sign_in`, and crashes related to `native_extensions_plugin.dll`.  Troubleshooting steps like reinstallation, antivirus/firewall checks, and driver updates have been attempted. Further investigation is needed to identify the root causes and provide solutions.
 
 **Related Issues:**
 - [#702](https://github.com/pieces-app/support/issues/702): I'm unable to do Handshake with asana
 - [#691](https://github.com/pieces-app/support/issues/691): OS: login does not work ( /os/sign_in HTTP 500)
 - [#693](https://github.com/pieces-app/support/issues/693): Crash due to native_extensions_plugin.dll
 
-### 2. Pieces OS/PFD Issues on Linux
-Users on Ubuntu are experiencing various issues with Pieces OS and Pieces for Developers. These include an upside-down GUI, login failures with HTTP 500 errors, and local LLM downloads getting stuck on initializing.  Check OS compatibility, reinstall/update Pieces, examine OS and Pieces logs for errors, and ensure sufficient system resources for LLMs.  If issues persist, contact Pieces support.
-
-**Related Issues:**
-- [#705](https://github.com/pieces-app/support/issues/705): Pieces for developers GUI is upside down on Ubuntu 24.04
-- [#691](https://github.com/pieces-app/support/issues/691): OS: login does not work ( /os/sign_in HTTP 500)
-- [#113](https://github.com/pieces-app/support/issues/113): Download of local LLM's initializes, but never proceeds 
-
-### 3. Pieces OS crashes or freezes during login or LLM download
-Users experience crashes during login or when downloading LLMs. Login attempts result in HTTP 500 errors, infinite spinners, or authentication error pages. LLM downloads get stuck on initializing. Issues appear across different OS versions (8.0.1, 11.3.3) and platforms (Linux, Windows).  Potential solutions include checking logs, reinstalling the app, disabling antivirus/firewall, updating graphics drivers, or seeking support for plugin issues (native_extensions_plugin.dll).
+### 2. Pieces OS crashes or freezes during login or LLM download
+Users experience crashes during login or when downloading LLMs. Login attempts result in HTTP 500 errors on Linux. LLM downloads freeze at initialization on Linux and 0% on Windows.  Issues potentially related to native_extensions_plugin.dll on Windows and network communication problems on Linux.  Reinstalling, disabling antivirus/firewall, updating graphics drivers, and updating Pieces OS have been attempted with no success so far.
 
 **Related Issues:**
 - [#691](https://github.com/pieces-app/support/issues/691): OS: login does not work ( /os/sign_in HTTP 500)
 - [#113](https://github.com/pieces-app/support/issues/113): Download of local LLM's initializes, but never proceeds 
 - [#693](https://github.com/pieces-app/support/issues/693): Crash due to native_extensions_plugin.dll
 
-### 4. Pieces Desktop App and OS Issues
-Users are experiencing various issues with the Pieces desktop app and OS, including connection problems ("Invalid Port"), file type restrictions (.vue files not supported), and local LLM download failures.  Troubleshooting steps include checking antivirus software, restarting/reinstalling the app, and verifying internet connectivity.  The issue with .vue files appears to be a known limitation.
+### 3. Pieces Desktop App and OS Issues
+Users are experiencing various issues with the Pieces desktop app and OS, including connection problems ("Invalid Port"), file type restrictions (.vue files not supported), and local LLM download failures.  Troubleshooting steps include checking antivirus software, restarting/reinstalling the app, and verifying internet connectivity.  Further investigation is needed for the LLM download issue on Linux.
 
 **Related Issues:**
 - [#672](https://github.com/pieces-app/support/issues/672): Invalid Port (at character 18) http://127.0.0.1:null/connect
 - [#706](https://github.com/pieces-app/support/issues/706): Pieces for Developers doesn't support .vue files
 - [#113](https://github.com/pieces-app/support/issues/113): Download of local LLM's initializes, but never proceeds 
 
+### 4. Pieces OS/PFD Issues on Linux
+Users on Ubuntu are experiencing various issues with Pieces OS and Pieces for Developers (PFD). These include an upside-down GUI, login failures with HTTP 500 errors, and local LLM downloads getting stuck on initializing.  Solutions tried include reinstalling, updating, and trying different login methods (xorg, wayland). Further investigation is needed to identify the root cause and provide a fix.
+
+**Related Issues:**
+- [#705](https://github.com/pieces-app/support/issues/705): Pieces for developers GUI is upside down on Ubuntu 24.04
+- [#691](https://github.com/pieces-app/support/issues/691): OS: login does not work ( /os/sign_in HTTP 500)
+- [#113](https://github.com/pieces-app/support/issues/113): Download of local LLM's initializes, but never proceeds 
+
 ### 5. Pieces OS conflicts with other software and antivirus
-Kaspersky flags Pieces OS as a virus. The Pieces VS extension interferes with the diagnostic tool output.  A "Invalid Port" error occurs during initialization, possibly due to antivirus software or firewall conflicts.  Check antivirus settings and add Pieces OS to exceptions. Ensure Pieces OS and other software are compatible.
+Kaspersky flags Pieces OS as a virus. The Pieces VS extension interferes with the diagnostic tool output.  A "Invalid Port" error occurs during initialization, possibly due to antivirus software.  Check antivirus settings and add Pieces OS to exceptions. Disable the Pieces VS extension as a workaround. Ensure Pieces OS and dependent services are running and accessible.
 
 **Related Issues:**
 - [#663](https://github.com/pieces-app/support/issues/663): Kaspersky Internet Security flags Pieces OS as a virus
@@ -59,38 +59,21 @@ Kaspersky flags Pieces OS as a virus. The Pieces VS extension interferes with th
 
 
 ## Recommendations
-- Prioritize resolving login issues impacting Linux and Windows users (HTTP 500 errors, infinite spinners). Investigate logs for '/os/sign_in' errors and authentication failures.
-- Address Pieces OS crashes on Windows related to 'native_extensions_plugin.dll'. Investigate the stack trace and determine if the plugin can be updated or temporarily disabled.
-- Investigate and resolve the issue preventing local LLM downloads on Linux (stuck on initializing). Check for conflicts with system resources or network connectivity.
-- Improve Pieces OS compatibility with Ubuntu 24.04 to fix the upside-down GUI issue. Test different display servers (Xorg, Wayland) and graphics drivers.
-- Address Kaspersky's flagging of Pieces OS as a virus. Contact Kaspersky to resolve the false positive and update documentation with antivirus exclusion steps.
-- Investigate the conflict between the Pieces VS Code extension and Visual Studio's diagnostic tool output. Ensure compatibility and fix any interference.
-- Review and update documentation regarding supported file types in Pieces for Developers. Address the lack of support for .vue files or provide a workaround.
-- Investigate Asana handshake failures reported by users. Check integration stability and provide troubleshooting steps in documentation.
-- Monitor and address the "Invalid Port" error during Pieces initialization. Determine if it's related to antivirus/firewall conflicts or internal port management issues.
-- Review and improve error messaging for login and LLM download issues to provide more specific guidance to users during troubleshooting.
-- Consider adding more robust logging to Pieces OS and the desktop app to capture more detailed information during crashes and errors.
-- Proactively monitor system resource usage during LLM downloads to identify potential bottlenecks and improve performance on resource-constrained machines.
-- Implement automated tests to cover login flows, LLM downloads, and integration with third-party services like Asana to catch regressions early.
-- Collect user feedback on Pieces OS and desktop app stability to identify recurring issues and prioritize fixes.
-- Provide a clear channel for users to report bugs and issues, such as a dedicated support email or online forum.
-- Regularly update Pieces OS and desktop app to address reported issues and improve overall stability and performance.
-- Develop a knowledge base or FAQ section to address common user questions and issues, reducing support ticket volume.
-- Train support staff on common issues and troubleshooting steps to improve response times and resolution rates.
-- Prioritize bug fixes and feature requests based on user impact and frequency of reported issues.
-- Track support ticket metrics, such as resolution time and customer satisfaction, to measure support effectiveness and identify areas for improvement.
-- Implement a system for escalating complex issues to the development team for faster resolution.
-- Consider offering different support tiers based on user needs, such as priority support for paid users.
-- Regularly communicate with users about known issues, planned maintenance, and upcoming releases to manage expectations and reduce support inquiries.
-- Encourage users to check for existing issues on GitHub or other support channels before submitting new tickets to avoid duplicates.
-- Automate support tasks, such as ticket routing and initial responses, to improve efficiency.
-- Provide users with self-service resources, such as tutorials and documentation, to empower them to resolve issues independently.
-- Gather user feedback on the support experience to identify areas for improvement and enhance customer satisfaction.
-- Foster a strong community forum or online platform where users can help each other and share solutions to common problems.
-- Regularly review and update support processes and documentation to ensure they are aligned with best practices and user needs.
-- Invest in support tools and technologies to streamline workflows and improve efficiency.
-- Analyze support data to identify trends and patterns, which can inform product development and improve overall user experience.
-- Continuously evaluate and improve support operations based on user feedback and performance metrics to ensure high-quality support for all users.
+- Prioritize resolving the 'native_extensions_plugin.dll' crash on Windows as it impacts multiple users and functionalities. Investigate the root cause and provide a fix or temporary workaround.
+- Address the login issues on Linux (HTTP 500 errors on '/os/sign_in') as it prevents users from accessing Pieces OS. Check server logs and authentication flow for potential problems.
+- Investigate and resolve the local LLM download issues on both Windows and Linux. Check network configurations, download processes, and compatibility with different operating systems.
+- Improve support for .vue files in Pieces for Developers to enhance user experience with Vue.js projects.
+- Address the 'Invalid Port' error during initialization, possibly related to antivirus software or firewall conflicts. Provide clear instructions to users on configuring their security software or suggest alternative solutions.
+- Investigate the upside-down GUI issue on Ubuntu 24.04. Test on different hardware/VM configurations and explore potential display driver or graphics library conflicts.
+- Review Kaspersky's flagging of Pieces OS as a virus and work towards resolving this false positive detection to avoid unnecessary user concerns.
+- Address the conflict between the Pieces VS Code extension and the diagnostic tool output in Visual Studio 2022. Ensure compatibility with common developer tools.
+- Analyze Asana handshake failures and provide troubleshooting steps or solutions to users experiencing this integration issue.
+- Monitor and address the remaining issues based on their frequency and impact on users. Gather more data and user feedback to identify recurring problems and prioritize fixes accordingly.
+- Consider improving error messages and logging to provide more detailed information for troubleshooting and faster resolution times.
+- Document known issues and workarounds in a central knowledge base to empower users with self-service support options and reduce support ticket volume.
+- Implement a system for tracking and prioritizing bug fixes and feature requests based on user feedback and support ticket data.
+- Proactively communicate known issues and planned fixes to users through regular updates or announcements to manage expectations and improve transparency.
+- Collect user feedback on support operations and identify areas for improvement in the support process, communication, and documentation.
 
 ## Daily Reports
 Here are the daily reports for this week:
