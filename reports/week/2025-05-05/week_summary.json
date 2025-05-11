@@ -2,7 +2,7 @@
   "success": true,
   "date_range": {
     "start": "2025-05-05T00:00:00+00:00",
-    "end": "2025-05-10T21:06:47.589534+00:00"
+    "end": "2025-05-11T05:07:19.938605+00:00"
   },
   "summary": {
     "total_tickets": 10,
@@ -111,14 +111,14 @@
       "activity_level": 4.57
     },
     {
-      "number": 702,
-      "title": "I'm unable to do Handshake with asana",
-      "activity_level": 4.34
-    },
-    {
       "number": 672,
       "title": "Invalid Port (at character 18) http://127.0.0.1:null/connect",
       "activity_level": 4.29
+    },
+    {
+      "number": 702,
+      "title": "I'm unable to do Handshake with asana",
+      "activity_level": 4.18
     },
     {
       "number": 663,
@@ -144,14 +144,14 @@
   "common_issues": [
     {
       "title": "Pieces OS and Desktop App Crashes and Errors",
-      "description": "Multiple users report crashes and errors across Pieces OS and Desktop App. Issues include Asana handshake failures, login failures with HTTP 500 errors on `/os/sign_in`, and crashes related to `native_extensions_plugin.dll`.  Troubleshooting steps like reinstallation, antivirus/firewall checks, and driver updates have been attempted. Further investigation into logs and plugin functionality is needed.",
+      "description": "Multiple users reported crashes and errors across Pieces OS and Desktop app. Issues include Asana handshake failures, login failures with HTTP 500 errors on `/os/sign_in`, and crashes related to `native_extensions_plugin.dll`.  Troubleshooting steps like reinstallation, antivirus/firewall checks, and driver updates have been attempted. Further investigation into logs and plugin functionality is needed.",
       "frequency": 3,
       "related_issues": [
         {
           "id": 702,
           "title": "I'm unable to do Handshake with asana",
           "text": "I'm unable to do Handshake with asana\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nLatest Version from Github\n\n### Early Access Program\n\n- [x] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nSee I'm trying to create a handshake with asana But getting error that failed to do handshake , Here Is my code import {\n  createTrigger,\n  TriggerStrategy,\n  type OAuth2PropertyValue,\n  WebhookHandshakeStrategy,\n} from '@activepieces/pieces-framework';\n\nimport { asanaCommon, callAsanaApi, callWebhookApi } from '../common';\nimport { HttpMethod } from '@activepieces/pieces-common';\nimport { asanaAuth } from '../../index';\n\nexport const projectTaskActivity = createTrigger({\n  name: 'project_task_activity',\n  displayName: 'Any Task Activity in Project',\n  description: 'Triggers when any task is added, updated, removed, or deleted in a selected project.',\n  auth: asanaAuth,\n  type: TriggerStrategy.WEBHOOK,\n\n \n\n  props: {\n    workspace: asanaCommon.workspace,\n    project: asanaCommon.project,\n  },\n\n  sampleData: {\n    events: [\n      {\n        user: { gid: '12345', resource_type: 'user', name: 'John Doe' },\n        created_at: '2023-05-15T15:00:00.000Z',\n        action: 'added',\n        resource: { gid: '67890', resource_type: 'task', name: 'Complete project documentation' },\n        parent: { gid: '54321', resource_type: 'project', name: 'Marketing Campaign' },\n      },\n    ],\n  },\n\n \n\n  async onEnable({ propsValue, auth, webhookUrl, store }) {\n    const projectId = propsValue.project;\n    const accessToken = (auth as OAuth2PropertyValue).access_token;\n\n    console.log('[Enable] Creating webhook for project:', projectId, 'Webhook URL:', webhookUrl);\n\n    try {\n      const response = await callWebhookApi(\n        HttpMethod.POST,\n        'webhooks',\n        accessToken,\n        {\n          resource: '1210132224773890',\n          target:webhookUrl,\n          filters: [\n            {\n              resource_type: 'task',\n              action: 'added',\n            },\n            {\n              resource_type: 'task',\n              action: 'changed'\n            }\n          ]\n        }\n      );\n      const webhookId = response.body?.data?.gid;\n      if (!webhookId) {\n        throw new Error('[Enable] Asana webhook creation succeeded but no webhook ID was returned.');\n      }\n\n      await store.put('asana_webhook_gid', webhookId);\n      console.log(`[Enable] Asana webhook created successfully: ${webhookId}`);\n    } catch (err) {\n      console.error('[Enable] Failed to create Asana webhook:', err);\n      // throw err;\n    }\n  },\n\n  async onDisable({ auth, store }) {\n    const accessToken = (auth as OAuth2PropertyValue).access_token;\n    const webhookId = await store.get('asana_webhook_gid');\n\n    // if (!webhookId) {\n    //   console.warn('[Disable] No stored webhook ID found.');\n    //   return;\n    // }\n\n    // try {\n    //   await callAsanaApi(HttpMethod.DELETE, `webhooks/${webhookId}`, accessToken, undefined);\n    //   console.log(`[Disable] Deleted Asana webhook: ${webhookId}`);\n    // } catch (err) {\n    //   console.error(`[Disable] Failed to delete Asana webhook (${webhookId}):`, err);\n    // }\n  },\n\n  async run({ payload }) {\n    console.log('[Run] Received headers:', payload.headers);\n    console.log('[Run] Received body:', payload.body);\n\n    const secret = payload.headers?.['x-hook-secret'];\n    console.log(secret,\"secret for asana is here\")\n    if (secret) {\n      return [{ 'x-hook-secret': secret }];\n    }\n\n    return [payload.body];\n  },\n  handshakeConfiguration: {\n    strategy: WebhookHandshakeStrategy.HEADER_PRESENT,\n    paramName: 'x-hook-secret',\n  },\n  async onHandshake(context) {\n    const secret = context.payload.headers?.['x-hook-secret'];\n    \n    if (!secret) {\n      console.error('[Handshake Error] Missing x-hook-secret header:', context.payload.headers);\n      return {\n        status: 400,\n        body: 'Missing x-hook-secret',\n      };\n    }\n  \n    console.log('[Handshake] Responding with x-hook-secret:', secret);\n  \n    return {\n      status: 200,\n      headers: {\n        'X-Hook-Secret': context.payload.headers?.['x-hook-secret'] // Fixed header name and value\n      },\n      // body: {} // Add empty body\n    };\n  },\n});\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 4.34
+          "activity_level": 4.18
         },
         {
           "id": 691,
@@ -169,7 +169,7 @@
     },
     {
       "title": "Pieces OS/PFD Issues on Linux",
-      "description": "Users on Ubuntu Linux are experiencing various issues with Pieces OS and Pieces for Developers. These include an upside-down GUI, login failures with HTTP 500 errors, and local LLM downloads getting stuck during initialization.  Troubleshooting steps include reinstalling/updating software, checking logs, and verifying internet connectivity.  One user reported a similar LLM download issue on Windows that was resolved by updating to Pieces OS 8.0.0.",
+      "description": "Users on Ubuntu are experiencing various issues with Pieces OS and Pieces for Developers. These include an upside-down GUI, login failures with HTTP 500 errors, and local LLM downloads getting stuck on initializing.  Check OS compatibility, reinstall/update Pieces, examine OS and Pieces logs for errors, and ensure sufficient system resources for LLMs.  If issues persist, contact Pieces support.",
       "frequency": 3,
       "related_issues": [
         {
@@ -194,7 +194,7 @@
     },
     {
       "title": "Pieces OS crashes or freezes during login or LLM download",
-      "description": "Users experience crashes during login or when downloading LLMs. Login attempts result in HTTP 500 errors, infinite spinners, or authentication error pages. LLM downloads get stuck on initializing. Issues appear across different OS versions (8.0.1, 11.3.3) and platforms (Linux, Windows).  Suggested solutions include checking logs, reinstalling the app, disabling antivirus/firewall, updating graphics drivers, or checking internet connection. A related issue on Windows was resolved by updating to 8.0.0.",
+      "description": "Users experience crashes during login or when downloading LLMs. Login attempts result in HTTP 500 errors, infinite spinners, or authentication error pages. LLM downloads get stuck on initializing. Issues appear across different OS versions (8.0.1, 11.3.3) and platforms (Linux, Windows).  Potential solutions include checking logs, reinstalling the app, disabling antivirus/firewall, updating graphics drivers, or seeking support for plugin issues (native_extensions_plugin.dll).",
       "frequency": 3,
       "related_issues": [
         {
@@ -219,7 +219,7 @@
     },
     {
       "title": "Pieces Desktop App and OS Issues",
-      "description": "Users are experiencing various issues with the Pieces desktop app, including connection problems (\"Invalid Port\"), file type restrictions (.vue files not supported), and local LLM download failures.  Troubleshooting steps include checking antivirus software, restarting/reinstalling the app, and verifying internet connectivity.  Further investigation is needed for the LLM download issue on Linux systems, despite a similar Windows issue being resolved with an update.",
+      "description": "Users are experiencing various issues with the Pieces desktop app and OS, including connection problems (\"Invalid Port\"), file type restrictions (.vue files not supported), and local LLM download failures.  Troubleshooting steps include checking antivirus software, restarting/reinstalling the app, and verifying internet connectivity.  The issue with .vue files appears to be a known limitation.",
       "frequency": 3,
       "related_issues": [
         {
@@ -243,8 +243,8 @@
       ]
     },
     {
-      "title": "Pieces OS conflicts and errors",
-      "description": "Users report conflicts with Kaspersky, Visual Studio, and connection issues. Kaspersky flags Pieces OS as a virus. The Visual Studio extension interferes with diagnostic tools. Connection errors arise with invalid port configurations.  Troubleshooting includes antivirus exclusions, disabling extensions, and verifying port settings.",
+      "title": "Pieces OS conflicts with other software and antivirus",
+      "description": "Kaspersky flags Pieces OS as a virus. The Pieces VS extension interferes with the diagnostic tool output.  A \"Invalid Port\" error occurs during initialization, possibly due to antivirus software or firewall conflicts.  Check antivirus settings and add Pieces OS to exceptions. Ensure Pieces OS and other software are compatible.",
       "frequency": 3,
       "related_issues": [
         {
@@ -269,16 +269,38 @@
     }
   ],
   "recommendations": [
-    "Prioritize resolving login issues on Linux (HTTP 500 errors) impacting Pieces OS and PFD.",
-    "Investigate and address crashes related to `native_extensions_plugin.dll` on Windows.",
-    "Troubleshoot LLM download issues on Linux (stuck on initializing) and ensure compatibility with Pieces OS 8.0.1 and later.",
-    "Address Asana handshake failures and ensure proper integration with Pieces OS.",
-    "Investigate and resolve the upside-down GUI issue affecting Pieces for Developers on Ubuntu 24.04.",
-    "Add support for .vue files in Pieces for Developers.",
-    "Resolve the \"Invalid Port\" connection error in the Pieces desktop app.",
-    "Address Kaspersky Internet Security flagging Pieces OS as a virus.",
-    "Fix the conflict between the Pieces Visual Studio 2022 extension and the Diagnostic tools pane.",
-    "Improve communication with users experiencing issues and provide clear troubleshooting steps or workarounds. Provide updates on timelines and progress of fixes for reported bugs and issues"
+    "Prioritize resolving login issues impacting Linux and Windows users (HTTP 500 errors, infinite spinners). Investigate logs for '/os/sign_in' errors and authentication failures.",
+    "Address Pieces OS crashes on Windows related to 'native_extensions_plugin.dll'. Investigate the stack trace and determine if the plugin can be updated or temporarily disabled.",
+    "Investigate and resolve the issue preventing local LLM downloads on Linux (stuck on initializing). Check for conflicts with system resources or network connectivity.",
+    "Improve Pieces OS compatibility with Ubuntu 24.04 to fix the upside-down GUI issue. Test different display servers (Xorg, Wayland) and graphics drivers.",
+    "Address Kaspersky's flagging of Pieces OS as a virus. Contact Kaspersky to resolve the false positive and update documentation with antivirus exclusion steps.",
+    "Investigate the conflict between the Pieces VS Code extension and Visual Studio's diagnostic tool output. Ensure compatibility and fix any interference.",
+    "Review and update documentation regarding supported file types in Pieces for Developers. Address the lack of support for .vue files or provide a workaround.",
+    "Investigate Asana handshake failures reported by users. Check integration stability and provide troubleshooting steps in documentation.",
+    "Monitor and address the \"Invalid Port\" error during Pieces initialization. Determine if it's related to antivirus/firewall conflicts or internal port management issues.",
+    "Review and improve error messaging for login and LLM download issues to provide more specific guidance to users during troubleshooting.",
+    "Consider adding more robust logging to Pieces OS and the desktop app to capture more detailed information during crashes and errors.",
+    "Proactively monitor system resource usage during LLM downloads to identify potential bottlenecks and improve performance on resource-constrained machines.",
+    "Implement automated tests to cover login flows, LLM downloads, and integration with third-party services like Asana to catch regressions early.",
+    "Collect user feedback on Pieces OS and desktop app stability to identify recurring issues and prioritize fixes.",
+    "Provide a clear channel for users to report bugs and issues, such as a dedicated support email or online forum.",
+    "Regularly update Pieces OS and desktop app to address reported issues and improve overall stability and performance.",
+    "Develop a knowledge base or FAQ section to address common user questions and issues, reducing support ticket volume.",
+    "Train support staff on common issues and troubleshooting steps to improve response times and resolution rates.",
+    "Prioritize bug fixes and feature requests based on user impact and frequency of reported issues.",
+    "Track support ticket metrics, such as resolution time and customer satisfaction, to measure support effectiveness and identify areas for improvement.",
+    "Implement a system for escalating complex issues to the development team for faster resolution.",
+    "Consider offering different support tiers based on user needs, such as priority support for paid users.",
+    "Regularly communicate with users about known issues, planned maintenance, and upcoming releases to manage expectations and reduce support inquiries.",
+    "Encourage users to check for existing issues on GitHub or other support channels before submitting new tickets to avoid duplicates.",
+    "Automate support tasks, such as ticket routing and initial responses, to improve efficiency.",
+    "Provide users with self-service resources, such as tutorials and documentation, to empower them to resolve issues independently.",
+    "Gather user feedback on the support experience to identify areas for improvement and enhance customer satisfaction.",
+    "Foster a strong community forum or online platform where users can help each other and share solutions to common problems.",
+    "Regularly review and update support processes and documentation to ensure they are aligned with best practices and user needs.",
+    "Invest in support tools and technologies to streamline workflows and improve efficiency.",
+    "Analyze support data to identify trends and patterns, which can inform product development and improve overall user experience.",
+    "Continuously evaluate and improve support operations based on user feedback and performance metrics to ensure high-quality support for all users."
   ],
   "message": "Daily support report generated successfully."
 }
