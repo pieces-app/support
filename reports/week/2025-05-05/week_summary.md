@@ -1,5 +1,5 @@
 # Support Ticket Report
-- Generated: 2025-05-11 13:12:26
+- Generated: 2025-05-11 21:08:02
 - Period: 2025-05-05 to 2025-05-11
 
 ## Summary
@@ -10,15 +10,15 @@
 ## 5 Most Active Tickets
 | Issue # | Title | Activity Level |
 |---------|-------|----------------|
-| [#693](https://github.com/pieces-app/support/issues/693) | Crash due to native_extensions_plugin.dll | 6.74 |
-| [#706](https://github.com/pieces-app/support/issues/706) | Pieces for Developers doesn't support .vue files | 6.50 |
+| [#693](https://github.com/pieces-app/support/issues/693) | Crash due to native_extensions_plugin.dll | 6.65 |
 | [#705](https://github.com/pieces-app/support/issues/705) | Pieces for developers GUI is upside down on Ubuntu 24.04 | 5.80 |
-| [#691](https://github.com/pieces-app/support/issues/691) | OS: login does not work ( /os/sign_in HTTP 500) | 4.57 |
-| [#672](https://github.com/pieces-app/support/issues/672) | Invalid Port (at character 18) http://127.0.0.1:null/connect | 4.29 |
+| [#706](https://github.com/pieces-app/support/issues/706) | Pieces for Developers doesn't support .vue files | 5.60 |
+| [#672](https://github.com/pieces-app/support/issues/672) | Invalid Port (at character 18) http://127.0.0.1:null/connect | 4.61 |
+| [#691](https://github.com/pieces-app/support/issues/691) | OS: login does not work ( /os/sign_in HTTP 500) | 4.10 |
 
 ## Common Issues
-### 1. Pieces OS and Desktop App Crashes and Errors
-Multiple users reported crashes and errors across Pieces OS and Desktop App. Issues include Asana handshake failures, login failures with HTTP 500 errors on `/os/sign_in`, and crashes related to `native_extensions_plugin.dll`.  Troubleshooting steps like reinstallation, antivirus/firewall checks, and driver updates have been attempted. Further investigation is needed to identify the root causes and provide solutions.
+### 1. Pieces OS and Desktop App Bugs
+Users reported issues with Pieces OS login (HTTP 500 error), Asana handshake failures in the desktop app, and crashes due to native_extensions_plugin.dll.  The login issue appears related to a server-side error.  The Asana issue may involve incorrect webhook setup or header handling.  The crash might be resolved by disabling or updating the problematic plugin. Further investigation is needed for all issues.
 
 **Related Issues:**
 - [#702](https://github.com/pieces-app/support/issues/702): I'm unable to do Handshake with asana
@@ -26,7 +26,7 @@ Multiple users reported crashes and errors across Pieces OS and Desktop App. Iss
 - [#693](https://github.com/pieces-app/support/issues/693): Crash due to native_extensions_plugin.dll
 
 ### 2. Pieces OS crashes or freezes during login or LLM download
-Users experience crashes during login or when downloading LLMs. Login attempts result in HTTP 500 errors on Linux. LLM downloads freeze at initialization on Linux and 0% on Windows.  Issues potentially related to native_extensions_plugin.dll on Windows and network communication problems on Linux.  Reinstalling, disabling antivirus/firewall, updating graphics drivers, and updating Pieces OS have been attempted with no success so far.
+Users experience crashes during login or when downloading LLMs. Login attempts result in HTTP 500 errors, infinite spinners, or authentication error pages. LLM downloads get stuck on initializing. Issues appear across different OS versions (8.0.1, 11.3.3) and platforms (Linux, Windows).  Suggested solutions include checking logs, reinstalling the app, disabling antivirus/firewall, updating graphics drivers, or checking internet connectivity. A related issue on Windows was resolved by updating to 8.0.0.
 
 **Related Issues:**
 - [#691](https://github.com/pieces-app/support/issues/691): OS: login does not work ( /os/sign_in HTTP 500)
@@ -42,7 +42,7 @@ Users are experiencing various issues with the Pieces desktop app and OS, includ
 - [#113](https://github.com/pieces-app/support/issues/113): Download of local LLM's initializes, but never proceeds 
 
 ### 4. Pieces OS/PFD Issues on Linux
-Users on Ubuntu are experiencing various issues with Pieces OS and Pieces for Developers (PFD). These include an upside-down GUI, login failures with HTTP 500 errors, and local LLM downloads getting stuck on initializing.  Solutions tried include reinstalling, updating, and trying different login methods (xorg, wayland). Further investigation is needed to identify the root cause and provide a fix.
+Users on Ubuntu Linux are experiencing various issues with Pieces OS and Pieces for Developers (PFD). These include an upside-down GUI, login failures with HTTP 500 errors, and local LLM downloads getting stuck on initializing.  Troubleshooting steps include reinstalling/updating software, checking logs, and verifying internet connectivity.  Similar issues have been reported on Windows, sometimes resolved by updating to Pieces OS 8.0.0.
 
 **Related Issues:**
 - [#705](https://github.com/pieces-app/support/issues/705): Pieces for developers GUI is upside down on Ubuntu 24.04
@@ -50,7 +50,7 @@ Users on Ubuntu are experiencing various issues with Pieces OS and Pieces for De
 - [#113](https://github.com/pieces-app/support/issues/113): Download of local LLM's initializes, but never proceeds 
 
 ### 5. Pieces OS conflicts with other software and antivirus
-Kaspersky flags Pieces OS as a virus. The Pieces VS extension interferes with the diagnostic tool output.  A "Invalid Port" error occurs during initialization, possibly due to antivirus software.  Check antivirus settings and add Pieces OS to exceptions. Disable the Pieces VS extension as a workaround. Ensure Pieces OS and dependent services are running and accessible.
+Users report conflicts between Pieces OS and other applications like Kaspersky and Visual Studio. Kaspersky flags Pieces OS as a virus, while the Pieces VS extension interferes with diagnostic tools.  Additionally, a "Invalid Port" error suggests Pieces OS might have trouble connecting to local services, potentially due to antivirus software or firewall interference.  Check antivirus settings and ensure Pieces OS is allowed.  Disable extensions or plugins to isolate conflicts.  Verify network connectivity and port availability for Pieces OS.
 
 **Related Issues:**
 - [#663](https://github.com/pieces-app/support/issues/663): Kaspersky Internet Security flags Pieces OS as a virus
@@ -59,21 +59,88 @@ Kaspersky flags Pieces OS as a virus. The Pieces VS extension interferes with th
 
 
 ## Recommendations
-- Prioritize resolving the 'native_extensions_plugin.dll' crash on Windows as it impacts multiple users and functionalities. Investigate the root cause and provide a fix or temporary workaround.
-- Address the login issues on Linux (HTTP 500 errors on '/os/sign_in') as it prevents users from accessing Pieces OS. Check server logs and authentication flow for potential problems.
-- Investigate and resolve the local LLM download issues on both Windows and Linux. Check network configurations, download processes, and compatibility with different operating systems.
-- Improve support for .vue files in Pieces for Developers to enhance user experience with Vue.js projects.
-- Address the 'Invalid Port' error during initialization, possibly related to antivirus software or firewall conflicts. Provide clear instructions to users on configuring their security software or suggest alternative solutions.
-- Investigate the upside-down GUI issue on Ubuntu 24.04. Test on different hardware/VM configurations and explore potential display driver or graphics library conflicts.
-- Review Kaspersky's flagging of Pieces OS as a virus and work towards resolving this false positive detection to avoid unnecessary user concerns.
-- Address the conflict between the Pieces VS Code extension and the diagnostic tool output in Visual Studio 2022. Ensure compatibility with common developer tools.
-- Analyze Asana handshake failures and provide troubleshooting steps or solutions to users experiencing this integration issue.
-- Monitor and address the remaining issues based on their frequency and impact on users. Gather more data and user feedback to identify recurring problems and prioritize fixes accordingly.
-- Consider improving error messages and logging to provide more detailed information for troubleshooting and faster resolution times.
-- Document known issues and workarounds in a central knowledge base to empower users with self-service support options and reduce support ticket volume.
-- Implement a system for tracking and prioritizing bug fixes and feature requests based on user feedback and support ticket data.
-- Proactively communicate known issues and planned fixes to users through regular updates or announcements to manage expectations and improve transparency.
-- Collect user feedback on support operations and identify areas for improvement in the support process, communication, and documentation.
+- Prioritize resolving the 'native_extensions_plugin.dll' crash on Windows as it has the highest activity level.
+- Investigate login issues on Linux and Windows related to HTTP 500 errors and infinite spinners.
+- Address the Pieces OS GUI being upside down on Ubuntu 24.04.
+- Enable support for .vue files in Pieces for Developers.
+- Troubleshoot the 'Invalid Port' error and potential conflicts with antivirus/firewall software.
+- Investigate why local LLM downloads get stuck on initializing on Linux and Windows.
+- Look into the Asana handshake failures and potential issues with webhooks.
+- Address Kaspersky flagging Pieces OS as a virus.
+- Fix the conflict between the Pieces VS Code extension and Visual Studio's diagnostic tools.
+- Review server-side logs for recurring errors related to login (HTTP 500) and other issues.
+- Improve communication with users experiencing ongoing issues, providing updates and workarounds where possible.
+- Consider adding more detailed logging to Pieces OS and the desktop app to aid in debugging.
+- Create a dedicated FAQ or knowledge base article addressing common issues like login problems and LLM download issues.
+- Develop automated tests to catch issues like the upside-down GUI and file type restrictions before release.
+- Monitor support tickets for trends and recurring issues to proactively address problems and improve the user experience.
+- Gather more data on user environments (OS versions, hardware specs) to identify potential platform-specific issues.
+- Prioritize issues based on frequency, activity level, and potential impact on users.
+- Allocate resources to address the most common and impactful issues first.
+- Improve error messages and provide more helpful guidance to users when issues occur.
+- Consider implementing a crash reporting system to gather more detailed information about crashes and errors.
+- Regularly test Pieces OS and the desktop app on different platforms and configurations to ensure compatibility and stability.
+- Provide clear documentation on how to troubleshoot common issues and where to find support resources.
+- Train support staff on common issues and troubleshooting steps.
+- Establish a process for escalating complex issues to the development team.
+- Encourage users to submit detailed bug reports with steps to reproduce the issue.
+- Use user feedback to prioritize bug fixes and feature improvements.
+- Continuously monitor and evaluate support operations to identify areas for improvement and optimize processes.
+- Consider using a support ticket system that allows for better tracking, categorization, and prioritization of issues.
+- Automate tasks like ticket routing and initial responses to improve efficiency.
+- Set service level agreements (SLAs) for responding to and resolving support tickets.
+- Regularly review and update support documentation and FAQs.
+- Provide training to users on how to use Pieces OS and the desktop app effectively.
+- Encourage users to report any issues they encounter, no matter how small.
+- Foster a community forum or other platform for users to share tips, workarounds, and support each other.
+- Collect user feedback on support operations and use it to identify areas for improvement.
+- Analyze support data to identify trends and patterns in user issues.
+- Use data-driven insights to make informed decisions about support operations and resource allocation.
+- Continuously improve support processes and tools to provide a better user experience.
+- Proactively identify and address potential issues before they impact a large number of users.
+- Communicate effectively with users about known issues and planned resolutions.
+- Build a strong relationship with the user community to foster trust and collaboration.
+- Empower users to self-serve by providing comprehensive documentation and support resources.
+- Strive to provide timely, efficient, and helpful support to all users.
+- Use support interactions as an opportunity to learn from users and improve the product.
+- Continuously evaluate and refine support strategies to meet the evolving needs of the user base.
+- Prioritize user satisfaction and strive to create a positive support experience for everyone.
+- Encourage users to provide feedback on their support experiences, both positive and negative.
+- Use feedback to identify areas where support operations can be improved.
+- Regularly assess the effectiveness of support processes and make adjustments as needed.
+- Stay up-to-date on industry best practices for support operations and incorporate them into your strategies.
+- Invest in tools and technologies that can help improve support efficiency and effectiveness.
+- Automate repetitive tasks to free up support staff to focus on more complex issues.
+- Provide ongoing training to support staff to ensure they have the knowledge and skills they need to provide excellent support.
+- Create a positive and supportive work environment for support staff to encourage high performance and job satisfaction.
+- Recognize and reward support staff for their contributions to the company's success.
+- Foster a culture of continuous improvement within the support team.
+- Encourage collaboration and knowledge sharing among support staff.
+- Empower support staff to make decisions and take ownership of resolving user issues.
+- Provide support staff with the resources they need to be successful, including access to relevant information, tools, and training.
+- Regularly solicit feedback from support staff on how support operations can be improved.
+- Use feedback to make informed decisions about changes to support processes, tools, and resources.
+- Continuously strive to create a world-class support organization that provides exceptional service to users.
+- Measure and track key performance indicators (KPIs) for support operations, such as resolution time, customer satisfaction, and ticket volume.
+- Use data to identify areas where support operations are performing well and areas where improvement is needed.
+- Set goals and targets for support KPIs and track progress towards achieving them.
+- Regularly review support performance data with the support team and use it to drive continuous improvement.
+- Communicate support performance results to stakeholders, such as management and the development team.
+- Use data to justify investments in support resources and initiatives.
+- Ensure that support operations are aligned with the company's overall business goals and objectives.
+- Integrate support operations with other departments, such as sales, marketing, and product development.
+- Collaborate with other teams to identify and address user issues that may be related to their areas of responsibility.
+- Share support data and insights with other teams to help them improve their products and services.
+- Work with the development team to prioritize bug fixes and feature enhancements based on user feedback and support data.
+- Use support interactions to gather valuable insights into user needs and preferences.
+- Share user feedback with the product development team to help them improve the product roadmap.
+- Collaborate with the marketing team to develop targeted messaging and content that addresses common user questions and concerns.
+- Use support data to identify opportunities for upselling and cross-selling products and services.
+- Work with the sales team to provide support to potential customers and address any technical questions they may have.
+- Integrate support operations into the customer lifecycle to provide a seamless and positive experience for users from initial contact through ongoing support.
+- Use support interactions to build strong relationships with users and foster loyalty.
+- Continuously strive to improve support operations and provide the best possible experience for users.
+- Make support a key differentiator for your company and a source of competitive advantage.
 
 ## Daily Reports
 Here are the daily reports for this week:
@@ -88,3 +155,4 @@ Here are the daily reports for this week:
 - [report_131059](daily/2025-05-10/report_131059.md)
 - [report_050712](daily/2025-05-10/report_050712.md)
 - [report_210605](daily/2025-05-10/report_210605.md)
+- [report_210614](daily/2025-05-11/report_210614.md)
