@@ -1,0 +1,129 @@
+{
+  "success": true,
+  "date_range": {
+    "start": "2025-05-13T00:00:00+00:00",
+    "end": "2025-05-13T13:16:11.292174+00:00"
+  },
+  "summary": {
+    "total_tickets": 1,
+    "resolved_tickets": 0,
+    "open_tickets": 1
+  },
+  "ticket_breakdown": [
+    {
+      "category": "bug",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:desktop application",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "os:linux",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:pieces os",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:triaged",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    }
+  ],
+  "most_active_tickets": [
+    {
+      "number": 691,
+      "title": "OS: login does not work ( /os/sign_in HTTP 500)",
+      "activity_level": 4.89
+    }
+  ],
+  "common_issues": [
+    {
+      "title": "PFD Login Failure with HTTP 500 Error on Linux",
+      "description": "Pieces OS Desktop Application on Linux encounters an HTTP 500 error during PFD login, resulting in an indefinite loading spinner and an authentication error page.  Logs show a 500 error for /os/sign_in.  Issue observed in version 11.3.3.",
+      "frequency": 1,
+      "related_issues": [
+        {
+          "id": 691,
+          "title": "OS: login does not work ( /os/sign_in HTTP 500)",
+          "text": "OS: login does not work ( /os/sign_in HTTP 500)\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nLinux\n\n### Your Pieces OS Version\n\n11.3.3\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWhen I try to log in via PFD, the spinner loads indefinitely before opening an error page in the browser:\n\nhttps://pieces.app/authentication-error?sentry_id=00000000000000000000000000000000&os=bb009f04-7e79-44cb-8376-aba647cd2c98&platform=linux\n\nIn the OS logs (Documents/com.pieces.os/Support/logs) I see this entry:\n\n```\n[D]  2025-04-17T15:53:02.391819  0:00:01.425625 POST    [500] /os/sign_in: port:39300\n```\n\nIt is surrounded by HTTP 200s like this:\n\n```\n[D]  2025-04-17T15:52:53.075570  0:00:00.000685 GET     [200] /.well-known/version: port:39301\n[D]  2025-04-17T15:52:54.038635  0:00:00.001700 POST    [200] /websites/exists: port:39300\n[D]  2025-04-17T15:52:54.043187  0:00:00.000732 GET     [200] /.well-known/version: port:39300\n[D]  2025-04-17T15:52:54.335453  0:00:00.001876 POST    [200] /websites/exists: port:39300\n[D]  2025-04-17T15:52:56.077590  0:00:00.000695 GET     [200] /.well-known/version: port:39301\n[D]  2025-04-17T15:52:59.079649  0:00:00.000662 GET     [200] /.well-known/version: port:39301\n[D]  2025-04-17T15:53:02.081551  0:00:00.000486 GET     [200] /.well-known/version: port:39301\n[D]  2025-04-17T15:53:02.391819  0:00:01.425625 POST    [500] /os/sign_in: port:39300\n[D]  2025-04-17T15:53:04.272493  0:00:00.001839 POST    [200] /websites/exists: port:39300\n[D]  2025-04-17T15:53:04.334258  0:00:00.000938 GET     [200] /.well-known/version: port:39300\n[D]  2025-04-17T15:53:04.457128  0:00:00.001378 POST    [200] /websites/exists: port:39300\n[D]  2025-04-17T15:53:05.083569  0:00:00.000541 GET     [200] /.well-known/version: port:39301\n[D]  2025-04-17T15:53:08.085902  0:00:00.000518 GET     [200] /.well-known/version: port:39301\n[D]  2025-04-17T15:53:08.094713  0:00:00.001812 POST    [200] /websites/exists: port:39300\n```\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 4.89
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    "Investigate and resolve the HTTP 500 error occurring during PFD login on the Pieces OS Desktop Application for Linux. This appears to be the primary issue affecting users.",
+    "Prioritize resolution of issue #691, \"OS: login does not work ( /os/sign_in HTTP 500)\", as it has the highest activity level and is directly related to the PFD login failure.",
+    "Review logs for the /os/sign_in endpoint to identify the root cause of the 500 error.",
+    "Consider adding more detailed logging to capture additional information about the login process and facilitate debugging.",
+    "Once the issue is resolved, update the affected users and provide clear communication about the fix.",
+    "Monitor support tickets for any recurring issues or new problems related to PFD login or the Linux desktop application.",
+    "Proactively communicate known issues and workarounds to users through a status page or other appropriate channels.",
+    "Implement automated testing to catch similar issues early in the development process and prevent them from reaching production.",
+    "Gather user feedback on the login experience to identify any usability issues or areas for improvement.",
+    "Analyze support ticket trends over time to identify patterns and areas where improvements can be made to the software or support processes.",
+    "Ensure the support team has adequate resources and training to handle user inquiries effectively.",
+    "Explore the possibility of implementing self-service resources, such as FAQs or knowledge base articles, to address common user questions and reduce the number of incoming support tickets.",
+    "Regularly review and update support documentation to ensure it is accurate and up-to-date.",
+    "Establish service level agreements (SLAs) for responding to and resolving support tickets to manage user expectations and ensure timely resolution.",
+    "Track key metrics, such as ticket resolution time and customer satisfaction, to measure the effectiveness of support operations and identify areas for improvement.",
+    "Implement a system for escalating complex or urgent issues to the appropriate team members.",
+    "Foster a culture of continuous improvement within the support team by encouraging feedback and implementing changes based on user needs and support data.",
+    "Investigate the 404 error encountered while generating a summary for issue #691 and ensure the necessary model versions are accessible.",
+    "Consider using a different model or provider if the current one is consistently causing issues.",
+    "Ensure that the support system integrates with other relevant tools, such as logging and monitoring systems, to provide a comprehensive view of user issues.",
+    "Regularly review and update the support system's configuration to ensure it is optimized for efficiency and effectiveness.",
+    "Provide the support team with access to the necessary tools and resources, such as debugging tools and documentation, to effectively diagnose and resolve user issues.",
+    "Encourage collaboration and knowledge sharing within the support team to improve overall efficiency and effectiveness.",
+    "Implement a system for tracking and managing known issues to avoid duplication of effort and ensure that all team members are aware of ongoing problems.",
+    "Proactively identify and address potential issues before they impact users by monitoring system performance and user feedback.",
+    "Continuously evaluate and improve support processes based on data and feedback to ensure they are meeting user needs and business objectives.",
+    "Communicate regularly with the development team to share feedback from users and identify areas where improvements can be made to the software.",
+    "Establish a process for prioritizing bug fixes and feature requests based on user impact and business value.",
+    "Encourage users to provide feedback on their support experiences to identify areas for improvement and measure customer satisfaction.",
+    "Regularly review and update support policies and procedures to ensure they are aligned with best practices and industry standards.",
+    "Invest in training and development for the support team to enhance their skills and knowledge and improve their ability to provide effective support.",
+    "Foster a positive and supportive work environment for the support team to promote job satisfaction and improve overall performance.",
+    "Recognize and reward outstanding performance within the support team to motivate and encourage excellence in customer service.",
+    "Regularly assess the effectiveness of support operations and make adjustments as needed to ensure they are meeting user needs and business objectives.",
+    "Stay up-to-date on industry trends and best practices in customer support to identify opportunities for improvement and innovation.",
+    "Continuously seek feedback from users and stakeholders to ensure that support operations are aligned with their needs and expectations.",
+    "Promote a culture of customer-centricity within the support team to ensure that all interactions with users are positive and helpful.",
+    "Empower the support team to make decisions and take ownership of user issues to improve efficiency and responsiveness.",
+    "Establish clear communication channels between the support team and other departments, such as development and product management, to facilitate collaboration and problem-solving.",
+    "Regularly review and update support metrics and reporting to ensure they are providing accurate and actionable insights into support operations.",
+    "Use data and analytics to identify trends and patterns in user issues to proactively address potential problems and improve the user experience.",
+    "Leverage automation and artificial intelligence to streamline support processes and improve efficiency.",
+    "Explore new technologies and tools to enhance support operations and improve the user experience.",
+    "Continuously strive to improve the quality and efficiency of support services to meet the evolving needs of users and the business.",
+    "Foster a culture of learning and innovation within the support team to encourage continuous improvement and the adoption of new technologies and best practices.",
+    "Celebrate successes and learn from failures to continuously improve support operations and provide the best possible experience for users.",
+    "Maintain open communication with users and stakeholders to ensure that support services are meeting their needs and expectations.",
+    "Prioritize user satisfaction and strive to exceed expectations in every interaction.",
+    "Build strong relationships with users based on trust, respect, and a commitment to providing excellent service.",
+    "Empower users to self-serve by providing easy-to-use resources and tools.",
+    "Proactively identify and address potential issues before they impact users.",
+    "Continuously monitor and evaluate support performance to identify areas for improvement.",
+    "Use data and analytics to drive decision-making and improve support operations.",
+    "Invest in the development and training of support staff.",
+    "Foster a culture of continuous improvement and innovation within the support team.",
+    "Communicate effectively with users and stakeholders.",
+    "Build strong relationships with other teams within the organization.",
+    "Stay up-to-date on industry trends and best practices.",
+    "Be proactive, responsive, and customer-centric in all interactions.",
+    "Strive to provide the best possible support experience for every user."
+  ],
+  "message": "Daily support report generated successfully."
+}
