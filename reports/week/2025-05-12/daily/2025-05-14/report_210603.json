@@ -1,0 +1,74 @@
+{
+  "success": true,
+  "date_range": {
+    "start": "2025-05-14T00:00:00+00:00",
+    "end": "2025-05-14T21:06:03.333193+00:00"
+  },
+  "summary": {
+    "total_tickets": 1,
+    "resolved_tickets": 0,
+    "open_tickets": 1
+  },
+  "ticket_breakdown": [
+    {
+      "category": "bug",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "os:windows",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:new",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:desktop application",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:pieces os",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    }
+  ],
+  "most_active_tickets": [
+    {
+      "number": 709,
+      "title": "LTM does not clear",
+      "activity_level": 4.42
+    }
+  ],
+  "common_issues": [
+    {
+      "title": "LTM not clearing on Pieces OS Desktop and Pieces OS",
+      "description": "Users report LTM not clearing despite clicking the clear button in Pieces OS Desktop and Pieces OS.  No feedback is provided on Desktop, while OS shows a confirmation. However, the copilot retains context from previous interactions. This issue affects cloud LLMs and persists even after re-checking context app permissions and deleting chats.  Users observe increased time to first token, suggesting LTM might not be clearing as expected.",
+      "frequency": 1,
+      "related_issues": [
+        {
+          "id": 709,
+          "title": "LTM does not clear",
+          "text": "LTM does not clear\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nPieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nLatest\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nHi! I've been using LTM 2 since launch without clearing it. Such an improvement over LTM 1 with regards to time to first token. However, I have started to feel that ttft was getting longerand longer, even on supposedly faster LLMs. Even if built to recall 9 months worth of data, it might not be optimal, which is fair. Note that I have edited both the list of apps allowed to provide context, as well as checked apps to get context from within a chat. But to no improvement. So I tried tp clear the all time LTM. On Pieces Desktop, I do not get feedback when I click the clear button, but the dialog box disappears after a while. It takes some time. When checking if LTM has been cleared by asking a question about what I did in the morning or last week, the copilot would answer it correctly.  I conclude the LTM has not been cleared. I deleted the chat and tried to clear it via Pieces OS, got direct click feedback and after a while a confirmation message. Retried the copilot and it still has context. I suppose this is not expected behavior. By the way, using clouds LLMs.\n\nAny ideas?\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 4.42
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    "Investigate and resolve the issue with LTM not clearing on Pieces OS Desktop and Pieces OS. This appears to be the most frequent and impactful issue reported.",
+    "Improve feedback mechanisms on Pieces OS Desktop when clearing LTM to confirm whether the action was successful.",
+    "Provide clearer documentation or in-app guidance on how LTM clearing works, including expected behavior and troubleshooting steps.",
+    "Monitor the time to first token (TTFT) metric to assess the impact of LTM on performance and identify potential optimizations.",
+    "Consider implementing user controls for LTM retention periods, allowing users to customize how long their context is stored."
+  ],
+  "message": "Daily support report generated successfully."
+}

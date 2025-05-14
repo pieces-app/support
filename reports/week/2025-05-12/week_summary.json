@@ -2,34 +2,46 @@
   "success": true,
   "date_range": {
     "start": "2025-05-12T00:00:00+00:00",
-    "end": "2025-05-14T13:15:22.568272+00:00"
+    "end": "2025-05-14T21:06:18.834758+00:00"
   },
   "summary": {
-    "total_tickets": 1,
+    "total_tickets": 2,
     "resolved_tickets": 0,
-    "open_tickets": 1
+    "open_tickets": 2
   },
   "ticket_breakdown": [
     {
       "category": "bug",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "os:windows",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:new",
       "received": 1,
       "resolved": 0,
       "pending": 1
     },
     {
       "category": "app:desktop application",
-      "received": 1,
+      "received": 2,
       "resolved": 0,
-      "pending": 1
-    },
-    {
-      "category": "os:linux",
-      "received": 1,
-      "resolved": 0,
-      "pending": 1
+      "pending": 2
     },
     {
       "category": "app:pieces os",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "os:linux",
       "received": 1,
       "resolved": 0,
       "pending": 1
@@ -45,68 +57,107 @@
     {
       "number": 691,
       "title": "OS: login does not work ( /os/sign_in HTTP 500)",
-      "activity_level": 4.84
+      "activity_level": 4.79
+    },
+    {
+      "number": 709,
+      "title": "LTM does not clear",
+      "activity_level": 4.42
     }
   ],
   "common_issues": [
     {
-      "title": "PFD Login Failure with HTTP 500 Error on Linux",
-      "description": "Pieces OS Desktop Application on Linux encounters an HTTP 500 error during PFD login, resulting in an indefinite loading spinner and an authentication error page.  Logs show a 500 error for /os/sign_in.  Issue observed in version 11.3.3.",
-      "frequency": 1,
+      "title": "Pieces OS and Desktop App Bugs",
+      "description": "Users report issues with LTM not clearing after following the prescribed steps in Pieces OS and Desktop app. Another user reports login failure with a 500 error on Linux.  Logs show successful requests surrounding the login failure. Further investigation is needed to identify the root cause and solutions for both issues.",
+      "frequency": 2,
       "related_issues": [
+        {
+          "id": 709,
+          "title": "LTM does not clear",
+          "text": "LTM does not clear\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nPieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nLatest\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nHi! I've been using LTM 2 since launch without clearing it. Such an improvement over LTM 1 with regards to time to first token. However, I have started to feel that ttft was getting longerand longer, even on supposedly faster LLMs. Even if built to recall 9 months worth of data, it might not be optimal, which is fair. Note that I have edited both the list of apps allowed to provide context, as well as checked apps to get context from within a chat. But to no improvement. So I tried tp clear the all time LTM. On Pieces Desktop, I do not get feedback when I click the clear button, but the dialog box disappears after a while. It takes some time. When checking if LTM has been cleared by asking a question about what I did in the morning or last week, the copilot would answer it correctly.  I conclude the LTM has not been cleared. I deleted the chat and tried to clear it via Pieces OS, got direct click feedback and after a while a confirmation message. Retried the copilot and it still has context. I suppose this is not expected behavior. By the way, using clouds LLMs.\n\nAny ideas?\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 4.42
+        },
         {
           "id": 691,
           "title": "OS: login does not work ( /os/sign_in HTTP 500)",
           "text": "OS: login does not work ( /os/sign_in HTTP 500)\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nLinux\n\n### Your Pieces OS Version\n\n11.3.3\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWhen I try to log in via PFD, the spinner loads indefinitely before opening an error page in the browser:\n\nhttps://pieces.app/authentication-error?sentry_id=00000000000000000000000000000000&os=bb009f04-7e79-44cb-8376-aba647cd2c98&platform=linux\n\nIn the OS logs (Documents/com.pieces.os/Support/logs) I see this entry:\n\n```\n[D]  2025-04-17T15:53:02.391819  0:00:01.425625 POST    [500] /os/sign_in: port:39300\n```\n\nIt is surrounded by HTTP 200s like this:\n\n```\n[D]  2025-04-17T15:52:53.075570  0:00:00.000685 GET     [200] /.well-known/version: port:39301\n[D]  2025-04-17T15:52:54.038635  0:00:00.001700 POST    [200] /websites/exists: port:39300\n[D]  2025-04-17T15:52:54.043187  0:00:00.000732 GET     [200] /.well-known/version: port:39300\n[D]  2025-04-17T15:52:54.335453  0:00:00.001876 POST    [200] /websites/exists: port:39300\n[D]  2025-04-17T15:52:56.077590  0:00:00.000695 GET     [200] /.well-known/version: port:39301\n[D]  2025-04-17T15:52:59.079649  0:00:00.000662 GET     [200] /.well-known/version: port:39301\n[D]  2025-04-17T15:53:02.081551  0:00:00.000486 GET     [200] /.well-known/version: port:39301\n[D]  2025-04-17T15:53:02.391819  0:00:01.425625 POST    [500] /os/sign_in: port:39300\n[D]  2025-04-17T15:53:04.272493  0:00:00.001839 POST    [200] /websites/exists: port:39300\n[D]  2025-04-17T15:53:04.334258  0:00:00.000938 GET     [200] /.well-known/version: port:39300\n[D]  2025-04-17T15:53:04.457128  0:00:00.001378 POST    [200] /websites/exists: port:39300\n[D]  2025-04-17T15:53:05.083569  0:00:00.000541 GET     [200] /.well-known/version: port:39301\n[D]  2025-04-17T15:53:08.085902  0:00:00.000518 GET     [200] /.well-known/version: port:39301\n[D]  2025-04-17T15:53:08.094713  0:00:00.001812 POST    [200] /websites/exists: port:39300\n```\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 4.84
+          "activity_level": 4.79
         }
       ]
     }
   ],
   "recommendations": [
-    "Investigate and resolve the HTTP 500 error encountered during PFD login on the Pieces OS Desktop Application for Linux. This appears to be the primary issue affecting users and is linked to the '/os/sign_in' endpoint.  Refer to the logs and the related issue (ID 691) for more details.",
-    "Prioritize resolution of issue #691, \"OS: login does not work ( /os/sign_in HTTP 500)\", as it has the highest activity level and is impacting users' ability to log in.",
-    "Monitor the status:triaged category to ensure tickets are being actively worked on and moved to the appropriate resolution stage.",
-    "Review the error encountered when generating the summary for issue 691. The 404 error suggests a problem with the Publisher Model configuration and should be addressed to ensure proper summary generation in the future.",
-    "Given the small number of open tickets, consider proactively reaching out to affected users (related to issue 691) to gather additional information or provide updates on the resolution progress. This can improve user satisfaction and provide valuable feedback for the development team.",
-    "Implement monitoring and alerting for the /os/sign_in endpoint to detect and respond to future occurrences of HTTP 500 errors more quickly.",
-    "Review the logs for patterns or additional information related to the HTTP 500 error. This may help identify the root cause and expedite the resolution process.",
-    "Once the login issue is resolved, consider updating the affected users (related to issue 691) with the resolution details and any necessary steps they need to take.",
-    "If the login issue is related to a specific version of the Pieces OS Desktop Application (e.g., 11.3.3), consider releasing a patch or update to address the problem.",
-    "Document the resolution for issue 691 and the HTTP 500 error to facilitate faster troubleshooting and resolution of similar issues in the future. This documentation can be added to an internal knowledge base or shared with the support team.",
-    "Analyze the frequency and types of issues reported for the 'app:desktop application', 'os:linux', and 'app:pieces os' categories to identify potential areas for improvement in the software or documentation.",
-    "Consider adding more specific logging around the PFD login process to capture more detailed information in case of future errors. This can help pinpoint the exact location and cause of the issue.",
-    "Investigate whether the HTTP 500 error is specific to a certain Linux distribution or environment. This information can help narrow down the scope of the problem and identify potential compatibility issues.",
-    "Review the authentication flow and error handling for the PFD login process to ensure that it is robust and provides informative error messages to users in case of failures.",
-    "Implement automated testing for the PFD login process to catch regressions and ensure that login functionality remains stable across different platforms and versions.",
-    "Consider implementing a more detailed categorization system for support tickets to better track and analyze trends in user-reported issues. This can help prioritize development efforts and improve the overall user experience.",
-    "Regularly review and analyze support ticket data to identify recurring issues and areas for improvement in the software, documentation, or support processes.",
-    "Provide training to the support team on common issues and troubleshooting steps to empower them to resolve user problems more efficiently.",
-    "Establish service level agreements (SLAs) for different types of support tickets to ensure that issues are addressed within a reasonable timeframe.",
-    "Implement a system for tracking user feedback and suggestions to identify areas for improvement and prioritize feature development.",
-    "Encourage users to submit detailed bug reports with steps to reproduce the issue, relevant logs, and any other helpful information. This can significantly reduce the time required to diagnose and resolve problems.",
-    "Consider using a dedicated bug tracking system to manage and prioritize bug fixes and feature requests. This can help streamline the development process and improve communication between the development and support teams.",
-    "Regularly communicate with the development team about user-reported issues and feedback to ensure that they are aware of the challenges users are facing and can prioritize fixes accordingly.",
-    "Promote self-service resources such as FAQs, knowledge bases, and tutorials to empower users to resolve common issues on their own. This can reduce the number of support tickets and free up support staff to focus on more complex problems.",
-    "Collect user satisfaction ratings for resolved support tickets to measure the effectiveness of the support team and identify areas for improvement.",
-    "Regularly review and update support documentation and FAQs to ensure that they are accurate and up-to-date.",
-    "Consider implementing a live chat or messaging system to provide real-time support to users who need immediate assistance.",
-    "Analyze support ticket data to identify peak hours and days for support requests. This information can be used to optimize staffing levels and ensure that adequate support is available during periods of high demand.",
-    "Conduct regular training sessions for the support team to keep them up-to-date on new features, product updates, and best practices for providing excellent customer support.",
-    "Foster a culture of continuous improvement within the support team by encouraging feedback, sharing best practices, and celebrating successes.",
-    "Implement a system for tracking and analyzing support metrics such as average resolution time, first response time, and customer satisfaction to identify areas for improvement and measure the effectiveness of support operations.",
-    "Consider using automation tools to streamline support processes such as ticket routing, assignment, and escalation.",
-    "Integrate the support system with other relevant tools such as CRM, project management, and communication platforms to improve collaboration and information sharing.",
-    "Regularly review and update the support team's knowledge base and training materials to ensure that they have access to the latest information and resources.",
-    "Encourage the support team to proactively identify and address potential issues before they escalate into major problems.",
-    "Develop a clear escalation path for complex or critical issues to ensure that they are handled efficiently and effectively.",
-    "Establish a system for tracking and reporting on support performance metrics to management to provide visibility into the effectiveness of support operations and identify areas for improvement.",
-    "Promote a positive and supportive work environment for the support team to encourage high morale and job satisfaction.",
-    "Recognize and reward outstanding performance within the support team to motivate and retain top talent.",
-    "Invest in ongoing training and development for the support team to enhance their skills and knowledge and enable them to provide even better support to users.",
-    "Continuously evaluate and refine support processes and procedures to ensure that they are aligned with business objectives and user needs.",
-    "Stay up-to-date on industry best practices and trends in customer support to identify opportunities for improvement and innovation.",
-    "Foster a strong partnership between the support team and other departments such as development, product management, and marketing to ensure that everyone is working together to provide the best possible user experience."
+    "Investigate the root cause of the LTM not clearing issue in Pieces OS and Desktop app.",
+    "Investigate the login failure with a 500 error on Linux, focusing on the discrepancy between successful logs and reported failure.",
+    "Prioritize resolution of these two issues due to their high frequency and activity levels among users.",
+    "Improve error messaging and feedback mechanisms within the Pieces Desktop app, specifically regarding the LTM clearing process.",
+    "Consider enhancing logging to provide more detailed information about the 500 error during login on Linux.",
+    "Proactively monitor and address similar issues to prevent recurrence and improve user experience.",
+    "Communicate updates and solutions to affected users to maintain transparency and trust.",
+    "Analyze support tickets regularly to identify trending issues and areas for improvement in the software and support processes.",
+    "Develop and implement preventative measures based on the root cause analysis of common issues.",
+    "Provide users with clear and concise instructions on how to troubleshoot common issues, such as LTM clearing or login failures.",
+    "Create a dedicated internal knowledge base to document solutions and workarounds for recurring issues.",
+    "Train support staff on effectively handling common issues and utilizing the internal knowledge base.",
+    "Implement a system for tracking and prioritizing bug fixes based on their frequency and impact on users.",
+    "Encourage users to provide detailed bug reports with steps to reproduce the issue, operating system information, and relevant logs.",
+    "Regularly review and update the list of allowed apps for providing context to the LTM to ensure optimal performance.",
+    "Investigate the performance of LTM and its impact on time to first token (TTFT), especially with long-term usage.",
+    "Consider implementing user feedback mechanisms within the software to gather insights on potential issues and areas for improvement.",
+    "Explore the possibility of automated testing to identify and address bugs early in the development process.",
+    "Establish clear communication channels between the development and support teams to facilitate efficient bug resolution.",
+    "Monitor user forums and social media platforms for reports of issues that may not be captured through official support channels.",
+    "Analyze user behavior and usage patterns to identify potential areas of improvement in the software's design and functionality.",
+    "Conduct regular user surveys to gather feedback on their experience with the software and support services.",
+    "Implement a system for tracking user satisfaction with support interactions and identify areas for improvement.",
+    "Develop and maintain comprehensive documentation for the software, including troubleshooting guides and FAQs.",
+    "Provide users with multiple support channels, such as email, chat, and phone support, to cater to different preferences.",
+    "Establish service level agreements (SLAs) for support response times to manage user expectations and ensure timely resolution.",
+    "Regularly review and update support processes based on user feedback and performance metrics.",
+    "Invest in training and development for support staff to enhance their technical skills and customer service abilities.",
+    "Foster a culture of continuous improvement within the support team to encourage innovation and optimize performance.",
+    "Implement a system for tracking and analyzing support metrics, such as ticket volume, resolution time, and customer satisfaction.",
+    "Use data-driven insights to identify trends, measure the effectiveness of support operations, and inform decision-making.",
+    "Benchmark support performance against industry best practices to identify areas for improvement and strive for excellence.",
+    "Collaborate with other teams, such as development and product management, to address systemic issues and improve the overall user experience.",
+    "Regularly review and update support policies and procedures to ensure they are aligned with business objectives and user needs.",
+    "Communicate changes in support policies and procedures to users to maintain transparency and manage expectations.",
+    "Establish a process for escalating complex or critical issues to the appropriate teams for timely resolution.",
+    "Develop and implement a disaster recovery plan for support operations to ensure business continuity in the event of unforeseen circumstances.",
+    "Proactively identify and mitigate potential risks to support operations, such as system outages or security breaches.",
+    "Regularly review and update security protocols to protect user data and maintain the integrity of support systems.",
+    "Ensure compliance with relevant data privacy regulations and industry standards in support operations.",
+    "Promote a positive and supportive work environment for the support team to enhance morale and productivity.",
+    "Recognize and reward outstanding performance within the support team to foster motivation and encourage excellence.",
+    "Encourage collaboration and knowledge sharing within the support team to improve efficiency and problem-solving capabilities.",
+    "Provide opportunities for professional development and growth for support staff to enhance their skills and career progression.",
+    "Conduct regular performance reviews and provide constructive feedback to support staff to identify areas for improvement and development.",
+    "Establish clear career paths and advancement opportunities within the support team to retain talent and promote internal growth.",
+    "Foster a culture of customer-centricity within the support team to ensure that user needs are prioritized and met effectively.",
+    "Empower support staff to make decisions and take ownership of resolving user issues to improve efficiency and customer satisfaction.",
+    "Encourage support staff to actively seek feedback from users and use it to improve their performance and the overall support experience.",
+    "Continuously evaluate and refine support strategies and tactics to adapt to changing user needs and business requirements.",
+    "Stay up-to-date on industry trends and best practices in customer support to ensure that the team is providing the best possible service.",
+    "Leverage technology and automation to streamline support processes and improve efficiency, such as chatbots or automated email responses.",
+    "Integrate support systems with other business tools, such as CRM or marketing automation platforms, to enhance data sharing and collaboration.",
+    "Analyze support data to identify opportunities for self-service and empower users to resolve issues independently.",
+    "Develop and maintain a comprehensive knowledge base and FAQ section on the company website to provide users with readily available information and solutions.",
+    "Create video tutorials and other interactive content to guide users through common troubleshooting steps and provide visual assistance.",
+    "Offer proactive support through personalized tips, recommendations, and updates based on user behavior and usage patterns.",
+    "Personalize support interactions by addressing users by name and tailoring communication to their specific needs and preferences.",
+    "Follow up with users after resolving an issue to ensure their satisfaction and gather feedback on the support experience.",
+    "Use customer feedback to identify areas for improvement in the software and support processes and implement changes accordingly.",
+    "Continuously monitor and measure the effectiveness of support initiatives and make adjustments as needed to optimize performance.",
+    "Communicate regularly with users about updates, improvements, and new features in the software and support services.",
+    "Build a strong community of users by fostering engagement and providing opportunities for interaction and feedback.",
+    "Encourage users to share their experiences and provide feedback through surveys, forums, and social media platforms.",
+    "Use user feedback to inform product development and prioritize features that address user needs and pain points.",
+    "Collaborate with users to co-create solutions and improve the software and support experience together.",
+    "Strive to exceed user expectations by providing exceptional support that is timely, efficient, and personalized.",
+    "Build strong relationships with users based on trust, transparency, and mutual respect.",
+    "View support as an opportunity to not only resolve issues but also to learn from users and improve the overall product and service offering.",
+    "Embrace a culture of continuous learning and improvement within the support team and the organization as a whole.",
+    "Recognize and celebrate the contributions of the support team to the success of the company and the satisfaction of its users."
   ],
   "message": "Daily support report generated successfully."
 }
