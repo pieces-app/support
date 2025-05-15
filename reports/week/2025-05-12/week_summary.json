@@ -2,7 +2,7 @@
   "success": true,
   "date_range": {
     "start": "2025-05-12T00:00:00+00:00",
-    "end": "2025-05-15T13:15:04.203329+00:00"
+    "end": "2025-05-15T21:07:38.699095+00:00"
   },
   "summary": {
     "total_tickets": 3,
@@ -66,20 +66,20 @@
       "activity_level": 4.42
     },
     {
-      "number": 709,
-      "title": "LTM does not clear",
-      "activity_level": 4.42
-    },
-    {
       "number": 691,
       "title": "OS: login does not work ( /os/sign_in HTTP 500)",
-      "activity_level": 4.38
+      "activity_level": 4.34
+    },
+    {
+      "number": 709,
+      "title": "LTM does not clear",
+      "activity_level": 3.5
     }
   ],
   "common_issues": [
     {
       "title": "Pieces OS and Desktop App Performance and Login Issues",
-      "description": "Users report performance issues with Pieces OS and Desktop App on macOS, including slowdowns and high CPU/GPU usage.  Additionally, login issues are reported on Linux with HTTP 500 errors. Clearing LTM doesn't resolve performance problems.  Further investigation is needed into resource utilization and login failures.",
+      "description": "Users report performance issues with Pieces OS and Desktop App on macOS, including slowdowns and high CPU/GPU usage.  Additionally, login issues are reported on Linux with HTTP 500 errors for `/os/sign_in`. LTM clearing functionality is also not working as expected on Windows. Troubleshooting steps include checking logs, clearing LTM, and verifying system resources.",
       "frequency": 3,
       "related_issues": [
         {
@@ -92,95 +92,22 @@
           "id": 709,
           "title": "LTM does not clear",
           "text": "LTM does not clear\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nPieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nLatest\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nHi! I've been using LTM 2 since launch without clearing it. Such an improvement over LTM 1 with regards to time to first token. However, I have started to feel that ttft was getting longerand longer, even on supposedly faster LLMs. Even if built to recall 9 months worth of data, it might not be optimal, which is fair. Note that I have edited both the list of apps allowed to provide context, as well as checked apps to get context from within a chat. But to no improvement. So I tried tp clear the all time LTM. On Pieces Desktop, I do not get feedback when I click the clear button, but the dialog box disappears after a while. It takes some time. When checking if LTM has been cleared by asking a question about what I did in the morning or last week, the copilot would answer it correctly.  I conclude the LTM has not been cleared. I deleted the chat and tried to clear it via Pieces OS, got direct click feedback and after a while a confirmation message. Retried the copilot and it still has context. I suppose this is not expected behavior. By the way, using clouds LLMs.\n\nAny ideas?\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 4.42
+          "activity_level": 3.5
         },
         {
           "id": 691,
           "title": "OS: login does not work ( /os/sign_in HTTP 500)",
           "text": "OS: login does not work ( /os/sign_in HTTP 500)\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nLinux\n\n### Your Pieces OS Version\n\n11.3.3\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWhen I try to log in via PFD, the spinner loads indefinitely before opening an error page in the browser:\n\nhttps://pieces.app/authentication-error?sentry_id=00000000000000000000000000000000&os=bb009f04-7e79-44cb-8376-aba647cd2c98&platform=linux\n\nIn the OS logs (Documents/com.pieces.os/Support/logs) I see this entry:\n\n```\n[D]  2025-04-17T15:53:02.391819  0:00:01.425625 POST    [500] /os/sign_in: port:39300\n```\n\nIt is surrounded by HTTP 200s like this:\n\n```\n[D]  2025-04-17T15:52:53.075570  0:00:00.000685 GET     [200] /.well-known/version: port:39301\n[D]  2025-04-17T15:52:54.038635  0:00:00.001700 POST    [200] /websites/exists: port:39300\n[D]  2025-04-17T15:52:54.043187  0:00:00.000732 GET     [200] /.well-known/version: port:39300\n[D]  2025-04-17T15:52:54.335453  0:00:00.001876 POST    [200] /websites/exists: port:39300\n[D]  2025-04-17T15:52:56.077590  0:00:00.000695 GET     [200] /.well-known/version: port:39301\n[D]  2025-04-17T15:52:59.079649  0:00:00.000662 GET     [200] /.well-known/version: port:39301\n[D]  2025-04-17T15:53:02.081551  0:00:00.000486 GET     [200] /.well-known/version: port:39301\n[D]  2025-04-17T15:53:02.391819  0:00:01.425625 POST    [500] /os/sign_in: port:39300\n[D]  2025-04-17T15:53:04.272493  0:00:00.001839 POST    [200] /websites/exists: port:39300\n[D]  2025-04-17T15:53:04.334258  0:00:00.000938 GET     [200] /.well-known/version: port:39300\n[D]  2025-04-17T15:53:04.457128  0:00:00.001378 POST    [200] /websites/exists: port:39300\n[D]  2025-04-17T15:53:05.083569  0:00:00.000541 GET     [200] /.well-known/version: port:39301\n[D]  2025-04-17T15:53:08.085902  0:00:00.000518 GET     [200] /.well-known/version: port:39301\n[D]  2025-04-17T15:53:08.094713  0:00:00.001812 POST    [200] /websites/exists: port:39300\n```\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 4.38
+          "activity_level": 4.34
         }
       ]
     }
   ],
   "recommendations": [
-    "Investigate performance issues with Pieces OS and Desktop App on macOS, focusing on high CPU/GPU usage and slowdowns.",
-    "Address login issues on Linux, specifically the HTTP 500 errors encountered during the login process.",
-    "Verify and fix the LTM clearing functionality to ensure data is properly cleared when requested.",
-    "Prioritize resolving the reported issues impacting macOS and Linux users to improve overall user experience.",
-    "Improve communication to users regarding ongoing investigations and expected resolution timelines for reported issues.",
-    "Monitor resource utilization of Pieces OS and Desktop App to identify potential bottlenecks and areas for optimization.",
-    "Implement logging and error tracking to better understand and diagnose login failures on Linux.",
-    "Consider adding a progress indicator or feedback mechanism during the LTM clearing process to inform users of the operation's status.",
-    "Test and validate the LTM clearing functionality across different operating systems and platforms to ensure consistent behavior.",
-    "Gather additional user feedback to identify any other performance or login issues and prioritize them accordingly.",
-    "Investigate potential compatibility issues between Pieces OS/Desktop App and specific hardware/software configurations.",
-    "Explore potential solutions for optimizing performance on lower-spec macOS devices.",
-    "Provide clear instructions or documentation on how to troubleshoot common login issues.",
-    "Consider implementing automated performance testing to catch regressions early in the development cycle.",
-    "Proactively monitor system performance and user feedback to identify and address emerging issues quickly.",
-    "Develop a comprehensive troubleshooting guide for common issues encountered by users.",
-    "Establish a clear escalation path for critical issues to ensure timely resolution.",
-    "Regularly communicate with users about known issues and their status.",
-    "Provide users with alternative login methods or workarounds while the Linux login issue is being investigated.",
-    "Implement a system for tracking and categorizing user feedback to identify recurring issues and trends.",
-    "Analyze user feedback to identify areas for improvement in the software and support processes.",
-    "Prioritize bug fixes and performance improvements based on user impact and frequency.",
-    "Allocate resources effectively to address the most critical issues impacting users.",
-    "Set clear goals and metrics for support operations to track progress and identify areas for improvement.",
-    "Regularly review and update support documentation to ensure it is accurate and up-to-date.",
-    "Train support staff on common issues and troubleshooting techniques.",
-    "Empower support staff to resolve issues quickly and efficiently.",
-    "Foster a culture of continuous improvement in support operations.",
-    "Encourage users to report issues and provide feedback to help improve the software and support experience.",
-    "Use data and analytics to identify trends and patterns in user issues and support requests.",
-    "Leverage user feedback to inform product development and prioritization.",
-    "Continuously monitor and evaluate the effectiveness of support operations and make adjustments as needed.",
-    "Strive to provide excellent customer support and build strong relationships with users.",
-    "Communicate proactively with users about planned maintenance or downtime that may impact their experience.",
-    "Provide users with self-service resources such as FAQs and knowledge bases.",
-    "Offer multiple support channels such as email, chat, and phone.",
-    "Ensure support staff are knowledgeable and responsive to user inquiries.",
-    "Track and measure key support metrics such as resolution time and customer satisfaction.",
-    "Use customer feedback to identify areas for improvement in the support process.",
-    "Regularly review and update support procedures and documentation.",
-    "Provide ongoing training and development opportunities for support staff.",
-    "Empower support staff to take ownership of user issues and see them through to resolution.",
-    "Foster a positive and supportive work environment for the support team.",
-    "Recognize and reward excellent performance in support operations.",
-    "Encourage collaboration and knowledge sharing among support staff.",
-    "Stay up-to-date on industry best practices and trends in customer support.",
-    "Continuously seek ways to improve the efficiency and effectiveness of support operations.",
-    "Make data-driven decisions to optimize support resources and improve the user experience.",
-    "Use automation and other technologies to streamline support processes and reduce manual effort.",
-    "Integrate support tools and systems to improve workflow and communication.",
-    "Monitor and analyze support data to identify areas for improvement and measure the impact of changes.",
-    "Regularly assess the performance of support operations and make adjustments as needed.",
-    "Strive to exceed user expectations and provide a world-class support experience.",
-    "Build a strong reputation for providing excellent customer support.",
-    "Use customer feedback to drive innovation and improve the product and support experience.",
-    "Continuously seek ways to improve the overall user experience and build customer loyalty.",
-    "Make customer satisfaction a top priority in all aspects of support operations.",
-    "Foster a culture of customer-centricity throughout the organization.",
-    "Empower employees to go the extra mile to help users and resolve their issues.",
-    "Build strong relationships with users and create a community of loyal customers.",
-    "Use customer feedback to shape the future of the product and support experience.",
-    "Continuously strive to improve and innovate in the field of customer support.",
-    "Be a leader in providing exceptional customer support and setting industry best practices.",
-    "Make a positive impact on the lives of users by providing them with the support they need to succeed.",
-    "Build a sustainable and scalable support operation that can meet the needs of a growing user base.",
-    "Invest in the development and growth of the support team.",
-    "Create a culture of learning and continuous improvement within the support organization.",
-    "Empower support staff to be proactive and take ownership of user issues.",
-    "Foster a collaborative and supportive work environment where everyone feels valued and respected.",
-    "Recognize and reward exceptional performance in support operations.",
-    "Celebrate successes and learn from failures to continuously improve the support experience.",
-    "Strive to be the best in the industry and provide a world-class support experience to all users.",
-    "Make a positive difference in the world by providing exceptional customer support and building strong relationships with users.",
-    "Continuously seek ways to improve and innovate in the field of customer support and make a lasting impact on the industry.",
-    "Be a role model for other companies and set the standard for excellent customer support.",
-    "Inspire others to provide exceptional customer support and make a positive difference in the lives of their users.",
-    "Build a legacy of providing outstanding customer support and making a positive impact on the world."
+    "Investigate and address the performance issues with Pieces OS and Desktop App on macOS, focusing on slowdowns and high CPU/GPU usage.",
+    "Troubleshoot and resolve the login issues on Linux, specifically the HTTP 500 errors for `/os/sign_in`.",
+    "Fix the LTM clearing functionality on Windows to ensure it works as expected.",
+    "Prioritize resolving the most active tickets, starting with ticket #710 (macOS performance), #691 (Linux login), and #709 (LTM clearing)."
   ],
   "message": "Daily support report generated successfully."
 }
