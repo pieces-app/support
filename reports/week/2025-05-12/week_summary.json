@@ -2,19 +2,43 @@
   "success": true,
   "date_range": {
     "start": "2025-05-12T00:00:00+00:00",
-    "end": "2025-05-16T05:07:55.175309+00:00"
+    "end": "2025-05-16T13:15:26.186426+00:00"
   },
   "summary": {
-    "total_tickets": 3,
-    "resolved_tickets": 0,
-    "open_tickets": 3
+    "total_tickets": 5,
+    "resolved_tickets": 1,
+    "open_tickets": 4
   },
   "ticket_breakdown": [
     {
+      "category": "app:desktop application",
+      "received": 5,
+      "resolved": 1,
+      "pending": 4
+    },
+    {
       "category": "bug",
-      "received": 3,
-      "resolved": 0,
+      "received": 4,
+      "resolved": 1,
       "pending": 3
+    },
+    {
+      "category": "os:windows",
+      "received": 2,
+      "resolved": 1,
+      "pending": 1
+    },
+    {
+      "category": "app:pieces os",
+      "received": 4,
+      "resolved": 1,
+      "pending": 3
+    },
+    {
+      "category": "status:triaged",
+      "received": 2,
+      "resolved": 1,
+      "pending": 1
     },
     {
       "category": "status:new",
@@ -23,25 +47,7 @@
       "pending": 2
     },
     {
-      "category": "app:desktop application",
-      "received": 3,
-      "resolved": 0,
-      "pending": 3
-    },
-    {
       "category": "os:macos",
-      "received": 1,
-      "resolved": 0,
-      "pending": 1
-    },
-    {
-      "category": "app:pieces os",
-      "received": 3,
-      "resolved": 0,
-      "pending": 3
-    },
-    {
-      "category": "os:windows",
       "received": 1,
       "resolved": 0,
       "pending": 1
@@ -51,24 +57,28 @@
       "received": 1,
       "resolved": 0,
       "pending": 1
-    },
-    {
-      "category": "status:triaged",
-      "received": 1,
-      "resolved": 0,
-      "pending": 1
     }
   ],
   "most_active_tickets": [
     {
-      "number": 710,
-      "title": "Long Term Memory 2 stills slow down my macbook pro with intel chipset.",
-      "activity_level": 4.42
+      "number": 711,
+      "title": "Unable to Connect to Pieces Servers",
+      "activity_level": 5.68
+    },
+    {
+      "number": 315,
+      "title": "Pieces desktop application is very slow/laggy, not generating any response in copilot chat.",
+      "activity_level": 4.48
     },
     {
       "number": 691,
       "title": "OS: login does not work ( /os/sign_in HTTP 500)",
       "activity_level": 4.34
+    },
+    {
+      "number": 710,
+      "title": "Long Term Memory 2 stills slow down my macbook pro with intel chipset.",
+      "activity_level": 3.5
     },
     {
       "number": 709,
@@ -78,16 +88,60 @@
   ],
   "common_issues": [
     {
-      "title": "Pieces OS and Desktop App Performance and Login Issues",
-      "description": "Users report performance issues with Pieces OS and Desktop App on macOS, including slowdowns and high CPU/GPU usage.  Additionally, login issues are reported on Linux with HTTP 500 errors.  Clearing LTM doesn't resolve performance problems.  Further investigation is needed into resource utilization and login failures.",
+      "title": "Pieces OS login and connectivity issues",
+      "description": "Users are experiencing login failures, slow performance, and \"unable to reach cloud services\" errors across Windows and Linux on various Pieces OS versions.  Common symptoms include HTTP 500 errors on /os/sign_in, indefinite loading spinners, and error messages in the AI chat.  Troubleshooting steps include checking internet connectivity, switching networks, and restarting Pieces OS. Further investigation into server-side issues and potential bugs related to updates is needed.",
       "frequency": 3,
       "related_issues": [
+        {
+          "id": 691,
+          "title": "OS: login does not work ( /os/sign_in HTTP 500)",
+          "text": "OS: login does not work ( /os/sign_in HTTP 500)\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nLinux\n\n### Your Pieces OS Version\n\n11.3.3\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWhen I try to log in via PFD, the spinner loads indefinitely before opening an error page in the browser:\n\nhttps://pieces.app/authentication-error?sentry_id=00000000000000000000000000000000&os=bb009f04-7e79-44cb-8376-aba647cd2c98&platform=linux\n\nIn the OS logs (Documents/com.pieces.os/Support/logs) I see this entry:\n\n```\n[D]  2025-04-17T15:53:02.391819  0:00:01.425625 POST    [500] /os/sign_in: port:39300\n```\n\nIt is surrounded by HTTP 200s like this:\n\n```\n[D]  2025-04-17T15:52:53.075570  0:00:00.000685 GET     [200] /.well-known/version: port:39301\n[D]  2025-04-17T15:52:54.038635  0:00:00.001700 POST    [200] /websites/exists: port:39300\n[D]  2025-04-17T15:52:54.043187  0:00:00.000732 GET     [200] /.well-known/version: port:39300\n[D]  2025-04-17T15:52:54.335453  0:00:00.001876 POST    [200] /websites/exists: port:39300\n[D]  2025-04-17T15:52:56.077590  0:00:00.000695 GET     [200] /.well-known/version: port:39301\n[D]  2025-04-17T15:52:59.079649  0:00:00.000662 GET     [200] /.well-known/version: port:39301\n[D]  2025-04-17T15:53:02.081551  0:00:00.000486 GET     [200] /.well-known/version: port:39301\n[D]  2025-04-17T15:53:02.391819  0:00:01.425625 POST    [500] /os/sign_in: port:39300\n[D]  2025-04-17T15:53:04.272493  0:00:00.001839 POST    [200] /websites/exists: port:39300\n[D]  2025-04-17T15:53:04.334258  0:00:00.000938 GET     [200] /.well-known/version: port:39300\n[D]  2025-04-17T15:53:04.457128  0:00:00.001378 POST    [200] /websites/exists: port:39300\n[D]  2025-04-17T15:53:05.083569  0:00:00.000541 GET     [200] /.well-known/version: port:39301\n[D]  2025-04-17T15:53:08.085902  0:00:00.000518 GET     [200] /.well-known/version: port:39301\n[D]  2025-04-17T15:53:08.094713  0:00:00.001812 POST    [200] /websites/exists: port:39300\n```\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 4.34
+        },
+        {
+          "id": 711,
+          "title": "Unable to Connect to Pieces Servers",
+          "text": "Unable to Connect to Pieces Servers\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.3.6\n\n### Early Access Program\n\n- [x] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nSince today, every client receives the following error in the AI chat:\n\n> \"I'm sorry, we're having trouble reaching our cloud services. This is likely due to an issue with your local network such as limited connectivity. Try checking your internet connection or switching your network then try again. If that doesn't work please contact support.\"\n\nThis error occurs on various networks and in any models.\n\nSteps to Reproduce:\n\n1. Restart PiecesOS.\n2. Open the client application.\n3. Enter any query in the AI chat.\n4. Observe the error message.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 5.68
+        },
+        {
+          "id": 315,
+          "title": "Pieces desktop application is very slow/laggy, not generating any response in copilot chat.",
+          "text": "Pieces desktop application is very slow/laggy, not generating any response in copilot chat.\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n10.0.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nPieces desktop application is working very much slow after latest update, takes very much time to give any response. Even after doing a hard reset active runtime, it just do not work. \nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 4.48
+        }
+      ]
+    },
+    {
+      "title": "Pieces Desktop App Performance Issues and Connectivity Problems",
+      "description": "Users report slow performance, unresponsiveness, and \"unable to reach cloud services\" errors in the Pieces desktop app. Issues appear across Windows and macOS, potentially related to recent updates or local network connectivity.  Troubleshooting steps include checking internet connection, switching networks, and restarting Pieces OS. High CPU/GPU usage is also reported on macOS.",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 315,
+          "title": "Pieces desktop application is very slow/laggy, not generating any response in copilot chat.",
+          "text": "Pieces desktop application is very slow/laggy, not generating any response in copilot chat.\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n10.0.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nPieces desktop application is working very much slow after latest update, takes very much time to give any response. Even after doing a hard reset active runtime, it just do not work. \nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 4.48
+        },
+        {
+          "id": 711,
+          "title": "Unable to Connect to Pieces Servers",
+          "text": "Unable to Connect to Pieces Servers\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.3.6\n\n### Early Access Program\n\n- [x] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nSince today, every client receives the following error in the AI chat:\n\n> \"I'm sorry, we're having trouble reaching our cloud services. This is likely due to an issue with your local network such as limited connectivity. Try checking your internet connection or switching your network then try again. If that doesn't work please contact support.\"\n\nThis error occurs on various networks and in any models.\n\nSteps to Reproduce:\n\n1. Restart PiecesOS.\n2. Open the client application.\n3. Enter any query in the AI chat.\n4. Observe the error message.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 5.68
+        },
         {
           "id": 710,
           "title": "Long Term Memory 2 stills slow down my macbook pro with intel chipset.",
           "text": "Long Term Memory 2 stills slow down my macbook pro with intel chipset.\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n11.3.6\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWhen i run pieces desktop app and pieces os. My macbook pro fan starts at the top speed which results to slows down my pc. I will add some details related to my macbook and pieces version with some screen shots.\n\n\n**Mac details -**\nProcessor - 2.2 GHz Quad-Core Intel Core i7\nGraphics - Intel Iris Pro 1536 MB\nMemory - 16 GB 1600 MHz DDR3\nMacOS - 15.5 (24F74)\n\n<img width=\"224\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/a34f83cb-60c3-4221-9539-b807e7238cee\" />\n\nPieces Desktop version - 4.1.2\nPieces OS - 11.3.6\n\n\n**Images for CPU and GPU Usage**\n\n<img width=\"677\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/e803c79b-2dea-49f9-a2ef-56a323f57f02\" />\n\n<img width=\"682\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/232dac90-319b-4ed0-8479-53c640908394\" />\n<img width=\"682\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/573a7173-be13-4421-a7c6-b24c83c45dec\" />\n<img width=\"908\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/719b1e7c-dd1a-43f7-9d0a-d3c7278d3fa9\" />\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 4.42
-        },
+          "activity_level": 3.5
+        }
+      ]
+    },
+    {
+      "title": "LTM clearing issues and performance problems",
+      "description": "Users report difficulties clearing Long Term Memory (LTM) on Pieces Desktop and OS.  Clearing LTM appears unsuccessful, with the copilot still retaining previous context. Additionally, performance issues are reported, including slow response times and high CPU/GPU usage, especially on older MacBooks. Further investigation is needed to determine the root cause and potential solutions for both LTM clearing and performance issues.",
+      "frequency": 3,
+      "related_issues": [
         {
           "id": 709,
           "title": "LTM does not clear",
@@ -95,14 +149,31 @@
           "activity_level": 3.5
         },
         {
-          "id": 691,
-          "title": "OS: login does not work ( /os/sign_in HTTP 500)",
-          "text": "OS: login does not work ( /os/sign_in HTTP 500)\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nLinux\n\n### Your Pieces OS Version\n\n11.3.3\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWhen I try to log in via PFD, the spinner loads indefinitely before opening an error page in the browser:\n\nhttps://pieces.app/authentication-error?sentry_id=00000000000000000000000000000000&os=bb009f04-7e79-44cb-8376-aba647cd2c98&platform=linux\n\nIn the OS logs (Documents/com.pieces.os/Support/logs) I see this entry:\n\n```\n[D]  2025-04-17T15:53:02.391819  0:00:01.425625 POST    [500] /os/sign_in: port:39300\n```\n\nIt is surrounded by HTTP 200s like this:\n\n```\n[D]  2025-04-17T15:52:53.075570  0:00:00.000685 GET     [200] /.well-known/version: port:39301\n[D]  2025-04-17T15:52:54.038635  0:00:00.001700 POST    [200] /websites/exists: port:39300\n[D]  2025-04-17T15:52:54.043187  0:00:00.000732 GET     [200] /.well-known/version: port:39300\n[D]  2025-04-17T15:52:54.335453  0:00:00.001876 POST    [200] /websites/exists: port:39300\n[D]  2025-04-17T15:52:56.077590  0:00:00.000695 GET     [200] /.well-known/version: port:39301\n[D]  2025-04-17T15:52:59.079649  0:00:00.000662 GET     [200] /.well-known/version: port:39301\n[D]  2025-04-17T15:53:02.081551  0:00:00.000486 GET     [200] /.well-known/version: port:39301\n[D]  2025-04-17T15:53:02.391819  0:00:01.425625 POST    [500] /os/sign_in: port:39300\n[D]  2025-04-17T15:53:04.272493  0:00:00.001839 POST    [200] /websites/exists: port:39300\n[D]  2025-04-17T15:53:04.334258  0:00:00.000938 GET     [200] /.well-known/version: port:39300\n[D]  2025-04-17T15:53:04.457128  0:00:00.001378 POST    [200] /websites/exists: port:39300\n[D]  2025-04-17T15:53:05.083569  0:00:00.000541 GET     [200] /.well-known/version: port:39301\n[D]  2025-04-17T15:53:08.085902  0:00:00.000518 GET     [200] /.well-known/version: port:39301\n[D]  2025-04-17T15:53:08.094713  0:00:00.001812 POST    [200] /websites/exists: port:39300\n```\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 4.34
+          "id": 315,
+          "title": "Pieces desktop application is very slow/laggy, not generating any response in copilot chat.",
+          "text": "Pieces desktop application is very slow/laggy, not generating any response in copilot chat.\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n10.0.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nPieces desktop application is working very much slow after latest update, takes very much time to give any response. Even after doing a hard reset active runtime, it just do not work. \nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 4.48
+        },
+        {
+          "id": 710,
+          "title": "Long Term Memory 2 stills slow down my macbook pro with intel chipset.",
+          "text": "Long Term Memory 2 stills slow down my macbook pro with intel chipset.\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n11.3.6\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWhen i run pieces desktop app and pieces os. My macbook pro fan starts at the top speed which results to slows down my pc. I will add some details related to my macbook and pieces version with some screen shots.\n\n\n**Mac details -**\nProcessor - 2.2 GHz Quad-Core Intel Core i7\nGraphics - Intel Iris Pro 1536 MB\nMemory - 16 GB 1600 MHz DDR3\nMacOS - 15.5 (24F74)\n\n<img width=\"224\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/a34f83cb-60c3-4221-9539-b807e7238cee\" />\n\nPieces Desktop version - 4.1.2\nPieces OS - 11.3.6\n\n\n**Images for CPU and GPU Usage**\n\n<img width=\"677\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/e803c79b-2dea-49f9-a2ef-56a323f57f02\" />\n\n<img width=\"682\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/232dac90-319b-4ed0-8479-53c640908394\" />\n<img width=\"682\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/573a7173-be13-4421-a7c6-b24c83c45dec\" />\n<img width=\"908\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/719b1e7c-dd1a-43f7-9d0a-d3c7278d3fa9\" />\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 3.5
         }
       ]
     }
   ],
-  "recommendations": [],
+  "recommendations": [
+    "Investigate and address the root cause of the \"unable to reach cloud services\" error affecting Pieces OS and Desktop App.",
+    "Prioritize resolving the Pieces OS login issue (HTTP 500 error on /os/sign_in).",
+    "Investigate and fix the LTM clearing issue reported by users.",
+    "Address the performance issues in Pieces Desktop App and Pieces OS, particularly slow response times and high CPU/GPU usage on macOS and older MacBooks.",
+    "Improve communication with users regarding ongoing issues and expected resolution timelines.",
+    "Enhance error messages and logging to provide more specific information for troubleshooting.",
+    "Consider adding more detailed troubleshooting steps to the support documentation for common issues like connectivity problems.",
+    "Monitor server-side performance and stability to proactively identify and address potential issues.",
+    "Analyze user feedback and support tickets to identify recurring problems and areas for improvement in the software.",
+    "Develop and implement a process for tracking and prioritizing bug fixes and feature requests based on user impact and frequency."
+  ],
   "message": "Daily support report generated successfully."
 }
