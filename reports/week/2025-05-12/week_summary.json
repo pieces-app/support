@@ -2,30 +2,42 @@
   "success": true,
   "date_range": {
     "start": "2025-05-12T00:00:00+00:00",
-    "end": "2025-05-16T13:15:26.186426+00:00"
+    "end": "2025-05-16T21:06:55.775268+00:00"
   },
   "summary": {
-    "total_tickets": 5,
+    "total_tickets": 6,
     "resolved_tickets": 1,
-    "open_tickets": 4
+    "open_tickets": 5
   },
   "ticket_breakdown": [
     {
-      "category": "app:desktop application",
+      "category": "bug",
       "received": 5,
       "resolved": 1,
       "pending": 4
     },
     {
-      "category": "bug",
-      "received": 4,
+      "category": "os:windows",
+      "received": 3,
       "resolved": 1,
+      "pending": 2
+    },
+    {
+      "category": "status:new",
+      "received": 3,
+      "resolved": 0,
       "pending": 3
     },
     {
-      "category": "os:windows",
-      "received": 2,
+      "category": "app:desktop application",
+      "received": 6,
       "resolved": 1,
+      "pending": 5
+    },
+    {
+      "category": "app:vs code",
+      "received": 1,
+      "resolved": 0,
       "pending": 1
     },
     {
@@ -39,12 +51,6 @@
       "received": 2,
       "resolved": 1,
       "pending": 1
-    },
-    {
-      "category": "status:new",
-      "received": 2,
-      "resolved": 0,
-      "pending": 2
     },
     {
       "category": "os:macos",
@@ -71,9 +77,14 @@
       "activity_level": 4.48
     },
     {
+      "number": 712,
+      "title": "copy button in pieces vs code extension keeps loading indefinitely.",
+      "activity_level": 4.42
+    },
+    {
       "number": 691,
       "title": "OS: login does not work ( /os/sign_in HTTP 500)",
-      "activity_level": 4.34
+      "activity_level": 4.3
     },
     {
       "number": 710,
@@ -83,20 +94,45 @@
     {
       "number": 709,
       "title": "LTM does not clear",
-      "activity_level": 3.5
+      "activity_level": 2.15
     }
   ],
   "common_issues": [
     {
+      "title": "Pieces Desktop App Performance and Connectivity Issues",
+      "description": "Users are experiencing slow performance, infinite loading of the copy button in the VS Code extension, and inability to connect to Pieces servers.  Issues appear across different Pieces OS versions (10.0.1, 11.3.6) on Windows.  Suggested troubleshooting includes checking internet connection, switching networks, and restarting Pieces OS. ",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 712,
+          "title": "copy button in pieces vs code extension keeps loading indefinitely.",
+          "text": "copy button in pieces vs code extension keeps loading indefinitely.\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, VS Code\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.3.6.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nThe copy button keeps loading forever. \n\n![Image](https://github.com/user-attachments/assets/cd302f52-5374-4f54-b9f3-a5b260906a72)\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 4.42
+        },
+        {
+          "id": 315,
+          "title": "Pieces desktop application is very slow/laggy, not generating any response in copilot chat.",
+          "text": "Pieces desktop application is very slow/laggy, not generating any response in copilot chat.\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n10.0.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nPieces desktop application is working very much slow after latest update, takes very much time to give any response. Even after doing a hard reset active runtime, it just do not work. \nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 4.48
+        },
+        {
+          "id": 711,
+          "title": "Unable to Connect to Pieces Servers",
+          "text": "Unable to Connect to Pieces Servers\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.3.6\n\n### Early Access Program\n\n- [x] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nSince today, every client receives the following error in the AI chat:\n\n> \"I'm sorry, we're having trouble reaching our cloud services. This is likely due to an issue with your local network such as limited connectivity. Try checking your internet connection or switching your network then try again. If that doesn't work please contact support.\"\n\nThis error occurs on various networks and in any models.\n\nSteps to Reproduce:\n\n1. Restart PiecesOS.\n2. Open the client application.\n3. Enter any query in the AI chat.\n4. Observe the error message.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 5.68
+        }
+      ]
+    },
+    {
       "title": "Pieces OS login and connectivity issues",
-      "description": "Users are experiencing login failures, slow performance, and \"unable to reach cloud services\" errors across Windows and Linux on various Pieces OS versions.  Common symptoms include HTTP 500 errors on /os/sign_in, indefinite loading spinners, and error messages in the AI chat.  Troubleshooting steps include checking internet connectivity, switching networks, and restarting Pieces OS. Further investigation into server-side issues and potential bugs related to updates is needed.",
+      "description": "Users are experiencing login failures, HTTP 500 errors on /os/sign_in, and \"unable to reach cloud services\" messages in the AI chat.  Issues appear across different OS versions (10.0.1, 11.3.3, 11.3.6) and platforms (Windows, Linux). Check local network connectivity, Pieces OS logs, and ensure Pieces servers are accessible. Further investigation needed to pinpoint root cause and solution.",
       "frequency": 3,
       "related_issues": [
         {
           "id": 691,
           "title": "OS: login does not work ( /os/sign_in HTTP 500)",
           "text": "OS: login does not work ( /os/sign_in HTTP 500)\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nLinux\n\n### Your Pieces OS Version\n\n11.3.3\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWhen I try to log in via PFD, the spinner loads indefinitely before opening an error page in the browser:\n\nhttps://pieces.app/authentication-error?sentry_id=00000000000000000000000000000000&os=bb009f04-7e79-44cb-8376-aba647cd2c98&platform=linux\n\nIn the OS logs (Documents/com.pieces.os/Support/logs) I see this entry:\n\n```\n[D]  2025-04-17T15:53:02.391819  0:00:01.425625 POST    [500] /os/sign_in: port:39300\n```\n\nIt is surrounded by HTTP 200s like this:\n\n```\n[D]  2025-04-17T15:52:53.075570  0:00:00.000685 GET     [200] /.well-known/version: port:39301\n[D]  2025-04-17T15:52:54.038635  0:00:00.001700 POST    [200] /websites/exists: port:39300\n[D]  2025-04-17T15:52:54.043187  0:00:00.000732 GET     [200] /.well-known/version: port:39300\n[D]  2025-04-17T15:52:54.335453  0:00:00.001876 POST    [200] /websites/exists: port:39300\n[D]  2025-04-17T15:52:56.077590  0:00:00.000695 GET     [200] /.well-known/version: port:39301\n[D]  2025-04-17T15:52:59.079649  0:00:00.000662 GET     [200] /.well-known/version: port:39301\n[D]  2025-04-17T15:53:02.081551  0:00:00.000486 GET     [200] /.well-known/version: port:39301\n[D]  2025-04-17T15:53:02.391819  0:00:01.425625 POST    [500] /os/sign_in: port:39300\n[D]  2025-04-17T15:53:04.272493  0:00:00.001839 POST    [200] /websites/exists: port:39300\n[D]  2025-04-17T15:53:04.334258  0:00:00.000938 GET     [200] /.well-known/version: port:39300\n[D]  2025-04-17T15:53:04.457128  0:00:00.001378 POST    [200] /websites/exists: port:39300\n[D]  2025-04-17T15:53:05.083569  0:00:00.000541 GET     [200] /.well-known/version: port:39301\n[D]  2025-04-17T15:53:08.085902  0:00:00.000518 GET     [200] /.well-known/version: port:39301\n[D]  2025-04-17T15:53:08.094713  0:00:00.001812 POST    [200] /websites/exists: port:39300\n```\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 4.34
+          "activity_level": 4.3
         },
         {
           "id": 711,
@@ -113,67 +149,89 @@
       ]
     },
     {
-      "title": "Pieces Desktop App Performance Issues and Connectivity Problems",
-      "description": "Users report slow performance, unresponsiveness, and \"unable to reach cloud services\" errors in the Pieces desktop app. Issues appear across Windows and macOS, potentially related to recent updates or local network connectivity.  Troubleshooting steps include checking internet connection, switching networks, and restarting Pieces OS. High CPU/GPU usage is also reported on macOS.",
+      "title": "Performance Issues and Slow Response in Pieces Desktop App",
+      "description": "Users are experiencing slowdowns and lagging in the Pieces desktop application, especially on macOS and Windows systems.  High CPU and GPU usage have been reported. Additionally, the 'Clear LTM' function in Pieces OS is not working as expected, with LTM data persisting even after clearing.  Further investigation is needed to determine the root cause and potential solutions.",
       "frequency": 3,
       "related_issues": [
-        {
-          "id": 315,
-          "title": "Pieces desktop application is very slow/laggy, not generating any response in copilot chat.",
-          "text": "Pieces desktop application is very slow/laggy, not generating any response in copilot chat.\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n10.0.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nPieces desktop application is working very much slow after latest update, takes very much time to give any response. Even after doing a hard reset active runtime, it just do not work. \nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 4.48
-        },
-        {
-          "id": 711,
-          "title": "Unable to Connect to Pieces Servers",
-          "text": "Unable to Connect to Pieces Servers\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.3.6\n\n### Early Access Program\n\n- [x] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nSince today, every client receives the following error in the AI chat:\n\n> \"I'm sorry, we're having trouble reaching our cloud services. This is likely due to an issue with your local network such as limited connectivity. Try checking your internet connection or switching your network then try again. If that doesn't work please contact support.\"\n\nThis error occurs on various networks and in any models.\n\nSteps to Reproduce:\n\n1. Restart PiecesOS.\n2. Open the client application.\n3. Enter any query in the AI chat.\n4. Observe the error message.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 5.68
-        },
         {
           "id": 710,
           "title": "Long Term Memory 2 stills slow down my macbook pro with intel chipset.",
           "text": "Long Term Memory 2 stills slow down my macbook pro with intel chipset.\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n11.3.6\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWhen i run pieces desktop app and pieces os. My macbook pro fan starts at the top speed which results to slows down my pc. I will add some details related to my macbook and pieces version with some screen shots.\n\n\n**Mac details -**\nProcessor - 2.2 GHz Quad-Core Intel Core i7\nGraphics - Intel Iris Pro 1536 MB\nMemory - 16 GB 1600 MHz DDR3\nMacOS - 15.5 (24F74)\n\n<img width=\"224\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/a34f83cb-60c3-4221-9539-b807e7238cee\" />\n\nPieces Desktop version - 4.1.2\nPieces OS - 11.3.6\n\n\n**Images for CPU and GPU Usage**\n\n<img width=\"677\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/e803c79b-2dea-49f9-a2ef-56a323f57f02\" />\n\n<img width=\"682\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/232dac90-319b-4ed0-8479-53c640908394\" />\n<img width=\"682\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/573a7173-be13-4421-a7c6-b24c83c45dec\" />\n<img width=\"908\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/719b1e7c-dd1a-43f7-9d0a-d3c7278d3fa9\" />\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
           "activity_level": 3.5
-        }
-      ]
-    },
-    {
-      "title": "LTM clearing issues and performance problems",
-      "description": "Users report difficulties clearing Long Term Memory (LTM) on Pieces Desktop and OS.  Clearing LTM appears unsuccessful, with the copilot still retaining previous context. Additionally, performance issues are reported, including slow response times and high CPU/GPU usage, especially on older MacBooks. Further investigation is needed to determine the root cause and potential solutions for both LTM clearing and performance issues.",
-      "frequency": 3,
-      "related_issues": [
+        },
+        {
+          "id": 315,
+          "title": "Pieces desktop application is very slow/laggy, not generating any response in copilot chat.",
+          "text": "Pieces desktop application is very slow/laggy, not generating any response in copilot chat.\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n10.0.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nPieces desktop application is working very much slow after latest update, takes very much time to give any response. Even after doing a hard reset active runtime, it just do not work. \nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 4.48
+        },
         {
           "id": 709,
           "title": "LTM does not clear",
           "text": "LTM does not clear\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nPieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nLatest\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nHi! I've been using LTM 2 since launch without clearing it. Such an improvement over LTM 1 with regards to time to first token. However, I have started to feel that ttft was getting longerand longer, even on supposedly faster LLMs. Even if built to recall 9 months worth of data, it might not be optimal, which is fair. Note that I have edited both the list of apps allowed to provide context, as well as checked apps to get context from within a chat. But to no improvement. So I tried tp clear the all time LTM. On Pieces Desktop, I do not get feedback when I click the clear button, but the dialog box disappears after a while. It takes some time. When checking if LTM has been cleared by asking a question about what I did in the morning or last week, the copilot would answer it correctly.  I conclude the LTM has not been cleared. I deleted the chat and tried to clear it via Pieces OS, got direct click feedback and after a while a confirmation message. Retried the copilot and it still has context. I suppose this is not expected behavior. By the way, using clouds LLMs.\n\nAny ideas?\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 3.5
-        },
-        {
-          "id": 315,
-          "title": "Pieces desktop application is very slow/laggy, not generating any response in copilot chat.",
-          "text": "Pieces desktop application is very slow/laggy, not generating any response in copilot chat.\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n10.0.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nPieces desktop application is working very much slow after latest update, takes very much time to give any response. Even after doing a hard reset active runtime, it just do not work. \nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 4.48
-        },
-        {
-          "id": 710,
-          "title": "Long Term Memory 2 stills slow down my macbook pro with intel chipset.",
-          "text": "Long Term Memory 2 stills slow down my macbook pro with intel chipset.\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n11.3.6\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWhen i run pieces desktop app and pieces os. My macbook pro fan starts at the top speed which results to slows down my pc. I will add some details related to my macbook and pieces version with some screen shots.\n\n\n**Mac details -**\nProcessor - 2.2 GHz Quad-Core Intel Core i7\nGraphics - Intel Iris Pro 1536 MB\nMemory - 16 GB 1600 MHz DDR3\nMacOS - 15.5 (24F74)\n\n<img width=\"224\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/a34f83cb-60c3-4221-9539-b807e7238cee\" />\n\nPieces Desktop version - 4.1.2\nPieces OS - 11.3.6\n\n\n**Images for CPU and GPU Usage**\n\n<img width=\"677\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/e803c79b-2dea-49f9-a2ef-56a323f57f02\" />\n\n<img width=\"682\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/232dac90-319b-4ed0-8479-53c640908394\" />\n<img width=\"682\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/573a7173-be13-4421-a7c6-b24c83c45dec\" />\n<img width=\"908\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/719b1e7c-dd1a-43f7-9d0a-d3c7278d3fa9\" />\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 3.5
+          "activity_level": 2.15
         }
       ]
     }
   ],
   "recommendations": [
-    "Investigate and address the root cause of the \"unable to reach cloud services\" error affecting Pieces OS and Desktop App.",
-    "Prioritize resolving the Pieces OS login issue (HTTP 500 error on /os/sign_in).",
-    "Investigate and fix the LTM clearing issue reported by users.",
-    "Address the performance issues in Pieces Desktop App and Pieces OS, particularly slow response times and high CPU/GPU usage on macOS and older MacBooks.",
-    "Improve communication with users regarding ongoing issues and expected resolution timelines.",
-    "Enhance error messages and logging to provide more specific information for troubleshooting.",
-    "Consider adding more detailed troubleshooting steps to the support documentation for common issues like connectivity problems.",
-    "Monitor server-side performance and stability to proactively identify and address potential issues.",
-    "Analyze user feedback and support tickets to identify recurring problems and areas for improvement in the software.",
-    "Develop and implement a process for tracking and prioritizing bug fixes and feature requests based on user impact and frequency."
+    "Investigate and address the root cause of connectivity issues between Pieces OS and cloud services. This includes checking server status, network configurations, and potential firewall issues.",
+    "Improve the performance of the Pieces desktop application, particularly on Windows and macOS. Optimize resource usage (CPU/GPU) and address any bottlenecks causing slowdowns and lag.",
+    "Fix the 'copy' button functionality in the VS Code extension to ensure seamless code snippet transfer.",
+    "Resolve the login issues on Pieces OS, specifically the HTTP 500 errors encountered during sign-in.  This may involve examining server-side logs and authentication processes.",
+    "Address the issue with the 'Clear LTM' function not effectively removing LTM data.  Verify data deletion process and ensure user interface provides accurate feedback.",
+    "Provide clearer documentation or in-app guidance on troubleshooting connectivity problems and performance issues. This could include network checks, Pieces OS log analysis, and contacting support channels.",
+    "Prioritize bug fixes and performance improvements based on the frequency and activity level of reported issues. Focus on resolving the most impactful problems first.",
+    "Implement better error handling and messaging within the Pieces desktop application and VS Code extension. Provide more specific error messages to aid users in troubleshooting.",
+    "Enhance monitoring and logging capabilities to proactively detect and diagnose performance issues and connectivity problems. This will enable faster response times and more efficient troubleshooting.",
+    "Consider implementing performance testing and optimization strategies during the development process to catch performance issues earlier in the release cycle.",
+    "Gather more detailed user feedback on performance issues, including system specifications, OS versions, and specific steps to reproduce the problems. This will help in identifying patterns and isolating the root causes.",
+    "Improve communication with users regarding ongoing issues and planned resolutions. Provide regular updates through blog posts, release notes, or in-app notifications.",
+    "Investigate the high CPU and GPU usage reported by users on macOS and Windows. Optimize the application's resource consumption to minimize performance impact.",
+    "Explore potential conflicts between Pieces OS and other applications or system processes.  This could involve checking for compatibility issues or resource contention.",
+    "Ensure the Pieces OS installation process is smooth and error-free. Provide clear instructions and troubleshooting steps for users experiencing installation problems.",
+    "Implement automated testing for critical functionalities, such as login, connectivity, and data synchronization, to prevent regressions and ensure stability.",
+    "Consider offering a dedicated support channel for users experiencing performance issues, with prioritized response times and expert assistance.",
+    "Collect analytics on user behavior and application usage to identify areas for improvement and prioritize feature development.",
+    "Regularly review and update the list of allowed apps for providing context to the LTM. Ensure only relevant applications are included to optimize performance.",
+    "Educate users on the impact of LTM size on performance and provide recommendations for managing LTM data effectively. This could include periodic clearing or selective filtering of LTM content.",
+    "Investigate the slow response times in the Copilot chat feature. Optimize the AI model's performance and address any network latency issues.",
+    "Provide users with more control over LTM settings, such as the ability to customize the retention period or selectively include/exclude specific data sources.",
+    "Develop a comprehensive performance troubleshooting guide for users, including common issues, diagnostic steps, and potential solutions.",
+    "Consider implementing a feedback mechanism within the application to allow users to easily report performance issues and provide detailed information for debugging.",
+    "Regularly test the application on different hardware configurations and OS versions to ensure compatibility and identify potential performance bottlenecks.",
+    "Explore options for optimizing the LTM data storage and retrieval mechanisms to improve performance and reduce resource consumption.",
+    "Provide training to support staff on troubleshooting performance issues and effectively communicating with users experiencing these problems.",
+    "Establish a process for prioritizing and addressing performance-related bug reports. Ensure timely resolution and communication with affected users.",
+    "Monitor user forums and online communities for reports of performance issues and proactively address any emerging trends or widespread problems.",
+    "Continuously evaluate and refine support operations based on user feedback and performance data.  Identify areas for improvement and implement changes to enhance the user experience.",
+    "Consider implementing a beta testing program to gather feedback on new features and performance improvements before they are released to the general public.",
+    "Develop a system for tracking and analyzing performance metrics over time. This will help in identifying trends and measuring the effectiveness of optimization efforts.",
+    "Investigate the impact of different LTM configurations on performance. Provide recommendations to users on optimal settings based on their usage patterns and hardware capabilities.",
+    "Explore the possibility of integrating performance monitoring tools into the application to provide real-time feedback on resource usage and identify potential bottlenecks.",
+    "Provide users with clear instructions on how to access and interpret Pieces OS logs. This will empower them to troubleshoot issues independently and provide valuable information to support staff.",
+    "Consider implementing a system for automatically collecting performance data from user devices. This will provide valuable insights into real-world usage patterns and help in identifying performance issues.",
+    "Develop a comprehensive knowledge base of common performance issues and solutions. Make this resource easily accessible to users through the application or website.",
+    "Regularly review and update the knowledge base to ensure it remains relevant and accurate. Incorporate user feedback and insights from support interactions.",
+    "Provide training to users on how to optimize their usage of the Pieces application and OS to maximize performance. This could include tips on managing LTM data, configuring settings, and troubleshooting common issues.",
+    "Encourage users to submit detailed bug reports when they encounter performance problems. Provide clear guidelines on what information to include to facilitate efficient debugging.",
+    "Establish a clear escalation path for performance-related issues. Ensure that critical problems are quickly escalated to the appropriate development teams for resolution.",
+    "Regularly communicate with users about the status of ongoing performance investigations and planned improvements. This will help in managing expectations and maintaining user satisfaction.",
+    "Consider offering premium support options for users who require dedicated assistance with performance optimization and troubleshooting.",
+    "Develop a system for proactively identifying and addressing performance issues before they impact a large number of users. This could involve monitoring performance metrics and analyzing user feedback.",
+    "Continuously monitor and evaluate the effectiveness of support operations in addressing performance issues.  Identify areas for improvement and implement changes to enhance the user experience.",
+    "Foster a culture of continuous improvement within the development and support teams. Encourage proactive problem-solving and a focus on delivering optimal performance to users.",
+    "Stay up-to-date on the latest performance optimization techniques and best practices.  Incorporate these into the development process to ensure the application remains performant over time.",
+    "Regularly benchmark the application against competitors and industry standards.  Identify areas where performance can be improved and prioritize development efforts accordingly.",
+    "Consider implementing a performance reward system for developers who contribute to significant performance improvements. This will incentivize a focus on performance optimization within the team.",
+    "Communicate the value of performance optimization to all stakeholders, including developers, support staff, and management.  Ensure that everyone understands the importance of delivering a high-performance user experience.",
+    "Invest in tools and resources that will support performance optimization efforts. This could include profiling tools, performance testing frameworks, and training for developers.",
+    "Establish clear performance goals and metrics.  Track progress against these goals and regularly communicate results to stakeholders.",
+    "Create a dedicated performance team responsible for identifying and addressing performance bottlenecks across the application. This team should have expertise in performance analysis and optimization techniques.",
+    "Develop a long-term performance optimization roadmap.  This roadmap should outline key initiatives and timelines for achieving performance goals.",
+    "Regularly review and update the performance roadmap based on evolving user needs and technological advancements.  Ensure that the roadmap remains aligned with overall business objectives.",
+    "Communicate the performance roadmap to stakeholders to ensure alignment and transparency.  Solicit feedback and incorporate it into the planning process.",
+    "Celebrate successes in performance optimization and recognize the contributions of individuals and teams.  This will help in maintaining momentum and fostering a culture of continuous improvement."
   ],
   "message": "Daily support report generated successfully."
 }

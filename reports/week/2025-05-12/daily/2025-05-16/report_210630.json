@@ -1,0 +1,113 @@
+{
+  "success": true,
+  "date_range": {
+    "start": "2025-05-16T00:00:00+00:00",
+    "end": "2025-05-16T21:06:30.588108+00:00"
+  },
+  "summary": {
+    "total_tickets": 3,
+    "resolved_tickets": 1,
+    "open_tickets": 2
+  },
+  "ticket_breakdown": [
+    {
+      "category": "bug",
+      "received": 2,
+      "resolved": 1,
+      "pending": 1
+    },
+    {
+      "category": "os:windows",
+      "received": 2,
+      "resolved": 1,
+      "pending": 1
+    },
+    {
+      "category": "status:new",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:desktop application",
+      "received": 3,
+      "resolved": 1,
+      "pending": 2
+    },
+    {
+      "category": "app:vs code",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:pieces os",
+      "received": 1,
+      "resolved": 1,
+      "pending": 0
+    },
+    {
+      "category": "status:triaged",
+      "received": 1,
+      "resolved": 1,
+      "pending": 0
+    }
+  ],
+  "most_active_tickets": [
+    {
+      "number": 711,
+      "title": "Unable to Connect to Pieces Servers",
+      "activity_level": 5.68
+    },
+    {
+      "number": 315,
+      "title": "Pieces desktop application is very slow/laggy, not generating any response in copilot chat.",
+      "activity_level": 4.48
+    },
+    {
+      "number": 712,
+      "title": "copy button in pieces vs code extension keeps loading indefinitely.",
+      "activity_level": 4.42
+    }
+  ],
+  "common_issues": [
+    {
+      "title": "Pieces Desktop App Performance and Connectivity Issues",
+      "description": "Users are experiencing slow performance, infinite loading of the copy button in the VS Code extension, and inability to connect to Pieces servers.  Issues appear across different Pieces OS versions (10.0.1, 11.3.6) on Windows.  Troubleshooting steps include checking internet connection, switching networks, and restarting Pieces OS. Further investigation needed to identify root cause and solutions.",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 712,
+          "title": "copy button in pieces vs code extension keeps loading indefinitely.",
+          "text": "copy button in pieces vs code extension keeps loading indefinitely.\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, VS Code\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.3.6.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nThe copy button keeps loading forever. \n\n![Image](https://github.com/user-attachments/assets/cd302f52-5374-4f54-b9f3-a5b260906a72)\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 4.42
+        },
+        {
+          "id": 315,
+          "title": "Pieces desktop application is very slow/laggy, not generating any response in copilot chat.",
+          "text": "Pieces desktop application is very slow/laggy, not generating any response in copilot chat.\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n10.0.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nPieces desktop application is working very much slow after latest update, takes very much time to give any response. Even after doing a hard reset active runtime, it just do not work. \nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 4.48
+        },
+        {
+          "id": 711,
+          "title": "Unable to Connect to Pieces Servers",
+          "text": "Unable to Connect to Pieces Servers\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.3.6\n\n### Early Access Program\n\n- [x] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nSince today, every client receives the following error in the AI chat:\n\n> \"I'm sorry, we're having trouble reaching our cloud services. This is likely due to an issue with your local network such as limited connectivity. Try checking your internet connection or switching your network then try again. If that doesn't work please contact support.\"\n\nThis error occurs on various networks and in any models.\n\nSteps to Reproduce:\n\n1. Restart PiecesOS.\n2. Open the client application.\n3. Enter any query in the AI chat.\n4. Observe the error message.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 5.68
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    "Investigate the root cause of the connectivity issues affecting Pieces Desktop App and VS Code extension, focusing on Windows OS and Pieces OS versions 10.0.1 and 11.3.6.",
+    "Prioritize resolution of the \"Unable to Connect to Pieces Servers\" issue (Ticket #711) due to its high activity level and impact on users.",
+    "Address the performance issues reported in Ticket #315 to improve the responsiveness of the Pieces desktop application and Copilot chat.",
+    "Look into the issue with the VS Code extension's copy button (Ticket #712) to ensure smooth functionality.",
+    "Proactively monitor and address connectivity issues to minimize disruptions for users.",
+    "Improve communication with users regarding ongoing issues and their resolution status.",
+    "Gather more data on user environments and configurations to identify potential patterns or contributing factors to the reported problems.",
+    "Consider implementing automated diagnostics or troubleshooting tools to assist users and support staff in resolving common issues quickly.",
+    "Review and update documentation and FAQs related to connectivity and performance troubleshooting for Pieces Desktop App and VS Code extension.",
+    "Allocate resources to address the backlog of open tickets and improve response times to user inquiries."
+  ],
+  "message": "Daily support report generated successfully."
+}
