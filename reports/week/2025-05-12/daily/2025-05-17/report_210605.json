@@ -1,0 +1,68 @@
+{
+  "success": true,
+  "date_range": {
+    "start": "2025-05-17T00:00:00+00:00",
+    "end": "2025-05-17T21:06:05.609353+00:00"
+  },
+  "summary": {
+    "total_tickets": 1,
+    "resolved_tickets": 0,
+    "open_tickets": 1
+  },
+  "ticket_breakdown": [
+    {
+      "category": "bug",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "os:windows",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:desktop application",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:pieces os",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:triaged",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    }
+  ],
+  "most_active_tickets": [
+    {
+      "number": 668,
+      "title": "Pieces stuck on 70% CPU on one processor interfering with other keyboard chain handlers. System became unresponsive",
+      "activity_level": 2.97
+    }
+  ],
+  "common_issues": [
+    {
+      "title": "Pieces OS high CPU usage leads to system unresponsiveness",
+      "description": "Pieces OS stuck at 70% CPU on one processor, affecting keyboard chain handlers like zvirtualDesktop, causing system unresponsiveness. Uninstalling Pieces OS and rebooting resolved the issue.  Consider warning users about potential instability and ensure data storage transparency before public release.",
+      "frequency": 1,
+      "related_issues": [
+        {
+          "id": 668,
+          "title": "Pieces stuck on 70% CPU on one processor interfering with other keyboard chain handlers. System became unresponsive",
+          "text": "Pieces stuck on 70% CPU on one processor interfering with other keyboard chain handlers. System became unresponsive\n### Checked for Existing Issues?\n\n- [ ] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nCurrent\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nA specific keyboard chain handler that was affected and incapacitated was zvirtualDesktop which has been in use for several years and behaves well with other handlers.\n\nEventually I was able to kill the Pieces OS instance but as I didn''t know what, if any, other effects there had been I restarted the machine. In logging in the MS new machine set of dialogs started, it evidently believed that this was the first run. I restarted again and so far the machine is working normally.\n\nI uninstalled the Pieces OS and Pieces Desktop before the initial reboot. It's possible there was a dirty Registry on the first restart as it was a warm restart.\n\nI do not believe that this product is suitable for public use without a considerable warning that there may be trouble ahead. As it is I don't think it's a product ready for market given the other points I've observed, (the inability to install it to other than the boot drive, the lack of information or control of where data is stored and so on.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 2.97
+        }
+      ]
+    }
+  ],
+  "recommendations": [],
+  "message": "Daily support report generated successfully."
+}

@@ -1,0 +1,90 @@
+{
+  "success": true,
+  "date_range": {
+    "start": "2025-05-16T00:00:00+00:00",
+    "end": "2025-05-16T13:15:06.235459+00:00"
+  },
+  "summary": {
+    "total_tickets": 2,
+    "resolved_tickets": 1,
+    "open_tickets": 1
+  },
+  "ticket_breakdown": [
+    {
+      "category": "app:desktop application",
+      "received": 2,
+      "resolved": 1,
+      "pending": 1
+    },
+    {
+      "category": "bug",
+      "received": 1,
+      "resolved": 1,
+      "pending": 0
+    },
+    {
+      "category": "os:windows",
+      "received": 1,
+      "resolved": 1,
+      "pending": 0
+    },
+    {
+      "category": "app:pieces os",
+      "received": 1,
+      "resolved": 1,
+      "pending": 0
+    },
+    {
+      "category": "status:triaged",
+      "received": 1,
+      "resolved": 1,
+      "pending": 0
+    }
+  ],
+  "most_active_tickets": [
+    {
+      "number": 711,
+      "title": "Unable to Connect to Pieces Servers",
+      "activity_level": 5.68
+    },
+    {
+      "number": 315,
+      "title": "Pieces desktop application is very slow/laggy, not generating any response in copilot chat.",
+      "activity_level": 4.48
+    }
+  ],
+  "common_issues": [
+    {
+      "title": "Pieces Desktop App Slow, Unresponsive, or Unable to Connect",
+      "description": "Users report slow performance, unresponsiveness, and \"unable to reach cloud services\" errors in the Pieces desktop app on Windows. Issues involve Copilot chat and various models.  Troubleshooting includes checking internet connection, switching networks, and restarting PiecesOS.  Problem appears across different Pieces OS versions (10.0.1, 11.3.6).",
+      "frequency": 2,
+      "related_issues": [
+        {
+          "id": 315,
+          "title": "Pieces desktop application is very slow/laggy, not generating any response in copilot chat.",
+          "text": "Pieces desktop application is very slow/laggy, not generating any response in copilot chat.\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n10.0.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nPieces desktop application is working very much slow after latest update, takes very much time to give any response. Even after doing a hard reset active runtime, it just do not work. \nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 4.48
+        },
+        {
+          "id": 711,
+          "title": "Unable to Connect to Pieces Servers",
+          "text": "Unable to Connect to Pieces Servers\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.3.6\n\n### Early Access Program\n\n- [x] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nSince today, every client receives the following error in the AI chat:\n\n> \"I'm sorry, we're having trouble reaching our cloud services. This is likely due to an issue with your local network such as limited connectivity. Try checking your internet connection or switching your network then try again. If that doesn't work please contact support.\"\n\nThis error occurs on various networks and in any models.\n\nSteps to Reproduce:\n\n1. Restart PiecesOS.\n2. Open the client application.\n3. Enter any query in the AI chat.\n4. Observe the error message.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 5.68
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    "Investigate the root cause of the \"Unable to Connect to Pieces Servers\" error (ticket #711) as it has the highest activity level and impacts multiple users across different networks and models.",
+    "Address the performance issues in the Pieces desktop application (ticket #315) to improve user experience, especially slow response times in Copilot chat.",
+    "Prioritize resolving open tickets related to the 'app:desktop application' category as it has the highest number of pending issues.",
+    "Monitor and analyze the frequency of 'bug' and 'os:windows' related issues to identify potential systemic problems and implement preventative measures.",
+    "Proactively communicate with users about known issues and troubleshooting steps, such as checking internet connection and restarting PiecesOS, to reduce support ticket volume.",
+    "Consider implementing performance monitoring and logging to quickly identify and diagnose performance bottlenecks in the desktop application and PiecesOS.",
+    "Review and update documentation related to troubleshooting connectivity issues and desktop application performance to empower users with self-service solutions.",
+    "Analyze the relationship between Pieces OS versions (10.0.1, 11.3.6) and reported issues to determine if specific versions contribute to the problems.",
+    "Investigate the '404 Publisher Model' error appearing in the error logs of affected tickets to understand its connection to the connectivity and performance problems.",
+    "Implement a system for tracking and categorizing user feedback to identify recurring issues and prioritize development efforts based on user impact."
+  ],
+  "message": "Daily support report generated successfully."
+}
