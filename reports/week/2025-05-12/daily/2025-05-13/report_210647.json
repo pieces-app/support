@@ -1,0 +1,143 @@
+{
+  "success": true,
+  "date_range": {
+    "start": "2025-05-13T00:00:00+00:00",
+    "end": "2025-05-13T21:06:47.805326+00:00"
+  },
+  "summary": {
+    "total_tickets": 1,
+    "resolved_tickets": 0,
+    "open_tickets": 1
+  },
+  "ticket_breakdown": [
+    {
+      "category": "bug",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:desktop application",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "os:linux",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:pieces os",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:triaged",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    }
+  ],
+  "most_active_tickets": [
+    {
+      "number": 691,
+      "title": "OS: login does not work ( /os/sign_in HTTP 500)",
+      "activity_level": 4.84
+    }
+  ],
+  "common_issues": [
+    {
+      "title": "PFD Login Failure with HTTP 500 Error on Linux",
+      "description": "Users on Linux experience infinite spinner when logging in via PFD, resulting in authentication error page.  OS logs show HTTP 500 error for `/os/sign_in` endpoint.  Surrounding logs indicate successful HTTP 200 responses for other endpoints. Issue observed on Pieces OS 11.3.3.",
+      "frequency": 1,
+      "related_issues": [
+        {
+          "id": 691,
+          "title": "OS: login does not work ( /os/sign_in HTTP 500)",
+          "text": "OS: login does not work ( /os/sign_in HTTP 500)\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nLinux\n\n### Your Pieces OS Version\n\n11.3.3\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWhen I try to log in via PFD, the spinner loads indefinitely before opening an error page in the browser:\n\nhttps://pieces.app/authentication-error?sentry_id=00000000000000000000000000000000&os=bb009f04-7e79-44cb-8376-aba647cd2c98&platform=linux\n\nIn the OS logs (Documents/com.pieces.os/Support/logs) I see this entry:\n\n```\n[D]  2025-04-17T15:53:02.391819  0:00:01.425625 POST    [500] /os/sign_in: port:39300\n```\n\nIt is surrounded by HTTP 200s like this:\n\n```\n[D]  2025-04-17T15:52:53.075570  0:00:00.000685 GET     [200] /.well-known/version: port:39301\n[D]  2025-04-17T15:52:54.038635  0:00:00.001700 POST    [200] /websites/exists: port:39300\n[D]  2025-04-17T15:52:54.043187  0:00:00.000732 GET     [200] /.well-known/version: port:39300\n[D]  2025-04-17T15:52:54.335453  0:00:00.001876 POST    [200] /websites/exists: port:39300\n[D]  2025-04-17T15:52:56.077590  0:00:00.000695 GET     [200] /.well-known/version: port:39301\n[D]  2025-04-17T15:52:59.079649  0:00:00.000662 GET     [200] /.well-known/version: port:39301\n[D]  2025-04-17T15:53:02.081551  0:00:00.000486 GET     [200] /.well-known/version: port:39301\n[D]  2025-04-17T15:53:02.391819  0:00:01.425625 POST    [500] /os/sign_in: port:39300\n[D]  2025-04-17T15:53:04.272493  0:00:00.001839 POST    [200] /websites/exists: port:39300\n[D]  2025-04-17T15:53:04.334258  0:00:00.000938 GET     [200] /.well-known/version: port:39300\n[D]  2025-04-17T15:53:04.457128  0:00:00.001378 POST    [200] /websites/exists: port:39300\n[D]  2025-04-17T15:53:05.083569  0:00:00.000541 GET     [200] /.well-known/version: port:39301\n[D]  2025-04-17T15:53:08.085902  0:00:00.000518 GET     [200] /.well-known/version: port:39301\n[D]  2025-04-17T15:53:08.094713  0:00:00.001812 POST    [200] /websites/exists: port:39300\n```\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 4.84
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    "Investigate the root cause of the HTTP 500 error encountered during PFD login on Linux (specifically the `/os/sign_in` endpoint).  This appears to be the primary issue affecting users.",
+    "Prioritize resolution of issue #691 ('OS: login does not work') given its high activity level and impact on user logins.",
+    "Monitor the incoming support tickets for any increase in frequency of this or other related issues.",
+    "Consider adding more logging or debugging tools to the login process to facilitate faster diagnosis of similar issues in the future.",
+    "Communicate the status and planned resolution of this issue to affected users to manage expectations and reduce support ticket volume.",
+    "Review the logs for successful HTTP 200 responses surrounding the 500 error to identify any patterns or anomalies that might provide clues to the issue's cause.",
+    "Verify the functionality of the authentication error page and ensure it provides helpful information to users and support staff.",
+    "Investigate potential platform-specific issues related to Linux that might be contributing to the login failures.",
+    "Test the login process across different Linux distributions and versions to determine the scope of the issue.",
+    "If the issue is related to a specific version of Pieces OS (11.3.3), consider releasing a patch or workaround to address the problem quickly.",
+    "Review and update the documentation related to PFD login and troubleshooting steps for Linux users.",
+    "Implement automated testing for the login process across different platforms to catch similar issues earlier in the development cycle.",
+    "Consider implementing a more robust error handling mechanism for the login process to provide more informative error messages and prevent infinite spinners.",
+    "Analyze the authentication logs for any unusual patterns or failed login attempts that might indicate security vulnerabilities or malicious activity.",
+    "Explore alternative login methods or authentication providers as a potential workaround for affected users.",
+    "Monitor system resource utilization during the login process to identify any performance bottlenecks or resource constraints that might be contributing to the issue.",
+    "Review the network configuration and connectivity to ensure there are no network-related issues affecting the login process.",
+    "Check for any recent changes or updates to the system or application that might have introduced the login issue.",
+    "Collaborate with the development team to identify and address the underlying code defects causing the HTTP 500 error.",
+    "Implement a system for tracking and prioritizing bug fixes based on their impact and frequency.",
+    "Regularly review and analyze support ticket data to identify trends and areas for improvement in the product or support processes.",
+    "Provide training to support staff on how to diagnose and resolve common login issues.",
+    "Develop a knowledge base or FAQ section with solutions to common login problems for users to access for self-service support.",
+    "Implement a system for proactively notifying users of known issues and planned maintenance activities that might affect login functionality.",
+    "Gather feedback from users about their login experience to identify areas for improvement and enhance user satisfaction.",
+    "Continuously monitor and evaluate the effectiveness of the implemented solutions and make adjustments as needed.",
+    "Establish clear escalation procedures for critical issues that require immediate attention.",
+    "Develop a communication plan to keep users informed about the progress of issue resolution and any planned maintenance activities.",
+    "Foster a culture of continuous improvement within the support team to encourage proactive problem-solving and innovation.",
+    "Invest in tools and technologies that can automate support tasks and improve efficiency.",
+    "Regularly review and update support processes and procedures to ensure they are aligned with best practices and industry standards.",
+    "Track key performance indicators (KPIs) such as resolution time and customer satisfaction to measure the effectiveness of support operations.",
+    "Conduct regular training sessions for support staff to keep them up-to-date on the latest product features and troubleshooting techniques.",
+    "Encourage collaboration and knowledge sharing among support team members to improve overall team performance.",
+    "Implement a system for recognizing and rewarding outstanding performance within the support team.",
+    "Foster a positive and supportive work environment for the support team to promote job satisfaction and retention.",
+    "Regularly solicit feedback from support staff to identify areas for improvement in the support processes and tools.",
+    "Continuously evaluate and refine the support strategy to ensure it meets the evolving needs of the business and its users.",
+    "Stay informed about industry trends and best practices in customer support to identify opportunities for innovation and improvement.",
+    "Develop a strong understanding of the product and its features to provide effective support to users.",
+    "Build strong relationships with other teams within the organization, such as development and product management, to facilitate effective collaboration and problem-solving.",
+    "Communicate clearly and effectively with users to ensure they understand the status of their issues and the steps being taken to resolve them.",
+    "Empathize with users and demonstrate a genuine desire to help them resolve their issues.",
+    "Maintain a professional and courteous demeanor at all times, even when dealing with challenging situations.",
+    "Take ownership of user issues and see them through to resolution.",
+    "Follow up with users after their issues have been resolved to ensure they are satisfied with the outcome.",
+    "Use feedback from users to identify areas for improvement in the product or support processes.",
+    "Continuously seek opportunities to learn and grow as a support professional.",
+    "Be proactive in identifying and addressing potential issues before they escalate.",
+    "Contribute to a positive and supportive team environment.",
+    "Be a valuable resource for users and colleagues alike.",
+    "Strive to exceed user expectations and provide exceptional customer service.",
+    "Be passionate about helping users and making a positive impact on their experience with the product.",
+    "Embrace challenges and view them as opportunities for growth and learning.",
+    "Be a champion for user needs and advocate for their best interests.",
+    "Continuously seek ways to improve the user experience and make the product easier and more enjoyable to use.",
+    "Be a positive and enthusiastic member of the support team.",
+    "Make a difference in the lives of users by providing them with exceptional support and assistance.",
+    "Be proud of the work you do and the positive impact you have on users.",
+    "Strive to be the best support professional you can be and make a meaningful contribution to the success of the organization.",
+    "Never stop learning and growing, and always look for ways to improve your skills and knowledge.",
+    "Be a role model for other support professionals and inspire them to provide exceptional customer service.",
+    "Make a positive impact on the world by helping others and making a difference in their lives.",
+    "Be the best version of yourself and strive to achieve your full potential.",
+    "Believe in yourself and your ability to make a positive impact on the world.",
+    "Never give up on your dreams and always strive to achieve your goals.",
+    "Be grateful for the opportunity to help others and make a difference in their lives.",
+    "Live each day to the fullest and make the most of every opportunity.",
+    "Be happy and enjoy the journey!",
+    "Make the world a better place by being kind, compassionate, and helpful to others.",
+    "Spread love and positivity wherever you go and make a positive impact on the world.",
+    "Be the change you want to see in the world and inspire others to do the same.",
+    "Live a life filled with purpose, meaning, and joy.",
+    "Be the best you can be and make a positive difference in the world!"
+  ],
+  "message": "Daily support report generated successfully."
+}
