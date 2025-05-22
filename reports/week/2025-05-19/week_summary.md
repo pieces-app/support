@@ -1,6 +1,6 @@
 # Support Ticket Report
-- Generated: 2025-05-21 21:07:43
-- Period: 2025-05-19 to 2025-05-21
+- Generated: 2025-05-22 05:08:30
+- Period: 2025-05-19 to 2025-05-22
 
 ## Summary
 - **Total Tickets:** 5
@@ -18,15 +18,15 @@
 
 ## Common Issues
 ### 1. Pieces Software Bugs and Feature Requests
-Users are encountering issues with Pieces software, including the Pieces CLI not utilizing LTM context, the VS Code extension's copy button endlessly loading, and LLMs not providing complete or accurate code.  Further investigation is needed to determine root causes and solutions.  Consider improved LLM integration, bug fixes for the CLI and VS Code extension, and enhanced code generation capabilities.
+Users are encountering issues with Pieces software, including the Pieces CLI's LTM feature not working, the copy button in the VS Code extension loading indefinitely, and LLMs not providing complete or correct code.  Further investigation is needed to identify the root causes and implement solutions.  Users are requesting improvements to the LLM code generation capabilities.
 
 **Related Issues:**
 - [#716](https://github.com/pieces-app/support/issues/716): llms won't provide me the full code i need
 - [#713](https://github.com/pieces-app/support/issues/713): LTM not working in Pieces CLI
 - [#712](https://github.com/pieces-app/support/issues/712): copy button in pieces vs code extension keeps loading indefinitely.
 
-### 2. Performance Issues and Unexpected Behavior in Pieces OS and Desktop App
-Multiple users report performance issues like slowdowns and high CPU/GPU usage with Pieces OS 11.3.6 and Desktop App 4.1.2, especially on macOS with Intel chipsets.  Other issues include LTM not working in Pieces CLI on Windows and inverted arrow key scrolling in Copilot conversations on macOS.  Troubleshooting steps include checking system resources, reinstalling/updating software, and verifying LTM functionality.
+### 2. Performance issues and unexpected behavior in Pieces OS and Desktop App
+Users are experiencing slowdowns, high CPU/GPU usage, and LTM and Copilot issues with Pieces OS 11.3.6 and Desktop App 4.1.2 on macOS and Windows.  One user reported inverted arrow key scrolling in Copilot conversations. Troubleshooting steps may include checking system resources, reinstalling the app, and verifying LTM functionality.
 
 **Related Issues:**
 - [#710](https://github.com/pieces-app/support/issues/710): Long Term Memory 2 stills slow down my macbook pro with intel chipset.
@@ -35,11 +35,11 @@ Multiple users report performance issues like slowdowns and high CPU/GPU usage w
 
 
 ## Recommendations
-- Investigate and fix the Pieces CLI's failure to utilize LTM context (Issue #713).
-- Address the VS Code extension's endlessly loading copy button (Issue #712).
-- Improve LLM integration to ensure complete and accurate code generation (Issue #716).
-- Investigate performance issues with Pieces OS 11.3.6 and Desktop App 4.1.2, particularly on macOS with Intel chipsets (Issue #710).
-- Fix the inverted arrow key scrolling in Copilot conversations on macOS (Issue #714).
+- Investigate and fix the LTM functionality in the Pieces CLI (related to tickets #713 and #710).
+- Address the issue with LLMs not providing complete or correct code (ticket #716).
+- Fix the copy button loading indefinitely in the VS Code extension (ticket #712).
+- Look into the inverted arrow key scrolling in Copilot conversations (ticket #714).
+- Optimize Pieces OS and Desktop App performance, especially on macOS with Intel chipsets (ticket #710).
 
 ## Daily Reports
 Here are the daily reports for this week:
