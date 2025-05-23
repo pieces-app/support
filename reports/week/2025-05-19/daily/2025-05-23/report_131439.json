@@ -1,0 +1,70 @@
+{
+  "success": true,
+  "date_range": {
+    "start": "2025-05-23T00:00:00+00:00",
+    "end": "2025-05-23T13:14:39.619197+00:00"
+  },
+  "summary": {
+    "total_tickets": 1,
+    "resolved_tickets": 0,
+    "open_tickets": 1
+  },
+  "ticket_breakdown": [
+    {
+      "category": "bug",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "os:windows",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:desktop application",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:triaged",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    }
+  ],
+  "most_active_tickets": [
+    {
+      "number": 719,
+      "title": "Pieces Desktop freezes after inactivity",
+      "activity_level": 5.68
+    }
+  ],
+  "common_issues": [
+    {
+      "title": "Pieces Desktop Freezes After Inactivity",
+      "description": "Pieces Desktop (4.1.3) on Windows freezes after a period of inactivity, especially after interacting with a chat with LTM enabled and using Claude 3.7 Sonnet as the default LLM.  The issue started frequently occurring after the May 22nd update. Restarting Pieces Desktop is the current workaround.  The freeze doesn't occur if the user hasn't interacted with a chat prior to the inactivity period.",
+      "frequency": 1,
+      "related_issues": [
+        {
+          "id": 719,
+          "title": "Pieces Desktop freezes after inactivity",
+          "text": "Pieces Desktop freezes after inactivity\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.4.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nPieces OS - 11.4.1\nPieces Desktop - 4.1.3\n\nPieces desktop randomly freezes after a period of inactivity. I would interact with it in a chat, go back to working in another app and after a while go back to Desktop to find it had frozen. Restart of Pieces Desktop is needed. Note that this problem is very frequent since latest update on May 22nd, but not systematic. I had also noticed this kind of behavior before the updated but put it on the count of my Hardware, Intel i5, 16Gbram Asus Vivobook, but I think I can dismiss this theory.\n\nWhere it gets tricky is that this behavior seems to only happen if I had, prior to returning to Pieces Desktop, interacted with a chat. In cases where I simply had started Desktop, worked on something else and gone back to Desktop, it would keep working properly.\n\nNoteworthy: LTM is enabled by default for all chats. Default LLM: Claude 3.7 Sonnet.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 5.68
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    "Investigate the bug causing Pieces Desktop to freeze after inactivity, especially after interacting with a chat with LTM enabled and using Claude 3.7 Sonnet.",
+    "Prioritize resolving issue #719: 'Pieces Desktop freezes after inactivity', as it has the highest activity level and frequency.",
+    "Gather more data on the specific conditions causing the freeze, such as hardware configurations, LLM usage, and chat activity patterns.",
+    "Consider providing users with temporary workarounds or mitigation steps while the bug is being investigated.",
+    "Improve communication with users regarding the status of the bug and expected resolution timeline.",
+    "Review the May 22nd update for potential regressions that may have introduced or exacerbated the freezing issue.",
+    "Investigate the 404 error encountered when generating summaries, related to the Publisher Model access for 'projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro'."
+  ],
+  "message": "Daily support report generated successfully."
+}
