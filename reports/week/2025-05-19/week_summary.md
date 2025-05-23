@@ -1,6 +1,6 @@
 # Support Ticket Report
-- Generated: 2025-05-22 21:08:36
-- Period: 2025-05-19 to 2025-05-22
+- Generated: 2025-05-23 05:08:31
+- Period: 2025-05-19 to 2025-05-23
 
 ## Summary
 - **Total Tickets:** 8
@@ -18,7 +18,7 @@
 
 ## Common Issues
 ### 1. Pieces Desktop Application Bugs
-Users reported various bugs in the Pieces Desktop Application across macOS and Windows. These include incorrect calendar day associations in chat summaries, incomplete or incorrect code generation from LLMs, and inverted arrow key scrolling in Copilot conversations.  Further investigation is needed to identify the root causes and implement fixes for these issues.
+Users reported issues with the Pieces desktop application, including incorrect calendar days in chat summaries on macOS, incomplete code generation from LLMs on Windows, and inverted arrow key scrolling in Copilot conversations on macOS.  Further investigation is needed to identify the root causes and implement fixes for these diverse issues across different operating systems and features.
 
 **Related Issues:**
 - [#720](https://github.com/pieces-app/support/issues/720): Problems with calendar days
@@ -26,7 +26,7 @@ Users reported various bugs in the Pieces Desktop Application across macOS and W
 - [#714](https://github.com/pieces-app/support/issues/714): Arrow keys inverted when scrolling through Copilot conversation
 
 ### 2. Pieces Desktop Freezes and High Resource Usage
-Users report Pieces Desktop freezing after inactivity, especially after using chat, on Windows and macOS.  High CPU and GPU usage is also observed, particularly on older macOS systems with Intel chipsets. Issues occur with various Pieces OS versions (11.3.6-11.4.1) and Desktop versions (4.1.2-4.1.3).  Restarting the application temporarily resolves the freezing issue. Further investigation is needed to pinpoint the root cause and provide a permanent solution.
+Users report Pieces Desktop freezing after inactivity, especially after using chat, requiring a restart.  High CPU and GPU usage are also observed, sometimes freezing the entire system. Issues occur across Windows and macOS, with varying Pieces OS and Desktop versions.  Users with lower system resources seem more affected. Further investigation into resource management and chat interaction is needed.
 
 **Related Issues:**
 - [#719](https://github.com/pieces-app/support/issues/719): Pieces Desktop freezes after inactivity
@@ -34,15 +34,15 @@ Users report Pieces Desktop freezing after inactivity, especially after using ch
 - [#710](https://github.com/pieces-app/support/issues/710): Long Term Memory 2 stills slow down my macbook pro with intel chipset.
 
 ### 3. Pieces for Windows Freezes/Crashes with LTM
-Multiple reports on Windows show Pieces freezing or crashing, often related to LTM usage or large content. Issues appear across Pieces CLI, Desktop app, and OS versions 11.3.6-11.4.1. CLI shows LTM context failure. Desktop freezes after inactivity, especially after chat interaction with LTM enabled.  Large content in browser tabs also triggers crashes.  Users report no relevant logs. Further investigation needed to isolate LTM's role and potential memory issues.
+Multiple reports on Windows show Pieces freezing or crashing, often related to LTM usage or large content. Issues appear in CLI and Desktop app, across versions 11.3.6-11.4.1.  CLI shows LTM connection errors. Desktop freezes after inactivity, especially following chat interactions with LTM enabled.  Memory usage may be a factor, as crashes correlate with large content in Chrome tabs. Further investigation needed to isolate LTM's role and potential memory leaks.
 
 **Related Issues:**
 - [#713](https://github.com/pieces-app/support/issues/713): LTM not working in Pieces CLI
 - [#718](https://github.com/pieces-app/support/issues/718): Pieces crash when on Chrome tab with a lot of content
 - [#719](https://github.com/pieces-app/support/issues/719): Pieces Desktop freezes after inactivity
 
-### 4. Pieces for Windows Freezes and Crashes
-Users report Pieces for Windows freezing and crashing under various conditions.  One user experienced an indefinite loading state with the copy button in VS Code extension. Another user reported crashes when viewing large amounts of content in Chrome, such as long logs. A third user observed frequent freezes after periods of inactivity, especially after interacting with chat features.  Issues appear across recent Pieces versions (11.3.6.0, 11.4.0, 11.4.1).
+### 4. Pieces Freezes and Crashes on Windows
+Multiple users report Pieces freezing or crashing on Windows. Issues include infinite loading of the copy button in VS Code extension, crashes when viewing large content in Chrome tabs, and freezes after inactivity, especially after chat interactions.  Users report this across Pieces OS versions 11.3.6.0, 11.4.0, and 11.4.1.  Further investigation is needed to determine the root cause and potential solutions.
 
 **Related Issues:**
 - [#712](https://github.com/pieces-app/support/issues/712): copy button in pieces vs code extension keeps loading indefinitely.
@@ -51,12 +51,11 @@ Users report Pieces for Windows freezing and crashing under various conditions. 
 
 
 ## Recommendations
-- Investigate and fix the bugs in the Pieces Desktop Application related to calendar day associations, incomplete code generation from LLMs, and inverted arrow key scrolling.
-- Address the freezing and high resource usage issues reported on Windows and macOS, particularly after chat usage and on older macOS systems with Intel chipsets. Investigate LTM's potential role in these issues.
-- Resolve the LTM context failure in Pieces CLI on Windows and ensure consistent LTM functionality across all platforms.
-- Investigate and fix the crashes reported on Windows related to large content in Chrome tabs and after inactivity, especially following chat interactions.
-- Address the indefinite loading state of the copy button in the VS Code extension on Windows.
-- Prioritize the most active tickets, particularly #716 (LLM code generation), #718 (Windows crashes with large content), and #710 (High resource usage on older macOS).
+- Investigate and fix the issue with Pieces Desktop application bugs across different operating systems (macOS and Windows), including incorrect calendar days in chat summaries, incomplete code generation from LLMs, and inverted arrow key scrolling in Copilot conversations.
+- Address the freezing and high resource usage issues reported for Pieces Desktop on both Windows and macOS. Focus on resource management and chat interaction as potential causes, especially after periods of inactivity and with LTM enabled.
+- Resolve the LTM-related issues on Windows, including connection errors in the CLI and freezing/crashing in the Desktop app, particularly after chat interactions. Investigate potential memory leaks and LTM's role in these issues.
+- Fix the copy button functionality in the Pieces VS Code extension on Windows, which currently loads indefinitely.
+- Prioritize resolving the most active tickets, starting with #716 (LLM code generation), #718 (Pieces crashing with large content), and #710 (LTM performance on macOS).
 
 ## Daily Reports
 Here are the daily reports for this week:
