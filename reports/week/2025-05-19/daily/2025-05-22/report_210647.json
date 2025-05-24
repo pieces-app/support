@@ -1,0 +1,196 @@
+{
+  "success": true,
+  "date_range": {
+    "start": "2025-05-22T00:00:00+00:00",
+    "end": "2025-05-22T21:06:47.644688+00:00"
+  },
+  "summary": {
+    "total_tickets": 4,
+    "resolved_tickets": 0,
+    "open_tickets": 4
+  },
+  "ticket_breakdown": [
+    {
+      "category": "bug",
+      "received": 4,
+      "resolved": 0,
+      "pending": 4
+    },
+    {
+      "category": "status:new",
+      "received": 3,
+      "resolved": 0,
+      "pending": 3
+    },
+    {
+      "category": "app:desktop application",
+      "received": 4,
+      "resolved": 0,
+      "pending": 4
+    },
+    {
+      "category": "os:macos",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "os:windows",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "app:pieces os",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "status:triaged",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    }
+  ],
+  "most_active_tickets": [
+    {
+      "number": 718,
+      "title": "Pieces crash when on Chrome tab with a lot of content",
+      "activity_level": 10.73
+    },
+    {
+      "number": 710,
+      "title": "Long Term Memory 2 stills slow down my macbook pro with intel chipset.",
+      "activity_level": 8.43
+    },
+    {
+      "number": 720,
+      "title": "Problems with calendar days",
+      "activity_level": 4.42
+    },
+    {
+      "number": 719,
+      "title": "Pieces Desktop freezes after inactivity",
+      "activity_level": 4.42
+    }
+  ],
+  "common_issues": [
+    {
+      "title": "Pieces app freezes or crashes under heavy load or inactivity",
+      "description": "Users report Pieces for Desktop and OS freezing or crashing on Windows and macOS, especially with large amounts of content in Chrome tabs or after periods of inactivity.  High CPU/GPU usage is observed. Issues occur with various Pieces versions (11.3.6, 11.4.0, 11.4.1) and involve Long Term Memory and Claude 3.7 Sonnet LLM.  Users with 16GB RAM and multi-core processors are affected.  No consistent error logs are found.",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 718,
+          "title": "Pieces crash when on Chrome tab with a lot of content",
+          "text": "Pieces crash when on Chrome tab with a lot of content\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.4.0\n\n### Early Access Program\n\n- [x] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n1. Start Pieces OS and Pieces for Developers and use them as normal.\n2. Open a tab with a large amount of content. In my case, it was a GitLab CI job with a 6k line job log. I also experienced crashes with ArgoCD when having 100+ apps on a page.\n3. Both Pieces OS and Pieces for Developers crash. There are no corresponding log records in the Support directory, only logs about application startup.\n\nSometimes it freezes Chrome completely.\n\nI have 16GB RAM, 12 vCPU, and have never experienced such behavior without Pieces.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 10.73
+        },
+        {
+          "id": 719,
+          "title": "Pieces Desktop freezes after inactivity",
+          "text": "Pieces Desktop freezes after inactivity\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.4.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nPieces OS - 11.4.1\nPieces Desktop - 4.1.3\n\nPieces desktop randomly freezes after a period of inactivity. I would interact with it in a chat, go back to working in another app and after a while go back to Desktop to find it had frozen. Restart of Pieces Desktop is needed. Note that this problem is very frequent since latest update on May 22nd, but not systematic. I had also noticed this kind of behavior before the updated but put it on the count of my Hardware, Intel i5, 16Gbram Asus Vivobook, but I think I can dismiss this theory.\n\nWhere it gets tricky is that this behavior seems to only happen if I had, prior to returning to Pieces Desktop, interacted with a chat. In cases where I simply had started Desktop, worked on something else and gone back to Desktop, it would keep working properly.\n\nNoteworthy: LTM is enabled by default for all chats. Default LLM: Claude 3.7 Sonnet.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 4.42
+        },
+        {
+          "id": 710,
+          "title": "Long Term Memory 2 stills slow down my macbook pro with intel chipset.",
+          "text": "Long Term Memory 2 stills slow down my macbook pro with intel chipset.\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n11.3.6\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWhen i run pieces desktop app and pieces os. My macbook pro fan starts at the top speed which results to slows down my pc. I will add some details related to my macbook and pieces version with some screen shots.\n\n\n**Mac details -**\nProcessor - 2.2 GHz Quad-Core Intel Core i7\nGraphics - Intel Iris Pro 1536 MB\nMemory - 16 GB 1600 MHz DDR3\nMacOS - 15.5 (24F74)\n\n<img width=\"224\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/a34f83cb-60c3-4221-9539-b807e7238cee\" />\n\nPieces Desktop version - 4.1.2\nPieces OS - 11.3.6\n\n\n**Images for CPU and GPU Usage**\n\n<img width=\"677\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/e803c79b-2dea-49f9-a2ef-56a323f57f02\" />\n\n<img width=\"682\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/232dac90-319b-4ed0-8479-53c640908394\" />\n<img width=\"682\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/573a7173-be13-4421-a7c6-b24c83c45dec\" />\n<img width=\"908\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/719b1e7c-dd1a-43f7-9d0a-d3c7278d3fa9\" />\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 8.43
+        }
+      ]
+    },
+    {
+      "title": "Pieces Desktop App Bugs and Performance Issues",
+      "description": "Users reported issues with the Pieces Desktop app on macOS and Windows. These include incorrect calendar days in chat summaries, application freezing after inactivity, especially after chat interactions, and high CPU/GPU usage leading to slow performance on macOS.  Further investigation is needed to identify the root causes and solutions.",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 720,
+          "title": "Problems with calendar days",
+          "text": "Problems with calendar days\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n11.4.2\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWhen using chat, I've notices in several occasions that when I ask something like \"Give me a summary of what I did between May 2 and today\", it always messes up the calendar days like saying \"Monday - May 2\" and it was a Friday. And its difficult to get it to properly give the date with the correct day \"Monday, Tuesday, etc\". Kind of makes me doubt if its actually saving and giving me the proper info of the dates for activities and everything.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 4.42
+        },
+        {
+          "id": 719,
+          "title": "Pieces Desktop freezes after inactivity",
+          "text": "Pieces Desktop freezes after inactivity\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.4.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nPieces OS - 11.4.1\nPieces Desktop - 4.1.3\n\nPieces desktop randomly freezes after a period of inactivity. I would interact with it in a chat, go back to working in another app and after a while go back to Desktop to find it had frozen. Restart of Pieces Desktop is needed. Note that this problem is very frequent since latest update on May 22nd, but not systematic. I had also noticed this kind of behavior before the updated but put it on the count of my Hardware, Intel i5, 16Gbram Asus Vivobook, but I think I can dismiss this theory.\n\nWhere it gets tricky is that this behavior seems to only happen if I had, prior to returning to Pieces Desktop, interacted with a chat. In cases where I simply had started Desktop, worked on something else and gone back to Desktop, it would keep working properly.\n\nNoteworthy: LTM is enabled by default for all chats. Default LLM: Claude 3.7 Sonnet.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 4.42
+        },
+        {
+          "id": 710,
+          "title": "Long Term Memory 2 stills slow down my macbook pro with intel chipset.",
+          "text": "Long Term Memory 2 stills slow down my macbook pro with intel chipset.\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n11.3.6\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWhen i run pieces desktop app and pieces os. My macbook pro fan starts at the top speed which results to slows down my pc. I will add some details related to my macbook and pieces version with some screen shots.\n\n\n**Mac details -**\nProcessor - 2.2 GHz Quad-Core Intel Core i7\nGraphics - Intel Iris Pro 1536 MB\nMemory - 16 GB 1600 MHz DDR3\nMacOS - 15.5 (24F74)\n\n<img width=\"224\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/a34f83cb-60c3-4221-9539-b807e7238cee\" />\n\nPieces Desktop version - 4.1.2\nPieces OS - 11.3.6\n\n\n**Images for CPU and GPU Usage**\n\n<img width=\"677\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/e803c79b-2dea-49f9-a2ef-56a323f57f02\" />\n\n<img width=\"682\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/232dac90-319b-4ed0-8479-53c640908394\" />\n<img width=\"682\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/573a7173-be13-4421-a7c6-b24c83c45dec\" />\n<img width=\"908\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/719b1e7c-dd1a-43f7-9d0a-d3c7278d3fa9\" />\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 8.43
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    "Investigate and address the root cause of Pieces app crashes under heavy load, specifically on Windows and macOS with Chrome tabs containing large content.  Prioritize this issue due to its high frequency (3 reports) and high activity level (issue #718).",
+    "Investigate and fix the Pieces Desktop freezing issue after periods of inactivity, especially following chat interactions. This also has a high frequency (3 reports) and moderate activity level (issue #719).",
+    "Address the inaccurate calendar days reported in chat summaries on macOS (issue #720).",
+    "Investigate high CPU/GPU usage on macOS, particularly with Long Term Memory enabled, as reported in issue #710.  This impacts performance and user experience.",
+    "Improve error logging to provide more consistent and informative logs for troubleshooting crashes and freezes.  The lack of consistent error logs hinders effective debugging.",
+    "Consider optimizing Pieces Desktop and OS for better performance under heavy load and with large amounts of content.  This may involve memory management improvements or other optimizations.",
+    "Ensure the support documentation and knowledge base are updated with troubleshooting steps and workarounds for known issues, such as crashes and freezes.",
+    "Monitor support tickets for new trends and emerging issues.  Proactive monitoring can help identify and address problems early on before they become widespread.",
+    "Communicate with affected users and provide updates on the progress of investigations and fixes.  Transparency and communication can improve user satisfaction and reduce frustration during outages or performance issues.",
+    "Implement automated testing to catch regressions and prevent recurring issues in future releases.  Automated testing can improve software quality and reduce the number of bugs reported by users.",
+    "Gather more data on user hardware and software configurations to identify potential patterns or common factors contributing to crashes and freezes.  This data can help narrow down the root causes and target fixes more effectively.",
+    "Consider providing users with clear instructions on how to submit helpful bug reports, including steps to reproduce the issue, relevant logs, and system information.  High-quality bug reports can significantly speed up the debugging process.",
+    "Prioritize bug fixes and performance improvements based on the frequency and severity of reported issues.  Focus on addressing the most impactful problems first to maximize the benefit for users.",
+    "Establish a clear escalation path for critical issues to ensure they are addressed promptly and efficiently.  A well-defined escalation process can minimize downtime and user disruption.",
+    "Regularly review and analyze support data to identify areas for improvement in support operations and product development.  Data-driven insights can inform decision-making and lead to more effective solutions.",
+    "Provide support staff with the necessary tools and resources to effectively diagnose and resolve user issues.  This may include access to debugging tools, documentation, and training.",
+    "Encourage users to participate in beta testing programs to identify and report issues early in the development cycle.  Early feedback can help prevent bugs from reaching production releases.",
+    "Implement a system for tracking and managing bug reports to ensure that all reported issues are addressed and resolved in a timely manner.  A robust bug tracking system can improve workflow and accountability.",
+    "Consider offering different support channels, such as email, chat, and phone support, to cater to different user preferences and needs.  Multiple support channels can improve accessibility and user satisfaction.",
+    "Regularly survey users to gather feedback on their support experiences and identify areas for improvement.  User feedback can provide valuable insights into the effectiveness of support operations and identify areas where changes are needed.",
+    "Develop a comprehensive support strategy that aligns with the overall business goals and objectives.  A well-defined support strategy can ensure that support operations are effective and efficient.",
+    "Invest in training and development for support staff to enhance their technical skills and problem-solving abilities.  Well-trained support staff can provide better service and resolve issues more effectively.",
+    "Foster a culture of continuous improvement within the support team.  Encourage feedback and suggestions from support staff to identify and implement process improvements.",
+    "Regularly review and update support processes and procedures to ensure they are aligned with best practices and industry standards.  Staying up-to-date with best practices can improve the efficiency and effectiveness of support operations.",
+    "Implement a knowledge management system to capture and share knowledge within the support team.  A knowledge management system can improve efficiency and reduce the time it takes to resolve issues.",
+    "Use analytics and reporting tools to track key support metrics, such as resolution time, customer satisfaction, and ticket volume.  Data-driven insights can help identify areas for improvement and measure the effectiveness of support operations.",
+    "Automate routine support tasks, such as ticket routing and assignment, to free up support staff to focus on more complex issues.  Automation can improve efficiency and reduce response times.",
+    "Proactively identify and address potential support issues before they impact users.  Proactive support can improve user satisfaction and prevent problems from escalating.",
+    "Establish service level agreements (SLAs) for different types of support requests to ensure that users receive timely and consistent support.  SLAs can help manage user expectations and improve accountability.",
+    "Regularly communicate with users about planned maintenance or outages to minimize disruption and frustration.  Proactive communication can improve user satisfaction and reduce support inquiries.",
+    "Develop a comprehensive disaster recovery plan to ensure that support operations can continue in the event of an unexpected outage or disaster.  A disaster recovery plan can minimize downtime and ensure business continuity.",
+    "Implement a system for monitoring and managing support costs to ensure that support operations are cost-effective.  Cost management can help optimize resource allocation and improve efficiency.",
+    "Regularly review and update support policies and procedures to ensure they are compliant with relevant regulations and legal requirements.  Compliance can help mitigate risk and protect the organization from legal liabilities.",
+    "Foster a positive and supportive work environment for support staff to improve morale and job satisfaction.  A positive work environment can lead to better performance and higher retention rates.",
+    "Recognize and reward outstanding performance within the support team to motivate and encourage excellence.  Recognition and rewards can improve morale and job satisfaction.",
+    "Provide opportunities for professional development and career growth for support staff to enhance their skills and knowledge.  Professional development can improve job satisfaction and retention rates.",
+    "Encourage collaboration and knowledge sharing between support staff and other teams within the organization.  Cross-functional collaboration can improve communication and problem-solving.",
+    "Stay up-to-date with industry trends and best practices in support operations to ensure that the support team is using the most effective methods and tools.  Continuous learning can improve efficiency and effectiveness.",
+    "Regularly assess the effectiveness of support operations and make adjustments as needed to improve performance and meet evolving business needs.  Ongoing evaluation can ensure that support operations are aligned with organizational goals and objectives.",
+    "Leverage technology to improve support operations, such as using AI-powered chatbots to handle routine inquiries or implementing self-service portals for users to access information and resolve issues on their own.  Technology can improve efficiency and reduce costs.",
+    "Develop a comprehensive onboarding program for new support staff to ensure they are properly trained and equipped to handle user inquiries.  Effective onboarding can improve performance and reduce ramp-up time.",
+    "Establish clear communication channels between support staff and other teams within the organization to facilitate information sharing and collaboration.  Effective communication can improve problem-solving and reduce response times.",
+    "Implement a system for tracking and measuring customer satisfaction with support services to identify areas for improvement and ensure that users are receiving the level of support they expect.  Customer feedback can provide valuable insights into the effectiveness of support operations.",
+    "Develop a comprehensive knowledge base that is easily accessible to users and provides answers to common questions and issues.  A self-service knowledge base can reduce support inquiries and improve user satisfaction.",
+    "Use customer relationship management (CRM) software to manage customer interactions and track support requests.  CRM software can improve efficiency and provide a centralized view of customer information.",
+    "Implement a system for prioritizing support requests based on urgency and impact to ensure that critical issues are addressed promptly.  Prioritization can improve response times and minimize disruption for users.",
+    "Develop a process for escalating complex or unresolved issues to higher levels of support or to other teams within the organization.  Escalation procedures can ensure that difficult issues are handled effectively and efficiently.",
+    "Provide support staff with access to relevant documentation and resources, such as product manuals and troubleshooting guides, to help them resolve issues quickly and accurately.  Access to information can improve efficiency and reduce resolution times.",
+    "Encourage users to provide feedback on their support experiences to identify areas for improvement and ensure that support services are meeting their needs.  User feedback can provide valuable insights into the effectiveness of support operations.",
+    "Regularly review and update support documentation and resources to ensure they are accurate and up-to-date.  Accurate information can improve efficiency and reduce resolution times.",
+    "Use analytics and reporting tools to track support metrics and identify trends and patterns in user inquiries.  Data-driven insights can help identify areas for improvement and optimize support operations.",
+    "Implement a system for managing support contracts and service level agreements (SLAs) to ensure that users are receiving the level of support they are entitled to.  Contract management can improve accountability and transparency.",
+    "Develop a process for handling customer complaints and resolving disputes effectively and efficiently.  Complaint management can improve customer satisfaction and protect the organization's reputation.",
+    "Provide support staff with training on customer service best practices to ensure they are providing professional and courteous support to users.  Customer service training can improve user satisfaction and build positive relationships.",
+    "Foster a culture of customer-centricity within the support team to ensure that user needs are always prioritized.  A customer-centric approach can improve user satisfaction and loyalty.",
+    "Regularly review and update support policies and procedures to ensure they are aligned with the organization's overall customer service strategy.  Policy alignment can improve consistency and effectiveness of support operations.",
+    "Use surveys and feedback forms to gather customer feedback on support services and identify areas for improvement.  Customer feedback can provide valuable insights into user needs and preferences.",
+    "Implement a system for tracking and measuring customer satisfaction with support services to identify areas for improvement and ensure that users are receiving the level of support they expect.  Customer satisfaction metrics can provide valuable data for evaluating the effectiveness of support operations.",
+    "Develop a comprehensive customer support strategy that aligns with the organization's overall business goals and objectives.  A well-defined customer support strategy can ensure that support operations are effective and efficient in meeting customer needs and contributing to business success.",
+    "Continuously monitor and evaluate the effectiveness of support operations and make adjustments as needed to improve performance and meet evolving customer needs.  Ongoing evaluation can ensure that support operations are aligned with organizational goals and customer expectations.",
+    "Leverage technology to improve support operations, such as using AI-powered chatbots to handle routine inquiries or implementing self-service portals for users to access information and resolve issues on their own.  Technology can improve efficiency, reduce costs, and enhance the customer experience.",
+    "Develop a comprehensive onboarding program for new support staff to ensure they are properly trained and equipped to handle user inquiries.  Effective onboarding can improve performance, reduce ramp-up time, and contribute to a positive customer experience.",
+    "Establish clear communication channels between support staff and other teams within the organization to facilitate information sharing and collaboration.  Effective communication can improve problem-solving, reduce response times, and enhance the customer experience."
+  ],
+  "message": "Daily support report generated successfully."
+}
