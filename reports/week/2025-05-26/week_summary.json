@@ -2,55 +2,37 @@
   "success": true,
   "date_range": {
     "start": "2025-05-26T00:00:00+00:00",
-    "end": "2025-05-27T13:18:09.311211+00:00"
+    "end": "2025-05-27T21:07:39.017524+00:00"
   },
   "summary": {
-    "total_tickets": 6,
+    "total_tickets": 7,
     "resolved_tickets": 2,
-    "open_tickets": 4
+    "open_tickets": 5
   },
   "ticket_breakdown": [
     {
       "category": "bug",
-      "received": 6,
+      "received": 7,
       "resolved": 2,
-      "pending": 4
+      "pending": 5
     },
     {
       "category": "os:windows",
-      "received": 4,
+      "received": 5,
       "resolved": 2,
-      "pending": 2
-    },
-    {
-      "category": "app:desktop application",
-      "received": 6,
-      "resolved": 2,
-      "pending": 4
-    },
-    {
-      "category": "app:vs code",
-      "received": 1,
-      "resolved": 1,
-      "pending": 0
-    },
-    {
-      "category": "status:triaged",
-      "received": 4,
-      "resolved": 1,
       "pending": 3
     },
     {
-      "category": "os:macos",
-      "received": 2,
-      "resolved": 0,
-      "pending": 2
+      "category": "app:desktop application",
+      "received": 7,
+      "resolved": 2,
+      "pending": 5
     },
     {
-      "category": "app:web extension",
-      "received": 1,
-      "resolved": 0,
-      "pending": 1
+      "category": "status:triaged",
+      "received": 5,
+      "resolved": 1,
+      "pending": 4
     },
     {
       "category": "status:new",
@@ -62,6 +44,24 @@
       "category": "app:pieces os",
       "received": 2,
       "resolved": 1,
+      "pending": 1
+    },
+    {
+      "category": "app:vs code",
+      "received": 1,
+      "resolved": 1,
+      "pending": 0
+    },
+    {
+      "category": "os:macos",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "app:web extension",
+      "received": 1,
+      "resolved": 0,
       "pending": 1
     },
     {
@@ -78,14 +78,19 @@
       "activity_level": 13.15
     },
     {
+      "number": 718,
+      "title": "Pieces crash when on Chrome tab with a lot of content",
+      "activity_level": 7.0
+    },
+    {
+      "number": 729,
+      "title": "No response to chat. It just keeps loading .",
+      "activity_level": 6.94
+    },
+    {
       "number": 724,
       "title": "Discord link provided is invalid in Pieces OS",
       "activity_level": 6.38
-    },
-    {
-      "number": 718,
-      "title": "Pieces crash when on Chrome tab with a lot of content",
-      "activity_level": 6.33
     },
     {
       "number": 727,
@@ -100,38 +105,63 @@
     {
       "number": 712,
       "title": "copy button in pieces vs code extension keeps loading indefinitely.",
-      "activity_level": 2.97
+      "activity_level": 2.89
     }
   ],
   "common_issues": [
     {
-      "title": "Invalid Discord Invite Links Across Pieces Platforms",
-      "description": "Multiple reports indicate invalid Discord invite links on the Pieces website, documentation, and Pieces OS.  The links provided include discord.gg/getpieces, discord.com/invite/getpieces, and discord.gg/ubn8JFAXQ7.  A permanent, non-expiring link should replace these instances across all platforms.",
+      "title": "Pieces Bugs and Crashes Across Platforms",
+      "description": "Users report crashes and malfunctions in Pieces OS, Pieces for Developers, and VS Code extension. Issues include crashes when Chrome tabs have extensive content (e.g., large logs), infinite loading of the copy button in VS Code, and invalid Discord invite links on the Pieces website.  Further investigation is needed to identify the root causes and solutions.",
       "frequency": 3,
       "related_issues": [
+        {
+          "id": 718,
+          "title": "Pieces crash when on Chrome tab with a lot of content",
+          "text": "Pieces crash when on Chrome tab with a lot of content\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.4.0\n\n### Early Access Program\n\n- [x] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n1. Start Pieces OS and Pieces for Developers and use them as normal.\n2. Open a tab with a large amount of content. In my case, it was a GitLab CI job with a 6k line job log. I also experienced crashes with ArgoCD when having 100+ apps on a page.\n3. Both Pieces OS and Pieces for Developers crash. There are no corresponding log records in the Support directory, only logs about application startup.\n\nSometimes it freezes Chrome completely.\n\nI have 16GB RAM, 12 vCPU, and have never experienced such behavior without Pieces.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 7.0
+        },
+        {
+          "id": 712,
+          "title": "copy button in pieces vs code extension keeps loading indefinitely.",
+          "text": "copy button in pieces vs code extension keeps loading indefinitely.\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, VS Code\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.3.6.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nThe copy button keeps loading forever. \n\n![Image](https://github.com/user-attachments/assets/cd302f52-5374-4f54-b9f3-a5b260906a72)\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 2.89
+        },
         {
           "id": 723,
           "title": "Discord link provided is invalid on the website",
           "text": "Discord link provided is invalid on the website\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Marketing Site (pieces.app)\n\n### Operating System / Platform\n\nWeb\n\n### Your Pieces OS Version\n\n11.4.2\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nThe main Pieces website [page](<https://pieces.app>) offers the following Discord invite link: <https://discord.gg/getpieces>\n\n![Image](https://github.com/user-attachments/assets/106f7b8e-0f74-4efa-a6ec-9cfe48133198)\n\nThe support [page](<https://docs.pieces.app/products/support>) of Pieces documentation website offers the following Discord invite link: <https://discord.com/invite/getpieces>\n\n![Image](https://github.com/user-attachments/assets/87064aff-9a18-420f-bb9f-a86e358e3dea)\n\nBoth of the above Discord invite links are invalid. You should create one without an expiration date and replace all those.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
           "activity_level": 13.15
+        }
+      ]
+    },
+    {
+      "title": "Pieces OS: Loading issues and invalid Discord link",
+      "description": "Users report infinite loading in chat (GPT 4.1) and VS Code extension's copy button.  One report notes an invalid Discord link in the Pieces OS app.  Check for connectivity issues, extension conflicts, and verify the Discord link's validity.",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 729,
+          "title": "No response to chat. It just keeps loading .",
+          "text": "No response to chat. It just keeps loading .\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.42\n\n### Early Access Program\n\n- [x] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI write  a prompt and hit send and it keeps loading . Will not respond. GPT 4.1\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 6.94
+        },
+        {
+          "id": 712,
+          "title": "copy button in pieces vs code extension keeps loading indefinitely.",
+          "text": "copy button in pieces vs code extension keeps loading indefinitely.\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, VS Code\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.3.6.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nThe copy button keeps loading forever. \n\n![Image](https://github.com/user-attachments/assets/cd302f52-5374-4f54-b9f3-a5b260906a72)\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 2.89
         },
         {
           "id": 724,
           "title": "Discord link provided is invalid in Pieces OS",
           "text": "Discord link provided is invalid in Pieces OS\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.4.2\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nPieces OS app offers the following Discord invite link: <https://discord.gg/ubn8JFAXQ7>\n\n![Image](https://github.com/user-attachments/assets/894385e1-db70-49fc-8f48-f5abafadeac0)\n\nThe above Discord invite link is invalid. You should create one without an expiration date and replace it.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
           "activity_level": 6.38
-        },
-        {
-          "id": 718,
-          "title": "Pieces crash when on Chrome tab with a lot of content",
-          "text": "Pieces crash when on Chrome tab with a lot of content\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.4.0\n\n### Early Access Program\n\n- [x] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n1. Start Pieces OS and Pieces for Developers and use them as normal.\n2. Open a tab with a large amount of content. In my case, it was a GitLab CI job with a 6k line job log. I also experienced crashes with ArgoCD when having 100+ apps on a page.\n3. Both Pieces OS and Pieces for Developers crash. There are no corresponding log records in the Support directory, only logs about application startup.\n\nSometimes it freezes Chrome completely.\n\nI have 16GB RAM, 12 vCPU, and have never experienced such behavior without Pieces.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 6.33
         }
       ]
     },
     {
-      "title": "Pieces Desktop Application Bugs Across Platforms",
-      "description": "Users reported various issues with the Pieces desktop application, including: on MacOS, the app periodically jumps to the main monitor and steals focus; on Windows, the app crashes when a Chrome tab has extensive content (e.g., large log files); and an incorrect icon is displayed for the Sublime Text plugin in the Connected Applications menu.  Reinstallation may resolve the MacOS focus issue. The Windows crashes may be related to resource constraints. The incorrect icon is a visual bug needing correction.",
+      "title": "Pieces desktop app bugs across platforms",
+      "description": "Users reported issues with the Pieces desktop application on macOS and Windows. On macOS, the app periodically jumps to the main monitor and steals focus. On Windows, the app crashes when a Chrome tab with extensive content is open.  Additionally, an incorrect icon is displayed for the Sublime Text plugin in the Connected Applications menu. Reinstallation may resolve the focus issue on macOS.",
       "frequency": 3,
       "related_issues": [
         {
@@ -144,32 +174,7 @@
           "id": 718,
           "title": "Pieces crash when on Chrome tab with a lot of content",
           "text": "Pieces crash when on Chrome tab with a lot of content\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.4.0\n\n### Early Access Program\n\n- [x] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n1. Start Pieces OS and Pieces for Developers and use them as normal.\n2. Open a tab with a large amount of content. In my case, it was a GitLab CI job with a 6k line job log. I also experienced crashes with ArgoCD when having 100+ apps on a page.\n3. Both Pieces OS and Pieces for Developers crash. There are no corresponding log records in the Support directory, only logs about application startup.\n\nSometimes it freezes Chrome completely.\n\nI have 16GB RAM, 12 vCPU, and have never experienced such behavior without Pieces.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 6.33
-        },
-        {
-          "id": 722,
-          "title": "Sublime Text plugin icon is bogus",
-          "text": "Sublime Text plugin icon is bogus\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.4.2\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nThe Connected Applications menu in Settings uses Pieces icon for Sublime Plugin.\n\n![Image](https://github.com/user-attachments/assets/6a6d4db1-3767-43cf-a15a-d16a88a0e9a2)\n\nIt should be using the Sublime Text 4 icon, since that is what you have published the plugin for.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 4.06
-        }
-      ]
-    },
-    {
-      "title": "Pieces for Windows: Issues with VS Code extension, crashes, and incorrect icons",
-      "description": "Users reported issues with the Pieces Windows app, including the VS Code extension's copy button endlessly loading, application crashes when Chrome tabs have extensive content (e.g., long logs), and incorrect icons displayed for the Sublime Text plugin in the Connected Applications menu.  The crashes seem to occur with large amounts of data being processed. Icon issue is visual only. Further investigation needed for all issues.",
-      "frequency": 3,
-      "related_issues": [
-        {
-          "id": 712,
-          "title": "copy button in pieces vs code extension keeps loading indefinitely.",
-          "text": "copy button in pieces vs code extension keeps loading indefinitely.\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, VS Code\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.3.6.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nThe copy button keeps loading forever. \n\n![Image](https://github.com/user-attachments/assets/cd302f52-5374-4f54-b9f3-a5b260906a72)\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 2.97
-        },
-        {
-          "id": 718,
-          "title": "Pieces crash when on Chrome tab with a lot of content",
-          "text": "Pieces crash when on Chrome tab with a lot of content\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.4.0\n\n### Early Access Program\n\n- [x] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n1. Start Pieces OS and Pieces for Developers and use them as normal.\n2. Open a tab with a large amount of content. In my case, it was a GitLab CI job with a 6k line job log. I also experienced crashes with ArgoCD when having 100+ apps on a page.\n3. Both Pieces OS and Pieces for Developers crash. There are no corresponding log records in the Support directory, only logs about application startup.\n\nSometimes it freezes Chrome completely.\n\nI have 16GB RAM, 12 vCPU, and have never experienced such behavior without Pieces.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 6.33
+          "activity_level": 7.0
         },
         {
           "id": 722,
@@ -181,12 +186,12 @@
     }
   ],
   "recommendations": [
-    "Prioritize resolving the Discord invite link issue across all platforms (website, documentation, Pieces OS) by implementing a permanent, non-expiring link.",
-    "Investigate and address the Pieces desktop application crashes on Windows when Chrome tabs contain extensive content, possibly related to resource constraints.",
-    "Fix the MacOS desktop application issue where it periodically jumps to the main monitor and steals focus.",
-    "Correct the visual bug where the Sublime Text plugin displays an incorrect icon in the Connected Applications menu.",
-    "Investigate and resolve the issue with the VS Code extension's copy button endlessly loading on Windows.",
-    "Monitor and triage new incoming tickets to ensure timely resolution and identify emerging trends or recurring issues across different applications and operating systems (Windows, MacOS)."
+    "Investigate and resolve the Discord link issue across website and Pieces OS app.",
+    "Prioritize fixing the Pieces crash triggered by Chrome tabs with extensive content.",
+    "Address the infinite loading issue in the VS Code extension's copy button and Pieces OS chat with GPT 4.1.",
+    "Look into the macOS desktop app periodically jumping to the main monitor and grabbing focus.",
+    "Correct the Sublime Text plugin icon in the Connected Applications menu.",
+    "Monitor and address remaining bug reports and crashes across platforms (Windows, macOS, VS Code, web extension)."
   ],
   "message": "Daily support report generated successfully."
 }
