@@ -2,19 +2,49 @@
   "success": true,
   "date_range": {
     "start": "2025-05-26T00:00:00+00:00",
-    "end": "2025-05-29T21:09:41.008793+00:00"
+    "end": "2025-05-30T05:08:42.855259+00:00"
   },
   "summary": {
-    "total_tickets": 10,
+    "total_tickets": 11,
     "resolved_tickets": 2,
-    "open_tickets": 8
+    "open_tickets": 9
   },
   "ticket_breakdown": [
     {
       "category": "bug",
-      "received": 10,
+      "received": 11,
       "resolved": 2,
-      "pending": 8
+      "pending": 9
+    },
+    {
+      "category": "status:new",
+      "received": 4,
+      "resolved": 1,
+      "pending": 3
+    },
+    {
+      "category": "app:desktop application",
+      "received": 11,
+      "resolved": 2,
+      "pending": 9
+    },
+    {
+      "category": "os:macos",
+      "received": 4,
+      "resolved": 0,
+      "pending": 4
+    },
+    {
+      "category": "app:pieces os",
+      "received": 4,
+      "resolved": 1,
+      "pending": 3
+    },
+    {
+      "category": "app:pieces copilot module",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
     },
     {
       "category": "os:windows",
@@ -23,34 +53,10 @@
       "pending": 5
     },
     {
-      "category": "app:desktop application",
-      "received": 10,
-      "resolved": 2,
-      "pending": 8
-    },
-    {
       "category": "status:triaged",
       "received": 7,
       "resolved": 1,
       "pending": 6
-    },
-    {
-      "category": "os:macos",
-      "received": 3,
-      "resolved": 0,
-      "pending": 3
-    },
-    {
-      "category": "app:pieces os",
-      "received": 3,
-      "resolved": 1,
-      "pending": 2
-    },
-    {
-      "category": "status:new",
-      "received": 3,
-      "resolved": 1,
-      "pending": 2
     },
     {
       "category": "app:vs code",
@@ -98,14 +104,19 @@
       "activity_level": 4.83
     },
     {
-      "number": 730,
-      "title": "WSL cannot connect to Pieces OS in VS Code",
+      "number": 731,
+      "title": "Pieces Copilot doesn't get the LTM info and shows a wrong date",
       "activity_level": 4.42
     },
     {
       "number": 729,
       "title": "No response to chat. It just keeps loading .",
       "activity_level": 3.88
+    },
+    {
+      "number": 730,
+      "title": "WSL cannot connect to Pieces OS in VS Code",
+      "activity_level": 3.5
     },
     {
       "number": 722,
@@ -120,40 +131,46 @@
     {
       "number": 727,
       "title": "MacOS Desktop periodically jumps to main monitor & grabs focus off of current window",
-      "activity_level": 2.15
+      "activity_level": 1.93
     }
   ],
   "common_issues": [
     {
-      "title": "Invalid Discord Invite Links Across Pieces Platforms",
-      "description": "Multiple reports indicate broken Discord invite links on the Pieces website, documentation, and Pieces OS.  The links provided are either expired or incorrect. A permanent, non-expiring link should be created and updated across all platforms to resolve this.",
+      "title": "Pieces Software Bugs and Invalid Discord Link",
+      "description": "Users reported issues with Pieces Desktop application including incorrect LTM information in Copilot chat, freezing after inactivity, and invalid Discord invite links on the website and documentation.  The LTM issue was resolved by providing specific context to Copilot. The freezing issue is intermittent and potentially related to chat interaction.  The Discord links need updating with a non-expiring link.",
       "frequency": 3,
       "related_issues": [
+        {
+          "id": 731,
+          "title": "Pieces Copilot doesn't get the LTM info and shows a wrong date",
+          "text": "Pieces Copilot doesn't get the LTM info and shows a wrong date\n### Checked for Existing Issues?\n\n- [ ] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n11.4.2\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nAfter I did all my work with LTM turned on, I used the `Start Copilot Chat` button in the **Workstream Activity** View of Pieces Desktop. I asked it to generate some quiz questions based on what I studied, and it started talking about a lot of unrelated topics, even when the context was provided. Though when I started a new chat based on the context again and became more specific with the details such as lecture name and number (that was the one and only thing in the context I started the conversation with), it did it correctly. Also, all this while, the context time showed Last Thursday so I think there is an UI bug too. \n\n**Context Image:**\n![Image](https://github.com/user-attachments/assets/ab732ff6-d195-4e81-a2af-6cee1e1d2032)\n\n**Chat Image (Where it talks about unrelated topics):**\n![Image](https://github.com/user-attachments/assets/8d6abd44-60a0-4f0c-9f8a-1cf1a887fd2e)\n\n**Chat Image (Where it was fixed):**\n![Image](https://github.com/user-attachments/assets/c7d86c81-ba0e-4ec3-8e2f-49a326ac232a)\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 4.42
+        },
+        {
+          "id": 719,
+          "title": "Pieces Desktop freezes after inactivity",
+          "text": "Pieces Desktop freezes after inactivity\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.4.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nPieces OS - 11.4.1\nPieces Desktop - 4.1.3\n\nPieces desktop randomly freezes after a period of inactivity. I would interact with it in a chat, go back to working in another app and after a while go back to Desktop to find it had frozen. Restart of Pieces Desktop is needed. Note that this problem is very frequent since latest update on May 22nd, but not systematic. I had also noticed this kind of behavior before the updated but put it on the count of my Hardware, Intel i5, 16Gbram Asus Vivobook, but I think I can dismiss this theory.\n\nWhere it gets tricky is that this behavior seems to only happen if I had, prior to returning to Pieces Desktop, interacted with a chat. In cases where I simply had started Desktop, worked on something else and gone back to Desktop, it would keep working properly.\n\nNoteworthy: LTM is enabled by default for all chats. Default LLM: Claude 3.7 Sonnet.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 6.17
+        },
         {
           "id": 723,
           "title": "Discord link provided is invalid on the website",
           "text": "Discord link provided is invalid on the website\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Marketing Site (pieces.app)\n\n### Operating System / Platform\n\nWeb\n\n### Your Pieces OS Version\n\n11.4.2\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nThe main Pieces website [page](<https://pieces.app>) offers the following Discord invite link: <https://discord.gg/getpieces>\n\n![Image](https://github.com/user-attachments/assets/106f7b8e-0f74-4efa-a6ec-9cfe48133198)\n\nThe support [page](<https://docs.pieces.app/products/support>) of Pieces documentation website offers the following Discord invite link: <https://discord.com/invite/getpieces>\n\n![Image](https://github.com/user-attachments/assets/87064aff-9a18-420f-bb9f-a86e358e3dea)\n\nBoth of the above Discord invite links are invalid. You should create one without an expiration date and replace all those.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
           "activity_level": 10.67
-        },
-        {
-          "id": 724,
-          "title": "Discord link provided is invalid in Pieces OS",
-          "text": "Discord link provided is invalid in Pieces OS\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.4.2\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nPieces OS app offers the following Discord invite link: <https://discord.gg/ubn8JFAXQ7>\n\n![Image](https://github.com/user-attachments/assets/894385e1-db70-49fc-8f48-f5abafadeac0)\n\nThe above Discord invite link is invalid. You should create one without an expiration date and replace it.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 4.83
-        },
-        {
-          "id": 718,
-          "title": "Pieces crash when on Chrome tab with a lot of content",
-          "text": "Pieces crash when on Chrome tab with a lot of content\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.4.0\n\n### Early Access Program\n\n- [x] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n1. Start Pieces OS and Pieces for Developers and use them as normal.\n2. Open a tab with a large amount of content. In my case, it was a GitLab CI job with a 6k line job log. I also experienced crashes with ArgoCD when having 100+ apps on a page.\n3. Both Pieces OS and Pieces for Developers crash. There are no corresponding log records in the Support directory, only logs about application startup.\n\nSometimes it freezes Chrome completely.\n\nI have 16GB RAM, 12 vCPU, and have never experienced such behavior without Pieces.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 5.72
         }
       ]
     },
     {
-      "title": "Pieces Desktop Freezes and High Resource Usage",
-      "description": "Users report Pieces Desktop freezing after inactivity, especially after using chat functionality.  High CPU and GPU usage are also observed, particularly on older hardware. Issues occur across Windows and macOS, potentially related to Long Term Memory and large content in browser tabs.  Restarting Pieces Desktop is a temporary workaround. Further investigation into resource management and memory leaks is needed.",
+      "title": "Pieces performance issues and crashes across platforms",
+      "description": "Users report performance issues like slowdowns and crashes on macOS and Windows.  On macOS, high CPU/GPU usage is observed with Pieces OS and Desktop App running. On Windows, the desktop app freezes after inactivity, especially after chat interactions or when Chrome tabs with extensive content are open.  Further investigation is needed to pinpoint the root causes and potential solutions.",
       "frequency": 3,
       "related_issues": [
+        {
+          "id": 710,
+          "title": "Long Term Memory 2 stills slow down my macbook pro with intel chipset.",
+          "text": "Long Term Memory 2 stills slow down my macbook pro with intel chipset.\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n11.3.6\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWhen i run pieces desktop app and pieces os. My macbook pro fan starts at the top speed which results to slows down my pc. I will add some details related to my macbook and pieces version with some screen shots.\n\n\n**Mac details -**\nProcessor - 2.2 GHz Quad-Core Intel Core i7\nGraphics - Intel Iris Pro 1536 MB\nMemory - 16 GB 1600 MHz DDR3\nMacOS - 15.5 (24F74)\n\n<img width=\"224\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/a34f83cb-60c3-4221-9539-b807e7238cee\" />\n\nPieces Desktop version - 4.1.2\nPieces OS - 11.3.6\n\n\n**Images for CPU and GPU Usage**\n\n<img width=\"677\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/e803c79b-2dea-49f9-a2ef-56a323f57f02\" />\n\n<img width=\"682\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/232dac90-319b-4ed0-8479-53c640908394\" />\n<img width=\"682\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/573a7173-be13-4421-a7c6-b24c83c45dec\" />\n<img width=\"908\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/719b1e7c-dd1a-43f7-9d0a-d3c7278d3fa9\" />\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 7.34
+        },
         {
           "id": 719,
           "title": "Pieces Desktop freezes after inactivity",
@@ -165,25 +182,19 @@
           "title": "Pieces crash when on Chrome tab with a lot of content",
           "text": "Pieces crash when on Chrome tab with a lot of content\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.4.0\n\n### Early Access Program\n\n- [x] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n1. Start Pieces OS and Pieces for Developers and use them as normal.\n2. Open a tab with a large amount of content. In my case, it was a GitLab CI job with a 6k line job log. I also experienced crashes with ArgoCD when having 100+ apps on a page.\n3. Both Pieces OS and Pieces for Developers crash. There are no corresponding log records in the Support directory, only logs about application startup.\n\nSometimes it freezes Chrome completely.\n\nI have 16GB RAM, 12 vCPU, and have never experienced such behavior without Pieces.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
           "activity_level": 5.72
-        },
-        {
-          "id": 710,
-          "title": "Long Term Memory 2 stills slow down my macbook pro with intel chipset.",
-          "text": "Long Term Memory 2 stills slow down my macbook pro with intel chipset.\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n11.3.6\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWhen i run pieces desktop app and pieces os. My macbook pro fan starts at the top speed which results to slows down my pc. I will add some details related to my macbook and pieces version with some screen shots.\n\n\n**Mac details -**\nProcessor - 2.2 GHz Quad-Core Intel Core i7\nGraphics - Intel Iris Pro 1536 MB\nMemory - 16 GB 1600 MHz DDR3\nMacOS - 15.5 (24F74)\n\n<img width=\"224\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/a34f83cb-60c3-4221-9539-b807e7238cee\" />\n\nPieces Desktop version - 4.1.2\nPieces OS - 11.3.6\n\n\n**Images for CPU and GPU Usage**\n\n<img width=\"677\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/e803c79b-2dea-49f9-a2ef-56a323f57f02\" />\n\n<img width=\"682\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/232dac90-319b-4ed0-8479-53c640908394\" />\n<img width=\"682\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/573a7173-be13-4421-a7c6-b24c83c45dec\" />\n<img width=\"908\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/719b1e7c-dd1a-43f7-9d0a-d3c7278d3fa9\" />\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 7.34
         }
       ]
     },
     {
       "title": "Pieces Desktop App Performance Issues on macOS and Windows",
-      "description": "Users report performance issues with the Pieces Desktop app on macOS and Windows. On macOS, the app periodically jumps to the main monitor and grabs focus, along with high CPU/GPU usage and system slowdown. On Windows, the app freezes after a period of inactivity, especially after interacting with a chat. Reinstalling the app and checking for extra processes may resolve focus issues.  Further investigation is needed for freezing and performance issues, potentially related to LTM and specific hardware configurations.",
+      "description": "Users are experiencing performance issues with the Pieces Desktop app on both macOS and Windows.  On macOS, the app periodically jumps to the main monitor and grabs focus, along with high CPU/GPU usage and system slowdown. On Windows, the app freezes after a period of inactivity, especially after using the chat feature. Reinstalling the app and checking for extra processes may resolve the focus issue.  The freezing issue may be related to Long Term Memory (LTM) and chat usage.",
       "frequency": 3,
       "related_issues": [
         {
           "id": 727,
           "title": "MacOS Desktop periodically jumps to main monitor & grabs focus off of current window",
           "text": "MacOS Desktop periodically jumps to main monitor & grabs focus off of current window\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n4.1.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nJust attempted reinstall, will see if that clears it up. Looks like it spawned an extra process which might be what's tripping it. So far it hasn't jumped back up, so we might be clear.\n\ni grabbed a trace of the behavior, reach out on Pieces discord if u want a copy\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 2.15
+          "activity_level": 1.93
         },
         {
           "id": 719,
@@ -201,7 +212,7 @@
     },
     {
       "title": "Pieces Desktop and VS Code extension freezing/loading issues",
-      "description": "Users report freezing or infinite loading in Pieces Desktop and VS Code extension.  Desktop freezes after inactivity, especially after chat interaction. VS Code extension's copy button also exhibits infinite loading. Issues occur across different Pieces OS versions (11.3.6, 11.4.1, 11.42) and Windows OS.  Suggested solutions include restarting Pieces Desktop, checking LTM settings, and ensuring stable internet connection.",
+      "description": "Users report Pieces Desktop and VS Code extension freezing or endlessly loading during chat interactions and copy attempts.  Issues occur on Windows across various Pieces OS versions (11.3.6.0, 11.4.1, 11.42).  One user experienced GPT 4.1 loading issues, while another noted Desktop freezing after inactivity, especially after chat use.  A third user reported the VS Code extension's copy button perpetually loading.",
       "frequency": 3,
       "related_issues": [
         {
@@ -226,14 +237,14 @@
     },
     {
       "title": "Pieces OS and VS Code Integration Issues on Windows",
-      "description": "Users are experiencing difficulties connecting Pieces OS with VS Code on Windows, especially within WSL.  Problems include empty settings windows in VS Code, inability to install Pieces extensions,  indefinite loading of the copy button, and invalid Discord invite links.  Suggested solutions include verifying network connectivity between WSL and Pieces OS, checking Pieces OS logs for errors, and ensuring the Pieces VS Code extension is properly installed and configured.",
+      "description": "Users are experiencing difficulties connecting Pieces OS with VS Code on Windows, especially within WSL.  Problems include empty settings windows, copy button issues, and connection errors.  Some have attempted custom URL settings and ngrok forwarding without success.  Error messages in VS Code and Pieces OS logs indicate potential conflicts and 404 errors.",
       "frequency": 3,
       "related_issues": [
         {
           "id": 730,
           "title": "WSL cannot connect to Pieces OS in VS Code",
           "text": "WSL cannot connect to Pieces OS in VS Code\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, VS Code\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.4.2\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI tried to use Pieces extensions in VS Code for WSL:Ubuntu. Piesces Setting window is empty, but earlier it showed two buttons Launch and Install and when you click on Install, for example, VS Code shows notification that it can't connect to Pieces OS. I tried multiple fixes I found. One is to set Custom URL for Remote environment and I tried with <Windows IP>:1000 and with NGrok forwarding of same url, both without success and I could reach both with curl. There are some errors in VS Code Developer tools related to Pieces OS extension:\n\nUncaught (in promise) TypeError: version is longer than 256 characters\nat new it (settingsView.js:1:5120)\nat UH (settingsView.js:1:9927)\nat Object.tU (settingsView.js:1:10530)\nat vN (settingsView.js:19:354749)\n\nat\nhttps://vscode-remote+wsl-002bubuntu.vscode-resource.vscode-cdn.net/home/vladan/.vscode-server/extensions/meshintelligenttechnologiesinc.pieces-vscode-2.0.6/dist/settingsView.js\n\nand Pieces OS log shows error:\n\nGET     [404] /assets/stream/identifiers: port:Instance of 'Future<int>': (2nd server)\n\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 4.42
+          "activity_level": 3.5
         },
         {
           "id": 712,
@@ -251,16 +262,13 @@
     }
   ],
   "recommendations": [
-    "Prioritize resolving the Discord invite link issue across all platforms (website, documentation, Pieces OS).  This is a recurring problem affecting multiple users.",
-    "Investigate and address the performance issues (freezing, high resource usage) reported for Pieces Desktop on both Windows and macOS. Focus on resource management and potential memory leaks, especially after chat usage and with LTM enabled.",
-    "Improve VS Code extension stability and resolve the infinite loading issue with the copy button.  Also, investigate WSL connectivity problems on Windows.",
-    "Address the reported Pieces Desktop crashes when Chrome tabs contain large amounts of content. This may indicate memory or resource management issues within the Pieces Desktop application itself.",
-    "Review and update the support documentation with troubleshooting steps for common issues like WSL connectivity, VS Code integration, and performance problems.  This will empower users to self-resolve and reduce support ticket volume.",
-    "Consider adding more robust error logging and reporting within Pieces Desktop and its integrations to facilitate faster debugging and resolution of issues.",
-    "Monitor user feedback closely for emerging trends and prioritize addressing the most frequent and impactful issues to improve overall user experience and satisfaction.",
-    "Proactively communicate known issues and planned fixes to the user community through a dedicated channel (e.g., status page, forum) to manage expectations and reduce support inquiries.",
-    "Analyze the relationship between Pieces OS versions and reported issues to identify potential regressions and prioritize fixes for affected versions.",
-    "Implement automated testing to catch common issues like broken links and basic functionality before they reach users, reducing the need for reactive support interventions. "
+    "Prioritize resolving the invalid Discord link issue across the website, documentation, and Pieces OS.",
+    "Investigate and address the performance issues with Pieces Desktop, including freezing, high CPU/GPU usage, and focus grabbing on macOS and Windows.",
+    "Troubleshoot and fix the Pieces VS Code extension issues, particularly the infinite loading copy button and WSL connection problems.",
+    "Address the Pieces Copilot LTM information and date discrepancy.",
+    "Look into the reported Pieces Desktop crashes related to Chrome tabs with extensive content and after inactivity, especially after chat interaction.",
+    "Monitor and address the GPT 4.1 loading issue in Pieces Desktop chat.",
+    "Review and update the Sublime Text plugin icon if necessary."
   ],
   "message": "Daily support report generated successfully."
 }
