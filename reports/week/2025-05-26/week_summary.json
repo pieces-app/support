@@ -2,66 +2,72 @@
   "success": true,
   "date_range": {
     "start": "2025-05-26T00:00:00+00:00",
-    "end": "2025-05-30T13:16:15.137006+00:00"
+    "end": "2025-05-30T21:08:34.736251+00:00"
   },
   "summary": {
-    "total_tickets": 12,
+    "total_tickets": 14,
     "resolved_tickets": 2,
-    "open_tickets": 10
+    "open_tickets": 12
   },
   "ticket_breakdown": [
     {
       "category": "bug",
-      "received": 12,
+      "received": 14,
       "resolved": 2,
-      "pending": 10
+      "pending": 12
     },
     {
-      "category": "os:windows",
-      "received": 8,
-      "resolved": 2,
-      "pending": 6
-    },
-    {
-      "category": "app:pieces os",
-      "received": 5,
-      "resolved": 1,
-      "pending": 4
-    },
-    {
-      "category": "app:vs code",
+      "category": "status:new",
       "received": 3,
       "resolved": 1,
       "pending": 2
     },
     {
-      "category": "status:triaged",
-      "received": 9,
-      "resolved": 1,
-      "pending": 8
-    },
-    {
       "category": "app:desktop application",
-      "received": 11,
+      "received": 13,
       "resolved": 2,
-      "pending": 9
+      "pending": 11
     },
     {
       "category": "os:macos",
-      "received": 4,
+      "received": 5,
       "resolved": 0,
-      "pending": 4
+      "pending": 5
     },
     {
-      "category": "app:pieces copilot module",
+      "category": "app:pieces os",
+      "received": 6,
+      "resolved": 1,
+      "pending": 5
+    },
+    {
+      "category": "os:windows",
+      "received": 9,
+      "resolved": 2,
+      "pending": 7
+    },
+    {
+      "category": "app:vs code",
+      "received": 4,
+      "resolved": 1,
+      "pending": 3
+    },
+    {
+      "category": "app:visual studio",
       "received": 1,
       "resolved": 0,
       "pending": 1
     },
     {
-      "category": "status:new",
-      "received": 2,
+      "category": "status:triaged",
+      "received": 10,
       "resolved": 1,
+      "pending": 9
+    },
+    {
+      "category": "app:pieces copilot module",
+      "received": 1,
+      "resolved": 0,
       "pending": 1
     },
     {
@@ -84,19 +90,24 @@
       "activity_level": 10.09
     },
     {
+      "number": 733,
+      "title": "Chat responses are slow/dont happen",
+      "activity_level": 9.46
+    },
+    {
       "number": 710,
       "title": "Long Term Memory 2 stills slow down my macbook pro with intel chipset.",
-      "activity_level": 7.19
+      "activity_level": 7.55
     },
     {
       "number": 719,
       "title": "Pieces Desktop freezes after inactivity",
-      "activity_level": 6.62
+      "activity_level": 7.37
     },
     {
       "number": 732,
       "title": "Performance Issues in VSCode with Pieces OS Active",
-      "activity_level": 5.68
+      "activity_level": 6.62
     },
     {
       "number": 731,
@@ -119,9 +130,14 @@
       "activity_level": 4.57
     },
     {
+      "number": 734,
+      "title": "Pieces Desktop keeps crashing",
+      "activity_level": 4.42
+    },
+    {
       "number": 729,
       "title": "No response to chat. It just keeps loading .",
-      "activity_level": 3.88
+      "activity_level": 3.48
     },
     {
       "number": 722,
@@ -131,7 +147,7 @@
     {
       "number": 712,
       "title": "copy button in pieces vs code extension keeps loading indefinitely.",
-      "activity_level": 2.25
+      "activity_level": 2.2
     },
     {
       "number": 727,
@@ -141,8 +157,83 @@
   ],
   "common_issues": [
     {
-      "title": "Pieces Software Bugs and Invalid Discord Link",
-      "description": "Users reported issues with Pieces Desktop application including incorrect LTM information in Copilot chat, freezing after inactivity (especially on Windows), and invalid Discord invite links on the website and documentation.  Copilot chat issues may be resolved by providing specific context. Freezing may be related to chat interaction and LTM usage.  Invalid Discord links should be replaced with a permanent link.",
+      "title": "Invalid Discord Invite Links Across Pieces Platforms",
+      "description": "Multiple reports indicate broken Discord invite links on the Pieces website, documentation, and Pieces OS.  The links provided are either expired or incorrect. A permanent, non-expiring link should be created and updated across all platforms to resolve this.",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 723,
+          "title": "Discord link provided is invalid on the website",
+          "text": "Discord link provided is invalid on the website\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Marketing Site (pieces.app)\n\n### Operating System / Platform\n\nWeb\n\n### Your Pieces OS Version\n\n11.4.2\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nThe main Pieces website [page](<https://pieces.app>) offers the following Discord invite link: <https://discord.gg/getpieces>\n\n![Image](https://github.com/user-attachments/assets/106f7b8e-0f74-4efa-a6ec-9cfe48133198)\n\nThe support [page](<https://docs.pieces.app/products/support>) of Pieces documentation website offers the following Discord invite link: <https://discord.com/invite/getpieces>\n\n![Image](https://github.com/user-attachments/assets/87064aff-9a18-420f-bb9f-a86e358e3dea)\n\nBoth of the above Discord invite links are invalid. You should create one without an expiration date and replace all those.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 10.09
+        },
+        {
+          "id": 724,
+          "title": "Discord link provided is invalid in Pieces OS",
+          "text": "Discord link provided is invalid in Pieces OS\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.4.2\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nPieces OS app offers the following Discord invite link: <https://discord.gg/ubn8JFAXQ7>\n\n![Image](https://github.com/user-attachments/assets/894385e1-db70-49fc-8f48-f5abafadeac0)\n\nThe above Discord invite link is invalid. You should create one without an expiration date and replace it.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 4.57
+        },
+        {
+          "id": 718,
+          "title": "Pieces crash when on Chrome tab with a lot of content",
+          "text": "Pieces crash when on Chrome tab with a lot of content\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.4.0\n\n### Early Access Program\n\n- [x] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n1. Start Pieces OS and Pieces for Developers and use them as normal.\n2. Open a tab with a large amount of content. In my case, it was a GitLab CI job with a 6k line job log. I also experienced crashes with ArgoCD when having 100+ apps on a page.\n3. Both Pieces OS and Pieces for Developers crash. There are no corresponding log records in the Support directory, only logs about application startup.\n\nSometimes it freezes Chrome completely.\n\nI have 16GB RAM, 12 vCPU, and have never experienced such behavior without Pieces.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 5.49
+        }
+      ]
+    },
+    {
+      "title": "Chat responses slow or nonexistent, impacting multiple Pieces OS applications",
+      "description": "Users report significant delays (up to 5 minutes) or no responses from chat functionality within Pieces OS applications (Desktop, VS Code, VS 2022).  Issue affects various operating systems (Windows) and Pieces OS versions (11.4.2).  One user experienced complete unresponsiveness with GPT 4.1. Further investigation needed to isolate the cause and potential solutions.",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 733,
+          "title": "Chat responses are slow/dont happen",
+          "text": "Chat responses are slow/dont happen\n### Checked for Existing Issues?\n\n- [ ] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Visual Studio, VS Code\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.4.2\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nwhenever i send a message, the responses come up to 5 minutes later, or simply dont happen\nhappens in vs2022/vs code/desktop app,  (and prob on everything that requires pieces os)\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 9.46
+        },
+        {
+          "id": 729,
+          "title": "No response to chat. It just keeps loading .",
+          "text": "No response to chat. It just keeps loading .\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.42\n\n### Early Access Program\n\n- [x] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI write  a prompt and hit send and it keeps loading . Will not respond. GPT 4.1\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 3.48
+        },
+        {
+          "id": 732,
+          "title": "Performance Issues in VSCode with Pieces OS Active",
+          "text": "Performance Issues in VSCode with Pieces OS Active\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nPieces OS, VS Code\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.4.2\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWhen Pieces OS is running, my VSCODE becomes very sluggish and sometimes unresponsive. But the moment I end/stop Pieces OS, my VSCode becomes more responsive.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 6.62
+        }
+      ]
+    },
+    {
+      "title": "Pieces Desktop Performance Issues and Freezes",
+      "description": "Users report performance issues, including slowdowns and crashes, primarily on macOS, often associated with Long Term Memory (LTM) usage.  Additionally, freezing occurs on Windows after inactivity, especially following chat interactions with LTM enabled.  Troubleshooting steps include checking for updates, restarting the application, and monitoring CPU/GPU usage.",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 710,
+          "title": "Long Term Memory 2 stills slow down my macbook pro with intel chipset.",
+          "text": "Long Term Memory 2 stills slow down my macbook pro with intel chipset.\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n11.3.6\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWhen i run pieces desktop app and pieces os. My macbook pro fan starts at the top speed which results to slows down my pc. I will add some details related to my macbook and pieces version with some screen shots.\n\n\n**Mac details -**\nProcessor - 2.2 GHz Quad-Core Intel Core i7\nGraphics - Intel Iris Pro 1536 MB\nMemory - 16 GB 1600 MHz DDR3\nMacOS - 15.5 (24F74)\n\n<img width=\"224\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/a34f83cb-60c3-4221-9539-b807e7238cee\" />\n\nPieces Desktop version - 4.1.2\nPieces OS - 11.3.6\n\n\n**Images for CPU and GPU Usage**\n\n<img width=\"677\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/e803c79b-2dea-49f9-a2ef-56a323f57f02\" />\n\n<img width=\"682\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/232dac90-319b-4ed0-8479-53c640908394\" />\n<img width=\"682\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/573a7173-be13-4421-a7c6-b24c83c45dec\" />\n<img width=\"908\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/719b1e7c-dd1a-43f7-9d0a-d3c7278d3fa9\" />\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 7.55
+        },
+        {
+          "id": 734,
+          "title": "Pieces Desktop keeps crashing",
+          "text": "Pieces Desktop keeps crashing\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n11.4.2\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI just updated Pieces to try out L.T.M 2.5, and I noticed that the software keeps stopping and restarting on its own. I checked for any updates I may have missed, and none. I restarted the software by forcing it to quit, but the issue persisted. \n\nThe issue only happens when I turn on L.T.M. \nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 4.42
+        },
+        {
+          "id": 719,
+          "title": "Pieces Desktop freezes after inactivity",
+          "text": "Pieces Desktop freezes after inactivity\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.4.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nPieces OS - 11.4.1\nPieces Desktop - 4.1.3\n\nPieces desktop randomly freezes after a period of inactivity. I would interact with it in a chat, go back to working in another app and after a while go back to Desktop to find it had frozen. Restart of Pieces Desktop is needed. Note that this problem is very frequent since latest update on May 22nd, but not systematic. I had also noticed this kind of behavior before the updated but put it on the count of my Hardware, Intel i5, 16Gbram Asus Vivobook, but I think I can dismiss this theory.\n\nWhere it gets tricky is that this behavior seems to only happen if I had, prior to returning to Pieces Desktop, interacted with a chat. In cases where I simply had started Desktop, worked on something else and gone back to Desktop, it would keep working properly.\n\nNoteworthy: LTM is enabled by default for all chats. Default LLM: Claude 3.7 Sonnet.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 7.37
+        }
+      ]
+    },
+    {
+      "title": "Pieces Desktop Issues with LTM",
+      "description": "Users report issues with Pieces Desktop related to LTM, including incorrect date/time display, crashes (macOS), and freezing after inactivity (Windows).  Copilot chat sometimes generates unrelated topics even with context provided. Issues appear across different Pieces OS versions (11.4.1, 11.4.2) and Desktop versions. Further investigation is needed to pinpoint the root cause and provide solutions.",
       "frequency": 3,
       "related_issues": [
         {
@@ -152,131 +243,52 @@
           "activity_level": 5.68
         },
         {
-          "id": 719,
-          "title": "Pieces Desktop freezes after inactivity",
-          "text": "Pieces Desktop freezes after inactivity\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.4.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nPieces OS - 11.4.1\nPieces Desktop - 4.1.3\n\nPieces desktop randomly freezes after a period of inactivity. I would interact with it in a chat, go back to working in another app and after a while go back to Desktop to find it had frozen. Restart of Pieces Desktop is needed. Note that this problem is very frequent since latest update on May 22nd, but not systematic. I had also noticed this kind of behavior before the updated but put it on the count of my Hardware, Intel i5, 16Gbram Asus Vivobook, but I think I can dismiss this theory.\n\nWhere it gets tricky is that this behavior seems to only happen if I had, prior to returning to Pieces Desktop, interacted with a chat. In cases where I simply had started Desktop, worked on something else and gone back to Desktop, it would keep working properly.\n\nNoteworthy: LTM is enabled by default for all chats. Default LLM: Claude 3.7 Sonnet.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 6.62
-        },
-        {
-          "id": 723,
-          "title": "Discord link provided is invalid on the website",
-          "text": "Discord link provided is invalid on the website\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Marketing Site (pieces.app)\n\n### Operating System / Platform\n\nWeb\n\n### Your Pieces OS Version\n\n11.4.2\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nThe main Pieces website [page](<https://pieces.app>) offers the following Discord invite link: <https://discord.gg/getpieces>\n\n![Image](https://github.com/user-attachments/assets/106f7b8e-0f74-4efa-a6ec-9cfe48133198)\n\nThe support [page](<https://docs.pieces.app/products/support>) of Pieces documentation website offers the following Discord invite link: <https://discord.com/invite/getpieces>\n\n![Image](https://github.com/user-attachments/assets/87064aff-9a18-420f-bb9f-a86e358e3dea)\n\nBoth of the above Discord invite links are invalid. You should create one without an expiration date and replace all those.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 10.09
-        }
-      ]
-    },
-    {
-      "title": "Invalid Discord Links and Performance Issues with Pieces OS",
-      "description": "Multiple reports indicate issues with Pieces OS, including invalid Discord invite links on the Pieces OS app, website, and documentation, and performance problems with VSCode when Pieces OS is running.  Users suggest creating non-expiring Discord links. The performance issues may require further investigation into resource usage conflicts between Pieces OS and VSCode.",
-      "frequency": 3,
-      "related_issues": [
-        {
-          "id": 724,
-          "title": "Discord link provided is invalid in Pieces OS",
-          "text": "Discord link provided is invalid in Pieces OS\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.4.2\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nPieces OS app offers the following Discord invite link: <https://discord.gg/ubn8JFAXQ7>\n\n![Image](https://github.com/user-attachments/assets/894385e1-db70-49fc-8f48-f5abafadeac0)\n\nThe above Discord invite link is invalid. You should create one without an expiration date and replace it.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 4.57
-        },
-        {
-          "id": 723,
-          "title": "Discord link provided is invalid on the website",
-          "text": "Discord link provided is invalid on the website\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Marketing Site (pieces.app)\n\n### Operating System / Platform\n\nWeb\n\n### Your Pieces OS Version\n\n11.4.2\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nThe main Pieces website [page](<https://pieces.app>) offers the following Discord invite link: <https://discord.gg/getpieces>\n\n![Image](https://github.com/user-attachments/assets/106f7b8e-0f74-4efa-a6ec-9cfe48133198)\n\nThe support [page](<https://docs.pieces.app/products/support>) of Pieces documentation website offers the following Discord invite link: <https://discord.com/invite/getpieces>\n\n![Image](https://github.com/user-attachments/assets/87064aff-9a18-420f-bb9f-a86e358e3dea)\n\nBoth of the above Discord invite links are invalid. You should create one without an expiration date and replace all those.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 10.09
-        },
-        {
-          "id": 732,
-          "title": "Performance Issues in VSCode with Pieces OS Active",
-          "text": "Performance Issues in VSCode with Pieces OS Active\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nPieces OS, VS Code\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.4.2\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWhen Pieces OS is running, my VSCODE becomes very sluggish and sometimes unresponsive. But the moment I end/stop Pieces OS, my VSCode becomes more responsive.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 5.68
-        }
-      ]
-    },
-    {
-      "title": "Pieces OS and Desktop App Performance Issues",
-      "description": "Users report performance issues, including slowdowns, freezing, and high CPU/GPU usage, when using Pieces OS and Desktop App. These issues occur across different operating systems (macOS, Windows) and affect various applications (VS Code).  The problems seem to worsen after updates and with LTM enabled. Further investigation is needed to pinpoint the exact cause and develop solutions.",
-      "frequency": 3,
-      "related_issues": [
-        {
-          "id": 710,
-          "title": "Long Term Memory 2 stills slow down my macbook pro with intel chipset.",
-          "text": "Long Term Memory 2 stills slow down my macbook pro with intel chipset.\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n11.3.6\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWhen i run pieces desktop app and pieces os. My macbook pro fan starts at the top speed which results to slows down my pc. I will add some details related to my macbook and pieces version with some screen shots.\n\n\n**Mac details -**\nProcessor - 2.2 GHz Quad-Core Intel Core i7\nGraphics - Intel Iris Pro 1536 MB\nMemory - 16 GB 1600 MHz DDR3\nMacOS - 15.5 (24F74)\n\n<img width=\"224\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/a34f83cb-60c3-4221-9539-b807e7238cee\" />\n\nPieces Desktop version - 4.1.2\nPieces OS - 11.3.6\n\n\n**Images for CPU and GPU Usage**\n\n<img width=\"677\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/e803c79b-2dea-49f9-a2ef-56a323f57f02\" />\n\n<img width=\"682\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/232dac90-319b-4ed0-8479-53c640908394\" />\n<img width=\"682\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/573a7173-be13-4421-a7c6-b24c83c45dec\" />\n<img width=\"908\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/719b1e7c-dd1a-43f7-9d0a-d3c7278d3fa9\" />\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 7.19
+          "id": 734,
+          "title": "Pieces Desktop keeps crashing",
+          "text": "Pieces Desktop keeps crashing\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n11.4.2\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI just updated Pieces to try out L.T.M 2.5, and I noticed that the software keeps stopping and restarting on its own. I checked for any updates I may have missed, and none. I restarted the software by forcing it to quit, but the issue persisted. \n\nThe issue only happens when I turn on L.T.M. \nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 4.42
         },
         {
           "id": 719,
           "title": "Pieces Desktop freezes after inactivity",
           "text": "Pieces Desktop freezes after inactivity\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.4.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nPieces OS - 11.4.1\nPieces Desktop - 4.1.3\n\nPieces desktop randomly freezes after a period of inactivity. I would interact with it in a chat, go back to working in another app and after a while go back to Desktop to find it had frozen. Restart of Pieces Desktop is needed. Note that this problem is very frequent since latest update on May 22nd, but not systematic. I had also noticed this kind of behavior before the updated but put it on the count of my Hardware, Intel i5, 16Gbram Asus Vivobook, but I think I can dismiss this theory.\n\nWhere it gets tricky is that this behavior seems to only happen if I had, prior to returning to Pieces Desktop, interacted with a chat. In cases where I simply had started Desktop, worked on something else and gone back to Desktop, it would keep working properly.\n\nNoteworthy: LTM is enabled by default for all chats. Default LLM: Claude 3.7 Sonnet.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 6.62
-        },
-        {
-          "id": 732,
-          "title": "Performance Issues in VSCode with Pieces OS Active",
-          "text": "Performance Issues in VSCode with Pieces OS Active\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nPieces OS, VS Code\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.4.2\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWhen Pieces OS is running, my VSCODE becomes very sluggish and sometimes unresponsive. But the moment I end/stop Pieces OS, my VSCode becomes more responsive.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 5.68
+          "activity_level": 7.37
         }
       ]
     },
     {
-      "title": "Performance Issues and Freezes in Pieces OS Desktop App",
-      "description": "Users are experiencing performance issues, including sluggishness, unresponsiveness, and freezes in the Pieces OS Desktop app on both Windows and macOS.  On macOS, the app periodically jumps to the main monitor and grabs focus. Reinstalling the app may resolve some issues. On Windows, the app freezes after a period of inactivity, especially after interacting with chat features.  The issue appears to be more frequent since the May 22nd update.",
+      "title": "Pieces Desktop App Crashes/Freezes",
+      "description": "Users report Pieces Desktop app crashing or freezing across macOS and Windows. One user noted crashes linked to enabling L.T.M 2.5. Another user reported freezing after inactivity, especially after using chat with LTM enabled. A third user experienced crashes when browsing content-heavy Chrome tabs.  Further investigation is needed to pinpoint the exact causes and solutions.",
       "frequency": 3,
       "related_issues": [
         {
-          "id": 727,
-          "title": "MacOS Desktop periodically jumps to main monitor & grabs focus off of current window",
-          "text": "MacOS Desktop periodically jumps to main monitor & grabs focus off of current window\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n4.1.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nJust attempted reinstall, will see if that clears it up. Looks like it spawned an extra process which might be what's tripping it. So far it hasn't jumped back up, so we might be clear.\n\ni grabbed a trace of the behavior, reach out on Pieces discord if u want a copy\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 1.93
-        },
-        {
-          "id": 732,
-          "title": "Performance Issues in VSCode with Pieces OS Active",
-          "text": "Performance Issues in VSCode with Pieces OS Active\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nPieces OS, VS Code\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.4.2\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWhen Pieces OS is running, my VSCODE becomes very sluggish and sometimes unresponsive. But the moment I end/stop Pieces OS, my VSCode becomes more responsive.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 5.68
+          "id": 734,
+          "title": "Pieces Desktop keeps crashing",
+          "text": "Pieces Desktop keeps crashing\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n11.4.2\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI just updated Pieces to try out L.T.M 2.5, and I noticed that the software keeps stopping and restarting on its own. I checked for any updates I may have missed, and none. I restarted the software by forcing it to quit, but the issue persisted. \n\nThe issue only happens when I turn on L.T.M. \nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 4.42
         },
         {
           "id": 719,
           "title": "Pieces Desktop freezes after inactivity",
           "text": "Pieces Desktop freezes after inactivity\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.4.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nPieces OS - 11.4.1\nPieces Desktop - 4.1.3\n\nPieces desktop randomly freezes after a period of inactivity. I would interact with it in a chat, go back to working in another app and after a while go back to Desktop to find it had frozen. Restart of Pieces Desktop is needed. Note that this problem is very frequent since latest update on May 22nd, but not systematic. I had also noticed this kind of behavior before the updated but put it on the count of my Hardware, Intel i5, 16Gbram Asus Vivobook, but I think I can dismiss this theory.\n\nWhere it gets tricky is that this behavior seems to only happen if I had, prior to returning to Pieces Desktop, interacted with a chat. In cases where I simply had started Desktop, worked on something else and gone back to Desktop, it would keep working properly.\n\nNoteworthy: LTM is enabled by default for all chats. Default LLM: Claude 3.7 Sonnet.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 6.62
-        }
-      ]
-    },
-    {
-      "title": "Pieces OS Performance Issues on Windows",
-      "description": "Users report performance issues, including sluggishness, unresponsiveness, and crashes in VSCode, Chrome, and the Pieces desktop app when Pieces OS is running on Windows. Issues occur with large content and across Pieces OS versions 11.3.6 to 11.4.2.  Further investigation is needed to identify the root cause and potential solutions, including resource conflicts or software bugs.",
-      "frequency": 3,
-      "related_issues": [
-        {
-          "id": 732,
-          "title": "Performance Issues in VSCode with Pieces OS Active",
-          "text": "Performance Issues in VSCode with Pieces OS Active\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nPieces OS, VS Code\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.4.2\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWhen Pieces OS is running, my VSCODE becomes very sluggish and sometimes unresponsive. But the moment I end/stop Pieces OS, my VSCode becomes more responsive.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 5.68
+          "activity_level": 7.37
         },
         {
           "id": 718,
           "title": "Pieces crash when on Chrome tab with a lot of content",
           "text": "Pieces crash when on Chrome tab with a lot of content\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.4.0\n\n### Early Access Program\n\n- [x] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n1. Start Pieces OS and Pieces for Developers and use them as normal.\n2. Open a tab with a large amount of content. In my case, it was a GitLab CI job with a 6k line job log. I also experienced crashes with ArgoCD when having 100+ apps on a page.\n3. Both Pieces OS and Pieces for Developers crash. There are no corresponding log records in the Support directory, only logs about application startup.\n\nSometimes it freezes Chrome completely.\n\nI have 16GB RAM, 12 vCPU, and have never experienced such behavior without Pieces.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
           "activity_level": 5.49
-        },
-        {
-          "id": 712,
-          "title": "copy button in pieces vs code extension keeps loading indefinitely.",
-          "text": "copy button in pieces vs code extension keeps loading indefinitely.\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, VS Code\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.3.6.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nThe copy button keeps loading forever. \n\n![Image](https://github.com/user-attachments/assets/cd302f52-5374-4f54-b9f3-a5b260906a72)\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 2.25
         }
       ]
     }
   ],
   "recommendations": [
-    "Prioritize resolving the invalid Discord link issue across all platforms (website, Pieces OS, documentation).  This is a recurring problem affecting multiple users.",
-    "Investigate and address the performance issues reported with Pieces OS and Desktop App, particularly focusing on high CPU/GPU usage, freezing, and slowdowns on Windows and macOS.  Check for resource conflicts and potential bugs introduced in the May 22nd update.",
-    "Address the Pieces Copilot issues related to incorrect LTM information and UI bugs displaying wrong dates. Ensure Copilot accurately utilizes context provided by users.",
-    "Look into the reported issues with VSCode becoming sluggish or unresponsive when Pieces OS is active on Windows. This may be related to resource conflicts or software compatibility issues.",
-    "Review and update the Pieces OS and Desktop App documentation to address common user questions and issues, particularly regarding LTM usage and performance optimization.",
-    "Monitor and address the reported issues with Pieces crashing or freezing on Chrome tabs with large content, as this may indicate memory leaks or resource management problems.",
-    "Investigate the issue with the Sublime Text plugin icon being reported as 'bogus'. This may be a minor issue but affects user experience.",
-    "Consider implementing a more robust system for tracking and managing Discord invite links to prevent expiration and ensure consistent access for users.",
-    "Continue monitoring user feedback and prioritize bug fixes and performance improvements based on frequency and impact on user experience.",
-    "Communicate updates and solutions to users through various channels (e.g., Discord, release notes) to keep them informed and improve transparency."
+    "Prioritize resolving the Discord invite link issue across all platforms (website, documentation, Pieces OS) by creating a permanent, non-expiring link.",
+    "Investigate and address the root cause of slow or nonexistent chat responses within Pieces OS applications, including Desktop, VS Code, and VS 2022, across different operating systems and Pieces OS versions.",
+    "Focus on resolving performance issues and crashes/freezes in Pieces Desktop, specifically on macOS (related to LTM usage) and Windows (freezing after inactivity and chat interactions with LTM enabled).",
+    "Investigate and fix the issue with Pieces Copilot chat generating unrelated topics even with context provided, along with the incorrect date/time display in LTM.",
+    "Address the reported Pieces Desktop crashes on macOS linked to enabling L.T.M 2.5 and crashes on Windows when browsing content-heavy Chrome tabs.",
+    "Look into the WSL connectivity issues with Pieces OS in VS Code (ticket #730) and the Sublime Text plugin icon issue (ticket #722)."
   ],
   "message": "Daily support report generated successfully."
 }
