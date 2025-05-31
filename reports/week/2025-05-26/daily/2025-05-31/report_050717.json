@@ -1,0 +1,91 @@
+{
+  "success": true,
+  "date_range": {
+    "start": "2025-05-31T00:00:00+00:00",
+    "end": "2025-05-31T05:07:17.807425+00:00"
+  },
+  "summary": {
+    "total_tickets": 2,
+    "resolved_tickets": 1,
+    "open_tickets": 1
+  },
+  "ticket_breakdown": [
+    {
+      "category": "bug",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:desktop application",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "os:macos",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:pieces os",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:pieces copilot module",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:triaged",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:vs code",
+      "received": 1,
+      "resolved": 1,
+      "pending": 0
+    }
+  ],
+  "most_active_tickets": [
+    {
+      "number": 731,
+      "title": "Pieces Copilot doesn't get the LTM info and shows a wrong date",
+      "activity_level": 5.5
+    },
+    {
+      "number": 313,
+      "title": "Issue with remote desktop",
+      "activity_level": 2.04
+    }
+  ],
+  "common_issues": [
+    {
+      "title": "Pieces Copilot Inaccuracy and UI Bug with LTM",
+      "description": "Pieces Copilot inaccurately generates information when using LTM, potentially due to incorrect date/time context.  Users report unrelated topics in initial responses, even with provided context. Specifying details like lecture name improves accuracy.  A UI bug displays \"Last Thursday\" as the context time, regardless of actual LTM usage.",
+      "frequency": 2,
+      "related_issues": [
+        {
+          "id": 731,
+          "title": "Pieces Copilot doesn't get the LTM info and shows a wrong date",
+          "text": "Pieces Copilot doesn't get the LTM info and shows a wrong date\n### Checked for Existing Issues?\n\n- [ ] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n11.4.2\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nAfter I did all my work with LTM turned on, I used the `Start Copilot Chat` button in the **Workstream Activity** View of Pieces Desktop. I asked it to generate some quiz questions based on what I studied, and it started talking about a lot of unrelated topics, even when the context was provided. Though when I started a new chat based on the context again and became more specific with the details such as lecture name and number (that was the one and only thing in the context I started the conversation with), it did it correctly. Also, all this while, the context time showed Last Thursday so I think there is an UI bug too. \n\n**Context Image:**\n![Image](https://github.com/user-attachments/assets/ab732ff6-d195-4e81-a2af-6cee1e1d2032)\n\n**Chat Image (Where it talks about unrelated topics):**\n![Image](https://github.com/user-attachments/assets/8d6abd44-60a0-4f0c-9f8a-1cf1a887fd2e)\n\n**Chat Image (Where it was fixed):**\n![Image](https://github.com/user-attachments/assets/c7d86c81-ba0e-4ec3-8e2f-49a326ac232a)\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 5.5
+        },
+        {
+          "id": 313,
+          "title": "Issue with remote desktop",
+          "text": "Issue with remote desktop\n### Software\n\nVS Code\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n10.0.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI encountered this issue while trying to use the piece extension in my WSL. The piece's extension gives issues anytime I try to use it in the Ubuntu remote desktop environment. This is an image of the issue it shows. I already tried the troubleshooting method on your website by creating a new port but it still didn't work.\r\n\r\n![issue](https://github.com/user-attachments/assets/dce2b29c-93cb-465c-8224-9d1b3ab795cc)\r\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 2.04
+        }
+      ]
+    }
+  ],
+  "recommendations": [],
+  "message": "Daily support report generated successfully."
+}
