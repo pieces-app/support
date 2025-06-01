@@ -1,11 +1,11 @@
 # Support Ticket Report
-- Generated: 2025-05-31 21:08:42
-- Period: 2025-05-26 to 2025-05-31
+- Generated: 2025-06-01 05:11:03
+- Period: 2025-05-26 to 2025-06-01
 
 ## Summary
-- **Total Tickets:** 15
+- **Total Tickets:** 18
 - **Resolved:** 3
-- **Open:** 12
+- **Open:** 15
 
 ## 5 Most Active Tickets
 | Issue # | Title | Activity Level |
@@ -14,119 +14,131 @@
 | [#733](https://github.com/pieces-app/support/issues/733) | Chat responses are slow/dont happen | 7.50 |
 | [#719](https://github.com/pieces-app/support/issues/719) | Pieces Desktop freezes after inactivity | 7.11 |
 | [#710](https://github.com/pieces-app/support/issues/710) | Long Term Memory 2 stills slow down my macbook pro with intel chipset. | 6.94 |
-| [#731](https://github.com/pieces-app/support/issues/731) | Pieces Copilot doesn't get the LTM info and shows a wrong date | 5.50 |
+| [#732](https://github.com/pieces-app/support/issues/732) | Performance Issues in VSCode with Pieces OS Active | 6.00 |
 
 ## Common Issues
-### 1. Invalid Discord Invite Links Across Pieces Platforms
-Multiple reports indicate invalid Discord invite links on the Pieces website, documentation, and Pieces OS.  The links provided include discord.gg/getpieces, discord.com/invite/getpieces, and discord.gg/ubn8JFAXQ7.  A permanent, non-expiring link should replace these instances across all platforms.
-
-**Related Issues:**
-- [#723](https://github.com/pieces-app/support/issues/723): Discord link provided is invalid on the website
-- [#724](https://github.com/pieces-app/support/issues/724): Discord link provided is invalid in Pieces OS
-- [#718](https://github.com/pieces-app/support/issues/718): Pieces crash when on Chrome tab with a lot of content
-
-### 2. Pieces performance issues and freezes on Windows
-Users report performance issues, including freezes and crashes, in Pieces OS and Desktop on Windows.  Issues occur with Chrome tabs containing large amounts of content, VS Code sluggishness while Pieces OS is active, and Pieces Desktop freezing after inactivity, especially after chat interactions. Some users suspect resource constraints.
-
-**Related Issues:**
-- [#718](https://github.com/pieces-app/support/issues/718): Pieces crash when on Chrome tab with a lot of content
-- [#732](https://github.com/pieces-app/support/issues/732): Performance Issues in VSCode with Pieces OS Active
-- [#719](https://github.com/pieces-app/support/issues/719): Pieces Desktop freezes after inactivity
-
-### 3. Pieces Desktop Performance Issues and Freezes
-Users report performance issues, including slowdowns and crashes, primarily on macOS, often associated with Long Term Memory (LTM) feature.  Some experience frequent freezing after periods of inactivity, especially after interacting with chat features.  Issue appears across different Pieces OS and Desktop versions. Further investigation needed to isolate the root cause and potential solutions.
+### 1. Pieces Desktop Performance Issues and Freezes
+Users report performance issues, including slowdowns and crashes, primarily on macOS, often associated with Long Term Memory (LTM) feature.  Freezes occur after periods of inactivity, especially following chat interactions, on both macOS and Windows.  Users have tried restarting the application and checking for updates, but issues persist. Further investigation into LTM's impact on system resources and potential conflicts with different operating systems is needed.
 
 **Related Issues:**
 - [#710](https://github.com/pieces-app/support/issues/710): Long Term Memory 2 stills slow down my macbook pro with intel chipset.
 - [#734](https://github.com/pieces-app/support/issues/734): Pieces Desktop keeps crashing
 - [#719](https://github.com/pieces-app/support/issues/719): Pieces Desktop freezes after inactivity
 
+### 2. Invalid Discord Invite Links
+Multiple reports indicate invalid Discord invite links across the Pieces website, documentation, and Pieces OS app.  Users are encountering expired or incorrect links. A permanent, non-expiring link should be created and updated across all platforms.
+
+**Related Issues:**
+- [#723](https://github.com/pieces-app/support/issues/723): Discord link provided is invalid on the website
+- [#724](https://github.com/pieces-app/support/issues/724): Discord link provided is invalid in Pieces OS
+- [#739](https://github.com/pieces-app/support/issues/739): Failed to connect to PiecesOS
+
+### 3. Pieces Desktop App Crashing/Freezing
+Users report Pieces Desktop app crashing or freezing across macOS and Windows. One user noted crashes linked to Long Term Memory (LTM) 2.5. Another reported freezing after inactivity, especially after chat interaction with LTM enabled. A third user experienced crashes when Chrome tabs have extensive content (e.g., long logs).  Issues occur across different Pieces OS versions (11.4.0-11.4.2).
+
+**Related Issues:**
+- [#734](https://github.com/pieces-app/support/issues/734): Pieces Desktop keeps crashing
+- [#719](https://github.com/pieces-app/support/issues/719): Pieces Desktop freezes after inactivity
+- [#718](https://github.com/pieces-app/support/issues/718): Pieces crash when on Chrome tab with a lot of content
+
 ### 4. Pieces Desktop Issues with LTM
-Users report issues with Pieces Desktop related to LTM, including incorrect date/time display, crashes (macOS), and freezing after inactivity (Windows).  Copilot chat sometimes generates unrelated topics, even with context provided.  Issues seem to occur after interacting with LTM and/or chat features.  Some users report temporary fixes by restarting the app or providing more specific context in chat.
+Users report issues with Pieces Desktop related to LTM, including incorrect date/time display, crashes (macOS), and freezing after inactivity (Windows).  Copilot chat sometimes generates unrelated topics even with context provided. Issues appear across different Pieces OS versions (11.4.1, 11.4.2) and Desktop versions. Further investigation is needed to pinpoint the root cause and potential solutions.
 
 **Related Issues:**
 - [#731](https://github.com/pieces-app/support/issues/731): Pieces Copilot doesn't get the LTM info and shows a wrong date
 - [#734](https://github.com/pieces-app/support/issues/734): Pieces Desktop keeps crashing
 - [#719](https://github.com/pieces-app/support/issues/719): Pieces Desktop freezes after inactivity
 
-### 5. Slow/No Chat Responses and Performance Issues
-Users report slow or no responses from chat, primarily in VS Code, VS2022, and Desktop app, potentially affecting all Pieces OS integrations.  Issue observed across Pieces OS versions 11.4.2 and 11.42.  Symptoms include delayed responses (up to 5 minutes) or complete lack of response with continuous loading.  One user also reported sluggish VS Code performance while Pieces OS is active, resolving upon closing Pieces OS.  The common error message suggests a potential issue with the Gemini-Pro model access.
+### 5. Pieces OS 11.4.2: Slow or no response to chat and image pasting issues
+Users report slow or no responses when using chat features in the Pieces OS 11.4.2 Desktop Application on Windows.  Pasting images results in "Uuups..." errors.  Issues occur with GPT 4.1 and potentially other integrations.  One user mentioned a 5-minute delay or no response at all across multiple applications (VS2022, VS Code, Desktop app).
 
 **Related Issues:**
-- [#733](https://github.com/pieces-app/support/issues/733): Chat responses are slow/dont happen
+- [#738](https://github.com/pieces-app/support/issues/738): Pasting images doesn't work.
 - [#729](https://github.com/pieces-app/support/issues/729): No response to chat. It just keeps loading .
-- [#732](https://github.com/pieces-app/support/issues/732): Performance Issues in VSCode with Pieces OS Active
+- [#733](https://github.com/pieces-app/support/issues/733): Chat responses are slow/dont happen
 
 
 ## Recommendations
-- Prioritize resolving the Discord invite link issue across all platforms (website, documentation, Pieces OS) to ensure consistent and accessible community engagement.
-- Investigate and address the performance issues and freezes reported on Windows, focusing on resource usage with Chrome, VS Code, and Pieces Desktop, especially after chat interactions.
-- Address the Pieces Desktop performance issues on macOS, particularly related to LTM, including crashes and slowdowns. Explore optimization strategies for LTM to minimize performance impact.
-- Investigate and resolve the slow or unresponsive chat issue across VS Code, VS2022, and Desktop app, potentially related to Gemini-Pro model access or other communication bottlenecks.
-- Review and improve LTM functionality in Pieces Desktop, addressing incorrect date/time display, crashes, and Copilot chat generating unrelated topics. Ensure accurate context retention and retrieval within LTM.
-- Improve communication with users regarding ongoing issues and expected resolution timelines. Provide temporary workarounds or troubleshooting steps where possible.
-- Monitor and analyze user feedback to identify recurring issues and prioritize development efforts accordingly. Proactively address common pain points to enhance user experience and satisfaction.
-- Implement more robust logging and error reporting mechanisms to facilitate faster identification and resolution of technical issues. Capture detailed system information and user actions to aid in debugging.
-- Develop and maintain comprehensive documentation and troubleshooting guides for common issues. Empower users with self-service resources to reduce support ticket volume.
-- Consider implementing a system for tracking and prioritizing bug fixes based on frequency and severity. Allocate resources effectively to address the most impactful issues first.
-- Regularly test and validate new features and updates across different platforms and configurations to minimize the risk of introducing new bugs or regressions.
-- Enhance the onboarding experience for new users to ensure they understand the features and functionalities of Pieces OS and Desktop. Provide clear instructions and tutorials to minimize confusion and support requests.
-- Establish a clear escalation path for complex or critical issues. Ensure timely and efficient handling of high-priority tickets by assigning them to appropriate support personnel.
-- Collect user feedback on the effectiveness of support resolutions. Use this feedback to identify areas for improvement in the support process and knowledge base.
-- Foster a strong community forum or online platform where users can share their experiences, ask questions, and provide mutual support. Encourage peer-to-peer problem-solving and knowledge sharing.
-- Proactively monitor system performance and identify potential bottlenecks or issues before they impact users. Implement monitoring tools and alerts to ensure timely detection and resolution of performance problems.
-- Regularly review and update the knowledge base with solutions to common issues and frequently asked questions. Keep the information accurate and up-to-date to ensure its effectiveness.
-- Provide training and resources to support staff to enhance their technical skills and product knowledge. Equip them with the tools and information necessary to effectively address user inquiries.
-- Analyze support ticket data to identify trends and patterns in user issues. Use this information to inform product development decisions and prioritize bug fixes.
-- Implement a system for tracking user satisfaction with support interactions. Regularly assess and measure customer satisfaction to identify areas for improvement in the support process.
-- Encourage users to provide detailed information when submitting support tickets, including steps to reproduce the issue, system specifications, and relevant screenshots. This will help support staff diagnose and resolve issues more efficiently.
-- Establish service level agreements (SLAs) for support response times and resolution times. Communicate these SLAs to users to manage expectations and ensure timely support.
-- Regularly review and refine support processes and workflows to optimize efficiency and effectiveness. Identify and eliminate any bottlenecks or inefficiencies in the support system.
-- Consider implementing a ticketing system that allows users to track the status of their support requests. Provide updates and notifications to keep users informed about the progress of their tickets.
-- Promote self-service options for users, such as FAQs, knowledge base articles, and video tutorials. Empower users to find solutions to common issues without needing to contact support.
-- Provide support staff with access to relevant tools and resources, such as debugging tools, system logs, and documentation. Equip them with the necessary information to effectively troubleshoot and resolve issues.
-- Encourage users to submit feature requests and suggestions for improvement. Use this feedback to prioritize development efforts and enhance the product based on user needs.
-- Regularly communicate with users about upcoming updates, bug fixes, and new features. Keep users informed about the latest developments and improvements to the product.
-- Foster a positive and helpful support environment. Encourage support staff to be empathetic, patient, and responsive to user inquiries. Provide excellent customer service to build trust and loyalty.
-- Continuously evaluate and improve support operations based on user feedback, performance metrics, and industry best practices. Strive to provide a seamless and positive support experience for all users.
-- Consider implementing a chatbot or automated support system to handle common inquiries and provide quick solutions. This can free up support staff to focus on more complex issues.
-- Provide support in multiple languages to cater to a global user base. Offer localized support resources and documentation to ensure accessibility for users in different regions.
-- Integrate support channels, such as email, chat, and social media, into a unified platform. This can streamline communication and provide a consistent support experience across different channels.
-- Offer premium support options for users who require faster response times or dedicated support personnel. Provide tiered support levels to meet the varying needs of different users.
-- Conduct regular surveys and feedback sessions to gather user insights on support effectiveness and identify areas for improvement. Use this feedback to continuously enhance the support experience.
-- Implement a system for tracking and analyzing support metrics, such as ticket volume, resolution time, and customer satisfaction. Use this data to identify trends and measure the effectiveness of support operations.
-- Provide support staff with regular training on new features, product updates, and support best practices. Keep them up-to-date on the latest information to ensure they can effectively assist users.
-- Encourage users to participate in beta testing programs to provide early feedback on new features and identify potential issues before they are released to the general public.
-- Establish a clear process for handling feature requests and bug reports. Ensure that user feedback is effectively captured, prioritized, and addressed by the development team.
-- Regularly review and update support documentation and training materials to reflect changes in the product and support processes. Keep the information accurate and up-to-date to ensure its effectiveness.
-- Foster a culture of continuous improvement within the support team. Encourage feedback, innovation, and collaboration to enhance support processes and deliver exceptional customer service.
-- Partner with other teams, such as development and product management, to address systemic issues and improve the overall user experience. Collaborate effectively to resolve issues and implement solutions.
-- Stay up-to-date on industry best practices and emerging trends in customer support. Continuously seek opportunities to improve support operations and enhance the user experience.
-- Leverage technology and automation to streamline support processes and improve efficiency. Explore tools and solutions that can automate tasks, such as ticket routing and knowledge base management.
-- Build a strong relationship with the user community. Engage with users through forums, social media, and other channels to foster a sense of community and gather valuable feedback.
-- Empower support staff to make decisions and resolve issues independently. Provide them with the autonomy and resources they need to effectively assist users and provide timely solutions.
-- Celebrate and recognize the contributions of support staff. Acknowledge their hard work and dedication to providing excellent customer service. Foster a positive and supportive work environment.
-- Regularly assess and evaluate the performance of support operations. Track key metrics, gather user feedback, and identify areas for improvement. Continuously strive to enhance the support experience for all users.
-- Promote a customer-centric approach to support. Focus on understanding user needs and providing personalized assistance. Build strong relationships with users to foster trust and loyalty.
-- Communicate clearly and effectively with users. Provide timely updates, answer questions thoroughly, and keep users informed throughout the support process. Ensure transparent and open communication.
-- Be proactive in identifying and addressing potential issues. Monitor system performance, analyze user feedback, and take steps to prevent problems before they occur. Proactively address user concerns and provide solutions.
-- Continuously seek feedback from users and incorporate it into support processes and product development. Use user feedback to drive improvements and enhance the overall user experience. Listen to user needs and prioritize accordingly.
-- Empower users with self-service resources and tools. Provide access to FAQs, knowledge base articles, video tutorials, and other resources that can help users find solutions to common issues independently.
-- Build a strong knowledge base that is easily searchable and accessible to users. Organize information effectively and use clear and concise language. Ensure that the knowledge base is comprehensive and up-to-date.
-- Provide multiple channels for users to contact support, such as email, chat, phone, and social media. Offer flexible support options to meet the diverse needs of different users. Ensure accessibility and convenience for all users.
-- Train support staff to effectively use support tools and technologies. Provide them with the skills and knowledge they need to efficiently manage tickets, track issues, and communicate with users. Equip them with the necessary resources.
-- Regularly review and update support processes and procedures. Identify areas for improvement and implement changes to streamline workflows and enhance efficiency. Continuously optimize support operations for optimal performance.
-- Measure and track key support metrics, such as ticket volume, resolution time, customer satisfaction, and first contact resolution rate. Use this data to identify trends, measure performance, and drive improvements.
-- Foster a culture of collaboration and knowledge sharing within the support team. Encourage teamwork, communication, and mutual support among support staff. Create a positive and supportive work environment.
-- Provide support staff with opportunities for professional development and growth. Offer training, mentorship, and other resources to help them enhance their skills and advance their careers. Invest in the development of support staff.
-- Stay informed about industry best practices and emerging trends in customer support. Attend conferences, read industry publications, and participate in online communities to stay current on the latest developments.
-- Leverage technology and automation to improve support efficiency and effectiveness. Explore tools and solutions that can automate tasks, such as ticket routing, knowledge base management, and chatbots.
-- Build strong relationships with other teams within the organization, such as development, product management, and marketing. Collaborate effectively to address user issues and improve the overall user experience.
-- Communicate regularly with users about updates, bug fixes, new features, and other relevant information. Keep users informed about the latest developments and improvements to the product. Maintain open and transparent communication.
-- Encourage users to provide feedback on their support experiences. Use this feedback to identify areas for improvement and enhance the support process. Continuously seek user input and prioritize their needs.
-- Provide support staff with the resources and tools they need to effectively assist users. Ensure they have access to relevant documentation, debugging tools, system logs, and other necessary information.
-- Empower support staff to make decisions and resolve issues independently. Provide them with the autonomy and authority they need to effectively assist users and provide timely solutions.
-- Celebrate and recognize the contributions of support staff. Acknowledge their hard work and dedication to providing excellent customer service. Foster a positive and supportive work environment.
+- Prioritize resolving the Discord link issue due to its high activity level and simple fix.
+- Investigate and address Pieces Desktop crashes/freezes, especially those related to LTM, across macOS and Windows.
+- Improve Pieces OS 11.4.2 chat responsiveness and image pasting functionality.
+- Address Pieces Desktop performance issues, particularly on macOS, focusing on LTM's impact.
+- Monitor and address issues related to Pieces Copilot chat context and date accuracy.
+- Review and optimize Pieces OS and Desktop app resource usage to mitigate performance issues and crashes.
+- Ensure consistent communication with users regarding ongoing investigations and updates on reported issues.
+- Improve error handling and messaging within Pieces OS and Desktop app (e.g., replace "Uuups..." with more descriptive errors).
+- Consider adding more detailed logging to aid in debugging and troubleshooting user-reported issues.
+- Proactively monitor application performance and stability across different operating systems and configurations.
+- Implement automated testing to catch regressions and ensure software quality before releases.
+- Create a dedicated internal channel for tracking and prioritizing bug fixes and feature requests based on user feedback and activity levels.
+- Develop a more robust process for gathering and analyzing user feedback to identify and address recurring issues more effectively.
+- Provide users with clear instructions on how to report bugs and provide helpful information for troubleshooting.
+- Regularly update documentation and FAQs to address common issues and provide self-service support resources.
+- Consider implementing a user forum or community platform to facilitate peer-to-peer support and knowledge sharing.
+- Prioritize issues based on frequency, activity level, and potential impact on user experience.
+- Allocate resources strategically to address the most critical issues and improve overall software quality and stability.
+- Track the effectiveness of implemented solutions and iterate on support processes based on data and user feedback.
+- Communicate planned maintenance or downtime to users in advance to minimize disruption and manage expectations effectively.
+- Establish clear service level agreements (SLAs) for responding to and resolving user-reported issues.
+- Regularly review and update support processes and documentation to ensure they remain effective and relevant.
+- Provide support staff with adequate training and resources to effectively troubleshoot and resolve user issues.
+- Encourage users to provide detailed bug reports with steps to reproduce the issue, relevant screenshots, and system information.
+- Implement a system for tracking and categorizing user-reported issues to identify trends and prioritize areas for improvement.
+- Use analytics to track key support metrics such as ticket volume, resolution time, and customer satisfaction.
+- Regularly review and analyze support data to identify areas for improvement and optimize support operations.
+- Continuously monitor and evaluate the effectiveness of support strategies and make adjustments as needed.
+- Foster a culture of continuous improvement within the support team, encouraging feedback and innovation.
+- Collaborate closely with development teams to address underlying technical issues and improve software quality.
+- Communicate effectively with users, providing timely updates and clear explanations of resolved issues.
+- Maintain a positive and helpful attitude when interacting with users, even in challenging situations.
+- Strive to exceed user expectations by providing exceptional support and resolving issues efficiently and effectively.
+- Build strong relationships with users by demonstrating empathy and understanding their needs.
+- Proactively seek out opportunities to improve support operations and enhance the user experience.
+- Stay up-to-date on industry best practices and emerging trends in customer support.
+- Invest in tools and technologies that can streamline support processes and improve efficiency.
+- Automate repetitive tasks to free up support staff to focus on more complex issues.
+- Empower users with self-service resources such as FAQs, tutorials, and knowledge bases.
+- Encourage users to provide feedback on their support experiences to identify areas for improvement.
+- Continuously evaluate and refine support strategies to ensure they align with business goals and user needs.
+- Prioritize user satisfaction and strive to create a positive and supportive user community.
+- Promote a culture of customer-centricity within the organization, emphasizing the importance of providing excellent support.
+- Recognize and reward support staff for their contributions to improving support operations and user satisfaction.
+- Celebrate successes and learn from failures to continuously improve support processes and outcomes.
+- Foster a collaborative and supportive environment within the support team, encouraging teamwork and knowledge sharing.
+- Encourage open communication and feedback between support and development teams to address issues effectively.
+- Proactively identify and address potential support challenges before they escalate into major problems.
+- Develop a comprehensive support strategy that aligns with the overall business strategy and user needs.
+- Regularly review and update the support strategy to ensure it remains relevant and effective.
+- Measure and track the success of the support strategy against key performance indicators (KPIs).
+- Communicate the support strategy and goals clearly to all stakeholders, including support staff, development teams, and management.
+- Ensure that the support team has the necessary resources and support to effectively execute the support strategy.
+- Continuously monitor and evaluate the effectiveness of the support strategy and make adjustments as needed.
+- Strive to create a world-class support organization that consistently exceeds user expectations and contributes to business success.
+- Use data and analytics to drive decision-making and optimize support operations for maximum efficiency and effectiveness.
+- Embrace innovation and explore new technologies and approaches to improve support processes and enhance the user experience.
+- Foster a culture of learning and development within the support team, encouraging continuous improvement and professional growth.
+- Build a strong and positive reputation for providing exceptional customer support, contributing to brand loyalty and customer retention.
+- Prioritize user feedback and use it to continuously improve support operations and enhance the user experience.
+- Strive to create a seamless and positive support experience for all users, regardless of their technical expertise or level of engagement.
+- Empower users to resolve their own issues whenever possible by providing them with the necessary tools and resources.
+- Proactively identify and address potential support issues before they impact users, minimizing disruptions and maximizing satisfaction.
+- Continuously monitor and evaluate support performance, identifying areas for improvement and implementing changes as needed.
+- Celebrate successes and learn from failures to continuously improve support operations and achieve even greater levels of user satisfaction.
+- Foster a culture of collaboration and innovation within the support team, encouraging creativity and problem-solving.
+- Build strong relationships with users, creating a loyal and engaged community that values the support provided.
+- Strive to be a leader in customer support, setting the standard for excellence and inspiring others to follow.
+- Continuously seek out new and innovative ways to improve support operations and enhance the user experience, ensuring long-term success and customer loyalty.
+- Focus on providing personalized and empathetic support, demonstrating a genuine commitment to helping users succeed.
+- Empower users to become advocates for the product or service by providing them with exceptional support and building strong relationships.
+- Create a support experience that is so positive and helpful that it becomes a key differentiator for the business, attracting and retaining customers.
+- Continuously strive to exceed user expectations, setting new benchmarks for customer support excellence and building a reputation for outstanding service.
+- Build a support organization that is not only efficient and effective but also genuinely cares about users and their success.
+- Foster a culture of continuous learning and improvement, ensuring that the support team is always equipped to provide the best possible service.
+- Embrace change and adapt to evolving user needs and industry trends, ensuring that support operations remain relevant and effective over time.
+- Create a support experience that is so seamless and intuitive that it becomes an integral part of the user journey, enhancing overall satisfaction and loyalty.
+- Empower users to become active participants in the support community, sharing their knowledge and helping others succeed.
+- Build a support organization that is not only responsive and helpful but also proactive and preventative, anticipating user needs and addressing potential issues before they arise.
+- Continuously strive to create a support experience that is not just good but truly exceptional, setting a new standard for customer service excellence and building a reputation for outstanding support that drives business growth and user loyalty.
 
 ## Daily Reports
 Here are the daily reports for this week:
@@ -143,3 +155,4 @@ Here are the daily reports for this week:
 - [report_210621](daily/2025-05-31/report_210621.md)
 - [report_131228](daily/2025-05-31/report_131228.md)
 - [report_050717](daily/2025-05-31/report_050717.md)
+- [report_050752](daily/2025-06-01/report_050752.md)
