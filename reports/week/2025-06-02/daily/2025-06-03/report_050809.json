@@ -1,0 +1,83 @@
+{
+  "success": true,
+  "date_range": {
+    "start": "2025-06-03T00:00:00+00:00",
+    "end": "2025-06-03T05:08:09.836075+00:00"
+  },
+  "summary": {
+    "total_tickets": 1,
+    "resolved_tickets": 0,
+    "open_tickets": 1
+  },
+  "ticket_breakdown": [
+    {
+      "category": "bug",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "os:windows",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:desktop application",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:vs code",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    }
+  ],
+  "most_active_tickets": [
+    {
+      "number": 730,
+      "title": "WSL cannot connect to Pieces OS in VS Code",
+      "activity_level": 6.0
+    }
+  ],
+  "common_issues": [
+    {
+      "title": "WSL Fails to Connect to Pieces OS in VS Code",
+      "description": "Users are unable to connect to Pieces OS from VS Code within a WSL environment. The Pieces settings window is either empty or displays install/launch buttons that result in connection errors.  VS Code developer tools show errors related to Pieces OS extension and version strings. Pieces OS logs indicate a 404 error for asset identifiers.  Potential solutions include verifying network connectivity, checking Pieces OS version compatibility with WSL, and ensuring correct configuration of the Pieces extension within VS Code.",
+      "frequency": 1,
+      "related_issues": [
+        {
+          "id": 730,
+          "title": "WSL cannot connect to Pieces OS in VS Code",
+          "text": "WSL cannot connect to Pieces OS in VS Code\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, VS Code\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.4.2\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI tried to use Pieces extensions in VS Code for WSL:Ubuntu. Piesces Setting window is empty, but earlier it showed two buttons Launch and Install and when you click on Install, for example, VS Code shows notification that it can't connect to Pieces OS. I tried multiple fixes I found. One is to set Custom URL for Remote environment and I tried with <Windows IP>:1000 and with NGrok forwarding of same url, both without success and I could reach both with curl. There are some errors in VS Code Developer tools related to Pieces OS extension:\n\nUncaught (in promise) TypeError: version is longer than 256 characters\nat new it (settingsView.js:1:5120)\nat UH (settingsView.js:1:9927)\nat Object.tU (settingsView.js:1:10530)\nat vN (settingsView.js:19:354749)\n\nat\nhttps://vscode-remote+wsl-002bubuntu.vscode-resource.vscode-cdn.net/home/vladan/.vscode-server/extensions/meshintelligenttechnologiesinc.pieces-vscode-2.0.6/dist/settingsView.js\n\nand Pieces OS log shows error:\n\nGET     [404] /assets/stream/identifiers: port:Instance of 'Future<int>': (2nd server)\n\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 6.0
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    "Investigate WSL connectivity issues with Pieces OS in VS Code. Focus on resolving the 404 error for asset identifiers and version string errors within the VS Code extension.",
+    "Prioritize resolution of issue #730, \"WSL cannot connect to Pieces OS in VS Code\", due to its high activity level and potential impact on users.",
+    "Improve error messaging and logging for Pieces OS and its VS Code extension to provide more specific guidance for troubleshooting and resolution.",
+    "Develop documentation or FAQs addressing common WSL connectivity problems with Pieces OS in VS Code, including network configuration, version compatibility, and extension setup.",
+    "Consider implementing automated tests to identify and address WSL compatibility issues with Pieces OS and its VS Code extension early in the development cycle.",
+    "Gather more data on user environments and configurations experiencing the WSL connectivity issue to identify potential patterns or contributing factors.",
+    "Communicate the status of the investigation and resolution efforts to affected users, providing updates and workarounds if available.",
+    "Explore alternative solutions for connecting to Pieces OS from VS Code within a WSL environment, such as using a remote server or a different extension.",
+    "Monitor support channels for new reports of similar issues and track the effectiveness of implemented solutions.",
+    "Review and update the Pieces OS extension documentation to ensure it accurately reflects the current functionality and addresses known limitations or issues related to WSL compatibility.",
+    "Investigate the root cause of the \"version is longer than 256 characters\" error in the VS Code extension and implement a fix to prevent it from occurring.",
+    "Ensure that the Pieces OS version used by users within WSL is compatible with the VS Code extension and provide clear guidance on supported versions.",
+    "Test the Pieces OS VS Code extension in various WSL configurations to identify and address any environment-specific issues.",
+    "Consider adding telemetry to the VS Code extension to collect data on usage patterns and error occurrences, which can help identify and prioritize areas for improvement.",
+    "Provide training or resources to support staff on troubleshooting WSL connectivity issues with Pieces OS in VS Code to improve their ability to assist users effectively.",
+    "Establish a process for escalating complex or unresolved WSL connectivity issues to the development team for further investigation and resolution.",
+    "Collaborate with the VS Code and WSL communities to identify best practices and potential solutions for compatibility issues.",
+    "Investigate the possibility of integrating Pieces OS with the VS Code Remote - WSL extension to provide a more seamless and reliable connection experience.",
+    "Monitor the performance and stability of the Pieces OS VS Code extension within WSL and address any performance bottlenecks or stability issues that may arise.",
+    "Continuously evaluate and improve the support processes for addressing WSL connectivity issues with Pieces OS in VS Code to ensure timely and effective resolution for users."
+  ],
+  "message": "Daily support report generated successfully."
+}
