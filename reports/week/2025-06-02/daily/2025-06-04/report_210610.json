@@ -1,0 +1,174 @@
+{
+  "success": true,
+  "date_range": {
+    "start": "2025-06-04T00:00:00+00:00",
+    "end": "2025-06-04T21:06:10.045207+00:00"
+  },
+  "summary": {
+    "total_tickets": 2,
+    "resolved_tickets": 0,
+    "open_tickets": 2
+  },
+  "ticket_breakdown": [
+    {
+      "category": "bug",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "os:windows",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "app:vs code",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:web extension",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:triaged",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "app:desktop application",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:pieces os",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    }
+  ],
+  "most_active_tickets": [
+    {
+      "number": 739,
+      "title": "Failed to connect to PiecesOS",
+      "activity_level": 11.03
+    },
+    {
+      "number": 743,
+      "title": "Clear Long Term Memory Data\" Does Not Remove Captured Context or Workstream Activity",
+      "activity_level": 4.5
+    }
+  ],
+  "common_issues": [
+    {
+      "title": "Pieces OS and plugin issues",
+      "description": "Users report issues with Pieces OS and the Chrome plugin. The plugin's functionality is affected, including connection problems and outdated versions despite updates. Clearing long-term memory data doesn't remove captured context or workstream activity. A temporary solution involves manually deleting specific directories on different operating systems.",
+      "frequency": 2,
+      "related_issues": [
+        {
+          "id": 739,
+          "title": "Failed to connect to PiecesOS",
+          "text": "Failed to connect to PiecesOS\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.4.2\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nChrome plugin doesn't work properly. I can't use the buttons and features, and the sidebar cannot establish connection either. Inside of Pieces desktop app it shows that the chrome plugin is outdated. However this is the newest I got from the chrome app store.\n\nPlugin version: 4.0.9\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 11.03
+        },
+        {
+          "id": 743,
+          "title": "Clear Long Term Memory Data\" Does Not Remove Captured Context or Workstream Activity",
+          "text": "Clear Long Term Memory Data\" Does Not Remove Captured Context or Workstream Activity\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.4.3\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nHi Pieces team \ud83d\udc4b\n\nI\u2019m trying to fully reset my Pieces environment and delete all data associated with my usage. However, I noticed that clicking \u201cClear Long Term Memory Data\u201d does not remove Captured Context or Workstream Activity. These still persist after performing the action.\n\n\ud83e\uddea Steps to Reproduce:\nOpen Pieces and go to Settings.\n\nClick on Clear Long Term Memory Data.\n\nObserve that Captured Context and Workstream Activity remain unchanged.\n\n\ud83d\udd0d Expected Behavior:\nAll user-related data (including context and activity) should be removed \u2014 or at the very least, there should be options to remove these explicitly.\n\n\ud83d\udee0 Temporary Workaround:\nThanks to support on Discord, I was told the only way to fully delete everything is to manually delete the following directory while Pieces is closed:\n\nmacOS \u2014 ~/Library/com.pieces.os/\n\nWindows \u2014 C:\\Users\\<username>\\Documents\\com.pieces.os\\\n\nLinux \u2014 ~/.local/share/com.pieces.os/\n\nWould be awesome to see this addressed either with:\n\nA more comprehensive \u201cClear All Data\u201d feature, or\n\nSeparate options to clear Captured Context and Workstream Activity\n\nThanks!\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 4.5
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    "Investigate and resolve the Pieces OS and plugin connection issues reported in tickets 739 and 743.",
+    "Implement a more robust 'Clear All Data' feature within Pieces OS to address the incomplete data removal described in ticket 743.",
+    "Improve communication and documentation regarding plugin updates and troubleshooting steps.",
+    "Consider adding separate options to clear Captured Context and Workstream Activity within the Pieces OS settings.",
+    "Monitor and address the '404 Publisher Model' error encountered during summary generation for tickets 739 and 743.",
+    "Proactively monitor plugin functionality and compatibility with different operating systems and browser versions to prevent future connection issues.",
+    "Gather more data on the specific plugin functionalities affected by the reported issues to aid in targeted debugging and resolution.",
+    "Explore alternative solutions for long-term memory management within Pieces OS to ensure efficient and reliable data handling.",
+    "Provide users with clearer instructions on how to fully reset their Pieces environment and delete all associated data.",
+    "Investigate the root cause of the plugin version discrepancy between the Chrome app store and the Pieces desktop application in ticket 739.",
+    "Improve error handling and messaging within Pieces OS to provide users with more informative and actionable feedback.",
+    "Consider implementing a feedback mechanism within Pieces OS to allow users to easily report bugs and issues directly to the development team.",
+    "Prioritize bug fixes and improvements related to core functionalities such as plugin connectivity and data management to enhance user experience.",
+    "Regularly test and validate the 'Clear Long Term Memory Data' functionality to ensure it effectively removes all intended data.",
+    "Develop a comprehensive troubleshooting guide for common plugin issues to empower users with self-service solutions and reduce support ticket volume.",
+    "Analyze support ticket trends and user feedback to identify recurring issues and prioritize development efforts accordingly.",
+    "Enhance communication between the support team and the development team to facilitate efficient bug resolution and feature implementation.",
+    "Implement a system for tracking and monitoring the progress of bug fixes and feature requests to ensure timely resolution and transparency.",
+    "Provide training to the support team on the latest features and troubleshooting techniques to improve their ability to assist users effectively.",
+    "Consider implementing a knowledge base or FAQ section within the Pieces platform to address common user questions and concerns.",
+    "Encourage users to submit detailed bug reports with steps to reproduce the issue to aid in debugging and resolution.",
+    "Regularly review and update the Pieces OS documentation to ensure it accurately reflects the latest features and functionalities.",
+    "Explore opportunities to automate certain support tasks, such as ticket routing and initial response, to improve efficiency.",
+    "Analyze user behavior and usage patterns to identify potential areas for improvement in the Pieces OS user interface and user experience.",
+    "Conduct user research and gather feedback on proposed features and changes to ensure they meet user needs and expectations.",
+    "Establish clear service level agreements (SLAs) for support ticket response times and resolution times to manage user expectations.",
+    "Regularly evaluate and assess the effectiveness of support operations and identify areas for continuous improvement.",
+    "Foster a culture of continuous learning and improvement within the support team to stay up-to-date with the latest technologies and best practices.",
+    "Implement a system for tracking and measuring key support metrics, such as ticket volume, resolution time, and customer satisfaction, to monitor performance and identify areas for improvement.",
+    "Communicate regularly with users about upcoming updates, bug fixes, and new features to keep them informed and engaged.",
+    "Proactively solicit user feedback on the Pieces OS and plugin to identify areas for improvement and prioritize development efforts.",
+    "Establish a clear process for escalating complex or critical support issues to the appropriate development teams.",
+    "Develop a comprehensive disaster recovery plan to ensure business continuity in the event of system outages or other unforeseen events.",
+    "Regularly back up all user data and system configurations to prevent data loss and minimize downtime in case of emergencies.",
+    "Implement security measures to protect user data and prevent unauthorized access to sensitive information.",
+    "Comply with relevant data privacy regulations and ensure user data is handled in accordance with applicable laws and regulations.",
+    "Provide users with clear and concise information about data privacy and security practices.",
+    "Stay informed about emerging security threats and vulnerabilities and take proactive steps to mitigate risks.",
+    "Conduct regular security audits and penetration testing to identify and address potential vulnerabilities.",
+    "Train the support team on security best practices and procedures to ensure they are equipped to handle security-related inquiries and incidents.",
+    "Establish a clear incident response plan to address security breaches or other security incidents effectively.",
+    "Communicate transparently with users about any security incidents that may affect their data or privacy.",
+    "Continuously monitor and evaluate the effectiveness of security measures and make adjustments as needed to maintain a secure environment for users.",
+    "Collaborate with security experts and industry partners to stay informed about the latest security threats and best practices.",
+    "Invest in security training and awareness programs for all employees to promote a culture of security within the organization.",
+    "Develop and maintain a comprehensive security policy that outlines security best practices and procedures for all employees to follow.",
+    "Regularly review and update the security policy to reflect changes in the threat landscape and best practices.",
+    "Ensure that all employees are aware of and understand the security policy and their responsibilities for maintaining a secure environment.",
+    "Provide regular security awareness training to all employees to reinforce security best practices and keep them informed about emerging threats.",
+    "Encourage employees to report any suspicious activity or security concerns to the appropriate channels.",
+    "Establish a clear process for reporting and investigating security incidents.",
+    "Implement multi-factor authentication for all user accounts to enhance security and prevent unauthorized access.",
+    "Use strong passwords and password management tools to protect user accounts and prevent unauthorized access.",
+    "Encrypt sensitive data both in transit and at rest to protect it from unauthorized access.",
+    "Implement access controls to restrict access to sensitive data and systems to authorized personnel only.",
+    "Regularly review and update access controls to ensure they are aligned with business needs and security best practices.",
+    "Monitor user activity and system logs for suspicious activity and potential security breaches.",
+    "Implement intrusion detection and prevention systems to detect and prevent unauthorized access to systems and data.",
+    "Use firewalls and other network security measures to protect systems and data from external threats.",
+    "Regularly update software and systems with security patches to address known vulnerabilities.",
+    "Conduct regular vulnerability assessments to identify and address potential security weaknesses.",
+    "Implement a secure development lifecycle to ensure that security is integrated into the software development process from the beginning.",
+    "Use secure coding practices to prevent security vulnerabilities in software applications.",
+    "Conduct code reviews and security testing to identify and address security vulnerabilities before software is released.",
+    "Use automated security testing tools to identify and address security vulnerabilities efficiently.",
+    "Implement a bug bounty program to encourage security researchers to identify and report vulnerabilities.",
+    "Work with security researchers and ethical hackers to identify and address potential vulnerabilities.",
+    "Stay informed about the latest security research and vulnerabilities to proactively address potential threats.",
+    "Participate in industry security events and conferences to stay up-to-date with the latest security trends and best practices.",
+    "Collaborate with other organizations and industry partners to share security information and best practices.",
+    "Contribute to open-source security projects to improve the security of the broader software ecosystem.",
+    "Support and promote security awareness initiatives to educate the public about online safety and security best practices.",
+    "Advocate for stronger security regulations and policies to protect users and organizations from cyber threats.",
+    "Work with government agencies and law enforcement to combat cybercrime and protect critical infrastructure.",
+    "Support and promote cybersecurity education and training programs to develop the next generation of cybersecurity professionals.",
+    "Invest in research and development to advance the field of cybersecurity and develop new security technologies.",
+    "Foster a culture of security awareness and responsibility within the organization and the broader community.",
+    "Work together to create a more secure online environment for everyone.",
+    "Promote the responsible use of technology and the importance of online safety and security.",
+    "Encourage users to be vigilant and take proactive steps to protect themselves from cyber threats.",
+    "Empower users with the knowledge and tools they need to stay safe online.",
+    "Work together to build a more secure and resilient digital world for everyone."
+  ],
+  "message": "Daily support report generated successfully."
+}
