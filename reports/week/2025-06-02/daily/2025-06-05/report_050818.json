@@ -1,0 +1,142 @@
+{
+  "success": true,
+  "date_range": {
+    "start": "2025-06-05T00:00:00+00:00",
+    "end": "2025-06-05T05:08:18.962633+00:00"
+  },
+  "summary": {
+    "total_tickets": 1,
+    "resolved_tickets": 0,
+    "open_tickets": 1
+  },
+  "ticket_breakdown": [
+    {
+      "category": "bug",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "os:windows",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:desktop application",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:vs code",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    }
+  ],
+  "most_active_tickets": [
+    {
+      "number": 730,
+      "title": "WSL cannot connect to Pieces OS in VS Code",
+      "activity_level": 7.22
+    }
+  ],
+  "common_issues": [
+    {
+      "title": "WSL Fails to Connect to Pieces OS in VS Code",
+      "description": "Users are unable to connect to Pieces OS from VS Code within a WSL environment. The Pieces settings window is either empty or displays install/launch buttons that result in connection errors.  VS Code developer tools show errors related to Pieces OS extension and version strings. Pieces OS logs indicate a 404 error for asset identifiers.  Potential solutions include verifying network connectivity, checking Pieces OS version compatibility with WSL, and ensuring correct configuration of the Pieces extension within VS Code.",
+      "frequency": 1,
+      "related_issues": [
+        {
+          "id": 730,
+          "title": "WSL cannot connect to Pieces OS in VS Code",
+          "text": "WSL cannot connect to Pieces OS in VS Code\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, VS Code\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.4.2\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI tried to use Pieces extensions in VS Code for WSL:Ubuntu. Piesces Setting window is empty, but earlier it showed two buttons Launch and Install and when you click on Install, for example, VS Code shows notification that it can't connect to Pieces OS. I tried multiple fixes I found. One is to set Custom URL for Remote environment and I tried with <Windows IP>:1000 and with NGrok forwarding of same url, both without success and I could reach both with curl. There are some errors in VS Code Developer tools related to Pieces OS extension:\n\nUncaught (in promise) TypeError: version is longer than 256 characters\nat new it (settingsView.js:1:5120)\nat UH (settingsView.js:1:9927)\nat Object.tU (settingsView.js:1:10530)\nat vN (settingsView.js:19:354749)\n\nat\nhttps://vscode-remote+wsl-002bubuntu.vscode-resource.vscode-cdn.net/home/vladan/.vscode-server/extensions/meshintelligenttechnologiesinc.pieces-vscode-2.0.6/dist/settingsView.js\n\nand Pieces OS log shows error:\n\nGET     [404] /assets/stream/identifiers: port:Instance of 'Future<int>': (2nd server)\n\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 7.22
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    "Investigate WSL connectivity issues with Pieces OS in VS Code. Focus on resolving the 404 error for asset identifiers and version string errors within the VS Code extension.",
+    "Prioritize resolution of issue 730, \"WSL cannot connect to Pieces OS in VS Code,\" due to its high activity level and potential impact on users.",
+    "Improve error messaging and logging within the Pieces OS extension and VS Code integration to provide more specific guidance for troubleshooting.",
+    "Develop clear documentation or troubleshooting steps for users experiencing WSL connectivity problems with Pieces OS in VS Code.",
+    "Consider implementing automated tests to identify and address WSL compatibility issues with Pieces OS and VS Code early in the development process.",
+    "Monitor support tickets for recurring patterns or new issues related to WSL and VS Code integration to proactively address potential problems.",
+    "Gather more data on user environments and configurations to better understand the root cause of WSL connectivity issues and tailor solutions effectively.",
+    "Communicate known issues and workarounds to users through release notes, documentation, or community forums.",
+    "Explore alternative solutions or workarounds for users who rely on WSL and VS Code for accessing Pieces OS, such as remote development extensions or containerization technologies.",
+    "Allocate resources to address the backlog of open tickets and improve response times to ensure timely resolution of user issues.",
+    "Implement a system for tracking and prioritizing bug fixes and feature requests based on user impact and frequency.",
+    "Regularly review and update documentation and support resources to ensure they are accurate and up-to-date.",
+    "Provide training to support staff on common WSL and VS Code related issues to improve their ability to assist users effectively.",
+    "Encourage users to submit detailed bug reports with relevant information, such as logs, screenshots, and steps to reproduce the issue.",
+    "Foster a community forum or online platform where users can share their experiences, troubleshoot issues, and provide feedback on Pieces OS and its integrations.",
+    "Collect user feedback on the effectiveness of support resources and identify areas for improvement.",
+    "Analyze support ticket data to identify trends and patterns that can inform product development and improve the user experience.",
+    "Establish service level agreements (SLAs) for support response times and resolution times to manage user expectations.",
+    "Implement a system for escalating complex or critical issues to specialized support teams or developers.",
+    "Continuously monitor and evaluate support operations to identify areas for optimization and improve overall efficiency and effectiveness.",
+    "Consider using a help desk or ticketing system to manage and track support requests more efficiently.",
+    "Automate routine support tasks, such as ticket routing and initial responses, to free up support staff to focus on more complex issues.",
+    "Integrate support tools with other systems, such as CRM or development platforms, to streamline workflows and improve collaboration.",
+    "Provide self-service support resources, such as FAQs, knowledge bases, and tutorials, to empower users to resolve common issues on their own.",
+    "Offer multiple support channels, such as email, phone, and chat, to cater to different user preferences.",
+    "Personalize support interactions to create a positive user experience and build stronger relationships with users.",
+    "Proactively solicit user feedback on their support experiences to identify areas for improvement and measure customer satisfaction.",
+    "Track key support metrics, such as resolution time, first response time, and customer satisfaction, to monitor performance and identify areas for optimization.",
+    "Regularly review and update support processes and procedures to ensure they are aligned with best practices and industry standards.",
+    "Invest in training and development for support staff to enhance their technical skills, communication skills, and problem-solving abilities.",
+    "Create a positive and supportive work environment for support staff to promote job satisfaction and reduce turnover.",
+    "Recognize and reward outstanding performance within the support team to motivate and retain top talent.",
+    "Foster a culture of continuous improvement within the support organization to drive innovation and enhance the overall customer experience.",
+    "Collaborate with other teams, such as product development and engineering, to address underlying issues and improve the overall quality of the product.",
+    "Communicate regularly with users about known issues, planned maintenance, and upcoming releases to manage expectations and minimize disruptions.",
+    "Establish a clear escalation path for critical issues to ensure they are addressed promptly and effectively.",
+    "Develop a comprehensive disaster recovery plan to minimize downtime and ensure business continuity in the event of a major outage or incident.",
+    "Regularly test and update the disaster recovery plan to ensure it remains effective and relevant.",
+    "Conduct post-incident reviews to identify lessons learned and implement corrective actions to prevent future incidents.",
+    "Maintain a knowledge base of common issues and solutions to facilitate faster resolution times and improve support efficiency.",
+    "Use data analytics to identify trends and patterns in support tickets to proactively address potential problems and improve the overall user experience.",
+    "Implement a system for tracking and managing customer feedback to identify areas for improvement and prioritize feature requests.",
+    "Continuously monitor and evaluate support performance against key metrics to identify areas for optimization and measure the effectiveness of improvement initiatives.",
+    "Stay up-to-date on industry best practices and emerging technologies to ensure the support organization remains competitive and effective.",
+    "Foster a culture of customer-centricity within the support organization to ensure that all interactions are focused on providing a positive and helpful experience for users.",
+    "Empower support staff to make decisions and take ownership of issues to improve response times and resolution rates.",
+    "Encourage collaboration and knowledge sharing within the support team to promote continuous learning and improve overall team performance.",
+    "Provide regular feedback and coaching to support staff to help them develop their skills and improve their performance.",
+    "Celebrate successes and recognize achievements within the support team to build morale and foster a positive work environment.",
+    "Continuously seek feedback from users and stakeholders to identify areas for improvement and ensure that the support organization is meeting their needs.",
+    "Use data and analytics to drive decision-making and optimize support operations for maximum efficiency and effectiveness.",
+    "Invest in technology and tools to automate tasks, streamline workflows, and improve the overall support experience for both users and support staff.",
+    "Promote a culture of innovation and continuous improvement within the support organization to ensure that it remains at the forefront of industry best practices.",
+    "Build strong relationships with other teams within the organization to facilitate collaboration and ensure that support is integrated seamlessly into the overall business strategy.",
+    "Communicate the value and impact of the support organization to stakeholders to demonstrate its contribution to the success of the business.",
+    "Advocate for the needs of users and ensure that their voices are heard throughout the organization.",
+    "Continuously strive to exceed user expectations and provide a world-class support experience that builds loyalty and strengthens the brand reputation.",
+    "Focus on building a strong and sustainable support organization that is capable of adapting to changing business needs and delivering exceptional customer service over the long term.",
+    "Embrace a growth mindset and encourage continuous learning and development within the support team to ensure that it remains a valuable asset to the organization.",
+    "Prioritize the well-being and professional development of support staff to create a positive and fulfilling work environment that attracts and retains top talent.",
+    "Foster a culture of collaboration and teamwork within the support organization to maximize its effectiveness and achieve shared goals.",
+    "Communicate clearly and transparently with users and stakeholders to build trust and maintain strong relationships.",
+    "Be proactive in identifying and addressing potential problems before they impact users.",
+    "Continuously evaluate and improve support processes and procedures to ensure they are efficient, effective, and user-friendly.",
+    "Use data and analytics to measure the impact of support initiatives and demonstrate their value to the organization.",
+    "Celebrate successes and learn from failures to continuously improve the performance of the support organization.",
+    "Strive to create a support experience that is not only helpful but also enjoyable for users.",
+    "Build a support organization that is not just a cost center but a strategic asset that contributes to the overall success of the business.",
+    "Focus on providing exceptional customer service that builds loyalty and strengthens the brand reputation.",
+    "Empower support staff to be problem-solvers and advocates for users.",
+    "Create a culture of continuous improvement and innovation within the support organization.",
+    "Invest in the development and well-being of support staff.",
+    "Communicate clearly and transparently with users and stakeholders.",
+    "Be proactive in identifying and addressing potential problems.",
+    "Use data and analytics to drive decision-making and measure performance.",
+    "Celebrate successes and learn from failures.",
+    "Strive to create a support experience that is both helpful and enjoyable.",
+    "Build a support organization that is a strategic asset to the business.",
+    "Focus on providing exceptional customer service that builds loyalty and strengthens the brand."
+  ],
+  "message": "Daily support report generated successfully."
+}
