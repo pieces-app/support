@@ -1,0 +1,148 @@
+{
+  "success": true,
+  "date_range": {
+    "start": "2025-06-05T00:00:00+00:00",
+    "end": "2025-06-05T21:06:53.084354+00:00"
+  },
+  "summary": {
+    "total_tickets": 2,
+    "resolved_tickets": 0,
+    "open_tickets": 2
+  },
+  "ticket_breakdown": [
+    {
+      "category": "bug",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "os:windows",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "app:desktop application",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "status:triaged",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:vs code",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    }
+  ],
+  "most_active_tickets": [
+    {
+      "number": 730,
+      "title": "WSL cannot connect to Pieces OS in VS Code",
+      "activity_level": 7.22
+    },
+    {
+      "number": 719,
+      "title": "Pieces Desktop freezes after inactivity",
+      "activity_level": 7.09
+    }
+  ],
+  "common_issues": [
+    {
+      "title": "Pieces OS and Desktop Application Connectivity Issues",
+      "description": "Users are experiencing connectivity problems between Pieces OS, Desktop Application, and VS Code extension.  Desktop application freezes after inactivity, especially after chat interaction. VS Code extension fails to connect to Pieces OS in WSL environments, showing errors in settings and logs.  Potential solutions include checking network connectivity, Pieces OS version compatibility, and ensuring correct configuration of custom URLs for remote environments.",
+      "frequency": 2,
+      "related_issues": [
+        {
+          "id": 719,
+          "title": "Pieces Desktop freezes after inactivity",
+          "text": "Pieces Desktop freezes after inactivity\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.4.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nPieces OS - 11.4.1\nPieces Desktop - 4.1.3\n\nPieces desktop randomly freezes after a period of inactivity. I would interact with it in a chat, go back to working in another app and after a while go back to Desktop to find it had frozen. Restart of Pieces Desktop is needed. Note that this problem is very frequent since latest update on May 22nd, but not systematic. I had also noticed this kind of behavior before the updated but put it on the count of my Hardware, Intel i5, 16Gbram Asus Vivobook, but I think I can dismiss this theory.\n\nWhere it gets tricky is that this behavior seems to only happen if I had, prior to returning to Pieces Desktop, interacted with a chat. In cases where I simply had started Desktop, worked on something else and gone back to Desktop, it would keep working properly.\n\nNoteworthy: LTM is enabled by default for all chats. Default LLM: Claude 3.7 Sonnet.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 7.09
+        },
+        {
+          "id": 730,
+          "title": "WSL cannot connect to Pieces OS in VS Code",
+          "text": "WSL cannot connect to Pieces OS in VS Code\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, VS Code\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.4.2\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI tried to use Pieces extensions in VS Code for WSL:Ubuntu. Piesces Setting window is empty, but earlier it showed two buttons Launch and Install and when you click on Install, for example, VS Code shows notification that it can't connect to Pieces OS. I tried multiple fixes I found. One is to set Custom URL for Remote environment and I tried with <Windows IP>:1000 and with NGrok forwarding of same url, both without success and I could reach both with curl. There are some errors in VS Code Developer tools related to Pieces OS extension:\n\nUncaught (in promise) TypeError: version is longer than 256 characters\nat new it (settingsView.js:1:5120)\nat UH (settingsView.js:1:9927)\nat Object.tU (settingsView.js:1:10530)\nat vN (settingsView.js:19:354749)\n\nat\nhttps://vscode-remote+wsl-002bubuntu.vscode-resource.vscode-cdn.net/home/vladan/.vscode-server/extensions/meshintelligenttechnologiesinc.pieces-vscode-2.0.6/dist/settingsView.js\n\nand Pieces OS log shows error:\n\nGET     [404] /assets/stream/identifiers: port:Instance of 'Future<int>': (2nd server)\n\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 7.22
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    "Investigate connectivity issues between Pieces OS, Desktop Application, and VS Code, especially in WSL environments.",
+    "Address the freezing issue in the Desktop application after inactivity, particularly after chat interaction.",
+    "Prioritize resolving the VS Code extension's connection problems with Pieces OS in WSL, including settings and log errors.",
+    "Verify Pieces OS version compatibility and ensure correct configuration of custom URLs for remote environments.",
+    "Improve documentation and support resources for WSL and VS Code integration with Pieces OS and Desktop Application.",
+    "Consider enhancing error messaging and logging to provide more specific information for troubleshooting connectivity problems.",
+    "Gather more data on user environments and configurations to identify potential patterns or common factors contributing to the issues.",
+    "Explore potential solutions such as network connectivity checks, Pieces OS updates, and configuration adjustments for custom URLs.",
+    "Communicate with affected users to acknowledge the issues and provide updates on progress towards resolution.",
+    "Monitor support tickets and community forums for similar reports to gauge the impact and prioritize fixes accordingly.",
+    "Allocate resources to address the most active tickets and common issues to improve user experience and satisfaction.",
+    "Implement automated testing and monitoring to detect and prevent similar issues in the future releases.",
+    "Review and update the support process for handling connectivity and freezing problems to ensure efficient resolution.",
+    "Provide training to support staff on troubleshooting and resolving these specific issues to improve response times and effectiveness.",
+    "Consider implementing a bug bounty program or other incentives to encourage users to report issues and contribute to improving the software quality.",
+    "Analyze user feedback and prioritize bug fixes based on frequency, severity, and impact on user workflows.",
+    "Investigate the error messages related to version length and missing publisher models in VS Code and Pieces OS logs.",
+    "Ensure that the necessary model versions are accessible and configured correctly for the affected environments.",
+    "Test and validate the fixes across different operating systems, platforms, and configurations to ensure compatibility and stability.",
+    "Communicate the resolutions and workarounds to users through release notes, documentation updates, and support channels.",
+    "Track the effectiveness of the implemented solutions by monitoring support ticket volume and user feedback after the fixes are released.",
+    "Continuously improve the software development and testing processes to minimize the occurrence of similar issues in the future.",
+    "Encourage users to update to the latest versions of Pieces OS, Desktop Application, and VS Code extension to benefit from bug fixes and performance improvements.",
+    "Proactively monitor system performance and stability to identify and address potential issues before they impact users.",
+    "Establish a clear escalation path for critical issues to ensure timely resolution and minimize disruption to user workflows.",
+    "Foster a culture of continuous improvement and learning within the support team to enhance their skills and knowledge in addressing user issues effectively.",
+    "Regularly review and update support documentation and resources to reflect the latest software changes and troubleshooting steps.",
+    "Consider implementing a knowledge base or FAQ section to address common user questions and issues related to connectivity and freezing problems.",
+    "Provide users with clear and concise instructions on how to report issues and provide necessary information for effective troubleshooting.",
+    "Encourage users to participate in community forums and provide feedback to help identify and resolve issues more quickly.",
+    "Analyze support data to identify trends and patterns in user issues to proactively address potential problems and improve the software quality.",
+    "Collaborate with the development team to prioritize bug fixes and implement preventative measures to reduce the occurrence of similar issues in the future.",
+    "Communicate effectively with users throughout the support process to keep them informed about the status of their issues and any workarounds available.",
+    "Strive to provide excellent customer service and support to build trust and loyalty among users.",
+    "Continuously evaluate and improve support operations based on user feedback and performance metrics to ensure optimal efficiency and effectiveness.",
+    "Invest in tools and technologies that can automate support tasks, improve response times, and enhance the overall user experience.",
+    "Promote a collaborative environment between support and development teams to facilitate efficient communication and problem-solving.",
+    "Encourage knowledge sharing and best practices within the support team to improve their skills and expertise in handling user issues.",
+    "Regularly assess and update support processes and procedures to ensure they align with the evolving needs of the user base and the software itself.",
+    "Prioritize user satisfaction and strive to exceed their expectations in every support interaction.",
+    "Build a strong support community by encouraging user engagement, feedback, and collaboration.",
+    "Continuously seek opportunities to improve support operations and enhance the overall user experience with the software.",
+    "Embrace a customer-centric approach to support and prioritize user needs above all else.",
+    "Foster a positive and supportive work environment for the support team to empower them to provide excellent service to users.",
+    "Celebrate successes and recognize the contributions of the support team in resolving user issues and improving the software quality.",
+    "Strive to create a seamless and positive support experience for every user, regardless of the complexity of their issue.",
+    "Continuously learn and adapt to the ever-changing landscape of software support to provide the best possible service to users.",
+    "Empower users with the knowledge and resources they need to effectively utilize the software and resolve issues independently.",
+    "Build a strong reputation for providing exceptional support and exceeding user expectations.",
+    "Focus on continuous improvement and innovation in support operations to deliver the best possible user experience.",
+    "Prioritize user feedback and incorporate it into the development process to ensure the software meets their needs and expectations.",
+    "Create a culture of empathy and understanding within the support team to better serve users and resolve their issues effectively.",
+    "Strive to be a leader in software support and set the standard for excellence in the industry.",
+    "Empower users to become advocates for the software by providing them with exceptional support and a positive user experience.",
+    "Continuously invest in the support team and provide them with the resources they need to succeed in their roles.",
+    "Build a strong partnership with users and work together to improve the software and the overall user experience.",
+    "Focus on long-term sustainability in support operations by building a scalable and efficient support infrastructure.",
+    "Create a positive and rewarding work environment for the support team to foster a culture of excellence and continuous improvement.",
+    "Strive to make a positive impact on users' lives by providing them with exceptional support and helping them achieve their goals with the software.",
+    "Empower users to become active participants in the software community and contribute to its growth and improvement.",
+    "Build a strong brand reputation for providing outstanding support and exceeding user expectations in every interaction.",
+    "Continuously seek opportunities to innovate and improve support operations to deliver the best possible user experience and build lasting relationships with users.",
+    "Focus on building a strong and loyal user base by providing exceptional support and exceeding their expectations in every interaction.",
+    "Strive to be a trusted partner for users and help them achieve success with the software by providing them with the support they need, when they need it.",
+    "Empower users to become product experts and share their knowledge with others to build a thriving and supportive community around the software.",
+    "Continuously invest in the support team's growth and development to ensure they have the skills and knowledge necessary to provide exceptional support and build strong relationships with users.",
+    "Focus on creating a positive and memorable support experience for every user, leaving them with a lasting impression of the software and the company behind it.",
+    "Strive to be a role model in the software industry for providing outstanding support and building a strong and loyal user base through exceptional service and a commitment to continuous improvement."
+  ],
+  "message": "Daily support report generated successfully."
+}
