@@ -2,25 +2,55 @@
   "success": true,
   "date_range": {
     "start": "2025-06-02T00:00:00+00:00",
-    "end": "2025-06-06T13:16:02.596623+00:00"
+    "end": "2025-06-06T21:07:49.994530+00:00"
   },
   "summary": {
-    "total_tickets": 14,
+    "total_tickets": 15,
     "resolved_tickets": 5,
-    "open_tickets": 9
+    "open_tickets": 10
   },
   "ticket_breakdown": [
     {
       "category": "bug",
-      "received": 13,
+      "received": 14,
       "resolved": 4,
-      "pending": 9
+      "pending": 10
     },
     {
       "category": "os:windows",
-      "received": 8,
+      "received": 9,
       "resolved": 2,
-      "pending": 6
+      "pending": 7
+    },
+    {
+      "category": "app:desktop application",
+      "received": 13,
+      "resolved": 5,
+      "pending": 8
+    },
+    {
+      "category": "status:waiting_on_user_responses",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "app:visual studio",
+      "received": 3,
+      "resolved": 1,
+      "pending": 2
+    },
+    {
+      "category": "unable to reproduce",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:triaged",
+      "received": 13,
+      "resolved": 4,
+      "pending": 9
     },
     {
       "category": "app:vs code",
@@ -35,34 +65,16 @@
       "pending": 1
     },
     {
-      "category": "status:triaged",
-      "received": 12,
-      "resolved": 4,
-      "pending": 8
-    },
-    {
       "category": "app:pieces os",
       "received": 5,
       "resolved": 2,
       "pending": 3
     },
     {
-      "category": "app:desktop application",
-      "received": 12,
-      "resolved": 5,
-      "pending": 7
-    },
-    {
       "category": "os:macos",
       "received": 5,
       "resolved": 2,
       "pending": 3
-    },
-    {
-      "category": "status:waiting_on_user_responses",
-      "received": 1,
-      "resolved": 0,
-      "pending": 1
     },
     {
       "category": "queued for release",
@@ -113,12 +125,6 @@
       "pending": 0
     },
     {
-      "category": "app:visual studio",
-      "received": 2,
-      "resolved": 1,
-      "pending": 1
-    },
-    {
       "category": "app:cli",
       "received": 1,
       "resolved": 1,
@@ -158,7 +164,7 @@
     {
       "number": 719,
       "title": "Pieces Desktop freezes after inactivity",
-      "activity_level": 7.09
+      "activity_level": 6.95
     },
     {
       "number": 730,
@@ -168,7 +174,7 @@
     {
       "number": 733,
       "title": "Chat responses are slow/dont happen",
-      "activity_level": 5.36
+      "activity_level": 6.32
     },
     {
       "number": 732,
@@ -178,7 +184,7 @@
     {
       "number": 734,
       "title": "bug: LTM continues to turn off, requiring me to turn LTM back on periodically",
-      "activity_level": 4.73
+      "activity_level": 4.52
     },
     {
       "number": 731,
@@ -191,16 +197,6 @@
       "activity_level": 3.03
     },
     {
-      "number": 743,
-      "title": "Clear Long Term Memory Data\" Does Not Remove Captured Context or Workstream Activity",
-      "activity_level": 3.01
-    },
-    {
-      "number": 742,
-      "title": "Mac OS Keyboard Shortcuts do not work",
-      "activity_level": 3.01
-    },
-    {
       "number": 737,
       "title": "bug: create memory via mcp(resolved in next release 11.4.3)",
       "activity_level": 3.0
@@ -211,9 +207,24 @@
       "activity_level": 3.0
     },
     {
+      "number": 743,
+      "title": "Clear Long Term Memory Data\" Does Not Remove Captured Context or Workstream Activity",
+      "activity_level": 2.71
+    },
+    {
+      "number": 742,
+      "title": "Mac OS Keyboard Shortcuts do not work",
+      "activity_level": 2.71
+    },
+    {
       "number": 729,
       "title": "No response to chat. It just keeps loading .",
-      "activity_level": 2.51
+      "activity_level": 2.43
+    },
+    {
+      "number": 697,
+      "title": "Visual Studio 2022 extension interfering with Diagnostic tool output",
+      "activity_level": 2.32
     },
     {
       "number": 727,
@@ -224,7 +235,7 @@
   "common_issues": [
     {
       "title": "Pieces OS connectivity issues across VS Code and Chrome extensions",
-      "description": "Users report various connectivity problems with Pieces OS 11.4.2 on Windows.  VS Code extension fails to connect, showing errors in developer tools and Pieces OS logs. Chrome extension malfunctions, reporting outdated version despite being the latest. Users experience VS Code performance degradation while Pieces OS is running.  Troubleshooting includes checking custom URLs and network connectivity.",
+      "description": "Users report various connectivity problems with Pieces OS on Windows.  VS Code extension fails to connect, showing errors in developer tools and Pieces OS logs. Chrome extension malfunctions, reporting outdated version despite being the latest. Issues persist across different Pieces OS versions (11.4.2) and involve VS Code's WSL environment.  Troubleshooting includes custom URL settings and Ngrok forwarding, but without success.",
       "frequency": 3,
       "related_issues": [
         {
@@ -249,7 +260,7 @@
     },
     {
       "title": "Pieces OS and plugin compatibility issues",
-      "description": "Users report plugin malfunctions, connection failures, and performance degradation with Pieces OS, especially after updates.  A common solution involves ensuring all Pieces components (desktop app, OS, and plugins) are updated to their latest compatible versions, as listed in the 11.0.0 release notes. Check for version compatibility and update accordingly.",
+      "description": "Users are experiencing issues with Pieces OS and its plugins, primarily connection problems and performance degradation.  A common solution is to ensure all Pieces components (OS, desktop app, and plugins) are updated to their latest versions, especially after a major release like 11.0.0.  Check for version compatibility and update through the respective app stores or Pieces update mechanisms.",
       "frequency": 3,
       "related_issues": [
         {
@@ -274,20 +285,20 @@
     },
     {
       "title": "Pieces OS and Desktop App Performance Issues",
-      "description": "Users report performance issues including freezing, unresponsiveness, and unexpected restarts, primarily with the Pieces Desktop app on Windows and macOS.  Issues appear linked to LTM usage and inactivity periods.  One user noted performance degradation in VS Code while Pieces OS is active. Troubleshooting steps include restarting the Pieces Desktop app and checking for OS updates.",
+      "description": "Users report performance issues including freezing, unresponsiveness, and unexpected restarts, primarily with the Pieces Desktop app on Windows and macOS.  Issues appear linked to LTM usage and inactivity.  Potential solutions include checking for updates, restarting the app or OS, and disabling LTM.",
       "frequency": 3,
       "related_issues": [
         {
           "id": 719,
           "title": "Pieces Desktop freezes after inactivity",
           "text": "Pieces Desktop freezes after inactivity\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.4.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nPieces OS - 11.4.1\nPieces Desktop - 4.1.3\n\nPieces desktop randomly freezes after a period of inactivity. I would interact with it in a chat, go back to working in another app and after a while go back to Desktop to find it had frozen. Restart of Pieces Desktop is needed. Note that this problem is very frequent since latest update on May 22nd, but not systematic. I had also noticed this kind of behavior before the updated but put it on the count of my Hardware, Intel i5, 16Gbram Asus Vivobook, but I think I can dismiss this theory.\n\nWhere it gets tricky is that this behavior seems to only happen if I had, prior to returning to Pieces Desktop, interacted with a chat. In cases where I simply had started Desktop, worked on something else and gone back to Desktop, it would keep working properly.\n\nNoteworthy: LTM is enabled by default for all chats. Default LLM: Claude 3.7 Sonnet.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 7.09
+          "activity_level": 6.95
         },
         {
           "id": 734,
           "title": "bug: LTM continues to turn off, requiring me to turn LTM back on periodically",
           "text": "bug: LTM continues to turn off, requiring me to turn LTM back on periodically\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n11.4.2\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI just updated Pieces to try out L.T.M 2.5, and I noticed that the software keeps stopping and restarting on its own. I checked for any updates I may have missed, and none. I restarted the software by forcing it to quit, but the issue persisted. \n\nThe issue only happens when I turn on L.T.M. \nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 4.73
+          "activity_level": 4.52
         },
         {
           "id": 732,
@@ -298,15 +309,15 @@
       ]
     },
     {
-      "title": "Pieces Desktop App and Plugin Issues",
-      "description": "Users are experiencing various issues with the Pieces desktop application and plugins, including keyboard shortcuts not working on macOS, Chrome plugin connection problems on Windows, and the desktop app periodically jumping to the main monitor on macOS.  Troubleshooting steps include checking for plugin updates and reinstalling the desktop application.",
+      "title": "Pieces Desktop App and Plugin Issues on macOS and Windows",
+      "description": "Users are experiencing issues with the Pieces desktop app and Chrome plugin on macOS and Windows.  Keyboard shortcuts are not functioning on macOS, and the Chrome plugin has connectivity and functionality problems on Windows. Additionally, the macOS desktop app periodically jumps to the main monitor and steals focus.  Reinstallation may resolve some of these issues.",
       "frequency": 3,
       "related_issues": [
         {
           "id": 742,
           "title": "Mac OS Keyboard Shortcuts do not work",
           "text": "Mac OS Keyboard Shortcuts do not work\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n11.4.3\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI've tried every shortcut described in https://docs.pieces.app/products/desktop/actions/keyboard-shortcuts to no avail. \n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 3.01
+          "activity_level": 2.71
         },
         {
           "id": 739,
@@ -323,8 +334,8 @@
       ]
     },
     {
-      "title": "Pieces OS 11.4.2 performance issues and Copilot integration bugs",
-      "description": "Users are experiencing performance issues with Pieces OS 11.4.2, including VS Code slowdowns and unresponsiveness.  Additionally, Copilot integration is failing, specifically with the `create_memory_pieces` tool, and connection drops are occurring.  Issues appear across VS Code, VS 2022, and the Pieces desktop app. The next release, 11.4.3, is expected to resolve the memory creation bug.",
+      "title": "Pieces OS 11.4.2 performance issues and Gemini connection failures",
+      "description": "Users are experiencing performance issues with Pieces OS 11.4.2, including VS Code slowdowns, dropped connections, and delayed or absent chat responses.  A \"create memory\" bug via MCP is resolved in the upcoming 11.4.3 release.  Gemini API connection failures are also reported, indicated by 404 errors for the gemini-pro model.",
       "frequency": 3,
       "related_issues": [
         {
@@ -343,11 +354,22 @@
           "id": 733,
           "title": "Chat responses are slow/dont happen",
           "text": "Chat responses are slow/dont happen\n### Checked for Existing Issues?\n\n- [ ] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Visual Studio, VS Code\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.4.2\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nwhenever i send a message, the responses come up to 5 minutes later, or simply dont happen\nhappens in vs2022/vs code/desktop app,  (and prob on everything that requires pieces os)\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 5.36
+          "activity_level": 6.32
         }
       ]
     }
   ],
-  "recommendations": [],
+  "recommendations": [
+    "Prioritize resolving connectivity issues between Pieces OS and its plugins, especially for VS Code and Chrome extensions on Windows.  Focus on issues related to WSL environments and version compatibility.",
+    "Address performance problems with Pieces OS and the Desktop app, particularly freezing and unresponsiveness on Windows and macOS. Investigate the impact of LTM usage and inactivity.",
+    "Ensure keyboard shortcuts are fully functional on macOS and resolve the focus stealing issue. Re-evaluate the Chrome plugin's functionality and connectivity on Windows.",
+    "Investigate and resolve Gemini API connection failures, focusing on the reported 404 errors for the gemini-pro model.",
+    "Proactively monitor and address issues related to the upcoming 11.4.3 release, especially the resolved \"create memory\" bug, to prevent further user disruption.",
+    "Improve communication with users regarding plugin updates and compatibility issues, particularly after major releases like 11.0.0. Provide clear instructions on updating all Pieces components.",
+    "Gather more data on the frequency and impact of LTM-related issues to determine if disabling LTM is a viable temporary solution for performance problems.",
+    "Analyze user feedback and logs to identify common pain points and areas for improvement in the Pieces ecosystem. Use this data to inform future development and prioritization of bug fixes.",
+    "Develop more robust troubleshooting documentation and resources for users experiencing connectivity and performance issues. Include step-by-step instructions and common solutions.",
+    "Consider implementing automated testing and monitoring to catch and address issues more quickly, particularly for critical functionalities like connectivity and performance."
+  ],
   "message": "Daily support report generated successfully."
 }
