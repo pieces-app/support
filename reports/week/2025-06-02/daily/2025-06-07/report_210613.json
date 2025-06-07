@@ -1,0 +1,97 @@
+{
+  "success": true,
+  "date_range": {
+    "start": "2025-06-07T00:00:00+00:00",
+    "end": "2025-06-07T21:06:13.402229+00:00"
+  },
+  "summary": {
+    "total_tickets": 1,
+    "resolved_tickets": 1,
+    "open_tickets": 0
+  },
+  "ticket_breakdown": [
+    {
+      "category": "bug",
+      "received": 1,
+      "resolved": 1,
+      "pending": 0
+    },
+    {
+      "category": "app:desktop application",
+      "received": 1,
+      "resolved": 1,
+      "pending": 0
+    },
+    {
+      "category": "os:macos",
+      "received": 1,
+      "resolved": 1,
+      "pending": 0
+    },
+    {
+      "category": "app:pieces os",
+      "received": 1,
+      "resolved": 1,
+      "pending": 0
+    },
+    {
+      "category": "app:pieces copilot module",
+      "received": 1,
+      "resolved": 1,
+      "pending": 0
+    },
+    {
+      "category": "status:triaged",
+      "received": 1,
+      "resolved": 1,
+      "pending": 0
+    }
+  ],
+  "most_active_tickets": [
+    {
+      "number": 731,
+      "title": "Pieces Copilot doesn't get the LTM info and shows a wrong date",
+      "activity_level": 4.34
+    }
+  ],
+  "common_issues": [
+    {
+      "title": "Pieces Copilot ignores LTM context, displays wrong date",
+      "description": "Copilot struggles to utilize LTM information for generating relevant responses, often resorting to unrelated topics.  Specifying context details like lecture name improves accuracy. Additionally, the displayed context time is inaccurate, showing \"Last Thursday\" regardless of the actual time.",
+      "frequency": 1,
+      "related_issues": [
+        {
+          "id": 731,
+          "title": "Pieces Copilot doesn't get the LTM info and shows a wrong date",
+          "text": "Pieces Copilot doesn't get the LTM info and shows a wrong date\n### Checked for Existing Issues?\n\n- [ ] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n11.4.2\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nAfter I did all my work with LTM turned on, I used the `Start Copilot Chat` button in the **Workstream Activity** View of Pieces Desktop. I asked it to generate some quiz questions based on what I studied, and it started talking about a lot of unrelated topics, even when the context was provided. Though when I started a new chat based on the context again and became more specific with the details such as lecture name and number (that was the one and only thing in the context I started the conversation with), it did it correctly. Also, all this while, the context time showed Last Thursday so I think there is an UI bug too. \n\n**Context Image:**\n![Image](https://github.com/user-attachments/assets/ab732ff6-d195-4e81-a2af-6cee1e1d2032)\n\n**Chat Image (Where it talks about unrelated topics):**\n![Image](https://github.com/user-attachments/assets/8d6abd44-60a0-4f0c-9f8a-1cf1a887fd2e)\n\n**Chat Image (Where it was fixed):**\n![Image](https://github.com/user-attachments/assets/c7d86c81-ba0e-4ec3-8e2f-49a326ac232a)\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 4.34
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    "Investigate the issue of Pieces Copilot ignoring LTM context and displaying the wrong date. This appears to be the most frequent and active issue reported.",
+    "Prioritize resolving issue #731, \"Pieces Copilot doesn't get the LTM info and shows a wrong date,\" as it has the highest activity level and represents the common problem related to LTM context and incorrect date display.",
+    "Review the provided context images and chat logs within issue #731 to understand the steps to reproduce the bug and identify the root cause.",
+    "Verify the accuracy of the \"Last Thursday\" time display in the Pieces Copilot interface and ensure it reflects the actual context time.",
+    "Consider improving the Pieces Copilot's ability to handle LTM information and generate relevant responses, even when context details are not explicitly provided.",
+    "Provide clearer instructions or guidance to users on how to effectively use LTM context with Pieces Copilot to avoid confusion and improve accuracy.",
+    "Monitor the impact of these fixes on the overall support ticket volume and activity levels related to Pieces Copilot and LTM context issues after implementation.",
+    "If the issue persists after addressing the LTM context and date display, investigate other potential factors, such as network connectivity or data synchronization problems.",
+    "Gather more user feedback on the Pieces Copilot experience, particularly regarding LTM context handling and date accuracy, to identify any further areas for improvement.",
+    "Proactively communicate updates and resolutions to users regarding the reported issues to maintain transparency and manage expectations effectively.",
+    "Consider adding more detailed logging or debugging capabilities to Pieces Copilot to facilitate faster identification and resolution of similar issues in the future.",
+    "Analyze support tickets regularly to identify trends and patterns related to Pieces Copilot or other product areas, and use this information to inform product development and improvement efforts.",
+    "Develop automated tests to cover the reported issues and prevent regressions in future releases, ensuring the stability and reliability of Pieces Copilot's LTM context handling and date display functionality.",
+    "Explore potential enhancements to the Pieces Copilot interface to make it easier for users to provide and manage context information, reducing the likelihood of similar issues arising in the future.",
+    "Evaluate the effectiveness of the current support documentation and resources related to Pieces Copilot and LTM context, and update them as needed to address common user questions and issues more effectively.",
+    "Provide training or educational materials to support staff on how to troubleshoot and resolve issues related to Pieces Copilot and LTM context, empowering them to handle user inquiries more efficiently.",
+    "Consider implementing a feedback mechanism within the Pieces Copilot interface to allow users to easily report issues or provide suggestions for improvement directly to the development team.",
+    "Investigate the \"404 Publisher Model\" error encountered during summary generation and ensure that the correct model version is being used and accessible to the project.",
+    "Review the error message details and consult the provided documentation link (https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions) for troubleshooting steps and potential solutions to resolve the model access issue.",
+    "Ensure that the necessary permissions and API keys are configured correctly for accessing the Gemini Pro model and generating summaries within the Pieces Copilot application.",
+    "Consider implementing fallback mechanisms or alternative summary generation methods in case the primary model is unavailable or encounters errors, ensuring a more robust and reliable user experience.",
+    "Monitor the stability and performance of the Gemini Pro model and explore alternative models or solutions if necessary to ensure consistent and accurate summary generation within Pieces Copilot."
+  ],
+  "message": "Daily support report generated successfully."
+}
