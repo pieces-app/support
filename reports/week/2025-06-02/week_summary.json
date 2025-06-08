@@ -2,14 +2,26 @@
   "success": true,
   "date_range": {
     "start": "2025-06-02T00:00:00+00:00",
-    "end": "2025-06-08T13:12:17.153332+00:00"
+    "end": "2025-06-08T21:06:49.461361+00:00"
   },
   "summary": {
-    "total_tickets": 15,
+    "total_tickets": 16,
     "resolved_tickets": 6,
-    "open_tickets": 9
+    "open_tickets": 10
   },
   "ticket_breakdown": [
+    {
+      "category": "app:cli",
+      "received": 2,
+      "resolved": 1,
+      "pending": 1
+    },
+    {
+      "category": "status:triaged",
+      "received": 14,
+      "resolved": 5,
+      "pending": 9
+    },
     {
       "category": "bug",
       "received": 14,
@@ -39,12 +51,6 @@
       "received": 2,
       "resolved": 2,
       "pending": 0
-    },
-    {
-      "category": "status:triaged",
-      "received": 13,
-      "resolved": 5,
-      "pending": 8
     },
     {
       "category": "os:windows",
@@ -125,12 +131,6 @@
       "pending": 0
     },
     {
-      "category": "app:cli",
-      "received": 1,
-      "resolved": 1,
-      "pending": 0
-    },
-    {
       "category": "app:neovim",
       "received": 1,
       "resolved": 1,
@@ -164,12 +164,7 @@
     {
       "number": 719,
       "title": "Pieces Desktop freezes after inactivity",
-      "activity_level": 6.36
-    },
-    {
-      "number": 733,
-      "title": "Chat responses are slow/dont happen",
-      "activity_level": 6.07
+      "activity_level": 6.25
     },
     {
       "number": 730,
@@ -177,9 +172,9 @@
       "activity_level": 5.95
     },
     {
-      "number": 734,
-      "title": "bug: LTM continues to turn off, requiring me to turn LTM back on periodically",
-      "activity_level": 4.34
+      "number": 733,
+      "title": "Chat responses are slow/dont happen",
+      "activity_level": 5.3
     },
     {
       "number": 731,
@@ -187,9 +182,19 @@
       "activity_level": 4.18
     },
     {
+      "number": 734,
+      "title": "bug: LTM continues to turn off, requiring me to turn LTM back on periodically",
+      "activity_level": 4.18
+    },
+    {
       "number": 732,
       "title": "Performance Issues in VSCode with Pieces OS Active",
       "activity_level": 3.91
+    },
+    {
+      "number": 713,
+      "title": "LTM not working in Pieces CLI",
+      "activity_level": 3.59
     },
     {
       "number": 538,
@@ -209,22 +214,22 @@
     {
       "number": 743,
       "title": "Clear Long Term Memory Data\" Does Not Remove Captured Context or Workstream Activity",
-      "activity_level": 2.49
+      "activity_level": 2.33
     },
     {
       "number": 742,
       "title": "Mac OS Keyboard Shortcuts do not work",
-      "activity_level": 2.49
+      "activity_level": 2.33
     },
     {
       "number": 729,
       "title": "No response to chat. It just keeps loading .",
-      "activity_level": 2.36
+      "activity_level": 2.3
     },
     {
       "number": 697,
       "title": "Visual Studio 2022 extension interfering with Diagnostic tool output",
-      "activity_level": 2.3
+      "activity_level": 1.92
     },
     {
       "number": 727,
@@ -235,7 +240,7 @@
   "common_issues": [
     {
       "title": "Pieces OS connectivity issues across VS Code and Chrome extensions",
-      "description": "Users report various connectivity problems with Pieces OS 11.4.2 on Windows.  VS Code extension displays empty settings, fails to connect to Pieces OS, and logs errors. Chrome extension malfunctions, reporting outdated version despite being the latest.  Users have tried custom URLs and Ngrok forwarding without success.  Pieces OS logs show 404 errors for asset streams.",
+      "description": "Users report various connectivity problems with Pieces OS 11.4.2 on Windows.  VS Code extension fails to connect, showing an empty settings window or errors in developer tools. Chrome extension also fails to connect, despite being the latest version. Issues may involve WSL and custom URL settings.  Further investigation needed to pinpoint the root cause and provide solutions.",
       "frequency": 3,
       "related_issues": [
         {
@@ -260,7 +265,7 @@
     },
     {
       "title": "Pieces OS and plugin compatibility issues",
-      "description": "Users report plugin malfunctions, connection failures, and performance degradation with Pieces OS, especially after updates.  A common solution involves updating all plugins to their latest versions, ensuring compatibility with the Pieces OS version. Check for version compatibility on the Pieces OS website.",
+      "description": "Users report plugin malfunctions, connection failures, and performance degradation, especially with the Chrome extension and VSCode integration.  Updating to the latest Pieces OS (11.0.0 or higher) and corresponding plugins (v4.0.0 for Chrome) is crucial. Check for version compatibility and ensure all Pieces components are up-to-date.",
       "frequency": 3,
       "related_issues": [
         {
@@ -284,27 +289,27 @@
       ]
     },
     {
-      "title": "Pieces Desktop Issues with LTM and Freezing",
-      "description": "Users report Pieces Desktop experiencing issues related to LTM, including incorrect date/time display, generating unrelated topics in Copilot chats, and application freezing after inactivity.  The issues appear across macOS and Windows platforms.  One user was able to fix Copilot by providing specific context.  Restarting the application may temporarily resolve freezing issues.",
+      "title": "Pieces OS and Desktop app performance issues",
+      "description": "Users report freezing, slowdowns, and unresponsiveness in Pieces Desktop and other applications like VS Code when Pieces OS is running.  The issues appear to be related to LTM and recent updates.  Restarting Pieces Desktop sometimes helps.  One user observed that interacting with chat in Pieces Desktop before switching to another application might trigger freezing.",
       "frequency": 3,
       "related_issues": [
         {
-          "id": 731,
-          "title": "Pieces Copilot doesn't get the LTM info and shows a wrong date",
-          "text": "Pieces Copilot doesn't get the LTM info and shows a wrong date\n### Checked for Existing Issues?\n\n- [ ] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n11.4.2\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nAfter I did all my work with LTM turned on, I used the `Start Copilot Chat` button in the **Workstream Activity** View of Pieces Desktop. I asked it to generate some quiz questions based on what I studied, and it started talking about a lot of unrelated topics, even when the context was provided. Though when I started a new chat based on the context again and became more specific with the details such as lecture name and number (that was the one and only thing in the context I started the conversation with), it did it correctly. Also, all this while, the context time showed Last Thursday so I think there is an UI bug too. \n\n**Context Image:**\n![Image](https://github.com/user-attachments/assets/ab732ff6-d195-4e81-a2af-6cee1e1d2032)\n\n**Chat Image (Where it talks about unrelated topics):**\n![Image](https://github.com/user-attachments/assets/8d6abd44-60a0-4f0c-9f8a-1cf1a887fd2e)\n\n**Chat Image (Where it was fixed):**\n![Image](https://github.com/user-attachments/assets/c7d86c81-ba0e-4ec3-8e2f-49a326ac232a)\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 4.18
+          "id": 719,
+          "title": "Pieces Desktop freezes after inactivity",
+          "text": "Pieces Desktop freezes after inactivity\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.4.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nPieces OS - 11.4.1\nPieces Desktop - 4.1.3\n\nPieces desktop randomly freezes after a period of inactivity. I would interact with it in a chat, go back to working in another app and after a while go back to Desktop to find it had frozen. Restart of Pieces Desktop is needed. Note that this problem is very frequent since latest update on May 22nd, but not systematic. I had also noticed this kind of behavior before the updated but put it on the count of my Hardware, Intel i5, 16Gbram Asus Vivobook, but I think I can dismiss this theory.\n\nWhere it gets tricky is that this behavior seems to only happen if I had, prior to returning to Pieces Desktop, interacted with a chat. In cases where I simply had started Desktop, worked on something else and gone back to Desktop, it would keep working properly.\n\nNoteworthy: LTM is enabled by default for all chats. Default LLM: Claude 3.7 Sonnet.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 6.25
         },
         {
           "id": 734,
           "title": "bug: LTM continues to turn off, requiring me to turn LTM back on periodically",
           "text": "bug: LTM continues to turn off, requiring me to turn LTM back on periodically\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n11.4.2\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI just updated Pieces to try out L.T.M 2.5, and I noticed that the software keeps stopping and restarting on its own. I checked for any updates I may have missed, and none. I restarted the software by forcing it to quit, but the issue persisted. \n\nThe issue only happens when I turn on L.T.M. \nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 4.34
+          "activity_level": 4.18
         },
         {
-          "id": 719,
-          "title": "Pieces Desktop freezes after inactivity",
-          "text": "Pieces Desktop freezes after inactivity\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.4.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nPieces OS - 11.4.1\nPieces Desktop - 4.1.3\n\nPieces desktop randomly freezes after a period of inactivity. I would interact with it in a chat, go back to working in another app and after a while go back to Desktop to find it had frozen. Restart of Pieces Desktop is needed. Note that this problem is very frequent since latest update on May 22nd, but not systematic. I had also noticed this kind of behavior before the updated but put it on the count of my Hardware, Intel i5, 16Gbram Asus Vivobook, but I think I can dismiss this theory.\n\nWhere it gets tricky is that this behavior seems to only happen if I had, prior to returning to Pieces Desktop, interacted with a chat. In cases where I simply had started Desktop, worked on something else and gone back to Desktop, it would keep working properly.\n\nNoteworthy: LTM is enabled by default for all chats. Default LLM: Claude 3.7 Sonnet.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 6.36
+          "id": 732,
+          "title": "Performance Issues in VSCode with Pieces OS Active",
+          "text": "Performance Issues in VSCode with Pieces OS Active\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nPieces OS, VS Code\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.4.2\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWhen Pieces OS is running, my VSCODE becomes very sluggish and sometimes unresponsive. But the moment I end/stop Pieces OS, my VSCode becomes more responsive.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 3.91
         }
       ]
     },
@@ -317,7 +322,7 @@
           "id": 742,
           "title": "Mac OS Keyboard Shortcuts do not work",
           "text": "Mac OS Keyboard Shortcuts do not work\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n11.4.3\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI've tried every shortcut described in https://docs.pieces.app/products/desktop/actions/keyboard-shortcuts to no avail. \n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 2.49
+          "activity_level": 2.33
         },
         {
           "id": 739,
@@ -334,117 +339,91 @@
       ]
     },
     {
-      "title": "Pieces OS 11.4.2 performance issues and Gemini connection failures",
-      "description": "Users are experiencing performance issues with Pieces OS 11.4.2, including VS Code slowdowns, dropped connections, and delayed or absent chat responses.  A \"create memory\" bug via MCP is resolved in the upcoming 11.4.3 release.  Gemini API connection failures are also reported, resulting in error messages.  Users should update to 11.4.3 when available and check Gemini API status.",
+      "title": "LTM integration issues across Pieces OS and Desktop App",
+      "description": "Users report LTM failing to provide context in Pieces CLI and Desktop app, resulting in inaccurate summaries and chat responses. Issues include 404 errors for the Gemini-Pro model, incorrect date/time context, and LTM repeatedly turning off.  Further investigation into LTM-client interaction and data synchronization is needed.  Users should verify LTM is enabled and check for OS/application updates.",
       "frequency": 3,
       "related_issues": [
         {
-          "id": 737,
-          "title": "bug: create memory via mcp(resolved in next release 11.4.3)",
-          "text": "bug: create memory via mcp(resolved in next release 11.4.3)\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, VS Code\n\n### Operating System / Platform\n\nwindows\n\n### Your Pieces OS Version\n\n11.4.2\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nThe issue is that whenever copilot tries to use the create_memory_pieces tool it fails. \n\n<img width=\"497\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/6af8e815-4d11-474d-b851-4c0fc62aaaea\" />\n\nOn top of that the connection seems to get dropped occasionally:\n\n<img width=\"1025\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/7596efa3-14eb-498f-a54c-b125b1eae858\" />\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 2.71
+          "id": 713,
+          "title": "LTM not working in Pieces CLI",
+          "text": "LTM not working in Pieces CLI\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nPieces CLI, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.3.6\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nScreenshot from CLI:\n![Image](https://github.com/user-attachments/assets/949b363d-bbd3-4f3a-b128-5211ca2ef765)\n\nSame question from a chat in Pieces Desktop instead:\n![Image](https://github.com/user-attachments/assets/8d3e98a3-e311-46d3-acba-678e286a4bcd)\n\nPieces CLI doesn't seem to get the context from LTM.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 3.59
         },
         {
-          "id": 732,
-          "title": "Performance Issues in VSCode with Pieces OS Active",
-          "text": "Performance Issues in VSCode with Pieces OS Active\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nPieces OS, VS Code\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.4.2\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWhen Pieces OS is running, my VSCODE becomes very sluggish and sometimes unresponsive. But the moment I end/stop Pieces OS, my VSCode becomes more responsive.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 3.91
+          "id": 731,
+          "title": "Pieces Copilot doesn't get the LTM info and shows a wrong date",
+          "text": "Pieces Copilot doesn't get the LTM info and shows a wrong date\n### Checked for Existing Issues?\n\n- [ ] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n11.4.2\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nAfter I did all my work with LTM turned on, I used the `Start Copilot Chat` button in the **Workstream Activity** View of Pieces Desktop. I asked it to generate some quiz questions based on what I studied, and it started talking about a lot of unrelated topics, even when the context was provided. Though when I started a new chat based on the context again and became more specific with the details such as lecture name and number (that was the one and only thing in the context I started the conversation with), it did it correctly. Also, all this while, the context time showed Last Thursday so I think there is an UI bug too. \n\n**Context Image:**\n![Image](https://github.com/user-attachments/assets/ab732ff6-d195-4e81-a2af-6cee1e1d2032)\n\n**Chat Image (Where it talks about unrelated topics):**\n![Image](https://github.com/user-attachments/assets/8d6abd44-60a0-4f0c-9f8a-1cf1a887fd2e)\n\n**Chat Image (Where it was fixed):**\n![Image](https://github.com/user-attachments/assets/c7d86c81-ba0e-4ec3-8e2f-49a326ac232a)\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 4.18
         },
         {
-          "id": 733,
-          "title": "Chat responses are slow/dont happen",
-          "text": "Chat responses are slow/dont happen\n### Checked for Existing Issues?\n\n- [ ] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Visual Studio, VS Code\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.4.2\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nwhenever i send a message, the responses come up to 5 minutes later, or simply dont happen\nhappens in vs2022/vs code/desktop app,  (and prob on everything that requires pieces os)\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 6.07
+          "id": 734,
+          "title": "bug: LTM continues to turn off, requiring me to turn LTM back on periodically",
+          "text": "bug: LTM continues to turn off, requiring me to turn LTM back on periodically\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n11.4.2\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI just updated Pieces to try out L.T.M 2.5, and I noticed that the software keeps stopping and restarting on its own. I checked for any updates I may have missed, and none. I restarted the software by forcing it to quit, but the issue persisted. \n\nThe issue only happens when I turn on L.T.M. \nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 4.18
         }
       ]
     }
   ],
   "recommendations": [
-    "Prioritize resolving connectivity issues between Pieces OS and plugins, especially for VS Code and Chrome extensions on Windows.  Focus on issues related to empty settings, connection failures, outdated version reports, and 404 errors for asset streams.",
-    "Address performance issues impacting VS Code when Pieces OS is active, including slowdowns and unresponsiveness.",
-    "Investigate and resolve issues with Pieces Desktop, including LTM bugs affecting date/time display and Copilot chat relevance, as well as application freezing after inactivity.",
-    "Ensure keyboard shortcuts are functional on macOS and address the desktop app periodically jumping to the main monitor.",
-    "Monitor and resolve Gemini API connection failures and improve chat response times.",
-    "Update documentation and user guides to reflect the latest plugin versions and compatibility with Pieces OS 11.4.2 and later.",
-    "Proactively communicate the resolution of the 'create memory' bug in the 11.4.3 release and encourage users to update.",
-    "Consider adding troubleshooting steps for common connectivity and performance issues to the FAQ or support knowledge base.",
-    "Analyze user feedback and logs to identify any recurring patterns or underlying causes of reported issues.",
-    "Prioritize the most active tickets and common issues to address the largest user impact quickly.",
-    "Investigate the root cause of plugin malfunctions and ensure compatibility across different Pieces OS versions.",
-    "Improve error messaging and logging to provide more specific information for troubleshooting.",
-    "Develop automated tests to cover common user workflows and identify potential issues earlier in the development cycle.",
-    "Monitor plugin reviews and feedback channels for early detection of user-reported problems.",
-    "Establish a clear process for escalating and resolving critical issues impacting multiple users.",
-    "Consider implementing a version compatibility checker within the Pieces desktop app to alert users of outdated plugins.",
-    "Provide regular updates to users on the progress of issue resolution and planned improvements.",
-    "Gather user feedback on the effectiveness of implemented solutions and identify areas for further improvement.",
-    "Encourage users to report issues through the appropriate channels and provide clear instructions on how to do so.",
-    "Continuously monitor system performance and stability to proactively identify and address potential issues before they impact users significantly.",
-    "Invest in improving the stability and performance of LTM functionality to enhance user experience.",
-    "Explore potential improvements to the Copilot chat functionality, such as better context handling and LTM integration.",
-    "Consider implementing a system for automatically detecting and suggesting relevant LTM data for Copilot chats.",
-    "Review and update the documentation for keyboard shortcuts on macOS to ensure accuracy and clarity.",
-    "Investigate the cause of the Pieces desktop app jumping to the main monitor on macOS and implement a fix.",
-    "Provide users with clear instructions on how to update plugins and ensure compatibility with Pieces OS.",
-    "Consider implementing a notification system within the Pieces desktop app to inform users of available plugin updates.",
-    "Monitor user feedback and logs for any new or recurring issues related to the 11.4.3 release.",
-    "Continuously evaluate and improve support operations based on user feedback and data analysis.",
-    "Provide training to support staff on common issues and troubleshooting steps.",
-    "Develop internal tools and resources to assist support staff in diagnosing and resolving user problems efficiently.",
-    "Establish service level agreements (SLAs) for responding to and resolving user-reported issues.",
-    "Track key metrics such as ticket resolution time, customer satisfaction, and issue recurrence rate to measure the effectiveness of support operations.",
-    "Regularly review and update support processes and procedures to ensure they are aligned with best practices and user needs.",
-    "Foster a culture of continuous improvement within the support team and encourage feedback and suggestions for enhancing support operations.",
-    "Communicate regularly with the development team to share user feedback and prioritize bug fixes and feature improvements.",
-    "Collaborate with the product team to identify and address usability issues that may be contributing to support tickets.",
-    "Leverage user feedback and data analysis to inform product development and prioritize features that address user needs and pain points.",
-    "Establish a clear process for triaging and prioritizing support tickets based on severity and impact.",
-    "Ensure that support staff have access to the necessary tools and resources to effectively diagnose and resolve user issues.",
-    "Provide regular training to support staff on new features and updates to Pieces OS and related products.",
-    "Develop a knowledge base of common issues and solutions that support staff can access quickly and easily.",
-    "Encourage users to submit feature requests and provide feedback on their experience with Pieces products.",
-    "Continuously monitor industry best practices and trends in support operations to identify opportunities for improvement.",
-    "Consider implementing a customer feedback loop to gather input on the effectiveness of support interactions and identify areas for improvement.",
-    "Analyze support data to identify trends and patterns that can inform product development and support strategies.",
-    "Regularly review and update support documentation and resources to ensure they are accurate and up-to-date.",
-    "Promote self-service support options such as FAQs, tutorials, and knowledge base articles to empower users to resolve common issues on their own.",
-    "Provide multiple channels for users to contact support, such as email, chat, and phone.",
-    "Ensure that support staff are responsive and helpful in their interactions with users.",
-    "Strive to resolve user issues quickly and efficiently while maintaining a high level of customer satisfaction.",
-    "Continuously evaluate and improve support operations to provide the best possible experience for Pieces users.",
-    "Use data analysis to identify areas where support resources can be optimized for maximum impact.",
-    "Develop and implement strategies for proactively addressing common user issues and preventing future occurrences.",
-    "Foster a strong partnership between the support team and other departments within Pieces to ensure a coordinated approach to addressing user needs.",
-    "Communicate regularly with users about updates and improvements to Pieces products and support services.",
-    "Encourage users to participate in the Pieces community and share their feedback and suggestions.",
-    "Continuously seek ways to improve the overall user experience with Pieces products and support services.",
-    "Prioritize user feedback and use it to drive continuous improvement in all aspects of Pieces operations.",
-    "Strive to create a positive and supportive environment for Pieces users and foster a strong sense of community.",
-    "Focus on providing excellent customer service and building strong relationships with Pieces users.",
-    "Continuously innovate and improve Pieces products and services to meet the evolving needs of users.",
-    "Maintain a commitment to quality and excellence in all aspects of Pieces operations.",
-    "Strive to be a leader in the industry and set the standard for user support and customer service.",
-    "Build a strong and loyal user base by providing exceptional products and services.",
-    "Focus on creating a positive and impactful experience for Pieces users.",
-    "Continuously learn and grow as a company to better serve the needs of users.",
-    "Maintain a strong focus on user satisfaction and strive to exceed user expectations.",
-    "Build a culture of customer-centricity within Pieces and ensure that all decisions are made with the user in mind.",
-    "Empower users to achieve their goals and make a positive impact on the world through the use of Pieces products and services.",
-    "Continuously seek ways to improve and enhance the Pieces user experience.",
-    "Focus on providing value to users and making Pieces an indispensable tool for their work and personal lives.",
-    "Strive to create a positive and lasting impact on the lives of Pieces users.",
-    "Build a strong and thriving community of Pieces users who are passionate about the product and its potential.",
-    "Continuously innovate and push the boundaries of what is possible with Pieces products and services.",
-    "Maintain a long-term vision for Pieces and strive to achieve its full potential as a platform for creativity and innovation.",
-    "Focus on building a sustainable and successful business that can continue to serve the needs of users for years to come.",
-    "Strive to make Pieces a positive force for change in the world and empower users to make a difference.",
-    "Continuously seek ways to improve and enhance the Pieces platform and make it the best possible tool for users.",
-    "Focus on providing exceptional value to users and making Pieces an essential part of their lives.",
-    "Build a strong and vibrant community of Pieces users who are passionate about the product and its mission.",
-    "Continuously innovate and explore new possibilities with Pieces to empower users and create a positive impact on the world.",
-    "Maintain a long-term commitment to excellence and strive to make Pieces the best it can be.",
-    "Focus on creating a positive and enriching experience for Pieces users and empowering them to achieve their full potential.",
-    "Strive to build a lasting legacy of innovation and impact with Pieces and make a positive difference in the world."
+    "Prioritize resolving connectivity issues between Pieces OS and plugins, especially for VS Code and Chrome extensions, given the high frequency and impact on users.",
+    "Investigate and address performance problems affecting Pieces Desktop, Pieces OS, and VS Code integration, focusing on LTM interactions and recent updates as potential causes.",
+    "Improve LTM functionality and reliability by addressing 404 errors with the Gemini-Pro model, ensuring accurate date/time context, and preventing LTM from turning off unexpectedly.",
+    "Verify and fix reported issues with keyboard shortcuts on macOS and plugin functionality on Windows to enhance user experience on different platforms.",
+    "Provide clear communication and support resources to users regarding plugin updates and compatibility with Pieces OS versions to minimize disruption during upgrades.",
+    "Monitor and address issues related to chat functionality, including slow responses and loading problems, to ensure smooth communication within the Pieces ecosystem.",
+    "Investigate the interaction between the Visual Studio 2022 extension and diagnostic tool output to resolve any conflicts or interference.",
+    "Gather more data on the specific circumstances triggering Pieces Desktop freezing on macOS and Windows, including user actions and system configurations, to identify the root cause and implement a fix.",
+    "Develop more robust error handling and messaging within Pieces CLI and Desktop app to provide users with informative feedback when LTM context is unavailable or inaccurate.",
+    "Proactively monitor user feedback and support tickets for emerging trends and recurring issues to prioritize development efforts and improve overall product quality and user satisfaction.",
+    "Consider implementing automated testing and quality assurance processes to identify and address potential issues before they impact users, particularly for critical features like LTM and plugin integrations.",
+    "Develop a comprehensive troubleshooting guide for common issues, including connectivity problems, performance degradation, and LTM malfunctions, to empower users with self-service solutions and reduce support ticket volume.",
+    "Enhance communication channels with users, such as community forums or dedicated support channels, to facilitate information sharing, gather feedback, and provide timely assistance with reported issues.",
+    "Prioritize addressing the most active and impactful tickets, such as those related to connectivity, performance, and LTM functionality, to minimize user frustration and improve overall satisfaction.",
+    "Analyze the relationship between user activity levels and specific issues to identify potential correlations and prioritize development efforts based on impact and user engagement.",
+    "Implement a system for tracking and categorizing support tickets to identify recurring issues, measure resolution times, and monitor overall support team performance.",
+    "Regularly review and update documentation and support resources to ensure they are accurate, comprehensive, and aligned with the latest product features and updates.",
+    "Provide training and resources to support staff to enhance their technical skills and knowledge of Pieces products and features, enabling them to effectively address user inquiries and resolve issues.",
+    "Encourage users to provide detailed information when reporting issues, including steps to reproduce the problem, system configurations, and relevant logs, to facilitate faster diagnosis and resolution.",
+    "Implement a system for collecting user feedback on support interactions to identify areas for improvement and enhance the overall support experience.",
+    "Analyze support ticket data to identify common user pain points and inform product development decisions, leading to more user-friendly and reliable software.",
+    "Establish clear service level agreements (SLAs) for support ticket response and resolution times to manage user expectations and ensure timely assistance.",
+    "Regularly review and analyze support metrics, such as ticket volume, resolution time, and customer satisfaction, to identify trends, measure performance, and drive continuous improvement.",
+    "Explore the use of automation tools and technologies, such as chatbots or automated email responses, to handle common inquiries and free up support staff to focus on more complex issues.",
+    "Foster a culture of continuous improvement within the support team by encouraging feedback, sharing best practices, and implementing process optimizations.",
+    "Consider implementing a tiered support system to efficiently route tickets to the appropriate level of expertise and ensure timely resolution.",
+    "Develop a knowledge base of common issues and solutions to empower users with self-service options and reduce support ticket volume.",
+    "Proactively communicate known issues and planned maintenance activities to users to manage expectations and minimize disruption.",
+    "Regularly review and update support processes and procedures to ensure they are efficient, effective, and aligned with best practices.",
+    "Invest in tools and technologies that enhance support team productivity, such as ticket management systems, remote access software, and screen sharing tools.",
+    "Encourage collaboration and knowledge sharing between support staff and development teams to facilitate faster issue resolution and improve product quality.",
+    "Provide regular training and development opportunities for support staff to enhance their technical skills and product knowledge.",
+    "Foster a positive and supportive work environment for the support team to promote job satisfaction and high-quality customer service.",
+    "Implement a system for recognizing and rewarding outstanding support performance to motivate team members and encourage excellence.",
+    "Regularly solicit feedback from support staff on challenges, opportunities, and areas for improvement to optimize support operations and enhance team effectiveness.",
+    "Analyze support ticket data to identify trends and patterns that can inform product development decisions and improve overall user experience.",
+    "Develop a comprehensive onboarding program for new support team members to ensure they are equipped with the knowledge and skills necessary to succeed.",
+    "Establish clear communication channels and escalation procedures for handling complex or urgent support issues.",
+    "Implement a system for tracking and measuring customer satisfaction with support interactions to identify areas for improvement and enhance the overall support experience.",
+    "Regularly review and update support documentation and resources to ensure they are accurate, comprehensive, and easy to understand.",
+    "Encourage users to provide feedback on support interactions to identify areas for improvement and enhance the overall support experience.",
+    "Analyze support ticket data to identify common user pain points and inform product development decisions, leading to more user-friendly and reliable software.",
+    "Establish clear service level agreements (SLAs) for support ticket response and resolution times to manage user expectations and ensure timely assistance.",
+    "Regularly review and analyze support metrics, such as ticket volume, resolution time, and customer satisfaction, to identify trends, measure performance, and drive continuous improvement.",
+    "Explore the use of automation tools and technologies, such as chatbots or automated email responses, to handle common inquiries and free up support staff to focus on more complex issues.",
+    "Foster a culture of continuous improvement within the support team by encouraging feedback, sharing best practices, and implementing process optimizations.",
+    "Consider implementing a tiered support system to efficiently route tickets to the appropriate level of expertise and ensure timely resolution.",
+    "Develop a knowledge base of common issues and solutions to empower users with self-service options and reduce support ticket volume.",
+    "Proactively communicate known issues and planned maintenance activities to users to manage expectations and minimize disruption.",
+    "Regularly review and update support processes and procedures to ensure they are efficient, effective, and aligned with best practices.",
+    "Invest in tools and technologies that enhance support team productivity, such as ticket management systems, remote access software, and screen sharing tools.",
+    "Encourage collaboration and knowledge sharing between support staff and development teams to facilitate faster issue resolution and improve product quality.",
+    "Provide regular training and development opportunities for support staff to enhance their technical skills and product knowledge.",
+    "Foster a positive and supportive work environment for the support team to promote job satisfaction and high-quality customer service.",
+    "Implement a system for recognizing and rewarding outstanding support performance to motivate team members and encourage excellence.",
+    "Regularly solicit feedback from support staff on challenges, opportunities, and areas for improvement to optimize support operations and enhance team effectiveness.",
+    "Analyze support ticket data to identify trends and patterns that can inform product development decisions and improve overall user experience.",
+    "Develop a comprehensive onboarding program for new support team members to ensure they are equipped with the knowledge and skills necessary to succeed.",
+    "Establish clear communication channels and escalation procedures for handling complex or urgent support issues."
   ],
   "message": "Daily support report generated successfully."
 }

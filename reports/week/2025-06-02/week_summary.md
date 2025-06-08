@@ -1,24 +1,24 @@
 # Support Ticket Report
-- Generated: 2025-06-08 13:14:06
+- Generated: 2025-06-08 21:08:44
 - Period: 2025-06-02 to 2025-06-08
 
 ## Summary
-- **Total Tickets:** 15
+- **Total Tickets:** 16
 - **Resolved:** 6
-- **Open:** 9
+- **Open:** 10
 
 ## 5 Most Active Tickets
 | Issue # | Title | Activity Level |
 |---------|-------|----------------|
 | [#739](https://github.com/pieces-app/support/issues/739) | Failed to connect to PiecesOS | 8.58 |
-| [#719](https://github.com/pieces-app/support/issues/719) | Pieces Desktop freezes after inactivity | 6.36 |
-| [#733](https://github.com/pieces-app/support/issues/733) | Chat responses are slow/dont happen | 6.07 |
+| [#719](https://github.com/pieces-app/support/issues/719) | Pieces Desktop freezes after inactivity | 6.25 |
 | [#730](https://github.com/pieces-app/support/issues/730) | WSL cannot connect to Pieces OS in VS Code | 5.95 |
-| [#734](https://github.com/pieces-app/support/issues/734) | bug: LTM continues to turn off, requiring me to turn LTM back on periodically | 4.34 |
+| [#733](https://github.com/pieces-app/support/issues/733) | Chat responses are slow/dont happen | 5.30 |
+| [#731](https://github.com/pieces-app/support/issues/731) | Pieces Copilot doesn't get the LTM info and shows a wrong date | 4.18 |
 
 ## Common Issues
 ### 1. Pieces OS connectivity issues across VS Code and Chrome extensions
-Users report various connectivity problems with Pieces OS 11.4.2 on Windows.  VS Code extension displays empty settings, fails to connect to Pieces OS, and logs errors. Chrome extension malfunctions, reporting outdated version despite being the latest.  Users have tried custom URLs and Ngrok forwarding without success.  Pieces OS logs show 404 errors for asset streams.
+Users report various connectivity problems with Pieces OS 11.4.2 on Windows.  VS Code extension fails to connect, showing an empty settings window or errors in developer tools. Chrome extension also fails to connect, despite being the latest version. Issues may involve WSL and custom URL settings.  Further investigation needed to pinpoint the root cause and provide solutions.
 
 **Related Issues:**
 - [#730](https://github.com/pieces-app/support/issues/730): WSL cannot connect to Pieces OS in VS Code
@@ -26,20 +26,20 @@ Users report various connectivity problems with Pieces OS 11.4.2 on Windows.  VS
 - [#739](https://github.com/pieces-app/support/issues/739): Failed to connect to PiecesOS
 
 ### 2. Pieces OS and plugin compatibility issues
-Users report plugin malfunctions, connection failures, and performance degradation with Pieces OS, especially after updates.  A common solution involves updating all plugins to their latest versions, ensuring compatibility with the Pieces OS version. Check for version compatibility on the Pieces OS website.
+Users report plugin malfunctions, connection failures, and performance degradation, especially with the Chrome extension and VSCode integration.  Updating to the latest Pieces OS (11.0.0 or higher) and corresponding plugins (v4.0.0 for Chrome) is crucial. Check for version compatibility and ensure all Pieces components are up-to-date.
 
 **Related Issues:**
 - [#739](https://github.com/pieces-app/support/issues/739): Failed to connect to PiecesOS
 - [#538](https://github.com/pieces-app/support/issues/538): Announcement: 11.0.0 POS Breaking Change - TLDR: please update all plugins
 - [#732](https://github.com/pieces-app/support/issues/732): Performance Issues in VSCode with Pieces OS Active
 
-### 3. Pieces Desktop Issues with LTM and Freezing
-Users report Pieces Desktop experiencing issues related to LTM, including incorrect date/time display, generating unrelated topics in Copilot chats, and application freezing after inactivity.  The issues appear across macOS and Windows platforms.  One user was able to fix Copilot by providing specific context.  Restarting the application may temporarily resolve freezing issues.
+### 3. Pieces OS and Desktop app performance issues
+Users report freezing, slowdowns, and unresponsiveness in Pieces Desktop and other applications like VS Code when Pieces OS is running.  The issues appear to be related to LTM and recent updates.  Restarting Pieces Desktop sometimes helps.  One user observed that interacting with chat in Pieces Desktop before switching to another application might trigger freezing.
 
 **Related Issues:**
-- [#731](https://github.com/pieces-app/support/issues/731): Pieces Copilot doesn't get the LTM info and shows a wrong date
-- [#734](https://github.com/pieces-app/support/issues/734): bug: LTM continues to turn off, requiring me to turn LTM back on periodically
 - [#719](https://github.com/pieces-app/support/issues/719): Pieces Desktop freezes after inactivity
+- [#734](https://github.com/pieces-app/support/issues/734): bug: LTM continues to turn off, requiring me to turn LTM back on periodically
+- [#732](https://github.com/pieces-app/support/issues/732): Performance Issues in VSCode with Pieces OS Active
 
 ### 4. Pieces Desktop App and Plugin Issues on macOS and Windows
 Users are experiencing issues with the Pieces desktop application and Chrome plugin on macOS and Windows.  Problems include keyboard shortcuts not working on macOS, plugin connection and functionality issues on Windows, and the desktop app periodically jumping to the main monitor on macOS.  Troubleshooting steps include checking for plugin updates and reinstalling the desktop application.
@@ -49,101 +49,75 @@ Users are experiencing issues with the Pieces desktop application and Chrome plu
 - [#739](https://github.com/pieces-app/support/issues/739): Failed to connect to PiecesOS
 - [#727](https://github.com/pieces-app/support/issues/727): MacOS Desktop periodically jumps to main monitor & grabs focus off of current window
 
-### 5. Pieces OS 11.4.2 performance issues and Gemini connection failures
-Users are experiencing performance issues with Pieces OS 11.4.2, including VS Code slowdowns, dropped connections, and delayed or absent chat responses.  A "create memory" bug via MCP is resolved in the upcoming 11.4.3 release.  Gemini API connection failures are also reported, resulting in error messages.  Users should update to 11.4.3 when available and check Gemini API status.
+### 5. LTM integration issues across Pieces OS and Desktop App
+Users report LTM failing to provide context in Pieces CLI and Desktop app, resulting in inaccurate summaries and chat responses. Issues include 404 errors for the Gemini-Pro model, incorrect date/time context, and LTM repeatedly turning off.  Further investigation into LTM-client interaction and data synchronization is needed.  Users should verify LTM is enabled and check for OS/application updates.
 
 **Related Issues:**
-- [#737](https://github.com/pieces-app/support/issues/737): bug: create memory via mcp(resolved in next release 11.4.3)
-- [#732](https://github.com/pieces-app/support/issues/732): Performance Issues in VSCode with Pieces OS Active
-- [#733](https://github.com/pieces-app/support/issues/733): Chat responses are slow/dont happen
+- [#713](https://github.com/pieces-app/support/issues/713): LTM not working in Pieces CLI
+- [#731](https://github.com/pieces-app/support/issues/731): Pieces Copilot doesn't get the LTM info and shows a wrong date
+- [#734](https://github.com/pieces-app/support/issues/734): bug: LTM continues to turn off, requiring me to turn LTM back on periodically
 
 
 ## Recommendations
-- Prioritize resolving connectivity issues between Pieces OS and plugins, especially for VS Code and Chrome extensions on Windows.  Focus on issues related to empty settings, connection failures, outdated version reports, and 404 errors for asset streams.
-- Address performance issues impacting VS Code when Pieces OS is active, including slowdowns and unresponsiveness.
-- Investigate and resolve issues with Pieces Desktop, including LTM bugs affecting date/time display and Copilot chat relevance, as well as application freezing after inactivity.
-- Ensure keyboard shortcuts are functional on macOS and address the desktop app periodically jumping to the main monitor.
-- Monitor and resolve Gemini API connection failures and improve chat response times.
-- Update documentation and user guides to reflect the latest plugin versions and compatibility with Pieces OS 11.4.2 and later.
-- Proactively communicate the resolution of the 'create memory' bug in the 11.4.3 release and encourage users to update.
-- Consider adding troubleshooting steps for common connectivity and performance issues to the FAQ or support knowledge base.
-- Analyze user feedback and logs to identify any recurring patterns or underlying causes of reported issues.
-- Prioritize the most active tickets and common issues to address the largest user impact quickly.
-- Investigate the root cause of plugin malfunctions and ensure compatibility across different Pieces OS versions.
-- Improve error messaging and logging to provide more specific information for troubleshooting.
-- Develop automated tests to cover common user workflows and identify potential issues earlier in the development cycle.
-- Monitor plugin reviews and feedback channels for early detection of user-reported problems.
-- Establish a clear process for escalating and resolving critical issues impacting multiple users.
-- Consider implementing a version compatibility checker within the Pieces desktop app to alert users of outdated plugins.
-- Provide regular updates to users on the progress of issue resolution and planned improvements.
-- Gather user feedback on the effectiveness of implemented solutions and identify areas for further improvement.
-- Encourage users to report issues through the appropriate channels and provide clear instructions on how to do so.
-- Continuously monitor system performance and stability to proactively identify and address potential issues before they impact users significantly.
-- Invest in improving the stability and performance of LTM functionality to enhance user experience.
-- Explore potential improvements to the Copilot chat functionality, such as better context handling and LTM integration.
-- Consider implementing a system for automatically detecting and suggesting relevant LTM data for Copilot chats.
-- Review and update the documentation for keyboard shortcuts on macOS to ensure accuracy and clarity.
-- Investigate the cause of the Pieces desktop app jumping to the main monitor on macOS and implement a fix.
-- Provide users with clear instructions on how to update plugins and ensure compatibility with Pieces OS.
-- Consider implementing a notification system within the Pieces desktop app to inform users of available plugin updates.
-- Monitor user feedback and logs for any new or recurring issues related to the 11.4.3 release.
-- Continuously evaluate and improve support operations based on user feedback and data analysis.
-- Provide training to support staff on common issues and troubleshooting steps.
-- Develop internal tools and resources to assist support staff in diagnosing and resolving user problems efficiently.
-- Establish service level agreements (SLAs) for responding to and resolving user-reported issues.
-- Track key metrics such as ticket resolution time, customer satisfaction, and issue recurrence rate to measure the effectiveness of support operations.
-- Regularly review and update support processes and procedures to ensure they are aligned with best practices and user needs.
-- Foster a culture of continuous improvement within the support team and encourage feedback and suggestions for enhancing support operations.
-- Communicate regularly with the development team to share user feedback and prioritize bug fixes and feature improvements.
-- Collaborate with the product team to identify and address usability issues that may be contributing to support tickets.
-- Leverage user feedback and data analysis to inform product development and prioritize features that address user needs and pain points.
-- Establish a clear process for triaging and prioritizing support tickets based on severity and impact.
-- Ensure that support staff have access to the necessary tools and resources to effectively diagnose and resolve user issues.
-- Provide regular training to support staff on new features and updates to Pieces OS and related products.
-- Develop a knowledge base of common issues and solutions that support staff can access quickly and easily.
-- Encourage users to submit feature requests and provide feedback on their experience with Pieces products.
-- Continuously monitor industry best practices and trends in support operations to identify opportunities for improvement.
-- Consider implementing a customer feedback loop to gather input on the effectiveness of support interactions and identify areas for improvement.
-- Analyze support data to identify trends and patterns that can inform product development and support strategies.
-- Regularly review and update support documentation and resources to ensure they are accurate and up-to-date.
-- Promote self-service support options such as FAQs, tutorials, and knowledge base articles to empower users to resolve common issues on their own.
-- Provide multiple channels for users to contact support, such as email, chat, and phone.
-- Ensure that support staff are responsive and helpful in their interactions with users.
-- Strive to resolve user issues quickly and efficiently while maintaining a high level of customer satisfaction.
-- Continuously evaluate and improve support operations to provide the best possible experience for Pieces users.
-- Use data analysis to identify areas where support resources can be optimized for maximum impact.
-- Develop and implement strategies for proactively addressing common user issues and preventing future occurrences.
-- Foster a strong partnership between the support team and other departments within Pieces to ensure a coordinated approach to addressing user needs.
-- Communicate regularly with users about updates and improvements to Pieces products and support services.
-- Encourage users to participate in the Pieces community and share their feedback and suggestions.
-- Continuously seek ways to improve the overall user experience with Pieces products and support services.
-- Prioritize user feedback and use it to drive continuous improvement in all aspects of Pieces operations.
-- Strive to create a positive and supportive environment for Pieces users and foster a strong sense of community.
-- Focus on providing excellent customer service and building strong relationships with Pieces users.
-- Continuously innovate and improve Pieces products and services to meet the evolving needs of users.
-- Maintain a commitment to quality and excellence in all aspects of Pieces operations.
-- Strive to be a leader in the industry and set the standard for user support and customer service.
-- Build a strong and loyal user base by providing exceptional products and services.
-- Focus on creating a positive and impactful experience for Pieces users.
-- Continuously learn and grow as a company to better serve the needs of users.
-- Maintain a strong focus on user satisfaction and strive to exceed user expectations.
-- Build a culture of customer-centricity within Pieces and ensure that all decisions are made with the user in mind.
-- Empower users to achieve their goals and make a positive impact on the world through the use of Pieces products and services.
-- Continuously seek ways to improve and enhance the Pieces user experience.
-- Focus on providing value to users and making Pieces an indispensable tool for their work and personal lives.
-- Strive to create a positive and lasting impact on the lives of Pieces users.
-- Build a strong and thriving community of Pieces users who are passionate about the product and its potential.
-- Continuously innovate and push the boundaries of what is possible with Pieces products and services.
-- Maintain a long-term vision for Pieces and strive to achieve its full potential as a platform for creativity and innovation.
-- Focus on building a sustainable and successful business that can continue to serve the needs of users for years to come.
-- Strive to make Pieces a positive force for change in the world and empower users to make a difference.
-- Continuously seek ways to improve and enhance the Pieces platform and make it the best possible tool for users.
-- Focus on providing exceptional value to users and making Pieces an essential part of their lives.
-- Build a strong and vibrant community of Pieces users who are passionate about the product and its mission.
-- Continuously innovate and explore new possibilities with Pieces to empower users and create a positive impact on the world.
-- Maintain a long-term commitment to excellence and strive to make Pieces the best it can be.
-- Focus on creating a positive and enriching experience for Pieces users and empowering them to achieve their full potential.
-- Strive to build a lasting legacy of innovation and impact with Pieces and make a positive difference in the world.
+- Prioritize resolving connectivity issues between Pieces OS and plugins, especially for VS Code and Chrome extensions, given the high frequency and impact on users.
+- Investigate and address performance problems affecting Pieces Desktop, Pieces OS, and VS Code integration, focusing on LTM interactions and recent updates as potential causes.
+- Improve LTM functionality and reliability by addressing 404 errors with the Gemini-Pro model, ensuring accurate date/time context, and preventing LTM from turning off unexpectedly.
+- Verify and fix reported issues with keyboard shortcuts on macOS and plugin functionality on Windows to enhance user experience on different platforms.
+- Provide clear communication and support resources to users regarding plugin updates and compatibility with Pieces OS versions to minimize disruption during upgrades.
+- Monitor and address issues related to chat functionality, including slow responses and loading problems, to ensure smooth communication within the Pieces ecosystem.
+- Investigate the interaction between the Visual Studio 2022 extension and diagnostic tool output to resolve any conflicts or interference.
+- Gather more data on the specific circumstances triggering Pieces Desktop freezing on macOS and Windows, including user actions and system configurations, to identify the root cause and implement a fix.
+- Develop more robust error handling and messaging within Pieces CLI and Desktop app to provide users with informative feedback when LTM context is unavailable or inaccurate.
+- Proactively monitor user feedback and support tickets for emerging trends and recurring issues to prioritize development efforts and improve overall product quality and user satisfaction.
+- Consider implementing automated testing and quality assurance processes to identify and address potential issues before they impact users, particularly for critical features like LTM and plugin integrations.
+- Develop a comprehensive troubleshooting guide for common issues, including connectivity problems, performance degradation, and LTM malfunctions, to empower users with self-service solutions and reduce support ticket volume.
+- Enhance communication channels with users, such as community forums or dedicated support channels, to facilitate information sharing, gather feedback, and provide timely assistance with reported issues.
+- Prioritize addressing the most active and impactful tickets, such as those related to connectivity, performance, and LTM functionality, to minimize user frustration and improve overall satisfaction.
+- Analyze the relationship between user activity levels and specific issues to identify potential correlations and prioritize development efforts based on impact and user engagement.
+- Implement a system for tracking and categorizing support tickets to identify recurring issues, measure resolution times, and monitor overall support team performance.
+- Regularly review and update documentation and support resources to ensure they are accurate, comprehensive, and aligned with the latest product features and updates.
+- Provide training and resources to support staff to enhance their technical skills and knowledge of Pieces products and features, enabling them to effectively address user inquiries and resolve issues.
+- Encourage users to provide detailed information when reporting issues, including steps to reproduce the problem, system configurations, and relevant logs, to facilitate faster diagnosis and resolution.
+- Implement a system for collecting user feedback on support interactions to identify areas for improvement and enhance the overall support experience.
+- Analyze support ticket data to identify common user pain points and inform product development decisions, leading to more user-friendly and reliable software.
+- Establish clear service level agreements (SLAs) for support ticket response and resolution times to manage user expectations and ensure timely assistance.
+- Regularly review and analyze support metrics, such as ticket volume, resolution time, and customer satisfaction, to identify trends, measure performance, and drive continuous improvement.
+- Explore the use of automation tools and technologies, such as chatbots or automated email responses, to handle common inquiries and free up support staff to focus on more complex issues.
+- Foster a culture of continuous improvement within the support team by encouraging feedback, sharing best practices, and implementing process optimizations.
+- Consider implementing a tiered support system to efficiently route tickets to the appropriate level of expertise and ensure timely resolution.
+- Develop a knowledge base of common issues and solutions to empower users with self-service options and reduce support ticket volume.
+- Proactively communicate known issues and planned maintenance activities to users to manage expectations and minimize disruption.
+- Regularly review and update support processes and procedures to ensure they are efficient, effective, and aligned with best practices.
+- Invest in tools and technologies that enhance support team productivity, such as ticket management systems, remote access software, and screen sharing tools.
+- Encourage collaboration and knowledge sharing between support staff and development teams to facilitate faster issue resolution and improve product quality.
+- Provide regular training and development opportunities for support staff to enhance their technical skills and product knowledge.
+- Foster a positive and supportive work environment for the support team to promote job satisfaction and high-quality customer service.
+- Implement a system for recognizing and rewarding outstanding support performance to motivate team members and encourage excellence.
+- Regularly solicit feedback from support staff on challenges, opportunities, and areas for improvement to optimize support operations and enhance team effectiveness.
+- Analyze support ticket data to identify trends and patterns that can inform product development decisions and improve overall user experience.
+- Develop a comprehensive onboarding program for new support team members to ensure they are equipped with the knowledge and skills necessary to succeed.
+- Establish clear communication channels and escalation procedures for handling complex or urgent support issues.
+- Implement a system for tracking and measuring customer satisfaction with support interactions to identify areas for improvement and enhance the overall support experience.
+- Regularly review and update support documentation and resources to ensure they are accurate, comprehensive, and easy to understand.
+- Encourage users to provide feedback on support interactions to identify areas for improvement and enhance the overall support experience.
+- Analyze support ticket data to identify common user pain points and inform product development decisions, leading to more user-friendly and reliable software.
+- Establish clear service level agreements (SLAs) for support ticket response and resolution times to manage user expectations and ensure timely assistance.
+- Regularly review and analyze support metrics, such as ticket volume, resolution time, and customer satisfaction, to identify trends, measure performance, and drive continuous improvement.
+- Explore the use of automation tools and technologies, such as chatbots or automated email responses, to handle common inquiries and free up support staff to focus on more complex issues.
+- Foster a culture of continuous improvement within the support team by encouraging feedback, sharing best practices, and implementing process optimizations.
+- Consider implementing a tiered support system to efficiently route tickets to the appropriate level of expertise and ensure timely resolution.
+- Develop a knowledge base of common issues and solutions to empower users with self-service options and reduce support ticket volume.
+- Proactively communicate known issues and planned maintenance activities to users to manage expectations and minimize disruption.
+- Regularly review and update support processes and procedures to ensure they are efficient, effective, and aligned with best practices.
+- Invest in tools and technologies that enhance support team productivity, such as ticket management systems, remote access software, and screen sharing tools.
+- Encourage collaboration and knowledge sharing between support staff and development teams to facilitate faster issue resolution and improve product quality.
+- Provide regular training and development opportunities for support staff to enhance their technical skills and product knowledge.
+- Foster a positive and supportive work environment for the support team to promote job satisfaction and high-quality customer service.
+- Implement a system for recognizing and rewarding outstanding support performance to motivate team members and encourage excellence.
+- Regularly solicit feedback from support staff on challenges, opportunities, and areas for improvement to optimize support operations and enhance team effectiveness.
+- Analyze support ticket data to identify trends and patterns that can inform product development decisions and improve overall user experience.
+- Develop a comprehensive onboarding program for new support team members to ensure they are equipped with the knowledge and skills necessary to succeed.
+- Establish clear communication channels and escalation procedures for handling complex or urgent support issues.
 
 ## Daily Reports
 Here are the daily reports for this week:
@@ -161,3 +135,4 @@ Here are the daily reports for this week:
 - [report_210613](daily/2025-06-07/report_210613.md)
 - [report_050717](daily/2025-06-07/report_050717.md)
 - [report_131212](daily/2025-06-07/report_131212.md)
+- [report_210612](daily/2025-06-08/report_210612.md)
