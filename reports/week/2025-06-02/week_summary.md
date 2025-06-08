@@ -1,6 +1,6 @@
 # Support Ticket Report
-- Generated: 2025-06-07 21:08:19
-- Period: 2025-06-02 to 2025-06-07
+- Generated: 2025-06-08 05:09:01
+- Period: 2025-06-02 to 2025-06-08
 
 ## Summary
 - **Total Tickets:** 15
@@ -10,15 +10,15 @@
 ## 5 Most Active Tickets
 | Issue # | Title | Activity Level |
 |---------|-------|----------------|
-| [#739](https://github.com/pieces-app/support/issues/739) | Failed to connect to PiecesOS | 9.62 |
+| [#739](https://github.com/pieces-app/support/issues/739) | Failed to connect to PiecesOS | 9.18 |
 | [#719](https://github.com/pieces-app/support/issues/719) | Pieces Desktop freezes after inactivity | 6.36 |
-| [#730](https://github.com/pieces-app/support/issues/730) | WSL cannot connect to Pieces OS in VS Code | 6.14 |
 | [#733](https://github.com/pieces-app/support/issues/733) | Chat responses are slow/dont happen | 6.07 |
+| [#730](https://github.com/pieces-app/support/issues/730) | WSL cannot connect to Pieces OS in VS Code | 5.95 |
 | [#732](https://github.com/pieces-app/support/issues/732) | Performance Issues in VSCode with Pieces OS Active | 4.63 |
 
 ## Common Issues
 ### 1. Pieces OS connectivity issues across VS Code and Chrome extensions
-Users report various connectivity problems with Pieces OS 11.4.2 on Windows.  VS Code extension fails to connect, showing errors in developer tools and Pieces OS logs. Chrome extension malfunctions, reporting outdated version despite being the latest. Users experience performance issues in VS Code when Pieces OS is running.  Troubleshooting includes checking custom URLs and network connectivity.
+Users report various connectivity problems with Pieces OS 11.4.2 on Windows.  VS Code extension displays empty settings, fails to connect to WSL, and logs errors. Chrome extension malfunctions, reporting outdated version despite being the latest.  Suggested solutions include checking custom URL settings for remote environments in VS Code and verifying Pieces OS logs for 404 errors.
 
 **Related Issues:**
 - [#730](https://github.com/pieces-app/support/issues/730): WSL cannot connect to Pieces OS in VS Code
@@ -26,7 +26,7 @@ Users report various connectivity problems with Pieces OS 11.4.2 on Windows.  VS
 - [#739](https://github.com/pieces-app/support/issues/739): Failed to connect to PiecesOS
 
 ### 2. Pieces OS and plugin compatibility issues
-Users are experiencing issues with Pieces OS and its plugins, primarily with connection problems and performance degradation in applications like VS Code.  A common solution is to ensure all Pieces OS components and plugins are updated to their latest versions, especially considering the breaking changes introduced in Pieces OS 11.0.0.
+Users report plugin malfunctions, connection failures, and performance degradation, especially with the Chrome extension and VSCode integration.  Updating to the latest Pieces OS and plugin versions (v11.0.0 and respective plugin versions) is recommended to resolve compatibility issues and improve performance. Ensure all plugins are updated after major Pieces OS updates.
 
 **Related Issues:**
 - [#739](https://github.com/pieces-app/support/issues/739): Failed to connect to PiecesOS
@@ -34,7 +34,7 @@ Users are experiencing issues with Pieces OS and its plugins, primarily with con
 - [#732](https://github.com/pieces-app/support/issues/732): Performance Issues in VSCode with Pieces OS Active
 
 ### 3. Pieces Desktop Issues with LTM and Freezing
-Users report Pieces Desktop experiencing issues related to LTM and application freezing. LTM information is sometimes inaccurate or unavailable, leading to incorrect context in Copilot chats. Additionally, the application freezes after periods of inactivity, especially after interacting with chat features.  Issues occur across macOS and Windows platforms. Further investigation is needed to pinpoint the root cause and solutions.
+Users report Pieces Desktop experiencing issues related to LTM and application freezing. LTM information is sometimes inaccurate or unavailable, leading to incorrect context in Copilot chats.  Additionally, the application freezes after periods of inactivity, especially after chat interactions, requiring a restart. These issues occur across different operating systems (macOS, Windows) and Pieces versions.
 
 **Related Issues:**
 - [#731](https://github.com/pieces-app/support/issues/731): Pieces Copilot doesn't get the LTM info and shows a wrong date
@@ -42,15 +42,15 @@ Users report Pieces Desktop experiencing issues related to LTM and application f
 - [#719](https://github.com/pieces-app/support/issues/719): Pieces Desktop freezes after inactivity
 
 ### 4. Pieces Desktop App and Plugin Issues on macOS and Windows
-Users are experiencing issues with the Pieces desktop application and Chrome plugin on macOS and Windows.  Keyboard shortcuts are not functioning on macOS, and the Chrome plugin has connectivity and functionality problems on Windows. Additionally, the Pieces desktop app on macOS periodically jumps to the main monitor and steals focus.  Troubleshooting steps include checking for plugin updates and reinstalling the desktop application.
+Users are experiencing issues with the Pieces desktop application and Chrome plugin on macOS and Windows.  Keyboard shortcuts are not functioning on macOS, and the Chrome plugin has connectivity and functionality problems on Windows. Additionally, the Pieces desktop app on macOS periodically jumps to the main monitor and steals focus. Troubleshooting steps include checking for plugin updates and reinstalling the desktop application.
 
 **Related Issues:**
 - [#742](https://github.com/pieces-app/support/issues/742): Mac OS Keyboard Shortcuts do not work
 - [#739](https://github.com/pieces-app/support/issues/739): Failed to connect to PiecesOS
 - [#727](https://github.com/pieces-app/support/issues/727): MacOS Desktop periodically jumps to main monitor & grabs focus off of current window
 
-### 5. Pieces OS 11.4.2 performance issues and Gemini connection failures
-Users are experiencing performance issues with Pieces OS 11.4.2, including VS Code slowdowns, dropped connections, and delayed or absent chat responses.  A "create memory" bug via MCP is resolved in the upcoming 11.4.3 release.  Issues may relate to Gemini connection failures.
+### 5. Pieces OS 11.4.2 performance issues and Copilot integration bugs
+Users are experiencing performance issues with Pieces OS 11.4.2, including VS Code slowdowns and unresponsiveness.  Additionally, Copilot's create_memory_pieces tool is failing, sometimes with connection drops. Chat responses are also delayed or absent. The create_memory tool issue will be resolved in Pieces OS 11.4.3. Further investigation is needed for the performance and chat response issues.
 
 **Related Issues:**
 - [#737](https://github.com/pieces-app/support/issues/737): bug: create memory via mcp(resolved in next release 11.4.3)
@@ -59,16 +59,28 @@ Users are experiencing performance issues with Pieces OS 11.4.2, including VS Co
 
 
 ## Recommendations
-- Prioritize resolving connectivity issues between Pieces OS and its plugins, especially for VS Code and Chrome extensions on Windows.  Focus on issues related to Pieces OS version 11.4.2.
-- Investigate and address performance issues in VS Code when Pieces OS is active, including slowdowns and unresponsiveness.
-- Improve LTM functionality within Pieces Desktop, ensuring accurate information and preventing application freezes.  Address the incorrect date display in the context time.
-- Ensure keyboard shortcuts are functional on macOS and resolve the focus stealing issue on multi-monitor setups.
-- Verify Gemini connection stability and address slow or absent chat responses, particularly in VS Code, Visual Studio, and the desktop app.
-- Monitor and address issues related to the upcoming Pieces OS 11.4.3 release, specifically regarding the "create memory" bug fix.
-- Review and update documentation for keyboard shortcuts and plugin compatibility to reflect recent changes and known issues.
-- Proactively communicate known issues and their solutions to users, especially regarding plugin updates and breaking changes introduced in Pieces OS 11.0.0.
-- Gather more data on the frequency and impact of LTM issues and Chrome plugin problems to prioritize development efforts.
-- Consider implementing automated tests to catch connectivity and performance issues before they reach users. 
+- Prioritize resolving connectivity issues between Pieces OS and plugins, especially for VS Code and Chrome extensions, given the high frequency and impact on users.
+- Investigate and address performance issues with Pieces OS 11.4.2, particularly VS Code slowdowns and chat response delays, to improve user experience.
+- Ensure LTM functionality is stable and accurate, addressing bugs related to incorrect information and periodic disabling.
+- Improve Pieces Desktop application stability on macOS and Windows, focusing on application freezing and keyboard shortcut malfunctions.
+- Review and update documentation for keyboard shortcuts on macOS to ensure accuracy and clarity.
+- Monitor plugin compatibility with Pieces OS updates and proactively communicate breaking changes and required updates to users.
+- Investigate the "Clear Long Term Memory Data" feature not removing captured context and workstream activity as expected.
+- Address the issue of pasting images not working within the application.
+- Look into the issue of the Pieces Desktop app on macOS periodically jumping to the main monitor and stealing focus.
+- Investigate the issue of chat responses being slow or not appearing at all.
+- Investigate the issue of Visual Studio 2022 extension interfering with Diagnostic tool output.
+- Look into the issue of no response to chat and continuous loading.
+- Address the bug where creating memory via MCP fails and the connection drops occasionally.
+- Ensure Copilot's create_memory_pieces tool functions reliably after the 11.4.3 update and monitor for any recurring issues.
+- Communicate the resolution of the create_memory tool issue in the 11.4.3 release to affected users.
+- Provide clear and concise troubleshooting steps for common issues, such as connectivity problems and application freezes, in the documentation and support resources.
+- Gather more data on the frequency and impact of less common issues, such as WSL connection problems and UI bugs related to context time, to prioritize future bug fixes.
+- Consider implementing a more robust system for tracking and prioritizing bug reports based on frequency, severity, and user impact.
+- Proactively communicate known issues and their planned resolutions to users through release notes, blog posts, or other channels.
+- Encourage users to report issues through the appropriate channels and provide feedback on their experience with Pieces OS and related tools.
+- Analyze user feedback and bug reports to identify underlying patterns and areas for improvement in the software and support processes.
+- Provide regular updates to users on the progress of bug fixes and new feature development to maintain transparency and build trust.
 
 ## Daily Reports
 Here are the daily reports for this week:
