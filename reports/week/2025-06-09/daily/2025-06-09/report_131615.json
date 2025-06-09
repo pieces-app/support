@@ -1,0 +1,106 @@
+{
+  "success": true,
+  "date_range": {
+    "start": "2025-06-09T00:00:00+00:00",
+    "end": "2025-06-09T13:16:15.823419+00:00"
+  },
+  "summary": {
+    "total_tickets": 2,
+    "resolved_tickets": 0,
+    "open_tickets": 2
+  },
+  "ticket_breakdown": [
+    {
+      "category": "os:linux",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "app:pieces os",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:triaged",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "bug",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:new",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:desktop application",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    }
+  ],
+  "most_active_tickets": [
+    {
+      "number": 744,
+      "title": "Installation issue in cromebook",
+      "activity_level": 4.42
+    },
+    {
+      "number": 565,
+      "title": "Starting error: No available configurations for the given RGBA pixel format",
+      "activity_level": 2.04
+    }
+  ],
+  "common_issues": [
+    {
+      "title": "Pieces OS startup error on Linux due to RGBA pixel format",
+      "description": "Users on Linux (Debian, potentially others) encounter \"No available configurations for the given RGBA pixel format\" error when starting Pieces OS (v11.0.3, 4.1.4) via terminal, VS Code, or desktop app.  Issue affects NVIDIA GPUs (GTX 1050 Ti reported) with specific drivers (e.g., nvidia v: 535.183.01).  Chromebook users experience similar startup issues with unresponsive buttons and fullscreen problems. Further investigation into graphics driver compatibility and Pieces OS dependencies is needed.",
+      "frequency": 2,
+      "related_issues": [
+        {
+          "id": 565,
+          "title": "Starting error: No available configurations for the given RGBA pixel format",
+          "text": "Starting error: No available configurations for the given RGBA pixel format\n### Software\n\nPieces OS, VS Code\n\n### Operating System / Platform\n\nLinux\n\n### Your Pieces OS Version\n\n11.0.3\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWhenever I am trying to start Pieces OS or Pieces For Developers via the Linux Terminal, or via VS Code Plug-In (I don't use / haven't tried other ways), the following error message appears:\n\n![Image](https://github.com/user-attachments/assets/3b7cc5de-7fdd-4a36-99f2-c806a7e540d6)\n\n\nInformation about my system:\n\n```\ninxi -G\nGraphics:\n  Device-1: NVIDIA GP107 [GeForce GTX 1050 Ti] driver: nvidia v: 535.183.01\n  Display: x11 server: X.Org v: 1.21.1.7 with: Xwayland v: 22.1.9 driver: X:\n    loaded: nvidia unloaded: fbdev,modesetting,nouveau,vesa gpu: nvidia\n    resolution: 1680x1050~60Hz\n  API: OpenGL v: 4.6.0 NVIDIA 535.183.01 renderer: NVIDIA GeForce GTX 1050\n    Ti/PCIe/SSE2\n```\n\n```\nuname -a\nLinux debian 6.1.0-25-amd64 #1 SMP PREEMPT_DYNAMIC Debian 6.1.106-3 (2024-08-26) x86_64 GNU/Linux\n```\n\nThanks in a advance!\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 2.04
+        },
+        {
+          "id": 744,
+          "title": "Installation issue in cromebook",
+          "text": "Installation issue in cromebook\n### Checked for Existing Issues?\n\n- [ ] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nLinux\n\n### Your Pieces OS Version\n\n4.1.4\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nThere are some issues with the Chromebook. When installing core dependencies, the screen flickers, and it takes a long time to buffer. Once loaded, you can't click any buttons, like the \"Get Started\" button. It just gets stuck on that page.\nalso it has issue with full screen you can to anything unless minimize\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 4.42
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    "Prioritize resolving the Pieces OS startup error on Linux related to RGBA pixel format, focusing on NVIDIA GPU and specific driver compatibility.",
+    "Investigate Chromebook-specific installation issues, including screen flickering, unresponsive buttons, and fullscreen problems.",
+    "Improve communication with users experiencing the \"No available configurations for the given RGBA pixel format\" error and provide temporary workarounds or solutions.",
+    "Consider updating Pieces OS documentation with known issues and workarounds for Linux and Chromebook users.",
+    "Gather more data on affected users, including their Linux distribution, NVIDIA driver version, and Chromebook model, to better understand the scope of the issues.",
+    "Allocate resources to test Pieces OS on various Linux distributions and Chromebook configurations to identify and address compatibility problems proactively.",
+    "Monitor support tickets for emerging trends and prioritize addressing common issues promptly to improve user satisfaction.",
+    "Create a dedicated support channel or FAQ section for Linux and Chromebook users to centralize information and assistance.",
+    "Collaborate with the development team to address the root causes of the reported issues and prevent future occurrences.",
+    "Implement automated testing for different hardware and software configurations to catch compatibility issues early in the development process.",
+    "Track the resolution progress of these issues and communicate updates to affected users regularly.",
+    "Analyze user feedback and support tickets to identify areas for improvement in the software and documentation.",
+    "Provide support staff with training and resources to effectively troubleshoot and resolve Linux and Chromebook-specific issues.",
+    "Encourage users to submit detailed bug reports with system information and steps to reproduce the issues.",
+    "Consider offering remote assistance or screen sharing sessions to help users experiencing installation or startup problems.",
+    "Prioritize bug fixes and software updates to address the reported issues and improve overall software stability.",
+    "Investigate potential conflicts with other software or drivers that may be contributing to the reported issues.",
+    "Implement a system for tracking and prioritizing bug fixes based on their impact and frequency.",
+    "Communicate known issues and their status to users through a public-facing platform, such as a status page or forum.",
+    "Collect user feedback on the effectiveness of implemented solutions and identify areas for further improvement in support operations."
+  ],
+  "message": "Daily support report generated successfully."
+}
