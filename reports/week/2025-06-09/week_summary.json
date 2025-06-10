@@ -2,36 +2,60 @@
   "success": true,
   "date_range": {
     "start": "2025-06-09T00:00:00+00:00",
-    "end": "2025-06-10T13:17:09.144583+00:00"
+    "end": "2025-06-10T21:08:14.894132+00:00"
   },
   "summary": {
-    "total_tickets": 4,
-    "resolved_tickets": 1,
-    "open_tickets": 3
+    "total_tickets": 6,
+    "resolved_tickets": 2,
+    "open_tickets": 4
   },
   "ticket_breakdown": [
     {
-      "category": "app:cli",
+      "category": "bug",
+      "received": 4,
+      "resolved": 2,
+      "pending": 2
+    },
+    {
+      "category": "app:desktop application",
+      "received": 3,
+      "resolved": 1,
+      "pending": 2
+    },
+    {
+      "category": "app:pieces copilot module",
       "received": 1,
       "resolved": 0,
       "pending": 1
     },
     {
-      "category": "status:triaged",
-      "received": 4,
+      "category": "os:windows",
+      "received": 1,
       "resolved": 1,
+      "pending": 0
+    },
+    {
+      "category": "app:vs code",
+      "received": 1,
+      "resolved": 1,
+      "pending": 0
+    },
+    {
+      "category": "app:web extension",
+      "received": 1,
+      "resolved": 1,
+      "pending": 0
+    },
+    {
+      "category": "status:triaged",
+      "received": 5,
+      "resolved": 2,
       "pending": 3
     },
     {
-      "category": "bug",
-      "received": 2,
-      "resolved": 1,
-      "pending": 1
-    },
-    {
-      "category": "app:desktop application",
-      "received": 2,
-      "resolved": 1,
+      "category": "app:cli",
+      "received": 1,
+      "resolved": 0,
       "pending": 1
     },
     {
@@ -61,6 +85,16 @@
   ],
   "most_active_tickets": [
     {
+      "number": 471,
+      "title": "I\u00b4m sorry. Something went wrong with processing. Please wait a few seconds and try again, or contact support@pieces.app",
+      "activity_level": 11.76
+    },
+    {
+      "number": 739,
+      "title": "Failed to connect to PiecesOS",
+      "activity_level": 8.51
+    },
+    {
       "number": 744,
       "title": "Installation issue in cromebook",
       "activity_level": 5.5
@@ -68,12 +102,12 @@
     {
       "number": 734,
       "title": "bug: LTM continues to turn off, requiring me to turn LTM back on periodically",
-      "activity_level": 5.13
+      "activity_level": 4.99
     },
     {
       "number": 713,
       "title": "LTM not working in Pieces CLI",
-      "activity_level": 4.42
+      "activity_level": 4.36
     },
     {
       "number": 565,
@@ -83,8 +117,8 @@
   ],
   "common_issues": [
     {
-      "title": "Pieces OS and Desktop App Installation and Stability Issues",
-      "description": "Users are experiencing issues with Pieces OS and the desktop application across different operating systems (Linux, macOS, Chromebook). Problems include installation difficulties (Chromebook), application crashes or unresponsiveness (Chromebook, Linux), and features like LTM repeatedly turning off (macOS).  Further investigation is needed to pinpoint the root causes and provide solutions for each platform.",
+      "title": "PiecesOS and plugin connectivity and functionality issues",
+      "description": "Users are experiencing problems with PiecesOS and its Chrome plugin. Issues include installation problems on Chromebooks (screen flickering, unresponsive buttons), general connectivity failures between the plugin and desktop app, and outdated plugin messages despite having the latest version.  Further investigation is needed to pinpoint the root cause and provide solutions across different operating systems and Pieces versions.",
       "frequency": 3,
       "related_issues": [
         {
@@ -94,51 +128,108 @@
           "activity_level": 5.5
         },
         {
-          "id": 565,
-          "title": "Starting error: No available configurations for the given RGBA pixel format",
-          "text": "Starting error: No available configurations for the given RGBA pixel format\n### Software\n\nPieces OS, VS Code\n\n### Operating System / Platform\n\nLinux\n\n### Your Pieces OS Version\n\n11.0.3\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWhenever I am trying to start Pieces OS or Pieces For Developers via the Linux Terminal, or via VS Code Plug-In (I don't use / haven't tried other ways), the following error message appears:\n\n![Image](https://github.com/user-attachments/assets/3b7cc5de-7fdd-4a36-99f2-c806a7e540d6)\n\n\nInformation about my system:\n\n```\ninxi -G\nGraphics:\n  Device-1: NVIDIA GP107 [GeForce GTX 1050 Ti] driver: nvidia v: 535.183.01\n  Display: x11 server: X.Org v: 1.21.1.7 with: Xwayland v: 22.1.9 driver: X:\n    loaded: nvidia unloaded: fbdev,modesetting,nouveau,vesa gpu: nvidia\n    resolution: 1680x1050~60Hz\n  API: OpenGL v: 4.6.0 NVIDIA 535.183.01 renderer: NVIDIA GeForce GTX 1050\n    Ti/PCIe/SSE2\n```\n\n```\nuname -a\nLinux debian 6.1.0-25-amd64 #1 SMP PREEMPT_DYNAMIC Debian 6.1.106-3 (2024-08-26) x86_64 GNU/Linux\n```\n\nThanks in a advance!\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 2.03
+          "id": 739,
+          "title": "Failed to connect to PiecesOS",
+          "text": "Failed to connect to PiecesOS\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.4.2\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nChrome plugin doesn't work properly. I can't use the buttons and features, and the sidebar cannot establish connection either. Inside of Pieces desktop app it shows that the chrome plugin is outdated. However this is the newest I got from the chrome app store.\n\nPlugin version: 4.0.9\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 8.51
         },
         {
-          "id": 734,
-          "title": "bug: LTM continues to turn off, requiring me to turn LTM back on periodically",
-          "text": "bug: LTM continues to turn off, requiring me to turn LTM back on periodically\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n11.4.2\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI just updated Pieces to try out L.T.M 2.5, and I noticed that the software keeps stopping and restarting on its own. I checked for any updates I may have missed, and none. I restarted the software by forcing it to quit, but the issue persisted. \n\nThe issue only happens when I turn on L.T.M. \nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 5.13
+          "id": 471,
+          "title": "I\u00b4m sorry. Something went wrong with processing. Please wait a few seconds and try again, or contact support@pieces.app",
+          "text": "I\u00b4m sorry. Something went wrong with processing. Please wait a few seconds and try again, or contact support@pieces.app\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n10.1.13\n\n### Early Access Program\n\n- [x] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n[com.pieces.pfd.zip](https://github.com/user-attachments/files/17891327/com.pieces.pfd.zip)\n![Image](https://github.com/user-attachments/assets/c9a6f930-4d30-41ad-8d70-b81d9c3f7e6f)\n![Image](https://github.com/user-attachments/assets/99d91958-8fb7-4f27-9efa-9d628127e90f)\n![Image](https://github.com/user-attachments/assets/8d1c630b-816c-488d-87f9-202a86d63820)\n![Image](https://github.com/user-attachments/assets/8e8278a0-eca0-4b4e-bcaa-a5b195da5562)\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 11.76
         }
       ]
     },
     {
-      "title": "LTM connection issues across Pieces OS and CLI",
-      "description": "Users report LTM functionality is broken or inaccessible in Pieces OS and CLI on Windows, macOS, and Linux.  Issues include CLI failing to retrieve context from LTM, LTM repeatedly turning off, and errors preventing Pieces OS from starting.  Suggested solutions include checking LTM status, restarting Pieces, and verifying Pieces OS version compatibility.",
+      "title": "Pieces software encountering errors on Windows",
+      "description": "Users on Windows are reporting various errors with Pieces software, including processing failures in the desktop app, LTM issues in the CLI, and connection problems with Pieces OS.  The desktop app shows an \"outdated plugin\" message, even with the latest Chrome plugin (4.0.9).  Users have provided screenshots and logs. Further investigation is needed to pinpoint the root cause and provide solutions.",
       "frequency": 3,
       "related_issues": [
+        {
+          "id": 471,
+          "title": "I\u00b4m sorry. Something went wrong with processing. Please wait a few seconds and try again, or contact support@pieces.app",
+          "text": "I\u00b4m sorry. Something went wrong with processing. Please wait a few seconds and try again, or contact support@pieces.app\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n10.1.13\n\n### Early Access Program\n\n- [x] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n[com.pieces.pfd.zip](https://github.com/user-attachments/files/17891327/com.pieces.pfd.zip)\n![Image](https://github.com/user-attachments/assets/c9a6f930-4d30-41ad-8d70-b81d9c3f7e6f)\n![Image](https://github.com/user-attachments/assets/99d91958-8fb7-4f27-9efa-9d628127e90f)\n![Image](https://github.com/user-attachments/assets/8d1c630b-816c-488d-87f9-202a86d63820)\n![Image](https://github.com/user-attachments/assets/8e8278a0-eca0-4b4e-bcaa-a5b195da5562)\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 11.76
+        },
         {
           "id": 713,
           "title": "LTM not working in Pieces CLI",
           "text": "LTM not working in Pieces CLI\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nPieces CLI, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.3.6\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nScreenshot from CLI:\n![Image](https://github.com/user-attachments/assets/949b363d-bbd3-4f3a-b128-5211ca2ef765)\n\nSame question from a chat in Pieces Desktop instead:\n![Image](https://github.com/user-attachments/assets/8d3e98a3-e311-46d3-acba-678e286a4bcd)\n\nPieces CLI doesn't seem to get the context from LTM.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 4.42
+          "activity_level": 4.36
         },
         {
-          "id": 734,
-          "title": "bug: LTM continues to turn off, requiring me to turn LTM back on periodically",
-          "text": "bug: LTM continues to turn off, requiring me to turn LTM back on periodically\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n11.4.2\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI just updated Pieces to try out L.T.M 2.5, and I noticed that the software keeps stopping and restarting on its own. I checked for any updates I may have missed, and none. I restarted the software by forcing it to quit, but the issue persisted. \n\nThe issue only happens when I turn on L.T.M. \nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 5.13
-        },
+          "id": 739,
+          "title": "Failed to connect to PiecesOS",
+          "text": "Failed to connect to PiecesOS\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.4.2\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nChrome plugin doesn't work properly. I can't use the buttons and features, and the sidebar cannot establish connection either. Inside of Pieces desktop app it shows that the chrome plugin is outdated. However this is the newest I got from the chrome app store.\n\nPlugin version: 4.0.9\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 8.51
+        }
+      ]
+    },
+    {
+      "title": "Pieces OS and plugin connection issues",
+      "description": "Users report various connection problems with Pieces OS and its plugins across different operating systems (Linux, Windows). Issues include \"No available configurations for RGBA pixel format\" error on Linux, general connection failures on Windows, and Chrome plugin malfunctions with reported outdated versions despite being the latest from the store.  Further investigation into plugin compatibility and Pieces OS connection stability is needed.",
+      "frequency": 3,
+      "related_issues": [
         {
           "id": 565,
           "title": "Starting error: No available configurations for the given RGBA pixel format",
           "text": "Starting error: No available configurations for the given RGBA pixel format\n### Software\n\nPieces OS, VS Code\n\n### Operating System / Platform\n\nLinux\n\n### Your Pieces OS Version\n\n11.0.3\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWhenever I am trying to start Pieces OS or Pieces For Developers via the Linux Terminal, or via VS Code Plug-In (I don't use / haven't tried other ways), the following error message appears:\n\n![Image](https://github.com/user-attachments/assets/3b7cc5de-7fdd-4a36-99f2-c806a7e540d6)\n\n\nInformation about my system:\n\n```\ninxi -G\nGraphics:\n  Device-1: NVIDIA GP107 [GeForce GTX 1050 Ti] driver: nvidia v: 535.183.01\n  Display: x11 server: X.Org v: 1.21.1.7 with: Xwayland v: 22.1.9 driver: X:\n    loaded: nvidia unloaded: fbdev,modesetting,nouveau,vesa gpu: nvidia\n    resolution: 1680x1050~60Hz\n  API: OpenGL v: 4.6.0 NVIDIA 535.183.01 renderer: NVIDIA GeForce GTX 1050\n    Ti/PCIe/SSE2\n```\n\n```\nuname -a\nLinux debian 6.1.0-25-amd64 #1 SMP PREEMPT_DYNAMIC Debian 6.1.106-3 (2024-08-26) x86_64 GNU/Linux\n```\n\nThanks in a advance!\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
           "activity_level": 2.03
+        },
+        {
+          "id": 471,
+          "title": "I\u00b4m sorry. Something went wrong with processing. Please wait a few seconds and try again, or contact support@pieces.app",
+          "text": "I\u00b4m sorry. Something went wrong with processing. Please wait a few seconds and try again, or contact support@pieces.app\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n10.1.13\n\n### Early Access Program\n\n- [x] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n[com.pieces.pfd.zip](https://github.com/user-attachments/files/17891327/com.pieces.pfd.zip)\n![Image](https://github.com/user-attachments/assets/c9a6f930-4d30-41ad-8d70-b81d9c3f7e6f)\n![Image](https://github.com/user-attachments/assets/99d91958-8fb7-4f27-9efa-9d628127e90f)\n![Image](https://github.com/user-attachments/assets/8d1c630b-816c-488d-87f9-202a86d63820)\n![Image](https://github.com/user-attachments/assets/8e8278a0-eca0-4b4e-bcaa-a5b195da5562)\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 11.76
+        },
+        {
+          "id": 739,
+          "title": "Failed to connect to PiecesOS",
+          "text": "Failed to connect to PiecesOS\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.4.2\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nChrome plugin doesn't work properly. I can't use the buttons and features, and the sidebar cannot establish connection either. Inside of Pieces desktop app it shows that the chrome plugin is outdated. However this is the newest I got from the chrome app store.\n\nPlugin version: 4.0.9\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 8.51
+        }
+      ]
+    },
+    {
+      "title": "LTM Issues Across Different Pieces Platforms",
+      "description": "Users are experiencing problems with LTM (Long-Term Memory) functionality, including the software turning off and on, failing in the CLI, and general processing errors. Issues appear across macOS, Windows, and Pieces OS versions 10.1.13, 11.3.6, and 11.4.2.  Further investigation is needed to pinpoint the root cause and solutions.",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 734,
+          "title": "bug: LTM continues to turn off, requiring me to turn LTM back on periodically",
+          "text": "bug: LTM continues to turn off, requiring me to turn LTM back on periodically\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n11.4.2\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI just updated Pieces to try out L.T.M 2.5, and I noticed that the software keeps stopping and restarting on its own. I checked for any updates I may have missed, and none. I restarted the software by forcing it to quit, but the issue persisted. \n\nThe issue only happens when I turn on L.T.M. \nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 4.99
+        },
+        {
+          "id": 713,
+          "title": "LTM not working in Pieces CLI",
+          "text": "LTM not working in Pieces CLI\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nPieces CLI, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.3.6\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nScreenshot from CLI:\n![Image](https://github.com/user-attachments/assets/949b363d-bbd3-4f3a-b128-5211ca2ef765)\n\nSame question from a chat in Pieces Desktop instead:\n![Image](https://github.com/user-attachments/assets/8d3e98a3-e311-46d3-acba-678e286a4bcd)\n\nPieces CLI doesn't seem to get the context from LTM.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 4.36
+        },
+        {
+          "id": 471,
+          "title": "I\u00b4m sorry. Something went wrong with processing. Please wait a few seconds and try again, or contact support@pieces.app",
+          "text": "I\u00b4m sorry. Something went wrong with processing. Please wait a few seconds and try again, or contact support@pieces.app\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n10.1.13\n\n### Early Access Program\n\n- [x] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n[com.pieces.pfd.zip](https://github.com/user-attachments/files/17891327/com.pieces.pfd.zip)\n![Image](https://github.com/user-attachments/assets/c9a6f930-4d30-41ad-8d70-b81d9c3f7e6f)\n![Image](https://github.com/user-attachments/assets/99d91958-8fb7-4f27-9efa-9d628127e90f)\n![Image](https://github.com/user-attachments/assets/8d1c630b-816c-488d-87f9-202a86d63820)\n![Image](https://github.com/user-attachments/assets/8e8278a0-eca0-4b4e-bcaa-a5b195da5562)\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 11.76
         }
       ]
     }
   ],
   "recommendations": [
-    "Prioritize resolving LTM connection issues across Pieces OS and CLI as they affect multiple operating systems and impact core functionality.",
-    "Investigate and address the Pieces OS and Desktop App installation and stability issues, focusing on Chromebook and Linux where problems are most prevalent.",
-    "Focus on resolving ticket #744 (Installation issue in cromebook) due to its high activity level and impact on user onboarding.",
-    "Review and update documentation for LTM usage and troubleshooting steps for Pieces OS, CLI, and Desktop App.",
-    "Consider implementing platform-specific solutions for installation and stability issues to address the unique challenges on each operating system (Linux, macOS, Chromebook)."
+    "Investigate and address the root cause of PiecesOS and plugin connectivity issues across different operating systems (Linux, Windows, ChromeOS). Prioritize resolving the \"outdated plugin\" message and ensure seamless communication between the plugin and desktop app.",
+    "Troubleshoot and fix the LTM (Long-Term Memory) issues affecting macOS, Windows, and Pieces OS. Focus on preventing the software from turning off and on and ensuring proper functionality in the CLI.",
+    "Address the reported errors on Windows, including processing failures in the desktop app and connection problems with Pieces OS. Review user-provided screenshots and logs to identify the specific causes.",
+    "Improve the installation process on Chromebooks, addressing screen flickering, unresponsive buttons, and full-screen issues. Ensure a smooth user experience during onboarding.",
+    "Investigate the \"No available configurations for RGBA pixel format\" error on Linux and provide a solution or workaround for affected users.",
+    "Monitor and address any new reports related to these common issues to prevent recurrence and improve overall user satisfaction.",
+    "Proactively communicate updates and solutions to users through release notes, blog posts, or in-app notifications to keep them informed of progress.",
+    "Consider implementing automated testing for plugin compatibility and Pieces OS connection stability to catch issues early in the development cycle.",
+    "Gather more data on user environments and Pieces versions to identify patterns and potential contributing factors to these issues.",
+    "Review and update support documentation to provide clear troubleshooting steps and workarounds for common problems.",
+    "Prioritize addressing the most active tickets (471, 739, 744) to resolve critical user issues promptly.",
+    "Analyze the categories breakdown to identify areas with the highest number of pending issues and allocate resources accordingly (e.g., \"bug\", \"app:desktop application\", \"status:triaged\")."
   ],
   "message": "Daily support report generated successfully."
 }
