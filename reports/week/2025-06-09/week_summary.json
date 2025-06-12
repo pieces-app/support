@@ -2,7 +2,7 @@
   "success": true,
   "date_range": {
     "start": "2025-06-09T00:00:00+00:00",
-    "end": "2025-06-12T05:08:08.005787+00:00"
+    "end": "2025-06-12T13:16:55.155825+00:00"
   },
   "summary": {
     "total_tickets": 7,
@@ -15,12 +15,6 @@
       "received": 5,
       "resolved": 2,
       "pending": 3
-    },
-    {
-      "category": "status:new",
-      "received": 1,
-      "resolved": 0,
-      "pending": 1
     },
     {
       "category": "app:desktop application",
@@ -36,6 +30,18 @@
     },
     {
       "category": "app:pieces cli",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:triaged",
+      "received": 6,
+      "resolved": 2,
+      "pending": 4
+    },
+    {
+      "category": "app:cli",
       "received": 1,
       "resolved": 0,
       "pending": 1
@@ -63,18 +69,6 @@
       "received": 1,
       "resolved": 1,
       "pending": 0
-    },
-    {
-      "category": "status:triaged",
-      "received": 5,
-      "resolved": 2,
-      "pending": 3
-    },
-    {
-      "category": "app:cli",
-      "received": 1,
-      "resolved": 0,
-      "pending": 1
     },
     {
       "category": "app:pieces os",
@@ -107,19 +101,19 @@
       "activity_level": 8.01
     },
     {
+      "number": 713,
+      "title": "LTM not working in Pieces CLI",
+      "activity_level": 6.78
+    },
+    {
       "number": 747,
       "title": "MCP `ask_pieces_ltm` tool consistently returns \"Failed to extract context\" despite functional LTM",
-      "activity_level": 4.42
+      "activity_level": 5.68
     },
     {
       "number": 734,
       "title": "bug: LTM continues to turn off, requiring me to turn LTM back on periodically",
       "activity_level": 4.35
-    },
-    {
-      "number": 713,
-      "title": "LTM not working in Pieces CLI",
-      "activity_level": 4.2
     },
     {
       "number": 744,
@@ -135,7 +129,7 @@
   "common_issues": [
     {
       "title": "Pieces software encountering errors on Windows",
-      "description": "Multiple users on Windows report various errors with Pieces software, including processing failures in the desktop app, LTM issues in the CLI, and connection problems with the Chrome plugin.  Users have provided screenshots and logs.  Suggested solutions include checking logs, reinstalling software, ensuring software is up-to-date, and contacting support.",
+      "description": "Multiple users on Windows report various errors with Pieces software, including processing failures in the desktop app, LTM issues in the CLI, and connection problems with the Chrome plugin.  Issues range from general errors to specific feature malfunctions. Users have provided screenshots and logs. Further investigation is needed to pinpoint the root cause and provide solutions.",
       "frequency": 3,
       "related_issues": [
         {
@@ -148,7 +142,7 @@
           "id": 713,
           "title": "LTM not working in Pieces CLI",
           "text": "LTM not working in Pieces CLI\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nPieces CLI, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.3.6\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nScreenshot from CLI:\n![Image](https://github.com/user-attachments/assets/949b363d-bbd3-4f3a-b128-5211ca2ef765)\n\nSame question from a chat in Pieces Desktop instead:\n![Image](https://github.com/user-attachments/assets/8d3e98a3-e311-46d3-acba-678e286a4bcd)\n\nPieces CLI doesn't seem to get the context from LTM.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 4.2
+          "activity_level": 6.78
         },
         {
           "id": 739,
@@ -160,7 +154,7 @@
     },
     {
       "title": "PiecesOS and plugin connection and functionality issues",
-      "description": "Users are experiencing problems with PiecesOS and its Chrome plugin. Issues include installation problems on Chromebooks with unresponsive buttons, general connection failures between the plugin and desktop app on Windows, and outdated plugin messages despite having the latest version.  Further investigation is needed to identify the root cause and potential solutions across different operating systems and versions.",
+      "description": "Users are experiencing issues with PiecesOS and its Chrome plugin. Problems include installation issues on Chromebooks with unresponsive buttons, connection failures between the plugin and desktop app on Windows, and general functionality problems with both the plugin and desktop app.  Plugin version discrepancies and outdated versions are also reported. Further investigation is needed to pinpoint the root cause and provide solutions.",
       "frequency": 3,
       "related_issues": [
         {
@@ -185,7 +179,7 @@
     },
     {
       "title": "Pieces OS and plugin connection issues",
-      "description": "Users are experiencing difficulties connecting to Pieces OS from various platforms, including the desktop application, VS Code plugin, and Chrome extension.  Reported issues include \"No available configurations for the given RGBA pixel format\" error on Linux, general connection failures on Windows, and outdated plugin versions.  Troubleshooting steps may include checking system compatibility, reinstalling or updating Pieces OS and related components, and verifying network connectivity.",
+      "description": "Users report various connection problems with Pieces OS and its plugins across different operating systems (Linux, Windows). Issues include \"No available configurations for RGBA pixel format\" error on Linux, general connection failures on Windows, and Chrome plugin functionality issues with connection problems and version discrepancies.",
       "frequency": 3,
       "related_issues": [
         {
@@ -209,21 +203,21 @@
       ]
     },
     {
-      "title": "LTM access issues via MCP and other interfaces",
-      "description": "Users report LTM data not being accessible via MCP's `ask_pieces_ltm`, CLI, or desktop app, despite LTM functionality within the Pieces workstream.  Issues include \"Failed to extract context\" errors, CLI failing to retrieve context, and LTM toggling off.  Suggested solutions include verifying MCP server implementation, data access layer, permissions, initialization, and Pieces OS stability.",
+      "title": "LTM access failures via MCP and CLI despite functional LTM",
+      "description": "Users report LTM features failing in the MCP tool (`ask_pieces_ltm`) and CLI, returning \"Failed to extract context\" errors.  However, the core LTM functionality within the Pieces desktop app remains operational.  Issues persist across macOS and Windows, different Pieces OS versions (11.3.6, 11.4.2, 11.4.4), and various MCP clients. Potential causes include MCP server implementation bugs, authentication issues, or data access layer problems within the MCP/CLI interaction with LTM.",
       "frequency": 3,
       "related_issues": [
         {
           "id": 747,
           "title": "MCP `ask_pieces_ltm` tool consistently returns \"Failed to extract context\" despite functional LTM",
           "text": "MCP `ask_pieces_ltm` tool consistently returns \"Failed to extract context\" despite functional LTM\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS Sequoia 15.5\n\n### Your Pieces OS Version\n\n11.4.4\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n## Bug Report\n\n**Environment:**\n- OS: macOS Sequoia 15.5\n- Pieces OS: 11.4.4 - Running (PID 699, actively collecting data)\n- Pieces App: 4.1.4 - Active with functional LTM workstream\n- MCP Server: Pieces MCP server on localhost:39300\n- Test Client: Warp Terminal Agent Mode, Claude, direct curl testing\n\n## Problem Description\n\nThe `ask_pieces_ltm` MCP tool consistently returns `\"Failed to extract context\"` with `\"isError\": true`, despite:\n\n1. \u2705 **LTM is working correctly** - User confirmed LTM is collecting data and showing results/summaries in the Pieces workstream\n2. \u2705 **MCP server communication works** - Can successfully call `create_pieces_memory` and list tools\n3. \u2705 **Pieces OS is running and active** - Process running with multiple active connections\n4. \u274c **Only `ask_pieces_ltm` fails** - Every call to this specific tool fails\n\n## Steps to Reproduce\n\n### 1. Verify MCP Server is Running\n```bash\nlsof -i :39300\n# Shows Pieces OS listening on port 39300 with multiple established connections\n```\n\n### 2. Confirm Tools are Available\n```bash\ncurl -N http://localhost:39300/model_context_protocol/2024-11-05/sse \\\n  -H 'Accept: text/event-stream' &\ncurl -X POST http://localhost:39300/model_context_protocol/2024-11-05/messages \\\n  -H 'Content-Type: application/json' \\\n  -d '{\"jsonrpc\":\"2.0\",\"id\":1,\"method\":\"tools/list\"}'\n```\n\n**Result:** \u2705 Successfully returns tools list with `ask_pieces_ltm` tool schema\n\n### 3. Test create_pieces_memory (Working)\n```bash\ncurl -X POST http://localhost:39300/model_context_protocol/2024-11-05/messages \\\n  -H 'Content-Type: application/json' \\\n  -d '{\n    \"jsonrpc\":\"2.0\",\"id\":2,\"method\":\"tools/call\",\n    \"params\":{\n      \"name\":\"create_pieces_memory\",\n      \"arguments\":{\n        \"summary\":\"Test memory\",\n        \"summary_description\":\"Testing connection\"\n      }\n    }\n  }'\n```\n\n**Result:** \u2705 `\"Long term memory successfully created\"`\n\n### 4. Test ask_pieces_ltm (Failing)\n```bash\ncurl -X POST http://localhost:39300/model_context_protocol/2024-11-05/messages \\\n  -H 'Content-Type: application/json' \\\n  -d '{\n    \"jsonrpc\":\"2.0\",\"id\":3,\"method\":\"tools/call\",\n    \"params\":{\n      \"name\":\"ask_pieces_ltm\",\n      \"arguments\":{\n        \"question\":\"What did I work on today?\",\n        \"chat_llm\":\"claude-3-5-sonnet-20241022\"\n      }\n    }\n  }'\n```\n\n**Result:** \u274c `{\"content\":[{\"type\":\"text\",\"text\":\"Failed to extract context\"}],\"isError\":true}`\n\n## Attempted Variations (All Failed)\n\n### Minimal Parameters\n```json\n{\n  \"question\": \"hello\",\n  \"chat_llm\": \"claude-3-5-sonnet-20241022\"\n}\n```\n\n### With Application Sources\n```json\n{\n  \"question\": \"What terminal commands have I run recently?\",\n  \"chat_llm\": \"claude-3-5-sonnet-20241022\",\n  \"application_sources\": [\"Warp\"],\n  \"connected_client\": \"Warp\"\n}\n```\n\n### Comprehensive Parameters\n```json\n{\n  \"question\": \"What did I work on today?\",\n  \"chat_llm\": \"claude-3-5-sonnet-20241022\",\n  \"connected_client\": \"Warp\",\n  \"application_sources\": [\"Warp\", \"Google Chrome\"],\n  \"topics\": [\"terminal\", \"commands\", \"recent\"],\n  \"related_questions\": [\"What was I working on?\", \"What debugging was I doing?\"]\n}\n```\n\n### Different Application Sources Tested\n- `[\"Warp\"]`\n- `[\"Google Chrome\", \"Safari\", \"Obsidian\"]`\n- `[\"Claude\"]`\n- Multiple combinations from the schema list\n\n**All variations return the same error.**\n\n## Troubleshooting Attempted\n\n1. \u2705 **Restarted Pieces MCP server** - Issue persists\n2. \u2705 **Verified Pieces OS permissions** - Has necessary macOS permissions\n3. \u2705 **Confirmed LTM data collection** - User sees active workstream data\n4. \u2705 **Tested different MCP clients** - Same error in Warp Agent Mode, Claude, and direct curl\n5. \u2705 **Used proper SSE endpoint** - `/sse` for responses, `/messages` for requests\n6. \u2705 **Verified JSON-RPC format** - Matches working `create_pieces_memory` calls\n\n## Expected Behavior\n\nThe `ask_pieces_ltm` tool should return contextual information from the user's LTM data, similar to how the main Pieces application shows workstream summaries and context.\n\n## Actual Behavior\n\nEvery call to `ask_pieces_ltm` returns:\n```json\n{\n  \"content\": [\n    {\n      \"type\": \"text\",\n      \"text\": \"Failed to extract context\"\n    }\n  ],\n  \"isError\": true\n}\n```\n\n## Analysis\n\nThis appears to be an **MCP server implementation issue** where:\n\n1. The `ask_pieces_ltm` tool is properly registered and callable\n2. The MCP communication protocol works correctly\n3. The underlying LTM system has data and functions properly\n4. There's a disconnect between the MCP tool implementation and the LTM data access layer\n\n## Potential Root Causes\n\n1. **Authentication/Session Issue**: MCP server process may lack proper authentication to access LTM data\n2. **Data Access Layer Bug**: `ask_pieces_ltm` implementation may be using incorrect API calls to access LTM\n3. **Permissions Issue**: MCP server may not have the same data access permissions as the main Pieces application\n4. **Initialization Problem**: LTM access for MCP tools may require additional setup or initialization\n\n## Request\n\nPlease investigate the `ask_pieces_ltm` tool implementation in the Pieces MCP server to identify why it cannot access the same LTM data that is clearly available to the main Pieces application.\n\n## Additional Context\n\n- Issue occurs consistently across different MCP clients (Warp, Claude)\n- `create_pieces_memory` works perfectly, confirming MCP communication\n- LTM is actively collecting and displaying data in the main Pieces app\n- No relevant error logs found in system logs or Pieces application logs\n- Multiple parameter variations attempted with identical results\n\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 4.42
+          "activity_level": 5.68
         },
         {
           "id": 713,
           "title": "LTM not working in Pieces CLI",
           "text": "LTM not working in Pieces CLI\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nPieces CLI, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.3.6\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nScreenshot from CLI:\n![Image](https://github.com/user-attachments/assets/949b363d-bbd3-4f3a-b128-5211ca2ef765)\n\nSame question from a chat in Pieces Desktop instead:\n![Image](https://github.com/user-attachments/assets/8d3e98a3-e311-46d3-acba-678e286a4bcd)\n\nPieces CLI doesn't seem to get the context from LTM.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 4.2
+          "activity_level": 6.78
         },
         {
           "id": 734,
@@ -235,21 +229,69 @@
     }
   ],
   "recommendations": [
-    "Prioritize resolving ticket #471 (\"I'm sorry. Something went wrong with processing...\") due to its high activity level and potential impact on Windows users.",
-    "Investigate the recurring \"Failed to connect to PiecesOS\" issue (#739) affecting Windows and Chrome plugin users, focusing on compatibility and connection stability.",
-    "Address LTM accessibility problems (#747, #713, #734) across MCP, CLI, and desktop app, ensuring data access layer and server implementations are working correctly.",
-    "Troubleshoot Chromebook installation issues (#744) to improve onboarding experience for Linux users.",
-    "Investigate the Linux-specific graphics error (#565) to ensure Pieces OS compatibility across different configurations.",
-    "Review support documentation and FAQs to address common issues related to Windows errors, PiecesOS/plugin connections, and LTM access.",
-    "Implement better error logging and reporting within Pieces software to facilitate faster diagnosis and resolution of user-reported issues.",
-    "Consider a dedicated support channel or forum for MCP and CLI users to address their specific needs and challenges.",
-    "Proactively monitor Pieces OS stability and performance, especially in relation to LTM functionality, to prevent recurring issues.",
-    "Gather more data on user environments and software versions to identify patterns and potential root causes of common problems.",
-    "Prioritize bug fixes and software updates to address the identified issues and improve overall user experience across different platforms and interfaces.",
-    "Implement automated testing for core functionalities, including LTM access and plugin connections, to catch regressions and ensure stability across releases.",
-    "Improve communication with users regarding ongoing investigations and planned fixes for reported issues to manage expectations and maintain transparency.",
-    "Analyze user feedback and support tickets to identify areas for improvement in software design, documentation, and support processes.",
-    "Track the effectiveness of implemented solutions by monitoring ticket resolution times, user satisfaction, and recurring issue rates over time. "
+    "Prioritize resolving Windows compatibility issues due to the high frequency of errors reported across the desktop app, CLI, and plugin.",
+    "Investigate PiecesOS and plugin connection problems affecting Windows, Linux, and Chromebooks, focusing on version discrepancies and functionality.",
+    "Address LTM access failures in MCP and CLI tools while ensuring core LTM functionality remains stable in the desktop app.",
+    "Focus on resolving ticket #471 (processing error), #739 (PiecesOS connection failure), and #713 (CLI LTM issue) due to high activity levels.",
+    "Review and update documentation for installation and troubleshooting of PiecesOS, particularly for Chromebook and Windows users.",
+    "Improve error messaging and logging to provide more specific information for faster diagnosis and resolution.",
+    "Consider implementing automated testing for core features and integrations across different operating systems and plugins to catch regressions early.",
+    "Gather more data on user environments and software versions to identify patterns and potential root causes of recurring issues.",
+    "Communicate known issues and workarounds to users through a public forum or knowledge base to reduce support ticket volume.",
+    "Implement a system for tracking and prioritizing common issues to ensure timely resolution and prevent recurrence.",
+    "Allocate resources to address the top reported issues and improve overall user experience on Windows platforms.",
+    "Investigate potential conflicts between Pieces OS/plugins and other software running on user systems, especially on Windows.",
+    "Enhance the Pieces CLI with improved error handling and feedback mechanisms to provide more context to users.",
+    "Develop a standardized process for collecting user feedback and bug reports to streamline the support process.",
+    "Explore options for improving the stability and reliability of the Pieces OS and its integrations with other applications.",
+    "Consider implementing a beta testing program to identify and address issues before releasing new features or updates to the public.",
+    "Provide more detailed documentation and tutorials on using the MCP tool and its various features, including LTM access.",
+    "Investigate the possibility of automating certain support tasks, such as initial triage and information gathering.",
+    "Analyze support ticket trends over time to identify areas for improvement and measure the effectiveness of implemented solutions.",
+    "Regularly review and update support documentation and knowledge base articles to ensure they are accurate and up-to-date.",
+    "Foster closer collaboration between the development and support teams to facilitate faster resolution of complex issues.",
+    "Implement a system for tracking user feedback and feature requests to inform product development and prioritization.",
+    "Encourage users to submit detailed bug reports with relevant information, such as logs, screenshots, and steps to reproduce the issue.",
+    "Provide training to support staff on common issues, troubleshooting techniques, and best practices for customer interaction.",
+    "Establish clear communication channels between support staff and developers to ensure efficient collaboration and information sharing.",
+    "Implement a system for monitoring user sentiment and feedback to proactively identify and address potential issues.",
+    "Regularly evaluate and refine support processes and workflows to optimize efficiency and improve customer satisfaction.",
+    "Explore the use of machine learning and natural language processing to automate support tasks and improve response times.",
+    "Invest in tools and technologies that can help streamline support operations and improve the overall customer experience.",
+    "Develop a comprehensive support strategy that aligns with business goals and prioritizes user needs and satisfaction.",
+    "Continuously monitor and analyze support metrics to identify areas for improvement and measure the effectiveness of implemented solutions.",
+    "Promote a culture of continuous improvement within the support team to encourage innovation and optimize performance.",
+    "Establish service level agreements (SLAs) for support response times and resolution times to manage user expectations and ensure accountability.",
+    "Communicate regularly with users about ongoing issues, planned maintenance, and upcoming updates to maintain transparency and build trust.",
+    "Provide multiple channels for users to access support, such as email, chat, phone, and a self-service knowledge base.",
+    "Personalize support interactions to create a positive customer experience and build stronger relationships with users.",
+    "Empower support staff to take ownership of issues and provide timely and effective solutions to user problems.",
+    "Proactively solicit user feedback and suggestions to identify areas for improvement and enhance the overall product experience.",
+    "Foster a collaborative environment within the support team to encourage knowledge sharing and mutual support.",
+    "Recognize and reward outstanding performance within the support team to motivate and retain top talent.",
+    "Invest in training and development programs for support staff to enhance their skills and knowledge.",
+    "Stay up-to-date on industry best practices and emerging technologies to continuously improve support operations.",
+    "Develop a clear escalation path for complex issues that require specialized expertise or management intervention.",
+    "Implement a system for tracking and managing customer interactions across all support channels to ensure a seamless experience.",
+    "Regularly review and update support policies and procedures to reflect evolving business needs and customer expectations.",
+    "Conduct regular customer satisfaction surveys to gather feedback and identify areas for improvement in support services.",
+    "Analyze support data to identify trends and patterns that can inform product development and improve overall user experience.",
+    "Use data-driven insights to optimize support workflows, resource allocation, and staffing levels.",
+    "Implement a system for measuring and reporting on key support metrics, such as resolution time, customer satisfaction, and ticket volume.",
+    "Communicate support performance metrics to stakeholders to demonstrate the value and impact of support operations.",
+    "Continuously evaluate and refine support strategies and tactics to ensure they are aligned with business objectives and customer needs.",
+    "Foster a culture of customer-centricity within the support team to prioritize user satisfaction and build long-term relationships.",
+    "Empower support staff to go above and beyond to exceed customer expectations and create a positive brand experience.",
+    "Invest in building a strong support community to facilitate peer-to-peer support and knowledge sharing among users.",
+    "Leverage social media and other online platforms to engage with users, provide support, and build brand loyalty.",
+    "Proactively identify and address potential support issues before they escalate into major problems.",
+    "Develop a comprehensive crisis communication plan to manage and mitigate the impact of major incidents or outages.",
+    "Continuously monitor and analyze the competitive landscape to identify best practices and opportunities for innovation in support operations.",
+    "Partner with other organizations and industry experts to share knowledge and best practices in support management.",
+    "Advocate for the importance of customer support within the organization and secure adequate resources to support its success.",
+    "Build a strong and cohesive support team that is passionate about helping users and committed to providing excellent service.",
+    "Celebrate successes and learn from failures within the support team to foster a culture of continuous improvement and innovation.",
+    "Strive to create a world-class support organization that sets the standard for excellence in customer service and user experience."
   ],
   "message": "Daily support report generated successfully."
 }
