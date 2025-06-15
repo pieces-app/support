@@ -1,0 +1,58 @@
+{
+  "success": true,
+  "date_range": {
+    "start": "2025-06-15T00:00:00+00:00",
+    "end": "2025-06-15T21:06:30.039589+00:00"
+  },
+  "summary": {
+    "total_tickets": 1,
+    "resolved_tickets": 0,
+    "open_tickets": 1
+  },
+  "ticket_breakdown": [
+    {
+      "category": "app:cli",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:triaged",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    }
+  ],
+  "most_active_tickets": [
+    {
+      "number": 713,
+      "title": "LTM not working in Pieces CLI",
+      "activity_level": 6.9
+    }
+  ],
+  "common_issues": [
+    {
+      "title": "LTM Context Not Available in Pieces CLI",
+      "description": "Pieces CLI fails to retrieve context from Long Term Memory (LTM) resulting in a 404 error for the Gemini-Pro model.  This occurs on Windows OS with Pieces OS 11.3.6.  Both CLI and Pieces Desktop chat exhibit the same issue, indicating a problem with LTM integration rather than the specific interface.",
+      "frequency": 1,
+      "related_issues": [
+        {
+          "id": 713,
+          "title": "LTM not working in Pieces CLI",
+          "text": "LTM not working in Pieces CLI\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nPieces CLI, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.3.6\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nScreenshot from CLI:\n![Image](https://github.com/user-attachments/assets/949b363d-bbd3-4f3a-b128-5211ca2ef765)\n\nSame question from a chat in Pieces Desktop instead:\n![Image](https://github.com/user-attachments/assets/8d3e98a3-e311-46d3-acba-678e286a4bcd)\n\nPieces CLI doesn't seem to get the context from LTM.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 6.9
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    "Investigate LTM integration issues with Pieces CLI on Windows OS version 11.3.6.",
+    "Prioritize resolution of issue #713: \"LTM not working in Pieces CLI\", given its high activity level and potential impact on user experience.",
+    "Proactively monitor and address 404 errors related to the Gemini-Pro model in the context of LTM integration.",
+    "Improve error messaging and documentation regarding LTM integration issues, including troubleshooting steps for users experiencing similar problems.",
+    "Consider adding specific tests for LTM context retrieval within the Pieces CLI test suite to prevent similar issues in the future.",
+    "Analyze user feedback and support tickets to identify any other potential issues related to LTM integration or the Gemini-Pro model.",
+    "Communicate the status and resolution of LTM integration issues to affected users through appropriate channels (e.g., release notes, support updates)."
+  ],
+  "message": "Daily support report generated successfully."
+}

@@ -2,7 +2,7 @@
   "success": true,
   "date_range": {
     "start": "2025-06-09T00:00:00+00:00",
-    "end": "2025-06-15T13:12:32.893133+00:00"
+    "end": "2025-06-15T21:06:45.586491+00:00"
   },
   "summary": {
     "total_tickets": 8,
@@ -10,6 +10,18 @@
     "open_tickets": 6
   },
   "ticket_breakdown": [
+    {
+      "category": "app:cli",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:triaged",
+      "received": 7,
+      "resolved": 2,
+      "pending": 5
+    },
     {
       "category": "bug",
       "received": 6,
@@ -29,19 +41,7 @@
       "pending": 2
     },
     {
-      "category": "status:triaged",
-      "received": 7,
-      "resolved": 2,
-      "pending": 5
-    },
-    {
       "category": "app:pieces cli",
-      "received": 1,
-      "resolved": 0,
-      "pending": 1
-    },
-    {
-      "category": "app:cli",
       "received": 1,
       "resolved": 0,
       "pending": 1
@@ -101,14 +101,14 @@
       "activity_level": 6.97
     },
     {
+      "number": 713,
+      "title": "LTM not working in Pieces CLI",
+      "activity_level": 6.9
+    },
+    {
       "number": 750,
       "title": "Delete chat bubbles breaks the onhover chat menu's appearance",
       "activity_level": 6.25
-    },
-    {
-      "number": 713,
-      "title": "LTM not working in Pieces CLI",
-      "activity_level": 6.14
     },
     {
       "number": 747,
@@ -118,7 +118,7 @@
     {
       "number": 734,
       "title": "bug: LTM continues to turn off, requiring me to turn LTM back on periodically",
-      "activity_level": 4.08
+      "activity_level": 4.0
     },
     {
       "number": 744,
@@ -134,7 +134,7 @@
   "common_issues": [
     {
       "title": "PiecesOS and related components connection issues",
-      "description": "Users are experiencing difficulties connecting to PiecesOS from various components, including the Chrome plugin and CLI. Issues include plugin functionality errors, outdated plugin messages, and CLI's failure to retrieve context from LTM.  Users have checked for existing issues and provided screenshots. Further investigation into PiecesOS and its interaction with these components is needed.  Check plugin compatibility and ensure LTM is properly integrated.",
+      "description": "Users are experiencing difficulties connecting to PiecesOS from various components, including the Chrome plugin, desktop application, and CLI. Issues include plugin functionality errors, general connection failures, and LTM context retrieval problems.  Troubleshooting steps may involve checking plugin versions, ensuring PiecesOS is updated, and examining logs for specific error messages.",
       "frequency": 3,
       "related_issues": [
         {
@@ -153,13 +153,38 @@
           "id": 713,
           "title": "LTM not working in Pieces CLI",
           "text": "LTM not working in Pieces CLI\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nPieces CLI, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.3.6\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nScreenshot from CLI:\n![Image](https://github.com/user-attachments/assets/949b363d-bbd3-4f3a-b128-5211ca2ef765)\n\nSame question from a chat in Pieces Desktop instead:\n![Image](https://github.com/user-attachments/assets/8d3e98a3-e311-46d3-acba-678e286a4bcd)\n\nPieces CLI doesn't seem to get the context from LTM.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 6.14
+          "activity_level": 6.9
+        }
+      ]
+    },
+    {
+      "title": "LTM not working or frequently turning off",
+      "description": "Users on Windows and macOS are reporting issues with Long Term Memory (LTM) in the Pieces CLI and Desktop app.  LTM fails to provide context or turns off unexpectedly, requiring manual reactivation.  Error messages indicate a potential issue with the Gemini-Pro model access.  Further investigation is needed to determine the root cause and provide a solution.",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 713,
+          "title": "LTM not working in Pieces CLI",
+          "text": "LTM not working in Pieces CLI\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nPieces CLI, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.3.6\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nScreenshot from CLI:\n![Image](https://github.com/user-attachments/assets/949b363d-bbd3-4f3a-b128-5211ca2ef765)\n\nSame question from a chat in Pieces Desktop instead:\n![Image](https://github.com/user-attachments/assets/8d3e98a3-e311-46d3-acba-678e286a4bcd)\n\nPieces CLI doesn't seem to get the context from LTM.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 6.9
+        },
+        {
+          "id": 471,
+          "title": "I\u00b4m sorry. Something went wrong with processing. Please wait a few seconds and try again, or contact support@pieces.app",
+          "text": "I\u00b4m sorry. Something went wrong with processing. Please wait a few seconds and try again, or contact support@pieces.app\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n10.1.13\n\n### Early Access Program\n\n- [x] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n[com.pieces.pfd.zip](https://github.com/user-attachments/files/17891327/com.pieces.pfd.zip)\n![Image](https://github.com/user-attachments/assets/c9a6f930-4d30-41ad-8d70-b81d9c3f7e6f)\n![Image](https://github.com/user-attachments/assets/99d91958-8fb7-4f27-9efa-9d628127e90f)\n![Image](https://github.com/user-attachments/assets/8d1c630b-816c-488d-87f9-202a86d63820)\n![Image](https://github.com/user-attachments/assets/8e8278a0-eca0-4b4e-bcaa-a5b195da5562)\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 11.45
+        },
+        {
+          "id": 734,
+          "title": "bug: LTM continues to turn off, requiring me to turn LTM back on periodically",
+          "text": "bug: LTM continues to turn off, requiring me to turn LTM back on periodically\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n11.4.2\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI just updated Pieces to try out L.T.M 2.5, and I noticed that the software keeps stopping and restarting on its own. I checked for any updates I may have missed, and none. I restarted the software by forcing it to quit, but the issue persisted. \n\nThe issue only happens when I turn on L.T.M. \nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 4.0
         }
       ]
     },
     {
       "title": "Chat bubble deletion breaks hover menu UI",
-      "description": "Deleting chat bubbles other than the latest one in a group causes the hover menu to only appear on the last bubble. This occurs on macOS and Windows desktop applications, across various Pieces OS versions (10.1.13, 11.4.2, 11.4.4). The issue may be related to how chat bubbles are grouped after deletion.  A potential solution involves ensuring the hover menu functionality persists for all bubbles, even after grouping.",
+      "description": "Deleting chat bubbles other than the latest one in a group causes hover menu issues on macOS and Windows.  The menu only appears on the last bubble of the group. This affects Pieces desktop app versions 10.1.13 and 11.4.4.  The issue may be related to the grouping of bubbles after deletion.",
       "frequency": 3,
       "related_issues": [
         {
@@ -178,13 +203,13 @@
           "id": 734,
           "title": "bug: LTM continues to turn off, requiring me to turn LTM back on periodically",
           "text": "bug: LTM continues to turn off, requiring me to turn LTM back on periodically\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n11.4.2\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI just updated Pieces to try out L.T.M 2.5, and I noticed that the software keeps stopping and restarting on its own. I checked for any updates I may have missed, and none. I restarted the software by forcing it to quit, but the issue persisted. \n\nThe issue only happens when I turn on L.T.M. \nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 4.08
+          "activity_level": 4.0
         }
       ]
     },
     {
-      "title": "PiecesOS and plugin connection and functionality issues",
-      "description": "Users are experiencing problems with PiecesOS and its Chrome plugin. Issues include installation problems on Chromebooks with screen flickering and unresponsive buttons, plugin connection failures and outdated versions on Windows, and general processing errors.  Further investigation is needed to identify the root cause and provide solutions across different operating systems and plugin versions.",
+      "title": "Pieces OS and plugin connection and functionality issues",
+      "description": "Users are experiencing problems with Pieces OS and its Chrome plugin across different operating systems (Windows, Linux, Chromebook). Issues include installation problems (Chromebook), unresponsive buttons, failure to connect, and outdated plugin messages despite having the latest version.  Further investigation is needed to identify the root cause and provide solutions.",
       "frequency": 3,
       "related_issues": [
         {
@@ -209,7 +234,7 @@
     },
     {
       "title": "Pieces OS and plugin connection issues",
-      "description": "Users report various connection problems with Pieces OS and its plugins across different operating systems (Linux, Windows). Issues include \"No available configurations for RGBA pixel format\" error on Linux, general connection failures on Windows, and Chrome plugin malfunctions with reported outdated versions despite being the latest from the store.  Further investigation into plugin compatibility and Pieces OS connection stability is needed.",
+      "description": "Users report various connection problems with Pieces OS and its plugins across different operating systems (Windows, Linux). Issues include \"No available configurations for RGBA pixel format\" error on Linux, general connection failures on Windows, and Chrome plugin malfunctions with reported outdated versions despite being the latest from the store.  Solutions may involve checking graphics drivers, Pieces OS version compatibility, and plugin updates.",
       "frequency": 3,
       "related_issues": [
         {
@@ -231,84 +256,17 @@
           "activity_level": 6.97
         }
       ]
-    },
-    {
-      "title": "LTM Access Issues via MCP and Inconsistent Behavior",
-      "description": "Users report LTM connectivity problems through MCP's `ask_pieces_ltm` tool, returning \"Failed to extract context\" errors despite functional LTM within the Pieces application.  Similar issues arise in the Pieces CLI.  Additionally, LTM has shown inconsistent behavior by unexpectedly turning off. Troubleshooting steps like server restarts and permission checks haven't resolved the core issue, suggesting potential bugs in MCP implementation, data access layers, or LTM stability itself.",
-      "frequency": 3,
-      "related_issues": [
-        {
-          "id": 747,
-          "title": "MCP `ask_pieces_ltm` tool consistently returns \"Failed to extract context\" despite functional LTM",
-          "text": "MCP `ask_pieces_ltm` tool consistently returns \"Failed to extract context\" despite functional LTM\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS Sequoia 15.5\n\n### Your Pieces OS Version\n\n11.4.4\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n## Bug Report\n\n**Environment:**\n- OS: macOS Sequoia 15.5\n- Pieces OS: 11.4.4 - Running (PID 699, actively collecting data)\n- Pieces App: 4.1.4 - Active with functional LTM workstream\n- MCP Server: Pieces MCP server on localhost:39300\n- Test Client: Warp Terminal Agent Mode, Claude, direct curl testing\n\n## Problem Description\n\nThe `ask_pieces_ltm` MCP tool consistently returns `\"Failed to extract context\"` with `\"isError\": true`, despite:\n\n1. \u2705 **LTM is working correctly** - User confirmed LTM is collecting data and showing results/summaries in the Pieces workstream\n2. \u2705 **MCP server communication works** - Can successfully call `create_pieces_memory` and list tools\n3. \u2705 **Pieces OS is running and active** - Process running with multiple active connections\n4. \u274c **Only `ask_pieces_ltm` fails** - Every call to this specific tool fails\n\n## Steps to Reproduce\n\n### 1. Verify MCP Server is Running\n```bash\nlsof -i :39300\n# Shows Pieces OS listening on port 39300 with multiple established connections\n```\n\n### 2. Confirm Tools are Available\n```bash\ncurl -N http://localhost:39300/model_context_protocol/2024-11-05/sse \\\n  -H 'Accept: text/event-stream' &\ncurl -X POST http://localhost:39300/model_context_protocol/2024-11-05/messages \\\n  -H 'Content-Type: application/json' \\\n  -d '{\"jsonrpc\":\"2.0\",\"id\":1,\"method\":\"tools/list\"}'\n```\n\n**Result:** \u2705 Successfully returns tools list with `ask_pieces_ltm` tool schema\n\n### 3. Test create_pieces_memory (Working)\n```bash\ncurl -X POST http://localhost:39300/model_context_protocol/2024-11-05/messages \\\n  -H 'Content-Type: application/json' \\\n  -d '{\n    \"jsonrpc\":\"2.0\",\"id\":2,\"method\":\"tools/call\",\n    \"params\":{\n      \"name\":\"create_pieces_memory\",\n      \"arguments\":{\n        \"summary\":\"Test memory\",\n        \"summary_description\":\"Testing connection\"\n      }\n    }\n  }'\n```\n\n**Result:** \u2705 `\"Long term memory successfully created\"`\n\n### 4. Test ask_pieces_ltm (Failing)\n```bash\ncurl -X POST http://localhost:39300/model_context_protocol/2024-11-05/messages \\\n  -H 'Content-Type: application/json' \\\n  -d '{\n    \"jsonrpc\":\"2.0\",\"id\":3,\"method\":\"tools/call\",\n    \"params\":{\n      \"name\":\"ask_pieces_ltm\",\n      \"arguments\":{\n        \"question\":\"What did I work on today?\",\n        \"chat_llm\":\"claude-3-5-sonnet-20241022\"\n      }\n    }\n  }'\n```\n\n**Result:** \u274c `{\"content\":[{\"type\":\"text\",\"text\":\"Failed to extract context\"}],\"isError\":true}`\n\n## Attempted Variations (All Failed)\n\n### Minimal Parameters\n```json\n{\n  \"question\": \"hello\",\n  \"chat_llm\": \"claude-3-5-sonnet-20241022\"\n}\n```\n\n### With Application Sources\n```json\n{\n  \"question\": \"What terminal commands have I run recently?\",\n  \"chat_llm\": \"claude-3-5-sonnet-20241022\",\n  \"application_sources\": [\"Warp\"],\n  \"connected_client\": \"Warp\"\n}\n```\n\n### Comprehensive Parameters\n```json\n{\n  \"question\": \"What did I work on today?\",\n  \"chat_llm\": \"claude-3-5-sonnet-20241022\",\n  \"connected_client\": \"Warp\",\n  \"application_sources\": [\"Warp\", \"Google Chrome\"],\n  \"topics\": [\"terminal\", \"commands\", \"recent\"],\n  \"related_questions\": [\"What was I working on?\", \"What debugging was I doing?\"]\n}\n```\n\n### Different Application Sources Tested\n- `[\"Warp\"]`\n- `[\"Google Chrome\", \"Safari\", \"Obsidian\"]`\n- `[\"Claude\"]`\n- Multiple combinations from the schema list\n\n**All variations return the same error.**\n\n## Troubleshooting Attempted\n\n1. \u2705 **Restarted Pieces MCP server** - Issue persists\n2. \u2705 **Verified Pieces OS permissions** - Has necessary macOS permissions\n3. \u2705 **Confirmed LTM data collection** - User sees active workstream data\n4. \u2705 **Tested different MCP clients** - Same error in Warp Agent Mode, Claude, and direct curl\n5. \u2705 **Used proper SSE endpoint** - `/sse` for responses, `/messages` for requests\n6. \u2705 **Verified JSON-RPC format** - Matches working `create_pieces_memory` calls\n\n## Expected Behavior\n\nThe `ask_pieces_ltm` tool should return contextual information from the user's LTM data, similar to how the main Pieces application shows workstream summaries and context.\n\n## Actual Behavior\n\nEvery call to `ask_pieces_ltm` returns:\n```json\n{\n  \"content\": [\n    {\n      \"type\": \"text\",\n      \"text\": \"Failed to extract context\"\n    }\n  ],\n  \"isError\": true\n}\n```\n\n## Analysis\n\nThis appears to be an **MCP server implementation issue** where:\n\n1. The `ask_pieces_ltm` tool is properly registered and callable\n2. The MCP communication protocol works correctly\n3. The underlying LTM system has data and functions properly\n4. There's a disconnect between the MCP tool implementation and the LTM data access layer\n\n## Potential Root Causes\n\n1. **Authentication/Session Issue**: MCP server process may lack proper authentication to access LTM data\n2. **Data Access Layer Bug**: `ask_pieces_ltm` implementation may be using incorrect API calls to access LTM\n3. **Permissions Issue**: MCP server may not have the same data access permissions as the main Pieces application\n4. **Initialization Problem**: LTM access for MCP tools may require additional setup or initialization\n\n## Request\n\nPlease investigate the `ask_pieces_ltm` tool implementation in the Pieces MCP server to identify why it cannot access the same LTM data that is clearly available to the main Pieces application.\n\n## Additional Context\n\n- Issue occurs consistently across different MCP clients (Warp, Claude)\n- `create_pieces_memory` works perfectly, confirming MCP communication\n- LTM is actively collecting and displaying data in the main Pieces app\n- No relevant error logs found in system logs or Pieces application logs\n- Multiple parameter variations attempted with identical results\n\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 4.26
-        },
-        {
-          "id": 713,
-          "title": "LTM not working in Pieces CLI",
-          "text": "LTM not working in Pieces CLI\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nPieces CLI, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n11.3.6\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nScreenshot from CLI:\n![Image](https://github.com/user-attachments/assets/949b363d-bbd3-4f3a-b128-5211ca2ef765)\n\nSame question from a chat in Pieces Desktop instead:\n![Image](https://github.com/user-attachments/assets/8d3e98a3-e311-46d3-acba-678e286a4bcd)\n\nPieces CLI doesn't seem to get the context from LTM.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 6.14
-        },
-        {
-          "id": 734,
-          "title": "bug: LTM continues to turn off, requiring me to turn LTM back on periodically",
-          "text": "bug: LTM continues to turn off, requiring me to turn LTM back on periodically\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n11.4.2\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI just updated Pieces to try out L.T.M 2.5, and I noticed that the software keeps stopping and restarting on its own. I checked for any updates I may have missed, and none. I restarted the software by forcing it to quit, but the issue persisted. \n\nThe issue only happens when I turn on L.T.M. \nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 4.08
-        }
-      ]
     }
   ],
   "recommendations": [
-    "Prioritize resolving PiecesOS and plugin connection issues as they are the most frequent and affect multiple platforms.",
-    "Investigate LTM access issues through MCP and within the Pieces CLI for consistent behavior.",
-    "Address the chat bubble deletion UI bug on macOS and Windows desktop applications.",
-    "Review and update documentation regarding PiecesOS and plugin compatibility and troubleshooting steps.",
-    "Monitor and proactively address issues related to LTM stability and data access layers.",
-    "Consider improving error messaging and logging for faster diagnosis of connection problems.",
-    "Implement automated testing for plugin functionality and PiecesOS integration across different operating systems and versions.",
-    "Gather user feedback on specific pain points related to plugin installation and usage.",
-    "Develop a communication plan to keep users informed about ongoing investigations and resolutions.",
-    "Prioritize tickets with high activity levels and focus on resolving common issues first.",
-    "Allocate resources to investigate and address the root cause of the \"No available configurations for RGBA pixel format\" error on Linux.",
-    "Ensure consistent hover menu functionality for all chat bubbles, regardless of grouping or deletion.",
-    "Investigate potential authentication or session issues affecting MCP server access to LTM data.",
-    "Verify that the MCP server has the necessary permissions to access LTM data, similar to the main Pieces application.",
-    "Explore potential initialization problems or additional setup requirements for LTM access within MCP tools.",
-    "Consider implementing a system for tracking and prioritizing bug fixes based on frequency and impact.",
-    "Analyze user-reported issues for patterns and trends to identify underlying problems.",
-    "Develop a process for escalating and resolving complex issues that require cross-team collaboration.",
-    "Provide support staff with the necessary tools and resources to effectively troubleshoot and resolve user issues.",
-    "Encourage users to provide detailed bug reports with steps to reproduce and relevant information.",
-    "Implement a system for collecting user feedback on support operations and identify areas for improvement.",
-    "Regularly review and update support documentation and FAQs to address common user questions and concerns.",
-    "Provide training to support staff on new features, bug fixes, and troubleshooting techniques.",
-    "Establish clear communication channels between support staff, development teams, and product management.",
-    "Monitor support metrics such as ticket resolution time, customer satisfaction, and common issue trends.",
-    "Use data-driven insights to identify areas for improvement in support operations and resource allocation.",
-    "Implement a system for proactively identifying and addressing potential issues before they impact users.",
-    "Foster a culture of continuous improvement within the support team and encourage feedback and innovation.",
-    "Consider implementing a knowledge base or community forum to empower users to self-serve and share solutions.",
-    "Explore automation opportunities to streamline support processes and improve efficiency.",
-    "Develop a system for tracking and managing feature requests and prioritize them based on user demand and impact.",
-    "Communicate regularly with users about upcoming features, bug fixes, and improvements to the support experience.",
-    "Invest in tools and technologies that can enhance support operations and improve the user experience.",
-    "Continuously evaluate and refine support processes to ensure they are meeting the needs of users and the business.",
-    "Prioritize accessibility and ensure that support resources are available to users with disabilities.",
-    "Promote a customer-centric approach to support and strive to exceed user expectations.",
-    "Build strong relationships with users and foster a sense of community and trust.",
-    "Recognize and reward outstanding performance within the support team and celebrate successes.",
-    "Encourage collaboration and knowledge sharing within the support team to improve overall effectiveness.",
-    "Stay up-to-date on industry best practices and trends in customer support and incorporate them into operations.",
-    "Continuously seek feedback from users and use it to improve the support experience and the product itself.",
-    "Empower support staff to take ownership of issues and provide timely and effective solutions.",
-    "Foster a positive and supportive work environment for the support team to maximize their potential.",
-    "Invest in the professional development of support staff to enhance their skills and knowledge.",
-    "Communicate the value and importance of customer support to the wider organization and secure necessary resources.",
-    "Align support operations with the overall business goals and objectives to ensure they are contributing to success.",
-    "Regularly review and update support policies and procedures to ensure they are effective and efficient.",
-    "Develop a system for measuring the impact of support operations on customer satisfaction and business outcomes.",
-    "Use data and analytics to track key performance indicators and identify areas for improvement.",
-    "Continuously adapt and evolve support operations to meet the changing needs of users and the business."
+    "Prioritize resolving connection issues between Pieces OS and its components (CLI, plugins, desktop app). This is the most frequent problem across different operating systems.",
+    "Investigate the root cause of LTM malfunctions, including frequent shutdowns and failure to provide context.  Focus on potential Gemini-Pro model access issues.",
+    "Address the UI regression related to chat bubble deletion and hover menu behavior on macOS and Windows.",
+    "Improve Chromebook installation experience and address the reported unresponsiveness.",
+    "Review and update support documentation and troubleshooting guides for connection issues and LTM problems, including clear steps for checking plugin versions, Pieces OS updates, and graphics drivers (for Linux users).",
+    "Consider implementing error logging and reporting mechanisms to gather more detailed information about connection failures and LTM issues for faster diagnosis.",
+    "Monitor plugin version compatibility with Pieces OS and ensure prompt updates are available to users through the respective app stores.",
+    "Proactively communicate known issues and workarounds to users through a dedicated status page or community forum to reduce support ticket volume. "
   ],
   "message": "Daily support report generated successfully."
 }
