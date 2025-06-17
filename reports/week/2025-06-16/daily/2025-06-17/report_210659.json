@@ -1,0 +1,85 @@
+{
+  "success": true,
+  "date_range": {
+    "start": "2025-06-17T00:00:00+00:00",
+    "end": "2025-06-17T21:06:59.149412+00:00"
+  },
+  "summary": {
+    "total_tickets": 2,
+    "resolved_tickets": 0,
+    "open_tickets": 2
+  },
+  "ticket_breakdown": [
+    {
+      "category": "bug",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "app:desktop application",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "status:triaged",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "os:windows",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:pieces os",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    }
+  ],
+  "most_active_tickets": [
+    {
+      "number": 754,
+      "title": "LTM-2.5 causes Chrome to freeze on large dynamic pages",
+      "activity_level": 10.25
+    },
+    {
+      "number": 459,
+      "title": "Bug: unable to cancel the download of an LLLM",
+      "activity_level": 2.65
+    }
+  ],
+  "common_issues": [
+    {
+      "title": "Application Freezes During Specific Actions",
+      "description": "Users report application freezes on Windows during LLLM download cancellation and when browsing large dynamic web pages with Pieces OS and LTM 2.5 enabled.  The first issue lacks detailed reproduction steps. The second issue points to high CPU usage in Chrome during scrolling and frequent DOM mutations as potential causes. Disabling LTM 2.5 resolves the browsing freeze.  Further investigation is needed for both issues to identify the root cause and implement solutions.",
+      "frequency": 2,
+      "related_issues": [
+        {
+          "id": 459,
+          "title": "Bug: unable to cancel the download of an LLLM",
+          "text": "Bug: unable to cancel the download of an LLLM\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nlatest\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n![image](https://github.com/user-attachments/assets/6e730898-a168-4571-ab0d-6331c4d389a4)\r\n\r\ni want stop but its not working \r\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 2.65
+        },
+        {
+          "id": 754,
+          "title": "LTM-2.5 causes Chrome to freeze on large dynamic pages",
+          "text": "LTM-2.5 causes Chrome to freeze on large dynamic pages\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n12.0.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWhen browsing webpages with large amounts of content and dynamic elements, Chrome freezes when Pieces OS with LTM 2.5 is active. \n\n[Culprit webpage (Clarity CRM API Docs)](https://claritymobileapi.claritycrm.com/Help/Document) is ~500 KB raw HTML, ~700 KB total page size. Dynamic element(s) are a scroll linked table of contents.\n\n**What happens:**\n\n* Chrome CPU usage spikes (~50% CPU) during scrolling.\n* Memory usage stays stable.\n* Chrome freezes for 10-15 seconds, unfreezes, and freezes again when scrolling resumes.\n* Disabling LTM 2.5 resolves the freeze (Pieces OS still running).\n\n**Expected:**\nPieces should handle large pages without freezing or jumping while scrolling.\n\n---\n\n### **Steps to Reproduce**\n\n1. Enable LTM 2.5 in Pieces OS \n2. Load a large page (https://claritymobileapi.claritycrm.com/Help/Document).\n3. Scroll through the page.\n4. Observe Chrome freeze / become unresponsive as Pieces tries to capture context.\n---\n\n### **Environment**\n\n* OS: Windows 11 Pro\n* Chrome: 137.0.7151.104\n* Pieces OS: 12.0.0\n* LTM Version: 2.5\n* Pieces Chrome Extension: Tested with and without--same result. \n\n---\n\n### **Additional Notes**\n\nI observed high-frequency DOM mutations via MutationObserver, but unsure if root cause (found 80-150 DOM mutations per scroll event)\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 10.25
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    "Investigate and address the application freezing issue during LLLM download cancellation and large dynamic webpage browsing. Prioritize the webpage issue due to higher activity and potential impact on user experience.",
+    "Gather more detailed reproduction steps for the LLLM download cancellation issue to facilitate debugging.",
+    "Optimize LTM 2.5 performance, particularly its interaction with dynamic web pages and DOM mutations, to prevent browser freezes.",
+    "Consider providing users with temporary workarounds or guidance on mitigating the freezing issues while a permanent fix is being developed.",
+    "Monitor incoming support tickets for similar reports and track the effectiveness of implemented solutions. "
+  ],
+  "message": "Daily support report generated successfully."
+}
