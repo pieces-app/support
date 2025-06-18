@@ -1,11 +1,11 @@
 # Support Ticket Report
-- Generated: 2025-06-18 13:18:29
+- Generated: 2025-06-18 21:09:54
 - Period: 2025-06-16 to 2025-06-18
 
 ## Summary
-- **Total Tickets:** 7
+- **Total Tickets:** 9
 - **Resolved:** 0
-- **Open:** 7
+- **Open:** 9
 
 ## 5 Most Active Tickets
 | Issue # | Title | Activity Level |
@@ -13,28 +13,28 @@
 | [#754](https://github.com/pieces-app/support/issues/754) | LTM-2.5 causes Chrome to freeze on large dynamic pages | 8.83 |
 | [#751](https://github.com/pieces-app/support/issues/751) | Unable to generate Workstream Summary | 6.24 |
 | [#755](https://github.com/pieces-app/support/issues/755) | Pieces has become increasingly slow and is now unresponsive | 5.60 |
-| [#753](https://github.com/pieces-app/support/issues/753) | Workstream activities tab is not working | 3.01 |
-| [#752](https://github.com/pieces-app/support/issues/752) | Doesn't move past Initialising Desktop screen | 3.01 |
+| [#747](https://github.com/pieces-app/support/issues/747) | MCP `ask_pieces_ltm` tool consistently returns "Failed to extract context" despite functional LTM | 4.57 |
+| [#758](https://github.com/pieces-app/support/issues/758) | Error Activating LTM-2.5 During Onboarding | 4.42 |
 
 ## Common Issues
-### 1. Pieces OS 12.0.0 Performance and Stability Issues
-Users report performance degradation and instability with Pieces OS 12.0.0 across different operating systems (Windows, macOS, Linux).  Symptoms include Chrome freezing on large webpages with LTM 2.5 enabled, slow or unresponsive 'New chats', and application freezing during initialization.  Potential solutions include disabling LTM 2.5, checking LLM model compatibility, and reverting to a previous Pieces OS version.
+### 1. Pieces Fails to Access LTM Data via MCP
+Users report the `ask_pieces_ltm` MCP tool consistently returns "Failed to extract context" despite functional LTM and successful communication with the MCP server.  Other MCP tools like `create_pieces_memory` work correctly.  The issue occurs across different clients and operating systems. Potential root causes include authentication issues, data access layer bugs, permissions problems, or initialization errors within the MCP server's interaction with the LTM data.
 
 **Related Issues:**
-- [#754](https://github.com/pieces-app/support/issues/754): LTM-2.5 causes Chrome to freeze on large dynamic pages
+- [#747](https://github.com/pieces-app/support/issues/747): MCP `ask_pieces_ltm` tool consistently returns "Failed to extract context" despite functional LTM
 - [#755](https://github.com/pieces-app/support/issues/755): Pieces has become increasingly slow and is now unresponsive
-- [#752](https://github.com/pieces-app/support/issues/752): Doesn't move past Initialising Desktop screen
+- [#754](https://github.com/pieces-app/support/issues/754): LTM-2.5 causes Chrome to freeze on large dynamic pages
 
-### 2. LLM download cancellation failure across platforms
-Users are unable to cancel LLM downloads on Windows, macOS, and Linux. Issues include unresponsive cancel buttons, application crashes, and infinite initialization loops.  Further investigation is needed to identify the root cause and potential solutions. Check logs for error messages related to download cancellation processes and dependencies.
+### 2. LTM Activation and Workstream Summary Generation Failures
+Users are experiencing issues with LTM-2.5 activation during onboarding, encountering TimeoutExceptions. Additionally, generating workstream summaries is failing with API errors (400, 404). Issues appear across Windows and macOS platforms.  Further investigation into PiecesOS version 12.0.0 and its interaction with LTM and summary generation services is required. Check server logs and connectivity.
 
 **Related Issues:**
-- [#459](https://github.com/pieces-app/support/issues/459): Bug: unable to cancel the download of an LLLM
+- [#758](https://github.com/pieces-app/support/issues/758): Error Activating LTM-2.5 During Onboarding
 - [#751](https://github.com/pieces-app/support/issues/751): Unable to generate Workstream Summary
-- [#752](https://github.com/pieces-app/support/issues/752): Doesn't move past Initialising Desktop screen
+- [#459](https://github.com/pieces-app/support/issues/459): Bug: unable to cancel the download of an LLLM
 
-### 3. Workstream Activities and LLM Download Issues
-Users report Workstream activities not syncing correctly after updates, showing outdated information.  Additionally, users are unable to cancel LLM downloads.  Suggested solutions include checking network connectivity, restarting the application, and verifying software versions.
+### 3. Workstream activities tab sync issues and download cancellation problems
+Users are experiencing problems with the Workstream activities tab not syncing correctly after updates, showing outdated information. Additionally, there are reports of being unable to cancel LLLM downloads, with the cancel button not functioning as expected.  Further investigation is needed to determine the root cause and potential solutions for both issues.
 
 **Related Issues:**
 - [#753](https://github.com/pieces-app/support/issues/753): Workstream activities tab is not working
@@ -42,7 +42,7 @@ Users report Workstream activities not syncing correctly after updates, showing 
 - [#459](https://github.com/pieces-app/support/issues/459): Bug: unable to cancel the download of an LLLM
 
 ### 4. PiecesOS Cloud Service Interruption and Performance Degradation
-Users are experiencing slow performance and unresponsiveness in PiecesOS, Desktop App, and plugins, especially with cloud-connected features like Copilot, Workstream summaries, and snippet functionalities.  A service interruption is being investigated, potentially related to cloud services or a cyber incident. Data security is not believed to be impacted.  The Pieces team is working on restoring full functionality.
+Users are experiencing slow performance and unresponsiveness in PiecesOS, Desktop App, and plugins, especially with cloud-connected features like Copilot, Workstream summaries, snippet transforms, and snippet discovery.  A service interruption is being investigated, including the possibility of a cyber-related incident.  Data security is not believed to be impacted.  The Pieces team is working to restore full functionality.
 
 **Related Issues:**
 - [#756](https://github.com/pieces-app/support/issues/756): 🚨 Ongoing Service Interruption Impacting Pieces Products and Cloud-Connected Features
@@ -51,79 +51,93 @@ Users are experiencing slow performance and unresponsiveness in PiecesOS, Deskto
 
 
 ## Recommendations
-- Prioritize resolving the 'Pieces OS 12.0.0 Performance and Stability Issues' as it has the highest frequency and a high activity level on related tickets.
-- Investigate and address the LLM download cancellation failure across platforms, focusing on improving the cancellation process and preventing application crashes.
-- Address the Workstream Activities syncing issues and ensure data consistency after updates.
-- Monitor and provide updates on the ongoing service interruption impacting cloud-connected features, focusing on restoring full functionality and addressing any potential cyber-related incidents.
-- Allocate resources to promptly address the most active tickets, particularly #754, #751, and #755, due to their high activity levels.
-- Review logs and error messages for all reported issues to identify root causes and implement effective solutions.
-- Improve communication with users by providing regular updates on the progress of issue resolution and maintenance activities.
-- Consider implementing automated tests to identify and prevent performance and stability issues in future releases.
-- Gather more data on user experiences to identify areas for improvement and prioritize feature development accordingly.
-- Create a dedicated support channel for reporting and tracking cloud-related issues to streamline the support process.
-- Develop a rollback plan for future updates to minimize disruption in case of critical issues.
-- Investigate the compatibility of LTM 2.5 with Chrome and other browsers to prevent freezing issues on large webpages.
-- Optimize the 'New chats' feature to improve responsiveness and reduce waiting times.
-- Provide clear instructions to users on how to troubleshoot common issues, such as disabling LTM 2.5 or reverting to previous versions.
-- Enhance error handling and reporting mechanisms to capture more detailed information about application crashes and errors.
-- Consider implementing a user feedback system to gather insights on user experience and identify areas for improvement in the support process.
-- Proactively monitor system performance and identify potential issues before they impact users.
-- Develop a comprehensive knowledge base with articles and tutorials addressing common issues and troubleshooting steps.
-- Train support staff on the latest product updates and troubleshooting techniques to improve their efficiency and effectiveness.
-- Regularly review and update support documentation to ensure accuracy and relevance.
-- Implement a system for prioritizing and categorizing support tickets to ensure timely resolution of critical issues.
-- Analyze support data to identify trends and patterns in user issues, which can inform product development and improvement efforts.
-- Establish service level agreements (SLAs) for support response times to manage user expectations and ensure timely resolution.
-- Automate routine support tasks, such as ticket routing and status updates, to free up support staff to focus on more complex issues.
-- Conduct regular user surveys to gather feedback on support quality and identify areas for improvement.
-- Foster a culture of continuous improvement in the support team by encouraging feedback, knowledge sharing, and professional development.
-- Implement a system for tracking and measuring key support metrics, such as resolution time, customer satisfaction, and ticket volume.
-- Use data analytics to identify areas where support processes can be optimized and automated.
-- Collaborate with the development team to address underlying product issues and improve overall product quality.
-- Establish a clear escalation path for critical issues to ensure timely resolution by senior support staff or engineers.
-- Provide regular training to support staff on new features, product updates, and troubleshooting techniques.
-- Encourage users to submit detailed bug reports with steps to reproduce the issue to facilitate faster resolution.
-- Implement a system for tracking and managing known issues to avoid duplicate reports and streamline the support process.
-- Communicate known issues and their status to users through a public forum or knowledge base.
-- Provide users with self-service resources, such as FAQs and tutorials, to empower them to resolve common issues independently.
-- Offer multiple support channels, such as email, chat, and phone, to cater to different user preferences.
-- Personalize support interactions to enhance user experience and build stronger customer relationships.
-- Proactively reach out to users experiencing issues to offer assistance and gather feedback.
-- Continuously monitor and analyze support data to identify areas for improvement and optimize support processes.
-- Use customer feedback to drive improvements in the support process and enhance overall user satisfaction.
-- Invest in support tools and technologies to improve efficiency and effectiveness of the support team.
-- Encourage collaboration and knowledge sharing within the support team to improve overall team performance.
-- Recognize and reward outstanding support performance to motivate and retain high-performing support staff.
-- Regularly review and update support policies and procedures to ensure they align with best practices and evolving user needs.
-- Develop a comprehensive disaster recovery plan for support operations to ensure business continuity in case of unforeseen events.
-- Establish clear communication channels between the support team and other departments, such as development and product management.
-- Foster a strong customer-centric culture within the support team to prioritize user needs and satisfaction.
-- Use data-driven insights to make informed decisions about support staffing, resource allocation, and process improvements.
-- Continuously evaluate and refine support processes to ensure they remain efficient, effective, and user-friendly.
-- Embrace automation and AI-powered tools to streamline support operations and enhance user experience.
-- Stay up-to-date with industry best practices and emerging trends in customer support to maintain a competitive edge.
-- Build a strong community of users to facilitate peer-to-peer support and knowledge sharing.
-- Encourage users to provide feedback on the support experience through surveys, feedback forms, and social media channels.
-- Use feedback to identify areas for improvement and personalize the support experience for individual users.
-- Empower support staff to make decisions and resolve issues independently to improve response times and user satisfaction.
-- Provide support staff with opportunities for professional development and growth to enhance their skills and knowledge.
-- Create a positive and supportive work environment for the support team to foster high morale and job satisfaction.
-- Celebrate successes and recognize achievements within the support team to build a strong team spirit and sense of accomplishment.
-- Continuously strive to exceed user expectations and deliver exceptional customer support experiences.
-- View customer support as a strategic investment in customer loyalty and business growth.
-- Use customer support interactions as an opportunity to gather valuable insights about user needs and preferences.
-- Leverage customer feedback to improve product development and enhance overall user experience.
-- Integrate customer support data with other business systems, such as CRM and marketing automation, to gain a holistic view of the customer journey.
-- Use data analytics to identify and target users who may be at risk of churn or require additional support.
-- Proactively offer support and resources to users who may be struggling with the product or experiencing technical difficulties.
-- Develop a comprehensive onboarding program for new users to ensure they have a positive initial experience with the product.
-- Provide ongoing training and support to users to help them maximize the value of the product and achieve their goals.
-- Build a strong relationship with users based on trust, transparency, and mutual respect.
-- View customer support as an integral part of the overall customer experience and a key driver of customer loyalty and business success.
+- Prioritize resolving the MCP `ask_pieces_ltm` tool issue, as it impacts core functionality and has a high frequency.
+- Investigate and address the LTM-2.5 activation and workstream summary generation failures, especially focusing on PiecesOS 12.0.0 compatibility.
+- Address the performance issues and unresponsiveness related to the ongoing service interruption, prioritizing cloud-connected features.
+- Improve communication with users regarding the service interruption and provide regular updates on the resolution progress.
+- Investigate the reports of Chrome freezing on large dynamic pages when LTM-2.5 is active, optimizing LTM resource usage.
+- Ensure the LLLM download cancellation functionality is working as expected across all platforms.
+- Investigate and fix the Workstream activities tab sync issues to ensure users have accurate information.
+- Review and update onboarding documentation and processes related to LTM-2.5 activation to minimize user errors.
+- Monitor server logs and performance metrics to proactively identify and address potential issues.
+- Gather more user feedback on specific issues to better understand the impact and prioritize fixes accordingly.
+- Consider implementing automated tests for critical features like LTM activation, workstream summary generation, and LLLM download cancellation to prevent regressions.
+- Allocate resources to address the most active tickets based on activity level and user impact.
+- Improve error handling and messaging within the Pieces app to provide more informative and actionable error messages to users.
+- Develop a more robust incident management process to handle service interruptions and other critical issues more effectively.
+- Proactively monitor system performance and stability to identify and address potential issues before they impact users.
+- Enhance internal communication and collaboration between support, engineering, and product teams to facilitate faster issue resolution.
+- Invest in tools and resources to improve support efficiency and response times.
+- Develop a knowledge base or FAQ section to address common user questions and issues.
+- Provide training to support staff on new features and troubleshooting techniques.
+- Regularly analyze support data to identify trends, common issues, and areas for improvement in the product and support processes.
+- Implement a system for tracking and prioritizing bug fixes and feature requests based on user feedback and support data.
+- Encourage users to report issues through the appropriate channels and provide clear instructions on how to do so.
+- Consider implementing a user forum or community platform to facilitate peer-to-peer support and knowledge sharing.
+- Regularly review and update support documentation and resources to ensure they are accurate and up-to-date.
+- Conduct user surveys and feedback sessions to gather insights on user satisfaction with the product and support services.
+- Analyze user behavior and usage patterns to identify potential areas for improvement in the product and support processes.
+- Implement a system for measuring and tracking key support metrics such as resolution time, customer satisfaction, and ticket volume.
+- Use data-driven insights to continuously improve support operations and enhance the user experience.
+- Establish clear service level agreements (SLAs) for support response times and resolution times.
+- Communicate SLAs to users so they have clear expectations for support service delivery.
+- Regularly review and update SLAs based on performance data and user feedback.
+- Provide support staff with the necessary tools and resources to meet SLAs and deliver high-quality support.
+- Empower support staff to resolve issues efficiently and effectively by providing them with the necessary authority and autonomy.
+- Foster a positive and supportive work environment for support staff to promote job satisfaction and reduce turnover.
+- Recognize and reward support staff for their contributions to improving the user experience.
+- Invest in ongoing training and development for support staff to enhance their skills and knowledge.
+- Promote a culture of continuous improvement within the support team by encouraging feedback and innovation.
+- Regularly review and update support processes and procedures to optimize efficiency and effectiveness.
+- Implement a system for tracking and managing support requests across multiple channels such as email, chat, and phone.
+- Integrate support tools with other systems such as CRM and ticketing systems to streamline workflows and improve data management.
+- Automate routine support tasks such as ticket routing and notification to free up support staff to focus on more complex issues.
+- Use artificial intelligence and machine learning to automate support tasks such as answering common questions and triaging tickets.
+- Personalize support interactions by using user data and context to provide tailored solutions and recommendations.
+- Proactively reach out to users who are experiencing issues or who may benefit from additional support.
+- Provide self-service support options such as knowledge bases, FAQs, and tutorials to empower users to resolve issues on their own.
+- Offer multilingual support to cater to a diverse user base.
+- Provide support across multiple time zones to ensure users can access support when they need it.
+- Monitor social media and online forums for user feedback and issues.
+- Respond to user feedback and issues in a timely and professional manner.
+- Use social media and online forums to engage with users and build community.
+- Proactively share helpful tips and resources with users through social media and online forums.
+- Use social media and online forums to gather user feedback and insights on product development and support services.
+- Analyze social media and online forum data to identify trends and emerging issues.
+- Use social media and online forum data to inform product development and support strategies.
+- Collaborate with other teams such as marketing and product management to align support efforts with overall business goals.
+- Communicate regularly with other teams to share insights and best practices.
+- Participate in cross-functional initiatives to improve the user experience across all touchpoints.
+- Continuously evaluate and improve support operations to ensure they are meeting the needs of users and the business.
+- Stay up-to-date on industry best practices and emerging trends in customer support.
+- Adapt support strategies and processes to meet the evolving needs of users and the business.
+- Be proactive in identifying and addressing potential challenges and opportunities in the support landscape.
+- Strive to deliver exceptional customer support that exceeds user expectations and builds loyalty.
+- View customer support as a strategic investment that contributes to the overall success of the business.
+- Empower support staff to act as brand ambassadors and advocates for users.
+- Build a strong relationship between the support team and the user community.
+- Foster a culture of customer-centricity within the support team and across the organization.
+- Measure and track the impact of support operations on key business metrics such as customer retention and lifetime value.
+- Use data to demonstrate the value of customer support to the business.
+- Advocate for resources and investment in customer support to ensure its continued success.
+- Continuously innovate and experiment with new approaches to customer support to improve efficiency and effectiveness.
+- Embrace new technologies and tools to enhance support operations and deliver a better user experience.
+- Share best practices and lessons learned with other teams and organizations to contribute to the advancement of the customer support field.
+- Be a leader in customer support by setting high standards and driving innovation.
+- Inspire and motivate support staff to deliver exceptional service and make a positive impact on users' lives.
+- Create a support organization that is recognized for its excellence and its contribution to the success of the business.
+- Build a world-class customer support operation that sets the standard for others to follow.
+- Transform customer support from a cost center to a value driver for the business.
+- Make customer support a key differentiator for the business and a source of competitive advantage.
+- Create a customer-centric culture that permeates the entire organization and drives sustainable growth.
+- Empower users to achieve their goals and succeed by providing them with exceptional support and resources.
+- Build a loyal user base that advocates for the business and contributes to its long-term success.
+- Make a positive impact on the world by providing outstanding customer support and empowering users to thrive.
 
 ## Daily Reports
 Here are the daily reports for this week:
 
 - [report_131646](daily/2025-06-17/report_131646.md)
 - [report_210659](daily/2025-06-17/report_210659.md)
+- [report_210648](daily/2025-06-18/report_210648.md)
 - [report_131708](daily/2025-06-18/report_131708.md)
