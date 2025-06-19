@@ -2,7 +2,7 @@
   "success": true,
   "date_range": {
     "start": "2025-06-16T00:00:00+00:00",
-    "end": "2025-06-18T21:08:43.629074+00:00"
+    "end": "2025-06-19T05:08:34.171600+00:00"
   },
   "summary": {
     "total_tickets": 9,
@@ -23,6 +23,18 @@
       "pending": 7
     },
     {
+      "category": "os:linux",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "status:triaged",
+      "received": 8,
+      "resolved": 0,
+      "pending": 8
+    },
+    {
       "category": "os:macos",
       "received": 4,
       "resolved": 0,
@@ -33,12 +45,6 @@
       "received": 1,
       "resolved": 0,
       "pending": 1
-    },
-    {
-      "category": "status:triaged",
-      "received": 8,
-      "resolved": 0,
-      "pending": 8
     },
     {
       "category": "os:windows",
@@ -63,12 +69,6 @@
       "received": 1,
       "resolved": 0,
       "pending": 1
-    },
-    {
-      "category": "os:linux",
-      "received": 2,
-      "resolved": 0,
-      "pending": 2
     },
     {
       "category": "app:vs code",
@@ -141,12 +141,12 @@
     {
       "number": 754,
       "title": "LTM-2.5 causes Chrome to freeze on large dynamic pages",
-      "activity_level": 8.83
+      "activity_level": 7.93
     },
     {
       "number": 751,
       "title": "Unable to generate Workstream Summary",
-      "activity_level": 6.24
+      "activity_level": 5.61
     },
     {
       "number": 755,
@@ -154,24 +154,24 @@
       "activity_level": 5.6
     },
     {
-      "number": 747,
-      "title": "MCP `ask_pieces_ltm` tool consistently returns \"Failed to extract context\" despite functional LTM",
-      "activity_level": 4.57
-    },
-    {
       "number": 758,
       "title": "Error Activating LTM-2.5 During Onboarding",
       "activity_level": 4.42
     },
     {
-      "number": 753,
-      "title": "Workstream activities tab is not working",
-      "activity_level": 3.01
+      "number": 747,
+      "title": "MCP `ask_pieces_ltm` tool consistently returns \"Failed to extract context\" despite functional LTM",
+      "activity_level": 4.36
     },
     {
       "number": 752,
       "title": "Doesn't move past Initialising Desktop screen",
-      "activity_level": 3.01
+      "activity_level": 4.26
+    },
+    {
+      "number": 753,
+      "title": "Workstream activities tab is not working",
+      "activity_level": 2.71
     },
     {
       "number": 459,
@@ -186,15 +186,15 @@
   ],
   "common_issues": [
     {
-      "title": "Pieces Fails to Access LTM Data via MCP",
-      "description": "Users report the `ask_pieces_ltm` MCP tool consistently returns \"Failed to extract context\" despite functional LTM and successful communication with the MCP server.  Other MCP tools like `create_pieces_memory` work correctly.  The issue occurs across different clients and operating systems. Potential root causes include authentication issues, data access layer bugs, permissions problems, or initialization errors within the MCP server's interaction with the LTM data.",
+      "title": "Pieces Functionality Issues and Performance Degradation",
+      "description": "Users report various issues with Pieces, including MCP `ask_pieces_ltm` tool consistently returning \"Failed to extract context\", application slowness and unresponsiveness, and Chrome freezes with LTM 2.5 enabled on large webpages.  Troubleshooting steps include verifying MCP server communication, Pieces OS permissions, LTM data collection, and different MCP clients. Potential solutions involve investigating MCP server implementation, data access layer, permissions, and initialization processes. Additional issues involve slow response times for new chats and application freezes.",
       "frequency": 3,
       "related_issues": [
         {
           "id": 747,
           "title": "MCP `ask_pieces_ltm` tool consistently returns \"Failed to extract context\" despite functional LTM",
           "text": "MCP `ask_pieces_ltm` tool consistently returns \"Failed to extract context\" despite functional LTM\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS Sequoia 15.5\n\n### Your Pieces OS Version\n\n11.4.4\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n## Bug Report\n\n**Environment:**\n- OS: macOS Sequoia 15.5\n- Pieces OS: 11.4.4 - Running (PID 699, actively collecting data)\n- Pieces App: 4.1.4 - Active with functional LTM workstream\n- MCP Server: Pieces MCP server on localhost:39300\n- Test Client: Warp Terminal Agent Mode, Claude, direct curl testing\n\n## Problem Description\n\nThe `ask_pieces_ltm` MCP tool consistently returns `\"Failed to extract context\"` with `\"isError\": true`, despite:\n\n1. \u2705 **LTM is working correctly** - User confirmed LTM is collecting data and showing results/summaries in the Pieces workstream\n2. \u2705 **MCP server communication works** - Can successfully call `create_pieces_memory` and list tools\n3. \u2705 **Pieces OS is running and active** - Process running with multiple active connections\n4. \u274c **Only `ask_pieces_ltm` fails** - Every call to this specific tool fails\n\n## Steps to Reproduce\n\n### 1. Verify MCP Server is Running\n```bash\nlsof -i :39300\n# Shows Pieces OS listening on port 39300 with multiple established connections\n```\n\n### 2. Confirm Tools are Available\n```bash\ncurl -N http://localhost:39300/model_context_protocol/2024-11-05/sse \\\n  -H 'Accept: text/event-stream' &\ncurl -X POST http://localhost:39300/model_context_protocol/2024-11-05/messages \\\n  -H 'Content-Type: application/json' \\\n  -d '{\"jsonrpc\":\"2.0\",\"id\":1,\"method\":\"tools/list\"}'\n```\n\n**Result:** \u2705 Successfully returns tools list with `ask_pieces_ltm` tool schema\n\n### 3. Test create_pieces_memory (Working)\n```bash\ncurl -X POST http://localhost:39300/model_context_protocol/2024-11-05/messages \\\n  -H 'Content-Type: application/json' \\\n  -d '{\n    \"jsonrpc\":\"2.0\",\"id\":2,\"method\":\"tools/call\",\n    \"params\":{\n      \"name\":\"create_pieces_memory\",\n      \"arguments\":{\n        \"summary\":\"Test memory\",\n        \"summary_description\":\"Testing connection\"\n      }\n    }\n  }'\n```\n\n**Result:** \u2705 `\"Long term memory successfully created\"`\n\n### 4. Test ask_pieces_ltm (Failing)\n```bash\ncurl -X POST http://localhost:39300/model_context_protocol/2024-11-05/messages \\\n  -H 'Content-Type: application/json' \\\n  -d '{\n    \"jsonrpc\":\"2.0\",\"id\":3,\"method\":\"tools/call\",\n    \"params\":{\n      \"name\":\"ask_pieces_ltm\",\n      \"arguments\":{\n        \"question\":\"What did I work on today?\",\n        \"chat_llm\":\"claude-3-5-sonnet-20241022\"\n      }\n    }\n  }'\n```\n\n**Result:** \u274c `{\"content\":[{\"type\":\"text\",\"text\":\"Failed to extract context\"}],\"isError\":true}`\n\n## Attempted Variations (All Failed)\n\n### Minimal Parameters\n```json\n{\n  \"question\": \"hello\",\n  \"chat_llm\": \"claude-3-5-sonnet-20241022\"\n}\n```\n\n### With Application Sources\n```json\n{\n  \"question\": \"What terminal commands have I run recently?\",\n  \"chat_llm\": \"claude-3-5-sonnet-20241022\",\n  \"application_sources\": [\"Warp\"],\n  \"connected_client\": \"Warp\"\n}\n```\n\n### Comprehensive Parameters\n```json\n{\n  \"question\": \"What did I work on today?\",\n  \"chat_llm\": \"claude-3-5-sonnet-20241022\",\n  \"connected_client\": \"Warp\",\n  \"application_sources\": [\"Warp\", \"Google Chrome\"],\n  \"topics\": [\"terminal\", \"commands\", \"recent\"],\n  \"related_questions\": [\"What was I working on?\", \"What debugging was I doing?\"]\n}\n```\n\n### Different Application Sources Tested\n- `[\"Warp\"]`\n- `[\"Google Chrome\", \"Safari\", \"Obsidian\"]`\n- `[\"Claude\"]`\n- Multiple combinations from the schema list\n\n**All variations return the same error.**\n\n## Troubleshooting Attempted\n\n1. \u2705 **Restarted Pieces MCP server** - Issue persists\n2. \u2705 **Verified Pieces OS permissions** - Has necessary macOS permissions\n3. \u2705 **Confirmed LTM data collection** - User sees active workstream data\n4. \u2705 **Tested different MCP clients** - Same error in Warp Agent Mode, Claude, and direct curl\n5. \u2705 **Used proper SSE endpoint** - `/sse` for responses, `/messages` for requests\n6. \u2705 **Verified JSON-RPC format** - Matches working `create_pieces_memory` calls\n\n## Expected Behavior\n\nThe `ask_pieces_ltm` tool should return contextual information from the user's LTM data, similar to how the main Pieces application shows workstream summaries and context.\n\n## Actual Behavior\n\nEvery call to `ask_pieces_ltm` returns:\n```json\n{\n  \"content\": [\n    {\n      \"type\": \"text\",\n      \"text\": \"Failed to extract context\"\n    }\n  ],\n  \"isError\": true\n}\n```\n\n## Analysis\n\nThis appears to be an **MCP server implementation issue** where:\n\n1. The `ask_pieces_ltm` tool is properly registered and callable\n2. The MCP communication protocol works correctly\n3. The underlying LTM system has data and functions properly\n4. There's a disconnect between the MCP tool implementation and the LTM data access layer\n\n## Potential Root Causes\n\n1. **Authentication/Session Issue**: MCP server process may lack proper authentication to access LTM data\n2. **Data Access Layer Bug**: `ask_pieces_ltm` implementation may be using incorrect API calls to access LTM\n3. **Permissions Issue**: MCP server may not have the same data access permissions as the main Pieces application\n4. **Initialization Problem**: LTM access for MCP tools may require additional setup or initialization\n\n## Request\n\nPlease investigate the `ask_pieces_ltm` tool implementation in the Pieces MCP server to identify why it cannot access the same LTM data that is clearly available to the main Pieces application.\n\n## Additional Context\n\n- Issue occurs consistently across different MCP clients (Warp, Claude)\n- `create_pieces_memory` works perfectly, confirming MCP communication\n- LTM is actively collecting and displaying data in the main Pieces app\n- No relevant error logs found in system logs or Pieces application logs\n- Multiple parameter variations attempted with identical results\n\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 4.57
+          "activity_level": 4.36
         },
         {
           "id": 755,
@@ -206,13 +206,13 @@
           "id": 754,
           "title": "LTM-2.5 causes Chrome to freeze on large dynamic pages",
           "text": "LTM-2.5 causes Chrome to freeze on large dynamic pages\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n12.0.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWhen browsing webpages with large amounts of content and dynamic elements, Chrome freezes when Pieces OS with LTM 2.5 is active. \n\n[Culprit webpage (Clarity CRM API Docs)](https://claritymobileapi.claritycrm.com/Help/Document) is ~500 KB raw HTML, ~700 KB total page size. Dynamic element(s) are a scroll linked table of contents.\n\n**What happens:**\n\n* Chrome CPU usage spikes (~50% CPU) during scrolling.\n* Memory usage stays stable.\n* Chrome freezes for 10-15 seconds, unfreezes, and freezes again when scrolling resumes.\n* Disabling LTM 2.5 resolves the freeze (Pieces OS still running).\n\n**Expected:**\nPieces should handle large pages without freezing or jumping while scrolling.\n\n---\n\n### **Steps to Reproduce**\n\n1. Enable LTM 2.5 in Pieces OS \n2. Load a large page (https://claritymobileapi.claritycrm.com/Help/Document).\n3. Scroll through the page.\n4. Observe Chrome freeze / become unresponsive as Pieces tries to capture context.\n---\n\n### **Environment**\n\n* OS: Windows 11 Pro\n* Chrome: 137.0.7151.104\n* Pieces OS: 12.0.0\n* LTM Version: 2.5\n* Pieces Chrome Extension: Tested with and without--same result. \n\n---\n\n### **Additional Notes**\n\nI observed high-frequency DOM mutations via MutationObserver, but unsure if root cause (found 80-150 DOM mutations per scroll event)\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 8.83
+          "activity_level": 7.93
         }
       ]
     },
     {
-      "title": "LTM Activation and Workstream Summary Generation Failures",
-      "description": "Users are experiencing issues with LTM-2.5 activation during onboarding, encountering TimeoutExceptions. Additionally, generating workstream summaries is failing with API errors (400, 404). Issues appear across Windows and macOS platforms.  Further investigation into PiecesOS version 12.0.0 and its interaction with LTM and summary generation services is required. Check server logs and connectivity.",
+      "title": "Errors activating or using LTMs and generating summaries",
+      "description": "Users are experiencing issues activating LTM-2.5 during onboarding, generating workstream summaries, and canceling LLM downloads.  Error messages include timeouts, HTTP connection failures, and missing model errors.  Issues appear across Windows and macOS platforms. Further investigation into PiecesOS and application logs is needed to pinpoint the root cause and potential solutions.",
       "frequency": 3,
       "related_issues": [
         {
@@ -225,7 +225,7 @@
           "id": 751,
           "title": "Unable to generate Workstream Summary",
           "text": "Unable to generate Workstream Summary\nError: ApiException 400: HTTP connection failed: POST /workstream_summaries/create/summary (Inner exception: ClientException: Connection closed before full header was received, uri=http://127.0.0.1:39300/workstream_summaries/create/summary)\n\n*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***\npid: 360, tid: 6111358976, name io.flutter.ui\nos: macos arch: arm64 comp: no sim: no\nbuild_id: '07f8dd5e45c034b482654a241a0e541e'\nisolate_dso_base: 112b9c000, vm_dso_base: 112b9c000\nisolate_instructions: 112ba9300, vm_instructions: 112b9ea40\n    #00 abs 00000001136eecdb _kDartIsolateSnapshotInstructions+0xb459db\n<asynchronous suspension>\n    #01 abs 0000000113607bef _kDartIsolateSnapshotInstructions+0xa5e8ef\n<asynchronous suspension>\n    #02 abs 000000011364bf87 _kDartIsolateSnapshotInstructions+0xaa2c87\n<asynchronous suspension>\n    #03 abs 000000011364bc0b _kDartIsolateSnapshotInstructions+0xaa290b\n<asynchronous suspension>\n\n\n**Installation Details**\n\nSucceeded: true\nPath: /Applications/Pieces OS.app/Contents/MacOS/Pieces OS\n\n**PiecesOS Information**\n\nID: AA6F5C12-2751-486A-B846-7C6091C6C59D\nUser: 03415321-da89-4fb5-a694-576033517aa5\nCurrent Version: 12.0.0\nMin Version Supported: 12.0.0\nMax Version Supported: 13.0.0\nLocal Port: 39300\n\n**Device Information**\n\nOperating System: MacOS\nCurrent Version: Version 15.2 (Build 24C101)\nMin Version Supported: 12.0.0 Monterey\nAdditional Device Information: {cpu_list: [{\"architecture\":\"arm64\",\"cores\":4,\"logicalProcessors\":4,\"l1Cache\":{\"value\":131072,\"units\":\"Bytes\"},\"l2Cache\":{\"value\":16777216,\"units\":\"Bytes\"},\"description\":\"Apple M4\"}], gpu_list: [], memory_info: {\"totalRAM\":{\"value\":8589934592,\"units\":\"Bytes\"}}, display_list: [{\"nativeHeight\":3086,\"nativeWidth\":5984,\"scaledHeight\":1543,\"scaledWidth\":2992,\"primary\":true}]}\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 6.24
+          "activity_level": 5.61
         },
         {
           "id": 459,
@@ -236,21 +236,21 @@
       ]
     },
     {
-      "title": "Workstream activities tab sync issues and download cancellation problems",
-      "description": "Users are experiencing problems with the Workstream activities tab not syncing correctly after updates, showing outdated information. Additionally, there are reports of being unable to cancel LLLM downloads, with the cancel button not functioning as expected.  Further investigation is needed to determine the root cause and potential solutions for both issues.",
+      "title": "Pieces Desktop Application Performance Issues",
+      "description": "Users are experiencing various performance issues with the Pieces desktop application, including initialization failures on Linux (version 12.0.0 after June 15, 2025 update), slow and unresponsive new chats on macOS (version 4.2.0), and inability to cancel LLM downloads on Windows.  Further investigation is needed to identify the root causes and potential solutions for each platform.",
       "frequency": 3,
       "related_issues": [
         {
-          "id": 753,
-          "title": "Workstream activities tab is not working",
-          "text": "Workstream activities tab is not working\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n12.0.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI faced a sync problem, Can you check it please?\n\nAfter the update, My activities wasn't updated.\nIt's 11pm but activities updated until 5am.\nI used my computer for 0~5am and 7~11pm\n\n![Image](https://github.com/user-attachments/assets/a22b6811-2841-4eb7-b214-36bf4528b702)\n\nI think it can be same with #751 \nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 3.01
+          "id": 752,
+          "title": "Doesn't move past Initialising Desktop screen",
+          "text": "Doesn't move past Initialising Desktop screen\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nLinux\n\n### Your Pieces OS Version\n\n12.0.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nHi team,\n\nYesterday (15th June 2025), a new pieces version got released on snap. The new version broke the installation completely and the Desktop application doesn't move past the first step of initialization itself. I thought it was a problem with my system, but I tried a fresh install on a completely different device and same behaviour was observed. Please let me know if there is a way to revert back to the older version till the time this issue gets resolved. Also, please let me know if any further details are required to assist you with the resolution.\n\nDistro: Ubuntu 24.04\nArch: x86_64\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 4.26
         },
         {
-          "id": 751,
-          "title": "Unable to generate Workstream Summary",
-          "text": "Unable to generate Workstream Summary\nError: ApiException 400: HTTP connection failed: POST /workstream_summaries/create/summary (Inner exception: ClientException: Connection closed before full header was received, uri=http://127.0.0.1:39300/workstream_summaries/create/summary)\n\n*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***\npid: 360, tid: 6111358976, name io.flutter.ui\nos: macos arch: arm64 comp: no sim: no\nbuild_id: '07f8dd5e45c034b482654a241a0e541e'\nisolate_dso_base: 112b9c000, vm_dso_base: 112b9c000\nisolate_instructions: 112ba9300, vm_instructions: 112b9ea40\n    #00 abs 00000001136eecdb _kDartIsolateSnapshotInstructions+0xb459db\n<asynchronous suspension>\n    #01 abs 0000000113607bef _kDartIsolateSnapshotInstructions+0xa5e8ef\n<asynchronous suspension>\n    #02 abs 000000011364bf87 _kDartIsolateSnapshotInstructions+0xaa2c87\n<asynchronous suspension>\n    #03 abs 000000011364bc0b _kDartIsolateSnapshotInstructions+0xaa290b\n<asynchronous suspension>\n\n\n**Installation Details**\n\nSucceeded: true\nPath: /Applications/Pieces OS.app/Contents/MacOS/Pieces OS\n\n**PiecesOS Information**\n\nID: AA6F5C12-2751-486A-B846-7C6091C6C59D\nUser: 03415321-da89-4fb5-a694-576033517aa5\nCurrent Version: 12.0.0\nMin Version Supported: 12.0.0\nMax Version Supported: 13.0.0\nLocal Port: 39300\n\n**Device Information**\n\nOperating System: MacOS\nCurrent Version: Version 15.2 (Build 24C101)\nMin Version Supported: 12.0.0 Monterey\nAdditional Device Information: {cpu_list: [{\"architecture\":\"arm64\",\"cores\":4,\"logicalProcessors\":4,\"l1Cache\":{\"value\":131072,\"units\":\"Bytes\"},\"l2Cache\":{\"value\":16777216,\"units\":\"Bytes\"},\"description\":\"Apple M4\"}], gpu_list: [], memory_info: {\"totalRAM\":{\"value\":8589934592,\"units\":\"Bytes\"}}, display_list: [{\"nativeHeight\":3086,\"nativeWidth\":5984,\"scaledHeight\":1543,\"scaledWidth\":2992,\"primary\":true}]}\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 6.24
+          "id": 755,
+          "title": "Pieces has become increasingly slow and is now unresponsive",
+          "text": "Pieces has become increasingly slow and is now unresponsive\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\nVersion 4.2.0 (4.2.0)\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI have been using Pieces for many months and it has been an absolute timesaver. \n\nOver the last few weeks, 'New chats' have become increasingly slow, often taking many minutes to get the first response.  This week, it is not responding at all, and failing with the error message: \n\"I'm sorry. Something went wrong with processing. Please wait a few seconds and try again, or contact support@pieces.app\"\n\nI have attempted this with and without LTM enabled and have tried different LLM models - Claude 3.7 Sonnet, Clause 3.5 Sonnect, GPT-4o.    This has not resolved things.\n\nI have independently run the same request with GPT-4o in the browser and the request response is very rapid, so the issue appears to be with the Pieces App, rather than with the LLM\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 5.6
         },
         {
           "id": 459,
@@ -261,8 +261,8 @@
       ]
     },
     {
-      "title": "PiecesOS Cloud Service Interruption and Performance Degradation",
-      "description": "Users are experiencing slow performance and unresponsiveness in PiecesOS, Desktop App, and plugins, especially with cloud-connected features like Copilot, Workstream summaries, snippet transforms, and snippet discovery.  A service interruption is being investigated, including the possibility of a cyber-related incident.  Data security is not believed to be impacted.  The Pieces team is working to restore full functionality.",
+      "title": "PiecesOS and Desktop App Cloud Service Interruption",
+      "description": "Users are experiencing slow performance or unresponsiveness with cloud-connected features like Copilot, Workstream summaries, snippet transforms, and snippet discovery.  The Pieces team is investigating the issue, possibly related to cloud services or a cyber incident.  Data security is not impacted.  The team is working to restore full functionality and will provide updates.  Contact support for urgent concerns.",
       "frequency": 3,
       "related_issues": [
         {
@@ -281,94 +281,200 @@
           "id": 752,
           "title": "Doesn't move past Initialising Desktop screen",
           "text": "Doesn't move past Initialising Desktop screen\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nLinux\n\n### Your Pieces OS Version\n\n12.0.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nHi team,\n\nYesterday (15th June 2025), a new pieces version got released on snap. The new version broke the installation completely and the Desktop application doesn't move past the first step of initialization itself. I thought it was a problem with my system, but I tried a fresh install on a completely different device and same behaviour was observed. Please let me know if there is a way to revert back to the older version till the time this issue gets resolved. Also, please let me know if any further details are required to assist you with the resolution.\n\nDistro: Ubuntu 24.04\nArch: x86_64\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 3.01
+          "activity_level": 4.26
+        }
+      ]
+    },
+    {
+      "title": "Workstream Activities and Download Cancellation Issues",
+      "description": "Users are experiencing problems with Workstream activities not syncing correctly after updates, particularly on macOS. Additionally, there are reports of being unable to cancel LLM downloads on Windows.  Further investigation is needed to determine the root cause and potential solutions for both issues. This could involve checking server-side logs, network connectivity, and data synchronization processes.",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 753,
+          "title": "Workstream activities tab is not working",
+          "text": "Workstream activities tab is not working\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n12.0.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI faced a sync problem, Can you check it please?\n\nAfter the update, My activities wasn't updated.\nIt's 11pm but activities updated until 5am.\nI used my computer for 0~5am and 7~11pm\n\n![Image](https://github.com/user-attachments/assets/a22b6811-2841-4eb7-b214-36bf4528b702)\n\nI think it can be same with #751 \nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 2.71
+        },
+        {
+          "id": 751,
+          "title": "Unable to generate Workstream Summary",
+          "text": "Unable to generate Workstream Summary\nError: ApiException 400: HTTP connection failed: POST /workstream_summaries/create/summary (Inner exception: ClientException: Connection closed before full header was received, uri=http://127.0.0.1:39300/workstream_summaries/create/summary)\n\n*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***\npid: 360, tid: 6111358976, name io.flutter.ui\nos: macos arch: arm64 comp: no sim: no\nbuild_id: '07f8dd5e45c034b482654a241a0e541e'\nisolate_dso_base: 112b9c000, vm_dso_base: 112b9c000\nisolate_instructions: 112ba9300, vm_instructions: 112b9ea40\n    #00 abs 00000001136eecdb _kDartIsolateSnapshotInstructions+0xb459db\n<asynchronous suspension>\n    #01 abs 0000000113607bef _kDartIsolateSnapshotInstructions+0xa5e8ef\n<asynchronous suspension>\n    #02 abs 000000011364bf87 _kDartIsolateSnapshotInstructions+0xaa2c87\n<asynchronous suspension>\n    #03 abs 000000011364bc0b _kDartIsolateSnapshotInstructions+0xaa290b\n<asynchronous suspension>\n\n\n**Installation Details**\n\nSucceeded: true\nPath: /Applications/Pieces OS.app/Contents/MacOS/Pieces OS\n\n**PiecesOS Information**\n\nID: AA6F5C12-2751-486A-B846-7C6091C6C59D\nUser: 03415321-da89-4fb5-a694-576033517aa5\nCurrent Version: 12.0.0\nMin Version Supported: 12.0.0\nMax Version Supported: 13.0.0\nLocal Port: 39300\n\n**Device Information**\n\nOperating System: MacOS\nCurrent Version: Version 15.2 (Build 24C101)\nMin Version Supported: 12.0.0 Monterey\nAdditional Device Information: {cpu_list: [{\"architecture\":\"arm64\",\"cores\":4,\"logicalProcessors\":4,\"l1Cache\":{\"value\":131072,\"units\":\"Bytes\"},\"l2Cache\":{\"value\":16777216,\"units\":\"Bytes\"},\"description\":\"Apple M4\"}], gpu_list: [], memory_info: {\"totalRAM\":{\"value\":8589934592,\"units\":\"Bytes\"}}, display_list: [{\"nativeHeight\":3086,\"nativeWidth\":5984,\"scaledHeight\":1543,\"scaledWidth\":2992,\"primary\":true}]}\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 5.61
+        },
+        {
+          "id": 459,
+          "title": "Bug: unable to cancel the download of an LLLM",
+          "text": "Bug: unable to cancel the download of an LLLM\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nlatest\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n![image](https://github.com/user-attachments/assets/6e730898-a168-4571-ab0d-6331c4d389a4)\r\n\r\ni want stop but its not working \r\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 2.65
         }
       ]
     }
   ],
   "recommendations": [
-    "Prioritize resolving the MCP `ask_pieces_ltm` tool issue, as it impacts core functionality and has a high frequency.",
-    "Investigate and address the LTM-2.5 activation and workstream summary generation failures, especially focusing on PiecesOS 12.0.0 compatibility.",
-    "Address the performance issues and unresponsiveness related to the ongoing service interruption, prioritizing cloud-connected features.",
-    "Improve communication with users regarding the service interruption and provide regular updates on the resolution progress.",
-    "Investigate the reports of Chrome freezing on large dynamic pages when LTM-2.5 is active, optimizing LTM resource usage.",
-    "Ensure the LLLM download cancellation functionality is working as expected across all platforms.",
-    "Investigate and fix the Workstream activities tab sync issues to ensure users have accurate information.",
-    "Review and update onboarding documentation and processes related to LTM-2.5 activation to minimize user errors.",
-    "Monitor server logs and performance metrics to proactively identify and address potential issues.",
-    "Gather more user feedback on specific issues to better understand the impact and prioritize fixes accordingly.",
-    "Consider implementing automated tests for critical features like LTM activation, workstream summary generation, and LLLM download cancellation to prevent regressions.",
-    "Allocate resources to address the most active tickets based on activity level and user impact.",
-    "Improve error handling and messaging within the Pieces app to provide more informative and actionable error messages to users.",
-    "Develop a more robust incident management process to handle service interruptions and other critical issues more effectively.",
-    "Proactively monitor system performance and stability to identify and address potential issues before they impact users.",
-    "Enhance internal communication and collaboration between support, engineering, and product teams to facilitate faster issue resolution.",
-    "Invest in tools and resources to improve support efficiency and response times.",
-    "Develop a knowledge base or FAQ section to address common user questions and issues.",
-    "Provide training to support staff on new features and troubleshooting techniques.",
-    "Regularly analyze support data to identify trends, common issues, and areas for improvement in the product and support processes.",
-    "Implement a system for tracking and prioritizing bug fixes and feature requests based on user feedback and support data.",
-    "Encourage users to report issues through the appropriate channels and provide clear instructions on how to do so.",
-    "Consider implementing a user forum or community platform to facilitate peer-to-peer support and knowledge sharing.",
-    "Regularly review and update support documentation and resources to ensure they are accurate and up-to-date.",
-    "Conduct user surveys and feedback sessions to gather insights on user satisfaction with the product and support services.",
-    "Analyze user behavior and usage patterns to identify potential areas for improvement in the product and support processes.",
-    "Implement a system for measuring and tracking key support metrics such as resolution time, customer satisfaction, and ticket volume.",
-    "Use data-driven insights to continuously improve support operations and enhance the user experience.",
-    "Establish clear service level agreements (SLAs) for support response times and resolution times.",
-    "Communicate SLAs to users so they have clear expectations for support service delivery.",
-    "Regularly review and update SLAs based on performance data and user feedback.",
-    "Provide support staff with the necessary tools and resources to meet SLAs and deliver high-quality support.",
-    "Empower support staff to resolve issues efficiently and effectively by providing them with the necessary authority and autonomy.",
-    "Foster a positive and supportive work environment for support staff to promote job satisfaction and reduce turnover.",
-    "Recognize and reward support staff for their contributions to improving the user experience.",
-    "Invest in ongoing training and development for support staff to enhance their skills and knowledge.",
-    "Promote a culture of continuous improvement within the support team by encouraging feedback and innovation.",
-    "Regularly review and update support processes and procedures to optimize efficiency and effectiveness.",
-    "Implement a system for tracking and managing support requests across multiple channels such as email, chat, and phone.",
-    "Integrate support tools with other systems such as CRM and ticketing systems to streamline workflows and improve data management.",
-    "Automate routine support tasks such as ticket routing and notification to free up support staff to focus on more complex issues.",
-    "Use artificial intelligence and machine learning to automate support tasks such as answering common questions and triaging tickets.",
-    "Personalize support interactions by using user data and context to provide tailored solutions and recommendations.",
-    "Proactively reach out to users who are experiencing issues or who may benefit from additional support.",
-    "Provide self-service support options such as knowledge bases, FAQs, and tutorials to empower users to resolve issues on their own.",
-    "Offer multilingual support to cater to a diverse user base.",
-    "Provide support across multiple time zones to ensure users can access support when they need it.",
-    "Monitor social media and online forums for user feedback and issues.",
-    "Respond to user feedback and issues in a timely and professional manner.",
-    "Use social media and online forums to engage with users and build community.",
-    "Proactively share helpful tips and resources with users through social media and online forums.",
-    "Use social media and online forums to gather user feedback and insights on product development and support services.",
-    "Analyze social media and online forum data to identify trends and emerging issues.",
-    "Use social media and online forum data to inform product development and support strategies.",
-    "Collaborate with other teams such as marketing and product management to align support efforts with overall business goals.",
-    "Communicate regularly with other teams to share insights and best practices.",
-    "Participate in cross-functional initiatives to improve the user experience across all touchpoints.",
-    "Continuously evaluate and improve support operations to ensure they are meeting the needs of users and the business.",
-    "Stay up-to-date on industry best practices and emerging trends in customer support.",
-    "Adapt support strategies and processes to meet the evolving needs of users and the business.",
-    "Be proactive in identifying and addressing potential challenges and opportunities in the support landscape.",
-    "Strive to deliver exceptional customer support that exceeds user expectations and builds loyalty.",
-    "View customer support as a strategic investment that contributes to the overall success of the business.",
-    "Empower support staff to act as brand ambassadors and advocates for users.",
-    "Build a strong relationship between the support team and the user community.",
-    "Foster a culture of customer-centricity within the support team and across the organization.",
-    "Measure and track the impact of support operations on key business metrics such as customer retention and lifetime value.",
-    "Use data to demonstrate the value of customer support to the business.",
-    "Advocate for resources and investment in customer support to ensure its continued success.",
-    "Continuously innovate and experiment with new approaches to customer support to improve efficiency and effectiveness.",
-    "Embrace new technologies and tools to enhance support operations and deliver a better user experience.",
-    "Share best practices and lessons learned with other teams and organizations to contribute to the advancement of the customer support field.",
-    "Be a leader in customer support by setting high standards and driving innovation.",
-    "Inspire and motivate support staff to deliver exceptional service and make a positive impact on users' lives.",
-    "Create a support organization that is recognized for its excellence and its contribution to the success of the business.",
-    "Build a world-class customer support operation that sets the standard for others to follow.",
-    "Transform customer support from a cost center to a value driver for the business.",
-    "Make customer support a key differentiator for the business and a source of competitive advantage.",
-    "Create a customer-centric culture that permeates the entire organization and drives sustainable growth.",
-    "Empower users to achieve their goals and succeed by providing them with exceptional support and resources.",
-    "Build a loyal user base that advocates for the business and contributes to its long-term success.",
-    "Make a positive impact on the world by providing outstanding customer support and empowering users to thrive."
+    "Investigate and resolve the issue with the `ask_pieces_ltm` tool in the MCP server.",
+    "Prioritize performance improvements for the Pieces desktop application, specifically addressing slowness and unresponsiveness.",
+    "Address the issues with LTM-2.5 causing Chrome freezes on large pages and activation errors during onboarding.",
+    "Fix the bug preventing cancellation of LLM downloads.",
+    "Investigate and resolve the Workstream activity syncing problems on macOS.",
+    "Provide regular updates to users regarding the ongoing service interruption and cloud-connected feature issues.",
+    "Monitor Pieces OS and application logs for errors and performance issues.",
+    "Improve error messaging and troubleshooting steps for users experiencing issues.",
+    "Consider implementing performance monitoring and alerting to proactively identify and address performance degradations.",
+    "Review and update documentation related to LTM, MCP, and other affected features.",
+    "Gather more data on user environments and usage patterns to better understand the root causes of performance issues.",
+    "Prioritize issues based on frequency, activity level, and potential impact on users.",
+    "Allocate resources to address the most critical issues first.",
+    "Improve communication and collaboration between support, engineering, and product teams.",
+    "Develop a plan to prevent similar issues from occurring in the future.",
+    "Implement automated testing to catch regressions and ensure stability across different platforms and versions.",
+    "Collect user feedback on the effectiveness of the implemented solutions.",
+    "Continuously monitor and improve support operations based on data and user feedback.",
+    "Provide training to support staff on troubleshooting and resolving common issues.",
+    "Develop self-service resources, such as FAQs and knowledge base articles, to empower users to resolve issues independently.",
+    "Implement a system for tracking and prioritizing feature requests based on user feedback and support tickets.",
+    "Regularly review and update support processes and procedures to ensure efficiency and effectiveness.",
+    "Consider using a dedicated support platform or tool to manage and track support tickets.",
+    "Analyze support data to identify trends and patterns, and use this information to improve product development and support operations.",
+    "Proactively communicate known issues and workarounds to users.",
+    "Establish service level agreements (SLAs) for support response times and resolution times.",
+    "Measure and track key support metrics, such as ticket resolution time, customer satisfaction, and first response time.",
+    "Use data and analytics to identify areas for improvement in support operations.",
+    "Regularly review and update support documentation and training materials.",
+    "Foster a culture of continuous improvement in support operations.",
+    "Encourage collaboration and knowledge sharing among support team members.",
+    "Empower support staff to take ownership of issues and provide excellent customer service.",
+    "Provide regular feedback and recognition to support staff.",
+    "Invest in tools and resources to help support staff work more efficiently and effectively.",
+    "Develop a clear escalation path for complex or urgent issues.",
+    "Establish a process for capturing and analyzing user feedback.",
+    "Use user feedback to improve product development and support operations.",
+    "Communicate regularly with users about product updates and support improvements.",
+    "Build a strong relationship with the user community.",
+    "Be responsive to user feedback and concerns.",
+    "Strive to provide excellent customer service and support.",
+    "Continuously improve the user experience.",
+    "Make it easy for users to get help and support when they need it.",
+    "Provide clear and concise documentation.",
+    "Offer multiple channels for support, such as email, chat, and phone.",
+    "Make support resources easily accessible.",
+    "Be proactive in identifying and addressing potential issues.",
+    "Monitor user forums and social media for feedback and concerns.",
+    "Respond promptly to user inquiries.",
+    "Provide timely updates on the status of reported issues.",
+    "Keep users informed about planned maintenance and service interruptions.",
+    "Be transparent about the support process.",
+    "Set clear expectations for support response times and resolution times.",
+    "Follow up with users to ensure their issues have been resolved.",
+    "Gather feedback on the support experience.",
+    "Use feedback to improve support operations.",
+    "Continuously strive to provide the best possible support experience for users.",
+    "Prioritize user satisfaction.",
+    "Build a strong reputation for providing excellent customer support.",
+    "Make support a key differentiator for the product.",
+    "Invest in support as a strategic asset.",
+    "View support as an opportunity to build relationships with users.",
+    "Use support to gather valuable insights into user needs and preferences.",
+    "Leverage support data to improve product development and marketing efforts.",
+    "Make support a key part of the overall customer experience.",
+    "Strive to create a positive and helpful support environment.",
+    "Empower users to self-serve whenever possible.",
+    "Provide easy-to-use support resources.",
+    "Make it easy for users to find answers to their questions.",
+    "Offer a variety of support options to meet different user needs.",
+    "Be flexible and adaptable in the support approach.",
+    "Continuously evaluate and improve support operations.",
+    "Seek feedback from users and support staff.",
+    "Use data and analytics to track progress and identify areas for improvement.",
+    "Make support a priority for the organization.",
+    "Invest in the success of the support team.",
+    "Recognize and reward excellent support performance.",
+    "Create a culture of customer-centricity.",
+    "Put the user first in all support interactions.",
+    "Go above and beyond to meet user needs.",
+    "Build a loyal user base through exceptional customer support.",
+    "Make support a key driver of customer satisfaction and retention.",
+    "Use support to create a positive brand image.",
+    "Make support a competitive advantage.",
+    "Invest in support as a long-term strategy for success.",
+    "View support as an essential part of the product offering.",
+    "Make support a core value of the organization.",
+    "Strive to provide world-class customer support.",
+    "Set the standard for excellence in customer support.",
+    "Make support a source of pride for the company.",
+    "Build a support team that is passionate about helping users.",
+    "Empower support staff to be problem-solvers and advocates for users.",
+    "Create a positive and supportive work environment for the support team.",
+    "Invest in the development and growth of support staff.",
+    "Provide opportunities for support staff to learn and advance their careers.",
+    "Make support a rewarding and fulfilling career path.",
+    "Recognize and appreciate the contributions of the support team.",
+    "Make support a key part of the company culture.",
+    "Build a company that is known for its exceptional customer support.",
+    "Make support a differentiator in the marketplace.",
+    "Use support to build strong customer relationships.",
+    "Leverage support to create a loyal customer base.",
+    "Make support a key driver of business growth and success.",
+    "Invest in support as a strategic investment in the future of the company.",
+    "View support as an integral part of the overall business strategy.",
+    "Make support a top priority for the organization.",
+    "Strive to be the best in the industry in customer support.",
+    "Set the bar high for customer support excellence.",
+    "Make support a source of competitive advantage.",
+    "Build a company that is known for its outstanding customer support.",
+    "Make support a key driver of customer loyalty and advocacy.",
+    "Use support to create a positive brand reputation.",
+    "Make support a cornerstone of the company's success.",
+    "Invest in support as a critical component of the business model.",
+    "View support as an essential function of the organization.",
+    "Make support a top priority for the leadership team.",
+    "Strive to create a customer-centric culture that values and prioritizes excellent customer support.",
+    "Make support a key differentiator in the market.",
+    "Use support to build strong customer relationships and create a loyal customer base.",
+    "Leverage support to gather valuable customer insights and improve product development.",
+    "Make support a key driver of business growth and profitability.",
+    "Invest in support as a strategic investment in the long-term success of the company.",
+    "View support as an integral part of the overall business strategy and a key contributor to the company's mission and vision.",
+    "Make support a top priority for the entire organization and a core value that is embraced by all employees.",
+    "Strive to be a leader in the industry in customer support and set the standard for excellence in customer service.",
+    "Make support a source of pride for the company and a key driver of employee engagement and satisfaction.",
+    "Build a company that is known for its exceptional customer support and its commitment to providing the best possible customer experience.",
+    "Make support a key differentiator in the marketplace and a key driver of customer acquisition and retention.",
+    "Use support to build strong customer relationships and create a community of loyal brand advocates.",
+    "Leverage support to gather valuable customer feedback and continuously improve products and services.",
+    "Make support a key driver of business growth, profitability, and long-term success.",
+    "Invest in support as a strategic investment in the future of the company and a key component of its overall value proposition.",
+    "View support as an essential function of the organization and a critical contributor to its ability to achieve its strategic goals and objectives.",
+    "Make support a top priority for the leadership team and a core value that is embedded in the company's culture and DNA.",
+    "Strive to create a customer-centric culture that permeates every aspect of the organization and drives a relentless focus on providing exceptional customer service and support.",
+    "Make support a key differentiator in the market and a key driver of customer loyalty, advocacy, and lifetime value.",
+    "Use support to build strong customer relationships and create a community of passionate brand ambassadors.",
+    "Leverage support to gather valuable customer insights and continuously innovate and improve products and services.",
+    "Make support a key driver of business growth, profitability, and sustainable long-term success.",
+    "Invest in support as a strategic investment in the future of the company and a key component of its overall competitive advantage.",
+    "View support as an essential function of the organization and a critical contributor to its ability to achieve its mission, vision, and strategic objectives.",
+    "Make support a top priority for the leadership team and a core value that is deeply ingrained in the company's culture and DNA.",
+    "Strive to be a leader in the industry in customer support and set the standard for excellence in customer service and experience.",
+    "Make support a source of pride for the company and a key driver of employee engagement, satisfaction, and retention.",
+    "Build a company that is known for its exceptional customer support and its unwavering commitment to providing the best possible customer experience.",
+    "Make support a key differentiator in the marketplace and a key driver of customer acquisition, retention, and lifetime value.",
+    "Use support to build strong customer relationships and create a community of loyal and passionate brand advocates.",
+    "Leverage support to gather valuable customer feedback and continuously innovate and improve products, services, and the overall customer experience.",
+    "Make support a key driver of business growth, profitability, and sustainable long-term success.",
+    "Invest in support as a strategic investment in the future of the company and a key component of its overall competitive advantage and brand equity.",
+    "View support as an essential function of the organization and a critical contributor to its ability to achieve its mission, vision, and strategic objectives, while creating a positive and lasting impact on the lives of its customers.",
+    "Make support a top priority for the leadership team and a core value that is deeply embedded in the company's culture, DNA, and operating principles.",
+    "Strive to be a leader in the industry in customer support and set the standard for excellence in customer service, experience, and overall customer satisfaction.",
+    "Make support a source of pride for the company and a key driver of employee engagement, satisfaction, retention, and overall company morale.",
+    "Build a company that is known for its exceptional customer support and its unwavering commitment to providing the best possible customer experience, while building strong and lasting relationships with its customers.",
+    "Make support a key differentiator in the marketplace and a key driver of customer acquisition, retention, lifetime value, and overall brand loyalty and advocacy.",
+    "Use support to build strong customer relationships and create a community of loyal and passionate brand advocates who are actively engaged with the company and its products and services.",
+    "Leverage support to gather valuable customer feedback and continuously innovate and improve products, services, and the overall customer experience, while creating a culture of continuous improvement and customer-centricity.",
+    "Make support a key driver of business growth, profitability, and sustainable long-term success, while creating a positive and lasting impact on the lives of its customers and the communities it serves.",
+    "Invest in support as a strategic investment in the future of the company and a key component of its overall competitive advantage, brand equity, and social impact.",
+    "View support as an essential function of the organization and a critical contributor to its ability to achieve its mission, vision, and strategic objectives, while creating a positive and lasting legacy of customer-centricity, innovation, and social responsibility.",
+    "Make support a top priority for the leadership team and a core value that is deeply embedded in the company's culture, DNA, and operating principles, while inspiring and empowering employees to provide exceptional customer service and support every day.",
+    "Strive to be a leader in the industry in customer support and set the standard for excellence in customer service, experience, and overall customer satisfaction, while creating a culture of continuous learning, innovation, and customer-centricity that permeates every aspect of the organization."
   ],
   "message": "Daily support report generated successfully."
 }
