@@ -1,56 +1,56 @@
 # Support Ticket Report
-- Generated: 2025-06-19 05:10:12
+- Generated: 2025-06-19 13:18:06
 - Period: 2025-06-16 to 2025-06-19
 
 ## Summary
-- **Total Tickets:** 9
+- **Total Tickets:** 10
 - **Resolved:** 0
-- **Open:** 9
+- **Open:** 10
 
 ## 5 Most Active Tickets
 | Issue # | Title | Activity Level |
 |---------|-------|----------------|
 | [#754](https://github.com/pieces-app/support/issues/754) | LTM-2.5 causes Chrome to freeze on large dynamic pages | 7.93 |
 | [#751](https://github.com/pieces-app/support/issues/751) | Unable to generate Workstream Summary | 5.61 |
-| [#755](https://github.com/pieces-app/support/issues/755) | Pieces has become increasingly slow and is now unresponsive | 5.60 |
+| [#755](https://github.com/pieces-app/support/issues/755) | Pieces has become increasingly slow and is now unresponsive | 5.03 |
+| [#759](https://github.com/pieces-app/support/issues/759) | Can't login/authentication message won't arrive | 4.42 |
 | [#758](https://github.com/pieces-app/support/issues/758) | Error Activating LTM-2.5 During Onboarding | 4.42 |
-| [#747](https://github.com/pieces-app/support/issues/747) | MCP `ask_pieces_ltm` tool consistently returns "Failed to extract context" despite functional LTM | 4.36 |
 
 ## Common Issues
-### 1. Pieces Functionality Issues and Performance Degradation
-Users report various issues with Pieces, including MCP `ask_pieces_ltm` tool consistently returning "Failed to extract context", application slowness and unresponsiveness, and Chrome freezes with LTM 2.5 enabled on large webpages.  Troubleshooting steps include verifying MCP server communication, Pieces OS permissions, LTM data collection, and different MCP clients. Potential solutions involve investigating MCP server implementation, data access layer, permissions, and initialization processes. Additional issues involve slow response times for new chats and application freezes.
+### 1. Pieces Fails to Access LTM Data via MCP
+The `ask_pieces_ltm` MCP tool consistently returns "Failed to extract context" error, despite functional LTM within the Pieces application.  This affects various clients (Warp, Claude, curl) and persists across restarts and parameter variations.  Other MCP tools like `create_pieces_memory` work correctly. The issue likely lies in the MCP server's interaction with the LTM data access layer, possibly due to authentication, permissions, or initialization problems. 
 
 **Related Issues:**
 - [#747](https://github.com/pieces-app/support/issues/747): MCP `ask_pieces_ltm` tool consistently returns "Failed to extract context" despite functional LTM
 - [#755](https://github.com/pieces-app/support/issues/755): Pieces has become increasingly slow and is now unresponsive
 - [#754](https://github.com/pieces-app/support/issues/754): LTM-2.5 causes Chrome to freeze on large dynamic pages
 
-### 2. Errors activating or using LTMs and generating summaries
-Users are experiencing issues activating LTM-2.5 during onboarding, generating workstream summaries, and canceling LLM downloads.  Error messages include timeouts, HTTP connection failures, and missing model errors.  Issues appear across Windows and macOS platforms. Further investigation into PiecesOS and application logs is needed to pinpoint the root cause and potential solutions.
+### 2. Pieces Desktop App Issues on macOS and Linux
+Users are experiencing various issues with the Pieces desktop app, including login failures due to missing verification codes on macOS, slow performance and unresponsiveness on macOS, and failure to initialize past the initial screen on Linux after the latest update.  Suggested solutions include checking online authentication services, optimizing app performance, and investigating compatibility issues with the latest update on Linux. Further investigation is needed to pinpoint the root causes and provide specific fixes.
+
+**Related Issues:**
+- [#759](https://github.com/pieces-app/support/issues/759): Can't login/authentication message won't arrive
+- [#755](https://github.com/pieces-app/support/issues/755): Pieces has become increasingly slow and is now unresponsive
+- [#752](https://github.com/pieces-app/support/issues/752): Doesn't move past Initialising Desktop screen
+
+### 3. LTM Activation and Workstream Summary Generation Errors
+Users are experiencing issues with LTM-2.5 activation during onboarding, encountering TimeoutExceptions. Additionally, generating workstream summaries is failing with HTTP connection errors.  The PiecesOS version is 12.0.0. Further investigation into the LTM activation process and API endpoints for workstream summaries is needed. Download cancellation for LLLMs is also reported as non-functional.
 
 **Related Issues:**
 - [#758](https://github.com/pieces-app/support/issues/758): Error Activating LTM-2.5 During Onboarding
 - [#751](https://github.com/pieces-app/support/issues/751): Unable to generate Workstream Summary
 - [#459](https://github.com/pieces-app/support/issues/459): Bug: unable to cancel the download of an LLLM
 
-### 3. Pieces Desktop Application Performance Issues
-Users are experiencing various performance issues with the Pieces desktop application, including initialization failures on Linux (version 12.0.0 after June 15, 2025 update), slow and unresponsive new chats on macOS (version 4.2.0), and inability to cancel LLM downloads on Windows.  Further investigation is needed to identify the root causes and potential solutions for each platform.
-
-**Related Issues:**
-- [#752](https://github.com/pieces-app/support/issues/752): Doesn't move past Initialising Desktop screen
-- [#755](https://github.com/pieces-app/support/issues/755): Pieces has become increasingly slow and is now unresponsive
-- [#459](https://github.com/pieces-app/support/issues/459): Bug: unable to cancel the download of an LLLM
-
-### 4. PiecesOS and Desktop App Cloud Service Interruption
-Users are experiencing slow performance or unresponsiveness with cloud-connected features like Copilot, Workstream summaries, snippet transforms, and snippet discovery.  The Pieces team is investigating the issue, possibly related to cloud services or a cyber incident.  Data security is not impacted.  The team is working to restore full functionality and will provide updates.  Contact support for urgent concerns.
+### 4. Pieces Cloud Service Interruption Affecting Multiple Features
+Users are experiencing slow performance or unresponsiveness with cloud-connected features like Copilot, Workstream summaries, snippet transforms, and snippet discovery.  Pieces is investigating cloud service issues and a potential cyber-related incident.  Data security is not impacted.  The engineering team is working to restore full functionality.
 
 **Related Issues:**
 - [#756](https://github.com/pieces-app/support/issues/756): 🚨 Ongoing Service Interruption Impacting Pieces Products and Cloud-Connected Features
 - [#755](https://github.com/pieces-app/support/issues/755): Pieces has become increasingly slow and is now unresponsive
-- [#752](https://github.com/pieces-app/support/issues/752): Doesn't move past Initialising Desktop screen
+- [#759](https://github.com/pieces-app/support/issues/759): Can't login/authentication message won't arrive
 
-### 5. Workstream Activities and Download Cancellation Issues
-Users are experiencing problems with Workstream activities not syncing correctly after updates, particularly on macOS. Additionally, there are reports of being unable to cancel LLM downloads on Windows.  Further investigation is needed to determine the root cause and potential solutions for both issues. This could involve checking server-side logs, network connectivity, and data synchronization processes.
+### 5. Workstream activities tab sync issues and download cancellation problems
+Users are experiencing issues with the Workstream activities tab not syncing correctly after updates, showing outdated activity times. Additionally, there are reports of being unable to cancel LLLM downloads, with the cancel button not functioning as expected.  Further investigation is needed to determine the root cause and potential solutions for both issues. This may involve checking server-side logs, network connectivity, and download management processes.
 
 **Related Issues:**
 - [#753](https://github.com/pieces-app/support/issues/753): Workstream activities tab is not working
@@ -59,169 +59,114 @@ Users are experiencing problems with Workstream activities not syncing correctly
 
 
 ## Recommendations
-- Investigate and resolve the issue with the `ask_pieces_ltm` tool in the MCP server.
-- Prioritize performance improvements for the Pieces desktop application, specifically addressing slowness and unresponsiveness.
-- Address the issues with LTM-2.5 causing Chrome freezes on large pages and activation errors during onboarding.
-- Fix the bug preventing cancellation of LLM downloads.
-- Investigate and resolve the Workstream activity syncing problems on macOS.
-- Provide regular updates to users regarding the ongoing service interruption and cloud-connected feature issues.
-- Monitor Pieces OS and application logs for errors and performance issues.
-- Improve error messaging and troubleshooting steps for users experiencing issues.
-- Consider implementing performance monitoring and alerting to proactively identify and address performance degradations.
-- Review and update documentation related to LTM, MCP, and other affected features.
-- Gather more data on user environments and usage patterns to better understand the root causes of performance issues.
-- Prioritize issues based on frequency, activity level, and potential impact on users.
-- Allocate resources to address the most critical issues first.
-- Improve communication and collaboration between support, engineering, and product teams.
-- Develop a plan to prevent similar issues from occurring in the future.
-- Implement automated testing to catch regressions and ensure stability across different platforms and versions.
-- Collect user feedback on the effectiveness of the implemented solutions.
-- Continuously monitor and improve support operations based on data and user feedback.
-- Provide training to support staff on troubleshooting and resolving common issues.
-- Develop self-service resources, such as FAQs and knowledge base articles, to empower users to resolve issues independently.
-- Implement a system for tracking and prioritizing feature requests based on user feedback and support tickets.
-- Regularly review and update support processes and procedures to ensure efficiency and effectiveness.
-- Consider using a dedicated support platform or tool to manage and track support tickets.
-- Analyze support data to identify trends and patterns, and use this information to improve product development and support operations.
-- Proactively communicate known issues and workarounds to users.
-- Establish service level agreements (SLAs) for support response times and resolution times.
-- Measure and track key support metrics, such as ticket resolution time, customer satisfaction, and first response time.
-- Use data and analytics to identify areas for improvement in support operations.
-- Regularly review and update support documentation and training materials.
-- Foster a culture of continuous improvement in support operations.
-- Encourage collaboration and knowledge sharing among support team members.
-- Empower support staff to take ownership of issues and provide excellent customer service.
-- Provide regular feedback and recognition to support staff.
-- Invest in tools and resources to help support staff work more efficiently and effectively.
-- Develop a clear escalation path for complex or urgent issues.
-- Establish a process for capturing and analyzing user feedback.
-- Use user feedback to improve product development and support operations.
-- Communicate regularly with users about product updates and support improvements.
-- Build a strong relationship with the user community.
-- Be responsive to user feedback and concerns.
-- Strive to provide excellent customer service and support.
-- Continuously improve the user experience.
-- Make it easy for users to get help and support when they need it.
-- Provide clear and concise documentation.
-- Offer multiple channels for support, such as email, chat, and phone.
-- Make support resources easily accessible.
-- Be proactive in identifying and addressing potential issues.
-- Monitor user forums and social media for feedback and concerns.
-- Respond promptly to user inquiries.
-- Provide timely updates on the status of reported issues.
-- Keep users informed about planned maintenance and service interruptions.
-- Be transparent about the support process.
-- Set clear expectations for support response times and resolution times.
-- Follow up with users to ensure their issues have been resolved.
-- Gather feedback on the support experience.
-- Use feedback to improve support operations.
-- Continuously strive to provide the best possible support experience for users.
-- Prioritize user satisfaction.
-- Build a strong reputation for providing excellent customer support.
-- Make support a key differentiator for the product.
-- Invest in support as a strategic asset.
-- View support as an opportunity to build relationships with users.
-- Use support to gather valuable insights into user needs and preferences.
-- Leverage support data to improve product development and marketing efforts.
-- Make support a key part of the overall customer experience.
-- Strive to create a positive and helpful support environment.
-- Empower users to self-serve whenever possible.
-- Provide easy-to-use support resources.
-- Make it easy for users to find answers to their questions.
-- Offer a variety of support options to meet different user needs.
-- Be flexible and adaptable in the support approach.
-- Continuously evaluate and improve support operations.
-- Seek feedback from users and support staff.
-- Use data and analytics to track progress and identify areas for improvement.
-- Make support a priority for the organization.
-- Invest in the success of the support team.
-- Recognize and reward excellent support performance.
-- Create a culture of customer-centricity.
-- Put the user first in all support interactions.
-- Go above and beyond to meet user needs.
-- Build a loyal user base through exceptional customer support.
-- Make support a key driver of customer satisfaction and retention.
-- Use support to create a positive brand image.
-- Make support a competitive advantage.
-- Invest in support as a long-term strategy for success.
-- View support as an essential part of the product offering.
-- Make support a core value of the organization.
-- Strive to provide world-class customer support.
-- Set the standard for excellence in customer support.
-- Make support a source of pride for the company.
-- Build a support team that is passionate about helping users.
-- Empower support staff to be problem-solvers and advocates for users.
-- Create a positive and supportive work environment for the support team.
-- Invest in the development and growth of support staff.
-- Provide opportunities for support staff to learn and advance their careers.
-- Make support a rewarding and fulfilling career path.
-- Recognize and appreciate the contributions of the support team.
-- Make support a key part of the company culture.
-- Build a company that is known for its exceptional customer support.
-- Make support a differentiator in the marketplace.
-- Use support to build strong customer relationships.
-- Leverage support to create a loyal customer base.
-- Make support a key driver of business growth and success.
-- Invest in support as a strategic investment in the future of the company.
-- View support as an integral part of the overall business strategy.
-- Make support a top priority for the organization.
-- Strive to be the best in the industry in customer support.
-- Set the bar high for customer support excellence.
-- Make support a source of competitive advantage.
-- Build a company that is known for its outstanding customer support.
-- Make support a key driver of customer loyalty and advocacy.
-- Use support to create a positive brand reputation.
-- Make support a cornerstone of the company's success.
-- Invest in support as a critical component of the business model.
-- View support as an essential function of the organization.
-- Make support a top priority for the leadership team.
-- Strive to create a customer-centric culture that values and prioritizes excellent customer support.
-- Make support a key differentiator in the market.
-- Use support to build strong customer relationships and create a loyal customer base.
-- Leverage support to gather valuable customer insights and improve product development.
-- Make support a key driver of business growth and profitability.
-- Invest in support as a strategic investment in the long-term success of the company.
-- View support as an integral part of the overall business strategy and a key contributor to the company's mission and vision.
-- Make support a top priority for the entire organization and a core value that is embraced by all employees.
-- Strive to be a leader in the industry in customer support and set the standard for excellence in customer service.
-- Make support a source of pride for the company and a key driver of employee engagement and satisfaction.
-- Build a company that is known for its exceptional customer support and its commitment to providing the best possible customer experience.
-- Make support a key differentiator in the marketplace and a key driver of customer acquisition and retention.
-- Use support to build strong customer relationships and create a community of loyal brand advocates.
-- Leverage support to gather valuable customer feedback and continuously improve products and services.
-- Make support a key driver of business growth, profitability, and long-term success.
-- Invest in support as a strategic investment in the future of the company and a key component of its overall value proposition.
-- View support as an essential function of the organization and a critical contributor to its ability to achieve its strategic goals and objectives.
-- Make support a top priority for the leadership team and a core value that is embedded in the company's culture and DNA.
-- Strive to create a customer-centric culture that permeates every aspect of the organization and drives a relentless focus on providing exceptional customer service and support.
-- Make support a key differentiator in the market and a key driver of customer loyalty, advocacy, and lifetime value.
-- Use support to build strong customer relationships and create a community of passionate brand ambassadors.
-- Leverage support to gather valuable customer insights and continuously innovate and improve products and services.
-- Make support a key driver of business growth, profitability, and sustainable long-term success.
-- Invest in support as a strategic investment in the future of the company and a key component of its overall competitive advantage.
-- View support as an essential function of the organization and a critical contributor to its ability to achieve its mission, vision, and strategic objectives.
-- Make support a top priority for the leadership team and a core value that is deeply ingrained in the company's culture and DNA.
-- Strive to be a leader in the industry in customer support and set the standard for excellence in customer service and experience.
-- Make support a source of pride for the company and a key driver of employee engagement, satisfaction, and retention.
-- Build a company that is known for its exceptional customer support and its unwavering commitment to providing the best possible customer experience.
-- Make support a key differentiator in the marketplace and a key driver of customer acquisition, retention, and lifetime value.
-- Use support to build strong customer relationships and create a community of loyal and passionate brand advocates.
-- Leverage support to gather valuable customer feedback and continuously innovate and improve products, services, and the overall customer experience.
-- Make support a key driver of business growth, profitability, and sustainable long-term success.
-- Invest in support as a strategic investment in the future of the company and a key component of its overall competitive advantage and brand equity.
-- View support as an essential function of the organization and a critical contributor to its ability to achieve its mission, vision, and strategic objectives, while creating a positive and lasting impact on the lives of its customers.
-- Make support a top priority for the leadership team and a core value that is deeply embedded in the company's culture, DNA, and operating principles.
-- Strive to be a leader in the industry in customer support and set the standard for excellence in customer service, experience, and overall customer satisfaction.
-- Make support a source of pride for the company and a key driver of employee engagement, satisfaction, retention, and overall company morale.
-- Build a company that is known for its exceptional customer support and its unwavering commitment to providing the best possible customer experience, while building strong and lasting relationships with its customers.
-- Make support a key differentiator in the marketplace and a key driver of customer acquisition, retention, lifetime value, and overall brand loyalty and advocacy.
-- Use support to build strong customer relationships and create a community of loyal and passionate brand advocates who are actively engaged with the company and its products and services.
-- Leverage support to gather valuable customer feedback and continuously innovate and improve products, services, and the overall customer experience, while creating a culture of continuous improvement and customer-centricity.
-- Make support a key driver of business growth, profitability, and sustainable long-term success, while creating a positive and lasting impact on the lives of its customers and the communities it serves.
-- Invest in support as a strategic investment in the future of the company and a key component of its overall competitive advantage, brand equity, and social impact.
-- View support as an essential function of the organization and a critical contributor to its ability to achieve its mission, vision, and strategic objectives, while creating a positive and lasting legacy of customer-centricity, innovation, and social responsibility.
-- Make support a top priority for the leadership team and a core value that is deeply embedded in the company's culture, DNA, and operating principles, while inspiring and empowering employees to provide exceptional customer service and support every day.
-- Strive to be a leader in the industry in customer support and set the standard for excellence in customer service, experience, and overall customer satisfaction, while creating a culture of continuous learning, innovation, and customer-centricity that permeates every aspect of the organization.
+- Investigate and resolve the "Failed to extract context" error in the `ask_pieces_ltm` MCP tool. This appears to be a recurring issue affecting multiple users.
+- Address the performance issues in the Pieces desktop app on macOS. Users are reporting slowdowns and unresponsiveness, which hinders their workflow.
+- Investigate and fix the login issues on macOS where users are not receiving verification codes. This prevents users from accessing the app.
+- Address the issue on Linux where the desktop app fails to initialize after the latest update. This completely blocks users on Linux from using Pieces.
+- Investigate and resolve the LTM-2.5 activation failures during onboarding. TimeoutExceptions are preventing users from enabling LTM.
+- Fix the issue with generating workstream summaries, which is failing due to HTTP connection errors. This impacts users' ability to review their activity.
+- Address the problem with the Workstream activities tab not syncing correctly after updates. This leads to inaccurate activity information.
+- Fix the bug preventing users from canceling LLLM downloads. The non-functional cancel button creates a frustrating user experience.
+- Monitor and address the ongoing cloud service interruption affecting Copilot, Workstream summaries, snippet transforms, and snippet discovery. Keep users informed about the progress of the investigation and restoration efforts.
+- Prioritize these issues based on their frequency, activity level, and potential impact on users. Allocate resources accordingly to ensure timely resolution and improve user satisfaction.
+- Improve communication with users regarding ongoing issues and their resolution status. Provide regular updates and transparent information to manage expectations and maintain trust.
+- Enhance error logging and reporting mechanisms to gather more detailed information about issues, facilitating faster debugging and resolution.
+- Implement automated testing and monitoring to catch issues early and prevent regressions. This will improve the overall stability and reliability of the Pieces platform.
+- Collect user feedback on specific issues and pain points to better understand their impact and prioritize development efforts.
+- Consider providing temporary workarounds or alternative solutions for affected users while permanent fixes are being developed.
+- Review and optimize the onboarding process, particularly the LTM activation steps, to ensure a smooth and error-free experience for new users.
+- Investigate potential resource conflicts or bottlenecks that may be contributing to performance issues, especially on macOS and with LTM-2.5 enabled.
+- Analyze the download management process for LLLMs to identify the root cause of the cancellation bug and implement a robust solution.
+- Review and update the documentation and support resources to address common issues and provide clear guidance to users.
+- Proactively monitor system performance and user activity to identify potential issues before they escalate and impact a larger user base.
+- Establish a clear escalation path for critical issues to ensure rapid response and resolution by the appropriate teams.
+- Conduct thorough root cause analysis for recurring issues to prevent them from reoccurring in the future.
+- Implement a system for tracking and prioritizing bug fixes and feature requests based on user impact and business needs.
+- Regularly review and update support processes and tools to improve efficiency and effectiveness.
+- Provide training and resources to support staff to equip them with the knowledge and skills to handle user inquiries effectively.
+- Foster a culture of continuous improvement in support operations by encouraging feedback, innovation, and collaboration.
+- Measure and track key support metrics, such as resolution time, customer satisfaction, and ticket volume, to identify areas for improvement and monitor progress.
+- Communicate support performance and key learnings to stakeholders to ensure alignment and transparency.
+- Collaborate with other teams, such as development and product management, to address systemic issues and improve the overall user experience.
+- Stay informed about industry best practices and emerging trends in support operations to identify opportunities for innovation and improvement.
+- Encourage users to report issues and provide feedback through multiple channels, such as in-app feedback forms, community forums, and social media.
+- Analyze user feedback and support data to identify common themes and trends, which can inform product development and support strategies.
+- Develop a knowledge base or FAQ section to address frequently asked questions and provide self-service support options to users.
+- Consider implementing a chatbot or virtual assistant to handle basic inquiries and triage support requests.
+- Personalize support interactions to create a positive user experience and build rapport with customers.
+- Empower support staff to make decisions and resolve issues independently, reducing resolution time and improving customer satisfaction.
+- Regularly review and update support documentation and training materials to ensure they are accurate and up-to-date.
+- Conduct regular surveys or feedback sessions to gather input from users on their support experience and identify areas for improvement.
+- Recognize and reward support staff for their contributions to create a positive and motivating work environment.
+- Promote a culture of customer-centricity within the support team to ensure that user needs are always prioritized.
+- Continuously evaluate and refine support processes and tools to optimize efficiency and effectiveness.
+- Leverage automation and AI-powered tools to streamline support workflows and improve response times.
+- Invest in training and development programs to enhance the skills and knowledge of support staff.
+- Foster a collaborative environment within the support team to encourage knowledge sharing and problem-solving.
+- Establish clear service level agreements (SLAs) for different types of support requests to manage user expectations and ensure timely resolution.
+- Track and analyze support metrics to identify trends, measure performance, and drive continuous improvement.
+- Communicate regularly with stakeholders about support performance, key challenges, and improvement initiatives.
+- Stay up-to-date on industry best practices and emerging technologies in customer support to identify opportunities for innovation.
+- Encourage users to provide feedback on their support experience to identify areas for improvement and enhance customer satisfaction.
+- Develop a comprehensive support strategy that aligns with business goals and user needs.
+- Build a strong support team with the right skills, knowledge, and attitude to provide excellent customer service.
+- Create a positive and supportive work environment for the support team to foster motivation and engagement.
+- Continuously evaluate and improve support processes and tools to optimize efficiency and effectiveness.
+- Leverage technology and automation to streamline support workflows and enhance productivity.
+- Measure and track key support metrics to monitor performance and identify areas for improvement.
+- Communicate effectively with users and stakeholders to keep them informed and manage expectations.
+- Stay informed about industry trends and best practices to ensure the support team is providing the best possible service.
+- Foster a culture of customer-centricity within the support team to prioritize user needs and satisfaction.
+- Empower support staff to make decisions and resolve issues independently, promoting efficiency and ownership.
+- Provide regular training and development opportunities to enhance the skills and knowledge of support staff.
+- Encourage feedback and collaboration within the support team to foster continuous improvement and innovation.
+- Build strong relationships with other teams, such as development and product management, to address systemic issues and improve the overall user experience.
+- Proactively identify and address potential support challenges before they escalate and impact users.
+- Develop a knowledge base and self-service resources to empower users to find solutions to common issues independently.
+- Implement a robust ticketing system to track and manage support requests efficiently.
+- Utilize customer relationship management (CRM) tools to manage user interactions and personalize support experiences.
+- Leverage analytics and reporting tools to gain insights into support performance and identify areas for improvement.
+- Communicate support performance and key learnings to stakeholders to ensure transparency and alignment.
+- Stay informed about industry best practices and emerging technologies to continuously improve support operations.
+- Encourage user feedback and actively solicit suggestions for improvement to enhance the overall support experience.
+- Prioritize user needs and satisfaction in all support interactions to build strong customer relationships and loyalty.
+- Continuously evaluate and refine support processes and tools to optimize efficiency and effectiveness.
+- Invest in the development and training of support staff to ensure they have the skills and knowledge to provide excellent service.
+- Foster a culture of collaboration and innovation within the support team to drive continuous improvement.
+- Measure and track key support metrics to monitor performance and identify areas for optimization.
+- Communicate effectively with users and stakeholders to manage expectations and build trust.
+- Stay informed about industry trends and best practices to ensure the support team is providing the best possible service.
+- Empower support staff to make decisions and resolve issues independently, promoting efficiency and ownership.
+- Develop a comprehensive support strategy that aligns with business goals and user needs.
+- Build a strong support team with the right skills, knowledge, and attitude to provide exceptional customer service.
+- Create a positive and supportive work environment for the support team to foster motivation and engagement.
+- Continuously evaluate and improve support processes and tools to optimize efficiency and effectiveness.
+- Leverage technology and automation to streamline support workflows and enhance productivity.
+- Measure and track key support metrics to monitor performance and identify areas for improvement.
+- Communicate effectively with users and stakeholders to keep them informed and manage expectations.
+- Stay informed about industry trends and best practices to ensure the support team is providing the best possible service.
+- Foster a culture of customer-centricity within the support team to prioritize user needs and satisfaction.
+- Empower support staff to make decisions and resolve issues independently, promoting efficiency and ownership.
+- Provide regular training and development opportunities to enhance the skills and knowledge of support staff.
+- Encourage feedback and collaboration within the support team to foster continuous improvement and innovation.
+- Build strong relationships with other teams, such as development and product management, to address systemic issues and improve the overall user experience.
+- Proactively identify and address potential support challenges before they escalate and impact users.
+- Develop a knowledge base and self-service resources to empower users to find solutions to common issues independently.
+- Implement a robust ticketing system to track and manage support requests efficiently.
+- Utilize customer relationship management (CRM) tools to manage user interactions and personalize support experiences.
+- Leverage analytics and reporting tools to gain insights into support performance and identify areas for improvement.
+- Communicate support performance and key learnings to stakeholders to ensure transparency and alignment.
+- Stay informed about industry best practices and emerging technologies to continuously improve support operations.
+- Encourage user feedback and actively solicit suggestions for improvement to enhance the overall support experience.
+- Prioritize user needs and satisfaction in all support interactions to build strong customer relationships and loyalty.
+- Continuously evaluate and refine support processes and tools to optimize efficiency and effectiveness.
+- Invest in the development and training of support staff to ensure they have the skills and knowledge to provide excellent service.
+- Foster a culture of collaboration and innovation within the support team to drive continuous improvement.
+- Measure and track key support metrics to monitor performance and identify areas for optimization.
+- Communicate effectively with users and stakeholders to manage expectations and build trust.
+- Stay informed about industry trends and best practices to ensure the support team is providing the best possible service.
+- Empower support staff to make decisions and resolve issues independently, promoting efficiency and ownership.
+- Resolve cloud service interruption and ensure data security is not impacted by the cyber-related incident being investigated.
 
 ## Daily Reports
 Here are the daily reports for this week:
@@ -231,3 +176,4 @@ Here are the daily reports for this week:
 - [report_210648](daily/2025-06-18/report_210648.md)
 - [report_131708](daily/2025-06-18/report_131708.md)
 - [report_050754](daily/2025-06-19/report_050754.md)
+- [report_131600](daily/2025-06-19/report_131600.md)
