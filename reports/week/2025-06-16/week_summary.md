@@ -1,72 +1,62 @@
 # Support Ticket Report
-- Generated: 2025-06-20 13:17:24
+- Generated: 2025-06-20 21:10:02
 - Period: 2025-06-16 to 2025-06-20
 
 ## Summary
 - **Total Tickets:** 11
-- **Resolved:** 0
-- **Open:** 11
+- **Resolved:** 4
+- **Open:** 7
 
 ## 5 Most Active Tickets
 | Issue # | Title | Activity Level |
 |---------|-------|----------------|
-| [#713](https://github.com/pieces-app/support/issues/713) | LTM not working in Pieces CLI | 6.64 |
+| [#759](https://github.com/pieces-app/support/issues/759) | Can't login/authentication message won't arrive | 8.50 |
+| [#751](https://github.com/pieces-app/support/issues/751) | Unable to generate Workstream Summary | 6.59 |
 | [#754](https://github.com/pieces-app/support/issues/754) | LTM-2.5 causes Chrome to freeze on large dynamic pages | 6.59 |
-| [#759](https://github.com/pieces-app/support/issues/759) | Can't login/authentication message won't arrive | 5.50 |
-| [#751](https://github.com/pieces-app/support/issues/751) | Unable to generate Workstream Summary | 5.17 |
-| [#758](https://github.com/pieces-app/support/issues/758) | Error Activating LTM-2.5 During Onboarding | 4.50 |
+| [#713](https://github.com/pieces-app/support/issues/713) | LTM not working in Pieces CLI | 6.58 |
+| [#755](https://github.com/pieces-app/support/issues/755) | Pieces has become increasingly slow and is now unresponsive | 5.34 |
 
 ## Common Issues
 ### 1. Pieces OS Performance Issues and LTM Integration Failures
-Multiple users report performance problems with Pieces OS, including Chrome freezes with LTM 2.5 enabled on large webpages, LTM not functioning in the CLI, and overall application slowness/unresponsiveness.  Common factors include various Pieces OS versions, Windows and macOS platforms, and different LLM models.  Disabling LTM 2.5 sometimes resolves the Chrome freezes. Further investigation into LTM integration and Pieces OS optimization is needed.
+Multiple users report performance problems with Pieces OS, including Chrome freezes with LTM 2.5 enabled on large webpages, LTM functionality not working in the Pieces CLI, and overall application slowness/unresponsiveness.  Issues appear across different OS versions (Windows, macOS) and Pieces components (Desktop, CLI).  Disabling LTM 2.5 sometimes resolves freezing, but core performance issues persist. Further investigation needed into LTM integration and overall application optimization.
 
 **Related Issues:**
 - [#754](https://github.com/pieces-app/support/issues/754): LTM-2.5 causes Chrome to freeze on large dynamic pages
 - [#713](https://github.com/pieces-app/support/issues/713): LTM not working in Pieces CLI
 - [#755](https://github.com/pieces-app/support/issues/755): Pieces has become increasingly slow and is now unresponsive
 
-### 2. LTM connection failures and slow performance
-Users report LTM connectivity issues across Pieces CLI and Desktop, including 404 errors for the Gemini-Pro model and timeouts.  Slow performance and unresponsiveness have also been observed, even with different LLM models.  Suggested solutions include verifying LTM settings, checking network connectivity, and ensuring sufficient resources.
+### 2. Pieces OS and Desktop App Performance Issues and Login Failures
+Users are experiencing login failures due to verification codes not arriving, slow performance, and unresponsiveness, especially with "New chats."  The Pieces team has acknowledged a service interruption affecting cloud-connected features and is investigating.  Users are encouraged to monitor official updates for service restoration.
+
+**Related Issues:**
+- [#759](https://github.com/pieces-app/support/issues/759): Can't login/authentication message won't arrive
+- [#755](https://github.com/pieces-app/support/issues/755): Pieces has become increasingly slow and is now unresponsive
+- [#756](https://github.com/pieces-app/support/issues/756): 🚨 Ongoing Service Interruption Impacting Pieces Products and Cloud-Connected Features
+
+### 3. LTM connection failures and slow performance
+Users report LTM connectivity issues across Pieces CLI and Desktop, including 404 errors for the Gemini-Pro model and timeouts.  Slow performance and unresponsiveness are also observed, even with different LLM models.  Suggested solutions include verifying LTM settings, checking network connectivity, and ensuring sufficient resources.
 
 **Related Issues:**
 - [#713](https://github.com/pieces-app/support/issues/713): LTM not working in Pieces CLI
 - [#758](https://github.com/pieces-app/support/issues/758): Error Activating LTM-2.5 During Onboarding
 - [#755](https://github.com/pieces-app/support/issues/755): Pieces has become increasingly slow and is now unresponsive
 
-### 3. LTM and model integration issues causing failures and slowdowns
-Users report LTM context extraction failures in MCP and CLI despite functional LTM in the desktop app.  This manifests as "Failed to extract context" errors or slow/unresponsive behavior. Potential causes include MCP server implementation issues, data access layer bugs, authentication/permission problems, or initialization errors.  Some users experience general slowdowns and unresponsiveness, possibly related to LTM or model integration issues. Troubleshooting steps include restarting the MCP server, verifying permissions, and testing different clients/parameters. 
+### 4. LTM and model integration issues causing failures and slowdowns
+Users report LTM context extraction failures in CLI and MCP tools despite functional LTM in the desktop app.  This suggests a disconnect between the LTM data access layer and these interfaces. Slowdowns and unresponsiveness with new chats, even with LTM disabled, point to broader model integration issues.  Suggested solutions include verifying MCP server authentication, data access permissions, and investigating potential bottlenecks in model communication.
 
 **Related Issues:**
 - [#747](https://github.com/pieces-app/support/issues/747): MCP `ask_pieces_ltm` tool consistently returns "Failed to extract context" despite functional LTM
 - [#713](https://github.com/pieces-app/support/issues/713): LTM not working in Pieces CLI
 - [#755](https://github.com/pieces-app/support/issues/755): Pieces has become increasingly slow and is now unresponsive
 
-### 4. Pieces Desktop App Issues on macOS and Linux
-Users are experiencing various issues with the Pieces desktop app, including login failures due to missing verification codes on macOS, slow performance and unresponsiveness on macOS, and failure to initialize past the initial screen on Linux.  The issues appear to be related to recent updates.  Suggested solutions include checking for Pieces OS updates and reinstalling the app.
+### 5. Pieces OS 12.0.0 Desktop App Issues
+Users are experiencing issues with the Pieces OS 12.0.0 Desktop application.  One user on Ubuntu 24.04 reports the app freezing at the initialization screen. Another user on macOS cannot log in due to verification code issues.  These issues may be related to ongoing service interruptions affecting cloud-connected features.  Check the Pieces status page for updates.
 
 **Related Issues:**
-- [#759](https://github.com/pieces-app/support/issues/759): Can't login/authentication message won't arrive
-- [#755](https://github.com/pieces-app/support/issues/755): Pieces has become increasingly slow and is now unresponsive
 - [#752](https://github.com/pieces-app/support/issues/752): Doesn't move past Initialising Desktop screen
+- [#759](https://github.com/pieces-app/support/issues/759): Can't login/authentication message won't arrive
+- [#756](https://github.com/pieces-app/support/issues/756): 🚨 Ongoing Service Interruption Impacting Pieces Products and Cloud-Connected Features
 
-### 5. Users unable to cancel LLM downloads
-Multiple users reported being unable to stop ongoing downloads of Large Language Models (LLMs).  The issue appears across different operating systems (Windows and macOS) and Pieces OS versions.  Error messages related to model access and HTTP connection failures are present. Further investigation into download cancellation mechanisms and error handling is needed.
-
-**Related Issues:**
-- [#459](https://github.com/pieces-app/support/issues/459): Bug: unable to cancel the download of an LLLM
-- [#751](https://github.com/pieces-app/support/issues/751): Unable to generate Workstream Summary
-- [#758](https://github.com/pieces-app/support/issues/758): Error Activating LTM-2.5 During Onboarding
-
-
-## Recommendations
-- Prioritize resolving LTM integration issues impacting Pieces CLI and Desktop applications, focusing on connectivity failures, 404 errors with Gemini-Pro, and slow performance. Investigate MCP server implementation, data access layer, authentication, and initialization processes.
-- Address Pieces OS performance problems, particularly Chrome freezes with LTM 2.5 enabled, CLI functionality, and overall application slowness. Optimize Pieces OS and LTM integration for large web pages and dynamic content.
-- Investigate and resolve the issue preventing users from canceling LLM downloads across different operating systems and Pieces OS versions.  Address error messages related to model access and HTTP connection failures.
-- Resolve macOS and Linux desktop app issues, including login failures due to missing verification codes on macOS, slow performance and unresponsiveness on macOS, and initialization failures on Linux.  Verify compatibility with recent updates and provide clear instructions for users experiencing these issues.
-- Improve communication with users regarding ongoing service interruptions and provide timely status updates on resolutions.  Proactively address user concerns about maintenance and service disruptions.
-- Investigate and resolve the "Failed to extract context" error in the MCP `ask_pieces_ltm` tool, ensuring proper data access and functionality parity with the main Pieces application.
-- Address the inability to generate workstream summaries due to HTTP connection failures and "Connection closed before full header was received" errors.  Improve error handling and connection stability.
-- Investigate reports of the workstream activities tab not functioning correctly and provide solutions or workarounds for affected users. 
 
 ## Daily Reports
 Here are the daily reports for this week:
@@ -79,3 +69,4 @@ Here are the daily reports for this week:
 - [report_210641](daily/2025-06-19/report_210641.md)
 - [report_131600](daily/2025-06-19/report_131600.md)
 - [report_131535](daily/2025-06-20/report_131535.md)
+- [report_210626](daily/2025-06-20/report_210626.md)
