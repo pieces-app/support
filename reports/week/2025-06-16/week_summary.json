@@ -2,7 +2,7 @@
   "success": true,
   "date_range": {
     "start": "2025-06-16T00:00:00+00:00",
-    "end": "2025-06-20T21:07:23.625596+00:00"
+    "end": "2025-06-21T05:07:21.413252+00:00"
   },
   "summary": {
     "total_tickets": 11,
@@ -144,19 +144,19 @@
       "activity_level": 8.5
     },
     {
+      "number": 713,
+      "title": "LTM not working in Pieces CLI",
+      "activity_level": 6.58
+    },
+    {
       "number": 751,
       "title": "Unable to generate Workstream Summary",
-      "activity_level": 6.59
+      "activity_level": 6.17
     },
     {
       "number": 754,
       "title": "LTM-2.5 causes Chrome to freeze on large dynamic pages",
-      "activity_level": 6.59
-    },
-    {
-      "number": 713,
-      "title": "LTM not working in Pieces CLI",
-      "activity_level": 6.58
+      "activity_level": 6.17
     },
     {
       "number": 755,
@@ -164,29 +164,29 @@
       "activity_level": 5.34
     },
     {
-      "number": 753,
-      "title": "Workstream activities tab is not working",
-      "activity_level": 3.92
-    },
-    {
-      "number": 752,
-      "title": "Doesn't move past Initialising Desktop screen",
-      "activity_level": 3.92
-    },
-    {
       "number": 758,
       "title": "Error Activating LTM-2.5 During Onboarding",
       "activity_level": 3.88
     },
     {
+      "number": 753,
+      "title": "Workstream activities tab is not working",
+      "activity_level": 3.67
+    },
+    {
       "number": 747,
       "title": "MCP `ask_pieces_ltm` tool consistently returns \"Failed to extract context\" despite functional LTM",
-      "activity_level": 3.61
+      "activity_level": 3.49
     },
     {
       "number": 756,
       "title": "\ud83d\udea8 Ongoing Service Interruption Impacting Pieces Products and Cloud-Connected Features",
       "activity_level": 3.03
+    },
+    {
+      "number": 752,
+      "title": "Doesn't move past Initialising Desktop screen",
+      "activity_level": 3.0
     },
     {
       "number": 459,
@@ -197,14 +197,14 @@
   "common_issues": [
     {
       "title": "Pieces OS Performance Issues and LTM Integration Failures",
-      "description": "Multiple users report performance problems with Pieces OS, including Chrome freezes with LTM 2.5 enabled on large webpages, LTM functionality not working in the Pieces CLI, and overall application slowness/unresponsiveness.  Issues appear across different OS versions (Windows, macOS) and Pieces components (Desktop, CLI).  Disabling LTM 2.5 sometimes resolves freezing, but core performance issues persist. Further investigation needed into LTM integration and overall application optimization.",
+      "description": "Users report performance issues with Pieces OS, including Chrome freezes with LTM 2.5 enabled on large webpages, LTM not working in Pieces CLI, and slow/unresponsive new chats.  Common factors include various Pieces OS versions, Windows and macOS platforms, and different LLM models. Disabling LTM 2.5 sometimes resolves Chrome freezes. Further investigation needed into LTM integration and overall performance bottlenecks.",
       "frequency": 3,
       "related_issues": [
         {
           "id": 754,
           "title": "LTM-2.5 causes Chrome to freeze on large dynamic pages",
           "text": "LTM-2.5 causes Chrome to freeze on large dynamic pages\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n12.0.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWhen browsing webpages with large amounts of content and dynamic elements, Chrome freezes when Pieces OS with LTM 2.5 is active. \n\n[Culprit webpage (Clarity CRM API Docs)](https://claritymobileapi.claritycrm.com/Help/Document) is ~500 KB raw HTML, ~700 KB total page size. Dynamic element(s) are a scroll linked table of contents.\n\n**What happens:**\n\n* Chrome CPU usage spikes (~50% CPU) during scrolling.\n* Memory usage stays stable.\n* Chrome freezes for 10-15 seconds, unfreezes, and freezes again when scrolling resumes.\n* Disabling LTM 2.5 resolves the freeze (Pieces OS still running).\n\n**Expected:**\nPieces should handle large pages without freezing or jumping while scrolling.\n\n---\n\n### **Steps to Reproduce**\n\n1. Enable LTM 2.5 in Pieces OS \n2. Load a large page (https://claritymobileapi.claritycrm.com/Help/Document).\n3. Scroll through the page.\n4. Observe Chrome freeze / become unresponsive as Pieces tries to capture context.\n---\n\n### **Environment**\n\n* OS: Windows 11 Pro\n* Chrome: 137.0.7151.104\n* Pieces OS: 12.0.0\n* LTM Version: 2.5\n* Pieces Chrome Extension: Tested with and without--same result. \n\n---\n\n### **Additional Notes**\n\nI observed high-frequency DOM mutations via MutationObserver, but unsure if root cause (found 80-150 DOM mutations per scroll event)\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 6.59
+          "activity_level": 6.17
         },
         {
           "id": 713,
@@ -222,7 +222,7 @@
     },
     {
       "title": "Pieces OS and Desktop App Performance Issues and Login Failures",
-      "description": "Users are experiencing login failures due to verification codes not arriving, slow performance, and unresponsiveness, especially with \"New chats.\"  The Pieces team has acknowledged a service interruption affecting cloud-connected features and is investigating.  Users are encouraged to monitor official updates for service restoration.",
+      "description": "Users are experiencing login failures due to verification codes not arriving, slow performance, and unresponsiveness, especially with 'New chats'.  The issues appear to be related to cloud-connected features and a potential service interruption.  Pieces is investigating the root cause and working on restoring full functionality.  Users can contact support for urgent concerns.",
       "frequency": 3,
       "related_issues": [
         {
@@ -246,8 +246,8 @@
       ]
     },
     {
-      "title": "LTM connection failures and slow performance",
-      "description": "Users report LTM connectivity issues across Pieces CLI and Desktop, including 404 errors for the Gemini-Pro model and timeouts.  Slow performance and unresponsiveness are also observed, even with different LLM models.  Suggested solutions include verifying LTM settings, checking network connectivity, and ensuring sufficient resources.",
+      "title": "LTM connection issues and slow performance",
+      "description": "Users report LTM connectivity problems in Pieces CLI and Desktop, including 404 errors and timeouts.  Slow performance and unresponsiveness are also observed, sometimes accompanied by error messages.  Potential solutions include verifying LTM settings, checking network connectivity, and ensuring sufficient resources.",
       "frequency": 3,
       "related_issues": [
         {
@@ -271,15 +271,15 @@
       ]
     },
     {
-      "title": "LTM and model integration issues causing failures and slowdowns",
-      "description": "Users report LTM context extraction failures in CLI and MCP tools despite functional LTM in the desktop app.  This suggests a disconnect between the LTM data access layer and these interfaces. Slowdowns and unresponsiveness with new chats, even with LTM disabled, point to broader model integration issues.  Suggested solutions include verifying MCP server authentication, data access permissions, and investigating potential bottlenecks in model communication.",
+      "title": "LTM Context Extraction Failure in Pieces",
+      "description": "Users report the `ask_pieces_ltm` tool and Pieces CLI fail to retrieve LTM context, despite LTM functionality within the Pieces desktop app.  The issue occurs across different OS and Pieces versions. Potential causes include MCP server implementation issues, authentication problems, or data access layer bugs.  Suggested troubleshooting includes restarting the Pieces MCP server and verifying Pieces OS permissions. Further investigation into the interaction between MCP tools and the LTM data access layer is needed.",
       "frequency": 3,
       "related_issues": [
         {
           "id": 747,
           "title": "MCP `ask_pieces_ltm` tool consistently returns \"Failed to extract context\" despite functional LTM",
           "text": "MCP `ask_pieces_ltm` tool consistently returns \"Failed to extract context\" despite functional LTM\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS Sequoia 15.5\n\n### Your Pieces OS Version\n\n11.4.4\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n## Bug Report\n\n**Environment:**\n- OS: macOS Sequoia 15.5\n- Pieces OS: 11.4.4 - Running (PID 699, actively collecting data)\n- Pieces App: 4.1.4 - Active with functional LTM workstream\n- MCP Server: Pieces MCP server on localhost:39300\n- Test Client: Warp Terminal Agent Mode, Claude, direct curl testing\n\n## Problem Description\n\nThe `ask_pieces_ltm` MCP tool consistently returns `\"Failed to extract context\"` with `\"isError\": true`, despite:\n\n1. \u2705 **LTM is working correctly** - User confirmed LTM is collecting data and showing results/summaries in the Pieces workstream\n2. \u2705 **MCP server communication works** - Can successfully call `create_pieces_memory` and list tools\n3. \u2705 **Pieces OS is running and active** - Process running with multiple active connections\n4. \u274c **Only `ask_pieces_ltm` fails** - Every call to this specific tool fails\n\n## Steps to Reproduce\n\n### 1. Verify MCP Server is Running\n```bash\nlsof -i :39300\n# Shows Pieces OS listening on port 39300 with multiple established connections\n```\n\n### 2. Confirm Tools are Available\n```bash\ncurl -N http://localhost:39300/model_context_protocol/2024-11-05/sse \\\n  -H 'Accept: text/event-stream' &\ncurl -X POST http://localhost:39300/model_context_protocol/2024-11-05/messages \\\n  -H 'Content-Type: application/json' \\\n  -d '{\"jsonrpc\":\"2.0\",\"id\":1,\"method\":\"tools/list\"}'\n```\n\n**Result:** \u2705 Successfully returns tools list with `ask_pieces_ltm` tool schema\n\n### 3. Test create_pieces_memory (Working)\n```bash\ncurl -X POST http://localhost:39300/model_context_protocol/2024-11-05/messages \\\n  -H 'Content-Type: application/json' \\\n  -d '{\n    \"jsonrpc\":\"2.0\",\"id\":2,\"method\":\"tools/call\",\n    \"params\":{\n      \"name\":\"create_pieces_memory\",\n      \"arguments\":{\n        \"summary\":\"Test memory\",\n        \"summary_description\":\"Testing connection\"\n      }\n    }\n  }'\n```\n\n**Result:** \u2705 `\"Long term memory successfully created\"`\n\n### 4. Test ask_pieces_ltm (Failing)\n```bash\ncurl -X POST http://localhost:39300/model_context_protocol/2024-11-05/messages \\\n  -H 'Content-Type: application/json' \\\n  -d '{\n    \"jsonrpc\":\"2.0\",\"id\":3,\"method\":\"tools/call\",\n    \"params\":{\n      \"name\":\"ask_pieces_ltm\",\n      \"arguments\":{\n        \"question\":\"What did I work on today?\",\n        \"chat_llm\":\"claude-3-5-sonnet-20241022\"\n      }\n    }\n  }'\n```\n\n**Result:** \u274c `{\"content\":[{\"type\":\"text\",\"text\":\"Failed to extract context\"}],\"isError\":true}`\n\n## Attempted Variations (All Failed)\n\n### Minimal Parameters\n```json\n{\n  \"question\": \"hello\",\n  \"chat_llm\": \"claude-3-5-sonnet-20241022\"\n}\n```\n\n### With Application Sources\n```json\n{\n  \"question\": \"What terminal commands have I run recently?\",\n  \"chat_llm\": \"claude-3-5-sonnet-20241022\",\n  \"application_sources\": [\"Warp\"],\n  \"connected_client\": \"Warp\"\n}\n```\n\n### Comprehensive Parameters\n```json\n{\n  \"question\": \"What did I work on today?\",\n  \"chat_llm\": \"claude-3-5-sonnet-20241022\",\n  \"connected_client\": \"Warp\",\n  \"application_sources\": [\"Warp\", \"Google Chrome\"],\n  \"topics\": [\"terminal\", \"commands\", \"recent\"],\n  \"related_questions\": [\"What was I working on?\", \"What debugging was I doing?\"]\n}\n```\n\n### Different Application Sources Tested\n- `[\"Warp\"]`\n- `[\"Google Chrome\", \"Safari\", \"Obsidian\"]`\n- `[\"Claude\"]`\n- Multiple combinations from the schema list\n\n**All variations return the same error.**\n\n## Troubleshooting Attempted\n\n1. \u2705 **Restarted Pieces MCP server** - Issue persists\n2. \u2705 **Verified Pieces OS permissions** - Has necessary macOS permissions\n3. \u2705 **Confirmed LTM data collection** - User sees active workstream data\n4. \u2705 **Tested different MCP clients** - Same error in Warp Agent Mode, Claude, and direct curl\n5. \u2705 **Used proper SSE endpoint** - `/sse` for responses, `/messages` for requests\n6. \u2705 **Verified JSON-RPC format** - Matches working `create_pieces_memory` calls\n\n## Expected Behavior\n\nThe `ask_pieces_ltm` tool should return contextual information from the user's LTM data, similar to how the main Pieces application shows workstream summaries and context.\n\n## Actual Behavior\n\nEvery call to `ask_pieces_ltm` returns:\n```json\n{\n  \"content\": [\n    {\n      \"type\": \"text\",\n      \"text\": \"Failed to extract context\"\n    }\n  ],\n  \"isError\": true\n}\n```\n\n## Analysis\n\nThis appears to be an **MCP server implementation issue** where:\n\n1. The `ask_pieces_ltm` tool is properly registered and callable\n2. The MCP communication protocol works correctly\n3. The underlying LTM system has data and functions properly\n4. There's a disconnect between the MCP tool implementation and the LTM data access layer\n\n## Potential Root Causes\n\n1. **Authentication/Session Issue**: MCP server process may lack proper authentication to access LTM data\n2. **Data Access Layer Bug**: `ask_pieces_ltm` implementation may be using incorrect API calls to access LTM\n3. **Permissions Issue**: MCP server may not have the same data access permissions as the main Pieces application\n4. **Initialization Problem**: LTM access for MCP tools may require additional setup or initialization\n\n## Request\n\nPlease investigate the `ask_pieces_ltm` tool implementation in the Pieces MCP server to identify why it cannot access the same LTM data that is clearly available to the main Pieces application.\n\n## Additional Context\n\n- Issue occurs consistently across different MCP clients (Warp, Claude)\n- `create_pieces_memory` works perfectly, confirming MCP communication\n- LTM is actively collecting and displaying data in the main Pieces app\n- No relevant error logs found in system logs or Pieces application logs\n- Multiple parameter variations attempted with identical results\n\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 3.61
+          "activity_level": 3.49
         },
         {
           "id": 713,
@@ -297,14 +297,14 @@
     },
     {
       "title": "Pieces OS 12.0.0 Desktop App Issues",
-      "description": "Users are experiencing issues with the Pieces OS 12.0.0 Desktop application.  One user on Ubuntu 24.04 reports the app freezing at the initialization screen. Another user on macOS cannot log in due to verification code issues.  These issues may be related to ongoing service interruptions affecting cloud-connected features.  Check the Pieces status page for updates.",
+      "description": "Users are experiencing issues with the Pieces OS 12.0.0 Desktop application.  On Linux, the app gets stuck on the initialization screen. On macOS, users are unable to log in due to verification code issues. These problems coincide with a reported service interruption affecting cloud-connected features.  Check the status page for updates and consider reverting to a previous version if possible.",
       "frequency": 3,
       "related_issues": [
         {
           "id": 752,
           "title": "Doesn't move past Initialising Desktop screen",
           "text": "Doesn't move past Initialising Desktop screen\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nLinux\n\n### Your Pieces OS Version\n\n12.0.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nHi team,\n\nYesterday (15th June 2025), a new pieces version got released on snap. The new version broke the installation completely and the Desktop application doesn't move past the first step of initialization itself. I thought it was a problem with my system, but I tried a fresh install on a completely different device and same behaviour was observed. Please let me know if there is a way to revert back to the older version till the time this issue gets resolved. Also, please let me know if any further details are required to assist you with the resolution.\n\nDistro: Ubuntu 24.04\nArch: x86_64\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 3.92
+          "activity_level": 3.0
         },
         {
           "id": 759,
@@ -321,6 +321,12 @@
       ]
     }
   ],
-  "recommendations": [],
+  "recommendations": [
+    "Prioritize resolving login and LTM connection issues impacting Pieces OS 12.0.0 and Desktop App, focusing on verification code delivery and cloud service stability.",
+    "Investigate and address the root cause of slow performance and unresponsiveness, particularly with 'New chats' and LTM integration, considering resource constraints and potential bottlenecks.",
+    "Improve communication with users regarding the ongoing service interruption and provide regular updates on the status page, including estimated resolution times and workarounds.",
+    "Develop more robust error handling and messaging for LTM context extraction failures in Pieces CLI and MCP tools, providing clearer guidance for troubleshooting and resolution.",
+    "Enhance documentation and support resources for LTM setup, configuration, and troubleshooting, addressing common issues like 404 errors and timeouts."
+  ],
   "message": "Daily support report generated successfully."
 }
