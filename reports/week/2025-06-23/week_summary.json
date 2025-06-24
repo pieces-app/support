@@ -2,55 +2,67 @@
   "success": true,
   "date_range": {
     "start": "2025-06-23T00:00:00+00:00",
-    "end": "2025-06-24T05:09:18.937993+00:00"
+    "end": "2025-06-24T13:17:37.586450+00:00"
   },
   "summary": {
-    "total_tickets": 3,
+    "total_tickets": 5,
     "resolved_tickets": 0,
-    "open_tickets": 3
+    "open_tickets": 5
   },
   "ticket_breakdown": [
     {
       "category": "bug",
-      "received": 3,
+      "received": 5,
       "resolved": 0,
-      "pending": 3
-    },
-    {
-      "category": "os:windows",
-      "received": 1,
-      "resolved": 0,
-      "pending": 1
+      "pending": 5
     },
     {
       "category": "app:desktop application",
+      "received": 5,
+      "resolved": 0,
+      "pending": 5
+    },
+    {
+      "category": "os:macos",
       "received": 3,
       "resolved": 0,
       "pending": 3
     },
     {
       "category": "app:pieces os",
+      "received": 3,
+      "resolved": 0,
+      "pending": 3
+    },
+    {
+      "category": "status:triaged",
+      "received": 4,
+      "resolved": 0,
+      "pending": 4
+    },
+    {
+      "category": "app:pieces copilot module",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "os:windows",
       "received": 2,
       "resolved": 0,
       "pending": 2
+    },
+    {
+      "category": "status:new",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
     },
     {
       "category": "app:vs code",
       "received": 1,
       "resolved": 0,
       "pending": 1
-    },
-    {
-      "category": "status:triaged",
-      "received": 3,
-      "resolved": 0,
-      "pending": 3
-    },
-    {
-      "category": "os:macos",
-      "received": 2,
-      "resolved": 0,
-      "pending": 2
     },
     {
       "category": "status:waiting_on_user_responses",
@@ -66,48 +78,84 @@
       "activity_level": 7.25
     },
     {
+      "number": 765,
+      "title": "Copilot doesn't use workstream activities properly.(It can't find data)",
+      "activity_level": 6.62
+    },
+    {
       "number": 759,
       "title": "Can't login/authentication message won't arrive",
-      "activity_level": 6.77
+      "activity_level": 6.33
+    },
+    {
+      "number": 766,
+      "title": "Pieces OS is not running even after several attempts and reinstallation",
+      "activity_level": 5.68
     },
     {
       "number": 763,
       "title": "Workstream activity can't update last week tasks",
-      "activity_level": 3.5
+      "activity_level": 5.25
     }
   ],
   "common_issues": [
     {
-      "title": "Pieces OS Performance and Login Issues",
-      "description": "Users are experiencing performance degradation in the VS Code extension after sending multiple messages, leading to slow UI and increased resource usage.  Additionally, some users are unable to log in due to verification code delivery failures.  One user reported issues updating workstream activity with an older Pieces OS version (4.2.1).",
+      "title": "Pieces OS v12.0.0 Performance and Login Issues",
+      "description": "Users are reporting issues with Pieces OS v12.0.0, including failure to launch on Windows after reinstallation, login problems on macOS due to verification codes not being received, and significant UI slowdown and performance drops in VS Code integration after sending multiple messages to Pieces Copilot, causing high CPU and RAM usage.",
       "frequency": 3,
       "related_issues": [
         {
-          "id": 762,
-          "title": "UI in Pieces OS for VS Code is extremely slow after sending several messages",
-          "text": "UI in Pieces OS for VS Code is extremely slow after sending several messages\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, VS Code, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n12.0.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nAfter sending several messages to Pieces Copilot in the extension for VS Code, there is a significant performance drop to the program which leads to the app eventually becoming extremely slow and difficult to use when pressing buttons, using keyboard input, and the speed of which a LLM responds. CPU usage and RAM usage also spikes when this occurs.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 7.25
+          "id": 766,
+          "title": "Pieces OS is not running even after several attempts and reinstallation",
+          "text": "Pieces OS is not running even after several attempts and reinstallation\n![Image](https://github.com/user-attachments/assets/eef39ab8-c92c-46d6-bb74-233b3145acd9)\n\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n12.0.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\ni have tried several times to start the Pieces OS but it is not running even after several attempts and reinstallation\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 5.68
         },
         {
           "id": 759,
           "title": "Can't login/authentication message won't arrive",
           "text": "Can't login/authentication message won't arrive\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n12.0.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI haven't been online a lot because of personal issues. Yesterday I restarted pieces for the first time in weeks, and it said I needed to sign in before I can continue.\nFirst the sign in link wouldn't work. Then I noticed there was a Pieces OS update too. After I clicked that update I got back to the same screen and the link would work.\nSo I entered my mail address and it said I should get a verification code, which never arrived. So I tried again later and still nothing happened. I decided to let it rest until today and try it again, but still the same result.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 6.77
+          "activity_level": 6.33
         },
+        {
+          "id": 762,
+          "title": "UI in Pieces OS for VS Code is extremely slow after sending several messages",
+          "text": "UI in Pieces OS for VS Code is extremely slow after sending several messages\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, VS Code, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n12.0.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nAfter sending several messages to Pieces Copilot in the extension for VS Code, there is a significant performance drop to the program which leads to the app eventually becoming extremely slow and difficult to use when pressing buttons, using keyboard input, and the speed of which a LLM responds. CPU usage and RAM usage also spikes when this occurs.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 7.25
+        }
+      ]
+    },
+    {
+      "title": "Pieces Desktop App Bugs on macOS",
+      "description": "Users are experiencing issues with the Pieces desktop app on macOS. These include workstream activity updates failing, Copilot not properly using workstream activities, and login/authentication problems with verification codes not arriving.  The reported Pieces OS versions are 4.2.1 and 12.0.0. Further investigation is needed to identify the root causes and solutions.",
+      "frequency": 3,
+      "related_issues": [
         {
           "id": 763,
           "title": "Workstream activity can't update last week tasks",
           "text": "Workstream activity can't update last week tasks\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n4.2.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI opened #753.\nNow, Today's workstream is being updated but still I can't update last week activities with refresh button(select last week)\n\nIs it good to think I can't revive last week tasks or I will be fixed?\n\n![Image](https://github.com/user-attachments/assets/e177dccd-caea-46b9-bdbb-d3f4e88bfc84)\n\n![Image](https://github.com/user-attachments/assets/91b7556d-d795-4e3d-8396-3b81cda2770d)\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 3.5
+          "activity_level": 5.25
+        },
+        {
+          "id": 765,
+          "title": "Copilot doesn't use workstream activities properly.(It can't find data)",
+          "text": "Copilot doesn't use workstream activities properly.(It can't find data)\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n4.2.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nLast week, I used the copilot for creating report of the day's work logs.\nIt worked properly but I doesn't work since yesterday(I don't know the issue starts from yesterday but I detected it on yesterday)\n\nCopliot can't find the activities in workstream and It doesn't care about time range selection.\n\nIt works when using 'start copilot chat' button in specific activity, but can't use with multiple activities.\n\nI hope to use it for creating daily work report everyday.\n\n- requested today's daily work report\n![Image](https://github.com/user-attachments/assets/fb4e4763-8866-432f-9ce5-12b4a0b4eead)\n- requested today's daily work report using english\n![Image](https://github.com/user-attachments/assets/e11a9ed2-2714-4f2b-8d6b-c3272dccafbd)\n- showing that I have acitivities\n![Image](https://github.com/user-attachments/assets/3c27034e-0640-45b5-8da8-83e715b95e5e)\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 6.62
+        },
+        {
+          "id": 759,
+          "title": "Can't login/authentication message won't arrive",
+          "text": "Can't login/authentication message won't arrive\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n12.0.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI haven't been online a lot because of personal issues. Yesterday I restarted pieces for the first time in weeks, and it said I needed to sign in before I can continue.\nFirst the sign in link wouldn't work. Then I noticed there was a Pieces OS update too. After I clicked that update I got back to the same screen and the link would work.\nSo I entered my mail address and it said I should get a verification code, which never arrived. So I tried again later and still nothing happened. I decided to let it rest until today and try it again, but still the same result.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 6.33
         }
       ]
     }
   ],
   "recommendations": [
-    "Investigate and address the performance issues in the VS Code extension, specifically focusing on UI slowdowns and increased resource usage after sending multiple messages.",
-    "Troubleshoot the login verification code delivery failures to ensure users can reliably access Pieces OS.",
-    "Review and update documentation or messaging regarding workstream activity updates, especially for older Pieces OS versions.",
-    "Prioritize resolution of the reported issues based on their frequency and activity level, starting with the VS Code performance degradation and login issues."
+    "Prioritize resolving the Pieces OS v12.0.0 performance and login issues as they affect multiple users across different operating systems (Windows and macOS). Investigate the reported failure to launch on Windows after reinstallation, login problems due to verification codes not being received, and UI slowdown/high resource usage in VS Code integration after multiple Copilot messages.",
+    "Address the Pieces Desktop App bugs on macOS, specifically workstream activity updates failing, Copilot not properly using workstream activities, and login/authentication issues. These issues impact user experience and workflow.",
+    "Focus on resolving the most active tickets (IDs 762, 765, 759, 766, 763) to reduce user frustration and improve overall satisfaction. These tickets represent the most pressing concerns and should be addressed promptly.",
+    "Improve communication with users regarding the status of their tickets, particularly those experiencing login issues. Ensure timely updates and provide clear instructions for troubleshooting or workarounds.",
+    "Investigate the root cause of the \"404 Publisher Model\" error appearing in the error logs. This recurring error may indicate a systemic problem with the error reporting or logging mechanism."
   ],
   "message": "Daily support report generated successfully."
 }
