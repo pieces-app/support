@@ -2,7 +2,7 @@
   "success": true,
   "date_range": {
     "start": "2025-06-23T00:00:00+00:00",
-    "end": "2025-06-24T13:17:37.586450+00:00"
+    "end": "2025-06-24T21:07:20.059971+00:00"
   },
   "summary": {
     "total_tickets": 5,
@@ -73,11 +73,6 @@
   ],
   "most_active_tickets": [
     {
-      "number": 762,
-      "title": "UI in Pieces OS for VS Code is extremely slow after sending several messages",
-      "activity_level": 7.25
-    },
-    {
       "number": 765,
       "title": "Copilot doesn't use workstream activities properly.(It can't find data)",
       "activity_level": 6.62
@@ -86,6 +81,11 @@
       "number": 759,
       "title": "Can't login/authentication message won't arrive",
       "activity_level": 6.33
+    },
+    {
+      "number": 762,
+      "title": "UI in Pieces OS for VS Code is extremely slow after sending several messages",
+      "activity_level": 6.24
     },
     {
       "number": 766,
@@ -100,8 +100,8 @@
   ],
   "common_issues": [
     {
-      "title": "Pieces OS v12.0.0 Performance and Login Issues",
-      "description": "Users are reporting issues with Pieces OS v12.0.0, including failure to launch on Windows after reinstallation, login problems on macOS due to verification codes not being received, and significant UI slowdown and performance drops in VS Code integration after sending multiple messages to Pieces Copilot, causing high CPU and RAM usage.",
+      "title": "Pieces OS 12.0.0 Performance and Login Issues",
+      "description": "Users are reporting issues with Pieces OS 12.0.0, including failure to launch on Windows after reinstallation, login problems on macOS due to verification codes not being received, and significant UI slowdown and performance drops in VS Code integration after sending multiple messages to Pieces Copilot, causing high CPU and RAM usage.",
       "frequency": 3,
       "related_issues": [
         {
@@ -120,7 +120,7 @@
           "id": 762,
           "title": "UI in Pieces OS for VS Code is extremely slow after sending several messages",
           "text": "UI in Pieces OS for VS Code is extremely slow after sending several messages\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, VS Code, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n12.0.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nAfter sending several messages to Pieces Copilot in the extension for VS Code, there is a significant performance drop to the program which leads to the app eventually becoming extremely slow and difficult to use when pressing buttons, using keyboard input, and the speed of which a LLM responds. CPU usage and RAM usage also spikes when this occurs.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 7.25
+          "activity_level": 6.24
         }
       ]
     },
@@ -151,11 +151,11 @@
     }
   ],
   "recommendations": [
-    "Prioritize resolving the Pieces OS v12.0.0 performance and login issues as they affect multiple users across different operating systems (Windows and macOS). Investigate the reported failure to launch on Windows after reinstallation, login problems due to verification codes not being received, and UI slowdown/high resource usage in VS Code integration after multiple Copilot messages.",
-    "Address the Pieces Desktop App bugs on macOS, specifically workstream activity updates failing, Copilot not properly using workstream activities, and login/authentication issues. These issues impact user experience and workflow.",
-    "Focus on resolving the most active tickets (IDs 762, 765, 759, 766, 763) to reduce user frustration and improve overall satisfaction. These tickets represent the most pressing concerns and should be addressed promptly.",
-    "Improve communication with users regarding the status of their tickets, particularly those experiencing login issues. Ensure timely updates and provide clear instructions for troubleshooting or workarounds.",
-    "Investigate the root cause of the \"404 Publisher Model\" error appearing in the error logs. This recurring error may indicate a systemic problem with the error reporting or logging mechanism."
+    "Investigate and address the login/authentication issue on macOS (verification codes not arriving).",
+    "Troubleshoot and fix the Pieces OS 12.0.0 launch failure on Windows after reinstallation.",
+    "Improve Pieces OS 12.0.0 performance, especially VS Code integration, focusing on UI slowdown and high CPU/RAM usage after multiple Copilot messages.",
+    "Address the workstream activity update failure on macOS (inability to update last week's tasks).",
+    "Fix the Copilot integration with workstream activities on macOS, ensuring it properly uses and finds data."
   ],
   "message": "Daily support report generated successfully."
 }
