@@ -1,0 +1,91 @@
+{
+  "success": true,
+  "date_range": {
+    "start": "2025-06-25T00:00:00+00:00",
+    "end": "2025-06-25T05:09:07.780897+00:00"
+  },
+  "summary": {
+    "total_tickets": 2,
+    "resolved_tickets": 0,
+    "open_tickets": 2
+  },
+  "ticket_breakdown": [
+    {
+      "category": "bug",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "app:desktop application",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "os:macos",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "app:pieces copilot module",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:triaged",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "app:pieces os",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    }
+  ],
+  "most_active_tickets": [
+    {
+      "number": 765,
+      "title": "Copilot doesn't use workstream activities properly.(It can't find data)",
+      "activity_level": 9.15
+    },
+    {
+      "number": 763,
+      "title": "Workstream activity can't update last week tasks",
+      "activity_level": 5.38
+    }
+  ],
+  "common_issues": [
+    {
+      "title": "Copilot fails to utilize workstream activities data",
+      "description": "Copilot cannot access or process workstream activity data, especially when generating daily work reports.  It fails to find activities within the workstream, regardless of time range selection.  While using \"start copilot chat\" within a specific activity works, it doesn't function with multiple activities.  Refreshing or selecting different time ranges does not resolve the issue. This affects daily report generation and historical activity access.",
+      "frequency": 2,
+      "related_issues": [
+        {
+          "id": 765,
+          "title": "Copilot doesn't use workstream activities properly.(It can't find data)",
+          "text": "Copilot doesn't use workstream activities properly.(It can't find data)\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n4.2.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nLast week, I used the copilot for creating report of the day's work logs.\nIt worked properly but I doesn't work since yesterday(I don't know the issue starts from yesterday but I detected it on yesterday)\n\nCopliot can't find the activities in workstream and It doesn't care about time range selection.\n\nIt works when using 'start copilot chat' button in specific activity, but can't use with multiple activities.\n\nI hope to use it for creating daily work report everyday.\n\n- requested today's daily work report\n![Image](https://github.com/user-attachments/assets/fb4e4763-8866-432f-9ce5-12b4a0b4eead)\n- requested today's daily work report using english\n![Image](https://github.com/user-attachments/assets/e11a9ed2-2714-4f2b-8d6b-c3272dccafbd)\n- showing that I have acitivities\n![Image](https://github.com/user-attachments/assets/3c27034e-0640-45b5-8da8-83e715b95e5e)\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 9.15
+        },
+        {
+          "id": 763,
+          "title": "Workstream activity can't update last week tasks",
+          "text": "Workstream activity can't update last week tasks\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n4.2.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI opened #753.\nNow, Today's workstream is being updated but still I can't update last week activities with refresh button(select last week)\n\nIs it good to think I can't revive last week tasks or I will be fixed?\n\n![Image](https://github.com/user-attachments/assets/e177dccd-caea-46b9-bdbb-d3f4e88bfc84)\n\n![Image](https://github.com/user-attachments/assets/91b7556d-d795-4e3d-8396-3b81cda2770d)\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 5.38
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    "Prioritize resolving the 'Copilot fails to utilize workstream activities data' issue, as it impacts core functionality and has the highest frequency and activity level.",
+    "Investigate the root cause of Copilot's inability to access workstream data, including potential data synchronization or access permission issues.",
+    "Address the 'Workstream activity can't update last week tasks' issue to ensure accurate activity tracking and reporting.",
+    "Improve communication with users regarding the status and resolution of these issues, especially ticket numbers 765 and 763.",
+    "Consider adding more detailed logging and error handling to Copilot to facilitate faster debugging and resolution of similar issues in the future."
+  ],
+  "message": "Daily support report generated successfully."
+}
