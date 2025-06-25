@@ -2,43 +2,61 @@
   "success": true,
   "date_range": {
     "start": "2025-06-23T00:00:00+00:00",
-    "end": "2025-06-25T13:17:35.610399+00:00"
+    "end": "2025-06-25T21:07:46.490935+00:00"
   },
   "summary": {
-    "total_tickets": 6,
+    "total_tickets": 8,
     "resolved_tickets": 0,
-    "open_tickets": 6
+    "open_tickets": 8
   },
   "ticket_breakdown": [
     {
       "category": "bug",
-      "received": 6,
+      "received": 8,
       "resolved": 0,
-      "pending": 6
+      "pending": 8
     },
     {
-      "category": "status:new",
+      "category": "app:desktop application",
+      "received": 8,
+      "resolved": 0,
+      "pending": 8
+    },
+    {
+      "category": "os:macos",
+      "received": 5,
+      "resolved": 0,
+      "pending": 5
+    },
+    {
+      "category": "status:waiting_on_user_responses",
       "received": 2,
       "resolved": 0,
       "pending": 2
     },
     {
-      "category": "app:desktop application",
-      "received": 6,
+      "category": "status:triaged",
+      "received": 5,
       "resolved": 0,
-      "pending": 6
+      "pending": 5
     },
     {
-      "category": "os:macos",
-      "received": 4,
+      "category": "os:windows",
+      "received": 3,
       "resolved": 0,
-      "pending": 4
+      "pending": 3
+    },
+    {
+      "category": "status:new",
+      "received": 3,
+      "resolved": 0,
+      "pending": 3
     },
     {
       "category": "app:pieces os",
-      "received": 4,
+      "received": 5,
       "resolved": 0,
-      "pending": 4
+      "pending": 5
     },
     {
       "category": "app:pieces copilot module",
@@ -47,25 +65,7 @@
       "pending": 1
     },
     {
-      "category": "status:triaged",
-      "received": 4,
-      "resolved": 0,
-      "pending": 4
-    },
-    {
-      "category": "os:windows",
-      "received": 2,
-      "resolved": 0,
-      "pending": 2
-    },
-    {
       "category": "app:vs code",
-      "received": 1,
-      "resolved": 0,
-      "pending": 1
-    },
-    {
-      "category": "status:waiting_on_user_responses",
       "received": 1,
       "resolved": 0,
       "pending": 1
@@ -78,14 +78,24 @@
       "activity_level": 7.25
     },
     {
-      "number": 762,
-      "title": "UI in Pieces OS for VS Code is extremely slow after sending several messages",
-      "activity_level": 6.24
+      "number": 770,
+      "title": "verify dependiencies",
+      "activity_level": 6.94
+    },
+    {
+      "number": 766,
+      "title": "Pieces OS is not running even after several attempts and reinstallation",
+      "activity_level": 6.0
     },
     {
       "number": 759,
       "title": "Can't login/authentication message won't arrive",
-      "activity_level": 5.99
+      "activity_level": 5.84
+    },
+    {
+      "number": 762,
+      "title": "UI in Pieces OS for VS Code is extremely slow after sending several messages",
+      "activity_level": 5.61
     },
     {
       "number": 763,
@@ -93,20 +103,20 @@
       "activity_level": 5.38
     },
     {
-      "number": 766,
-      "title": "Pieces OS is not running even after several attempts and reinstallation",
-      "activity_level": 5.25
-    },
-    {
       "number": 768,
       "title": "Pieces OS not running or responding after latest tahoe beta update",
+      "activity_level": 5.36
+    },
+    {
+      "number": 769,
+      "title": "An error occurred in the authentication flow.",
       "activity_level": 4.42
     }
   ],
   "common_issues": [
     {
-      "title": "Copilot struggles with workstream activities and data retrieval",
-      "description": "Users report Copilot failing to locate and utilize workstream activities, especially when selecting multiple activities or specific time ranges.  The issue appears to affect daily work report generation and activity updates.  One user mentioned success when using the 'start copilot chat' within a single activity.  Further investigation is needed to determine the root cause and potential solutions.",
+      "title": "Copilot fails to utilize workstream activities data",
+      "description": "Copilot cannot access or process workstream activity data, especially when generating daily work reports.  It fails to find activities within the workstream, regardless of time range selection.  While using \"start copilot chat\" within a specific activity works, using it with multiple activities does not.  This issue has persisted for several days and may be related to recent updates or dependencies.",
       "frequency": 3,
       "related_issues": [
         {
@@ -122,70 +132,95 @@
           "activity_level": 5.38
         },
         {
+          "id": 770,
+          "title": "verify dependiencies",
+          "text": "verify dependiencies\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\nos version upgrade \n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\ntakes time and restarting all the time \n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 6.94
+        }
+      ]
+    },
+    {
+      "title": "Pieces OS startup failures after update",
+      "description": "Users on macOS and Windows report Pieces OS failing to start or respond after recent updates, including the Tahoe beta.  Issues include slow startup, constant restarts, and complete unresponsiveness. Reinstallation has not resolved the problem for some users. Further investigation is needed to identify the root cause and potential solutions.",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 770,
+          "title": "verify dependiencies",
+          "text": "verify dependiencies\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\nos version upgrade \n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\ntakes time and restarting all the time \n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 6.94
+        },
+        {
           "id": 768,
           "title": "Pieces OS not running or responding after latest tahoe beta update",
           "text": "Pieces OS not running or responding after latest tahoe beta update\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\nlatest\n\n### Early Access Program\n\n- [x] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nit just won't open or respond after the latest tahoe beta update\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 4.42
+          "activity_level": 5.36
+        },
+        {
+          "id": 766,
+          "title": "Pieces OS is not running even after several attempts and reinstallation",
+          "text": "Pieces OS is not running even after several attempts and reinstallation\n![Image](https://github.com/user-attachments/assets/eef39ab8-c92c-46d6-bb74-233b3145acd9)\n\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n12.0.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\ni have tried several times to start the Pieces OS but it is not running even after several attempts and reinstallation\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 6.0
         }
       ]
     },
     {
       "title": "Pieces OS Performance Issues and Failure to Launch",
-      "description": "Users report Pieces OS performance degradation in VS Code after multiple Copilot messages, leading to slow UI and high resource usage.  Others report Pieces OS failing to launch on Windows and macOS after updates or reinstallation.  Suggested solutions include checking system resources, reinstalling Pieces OS, and verifying compatibility with VS Code extensions and OS versions.",
+      "description": "Users report Pieces OS performance degradation in VS Code after multiple Copilot messages, leading to slow UI and high resource usage.  Others report Pieces OS failing to launch on Windows and macOS after updates or reinstallation.  Suggested solutions include checking system resources, reinstalling Pieces OS, and verifying compatibility with latest updates.",
       "frequency": 3,
       "related_issues": [
         {
           "id": 762,
           "title": "UI in Pieces OS for VS Code is extremely slow after sending several messages",
           "text": "UI in Pieces OS for VS Code is extremely slow after sending several messages\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, VS Code, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n12.0.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nAfter sending several messages to Pieces Copilot in the extension for VS Code, there is a significant performance drop to the program which leads to the app eventually becoming extremely slow and difficult to use when pressing buttons, using keyboard input, and the speed of which a LLM responds. CPU usage and RAM usage also spikes when this occurs.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 6.24
+          "activity_level": 5.61
         },
         {
           "id": 766,
           "title": "Pieces OS is not running even after several attempts and reinstallation",
           "text": "Pieces OS is not running even after several attempts and reinstallation\n![Image](https://github.com/user-attachments/assets/eef39ab8-c92c-46d6-bb74-233b3145acd9)\n\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n12.0.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\ni have tried several times to start the Pieces OS but it is not running even after several attempts and reinstallation\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 5.25
+          "activity_level": 6.0
         },
         {
           "id": 768,
           "title": "Pieces OS not running or responding after latest tahoe beta update",
           "text": "Pieces OS not running or responding after latest tahoe beta update\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\nlatest\n\n### Early Access Program\n\n- [x] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nit just won't open or respond after the latest tahoe beta update\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 4.42
+          "activity_level": 5.36
         }
       ]
     },
     {
-      "title": "Pieces OS not running after latest update",
-      "description": "Users are reporting Pieces OS failing to start after the latest Tahoe beta update on macOS and Windows.  One user on macOS also reported login issues with verification codes not arriving. Reinstallation did not resolve the startup issue on Windows. Further investigation is needed into the update's impact on startup and login processes.",
+      "title": "Authentication and Startup Issues in Pieces OS 12.0.0",
+      "description": "Users are experiencing difficulty authenticating or starting Pieces OS 12.0.0 on Windows and macOS.  Authentication errors include failure to receive verification codes and generic error messages during the authentication flow.  Startup issues involve the application failing to launch or requiring login after extended offline periods.  Potential solutions include checking firewall settings, trying different browsers, reinstalling the application, and verifying network connectivity.",
       "frequency": 3,
       "related_issues": [
         {
-          "id": 768,
-          "title": "Pieces OS not running or responding after latest tahoe beta update",
-          "text": "Pieces OS not running or responding after latest tahoe beta update\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\nlatest\n\n### Early Access Program\n\n- [x] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nit just won't open or respond after the latest tahoe beta update\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "id": 769,
+          "title": "An error occurred in the authentication flow.",
+          "text": "An error occurred in the authentication flow.\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n12.0.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nHello,\nI am receiving this message when attempting to sign-in to Pieces.\n\n```\nAn error occurred in the authentication flow.\nAuthentication Error ID: 00000000000000000000000000000000\n```\n\nThis is a new install. (.appinstaller files)\nI have never used the software before.\nI do not have a pieces account (yet).\nEnvironment: Windows 11\n\nLaunched the authentication by clicking the Sign In button in the Desktop App (4.2.1)\nThe auth link opened Firefox and generated the error.\n\nI tried the following:\nDisabling all extensions in Firefox\nChanging my default browser to Edge and re-launching using Edge.\nRe-installing with the .exe files.\nReviewed the windows firewall config (Pieces added it itself)\nLooked at the Pieces log file but did not see anything obvious enough that I could solve on my own. (See attached)\n\n[log-06252025-copy.txt](https://github.com/user-attachments/files/20907036/log-06252025-copy.txt)\n\nThank you for the help.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
           "activity_level": 4.42
-        },
-        {
-          "id": 766,
-          "title": "Pieces OS is not running even after several attempts and reinstallation",
-          "text": "Pieces OS is not running even after several attempts and reinstallation\n![Image](https://github.com/user-attachments/assets/eef39ab8-c92c-46d6-bb74-233b3145acd9)\n\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n12.0.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\ni have tried several times to start the Pieces OS but it is not running even after several attempts and reinstallation\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 5.25
         },
         {
           "id": 759,
           "title": "Can't login/authentication message won't arrive",
           "text": "Can't login/authentication message won't arrive\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n12.0.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI haven't been online a lot because of personal issues. Yesterday I restarted pieces for the first time in weeks, and it said I needed to sign in before I can continue.\nFirst the sign in link wouldn't work. Then I noticed there was a Pieces OS update too. After I clicked that update I got back to the same screen and the link would work.\nSo I entered my mail address and it said I should get a verification code, which never arrived. So I tried again later and still nothing happened. I decided to let it rest until today and try it again, but still the same result.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 5.99
+          "activity_level": 5.84
+        },
+        {
+          "id": 766,
+          "title": "Pieces OS is not running even after several attempts and reinstallation",
+          "text": "Pieces OS is not running even after several attempts and reinstallation\n![Image](https://github.com/user-attachments/assets/eef39ab8-c92c-46d6-bb74-233b3145acd9)\n\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n12.0.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\ni have tried several times to start the Pieces OS but it is not running even after several attempts and reinstallation\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 6.0
         }
       ]
     }
   ],
   "recommendations": [
-    "Investigate and address the root cause of Copilot's failure to utilize workstream activities, especially for multiple activities and specific time ranges.",
-    "Prioritize performance improvements for Pieces OS in VS Code after multiple Copilot messages, focusing on UI responsiveness and resource usage.",
-    "Investigate and resolve the Pieces OS startup failures on macOS and Windows after the latest Tahoe beta update.",
-    "Address the login issue on macOS where verification codes are not arriving.",
-    "Improve communication with users regarding known issues and expected resolution timelines."
+    "Prioritize resolving the Pieces OS startup failures impacting both macOS and Windows users. This is a critical issue affecting core functionality and requires immediate attention.",
+    "Investigate the Copilot's inability to access workstream activity data. This impacts daily work reporting and hinders user productivity.",
+    "Address the authentication issues in Pieces OS 12.0.0, including verification code delivery failures and generic error messages. This blocks new users and returning users after offline periods.",
+    "Improve Pieces OS performance, particularly in VS Code after multiple Copilot messages. High resource usage and slow UI degrade the user experience.",
+    "Monitor and address any recurring issues related to recent updates or the Tahoe beta. This proactive approach can prevent widespread user frustration."
   ],
   "message": "Daily support report generated successfully."
 }
