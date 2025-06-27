@@ -2,7 +2,7 @@
   "success": true,
   "date_range": {
     "start": "2025-06-23T00:00:00+00:00",
-    "end": "2025-06-26T21:07:45.120596+00:00"
+    "end": "2025-06-27T05:08:34.167696+00:00"
   },
   "summary": {
     "total_tickets": 9,
@@ -102,20 +102,20 @@
       "activity_level": 5.17
     },
     {
-      "number": 763,
-      "title": "Workstream activity can't update last week tasks",
-      "activity_level": 4.84
-    },
-    {
       "number": 769,
       "title": "An error occurred in the authentication flow.",
       "activity_level": 4.5
+    },
+    {
+      "number": 763,
+      "title": "Workstream activity can't update last week tasks",
+      "activity_level": 3.74
     }
   ],
   "common_issues": [
     {
       "title": "Copilot struggles to access and utilize workstream activities",
-      "description": "Users report Copilot failing to locate or interact correctly with workstream activities, especially when generating reports or updating past tasks.  Issues include time range selection being ignored and difficulties accessing multiple activities simultaneously.  While single activity access via the 'start copilot chat' button may function, broader activity integration remains problematic.  This affects daily work reporting and task management.",
+      "description": "Users report Copilot failing to locate or interact correctly with workstream activities, especially when generating daily work reports or updating past tasks.  Issues include time range selection being ignored and inability to access multiple activities simultaneously.  While using \"start copilot chat\" within a single activity may work, the broader functionality appears broken.  This affects both macOS and Windows users.",
       "frequency": 3,
       "related_issues": [
         {
@@ -128,7 +128,7 @@
           "id": 763,
           "title": "Workstream activity can't update last week tasks",
           "text": "Workstream activity can't update last week tasks\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n4.2.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI opened #753.\nNow, Today's workstream is being updated but still I can't update last week activities with refresh button(select last week)\n\nIs it good to think I can't revive last week tasks or I will be fixed?\n\n![Image](https://github.com/user-attachments/assets/e177dccd-caea-46b9-bdbb-d3f4e88bfc84)\n\n![Image](https://github.com/user-attachments/assets/91b7556d-d795-4e3d-8396-3b81cda2770d)\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 4.84
+          "activity_level": 3.74
         },
         {
           "id": 716,
@@ -165,7 +165,7 @@
     },
     {
       "title": "Pieces OS Performance Issues and Failure to Launch",
-      "description": "Users report Pieces OS performance degradation in VS Code after multiple Copilot messages, leading to slow UI and high resource usage.  Others report Pieces OS failing to launch on Windows and macOS after updates or reinstallation.  Suggested solutions include checking system resources, reinstalling Pieces OS, and verifying compatibility with VS Code extensions and OS versions.",
+      "description": "Users report Pieces OS performance degradation in VS Code after multiple Copilot messages, leading to slow UI and high resource usage.  Others report Pieces OS failing to launch on Windows and macOS after updates or reinstallation.  Suggested solutions include checking system resources, reinstalling Pieces OS, and verifying compatibility with latest updates.",
       "frequency": 3,
       "related_issues": [
         {
@@ -189,8 +189,8 @@
       ]
     },
     {
-      "title": "Authentication and Startup Issues in Pieces OS 12.0.0",
-      "description": "Users are experiencing difficulty authenticating or starting Pieces OS 12.0.0 on Windows and macOS.  Authentication errors include failure to receive verification codes and generic error messages during the authentication flow.  Startup issues involve the application failing to launch or requiring login after extended offline periods.  Suggested troubleshooting includes checking firewall settings, reinstalling the application, and verifying network connectivity.",
+      "title": "Authentication and Startup Issues in Pieces OS",
+      "description": "Users are experiencing difficulty authenticating or starting Pieces OS.  Authentication issues include errors during the authentication flow and verification codes not being received. Startup issues involve the OS failing to launch after installation or update.  Potential solutions include checking firewall settings, reinstalling the application, and verifying network connectivity.",
       "frequency": 3,
       "related_issues": [
         {
@@ -215,11 +215,11 @@
     }
   ],
   "recommendations": [
-    "Prioritize resolving issues related to Copilot's interaction with workstream activities, as this impacts core user workflows.",
-    "Investigate and address the root causes of Pieces OS startup failures on Windows and macOS, ensuring consistent performance across platforms.",
-    "Improve LLM code generation accuracy and completeness to address user frustrations.",
-    "Streamline the authentication process for Pieces OS, minimizing errors and ensuring a smooth user experience.",
-    "Optimize Pieces OS performance within VS Code, particularly after extended Copilot usage, to prevent UI slowdowns and high resource consumption."
+    "Prioritize resolving issues related to Copilot's interaction with workstream activities (affects macOS and Windows users).",
+    "Investigate and address the root cause of Pieces OS startup failures on Windows and dependency verification issues on macOS.",
+    "Improve LLM code generation accuracy and completeness to address user reports of incomplete or incorrect code.",
+    "Address Pieces OS performance degradation in VS Code after multiple Copilot messages, focusing on UI responsiveness and resource usage.",
+    "Troubleshoot and resolve authentication issues, including errors during authentication flow and verification code delivery problems."
   ],
   "message": "Daily support report generated successfully."
 }
