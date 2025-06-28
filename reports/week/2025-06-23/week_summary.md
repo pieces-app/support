@@ -1,69 +1,71 @@
 # Support Ticket Report
-- Generated: 2025-06-28 13:13:46
+- Generated: 2025-06-28 21:08:09
 - Period: 2025-06-23 to 2025-06-28
 
 ## Summary
-- **Total Tickets:** 10
+- **Total Tickets:** 12
 - **Resolved:** 1
-- **Open:** 9
+- **Open:** 11
 
 ## 5 Most Active Tickets
 | Issue # | Title | Activity Level |
 |---------|-------|----------------|
-| [#716](https://github.com/pieces-app/support/issues/716) | llms won't provide me the full code i need | 10.45 |
-| [#765](https://github.com/pieces-app/support/issues/765) | Copilot doesn't use workstream activities properly.(It can't find data) | 6.59 |
+| [#716](https://github.com/pieces-app/support/issues/716) | llms won't provide me the full code i need | 10.08 |
+| [#315](https://github.com/pieces-app/support/issues/315) | Pieces desktop application is very slow/laggy, not generating any response in copilot chat. | 6.63 |
+| [#765](https://github.com/pieces-app/support/issues/765) | Copilot doesn't use workstream activities properly.(It can't find data) | 5.88 |
 | [#771](https://github.com/pieces-app/support/issues/771) | Crash when scrolling or moving a window to another screen | 5.68 |
 | [#759](https://github.com/pieces-app/support/issues/759) | Can't login/authentication message won't arrive | 5.16 |
-| [#762](https://github.com/pieces-app/support/issues/762) | UI in Pieces OS for VS Code is extremely slow after sending several messages | 4.83 |
 
 ## Common Issues
-### 1. Copilot struggles to access and utilize workstream activities
-Users report Copilot failing to locate or interact correctly with workstream activities, especially when generating daily work reports or updating past tasks.  Issues include time range selection being ignored and inability to access multiple activities simultaneously.  While single activity access via the 'start copilot chat' button may function, broader activity integration remains problematic.  This affects macOS users on Pieces OS version 4.2.1.
+### 1. Pieces OS and application performance issues
+Users report issues with Pieces OS not running after multiple attempts and reinstallation on Windows.  Additionally, the desktop application is slow, laggy, and unresponsive, especially after the latest update.  LLMs are also not providing complete or correct code. Troubleshooting may include checking system compatibility, reinstalling/updating software, and verifying LLM usage.
+
+**Related Issues:**
+- [#716](https://github.com/pieces-app/support/issues/716): llms won't provide me the full code i need
+- [#766](https://github.com/pieces-app/support/issues/766): Pieces OS is not running even after several attempts and reinstallation
+- [#315](https://github.com/pieces-app/support/issues/315): Pieces desktop application is very slow/laggy, not generating any response in copilot chat.
+
+### 2. Copilot struggles to access and utilize workstream activities
+Users report Copilot failing to locate or interact correctly with workstream activities, especially when generating daily work reports or refreshing past activities.  Issues include time range selection being ignored and inability to access multiple activities simultaneously.  While single activity access via the 'start copilot chat' button may function, the core functionality of utilizing workstream data seems impaired.  This affects macOS users on Pieces OS version 4.2.1.
 
 **Related Issues:**
 - [#765](https://github.com/pieces-app/support/issues/765): Copilot doesn't use workstream activities properly.(It can't find data)
 - [#763](https://github.com/pieces-app/support/issues/763): Workstream activity can't update last week tasks
 - [#716](https://github.com/pieces-app/support/issues/716): llms won't provide me the full code i need
 
-### 2. LLMs and Pieces OS Issues
-Users report problems with LLMs not generating complete or correct code.  Additionally, Pieces OS has startup failures on Windows and dependency verification issues on macOS, requiring restarts.  Further investigation is needed into LLM code generation and Pieces OS stability across platforms.
+### 3. Pieces app on Windows crashes/slows, OS fails to start
+Multiple users report Pieces for Windows crashing when moving between screens or scrolling, especially with version 12.  Others report extreme slowness/unresponsiveness.  Additionally, Pieces OS fails to launch for some users even after reinstallation.  Issue appears across different Pieces versions (10.0.1, 12.0.0).
 
 **Related Issues:**
-- [#716](https://github.com/pieces-app/support/issues/716): llms won't provide me the full code i need
+- [#771](https://github.com/pieces-app/support/issues/771): Crash when scrolling or moving a window to another screen
 - [#766](https://github.com/pieces-app/support/issues/766): Pieces OS is not running even after several attempts and reinstallation
-- [#770](https://github.com/pieces-app/support/issues/770): verify dependiencies
+- [#315](https://github.com/pieces-app/support/issues/315): Pieces desktop application is very slow/laggy, not generating any response in copilot chat.
 
-### 3. Pieces OS Performance Issues and Crashes on Windows
-Multiple users report performance degradation, crashes, and failure to launch Pieces OS 12.0.0 on Windows.  VS Code extension users experience slowdowns after multiple Copilot messages.  Desktop application crashes occur when moving the window or scrolling. Some users cannot launch the application at all.  Further investigation is needed to identify the root cause and potential solutions.
+### 4. Pieces OS Slow Performance and Unresponsiveness
+Users report slow performance and unresponsiveness in the Pieces desktop application and VS Code extension, especially after updates or sending multiple messages.  Symptoms include lag, delayed responses, and high CPU/RAM usage.  Some users experience complete application failure. Troubleshooting steps include hard reset of active runtime and reinstallation, but these have not been universally successful. An error related to the Gemini-pro model is also frequently reported.
 
 **Related Issues:**
+- [#315](https://github.com/pieces-app/support/issues/315): Pieces desktop application is very slow/laggy, not generating any response in copilot chat.
 - [#762](https://github.com/pieces-app/support/issues/762): UI in Pieces OS for VS Code is extremely slow after sending several messages
-- [#771](https://github.com/pieces-app/support/issues/771): Crash when scrolling or moving a window to another screen
 - [#766](https://github.com/pieces-app/support/issues/766): Pieces OS is not running even after several attempts and reinstallation
 
-### 4. Pieces OS and Desktop App Crashing/Not Running on Windows and macOS
-Users report Pieces OS and Desktop App crashing when scrolling, moving windows (Windows), or not launching at all after updates (Windows, macOS). Issues appear across Pieces OS 12.0.0 and Pieces for Developers 4.2.1, potentially related to Tahoe beta update on macOS.  Further investigation needed to pinpoint the root cause and provide solutions.
+### 5. Pieces OS and Ollama Installation Failures Across Platforms
+Users are reporting failures installing Ollama and launching Pieces OS on Linux, Windows, and macOS.  Linux users encounter immediate "Ollama failed to install" errors. Windows and macOS users report Pieces OS failing to start or respond, especially after updates.  Potential solutions include checking system compatibility, reinstalling Pieces OS, and verifying network connectivity.
 
 **Related Issues:**
-- [#771](https://github.com/pieces-app/support/issues/771): Crash when scrolling or moving a window to another screen
+- [#537](https://github.com/pieces-app/support/issues/537): Ollama Fails to Install on Linux
 - [#766](https://github.com/pieces-app/support/issues/766): Pieces OS is not running even after several attempts and reinstallation
 - [#768](https://github.com/pieces-app/support/issues/768): Pieces OS not running or responding after latest tahoe beta update
 
-### 5. Authentication and login issues across platforms
-Users are experiencing difficulty logging in or authenticating with Pieces OS 12.0.0 on Windows and macOS. Issues include authentication flow errors, verification emails not arriving, and the application not running after update/reinstallation.  Further investigation into authentication services and OS compatibility is needed.
-
-**Related Issues:**
-- [#769](https://github.com/pieces-app/support/issues/769): An error occurred in the authentication flow.
-- [#759](https://github.com/pieces-app/support/issues/759): Can't login/authentication message won't arrive
-- [#766](https://github.com/pieces-app/support/issues/766): Pieces OS is not running even after several attempts and reinstallation
-
 
 ## Recommendations
-- Prioritize resolving the Pieces OS crashing issue on Windows (especially version 12.0.0) impacting scrolling and window movement.
-- Investigate and address the authentication flow errors and email delivery problems affecting both Windows and macOS users.
-- Focus on fixing Copilot's integration with workstream activities, particularly its inability to access multiple activities and handle time ranges correctly on macOS.
-- Improve LLM code generation accuracy and completeness to address user reports of incomplete or incorrect code.
-- Investigate Pieces OS startup failures on Windows and dependency verification issues on macOS after updates, including the Tahoe beta impact.
+- Prioritize resolving the 'Pieces OS and application performance issues', focusing on Windows compatibility, application responsiveness, and LLM accuracy.
+- Investigate and address the 'Copilot struggles to access and utilize workstream activities' issue on macOS, specifically the time range selection and multi-activity access.
+- Troubleshoot 'Pieces app on Windows crashes/slows, OS fails to start' by examining crash reports and optimizing performance for version 12.
+- Address the 'Pieces OS and Ollama Installation Failures Across Platforms' by providing clear installation instructions and verifying compatibility across operating systems.
+- Improve LLM code generation completeness and correctness based on feedback in ticket #716.
+- Optimize Pieces desktop application performance and responsiveness, especially after updates, and investigate the Gemini-pro model error.
+- Provide support and documentation for users experiencing login/authentication issues (ticket #759).
 
 ## Daily Reports
 Here are the daily reports for this week:
@@ -76,4 +78,5 @@ Here are the daily reports for this week:
 - [report_131643](daily/2025-06-26/report_131643.md)
 - [report_210659](daily/2025-06-26/report_210659.md)
 - [report_050732](daily/2025-06-28/report_050732.md)
+- [report_210621](daily/2025-06-28/report_210621.md)
 - [report_131242](daily/2025-06-28/report_131242.md)
