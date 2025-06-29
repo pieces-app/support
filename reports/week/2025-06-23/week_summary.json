@@ -2,7 +2,7 @@
   "success": true,
   "date_range": {
     "start": "2025-06-23T00:00:00+00:00",
-    "end": "2025-06-28T21:06:50.849692+00:00"
+    "end": "2025-06-29T05:10:02.967144+00:00"
   },
   "summary": {
     "total_tickets": 12,
@@ -100,11 +100,6 @@
       "activity_level": 5.88
     },
     {
-      "number": 771,
-      "title": "Crash when scrolling or moving a window to another screen",
-      "activity_level": 5.68
-    },
-    {
       "number": 759,
       "title": "Can't login/authentication message won't arrive",
       "activity_level": 5.16
@@ -120,19 +115,24 @@
       "activity_level": 4.57
     },
     {
+      "number": 771,
+      "title": "Crash when scrolling or moving a window to another screen",
+      "activity_level": 4.5
+    },
+    {
       "number": 766,
       "title": "Pieces OS is not running even after several attempts and reinstallation",
       "activity_level": 3.56
     },
     {
-      "number": 763,
-      "title": "Workstream activity can't update last week tasks",
-      "activity_level": 3.5
-    },
-    {
       "number": 770,
       "title": "verify dependiencies",
       "activity_level": 3.48
+    },
+    {
+      "number": 763,
+      "title": "Workstream activity can't update last week tasks",
+      "activity_level": 3.31
     },
     {
       "number": 768,
@@ -148,7 +148,7 @@
   "common_issues": [
     {
       "title": "Pieces OS and application performance issues",
-      "description": "Users report issues with Pieces OS not running after multiple attempts and reinstallation on Windows.  Additionally, the desktop application is slow, laggy, and unresponsive, especially after the latest update.  LLMs are also not providing complete or correct code. Troubleshooting may include checking system compatibility, reinstalling/updating software, and verifying LLM usage.",
+      "description": "Users report the Pieces desktop application and OS being slow, unresponsive, or not launching on Windows.  LLMs are also failing to provide complete or correct code. Troubleshooting may include checking system resources, reinstalling the application, or ensuring the latest OS version.",
       "frequency": 3,
       "related_issues": [
         {
@@ -173,7 +173,7 @@
     },
     {
       "title": "Copilot struggles to access and utilize workstream activities",
-      "description": "Users report Copilot failing to locate or interact correctly with workstream activities, especially when generating daily work reports or refreshing past activities.  Issues include time range selection being ignored and inability to access multiple activities simultaneously.  While single activity access via the 'start copilot chat' button may function, the core functionality of utilizing workstream data seems impaired.  This affects macOS users on Pieces OS version 4.2.1.",
+      "description": "Users report Copilot failing to locate or interact correctly with workstream activities, especially when generating daily work reports or updating past tasks.  The issue appears across macOS and potentially Windows platforms, affecting Copilot's ability to process time ranges and access data from multiple activities.  One user mentioned success when using the 'start copilot chat' within a specific activity, suggesting a potential workaround.",
       "frequency": 3,
       "related_issues": [
         {
@@ -186,7 +186,7 @@
           "id": 763,
           "title": "Workstream activity can't update last week tasks",
           "text": "Workstream activity can't update last week tasks\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n4.2.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI opened #753.\nNow, Today's workstream is being updated but still I can't update last week activities with refresh button(select last week)\n\nIs it good to think I can't revive last week tasks or I will be fixed?\n\n![Image](https://github.com/user-attachments/assets/e177dccd-caea-46b9-bdbb-d3f4e88bfc84)\n\n![Image](https://github.com/user-attachments/assets/91b7556d-d795-4e3d-8396-3b81cda2770d)\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 3.5
+          "activity_level": 3.31
         },
         {
           "id": 716,
@@ -197,33 +197,8 @@
       ]
     },
     {
-      "title": "Pieces app on Windows crashes/slows, OS fails to start",
-      "description": "Multiple users report Pieces for Windows crashing when moving between screens or scrolling, especially with version 12.  Others report extreme slowness/unresponsiveness.  Additionally, Pieces OS fails to launch for some users even after reinstallation.  Issue appears across different Pieces versions (10.0.1, 12.0.0).",
-      "frequency": 3,
-      "related_issues": [
-        {
-          "id": 771,
-          "title": "Crash when scrolling or moving a window to another screen",
-          "text": "Crash when scrolling or moving a window to another screen\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nPiecesOS 12.0.0, Pieces for Developers 4.2.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI don't know how to provide more info.\nEvery time I move the app on my left screen, it crashes. Oftentimes when I scroll the chats list or the chat itself, it crashes, too.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 5.68
-        },
-        {
-          "id": 766,
-          "title": "Pieces OS is not running even after several attempts and reinstallation",
-          "text": "Pieces OS is not running even after several attempts and reinstallation\n![Image](https://github.com/user-attachments/assets/eef39ab8-c92c-46d6-bb74-233b3145acd9)\n\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n12.0.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\ni have tried several times to start the Pieces OS but it is not running even after several attempts and reinstallation\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 3.56
-        },
-        {
-          "id": 315,
-          "title": "Pieces desktop application is very slow/laggy, not generating any response in copilot chat.",
-          "text": "Pieces desktop application is very slow/laggy, not generating any response in copilot chat.\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n10.0.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nPieces desktop application is working very much slow after latest update, takes very much time to give any response. Even after doing a hard reset active runtime, it just do not work. \nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 6.63
-        }
-      ]
-    },
-    {
-      "title": "Pieces OS Slow Performance and Unresponsiveness",
-      "description": "Users report slow performance and unresponsiveness in the Pieces desktop application and VS Code extension, especially after updates or sending multiple messages.  Symptoms include lag, delayed responses, and high CPU/RAM usage.  Some users experience complete application failure. Troubleshooting steps include hard reset of active runtime and reinstallation, but these have not been universally successful. An error related to the Gemini-pro model is also frequently reported.",
+      "title": "Pieces OS slow performance and unresponsiveness",
+      "description": "Users report slow performance and unresponsiveness in the Pieces desktop app and VS Code extension, especially after updates or sending multiple messages to Copilot.  Symptoms include lag, delayed responses, and high CPU/RAM usage. Some users experience complete application failure. Troubleshooting steps like hard reset haven't resolved the issue.  A common error message related to a missing publisher model is also reported.",
       "frequency": 3,
       "related_issues": [
         {
@@ -247,8 +222,33 @@
       ]
     },
     {
+      "title": "Pieces app on Windows crashes/slows, OS fails to start",
+      "description": "Multiple users report Pieces for Windows crashing when moving between screens or scrolling, especially with version 12.  Others report extreme slowness/unresponsiveness.  Additionally, Pieces OS fails to launch for some users even after reinstallation.  Potential solutions include checking system compatibility, updating graphics drivers, reinstalling the app, and verifying OS integrity.",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 771,
+          "title": "Crash when scrolling or moving a window to another screen",
+          "text": "Crash when scrolling or moving a window to another screen\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nPiecesOS 12.0.0, Pieces for Developers 4.2.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI don't know how to provide more info.\nEvery time I move the app on my left screen, it crashes. Oftentimes when I scroll the chats list or the chat itself, it crashes, too.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 4.5
+        },
+        {
+          "id": 766,
+          "title": "Pieces OS is not running even after several attempts and reinstallation",
+          "text": "Pieces OS is not running even after several attempts and reinstallation\n![Image](https://github.com/user-attachments/assets/eef39ab8-c92c-46d6-bb74-233b3145acd9)\n\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n12.0.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\ni have tried several times to start the Pieces OS but it is not running even after several attempts and reinstallation\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 3.56
+        },
+        {
+          "id": 315,
+          "title": "Pieces desktop application is very slow/laggy, not generating any response in copilot chat.",
+          "text": "Pieces desktop application is very slow/laggy, not generating any response in copilot chat.\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n10.0.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nPieces desktop application is working very much slow after latest update, takes very much time to give any response. Even after doing a hard reset active runtime, it just do not work. \nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 6.63
+        }
+      ]
+    },
+    {
       "title": "Pieces OS and Ollama Installation Failures Across Platforms",
-      "description": "Users are reporting failures installing Ollama and launching Pieces OS on Linux, Windows, and macOS.  Linux users encounter immediate \"Ollama failed to install\" errors. Windows and macOS users report Pieces OS failing to start or respond, especially after updates.  Potential solutions include checking system compatibility, reinstalling Pieces OS, and verifying network connectivity.",
+      "description": "Users are reporting failures related to Pieces OS and Ollama installation and startup across Linux, Windows, and macOS.  Issues include immediate installation failure dialogs for Ollama on Linux, Pieces OS failing to start on Windows after multiple reinstallations, and unresponsiveness on macOS after the latest Tahoe beta update. Further investigation is needed to determine the root cause and potential solutions across these platforms.",
       "frequency": 3,
       "related_issues": [
         {
@@ -273,13 +273,11 @@
     }
   ],
   "recommendations": [
-    "Prioritize resolving the 'Pieces OS and application performance issues', focusing on Windows compatibility, application responsiveness, and LLM accuracy.",
-    "Investigate and address the 'Copilot struggles to access and utilize workstream activities' issue on macOS, specifically the time range selection and multi-activity access.",
-    "Troubleshoot 'Pieces app on Windows crashes/slows, OS fails to start' by examining crash reports and optimizing performance for version 12.",
-    "Address the 'Pieces OS and Ollama Installation Failures Across Platforms' by providing clear installation instructions and verifying compatibility across operating systems.",
-    "Improve LLM code generation completeness and correctness based on feedback in ticket #716.",
-    "Optimize Pieces desktop application performance and responsiveness, especially after updates, and investigate the Gemini-pro model error.",
-    "Provide support and documentation for users experiencing login/authentication issues (ticket #759)."
+    "Prioritize resolving the 'Pieces OS and application performance issues' as it has the highest frequency and significant user impact. Investigate the root cause of the missing publisher model error and slow performance across Windows, macOS, and potentially Linux.  Optimize application and OS resource usage.",
+    "Address the 'Copilot struggles to access and utilize workstream activities' issue by investigating Copilot's interaction with workstreams, especially time range selection and multi-activity access. Ensure consistent performance across macOS and Windows.",
+    "Focus on resolving the 'Pieces OS and Ollama Installation Failures Across Platforms' to improve user onboarding. Investigate and fix the installation failures on Linux, startup issues on Windows, and unresponsiveness on macOS after the Tahoe beta update.",
+    "Investigate and address the high-activity tickets, especially #716, #315, and #765, as they represent recurring and impactful issues for users.  These tickets relate to LLM code generation, application performance, and workstream integration, respectively.",
+    "Improve communication with users on tickets like #759 and #769 related to login/authentication issues. Provide clear instructions and timely updates to minimize user frustration."
   ],
   "message": "Daily support report generated successfully."
 }
