@@ -1,31 +1,35 @@
 # Support Ticket Report
-- Generated: 2025-06-30 13:17:31
+- Generated: 2025-06-30 21:07:36
 - Period: 2025-06-30 to 2025-06-30
 
 ## Summary
-- **Total Tickets:** 1
+- **Total Tickets:** 2
 - **Resolved:** 0
-- **Open:** 1
+- **Open:** 2
 
 ## 5 Most Active Tickets
 | Issue # | Title | Activity Level |
 |---------|-------|----------------|
 | [#315](https://github.com/pieces-app/support/issues/315) | Pieces desktop application is very slow/laggy, not generating any response in copilot chat. | 6.39 |
+| [#537](https://github.com/pieces-app/support/issues/537) | Ollama Fails to Install on Linux | 4.92 |
 
 ## Common Issues
-### 1. Pieces desktop app slow/laggy, unresponsive Copilot chat
-Users report slow performance and unresponsiveness in the Pieces desktop app, especially Copilot chat, after the latest update on Windows.  A hard reset does not resolve the issue. An error message indicates a 404 for the Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro`. This suggests a problem with the model access or version.
+### 1. Ollama installation failure and application slowness
+Users reported issues with Ollama failing to install on Linux (v11) with an immediate error dialog.  Separate reports on Windows (v10) indicated application slowness and unresponsiveness in the Copilot chat feature, especially after the latest update.  A hard reset did not resolve the slowness issue. Further investigation is needed for both the installation failure and performance degradation.
 
 **Related Issues:**
+- [#537](https://github.com/pieces-app/support/issues/537): Ollama Fails to Install on Linux
 - [#315](https://github.com/pieces-app/support/issues/315): Pieces desktop application is very slow/laggy, not generating any response in copilot chat.
 
 
 ## Recommendations
-- Investigate the reported slow performance and unresponsiveness in the Pieces desktop app, especially Copilot chat, after the latest update on Windows.
-- Address the 404 error for the Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` to restore Copilot chat functionality.
-- Prioritize resolving issue #315 due to its high activity level and impact on user experience.
+- Investigate and address the Ollama installation failure on Linux (v11).  Prioritize this due to its impact on new users.
+- Investigate and address the performance issues in the desktop application on Windows (v10), specifically the Copilot chat slowness.  Gather more data from affected users to pinpoint the root cause.
+- Update support documentation and FAQs with troubleshooting steps for Ollama installation issues and application slowness.  This can help reduce support ticket volume.
+- Consider adding more detailed logging to the desktop application to aid in debugging performance problems.
 
 ## Daily Reports
 Here are the daily reports for this week:
 
+- [report_210643](daily/2025-06-30/report_210643.md)
 - [report_131650](daily/2025-06-30/report_131650.md)
