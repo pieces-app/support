@@ -1,5 +1,5 @@
 # Support Ticket Report
-- Generated: 2025-07-01 05:11:18
+- Generated: 2025-07-01 13:17:11
 - Period: 2025-06-30 to 2025-07-01
 
 ## Summary
@@ -10,7 +10,7 @@
 ## 5 Most Active Tickets
 | Issue # | Title | Activity Level |
 |---------|-------|----------------|
-| [#315](https://github.com/pieces-app/support/issues/315) | Pieces desktop application is very slow/laggy, not generating any response in copilot chat. | 6.39 |
+| [#315](https://github.com/pieces-app/support/issues/315) | Pieces desktop application is very slow/laggy, not generating any response in copilot chat. | 6.38 |
 | [#537](https://github.com/pieces-app/support/issues/537) | Ollama Fails to Install on Linux | 4.92 |
 
 ## Common Issues
@@ -23,10 +23,9 @@ Users reported issues with Ollama failing to install on Linux (v11) with an imme
 
 
 ## Recommendations
-- Prioritize resolving the Ollama installation failure on Linux (Issue #537) due to its impact on new user onboarding.
-- Investigate and address the performance issues reported on Windows (Issue #315) affecting core application responsiveness.
-- Proactively monitor and address known issues to prevent recurrence and improve user experience.
-- Consider expanding support resources or documentation to address common issues and reduce ticket volume.
+- Prioritize resolving the Ollama installation failure on Linux (v11) to unblock new users.
+- Investigate and address the performance issues on Windows (v10) impacting core application responsiveness.
+- Proactively monitor and address the known issue impacting both Linux and Windows users.
 
 ## Daily Reports
 Here are the daily reports for this week:
