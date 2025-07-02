@@ -1,5 +1,5 @@
 # Support Ticket Report
-- Generated: 2025-07-02 05:09:59
+- Generated: 2025-07-02 13:17:29
 - Period: 2025-06-30 to 2025-07-02
 
 ## Summary
@@ -10,13 +10,13 @@
 ## 5 Most Active Tickets
 | Issue # | Title | Activity Level |
 |---------|-------|----------------|
-| [#315](https://github.com/pieces-app/support/issues/315) | Pieces desktop application is very slow/laggy, not generating any response in copilot chat. | 6.38 |
+| [#315](https://github.com/pieces-app/support/issues/315) | Pieces desktop application is very slow/laggy, not generating any response in copilot chat. | 6.14 |
 | [#537](https://github.com/pieces-app/support/issues/537) | Ollama Fails to Install on Linux | 4.92 |
 | [#771](https://github.com/pieces-app/support/issues/771) | Crash when scrolling or moving a window to another screen | 3.92 |
 
 ## Common Issues
 ### 1. Pieces Desktop App Crashes/Performance Issues on Windows
-Multiple users report crashes and slow performance with the Pieces desktop app on Windows.  Crashes occur when moving the app window between screens or scrolling. Performance issues include lag and slow response times, especially after updates.  Troubleshooting steps include checking system resources, updating graphics drivers, and reinstalling the app.
+Multiple users reported crashes and slow performance with the Pieces desktop app on Windows.  Crashes occur when moving the app window between screens or scrolling. Performance issues include slow response times and lag.  One user on Pieces OS 10.0.1 reported slow response in Copilot chat even after a hard reset. Another user on Pieces OS 12.0.0 reported crashes when moving the app to the left screen or scrolling in chats.
 
 **Related Issues:**
 - [#771](https://github.com/pieces-app/support/issues/771): Crash when scrolling or moving a window to another screen
@@ -25,14 +25,15 @@ Multiple users report crashes and slow performance with the Pieces desktop app o
 
 
 ## Recommendations
-- Prioritize resolving the performance issues and crashes on Windows, as they affect multiple users and impact core app functionality.
-- Investigate the root cause of the crashes when moving the app window or scrolling on Windows. Check for compatibility issues with different Windows versions, graphics drivers, or screen configurations.
-- Optimize the Pieces desktop application's performance on Windows. Profile the app to identify bottlenecks and optimize resource usage, especially after updates.
-- Address the issue with Ollama failing to install on Linux. Review installation logs and dependencies to pinpoint the cause of the failure.
-- Improve communication with users experiencing the "slow/laggy" performance issue. Request additional information, such as system specs, logs, and steps to reproduce the problem.
-- Consider adding more detailed logging to the desktop application to better track and diagnose performance issues and crashes.
+- Prioritize resolving the performance issues and crashes on Windows, given their high frequency and impact on users.
+- Investigate the root cause of the crashes and slow performance on Windows. Check for compatibility issues with different Windows versions and hardware configurations.
+- Gather more detailed information from users experiencing the Windows performance issues, including their Windows version, hardware specs, and steps to reproduce the crashes.
+- Address the issue with Ollama failing to install on Linux. Check for dependency issues or conflicts with other software.
+- Consider adding more specific logging to the desktop application to capture more information about crashes and performance issues.
+- Improve communication with users by providing updates on the progress of resolving these issues.
 
 ## Daily Reports
 Here are the daily reports for this week:
 
 - [report_050918](daily/2025-07-02/report_050918.md)
+- [report_131641](daily/2025-07-02/report_131641.md)
