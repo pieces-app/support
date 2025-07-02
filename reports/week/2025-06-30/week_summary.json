@@ -2,16 +2,34 @@
   "success": true,
   "date_range": {
     "start": "2025-06-30T00:00:00+00:00",
-    "end": "2025-07-01T21:06:56.698202+00:00"
+    "end": "2025-07-02T05:09:30.138337+00:00"
   },
   "summary": {
-    "total_tickets": 2,
+    "total_tickets": 3,
     "resolved_tickets": 0,
-    "open_tickets": 2
+    "open_tickets": 3
   },
   "ticket_breakdown": [
     {
       "category": "bug",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "os:windows",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:desktop application",
+      "received": 3,
+      "resolved": 0,
+      "pending": 3
+    },
+    {
+      "category": "status:triaged",
       "received": 1,
       "resolved": 0,
       "pending": 1
@@ -21,12 +39,6 @@
       "received": 1,
       "resolved": 0,
       "pending": 1
-    },
-    {
-      "category": "app:desktop application",
-      "received": 2,
-      "resolved": 0,
-      "pending": 2
     },
     {
       "category": "os:linux",
@@ -51,33 +63,47 @@
       "number": 537,
       "title": "Ollama Fails to Install on Linux",
       "activity_level": 4.92
+    },
+    {
+      "number": 771,
+      "title": "Crash when scrolling or moving a window to another screen",
+      "activity_level": 3.92
     }
   ],
   "common_issues": [
     {
-      "title": "Ollama installation failure and application slowness",
-      "description": "Users reported issues with Ollama failing to install on Linux (v11) with an immediate error dialog.  Separately, slow performance and unresponsiveness were observed on Windows (v10) after a recent update, even after a hard reset. Both issues hinder core functionality.",
-      "frequency": 2,
+      "title": "Pieces Desktop App Crashes/Performance Issues on Windows",
+      "description": "Multiple users report crashes and slow performance with the Pieces desktop app on Windows.  Crashes occur when moving the app window between screens or scrolling. Performance issues include lag and slow response times, especially after updates.  Troubleshooting steps include checking system resources, updating graphics drivers, and reinstalling the app.",
+      "frequency": 3,
       "related_issues": [
         {
-          "id": 537,
-          "title": "Ollama Fails to Install on Linux",
-          "text": "Ollama Fails to Install on Linux\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nLinux\n\n### Your Pieces OS Version\n\n11.0.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nUser reports immediate \"Ollama failed to install\" diaglog upon clicking install Ollama install button in Pieces desktop app\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 4.92
+          "id": 771,
+          "title": "Crash when scrolling or moving a window to another screen",
+          "text": "Crash when scrolling or moving a window to another screen\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nPiecesOS 12.0.0, Pieces for Developers 4.2.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI don't know how to provide more info.\nEvery time I move the app on my left screen, it crashes. Oftentimes when I scroll the chats list or the chat itself, it crashes, too.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 3.92
         },
         {
           "id": 315,
           "title": "Pieces desktop application is very slow/laggy, not generating any response in copilot chat.",
           "text": "Pieces desktop application is very slow/laggy, not generating any response in copilot chat.\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n10.0.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nPieces desktop application is working very much slow after latest update, takes very much time to give any response. Even after doing a hard reset active runtime, it just do not work. \nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
           "activity_level": 6.38
+        },
+        {
+          "id": 537,
+          "title": "Ollama Fails to Install on Linux",
+          "text": "Ollama Fails to Install on Linux\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nLinux\n\n### Your Pieces OS Version\n\n11.0.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nUser reports immediate \"Ollama failed to install\" diaglog upon clicking install Ollama install button in Pieces desktop app\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 4.92
         }
       ]
     }
   ],
   "recommendations": [
-    "Prioritize resolving the Ollama installation failure on Linux (v11) to unblock new users.",
-    "Investigate and address the performance issues on Windows (v10) impacting core application responsiveness.",
-    "Proactively monitor and address the known issue impacting both Linux and Windows users."
+    "Prioritize resolving the performance issues and crashes on Windows, as they affect multiple users and impact core app functionality.",
+    "Investigate the root cause of the crashes when moving the app window or scrolling on Windows. Check for compatibility issues with different Windows versions, graphics drivers, or screen configurations.",
+    "Optimize the Pieces desktop application's performance on Windows. Profile the app to identify bottlenecks and optimize resource usage, especially after updates.",
+    "Address the issue with Ollama failing to install on Linux. Review installation logs and dependencies to pinpoint the cause of the failure.",
+    "Improve communication with users experiencing the \"slow/laggy\" performance issue. Request additional information, such as system specs, logs, and steps to reproduce the problem.",
+    "Consider adding more detailed logging to the desktop application to better track and diagnose performance issues and crashes."
   ],
   "message": "Daily support report generated successfully."
 }
