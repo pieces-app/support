@@ -1,0 +1,75 @@
+{
+  "success": true,
+  "date_range": {
+    "start": "2025-07-03T00:00:00+00:00",
+    "end": "2025-07-03T05:10:18.175784+00:00"
+  },
+  "summary": {
+    "total_tickets": 1,
+    "resolved_tickets": 0,
+    "open_tickets": 1
+  },
+  "ticket_breakdown": [
+    {
+      "category": "bug",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "os:windows",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:new",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:desktop application",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:pieces os",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    }
+  ],
+  "most_active_tickets": [
+    {
+      "number": 776,
+      "title": "Unable to open Pieces Core Services",
+      "activity_level": 4.42
+    }
+  ],
+  "common_issues": [
+    {
+      "title": "Pieces Core Services Fails to Open Due to WebSocket Error",
+      "description": "Users are unable to open Pieces Core Services due to a WebSocketException with a 404 error.  The connection to the local PiecesOS server fails.  This might indicate a problem with the PiecesOS installation or server process. Check if PiecesOS is running and restart the application or computer.  Verify network connectivity and ensure the correct port is being used.",
+      "frequency": 1,
+      "related_issues": [
+        {
+          "id": 776,
+          "title": "Unable to open Pieces Core Services",
+          "text": "Unable to open Pieces Core Services\nError: WebSocketException: Connection to 'http://127.0.0.1:39300/user/last_checked_in/stream#' was not upgraded to websocket, HTTP status code: 404\n\n**Installation Details**\n\nSucceeded: true\nPath: \n\n**PiecesOS Information**\n\nID: 37ba0640-e512-496c-9bdc-33624da4ab1f\nUser: 69bb7313-f1b6-4977-b99f-8e472549e4ed\nCurrent Version: Unknown\nMin Version Supported: 12.1.0\nMax Version Supported: 13.0.0\nLocal Port: 39300\n\n**Device Information**\n\nOperating System: Windows\nCurrent Version: \"Windows 10 Home\" 10.0 (Build 26100)\nMin Version Supported: Windows 10 Build 1903\nAdditional Device Information: {cpu_list: [{\"architecture\":\"x64\",\"cores\":8,\"logicalProcessors\":16,\"l2Cache\":{\"value\":4096,\"units\":\"Bytes\"},\"l3Cache\":{\"value\":16384,\"units\":\"Bytes\"},\"description\":\"AMD Ryzen 7 7735HS with Radeon Graphics        \"}], gpu_list: [{\"type\":\"NVIDIA GeForce RTX 4050 Laptop GPU\",\"unifiedMemoryArchitecture\":null,\"cores\":null,\"dedicatedVRam\":{\"value\":6208618496,\"units\":\"Bytes\"}}, {\"type\":\"AMD Radeon(TM) Graphics\",\"unifiedMemoryArchitecture\":null,\"cores\":null,\"dedicatedVRam\":{\"value\":2120007680,\"units\":\"Bytes\"}}, {\"type\":\"Microsoft Basic Render Driver\",\"unifiedMemoryArchitecture\":null,\"cores\":null,\"dedicatedVRam\":{\"value\":0,\"units\":\"Bytes\"}}], npu_list: [], memory_info: {\"totalRAM\":{\"value\":16777216,\"units\":\"KB\"}}, display_list: [{\"nativeHeight\":1600,\"nativeWidth\":2560,\"scaledHeight\":1600,\"scaledWidth\":2560,\"primary\":true}]}\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 4.42
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    "Investigate the root cause of the WebSocket error preventing users from opening Pieces Core Services.",
+    "Prioritize resolution of issue #776, \"Unable to open Pieces Core Services,\" as it is the most frequent and active ticket.",
+    "Check PiecesOS installation, server process, network connectivity, and port configuration to resolve the WebSocket error.",
+    "Ensure the PiecesOS server is running and accessible on the correct port (39300).",
+    "Provide troubleshooting steps to users experiencing the WebSocket error, including restarting the application and computer.",
+    "Consider updating support documentation with solutions for the \"Unable to open Pieces Core Services\" issue."
+  ],
+  "message": "Daily support report generated successfully."
+}
