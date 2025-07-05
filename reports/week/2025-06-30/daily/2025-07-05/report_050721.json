@@ -1,0 +1,78 @@
+{
+  "success": true,
+  "date_range": {
+    "start": "2025-07-05T00:00:00+00:00",
+    "end": "2025-07-05T05:07:21.594658+00:00"
+  },
+  "summary": {
+    "total_tickets": 2,
+    "resolved_tickets": 0,
+    "open_tickets": 2
+  },
+  "ticket_breakdown": [
+    {
+      "category": "bug",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "status:new",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "os:macos",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "app:pieces os",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    }
+  ],
+  "most_active_tickets": [
+    {
+      "number": 782,
+      "title": "Unable to open Pieces Core Services",
+      "activity_level": 4.42
+    },
+    {
+      "number": 783,
+      "title": "Unable to open Pieces Core Services",
+      "activity_level": 4.42
+    }
+  ],
+  "common_issues": [
+    {
+      "title": "Pieces Core Services Fails to Open Due to WebSocket Error",
+      "description": "Multiple users reported a WebSocketException with a 404 HTTP status code when attempting to open Pieces Core Services. The connection to 'http://127.0.0.1:39300/user/last_checked_in/stream#' fails to upgrade to a websocket.  The issue appears on macOS 15.6 with Pieces OS installed at /Applications/Pieces OS.app.  Further investigation is needed to determine the root cause and potential solutions.",
+      "frequency": 2,
+      "related_issues": [
+        {
+          "id": 782,
+          "title": "Unable to open Pieces Core Services",
+          "text": "Unable to open Pieces Core Services\nError: WebSocketException: Connection to 'http://127.0.0.1:39300/user/last_checked_in/stream#' was not upgraded to websocket, HTTP status code: 404\n\n**Installation Details**\n\nSucceeded: true\nPath: /Applications/Pieces OS.app\n\n**PiecesOS Information**\n\nID: 1CA2E830-F290-4091-8714-B38DE27CABCB\nUser: 32bc4ee9-918c-4562-b3d7-78c22d9dcebe\nCurrent Version: Unknown\nMin Version Supported: 12.1.0\nMax Version Supported: 13.0.0\nLocal Port: 39300\n\n**Device Information**\n\nOperating System: MacOS\nCurrent Version: Version 15.6 (Build 24G5065c)\nMin Version Supported: 12.0.0 Monterey\nAdditional Device Information: {cpu_list: [{\"architecture\":\"arm64\",\"cores\":8,\"logicalProcessors\":8,\"l1Cache\":{\"value\":65536,\"units\":\"Bytes\"},\"l2Cache\":{\"value\":4194304,\"units\":\"Bytes\"},\"description\":\"Apple M2\"}], gpu_list: [{\"type\":null,\"unifiedMemoryArchitecture\":true,\"cores\":10,\"dedicatedVRam\":null}], memory_info: {\"totalRAM\":{\"value\":8589934592,\"units\":\"Bytes\"}}, display_list: [{\"nativeHeight\":1664,\"nativeWidth\":2560,\"scaledHeight\":1112,\"scaledWidth\":1710,\"primary\":true}]}\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 4.42
+        },
+        {
+          "id": 783,
+          "title": "Unable to open Pieces Core Services",
+          "text": "Unable to open Pieces Core Services\nError: WebSocketException: Connection to 'http://127.0.0.1:39300/user/last_checked_in/stream#' was not upgraded to websocket, HTTP status code: 404\n\n**Installation Details**\n\nSucceeded: true\nPath: /Applications/Pieces OS.app\n\n**PiecesOS Information**\n\nID: 1CA2E830-F290-4091-8714-B38DE27CABCB\nUser: 32bc4ee9-918c-4562-b3d7-78c22d9dcebe\nCurrent Version: Unknown\nMin Version Supported: 12.1.0\nMax Version Supported: 13.0.0\nLocal Port: 39300\n\n**Device Information**\n\nOperating System: MacOS\nCurrent Version: Version 15.6 (Build 24G5065c)\nMin Version Supported: 12.0.0 Monterey\nAdditional Device Information: {cpu_list: [{\"architecture\":\"arm64\",\"cores\":8,\"logicalProcessors\":8,\"l1Cache\":{\"value\":65536,\"units\":\"Bytes\"},\"l2Cache\":{\"value\":4194304,\"units\":\"Bytes\"},\"description\":\"Apple M2\"}], gpu_list: [{\"type\":null,\"unifiedMemoryArchitecture\":true,\"cores\":10,\"dedicatedVRam\":null}], memory_info: {\"totalRAM\":{\"value\":8589934592,\"units\":\"Bytes\"}}, display_list: [{\"nativeHeight\":1664,\"nativeWidth\":2560,\"scaledHeight\":1112,\"scaledWidth\":1710,\"primary\":true}]}\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 4.42
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    "Investigate the root cause of the WebSocketException error when opening Pieces Core Services on macOS 15.6.",
+    "Provide support agents with troubleshooting steps or a workaround for the WebSocketException error.",
+    "Consider updating the error message to be more user-friendly and informative.",
+    "Verify the model version used for generating summaries and ensure access permissions are correctly configured."
+  ],
+  "message": "Daily support report generated successfully."
+}

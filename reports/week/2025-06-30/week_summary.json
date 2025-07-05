@@ -2,25 +2,37 @@
   "success": true,
   "date_range": {
     "start": "2025-06-30T00:00:00+00:00",
-    "end": "2025-07-04T21:06:40.201663+00:00"
+    "end": "2025-07-05T05:07:35.974328+00:00"
   },
   "summary": {
-    "total_tickets": 13,
+    "total_tickets": 15,
     "resolved_tickets": 7,
-    "open_tickets": 6
+    "open_tickets": 8
   },
   "ticket_breakdown": [
     {
       "category": "bug",
-      "received": 12,
+      "received": 14,
       "resolved": 7,
-      "pending": 5
+      "pending": 7
     },
     {
       "category": "status:new",
-      "received": 5,
+      "received": 7,
       "resolved": 3,
-      "pending": 2
+      "pending": 4
+    },
+    {
+      "category": "os:macos",
+      "received": 7,
+      "resolved": 3,
+      "pending": 4
+    },
+    {
+      "category": "app:pieces os",
+      "received": 11,
+      "resolved": 7,
+      "pending": 4
     },
     {
       "category": "app:desktop application",
@@ -41,22 +53,10 @@
       "pending": 1
     },
     {
-      "category": "os:macos",
-      "received": 5,
-      "resolved": 3,
-      "pending": 2
-    },
-    {
       "category": "app:raycast plugin",
       "received": 1,
       "resolved": 0,
       "pending": 1
-    },
-    {
-      "category": "app:pieces os",
-      "received": 9,
-      "resolved": 7,
-      "pending": 2
     },
     {
       "category": "status:pending_release",
@@ -96,9 +96,14 @@
       "activity_level": 7.97
     },
     {
-      "number": 776,
+      "number": 775,
       "title": "Unable to open Pieces Core Services",
-      "activity_level": 7.0
+      "activity_level": 7.54
+    },
+    {
+      "number": 774,
+      "title": "Unable to open Pieces Core Services",
+      "activity_level": 7.54
     },
     {
       "number": 777,
@@ -111,14 +116,9 @@
       "activity_level": 6.67
     },
     {
-      "number": 775,
+      "number": 776,
       "title": "Unable to open Pieces Core Services",
-      "activity_level": 6.24
-    },
-    {
-      "number": 774,
-      "title": "Unable to open Pieces Core Services",
-      "activity_level": 6.24
+      "activity_level": 6.03
     },
     {
       "number": 779,
@@ -131,18 +131,28 @@
       "activity_level": 5.16
     },
     {
+      "number": 780,
+      "title": "Unable to open Pieces Core Services",
+      "activity_level": 5.0
+    },
+    {
       "number": 778,
       "title": "Unable to open Pieces Core Services",
       "activity_level": 4.5
     },
     {
-      "number": 781,
-      "title": "Raycast Extension Incompatible with Current Version of Raycast",
+      "number": 782,
+      "title": "Unable to open Pieces Core Services",
       "activity_level": 4.42
     },
     {
-      "number": 780,
+      "number": 783,
       "title": "Unable to open Pieces Core Services",
+      "activity_level": 4.42
+    },
+    {
+      "number": 781,
+      "title": "Raycast Extension Incompatible with Current Version of Raycast",
       "activity_level": 3.5
     },
     {
@@ -153,142 +163,142 @@
     {
       "number": 771,
       "title": "Crash when scrolling or moving a window to another screen",
-      "activity_level": 2.84
+      "activity_level": 2.71
     }
   ],
   "common_issues": [
     {
       "title": "Pieces Core Services Fails to Open Due to WebSocket Error",
-      "description": "Multiple users across macOS and Windows encountered WebSocketException with HTTP 404 error when opening Pieces Core Services.  The connection to 'http://127.0.0.1:39300/user/last_checked_in/stream#' failed to upgrade to websocket.  Potential solutions include checking Pieces Core Services installation, network connectivity, and firewall settings.",
+      "description": "Multiple users on MacOS (versions 15.5 and 15.6) are unable to open Pieces Core Services.  A WebSocket connection error (404) occurs when attempting to connect to 'http://127.0.0.1:39300/user/last_checked_in/stream#'. The Pieces OS installation path is consistent across reports.  Further investigation into the backend service and websocket connection is needed. Ensure the service is running and accessible on the specified port.",
       "frequency": 3,
       "related_issues": [
+        {
+          "id": 782,
+          "title": "Unable to open Pieces Core Services",
+          "text": "Unable to open Pieces Core Services\nError: WebSocketException: Connection to 'http://127.0.0.1:39300/user/last_checked_in/stream#' was not upgraded to websocket, HTTP status code: 404\n\n**Installation Details**\n\nSucceeded: true\nPath: /Applications/Pieces OS.app\n\n**PiecesOS Information**\n\nID: 1CA2E830-F290-4091-8714-B38DE27CABCB\nUser: 32bc4ee9-918c-4562-b3d7-78c22d9dcebe\nCurrent Version: Unknown\nMin Version Supported: 12.1.0\nMax Version Supported: 13.0.0\nLocal Port: 39300\n\n**Device Information**\n\nOperating System: MacOS\nCurrent Version: Version 15.6 (Build 24G5065c)\nMin Version Supported: 12.0.0 Monterey\nAdditional Device Information: {cpu_list: [{\"architecture\":\"arm64\",\"cores\":8,\"logicalProcessors\":8,\"l1Cache\":{\"value\":65536,\"units\":\"Bytes\"},\"l2Cache\":{\"value\":4194304,\"units\":\"Bytes\"},\"description\":\"Apple M2\"}], gpu_list: [{\"type\":null,\"unifiedMemoryArchitecture\":true,\"cores\":10,\"dedicatedVRam\":null}], memory_info: {\"totalRAM\":{\"value\":8589934592,\"units\":\"Bytes\"}}, display_list: [{\"nativeHeight\":1664,\"nativeWidth\":2560,\"scaledHeight\":1112,\"scaledWidth\":1710,\"primary\":true}]}\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 4.42
+        },
+        {
+          "id": 783,
+          "title": "Unable to open Pieces Core Services",
+          "text": "Unable to open Pieces Core Services\nError: WebSocketException: Connection to 'http://127.0.0.1:39300/user/last_checked_in/stream#' was not upgraded to websocket, HTTP status code: 404\n\n**Installation Details**\n\nSucceeded: true\nPath: /Applications/Pieces OS.app\n\n**PiecesOS Information**\n\nID: 1CA2E830-F290-4091-8714-B38DE27CABCB\nUser: 32bc4ee9-918c-4562-b3d7-78c22d9dcebe\nCurrent Version: Unknown\nMin Version Supported: 12.1.0\nMax Version Supported: 13.0.0\nLocal Port: 39300\n\n**Device Information**\n\nOperating System: MacOS\nCurrent Version: Version 15.6 (Build 24G5065c)\nMin Version Supported: 12.0.0 Monterey\nAdditional Device Information: {cpu_list: [{\"architecture\":\"arm64\",\"cores\":8,\"logicalProcessors\":8,\"l1Cache\":{\"value\":65536,\"units\":\"Bytes\"},\"l2Cache\":{\"value\":4194304,\"units\":\"Bytes\"},\"description\":\"Apple M2\"}], gpu_list: [{\"type\":null,\"unifiedMemoryArchitecture\":true,\"cores\":10,\"dedicatedVRam\":null}], memory_info: {\"totalRAM\":{\"value\":8589934592,\"units\":\"Bytes\"}}, display_list: [{\"nativeHeight\":1664,\"nativeWidth\":2560,\"scaledHeight\":1112,\"scaledWidth\":1710,\"primary\":true}]}\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 4.42
+        },
         {
           "id": 773,
           "title": "Unable to open Pieces Core Services",
           "text": "Unable to open Pieces Core Services\nError: WebSocketException: Connection to 'http://127.0.0.1:39300/user/last_checked_in/stream#' was not upgraded to websocket, HTTP status code: 404\n\n**Installation Details**\n\nSucceeded: true\nPath: /Applications/Pieces OS.app\n\n**PiecesOS Information**\n\nID: FB0FAE84-6BAC-4EC2-BBC8-8A15651E0677\nUser: 01ce0083-f75f-41c5-a161-943ada0edc94\nCurrent Version: Unknown\nMin Version Supported: 12.1.0\nMax Version Supported: 13.0.0\nLocal Port: 39300\n\n**Device Information**\n\nOperating System: MacOS\nCurrent Version: Version 15.5 (Build 24F74)\nMin Version Supported: 12.0.0 Monterey\nAdditional Device Information: {cpu_list: [{\"architecture\":\"arm64\",\"cores\":8,\"logicalProcessors\":8,\"l1Cache\":{\"value\":65536,\"units\":\"Bytes\"},\"l2Cache\":{\"value\":4194304,\"units\":\"Bytes\"},\"description\":\"Apple M2\"}], gpu_list: [{\"type\":null,\"unifiedMemoryArchitecture\":true,\"cores\":10,\"dedicatedVRam\":null}], memory_info: {\"totalRAM\":{\"value\":8589934592,\"units\":\"Bytes\"}}, display_list: [{\"nativeHeight\":1864,\"nativeWidth\":2880,\"scaledHeight\":1107,\"scaledWidth\":1710,\"primary\":true}]}\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
           "activity_level": 7.97
+        }
+      ]
+    },
+    {
+      "title": "Pieces Core Services fails to open due to websocket connection error",
+      "description": "Multiple users on MacOS (versions 15.5 and 15.6) are unable to open Pieces Core Services.  A websocket connection error (404) occurs when attempting to connect to 'http://127.0.0.1:39300/user/last_checked_in/stream#'. The Pieces OS installation path is '/Applications/Pieces OS.app'.  Further investigation into the websocket server and associated services is needed.",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 782,
+          "title": "Unable to open Pieces Core Services",
+          "text": "Unable to open Pieces Core Services\nError: WebSocketException: Connection to 'http://127.0.0.1:39300/user/last_checked_in/stream#' was not upgraded to websocket, HTTP status code: 404\n\n**Installation Details**\n\nSucceeded: true\nPath: /Applications/Pieces OS.app\n\n**PiecesOS Information**\n\nID: 1CA2E830-F290-4091-8714-B38DE27CABCB\nUser: 32bc4ee9-918c-4562-b3d7-78c22d9dcebe\nCurrent Version: Unknown\nMin Version Supported: 12.1.0\nMax Version Supported: 13.0.0\nLocal Port: 39300\n\n**Device Information**\n\nOperating System: MacOS\nCurrent Version: Version 15.6 (Build 24G5065c)\nMin Version Supported: 12.0.0 Monterey\nAdditional Device Information: {cpu_list: [{\"architecture\":\"arm64\",\"cores\":8,\"logicalProcessors\":8,\"l1Cache\":{\"value\":65536,\"units\":\"Bytes\"},\"l2Cache\":{\"value\":4194304,\"units\":\"Bytes\"},\"description\":\"Apple M2\"}], gpu_list: [{\"type\":null,\"unifiedMemoryArchitecture\":true,\"cores\":10,\"dedicatedVRam\":null}], memory_info: {\"totalRAM\":{\"value\":8589934592,\"units\":\"Bytes\"}}, display_list: [{\"nativeHeight\":1664,\"nativeWidth\":2560,\"scaledHeight\":1112,\"scaledWidth\":1710,\"primary\":true}]}\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 4.42
         },
         {
-          "id": 776,
+          "id": 783,
           "title": "Unable to open Pieces Core Services",
-          "text": "Unable to open Pieces Core Services\nError: WebSocketException: Connection to 'http://127.0.0.1:39300/user/last_checked_in/stream#' was not upgraded to websocket, HTTP status code: 404\n\n**Installation Details**\n\nSucceeded: true\nPath: \n\n**PiecesOS Information**\n\nID: 37ba0640-e512-496c-9bdc-33624da4ab1f\nUser: 69bb7313-f1b6-4977-b99f-8e472549e4ed\nCurrent Version: Unknown\nMin Version Supported: 12.1.0\nMax Version Supported: 13.0.0\nLocal Port: 39300\n\n**Device Information**\n\nOperating System: Windows\nCurrent Version: \"Windows 10 Home\" 10.0 (Build 26100)\nMin Version Supported: Windows 10 Build 1903\nAdditional Device Information: {cpu_list: [{\"architecture\":\"x64\",\"cores\":8,\"logicalProcessors\":16,\"l2Cache\":{\"value\":4096,\"units\":\"Bytes\"},\"l3Cache\":{\"value\":16384,\"units\":\"Bytes\"},\"description\":\"AMD Ryzen 7 7735HS with Radeon Graphics        \"}], gpu_list: [{\"type\":\"NVIDIA GeForce RTX 4050 Laptop GPU\",\"unifiedMemoryArchitecture\":null,\"cores\":null,\"dedicatedVRam\":{\"value\":6208618496,\"units\":\"Bytes\"}}, {\"type\":\"AMD Radeon(TM) Graphics\",\"unifiedMemoryArchitecture\":null,\"cores\":null,\"dedicatedVRam\":{\"value\":2120007680,\"units\":\"Bytes\"}}, {\"type\":\"Microsoft Basic Render Driver\",\"unifiedMemoryArchitecture\":null,\"cores\":null,\"dedicatedVRam\":{\"value\":0,\"units\":\"Bytes\"}}], npu_list: [], memory_info: {\"totalRAM\":{\"value\":16777216,\"units\":\"KB\"}}, display_list: [{\"nativeHeight\":1600,\"nativeWidth\":2560,\"scaledHeight\":1600,\"scaledWidth\":2560,\"primary\":true}]}\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 7.0
+          "text": "Unable to open Pieces Core Services\nError: WebSocketException: Connection to 'http://127.0.0.1:39300/user/last_checked_in/stream#' was not upgraded to websocket, HTTP status code: 404\n\n**Installation Details**\n\nSucceeded: true\nPath: /Applications/Pieces OS.app\n\n**PiecesOS Information**\n\nID: 1CA2E830-F290-4091-8714-B38DE27CABCB\nUser: 32bc4ee9-918c-4562-b3d7-78c22d9dcebe\nCurrent Version: Unknown\nMin Version Supported: 12.1.0\nMax Version Supported: 13.0.0\nLocal Port: 39300\n\n**Device Information**\n\nOperating System: MacOS\nCurrent Version: Version 15.6 (Build 24G5065c)\nMin Version Supported: 12.0.0 Monterey\nAdditional Device Information: {cpu_list: [{\"architecture\":\"arm64\",\"cores\":8,\"logicalProcessors\":8,\"l1Cache\":{\"value\":65536,\"units\":\"Bytes\"},\"l2Cache\":{\"value\":4194304,\"units\":\"Bytes\"},\"description\":\"Apple M2\"}], gpu_list: [{\"type\":null,\"unifiedMemoryArchitecture\":true,\"cores\":10,\"dedicatedVRam\":null}], memory_info: {\"totalRAM\":{\"value\":8589934592,\"units\":\"Bytes\"}}, display_list: [{\"nativeHeight\":1664,\"nativeWidth\":2560,\"scaledHeight\":1112,\"scaledWidth\":1710,\"primary\":true}]}\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 4.42
         },
         {
-          "id": 777,
+          "id": 773,
           "title": "Unable to open Pieces Core Services",
-          "text": "Unable to open Pieces Core Services\nError: WebSocketException: Connection to 'http://127.0.0.1:39300/user/last_checked_in/stream#' was not upgraded to websocket, HTTP status code: 404\n\n**Installation Details**\n\nSucceeded: true\nPath: C:\\Program Files\\WindowsApps\\com.MeshIntelligentTechnologi.PiecesOS_12.1.0.0_x64__84gz00a5z79wr\n\n**PiecesOS Information**\n\nID: 6a8f859c-75d4-44e6-94c6-44518b18b892\nUser: d849d4cd-f859-447e-bc58-42678ea056b4\nCurrent Version: Unknown\nMin Version Supported: 12.1.0\nMax Version Supported: 13.0.0\nLocal Port: 39300\n\n**Device Information**\n\nOperating System: Windows\nCurrent Version: \"Windows 10 Home Single Language\" 10.0 (Build 26120)\nMin Version Supported: Windows 10 Build 1903\nAdditional Device Information: {cpu_list: [{\"architecture\":\"x64\",\"cores\":6,\"logicalProcessors\":12,\"l2Cache\":{\"value\":7680,\"units\":\"Bytes\"},\"l3Cache\":{\"value\":12288,\"units\":\"Bytes\"},\"description\":\"11th Gen Intel(R) Core(TM) i5-11400H @ 2.70GHz\"}], gpu_list: [{\"type\":\"Intel(R) UHD Graphics\",\"unifiedMemoryArchitecture\":null,\"cores\":null,\"dedicatedVRam\":{\"value\":134217728,\"units\":\"Bytes\"}}, {\"type\":\"NVIDIA GeForce RTX 2050\",\"unifiedMemoryArchitecture\":null,\"cores\":null,\"dedicatedVRam\":{\"value\":4156555264,\"units\":\"Bytes\"}}, {\"type\":\"Microsoft Basic Render Driver\",\"unifiedMemoryArchitecture\":null,\"cores\":null,\"dedicatedVRam\":{\"value\":0,\"units\":\"Bytes\"}}], npu_list: [], memory_info: {\"totalRAM\":{\"value\":16777216,\"units\":\"KB\"}}, display_list: [{\"nativeHeight\":1080,\"nativeWidth\":1920,\"scaledHeight\":1080,\"scaledWidth\":1920,\"primary\":true}]}\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 7.0
+          "text": "Unable to open Pieces Core Services\nError: WebSocketException: Connection to 'http://127.0.0.1:39300/user/last_checked_in/stream#' was not upgraded to websocket, HTTP status code: 404\n\n**Installation Details**\n\nSucceeded: true\nPath: /Applications/Pieces OS.app\n\n**PiecesOS Information**\n\nID: FB0FAE84-6BAC-4EC2-BBC8-8A15651E0677\nUser: 01ce0083-f75f-41c5-a161-943ada0edc94\nCurrent Version: Unknown\nMin Version Supported: 12.1.0\nMax Version Supported: 13.0.0\nLocal Port: 39300\n\n**Device Information**\n\nOperating System: MacOS\nCurrent Version: Version 15.5 (Build 24F74)\nMin Version Supported: 12.0.0 Monterey\nAdditional Device Information: {cpu_list: [{\"architecture\":\"arm64\",\"cores\":8,\"logicalProcessors\":8,\"l1Cache\":{\"value\":65536,\"units\":\"Bytes\"},\"l2Cache\":{\"value\":4194304,\"units\":\"Bytes\"},\"description\":\"Apple M2\"}], gpu_list: [{\"type\":null,\"unifiedMemoryArchitecture\":true,\"cores\":10,\"dedicatedVRam\":null}], memory_info: {\"totalRAM\":{\"value\":8589934592,\"units\":\"Bytes\"}}, display_list: [{\"nativeHeight\":1864,\"nativeWidth\":2880,\"scaledHeight\":1107,\"scaledWidth\":1710,\"primary\":true}]}\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 7.97
         }
       ]
     },
     {
       "title": "Pieces Core Services Fails to Open Due to WebSocket Error",
-      "description": "Multiple users across macOS and Windows are unable to open Pieces Core Services.  The error is a WebSocketException with a 404 HTTP status code, indicating the service isn't running or accessible at the expected endpoint (http://127.0.0.1:39300). Check if Pieces Core Services is running, verify network connectivity, and ensure the correct port is being used. Reinstallation or checking firewall settings may also be necessary.",
+      "description": "Multiple users on MacOS (versions 15.5 and 15.6) are unable to open Pieces Core Services.  A WebSocket connection error (404) occurs when attempting to connect to 'http://127.0.0.1:39300/user/last_checked_in/stream#'. The Pieces OS installation path is consistent across reports.  Further investigation into the backend service and websocket connection is needed.",
       "frequency": 3,
       "related_issues": [
+        {
+          "id": 782,
+          "title": "Unable to open Pieces Core Services",
+          "text": "Unable to open Pieces Core Services\nError: WebSocketException: Connection to 'http://127.0.0.1:39300/user/last_checked_in/stream#' was not upgraded to websocket, HTTP status code: 404\n\n**Installation Details**\n\nSucceeded: true\nPath: /Applications/Pieces OS.app\n\n**PiecesOS Information**\n\nID: 1CA2E830-F290-4091-8714-B38DE27CABCB\nUser: 32bc4ee9-918c-4562-b3d7-78c22d9dcebe\nCurrent Version: Unknown\nMin Version Supported: 12.1.0\nMax Version Supported: 13.0.0\nLocal Port: 39300\n\n**Device Information**\n\nOperating System: MacOS\nCurrent Version: Version 15.6 (Build 24G5065c)\nMin Version Supported: 12.0.0 Monterey\nAdditional Device Information: {cpu_list: [{\"architecture\":\"arm64\",\"cores\":8,\"logicalProcessors\":8,\"l1Cache\":{\"value\":65536,\"units\":\"Bytes\"},\"l2Cache\":{\"value\":4194304,\"units\":\"Bytes\"},\"description\":\"Apple M2\"}], gpu_list: [{\"type\":null,\"unifiedMemoryArchitecture\":true,\"cores\":10,\"dedicatedVRam\":null}], memory_info: {\"totalRAM\":{\"value\":8589934592,\"units\":\"Bytes\"}}, display_list: [{\"nativeHeight\":1664,\"nativeWidth\":2560,\"scaledHeight\":1112,\"scaledWidth\":1710,\"primary\":true}]}\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 4.42
+        },
+        {
+          "id": 783,
+          "title": "Unable to open Pieces Core Services",
+          "text": "Unable to open Pieces Core Services\nError: WebSocketException: Connection to 'http://127.0.0.1:39300/user/last_checked_in/stream#' was not upgraded to websocket, HTTP status code: 404\n\n**Installation Details**\n\nSucceeded: true\nPath: /Applications/Pieces OS.app\n\n**PiecesOS Information**\n\nID: 1CA2E830-F290-4091-8714-B38DE27CABCB\nUser: 32bc4ee9-918c-4562-b3d7-78c22d9dcebe\nCurrent Version: Unknown\nMin Version Supported: 12.1.0\nMax Version Supported: 13.0.0\nLocal Port: 39300\n\n**Device Information**\n\nOperating System: MacOS\nCurrent Version: Version 15.6 (Build 24G5065c)\nMin Version Supported: 12.0.0 Monterey\nAdditional Device Information: {cpu_list: [{\"architecture\":\"arm64\",\"cores\":8,\"logicalProcessors\":8,\"l1Cache\":{\"value\":65536,\"units\":\"Bytes\"},\"l2Cache\":{\"value\":4194304,\"units\":\"Bytes\"},\"description\":\"Apple M2\"}], gpu_list: [{\"type\":null,\"unifiedMemoryArchitecture\":true,\"cores\":10,\"dedicatedVRam\":null}], memory_info: {\"totalRAM\":{\"value\":8589934592,\"units\":\"Bytes\"}}, display_list: [{\"nativeHeight\":1664,\"nativeWidth\":2560,\"scaledHeight\":1112,\"scaledWidth\":1710,\"primary\":true}]}\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 4.42
+        },
         {
           "id": 773,
           "title": "Unable to open Pieces Core Services",
           "text": "Unable to open Pieces Core Services\nError: WebSocketException: Connection to 'http://127.0.0.1:39300/user/last_checked_in/stream#' was not upgraded to websocket, HTTP status code: 404\n\n**Installation Details**\n\nSucceeded: true\nPath: /Applications/Pieces OS.app\n\n**PiecesOS Information**\n\nID: FB0FAE84-6BAC-4EC2-BBC8-8A15651E0677\nUser: 01ce0083-f75f-41c5-a161-943ada0edc94\nCurrent Version: Unknown\nMin Version Supported: 12.1.0\nMax Version Supported: 13.0.0\nLocal Port: 39300\n\n**Device Information**\n\nOperating System: MacOS\nCurrent Version: Version 15.5 (Build 24F74)\nMin Version Supported: 12.0.0 Monterey\nAdditional Device Information: {cpu_list: [{\"architecture\":\"arm64\",\"cores\":8,\"logicalProcessors\":8,\"l1Cache\":{\"value\":65536,\"units\":\"Bytes\"},\"l2Cache\":{\"value\":4194304,\"units\":\"Bytes\"},\"description\":\"Apple M2\"}], gpu_list: [{\"type\":null,\"unifiedMemoryArchitecture\":true,\"cores\":10,\"dedicatedVRam\":null}], memory_info: {\"totalRAM\":{\"value\":8589934592,\"units\":\"Bytes\"}}, display_list: [{\"nativeHeight\":1864,\"nativeWidth\":2880,\"scaledHeight\":1107,\"scaledWidth\":1710,\"primary\":true}]}\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
           "activity_level": 7.97
-        },
-        {
-          "id": 776,
-          "title": "Unable to open Pieces Core Services",
-          "text": "Unable to open Pieces Core Services\nError: WebSocketException: Connection to 'http://127.0.0.1:39300/user/last_checked_in/stream#' was not upgraded to websocket, HTTP status code: 404\n\n**Installation Details**\n\nSucceeded: true\nPath: \n\n**PiecesOS Information**\n\nID: 37ba0640-e512-496c-9bdc-33624da4ab1f\nUser: 69bb7313-f1b6-4977-b99f-8e472549e4ed\nCurrent Version: Unknown\nMin Version Supported: 12.1.0\nMax Version Supported: 13.0.0\nLocal Port: 39300\n\n**Device Information**\n\nOperating System: Windows\nCurrent Version: \"Windows 10 Home\" 10.0 (Build 26100)\nMin Version Supported: Windows 10 Build 1903\nAdditional Device Information: {cpu_list: [{\"architecture\":\"x64\",\"cores\":8,\"logicalProcessors\":16,\"l2Cache\":{\"value\":4096,\"units\":\"Bytes\"},\"l3Cache\":{\"value\":16384,\"units\":\"Bytes\"},\"description\":\"AMD Ryzen 7 7735HS with Radeon Graphics        \"}], gpu_list: [{\"type\":\"NVIDIA GeForce RTX 4050 Laptop GPU\",\"unifiedMemoryArchitecture\":null,\"cores\":null,\"dedicatedVRam\":{\"value\":6208618496,\"units\":\"Bytes\"}}, {\"type\":\"AMD Radeon(TM) Graphics\",\"unifiedMemoryArchitecture\":null,\"cores\":null,\"dedicatedVRam\":{\"value\":2120007680,\"units\":\"Bytes\"}}, {\"type\":\"Microsoft Basic Render Driver\",\"unifiedMemoryArchitecture\":null,\"cores\":null,\"dedicatedVRam\":{\"value\":0,\"units\":\"Bytes\"}}], npu_list: [], memory_info: {\"totalRAM\":{\"value\":16777216,\"units\":\"KB\"}}, display_list: [{\"nativeHeight\":1600,\"nativeWidth\":2560,\"scaledHeight\":1600,\"scaledWidth\":2560,\"primary\":true}]}\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 7.0
-        },
-        {
-          "id": 777,
-          "title": "Unable to open Pieces Core Services",
-          "text": "Unable to open Pieces Core Services\nError: WebSocketException: Connection to 'http://127.0.0.1:39300/user/last_checked_in/stream#' was not upgraded to websocket, HTTP status code: 404\n\n**Installation Details**\n\nSucceeded: true\nPath: C:\\Program Files\\WindowsApps\\com.MeshIntelligentTechnologi.PiecesOS_12.1.0.0_x64__84gz00a5z79wr\n\n**PiecesOS Information**\n\nID: 6a8f859c-75d4-44e6-94c6-44518b18b892\nUser: d849d4cd-f859-447e-bc58-42678ea056b4\nCurrent Version: Unknown\nMin Version Supported: 12.1.0\nMax Version Supported: 13.0.0\nLocal Port: 39300\n\n**Device Information**\n\nOperating System: Windows\nCurrent Version: \"Windows 10 Home Single Language\" 10.0 (Build 26120)\nMin Version Supported: Windows 10 Build 1903\nAdditional Device Information: {cpu_list: [{\"architecture\":\"x64\",\"cores\":6,\"logicalProcessors\":12,\"l2Cache\":{\"value\":7680,\"units\":\"Bytes\"},\"l3Cache\":{\"value\":12288,\"units\":\"Bytes\"},\"description\":\"11th Gen Intel(R) Core(TM) i5-11400H @ 2.70GHz\"}], gpu_list: [{\"type\":\"Intel(R) UHD Graphics\",\"unifiedMemoryArchitecture\":null,\"cores\":null,\"dedicatedVRam\":{\"value\":134217728,\"units\":\"Bytes\"}}, {\"type\":\"NVIDIA GeForce RTX 2050\",\"unifiedMemoryArchitecture\":null,\"cores\":null,\"dedicatedVRam\":{\"value\":4156555264,\"units\":\"Bytes\"}}, {\"type\":\"Microsoft Basic Render Driver\",\"unifiedMemoryArchitecture\":null,\"cores\":null,\"dedicatedVRam\":{\"value\":0,\"units\":\"Bytes\"}}], npu_list: [], memory_info: {\"totalRAM\":{\"value\":16777216,\"units\":\"KB\"}}, display_list: [{\"nativeHeight\":1080,\"nativeWidth\":1920,\"scaledHeight\":1080,\"scaledWidth\":1920,\"primary\":true}]}\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 7.0
         }
       ]
     },
     {
       "title": "Pieces Core Services Fails to Open Due to WebSocket Error",
-      "description": "Multiple users across macOS and Windows encountered WebSocketException with HTTP 404 error when opening Pieces Core Services.  The connection to 'http://127.0.0.1:39300/user/last_checked_in/stream#' failed to upgrade to websocket. Potential solutions include checking Pieces Core Services installation, network connectivity, firewall settings, and ensuring the required ports are open.",
+      "description": "Multiple users on MacOS (versions 15.5 and 15.6) are unable to open Pieces Core Services.  A WebSocket connection error (404) occurs when attempting to connect to 'http://127.0.0.1:39300/user/last_checked_in/stream#'. The Pieces OS installation path is consistent across reports.  Further investigation into the backend service and websocket connection is needed. Ensure the service is running and accessible on the specified port.",
       "frequency": 3,
       "related_issues": [
+        {
+          "id": 782,
+          "title": "Unable to open Pieces Core Services",
+          "text": "Unable to open Pieces Core Services\nError: WebSocketException: Connection to 'http://127.0.0.1:39300/user/last_checked_in/stream#' was not upgraded to websocket, HTTP status code: 404\n\n**Installation Details**\n\nSucceeded: true\nPath: /Applications/Pieces OS.app\n\n**PiecesOS Information**\n\nID: 1CA2E830-F290-4091-8714-B38DE27CABCB\nUser: 32bc4ee9-918c-4562-b3d7-78c22d9dcebe\nCurrent Version: Unknown\nMin Version Supported: 12.1.0\nMax Version Supported: 13.0.0\nLocal Port: 39300\n\n**Device Information**\n\nOperating System: MacOS\nCurrent Version: Version 15.6 (Build 24G5065c)\nMin Version Supported: 12.0.0 Monterey\nAdditional Device Information: {cpu_list: [{\"architecture\":\"arm64\",\"cores\":8,\"logicalProcessors\":8,\"l1Cache\":{\"value\":65536,\"units\":\"Bytes\"},\"l2Cache\":{\"value\":4194304,\"units\":\"Bytes\"},\"description\":\"Apple M2\"}], gpu_list: [{\"type\":null,\"unifiedMemoryArchitecture\":true,\"cores\":10,\"dedicatedVRam\":null}], memory_info: {\"totalRAM\":{\"value\":8589934592,\"units\":\"Bytes\"}}, display_list: [{\"nativeHeight\":1664,\"nativeWidth\":2560,\"scaledHeight\":1112,\"scaledWidth\":1710,\"primary\":true}]}\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 4.42
+        },
+        {
+          "id": 783,
+          "title": "Unable to open Pieces Core Services",
+          "text": "Unable to open Pieces Core Services\nError: WebSocketException: Connection to 'http://127.0.0.1:39300/user/last_checked_in/stream#' was not upgraded to websocket, HTTP status code: 404\n\n**Installation Details**\n\nSucceeded: true\nPath: /Applications/Pieces OS.app\n\n**PiecesOS Information**\n\nID: 1CA2E830-F290-4091-8714-B38DE27CABCB\nUser: 32bc4ee9-918c-4562-b3d7-78c22d9dcebe\nCurrent Version: Unknown\nMin Version Supported: 12.1.0\nMax Version Supported: 13.0.0\nLocal Port: 39300\n\n**Device Information**\n\nOperating System: MacOS\nCurrent Version: Version 15.6 (Build 24G5065c)\nMin Version Supported: 12.0.0 Monterey\nAdditional Device Information: {cpu_list: [{\"architecture\":\"arm64\",\"cores\":8,\"logicalProcessors\":8,\"l1Cache\":{\"value\":65536,\"units\":\"Bytes\"},\"l2Cache\":{\"value\":4194304,\"units\":\"Bytes\"},\"description\":\"Apple M2\"}], gpu_list: [{\"type\":null,\"unifiedMemoryArchitecture\":true,\"cores\":10,\"dedicatedVRam\":null}], memory_info: {\"totalRAM\":{\"value\":8589934592,\"units\":\"Bytes\"}}, display_list: [{\"nativeHeight\":1664,\"nativeWidth\":2560,\"scaledHeight\":1112,\"scaledWidth\":1710,\"primary\":true}]}\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 4.42
+        },
         {
           "id": 773,
           "title": "Unable to open Pieces Core Services",
           "text": "Unable to open Pieces Core Services\nError: WebSocketException: Connection to 'http://127.0.0.1:39300/user/last_checked_in/stream#' was not upgraded to websocket, HTTP status code: 404\n\n**Installation Details**\n\nSucceeded: true\nPath: /Applications/Pieces OS.app\n\n**PiecesOS Information**\n\nID: FB0FAE84-6BAC-4EC2-BBC8-8A15651E0677\nUser: 01ce0083-f75f-41c5-a161-943ada0edc94\nCurrent Version: Unknown\nMin Version Supported: 12.1.0\nMax Version Supported: 13.0.0\nLocal Port: 39300\n\n**Device Information**\n\nOperating System: MacOS\nCurrent Version: Version 15.5 (Build 24F74)\nMin Version Supported: 12.0.0 Monterey\nAdditional Device Information: {cpu_list: [{\"architecture\":\"arm64\",\"cores\":8,\"logicalProcessors\":8,\"l1Cache\":{\"value\":65536,\"units\":\"Bytes\"},\"l2Cache\":{\"value\":4194304,\"units\":\"Bytes\"},\"description\":\"Apple M2\"}], gpu_list: [{\"type\":null,\"unifiedMemoryArchitecture\":true,\"cores\":10,\"dedicatedVRam\":null}], memory_info: {\"totalRAM\":{\"value\":8589934592,\"units\":\"Bytes\"}}, display_list: [{\"nativeHeight\":1864,\"nativeWidth\":2880,\"scaledHeight\":1107,\"scaledWidth\":1710,\"primary\":true}]}\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
           "activity_level": 7.97
-        },
-        {
-          "id": 776,
-          "title": "Unable to open Pieces Core Services",
-          "text": "Unable to open Pieces Core Services\nError: WebSocketException: Connection to 'http://127.0.0.1:39300/user/last_checked_in/stream#' was not upgraded to websocket, HTTP status code: 404\n\n**Installation Details**\n\nSucceeded: true\nPath: \n\n**PiecesOS Information**\n\nID: 37ba0640-e512-496c-9bdc-33624da4ab1f\nUser: 69bb7313-f1b6-4977-b99f-8e472549e4ed\nCurrent Version: Unknown\nMin Version Supported: 12.1.0\nMax Version Supported: 13.0.0\nLocal Port: 39300\n\n**Device Information**\n\nOperating System: Windows\nCurrent Version: \"Windows 10 Home\" 10.0 (Build 26100)\nMin Version Supported: Windows 10 Build 1903\nAdditional Device Information: {cpu_list: [{\"architecture\":\"x64\",\"cores\":8,\"logicalProcessors\":16,\"l2Cache\":{\"value\":4096,\"units\":\"Bytes\"},\"l3Cache\":{\"value\":16384,\"units\":\"Bytes\"},\"description\":\"AMD Ryzen 7 7735HS with Radeon Graphics        \"}], gpu_list: [{\"type\":\"NVIDIA GeForce RTX 4050 Laptop GPU\",\"unifiedMemoryArchitecture\":null,\"cores\":null,\"dedicatedVRam\":{\"value\":6208618496,\"units\":\"Bytes\"}}, {\"type\":\"AMD Radeon(TM) Graphics\",\"unifiedMemoryArchitecture\":null,\"cores\":null,\"dedicatedVRam\":{\"value\":2120007680,\"units\":\"Bytes\"}}, {\"type\":\"Microsoft Basic Render Driver\",\"unifiedMemoryArchitecture\":null,\"cores\":null,\"dedicatedVRam\":{\"value\":0,\"units\":\"Bytes\"}}], npu_list: [], memory_info: {\"totalRAM\":{\"value\":16777216,\"units\":\"KB\"}}, display_list: [{\"nativeHeight\":1600,\"nativeWidth\":2560,\"scaledHeight\":1600,\"scaledWidth\":2560,\"primary\":true}]}\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 7.0
-        },
-        {
-          "id": 777,
-          "title": "Unable to open Pieces Core Services",
-          "text": "Unable to open Pieces Core Services\nError: WebSocketException: Connection to 'http://127.0.0.1:39300/user/last_checked_in/stream#' was not upgraded to websocket, HTTP status code: 404\n\n**Installation Details**\n\nSucceeded: true\nPath: C:\\Program Files\\WindowsApps\\com.MeshIntelligentTechnologi.PiecesOS_12.1.0.0_x64__84gz00a5z79wr\n\n**PiecesOS Information**\n\nID: 6a8f859c-75d4-44e6-94c6-44518b18b892\nUser: d849d4cd-f859-447e-bc58-42678ea056b4\nCurrent Version: Unknown\nMin Version Supported: 12.1.0\nMax Version Supported: 13.0.0\nLocal Port: 39300\n\n**Device Information**\n\nOperating System: Windows\nCurrent Version: \"Windows 10 Home Single Language\" 10.0 (Build 26120)\nMin Version Supported: Windows 10 Build 1903\nAdditional Device Information: {cpu_list: [{\"architecture\":\"x64\",\"cores\":6,\"logicalProcessors\":12,\"l2Cache\":{\"value\":7680,\"units\":\"Bytes\"},\"l3Cache\":{\"value\":12288,\"units\":\"Bytes\"},\"description\":\"11th Gen Intel(R) Core(TM) i5-11400H @ 2.70GHz\"}], gpu_list: [{\"type\":\"Intel(R) UHD Graphics\",\"unifiedMemoryArchitecture\":null,\"cores\":null,\"dedicatedVRam\":{\"value\":134217728,\"units\":\"Bytes\"}}, {\"type\":\"NVIDIA GeForce RTX 2050\",\"unifiedMemoryArchitecture\":null,\"cores\":null,\"dedicatedVRam\":{\"value\":4156555264,\"units\":\"Bytes\"}}, {\"type\":\"Microsoft Basic Render Driver\",\"unifiedMemoryArchitecture\":null,\"cores\":null,\"dedicatedVRam\":{\"value\":0,\"units\":\"Bytes\"}}], npu_list: [], memory_info: {\"totalRAM\":{\"value\":16777216,\"units\":\"KB\"}}, display_list: [{\"nativeHeight\":1080,\"nativeWidth\":1920,\"scaledHeight\":1080,\"scaledWidth\":1920,\"primary\":true}]}\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 7.0
         }
       ]
     },
     {
       "title": "Pieces Core Services Fails to Open Due to WebSocket Error",
-      "description": "Multiple users across macOS and Windows are unable to open Pieces Core Services.  The error is a WebSocketException with a 404 HTTP status code, indicating the service is not running or accessible at the expected endpoint (http://127.0.0.1:39300). Check if Pieces Core Services is running, verify firewall settings, and reinstall if necessary.",
+      "description": "Multiple users on MacOS (versions 15.5 and 15.6) are unable to open Pieces Core Services.  A WebSocket connection error (404) occurs when attempting to connect to 'http://127.0.0.1:39300/user/last_checked_in/stream#'. The Pieces OS installation path is consistent across reports.  Further investigation into the websocket server and associated services is needed.",
       "frequency": 3,
       "related_issues": [
+        {
+          "id": 782,
+          "title": "Unable to open Pieces Core Services",
+          "text": "Unable to open Pieces Core Services\nError: WebSocketException: Connection to 'http://127.0.0.1:39300/user/last_checked_in/stream#' was not upgraded to websocket, HTTP status code: 404\n\n**Installation Details**\n\nSucceeded: true\nPath: /Applications/Pieces OS.app\n\n**PiecesOS Information**\n\nID: 1CA2E830-F290-4091-8714-B38DE27CABCB\nUser: 32bc4ee9-918c-4562-b3d7-78c22d9dcebe\nCurrent Version: Unknown\nMin Version Supported: 12.1.0\nMax Version Supported: 13.0.0\nLocal Port: 39300\n\n**Device Information**\n\nOperating System: MacOS\nCurrent Version: Version 15.6 (Build 24G5065c)\nMin Version Supported: 12.0.0 Monterey\nAdditional Device Information: {cpu_list: [{\"architecture\":\"arm64\",\"cores\":8,\"logicalProcessors\":8,\"l1Cache\":{\"value\":65536,\"units\":\"Bytes\"},\"l2Cache\":{\"value\":4194304,\"units\":\"Bytes\"},\"description\":\"Apple M2\"}], gpu_list: [{\"type\":null,\"unifiedMemoryArchitecture\":true,\"cores\":10,\"dedicatedVRam\":null}], memory_info: {\"totalRAM\":{\"value\":8589934592,\"units\":\"Bytes\"}}, display_list: [{\"nativeHeight\":1664,\"nativeWidth\":2560,\"scaledHeight\":1112,\"scaledWidth\":1710,\"primary\":true}]}\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 4.42
+        },
+        {
+          "id": 783,
+          "title": "Unable to open Pieces Core Services",
+          "text": "Unable to open Pieces Core Services\nError: WebSocketException: Connection to 'http://127.0.0.1:39300/user/last_checked_in/stream#' was not upgraded to websocket, HTTP status code: 404\n\n**Installation Details**\n\nSucceeded: true\nPath: /Applications/Pieces OS.app\n\n**PiecesOS Information**\n\nID: 1CA2E830-F290-4091-8714-B38DE27CABCB\nUser: 32bc4ee9-918c-4562-b3d7-78c22d9dcebe\nCurrent Version: Unknown\nMin Version Supported: 12.1.0\nMax Version Supported: 13.0.0\nLocal Port: 39300\n\n**Device Information**\n\nOperating System: MacOS\nCurrent Version: Version 15.6 (Build 24G5065c)\nMin Version Supported: 12.0.0 Monterey\nAdditional Device Information: {cpu_list: [{\"architecture\":\"arm64\",\"cores\":8,\"logicalProcessors\":8,\"l1Cache\":{\"value\":65536,\"units\":\"Bytes\"},\"l2Cache\":{\"value\":4194304,\"units\":\"Bytes\"},\"description\":\"Apple M2\"}], gpu_list: [{\"type\":null,\"unifiedMemoryArchitecture\":true,\"cores\":10,\"dedicatedVRam\":null}], memory_info: {\"totalRAM\":{\"value\":8589934592,\"units\":\"Bytes\"}}, display_list: [{\"nativeHeight\":1664,\"nativeWidth\":2560,\"scaledHeight\":1112,\"scaledWidth\":1710,\"primary\":true}]}\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 4.42
+        },
         {
           "id": 773,
           "title": "Unable to open Pieces Core Services",
           "text": "Unable to open Pieces Core Services\nError: WebSocketException: Connection to 'http://127.0.0.1:39300/user/last_checked_in/stream#' was not upgraded to websocket, HTTP status code: 404\n\n**Installation Details**\n\nSucceeded: true\nPath: /Applications/Pieces OS.app\n\n**PiecesOS Information**\n\nID: FB0FAE84-6BAC-4EC2-BBC8-8A15651E0677\nUser: 01ce0083-f75f-41c5-a161-943ada0edc94\nCurrent Version: Unknown\nMin Version Supported: 12.1.0\nMax Version Supported: 13.0.0\nLocal Port: 39300\n\n**Device Information**\n\nOperating System: MacOS\nCurrent Version: Version 15.5 (Build 24F74)\nMin Version Supported: 12.0.0 Monterey\nAdditional Device Information: {cpu_list: [{\"architecture\":\"arm64\",\"cores\":8,\"logicalProcessors\":8,\"l1Cache\":{\"value\":65536,\"units\":\"Bytes\"},\"l2Cache\":{\"value\":4194304,\"units\":\"Bytes\"},\"description\":\"Apple M2\"}], gpu_list: [{\"type\":null,\"unifiedMemoryArchitecture\":true,\"cores\":10,\"dedicatedVRam\":null}], memory_info: {\"totalRAM\":{\"value\":8589934592,\"units\":\"Bytes\"}}, display_list: [{\"nativeHeight\":1864,\"nativeWidth\":2880,\"scaledHeight\":1107,\"scaledWidth\":1710,\"primary\":true}]}\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
           "activity_level": 7.97
-        },
-        {
-          "id": 776,
-          "title": "Unable to open Pieces Core Services",
-          "text": "Unable to open Pieces Core Services\nError: WebSocketException: Connection to 'http://127.0.0.1:39300/user/last_checked_in/stream#' was not upgraded to websocket, HTTP status code: 404\n\n**Installation Details**\n\nSucceeded: true\nPath: \n\n**PiecesOS Information**\n\nID: 37ba0640-e512-496c-9bdc-33624da4ab1f\nUser: 69bb7313-f1b6-4977-b99f-8e472549e4ed\nCurrent Version: Unknown\nMin Version Supported: 12.1.0\nMax Version Supported: 13.0.0\nLocal Port: 39300\n\n**Device Information**\n\nOperating System: Windows\nCurrent Version: \"Windows 10 Home\" 10.0 (Build 26100)\nMin Version Supported: Windows 10 Build 1903\nAdditional Device Information: {cpu_list: [{\"architecture\":\"x64\",\"cores\":8,\"logicalProcessors\":16,\"l2Cache\":{\"value\":4096,\"units\":\"Bytes\"},\"l3Cache\":{\"value\":16384,\"units\":\"Bytes\"},\"description\":\"AMD Ryzen 7 7735HS with Radeon Graphics        \"}], gpu_list: [{\"type\":\"NVIDIA GeForce RTX 4050 Laptop GPU\",\"unifiedMemoryArchitecture\":null,\"cores\":null,\"dedicatedVRam\":{\"value\":6208618496,\"units\":\"Bytes\"}}, {\"type\":\"AMD Radeon(TM) Graphics\",\"unifiedMemoryArchitecture\":null,\"cores\":null,\"dedicatedVRam\":{\"value\":2120007680,\"units\":\"Bytes\"}}, {\"type\":\"Microsoft Basic Render Driver\",\"unifiedMemoryArchitecture\":null,\"cores\":null,\"dedicatedVRam\":{\"value\":0,\"units\":\"Bytes\"}}], npu_list: [], memory_info: {\"totalRAM\":{\"value\":16777216,\"units\":\"KB\"}}, display_list: [{\"nativeHeight\":1600,\"nativeWidth\":2560,\"scaledHeight\":1600,\"scaledWidth\":2560,\"primary\":true}]}\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 7.0
-        },
-        {
-          "id": 777,
-          "title": "Unable to open Pieces Core Services",
-          "text": "Unable to open Pieces Core Services\nError: WebSocketException: Connection to 'http://127.0.0.1:39300/user/last_checked_in/stream#' was not upgraded to websocket, HTTP status code: 404\n\n**Installation Details**\n\nSucceeded: true\nPath: C:\\Program Files\\WindowsApps\\com.MeshIntelligentTechnologi.PiecesOS_12.1.0.0_x64__84gz00a5z79wr\n\n**PiecesOS Information**\n\nID: 6a8f859c-75d4-44e6-94c6-44518b18b892\nUser: d849d4cd-f859-447e-bc58-42678ea056b4\nCurrent Version: Unknown\nMin Version Supported: 12.1.0\nMax Version Supported: 13.0.0\nLocal Port: 39300\n\n**Device Information**\n\nOperating System: Windows\nCurrent Version: \"Windows 10 Home Single Language\" 10.0 (Build 26120)\nMin Version Supported: Windows 10 Build 1903\nAdditional Device Information: {cpu_list: [{\"architecture\":\"x64\",\"cores\":6,\"logicalProcessors\":12,\"l2Cache\":{\"value\":7680,\"units\":\"Bytes\"},\"l3Cache\":{\"value\":12288,\"units\":\"Bytes\"},\"description\":\"11th Gen Intel(R) Core(TM) i5-11400H @ 2.70GHz\"}], gpu_list: [{\"type\":\"Intel(R) UHD Graphics\",\"unifiedMemoryArchitecture\":null,\"cores\":null,\"dedicatedVRam\":{\"value\":134217728,\"units\":\"Bytes\"}}, {\"type\":\"NVIDIA GeForce RTX 2050\",\"unifiedMemoryArchitecture\":null,\"cores\":null,\"dedicatedVRam\":{\"value\":4156555264,\"units\":\"Bytes\"}}, {\"type\":\"Microsoft Basic Render Driver\",\"unifiedMemoryArchitecture\":null,\"cores\":null,\"dedicatedVRam\":{\"value\":0,\"units\":\"Bytes\"}}], npu_list: [], memory_info: {\"totalRAM\":{\"value\":16777216,\"units\":\"KB\"}}, display_list: [{\"nativeHeight\":1080,\"nativeWidth\":1920,\"scaledHeight\":1080,\"scaledWidth\":1920,\"primary\":true}]}\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 7.0
-        }
-      ]
-    },
-    {
-      "title": "Pieces Core Services Fails to Open Due to WebSocket Error",
-      "description": "Multiple users across macOS and Windows are unable to open Pieces Core Services.  The error is a WebSocketException with a 404 HTTP status code, indicating the service is not running or accessible at the expected endpoint (http://127.0.0.1:39300). Check if Pieces Core Services is running, verify network connectivity, and ensure the correct port is configured.",
-      "frequency": 3,
-      "related_issues": [
-        {
-          "id": 773,
-          "title": "Unable to open Pieces Core Services",
-          "text": "Unable to open Pieces Core Services\nError: WebSocketException: Connection to 'http://127.0.0.1:39300/user/last_checked_in/stream#' was not upgraded to websocket, HTTP status code: 404\n\n**Installation Details**\n\nSucceeded: true\nPath: /Applications/Pieces OS.app\n\n**PiecesOS Information**\n\nID: FB0FAE84-6BAC-4EC2-BBC8-8A15651E0677\nUser: 01ce0083-f75f-41c5-a161-943ada0edc94\nCurrent Version: Unknown\nMin Version Supported: 12.1.0\nMax Version Supported: 13.0.0\nLocal Port: 39300\n\n**Device Information**\n\nOperating System: MacOS\nCurrent Version: Version 15.5 (Build 24F74)\nMin Version Supported: 12.0.0 Monterey\nAdditional Device Information: {cpu_list: [{\"architecture\":\"arm64\",\"cores\":8,\"logicalProcessors\":8,\"l1Cache\":{\"value\":65536,\"units\":\"Bytes\"},\"l2Cache\":{\"value\":4194304,\"units\":\"Bytes\"},\"description\":\"Apple M2\"}], gpu_list: [{\"type\":null,\"unifiedMemoryArchitecture\":true,\"cores\":10,\"dedicatedVRam\":null}], memory_info: {\"totalRAM\":{\"value\":8589934592,\"units\":\"Bytes\"}}, display_list: [{\"nativeHeight\":1864,\"nativeWidth\":2880,\"scaledHeight\":1107,\"scaledWidth\":1710,\"primary\":true}]}\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 7.97
-        },
-        {
-          "id": 776,
-          "title": "Unable to open Pieces Core Services",
-          "text": "Unable to open Pieces Core Services\nError: WebSocketException: Connection to 'http://127.0.0.1:39300/user/last_checked_in/stream#' was not upgraded to websocket, HTTP status code: 404\n\n**Installation Details**\n\nSucceeded: true\nPath: \n\n**PiecesOS Information**\n\nID: 37ba0640-e512-496c-9bdc-33624da4ab1f\nUser: 69bb7313-f1b6-4977-b99f-8e472549e4ed\nCurrent Version: Unknown\nMin Version Supported: 12.1.0\nMax Version Supported: 13.0.0\nLocal Port: 39300\n\n**Device Information**\n\nOperating System: Windows\nCurrent Version: \"Windows 10 Home\" 10.0 (Build 26100)\nMin Version Supported: Windows 10 Build 1903\nAdditional Device Information: {cpu_list: [{\"architecture\":\"x64\",\"cores\":8,\"logicalProcessors\":16,\"l2Cache\":{\"value\":4096,\"units\":\"Bytes\"},\"l3Cache\":{\"value\":16384,\"units\":\"Bytes\"},\"description\":\"AMD Ryzen 7 7735HS with Radeon Graphics        \"}], gpu_list: [{\"type\":\"NVIDIA GeForce RTX 4050 Laptop GPU\",\"unifiedMemoryArchitecture\":null,\"cores\":null,\"dedicatedVRam\":{\"value\":6208618496,\"units\":\"Bytes\"}}, {\"type\":\"AMD Radeon(TM) Graphics\",\"unifiedMemoryArchitecture\":null,\"cores\":null,\"dedicatedVRam\":{\"value\":2120007680,\"units\":\"Bytes\"}}, {\"type\":\"Microsoft Basic Render Driver\",\"unifiedMemoryArchitecture\":null,\"cores\":null,\"dedicatedVRam\":{\"value\":0,\"units\":\"Bytes\"}}], npu_list: [], memory_info: {\"totalRAM\":{\"value\":16777216,\"units\":\"KB\"}}, display_list: [{\"nativeHeight\":1600,\"nativeWidth\":2560,\"scaledHeight\":1600,\"scaledWidth\":2560,\"primary\":true}]}\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 7.0
-        },
-        {
-          "id": 777,
-          "title": "Unable to open Pieces Core Services",
-          "text": "Unable to open Pieces Core Services\nError: WebSocketException: Connection to 'http://127.0.0.1:39300/user/last_checked_in/stream#' was not upgraded to websocket, HTTP status code: 404\n\n**Installation Details**\n\nSucceeded: true\nPath: C:\\Program Files\\WindowsApps\\com.MeshIntelligentTechnologi.PiecesOS_12.1.0.0_x64__84gz00a5z79wr\n\n**PiecesOS Information**\n\nID: 6a8f859c-75d4-44e6-94c6-44518b18b892\nUser: d849d4cd-f859-447e-bc58-42678ea056b4\nCurrent Version: Unknown\nMin Version Supported: 12.1.0\nMax Version Supported: 13.0.0\nLocal Port: 39300\n\n**Device Information**\n\nOperating System: Windows\nCurrent Version: \"Windows 10 Home Single Language\" 10.0 (Build 26120)\nMin Version Supported: Windows 10 Build 1903\nAdditional Device Information: {cpu_list: [{\"architecture\":\"x64\",\"cores\":6,\"logicalProcessors\":12,\"l2Cache\":{\"value\":7680,\"units\":\"Bytes\"},\"l3Cache\":{\"value\":12288,\"units\":\"Bytes\"},\"description\":\"11th Gen Intel(R) Core(TM) i5-11400H @ 2.70GHz\"}], gpu_list: [{\"type\":\"Intel(R) UHD Graphics\",\"unifiedMemoryArchitecture\":null,\"cores\":null,\"dedicatedVRam\":{\"value\":134217728,\"units\":\"Bytes\"}}, {\"type\":\"NVIDIA GeForce RTX 2050\",\"unifiedMemoryArchitecture\":null,\"cores\":null,\"dedicatedVRam\":{\"value\":4156555264,\"units\":\"Bytes\"}}, {\"type\":\"Microsoft Basic Render Driver\",\"unifiedMemoryArchitecture\":null,\"cores\":null,\"dedicatedVRam\":{\"value\":0,\"units\":\"Bytes\"}}], npu_list: [], memory_info: {\"totalRAM\":{\"value\":16777216,\"units\":\"KB\"}}, display_list: [{\"nativeHeight\":1080,\"nativeWidth\":1920,\"scaledHeight\":1080,\"scaledWidth\":1920,\"primary\":true}]}\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 7.0
         }
       ]
     }
   ],
   "recommendations": [
-    "Prioritize resolving the \"Unable to open Pieces Core Services\" issue, which has the highest activity level and frequency across macOS and Windows. Investigate the root cause of the WebSocketException and HTTP 404 error.",
-    "Address the performance issues with the Pieces desktop application, specifically the slowness and lack of response in Copilot chat (Ticket #315).",
-    "Investigate and resolve the \"Ollama Fails to Install on Linux\" issue (Ticket #537) and \"Long-Term Memory Feature Not Working on Linux\" issue (Ticket #568) to improve the Linux user experience.",
-    "Ensure the Raycast extension is compatible with the current version of Raycast (Ticket #781).",
-    "Investigate the crash reported when scrolling or moving a window to another screen (Ticket #771)."
+    "Prioritize resolving the \"Unable to open Pieces Core Services\" issue on MacOS, focusing on the WebSocket connection error. This issue has the highest frequency and activity levels.",
+    "Investigate the root cause of the WebSocket error (404) when connecting to 'http://127.0.0.1:39300/user/last_checked_in/stream#'. Check backend service logs and ensure the service is running and accessible on the specified port.",
+    "Address the performance issues reported for the Pieces desktop application, particularly the slowness and lack of response in Copilot chat.",
+    "Investigate and resolve the Ollama installation failure on Linux and the Long-Term Memory feature not working on Linux.",
+    "Look into the Raycast extension incompatibility issue and the crash reported when scrolling or moving a window to another screen."
   ],
   "message": "Daily support report generated successfully."
 }
