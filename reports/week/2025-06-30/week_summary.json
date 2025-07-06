@@ -2,7 +2,7 @@
   "success": true,
   "date_range": {
     "start": "2025-06-30T00:00:00+00:00",
-    "end": "2025-07-06T05:08:08.828115+00:00"
+    "end": "2025-07-06T13:13:13.690648+00:00"
   },
   "summary": {
     "total_tickets": 18,
@@ -103,7 +103,7 @@
     {
       "number": 315,
       "title": "Pieces desktop application is very slow/laggy, not generating any response in copilot chat.",
-      "activity_level": 6.67
+      "activity_level": 6.66
     },
     {
       "number": 773,
@@ -111,14 +111,9 @@
       "activity_level": 6.38
     },
     {
-      "number": 777,
-      "title": "Unable to open Pieces Core Services",
-      "activity_level": 5.17
-    },
-    {
       "number": 537,
       "title": "Ollama Fails to Install on Linux",
-      "activity_level": 5.16
+      "activity_level": 4.9
     },
     {
       "number": 780,
@@ -127,6 +122,11 @@
     },
     {
       "number": 776,
+      "title": "Unable to open Pieces Core Services",
+      "activity_level": 4.64
+    },
+    {
+      "number": 777,
       "title": "Unable to open Pieces Core Services",
       "activity_level": 4.64
     },
@@ -184,7 +184,7 @@
   "common_issues": [
     {
       "title": "Pieces Desktop App Performance Issues",
-      "description": "Users are experiencing various performance issues with the Pieces desktop app, including update failures on macOS (version 12.1.0), slow response and lag on Windows (version 10.0.1), and crashes when scrolling or moving the window to another screen on Windows (PiecesOS 12.0.0, Pieces for Developers 4.2.1).  Further investigation is needed to identify the root causes and potential solutions.",
+      "description": "Users are experiencing various performance issues with the Pieces desktop application, including update failures on macOS (version 12.1.0), slow response times and lag on Windows (version 10.0.1), and crashes when scrolling or moving the window to another screen on Windows (PiecesOS 12.0.0, Pieces for Developers 4.2.1).  Further investigation is needed to identify the root causes and potential solutions.",
       "frequency": 3,
       "related_issues": [
         {
@@ -197,7 +197,7 @@
           "id": 315,
           "title": "Pieces desktop application is very slow/laggy, not generating any response in copilot chat.",
           "text": "Pieces desktop application is very slow/laggy, not generating any response in copilot chat.\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n10.0.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nPieces desktop application is working very much slow after latest update, takes very much time to give any response. Even after doing a hard reset active runtime, it just do not work. \nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 6.67
+          "activity_level": 6.66
         },
         {
           "id": 771,
@@ -209,14 +209,14 @@
     },
     {
       "title": "Pieces OS and Ollama Installation and Feature Issues",
-      "description": "Users are experiencing problems with Pieces OS, including Ollama installation failures on Linux, Long-Term Memory feature unavailability on Linux, and WebSocket connection errors on Windows.  The Ollama error message suggests a publisher model issue. The Long-Term Memory problem is confirmed by Discord but not reflected in the Pieces OS interface. The WebSocket error indicates a potential communication problem between the Pieces desktop app and Pieces OS core services. Further investigation is needed to pinpoint the root causes and provide solutions.",
+      "description": "Users are experiencing problems with Pieces OS, including Ollama installation failures on Linux, Long-Term Memory feature unavailability on Linux despite official support, and WebSocket connection errors preventing access to Pieces Core Services on Windows.  The issues may stem from software bugs, version incompatibility, or local configuration problems. Check for updates, reinstall affected components, and verify network connectivity.",
       "frequency": 3,
       "related_issues": [
         {
           "id": 537,
           "title": "Ollama Fails to Install on Linux",
           "text": "Ollama Fails to Install on Linux\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nLinux\n\n### Your Pieces OS Version\n\n11.0.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nUser reports immediate \"Ollama failed to install\" diaglog upon clicking install Ollama install button in Pieces desktop app\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 5.16
+          "activity_level": 4.9
         },
         {
           "id": 568,
@@ -234,7 +234,7 @@
     },
     {
       "title": "Pieces Core Services Fails to Open Due to WebSocket Error",
-      "description": "Users across different operating systems (Windows, MacOS) are unable to open Pieces Core Services.  A WebSocketException occurs with a 404 error when attempting to connect to 'http://127.0.0.1:39300/user/last_checked_in/stream#'. The PiecesOS version is unknown, but installations appear successful.  Further investigation into the backend service and network connectivity is needed.",
+      "description": "Users across different operating systems (Windows, MacOS) are unable to open Pieces Core Services.  A WebSocketException occurs with a 404 error when attempting to connect to 'http://127.0.0.1:39300/user/last_checked_in/stream#'. The PiecesOS version is unknown, but installations appear successful.  Check PiecesOS installation, local port accessibility, and firewall settings.",
       "frequency": 3,
       "related_issues": [
         {
@@ -258,8 +258,8 @@
       ]
     },
     {
-      "title": "Pieces Core Services Fails to Open Due to WebSocket Error",
-      "description": "Users across different operating systems (Windows, macOS) are unable to open Pieces Core Services.  A WebSocketException occurs with a 404 error when attempting to connect to 'http://127.0.0.1:39300/user/last_checked_in/stream#'. The PiecesOS version is unknown, but installations appear successful.  Check PiecesOS installation and local port configuration.",
+      "title": "Pieces Core Services fails to open due to WebSocket connection failure",
+      "description": "Users across different operating systems (Windows, MacOS) are unable to open Pieces Core Services.  A WebSocketException occurs with a 404 error when attempting to connect to 'http://127.0.0.1:39300/user/last_checked_in/stream#'. The PiecesOS version is unknown, but installations appear successful.  Further investigation into the backend service and port availability is needed.",
       "frequency": 3,
       "related_issues": [
         {
@@ -283,8 +283,8 @@
       ]
     },
     {
-      "title": "Pieces Core Services Fails to Open Due to WebSocket Error",
-      "description": "Users across different operating systems (Windows, MacOS) are unable to open Pieces Core Services.  A WebSocketException occurs with a 404 error when attempting to connect to 'http://127.0.0.1:39300/user/last_checked_in/stream#'. The PiecesOS version is unknown, but installations appear successful.  Further investigation into the backend service and network connectivity is needed.",
+      "title": "Pieces Core Services fails to open due to WebSocket connection failure",
+      "description": "Multiple users across Windows and MacOS are unable to open Pieces Core Services.  A WebSocketException occurs with a 404 error when attempting to connect to 'http://127.0.0.1:39300/user/last_checked_in/stream#'. The PiecesOS version is unknown but expected within the 12.1.0-13.0.0 range.  Further investigation into the backend service and network connectivity is required.",
       "frequency": 3,
       "related_issues": [
         {
@@ -309,10 +309,12 @@
     }
   ],
   "recommendations": [
-    "Prioritize resolving the \"Unable to open Pieces Core Services\" issue, which has the highest frequency and activity levels across multiple operating systems. Investigate the WebSocket connection error and backend services.",
-    "Address the performance issues with the Pieces desktop app, including the macOS update failure, Windows slow response, and crashes. Gather more diagnostic information from affected users.",
-    "Investigate the Ollama installation failure on Linux and the Long-Term Memory feature unavailability on Linux. Review the Ollama error message and Discord confirmation for potential solutions.",
-    "Address the Raycast extension incompatibility issue. Determine the specific incompatibility and update the extension or provide guidance to users."
+    "Prioritize resolving the \"Unable to open Pieces Core Services\" issue, which has the highest frequency and activity levels across multiple operating systems.",
+    "Investigate and address the performance issues with the Pieces desktop application, specifically the update failures on macOS, slow response times on Windows, and crashes on Windows.",
+    "Address the Ollama installation failures on Linux and the unavailability of the Long-Term Memory feature on Linux.",
+    "Improve communication with users regarding the availability and functionality of features on different operating systems.",
+    "Consider adding more detailed logging and error reporting to Pieces OS and the desktop application to aid in debugging and troubleshooting.",
+    "Develop automated tests to identify and prevent performance issues and crashes in the future."
   ],
   "message": "Daily support report generated successfully."
 }
