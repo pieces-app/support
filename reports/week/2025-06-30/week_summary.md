@@ -1,6 +1,6 @@
 # Support Ticket Report
-- Generated: 2025-07-05 21:10:40
-- Period: 2025-06-30 to 2025-07-05
+- Generated: 2025-07-06 05:10:29
+- Period: 2025-06-30 to 2025-07-06
 
 ## Summary
 - **Total Tickets:** 18
@@ -14,27 +14,27 @@
 | [#774](https://github.com/pieces-app/support/issues/774) | Unable to open Pieces Core Services | 7.16 |
 | [#315](https://github.com/pieces-app/support/issues/315) | Pieces desktop application is very slow/laggy, not generating any response in copilot chat. | 6.67 |
 | [#773](https://github.com/pieces-app/support/issues/773) | Unable to open Pieces Core Services | 6.38 |
-| [#776](https://github.com/pieces-app/support/issues/776) | Unable to open Pieces Core Services | 5.17 |
+| [#777](https://github.com/pieces-app/support/issues/777) | Unable to open Pieces Core Services | 5.17 |
 
 ## Common Issues
 ### 1. Pieces Desktop App Performance Issues
-Users are experiencing various performance issues with the Pieces desktop application, including update failures on macOS (version 12.1.0), slow response times and lag on Windows (version 10.0.1), and crashes when scrolling or moving the window to another screen on Windows (PiecesOS 12.0.0, Pieces for Developers 4.2.1).  Further investigation is needed to identify the root causes and potential solutions.
+Users are experiencing various performance issues with the Pieces desktop app, including update failures on macOS (version 12.1.0), slow response and lag on Windows (version 10.0.1), and crashes when scrolling or moving the window to another screen on Windows (PiecesOS 12.0.0, Pieces for Developers 4.2.1).  Further investigation is needed to identify the root causes and potential solutions.
 
 **Related Issues:**
 - [#784](https://github.com/pieces-app/support/issues/784): Pieces desktop (MacOS) won't update
 - [#315](https://github.com/pieces-app/support/issues/315): Pieces desktop application is very slow/laggy, not generating any response in copilot chat.
 - [#771](https://github.com/pieces-app/support/issues/771): Crash when scrolling or moving a window to another screen
 
-### 2. Pieces Core Services Fails to Open Due to WebSocket Error
-Users across different operating systems (Windows, MacOS) are unable to open Pieces Core Services.  A WebSocketException occurs with a 404 error when attempting to connect to 'http://127.0.0.1:39300/user/last_checked_in/stream#'. The PiecesOS version is unknown, but installations appear successful.  Check PiecesOS installation, local port accessibility, and firewall settings.
+### 2. Pieces OS and Ollama Installation and Feature Issues
+Users are experiencing problems with Pieces OS, including Ollama installation failures on Linux, Long-Term Memory feature unavailability on Linux, and WebSocket connection errors on Windows.  The Ollama error message suggests a publisher model issue. The Long-Term Memory problem is confirmed by Discord but not reflected in the Pieces OS interface. The WebSocket error indicates a potential communication problem between the Pieces desktop app and Pieces OS core services. Further investigation is needed to pinpoint the root causes and provide solutions.
 
 **Related Issues:**
+- [#537](https://github.com/pieces-app/support/issues/537): Ollama Fails to Install on Linux
+- [#568](https://github.com/pieces-app/support/issues/568): Long-Term Memory Feature Not Working on Linux
 - [#786](https://github.com/pieces-app/support/issues/786): Unable to open Pieces Core Services
-- [#785](https://github.com/pieces-app/support/issues/785): Unable to open Pieces Core Services
-- [#782](https://github.com/pieces-app/support/issues/782): Unable to open Pieces Core Services
 
-### 3. Pieces Core Services fails to open due to WebSocket connection failure
-Users across different operating systems (Windows, MacOS) are unable to open Pieces Core Services.  A WebSocketException occurs with a 404 error when attempting to connect to 'http://127.0.0.1:39300/user/last_checked_in/stream#'. The PiecesOS version is unknown, but the minimum and maximum supported versions are 12.1.0 and 13.0.0, respectively.  Further investigation into the backend service and network connectivity is needed.
+### 3. Pieces Core Services Fails to Open Due to WebSocket Error
+Users across different operating systems (Windows, MacOS) are unable to open Pieces Core Services.  A WebSocketException occurs with a 404 error when attempting to connect to 'http://127.0.0.1:39300/user/last_checked_in/stream#'. The PiecesOS version is unknown, but installations appear successful.  Further investigation into the backend service and network connectivity is needed.
 
 **Related Issues:**
 - [#786](https://github.com/pieces-app/support/issues/786): Unable to open Pieces Core Services
@@ -42,7 +42,7 @@ Users across different operating systems (Windows, MacOS) are unable to open Pie
 - [#782](https://github.com/pieces-app/support/issues/782): Unable to open Pieces Core Services
 
 ### 4. Pieces Core Services Fails to Open Due to WebSocket Error
-Users across different operating systems (Windows, MacOS) are unable to open Pieces Core Services.  A WebSocketException occurs with a 404 error when attempting to connect to 'http://127.0.0.1:39300/user/last_checked_in/stream#'. The PiecesOS version is unknown but compatible versions are between 12.1.0 and 13.0.0.  Further investigation into the backend service and network connectivity is needed.
+Users across different operating systems (Windows, macOS) are unable to open Pieces Core Services.  A WebSocketException occurs with a 404 error when attempting to connect to 'http://127.0.0.1:39300/user/last_checked_in/stream#'. The PiecesOS version is unknown, but installations appear successful.  Check PiecesOS installation and local port configuration.
 
 **Related Issues:**
 - [#786](https://github.com/pieces-app/support/issues/786): Unable to open Pieces Core Services
@@ -50,7 +50,7 @@ Users across different operating systems (Windows, MacOS) are unable to open Pie
 - [#782](https://github.com/pieces-app/support/issues/782): Unable to open Pieces Core Services
 
 ### 5. Pieces Core Services Fails to Open Due to WebSocket Error
-Users across different operating systems (Windows, macOS) are unable to open Pieces Core Services.  A WebSocketException occurs with a 404 error when attempting to connect to 'http://127.0.0.1:39300/user/last_checked_in/stream#'. The PiecesOS version is unknown, but installations appear successful.  Check PiecesOS installation and local port configuration.
+Users across different operating systems (Windows, MacOS) are unable to open Pieces Core Services.  A WebSocketException occurs with a 404 error when attempting to connect to 'http://127.0.0.1:39300/user/last_checked_in/stream#'. The PiecesOS version is unknown, but installations appear successful.  Further investigation into the backend service and network connectivity is needed.
 
 **Related Issues:**
 - [#786](https://github.com/pieces-app/support/issues/786): Unable to open Pieces Core Services
@@ -59,11 +59,10 @@ Users across different operating systems (Windows, macOS) are unable to open Pie
 
 
 ## Recommendations
-- Prioritize resolving the "Unable to open Pieces Core Services" issue, which has the highest frequency and activity levels. Investigate the root cause of the WebSocketException and the 404 error.  Check PiecesOS installation, local port accessibility, and firewall settings.
-- Address the performance issues with the Pieces desktop application, specifically the update failures on macOS, slow response times on Windows, and crashes when scrolling or moving the window.  Gather more diagnostic information from affected users.
-- Investigate the Ollama installation failure on Linux (issue #537) and the Long-Term Memory feature not working on Linux (issue #568). These Linux-specific issues may indicate broader compatibility problems.
-- Address the Raycast extension incompatibility with the current version of Raycast (issue #781).  Determine the necessary updates to ensure compatibility.
-- Improve communication with users regarding known issues and pending releases.  Provide updates on the progress of fixes and expected release timelines.
+- Prioritize resolving the "Unable to open Pieces Core Services" issue, which has the highest frequency and activity levels across multiple operating systems. Investigate the WebSocket connection error and backend services.
+- Address the performance issues with the Pieces desktop app, including the macOS update failure, Windows slow response, and crashes. Gather more diagnostic information from affected users.
+- Investigate the Ollama installation failure on Linux and the Long-Term Memory feature unavailability on Linux. Review the Ollama error message and Discord confirmation for potential solutions.
+- Address the Raycast extension incompatibility issue. Determine the specific incompatibility and update the extension or provide guidance to users.
 
 ## Daily Reports
 Here are the daily reports for this week:
