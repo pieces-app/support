@@ -1,0 +1,74 @@
+{
+  "success": true,
+  "date_range": {
+    "start": "2025-07-06T00:00:00+00:00",
+    "end": "2025-07-06T21:06:26.066877+00:00"
+  },
+  "summary": {
+    "total_tickets": 1,
+    "resolved_tickets": 0,
+    "open_tickets": 1
+  },
+  "ticket_breakdown": [
+    {
+      "category": "bug",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:new",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:desktop application",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "os:macos",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:pieces os",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    }
+  ],
+  "most_active_tickets": [
+    {
+      "number": 787,
+      "title": "Unable to open Pieces Copilot Service",
+      "activity_level": 4.42
+    }
+  ],
+  "common_issues": [
+    {
+      "title": "Pieces Copilot Service fails to open due to 'fp' instance error",
+      "description": "Users are unable to open the Pieces Copilot Service, encountering an error related to an 'fp' instance.  The issue appears on macOS and may be related to Pieces OS or device compatibility. Further investigation is needed to determine the root cause and solution.  Checking installation paths and version compatibility is recommended.",
+      "frequency": 1,
+      "related_issues": [
+        {
+          "id": 787,
+          "title": "Unable to open Pieces Copilot Service",
+          "text": "Unable to open Pieces Copilot Service\nError: Instance of 'fp'\n\n**Installation Details**\n\nSucceeded: true\nPath: /Applications/Pieces OS.app/Contents/MacOS/Pieces OS\n\n**PiecesOS Information**\n\nID: 98CC8321-22F6-4400-BF1C-B1B60229F253\n\nUser: Anonymous\nCurrent Version: Unknown\nMin Version Supported: 11.2.2\nMax Version Supported: 12.0.0\nLocal Port: 39300\n\n**Device Information**\n\nOperating System: MacOS\nCurrent Version: Version 15.5 (Build 24F74)\nMin Version Supported: 12.0.0 Monterey\nAdditional Device Information: {cpu_list: [{\"architecture\":\"arm64\",\"cores\":10,\"logicalProcessors\":10,\"l1Cache\":{\"value\":65536,\"units\":\"Bytes\"},\"l2Cache\":{\"value\":4194304,\"units\":\"Bytes\"},\"description\":\"Apple M1 Pro\"}], gpu_list: [{\"type\":\"Apple M1 Pro\",\"unifiedMemoryArchitecture\":true,\"cores\":16,\"dedicatedVRam\":null}], memory_info: {\"totalRAM\":{\"value\":17179869184,\"units\":\"Bytes\"}}, display_list: [{\"nativeHeight\":2160,\"nativeWidth\":3840,\"scaledHeight\":1296,\"scaledWidth\":2304,\"primary\":true}, {\"nativeHeight\":1440,\"nativeWidth\":2560,\"scaledHeight\":1440,\"scaledWidth\":2560,\"primary\":false}]}\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 4.42
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    "Investigate the root cause of the 'fp' instance error preventing users from opening the Pieces Copilot Service on macOS.",
+    "Check compatibility of the Pieces Copilot Service with different macOS versions and Pieces OS versions.",
+    "Provide clear instructions or documentation to users on how to troubleshoot the 'fp' instance error.",
+    "Gather more data on user environments and configurations to identify patterns or specific triggers for the error.",
+    "Consider implementing error logging and reporting mechanisms to capture more detailed information about the 'fp' instance error."
+  ],
+  "message": "Daily support report generated successfully."
+}
