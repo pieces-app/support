@@ -2,25 +2,37 @@
   "success": true,
   "date_range": {
     "start": "2025-07-07T00:00:00+00:00",
-    "end": "2025-07-08T13:17:46.772025+00:00"
+    "end": "2025-07-08T21:07:34.153486+00:00"
   },
   "summary": {
-    "total_tickets": 11,
+    "total_tickets": 12,
     "resolved_tickets": 2,
-    "open_tickets": 9
+    "open_tickets": 10
   },
   "ticket_breakdown": [
     {
       "category": "bug",
-      "received": 11,
+      "received": 12,
       "resolved": 2,
-      "pending": 9
+      "pending": 10
+    },
+    {
+      "category": "os:windows",
+      "received": 4,
+      "resolved": 0,
+      "pending": 4
     },
     {
       "category": "app:desktop application",
-      "received": 8,
+      "received": 9,
       "resolved": 0,
-      "pending": 8
+      "pending": 9
+    },
+    {
+      "category": "app:pieces os",
+      "received": 9,
+      "resolved": 2,
+      "pending": 7
     },
     {
       "category": "os:macos",
@@ -29,19 +41,7 @@
       "pending": 6
     },
     {
-      "category": "app:pieces os",
-      "received": 8,
-      "resolved": 2,
-      "pending": 6
-    },
-    {
       "category": "status:triaged",
-      "received": 3,
-      "resolved": 0,
-      "pending": 3
-    },
-    {
-      "category": "os:windows",
       "received": 3,
       "resolved": 0,
       "pending": 3
@@ -79,19 +79,19 @@
   ],
   "most_active_tickets": [
     {
-      "number": 773,
-      "title": "Unable to open Pieces Core Services",
-      "activity_level": 6.83
+      "number": 790,
+      "title": "com.pieces.os does not exist",
+      "activity_level": 6.94
     },
     {
-      "number": 787,
-      "title": "Unable to open Pieces Copilot Service",
-      "activity_level": 4.5
+      "number": 773,
+      "title": "Unable to open Pieces Core Services",
+      "activity_level": 6.47
     },
     {
       "number": 769,
       "title": "An error occurred in the authentication flow.",
-      "activity_level": 3.97
+      "activity_level": 4.25
     },
     {
       "number": 763,
@@ -99,18 +99,8 @@
       "activity_level": 3.96
     },
     {
-      "number": 784,
-      "title": "Pieces desktop (MacOS) won't update",
-      "activity_level": 3.88
-    },
-    {
-      "number": 785,
-      "title": "Unable to open Pieces Core Services",
-      "activity_level": 3.88
-    },
-    {
-      "number": 786,
-      "title": "Unable to open Pieces Core Services",
+      "number": 787,
+      "title": "Unable to open Pieces Copilot Service",
       "activity_level": 3.88
     },
     {
@@ -119,9 +109,24 @@
       "activity_level": 3.74
     },
     {
+      "number": 784,
+      "title": "Pieces desktop (MacOS) won't update",
+      "activity_level": 3.48
+    },
+    {
+      "number": 785,
+      "title": "Unable to open Pieces Core Services",
+      "activity_level": 3.48
+    },
+    {
+      "number": 786,
+      "title": "Unable to open Pieces Core Services",
+      "activity_level": 3.48
+    },
+    {
       "number": 770,
       "title": "verify dependiencies",
-      "activity_level": 3.33
+      "activity_level": 3.25
     },
     {
       "number": 782,
@@ -135,6 +140,31 @@
     }
   ],
   "common_issues": [
+    {
+      "title": "Pieces OS installation and connection issues",
+      "description": "Users are experiencing problems with Pieces OS installation, integration with other apps, and authentication. Issues include missing com.pieces.os directory, authentication flow errors, and websocket connection failures.  Reinstallation, checking firewall settings, and verifying Pieces OS version compatibility are suggested troubleshooting steps.",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 790,
+          "title": "com.pieces.os does not exist",
+          "text": "com.pieces.os does not exist\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nPieces OS: 12.1.0 Pieces for Developers: 4.3.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI installed UltraEdit on my Windows 11 computer (ARM), running Windows Home. After installing, creating an account, etc. I started UltraEdit and was looking forward to the integration. What I was met with was a window that said that Pieces isn't running with an error unable to determine Pieces connection port. After some discussion, UltraEdit team said that I was likely missing the file %USERPROFILE%\\Documents\\com.pieces.os\\production\\Config\\.port.txt\nTurns out I'm missing the directory com.pieces.os. I has not been created. I uninstalled all the Pieces apps and reinstalled from the website, hoping that this directory would be created. Now UltraEdit says Pieces for Developers is not installed and prompts me to Download Pieces. Clicking that link takes me directly to the page I just downloaded from.\nI suggested to UltraEdit support that I could recreate the directory structure and add .port.txt, but they said instead that I should contact you. While you are looking at this, I am going to do a complete uninstall of UltraEdit and Pieces components, deleting any registry keys I can find (as uninstall doesn't remove any), and remove the .pieces_identites folder from Documents, then do a complete reinstall.\nLooking forward to a solution to this.\nRegards,\nIan Hannah\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 6.94
+        },
+        {
+          "id": 769,
+          "title": "An error occurred in the authentication flow.",
+          "text": "An error occurred in the authentication flow.\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n12.0.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nHello,\nI am receiving this message when attempting to sign-in to Pieces.\n\n```\nAn error occurred in the authentication flow.\nAuthentication Error ID: 00000000000000000000000000000000\n```\n\nThis is a new install. (.appinstaller files)\nI have never used the software before.\nI do not have a pieces account (yet).\nEnvironment: Windows 11\n\nLaunched the authentication by clicking the Sign In button in the Desktop App (4.2.1)\nThe auth link opened Firefox and generated the error.\n\nI tried the following:\nDisabling all extensions in Firefox\nChanging my default browser to Edge and re-launching using Edge.\nRe-installing with the .exe files.\nReviewed the windows firewall config (Pieces added it itself)\nLooked at the Pieces log file but did not see anything obvious enough that I could solve on my own. (See attached)\n\n[log-06252025-copy.txt](https://github.com/user-attachments/files/20907036/log-06252025-copy.txt)\n\nThank you for the help.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 4.25
+        },
+        {
+          "id": 782,
+          "title": "Unable to open Pieces Core Services",
+          "text": "Unable to open Pieces Core Services\nError: WebSocketException: Connection to 'http://127.0.0.1:39300/user/last_checked_in/stream#' was not upgraded to websocket, HTTP status code: 404\n\n**Installation Details**\n\nSucceeded: true\nPath: /Applications/Pieces OS.app\n\n**PiecesOS Information**\n\nID: 1CA2E830-F290-4091-8714-B38DE27CABCB\nUser: 32bc4ee9-918c-4562-b3d7-78c22d9dcebe\nCurrent Version: Unknown\nMin Version Supported: 12.1.0\nMax Version Supported: 13.0.0\nLocal Port: 39300\n\n**Device Information**\n\nOperating System: MacOS\nCurrent Version: Version 15.6 (Build 24G5065c)\nMin Version Supported: 12.0.0 Monterey\nAdditional Device Information: {cpu_list: [{\"architecture\":\"arm64\",\"cores\":8,\"logicalProcessors\":8,\"l1Cache\":{\"value\":65536,\"units\":\"Bytes\"},\"l2Cache\":{\"value\":4194304,\"units\":\"Bytes\"},\"description\":\"Apple M2\"}], gpu_list: [{\"type\":null,\"unifiedMemoryArchitecture\":true,\"cores\":10,\"dedicatedVRam\":null}], memory_info: {\"totalRAM\":{\"value\":8589934592,\"units\":\"Bytes\"}}, display_list: [{\"nativeHeight\":1664,\"nativeWidth\":2560,\"scaledHeight\":1112,\"scaledWidth\":1710,\"primary\":true}]}\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 2.71
+        }
+      ]
+    },
     {
       "title": "Pieces macOS app and Raycast extension update issues",
       "description": "Users are experiencing issues with the Pieces macOS app and its Raycast extension. The app update process gets stuck in a loop, and the extension is incompatible with recent Raycast versions, displaying error messages.  This suggests potential bugs in the update mechanism and version compatibility checks.",
@@ -150,19 +180,19 @@
           "id": 784,
           "title": "Pieces desktop (MacOS) won't update",
           "text": "Pieces desktop (MacOS) won't update\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n12.1.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nIf I start Pieces Desktop, it tells me it's out of date.\n\nWhen I click on \"check for Desktop App updates\" the loader loads to about 40% on the icon and then restarts the app and I get the exact same message.\nSo it seems your updater is stuck in a loop.\n\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 3.88
+          "activity_level": 3.48
         },
         {
           "id": 787,
           "title": "Unable to open Pieces Copilot Service",
           "text": "Unable to open Pieces Copilot Service\nError: Instance of 'fp'\n\n**Installation Details**\n\nSucceeded: true\nPath: /Applications/Pieces OS.app/Contents/MacOS/Pieces OS\n\n**PiecesOS Information**\n\nID: 98CC8321-22F6-4400-BF1C-B1B60229F253\n\nUser: Anonymous\nCurrent Version: Unknown\nMin Version Supported: 11.2.2\nMax Version Supported: 12.0.0\nLocal Port: 39300\n\n**Device Information**\n\nOperating System: MacOS\nCurrent Version: Version 15.5 (Build 24F74)\nMin Version Supported: 12.0.0 Monterey\nAdditional Device Information: {cpu_list: [{\"architecture\":\"arm64\",\"cores\":10,\"logicalProcessors\":10,\"l1Cache\":{\"value\":65536,\"units\":\"Bytes\"},\"l2Cache\":{\"value\":4194304,\"units\":\"Bytes\"},\"description\":\"Apple M1 Pro\"}], gpu_list: [{\"type\":\"Apple M1 Pro\",\"unifiedMemoryArchitecture\":true,\"cores\":16,\"dedicatedVRam\":null}], memory_info: {\"totalRAM\":{\"value\":17179869184,\"units\":\"Bytes\"}}, display_list: [{\"nativeHeight\":2160,\"nativeWidth\":3840,\"scaledHeight\":1296,\"scaledWidth\":2304,\"primary\":true}, {\"nativeHeight\":1440,\"nativeWidth\":2560,\"scaledHeight\":1440,\"scaledWidth\":2560,\"primary\":false}]}\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 4.5
+          "activity_level": 3.88
         }
       ]
     },
     {
       "title": "Pieces Desktop App on macOS update issues",
-      "description": "Users are experiencing problems updating the Pieces desktop app on macOS.  Symptoms include the app reporting it's out of date, update checks failing or looping, and inability to update past workstream activities.  This affects various Pieces OS versions.  Suggested solutions include verifying dependencies and checking for potential conflicts with the OS or other software.",
+      "description": "Users are experiencing problems updating the Pieces desktop app on macOS.  Symptoms include the app reporting it's out of date, update checks failing or looping, and inability to update past workstream activities.  Issues have been reported across various Pieces OS versions. Further investigation is needed to identify the root cause and provide a solution.",
       "frequency": 3,
       "related_issues": [
         {
@@ -175,44 +205,19 @@
           "id": 770,
           "title": "verify dependiencies",
           "text": "verify dependiencies\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\nos version upgrade \n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\ntakes time and restarting all the time \n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 3.33
+          "activity_level": 3.25
         },
         {
           "id": 784,
           "title": "Pieces desktop (MacOS) won't update",
           "text": "Pieces desktop (MacOS) won't update\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n12.1.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nIf I start Pieces Desktop, it tells me it's out of date.\n\nWhen I click on \"check for Desktop App updates\" the loader loads to about 40% on the icon and then restarts the app and I get the exact same message.\nSo it seems your updater is stuck in a loop.\n\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 3.88
-        }
-      ]
-    },
-    {
-      "title": "Authentication error on new Pieces installs",
-      "description": "Users are encountering \"An error occurred in the authentication flow\" on new Pieces installations.  The error occurs on initial sign-in, regardless of browser.  Reinstallation and firewall checks haven't resolved the issue.  The Pieces log file lacks clear solutions. The issue appears on both Windows and MacOS.",
-      "frequency": 3,
-      "related_issues": [
-        {
-          "id": 769,
-          "title": "An error occurred in the authentication flow.",
-          "text": "An error occurred in the authentication flow.\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n12.0.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nHello,\nI am receiving this message when attempting to sign-in to Pieces.\n\n```\nAn error occurred in the authentication flow.\nAuthentication Error ID: 00000000000000000000000000000000\n```\n\nThis is a new install. (.appinstaller files)\nI have never used the software before.\nI do not have a pieces account (yet).\nEnvironment: Windows 11\n\nLaunched the authentication by clicking the Sign In button in the Desktop App (4.2.1)\nThe auth link opened Firefox and generated the error.\n\nI tried the following:\nDisabling all extensions in Firefox\nChanging my default browser to Edge and re-launching using Edge.\nRe-installing with the .exe files.\nReviewed the windows firewall config (Pieces added it itself)\nLooked at the Pieces log file but did not see anything obvious enough that I could solve on my own. (See attached)\n\n[log-06252025-copy.txt](https://github.com/user-attachments/files/20907036/log-06252025-copy.txt)\n\nThank you for the help.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 3.97
-        },
-        {
-          "id": 782,
-          "title": "Unable to open Pieces Core Services",
-          "text": "Unable to open Pieces Core Services\nError: WebSocketException: Connection to 'http://127.0.0.1:39300/user/last_checked_in/stream#' was not upgraded to websocket, HTTP status code: 404\n\n**Installation Details**\n\nSucceeded: true\nPath: /Applications/Pieces OS.app\n\n**PiecesOS Information**\n\nID: 1CA2E830-F290-4091-8714-B38DE27CABCB\nUser: 32bc4ee9-918c-4562-b3d7-78c22d9dcebe\nCurrent Version: Unknown\nMin Version Supported: 12.1.0\nMax Version Supported: 13.0.0\nLocal Port: 39300\n\n**Device Information**\n\nOperating System: MacOS\nCurrent Version: Version 15.6 (Build 24G5065c)\nMin Version Supported: 12.0.0 Monterey\nAdditional Device Information: {cpu_list: [{\"architecture\":\"arm64\",\"cores\":8,\"logicalProcessors\":8,\"l1Cache\":{\"value\":65536,\"units\":\"Bytes\"},\"l2Cache\":{\"value\":4194304,\"units\":\"Bytes\"},\"description\":\"Apple M2\"}], gpu_list: [{\"type\":null,\"unifiedMemoryArchitecture\":true,\"cores\":10,\"dedicatedVRam\":null}], memory_info: {\"totalRAM\":{\"value\":8589934592,\"units\":\"Bytes\"}}, display_list: [{\"nativeHeight\":1664,\"nativeWidth\":2560,\"scaledHeight\":1112,\"scaledWidth\":1710,\"primary\":true}]}\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 2.71
-        },
-        {
-          "id": 783,
-          "title": "Unable to open Pieces Core Services",
-          "text": "Unable to open Pieces Core Services\nError: WebSocketException: Connection to 'http://127.0.0.1:39300/user/last_checked_in/stream#' was not upgraded to websocket, HTTP status code: 404\n\n**Installation Details**\n\nSucceeded: true\nPath: /Applications/Pieces OS.app\n\n**PiecesOS Information**\n\nID: 1CA2E830-F290-4091-8714-B38DE27CABCB\nUser: 32bc4ee9-918c-4562-b3d7-78c22d9dcebe\nCurrent Version: Unknown\nMin Version Supported: 12.1.0\nMax Version Supported: 13.0.0\nLocal Port: 39300\n\n**Device Information**\n\nOperating System: MacOS\nCurrent Version: Version 15.6 (Build 24G5065c)\nMin Version Supported: 12.0.0 Monterey\nAdditional Device Information: {cpu_list: [{\"architecture\":\"arm64\",\"cores\":8,\"logicalProcessors\":8,\"l1Cache\":{\"value\":65536,\"units\":\"Bytes\"},\"l2Cache\":{\"value\":4194304,\"units\":\"Bytes\"},\"description\":\"Apple M2\"}], gpu_list: [{\"type\":null,\"unifiedMemoryArchitecture\":true,\"cores\":10,\"dedicatedVRam\":null}], memory_info: {\"totalRAM\":{\"value\":8589934592,\"units\":\"Bytes\"}}, display_list: [{\"nativeHeight\":1664,\"nativeWidth\":2560,\"scaledHeight\":1112,\"scaledWidth\":1710,\"primary\":true}]}\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 2.71
+          "activity_level": 3.48
         }
       ]
     },
     {
       "title": "Pieces Core Services Fails to Open Due to WebSocket Error",
-      "description": "Multiple users reported a WebSocketException with a 404 HTTP status code when attempting to open Pieces Core Services. The connection to 'http://127.0.0.1:39300/user/last_checked_in/stream#' fails to upgrade to a websocket.  The issue appears on both macOS and Windows.  Suggested troubleshooting includes checking Pieces OS installation, network connectivity, and firewall settings. Reinstallation of Pieces OS may also resolve the issue. Further investigation into the backend service and websocket configuration is needed.",
+      "description": "Multiple users reported a WebSocketException with a 404 HTTP status code when attempting to open Pieces Core Services. The connection to 'http://127.0.0.1:39300/user/last_checked_in/stream#' fails to upgrade to a WebSocket.  The issue appears on both macOS and Windows. Suggested troubleshooting includes checking Pieces Core Services installation, network connectivity, and firewall settings.",
       "frequency": 3,
       "related_issues": [
         {
@@ -231,13 +236,13 @@
           "id": 785,
           "title": "Unable to open Pieces Core Services",
           "text": "Unable to open Pieces Core Services\nError: WebSocketException: Connection to 'http://127.0.0.1:39300/user/last_checked_in/stream#' was not upgraded to websocket, HTTP status code: 404\n\n**Installation Details**\n\nSucceeded: true\nPath: \n\n**PiecesOS Information**\n\nID: 33041b99-df8d-487d-8b49-1879f22848c3\nUser: 6e0426d2-ba7d-4a7a-9509-fc4d97e65780\nCurrent Version: Unknown\nMin Version Supported: 12.1.0\nMax Version Supported: 13.0.0\nLocal Port: 39300\n\n**Device Information**\n\nOperating System: Windows\nCurrent Version: \"Windows 10 Pro\" 10.0 (Build 22000)\nMin Version Supported: Windows 10 Build 1903\nAdditional Device Information: {cpu_list: [{\"architecture\":\"x64\",\"cores\":2,\"logicalProcessors\":4,\"l2Cache\":{\"value\":512,\"units\":\"Bytes\"},\"l3Cache\":{\"value\":3072,\"units\":\"Bytes\"},\"description\":\"Intel(R) Core(TM) i5-6200U CPU @ 2.30GHz\"}], gpu_list: [{\"type\":\"Intel(R) HD Graphics 520\",\"unifiedMemoryArchitecture\":null,\"cores\":null,\"dedicatedVRam\":{\"value\":134217728,\"units\":\"Bytes\"}}, {\"type\":\"Microsoft Basic Render Driver\",\"unifiedMemoryArchitecture\":null,\"cores\":null,\"dedicatedVRam\":{\"value\":0,\"units\":\"Bytes\"}}], npu_list: [], memory_info: {\"totalRAM\":{\"value\":8388608,\"units\":\"KB\"}}, display_list: [{\"nativeHeight\":1080,\"nativeWidth\":1920,\"scaledHeight\":1080,\"scaledWidth\":1920,\"primary\":true}]}\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 3.88
+          "activity_level": 3.48
         }
       ]
     },
     {
       "title": "Pieces Core Services Fails to Open Due to WebSocket Error",
-      "description": "Multiple users reported a WebSocketException with a 404 HTTP status code when attempting to open Pieces Core Services. The connection to 'http://127.0.0.1:39300/user/last_checked_in/stream#' fails to upgrade to a WebSocket.  This issue occurs across different operating systems (MacOS, Windows) and Pieces OS IDs.  Further investigation into the server-side WebSocket configuration and network connectivity is needed.",
+      "description": "Multiple users reported a WebSocketException with a 404 HTTP status code when attempting to open Pieces Core Services. The connection to 'http://127.0.0.1:39300/user/last_checked_in/stream#' fails to upgrade to a WebSocket.  Affected operating systems include macOS and Windows.  The issue may stem from server-side problems or incorrect client configuration. Check server status, network connectivity, and firewall settings.",
       "frequency": 3,
       "related_issues": [
         {
@@ -256,17 +261,17 @@
           "id": 785,
           "title": "Unable to open Pieces Core Services",
           "text": "Unable to open Pieces Core Services\nError: WebSocketException: Connection to 'http://127.0.0.1:39300/user/last_checked_in/stream#' was not upgraded to websocket, HTTP status code: 404\n\n**Installation Details**\n\nSucceeded: true\nPath: \n\n**PiecesOS Information**\n\nID: 33041b99-df8d-487d-8b49-1879f22848c3\nUser: 6e0426d2-ba7d-4a7a-9509-fc4d97e65780\nCurrent Version: Unknown\nMin Version Supported: 12.1.0\nMax Version Supported: 13.0.0\nLocal Port: 39300\n\n**Device Information**\n\nOperating System: Windows\nCurrent Version: \"Windows 10 Pro\" 10.0 (Build 22000)\nMin Version Supported: Windows 10 Build 1903\nAdditional Device Information: {cpu_list: [{\"architecture\":\"x64\",\"cores\":2,\"logicalProcessors\":4,\"l2Cache\":{\"value\":512,\"units\":\"Bytes\"},\"l3Cache\":{\"value\":3072,\"units\":\"Bytes\"},\"description\":\"Intel(R) Core(TM) i5-6200U CPU @ 2.30GHz\"}], gpu_list: [{\"type\":\"Intel(R) HD Graphics 520\",\"unifiedMemoryArchitecture\":null,\"cores\":null,\"dedicatedVRam\":{\"value\":134217728,\"units\":\"Bytes\"}}, {\"type\":\"Microsoft Basic Render Driver\",\"unifiedMemoryArchitecture\":null,\"cores\":null,\"dedicatedVRam\":{\"value\":0,\"units\":\"Bytes\"}}], npu_list: [], memory_info: {\"totalRAM\":{\"value\":8388608,\"units\":\"KB\"}}, display_list: [{\"nativeHeight\":1080,\"nativeWidth\":1920,\"scaledHeight\":1080,\"scaledWidth\":1920,\"primary\":true}]}\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 3.88
+          "activity_level": 3.48
         }
       ]
     }
   ],
   "recommendations": [
-    "Prioritize resolving the WebSocketException causing Pieces Core Services to fail. This issue is widespread across different operating systems and users, impacting core functionality.",
-    "Address the Pieces macOS app and Raycast extension update issues. Users are encountering difficulties updating the app and the extension's incompatibility with Raycast versions.",
-    "Investigate and resolve the authentication flow error on new Pieces installations. This is blocking new users from accessing the platform.",
-    "Improve the update mechanism for the Pieces Desktop App on macOS. Address the issues with update checks failing, looping, or not updating workstream activities.",
-    "Review and update documentation or communication regarding Pieces OS installation, network connectivity, and firewall settings to preemptively address user issues."
+    "Prioritize resolving the \"Pieces OS installation and connection issues\" as it has the highest frequency and significant user impact. Investigate the root cause of the com.pieces.os directory not being created during installation, authentication flow errors, and websocket connection failures.",
+    "Address the \"Pieces macOS app and Raycast extension update issues\" by fixing the app update loop and ensuring compatibility with the latest Raycast version. This will improve user experience and reduce support tickets related to updates.",
+    "Investigate and resolve the \"Pieces Core Services Fails to Open Due to WebSocket Error\" across macOS and Windows.  This appears to be a critical issue affecting multiple users and impacting core functionality.",
+    "Improve the update mechanism for the Pieces Desktop App on macOS to prevent issues with update checks failing or looping. Ensure clear communication to users about the update process and provide troubleshooting steps if needed.",
+    "Review and update documentation regarding Pieces OS installation, integration with other apps, and troubleshooting common issues. This will empower users to self-resolve problems and reduce the support burden."
   ],
   "message": "Daily support report generated successfully."
 }

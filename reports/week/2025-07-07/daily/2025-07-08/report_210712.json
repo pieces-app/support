@@ -1,0 +1,91 @@
+{
+  "success": true,
+  "date_range": {
+    "start": "2025-07-08T00:00:00+00:00",
+    "end": "2025-07-08T21:07:12.934111+00:00"
+  },
+  "summary": {
+    "total_tickets": 2,
+    "resolved_tickets": 0,
+    "open_tickets": 2
+  },
+  "ticket_breakdown": [
+    {
+      "category": "bug",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "os:windows",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:desktop application",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "app:pieces os",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "os:macos",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:triaged",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    }
+  ],
+  "most_active_tickets": [
+    {
+      "number": 790,
+      "title": "com.pieces.os does not exist",
+      "activity_level": 6.94
+    },
+    {
+      "number": 763,
+      "title": "Workstream activity can't update last week tasks",
+      "activity_level": 3.96
+    }
+  ],
+  "common_issues": [
+    {
+      "title": "Missing com.pieces.os directory and workstream update issues",
+      "description": "Users are experiencing issues with missing com.pieces.os directory, causing integration problems with other applications.  Reinstallation doesn't resolve the issue.  Additionally, users report inability to update past workstream activities, even with refresh functionality.  Further investigation is needed to determine the root cause and potential solutions for both issues.",
+      "frequency": 2,
+      "related_issues": [
+        {
+          "id": 790,
+          "title": "com.pieces.os does not exist",
+          "text": "com.pieces.os does not exist\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nPieces OS: 12.1.0 Pieces for Developers: 4.3.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI installed UltraEdit on my Windows 11 computer (ARM), running Windows Home. After installing, creating an account, etc. I started UltraEdit and was looking forward to the integration. What I was met with was a window that said that Pieces isn't running with an error unable to determine Pieces connection port. After some discussion, UltraEdit team said that I was likely missing the file %USERPROFILE%\\Documents\\com.pieces.os\\production\\Config\\.port.txt\nTurns out I'm missing the directory com.pieces.os. I has not been created. I uninstalled all the Pieces apps and reinstalled from the website, hoping that this directory would be created. Now UltraEdit says Pieces for Developers is not installed and prompts me to Download Pieces. Clicking that link takes me directly to the page I just downloaded from.\nI suggested to UltraEdit support that I could recreate the directory structure and add .port.txt, but they said instead that I should contact you. While you are looking at this, I am going to do a complete uninstall of UltraEdit and Pieces components, deleting any registry keys I can find (as uninstall doesn't remove any), and remove the .pieces_identites folder from Documents, then do a complete reinstall.\nLooking forward to a solution to this.\nRegards,\nIan Hannah\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 6.94
+        },
+        {
+          "id": 763,
+          "title": "Workstream activity can't update last week tasks",
+          "text": "Workstream activity can't update last week tasks\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n4.2.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI opened #753.\nNow, Today's workstream is being updated but still I can't update last week activities with refresh button(select last week)\n\nIs it good to think I can't revive last week tasks or I will be fixed?\n\n![Image](https://github.com/user-attachments/assets/e177dccd-caea-46b9-bdbb-d3f4e88bfc84)\n\n![Image](https://github.com/user-attachments/assets/91b7556d-d795-4e3d-8396-3b81cda2770d)\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 3.96
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    "Investigate the missing com.pieces.os directory issue on Windows and its impact on application integrations.",
+    "Develop a fix for the workstream activity update issue affecting past tasks, especially on macOS.",
+    "Prioritize resolution of issue #790 due to its higher activity level and potential impact on user experience.",
+    "Improve the installation process to ensure the creation of necessary directories and files, such as com.pieces.os and .port.txt.",
+    "Provide clearer documentation or communication to users regarding Pieces OS installation and troubleshooting steps."
+  ],
+  "message": "Daily support report generated successfully."
+}
