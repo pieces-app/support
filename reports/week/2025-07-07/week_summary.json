@@ -2,7 +2,7 @@
   "success": true,
   "date_range": {
     "start": "2025-07-07T00:00:00+00:00",
-    "end": "2025-07-08T05:08:56.800142+00:00"
+    "end": "2025-07-08T13:17:46.772025+00:00"
   },
   "summary": {
     "total_tickets": 11,
@@ -136,8 +136,8 @@
   ],
   "common_issues": [
     {
-      "title": "Pieces macOS App and Raycast Extension Update Issues",
-      "description": "Users are experiencing issues with the Pieces macOS app and its Raycast extension. The app update process gets stuck in a loop, and the extension is incompatible with recent Raycast versions, displaying error messages.  This suggests potential bugs in the update mechanism and version compatibility checks.  Users should try reinstalling the app and extension or check for manual update options.",
+      "title": "Pieces macOS app and Raycast extension update issues",
+      "description": "Users are experiencing issues with the Pieces macOS app and its Raycast extension. The app update process gets stuck in a loop, and the extension is incompatible with recent Raycast versions, displaying error messages.  This suggests potential bugs in the update mechanism and version compatibility checks.",
       "frequency": 3,
       "related_issues": [
         {
@@ -162,7 +162,7 @@
     },
     {
       "title": "Pieces Desktop App on macOS update issues",
-      "description": "Users are experiencing problems updating the Pieces desktop app on macOS.  Symptoms include the app reporting it's out of date, update checks failing or looping, and workstream activities not updating.  This affects various Pieces OS versions.  Check for existing reported issues and ensure a stable internet connection. Further troubleshooting may be required.",
+      "description": "Users are experiencing problems updating the Pieces desktop app on macOS.  Symptoms include the app reporting it's out of date, update checks failing or looping, and inability to update past workstream activities.  This affects various Pieces OS versions.  Suggested solutions include verifying dependencies and checking for potential conflicts with the OS or other software.",
       "frequency": 3,
       "related_issues": [
         {
@@ -186,8 +186,8 @@
       ]
     },
     {
-      "title": "Authentication error on new Pieces install",
-      "description": "Users are encountering \"An error occurred in the authentication flow\" on new Pieces installations.  This occurs on Windows and MacOS during initial sign-in.  Changing browsers, reinstalling, and checking firewall settings have not resolved the issue.  Logs indicate a potential websocket connection failure with Pieces Core Services (HTTP 404).",
+      "title": "Authentication error on new Pieces installs",
+      "description": "Users are encountering \"An error occurred in the authentication flow\" on new Pieces installations.  The error occurs on initial sign-in, regardless of browser.  Reinstallation and firewall checks haven't resolved the issue.  The Pieces log file lacks clear solutions. The issue appears on both Windows and MacOS.",
       "frequency": 3,
       "related_issues": [
         {
@@ -212,7 +212,7 @@
     },
     {
       "title": "Pieces Core Services Fails to Open Due to WebSocket Error",
-      "description": "Multiple users reported a WebSocketException with a 404 HTTP status code when attempting to open Pieces Core Services. The connection to 'http://127.0.0.1:39300/user/last_checked_in/stream#' fails to upgrade to a WebSocket.  This issue occurs across different operating systems (MacOS, Windows) and Pieces OS IDs.  Further investigation into the server-side WebSocket configuration and potential network connectivity issues is required.",
+      "description": "Multiple users reported a WebSocketException with a 404 HTTP status code when attempting to open Pieces Core Services. The connection to 'http://127.0.0.1:39300/user/last_checked_in/stream#' fails to upgrade to a websocket.  The issue appears on both macOS and Windows.  Suggested troubleshooting includes checking Pieces OS installation, network connectivity, and firewall settings. Reinstallation of Pieces OS may also resolve the issue. Further investigation into the backend service and websocket configuration is needed.",
       "frequency": 3,
       "related_issues": [
         {
@@ -237,7 +237,7 @@
     },
     {
       "title": "Pieces Core Services Fails to Open Due to WebSocket Error",
-      "description": "Multiple users reported a WebSocketException with a 404 HTTP status code when attempting to open Pieces Core Services. The connection to 'http://127.0.0.1:39300/user/last_checked_in/stream#' fails to upgrade to a websocket.  The issue appears on both macOS and Windows.  Further investigation into the server-side websocket configuration and Pieces Core Services installation is needed.",
+      "description": "Multiple users reported a WebSocketException with a 404 HTTP status code when attempting to open Pieces Core Services. The connection to 'http://127.0.0.1:39300/user/last_checked_in/stream#' fails to upgrade to a WebSocket.  This issue occurs across different operating systems (MacOS, Windows) and Pieces OS IDs.  Further investigation into the server-side WebSocket configuration and network connectivity is needed.",
       "frequency": 3,
       "related_issues": [
         {
@@ -262,11 +262,11 @@
     }
   ],
   "recommendations": [
-    "Prioritize resolving the \"Unable to open Pieces Core Services\" issue, given its high frequency and impact on users. Investigate the root cause of the WebSocketException and 404 error.",
-    "Address the Pieces macOS app and Raycast extension update issues.  Ensure a smooth update process and compatibility with the latest Raycast version.",
-    "Investigate the authentication flow error (\"An error occurred in the authentication flow\") impacting new installations on Windows and macOS. Review logs and server-side authentication processes.",
-    "Improve communication with users experiencing update issues and authentication errors. Provide clear troubleshooting steps or workarounds.",
-    "Monitor the workstream activity update issue and determine if it's related to the broader update problems."
+    "Prioritize resolving the WebSocketException causing Pieces Core Services to fail. This issue is widespread across different operating systems and users, impacting core functionality.",
+    "Address the Pieces macOS app and Raycast extension update issues. Users are encountering difficulties updating the app and the extension's incompatibility with Raycast versions.",
+    "Investigate and resolve the authentication flow error on new Pieces installations. This is blocking new users from accessing the platform.",
+    "Improve the update mechanism for the Pieces Desktop App on macOS. Address the issues with update checks failing, looping, or not updating workstream activities.",
+    "Review and update documentation or communication regarding Pieces OS installation, network connectivity, and firewall settings to preemptively address user issues."
   ],
   "message": "Daily support report generated successfully."
 }
