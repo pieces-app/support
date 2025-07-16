@@ -1,5 +1,5 @@
 # Support Ticket Report
-- Generated: 2025-07-16 05:12:31
+- Generated: 2025-07-16 13:19:38
 - Period: 2025-07-14 to 2025-07-16
 
 ## Summary
@@ -11,14 +11,14 @@
 | Issue # | Title | Activity Level |
 |---------|-------|----------------|
 | [#799](https://github.com/pieces-app/support/issues/799) | LTM not recording any new activities/Workstream Activity not updating | 13.14 |
-| [#798](https://github.com/pieces-app/support/issues/798) | [Bug] Workstream summaries broken >1 week & Ollama not detected on Linux Mint | 4.52 |
-| [#797](https://github.com/pieces-app/support/issues/797) | Pieces in VS code | 4.06 |
+| [#798](https://github.com/pieces-app/support/issues/798) | [Bug] Workstream summaries broken >1 week & Ollama not detected on Linux Mint | 4.06 |
 | [#790](https://github.com/pieces-app/support/issues/790) | com.pieces.os does not exist | 3.91 |
-| [#795](https://github.com/pieces-app/support/issues/795) | Unable to open Pieces Copilot Service | 3.31 |
+| [#797](https://github.com/pieces-app/support/issues/797) | Pieces in VS code | 3.74 |
+| [#795](https://github.com/pieces-app/support/issues/795) | Unable to open Pieces Copilot Service | 2.68 |
 
 ## Common Issues
-### 1. Workstream/LTM Activity recording and Pieces OS integration issues
-Users are experiencing issues with Workstream/LTM activity not recording or updating, along with Pieces OS integration problems like Ollama detection failures on Linux and application not found errors on macOS.  The issues involve various Pieces OS versions and Desktop application versions. Troubleshooting steps include restarting the application, verifying installation paths, and checking system compatibility.
+### 1. Workstream/LTM Activity Recording and Ollama Detection Failures
+Multiple users report Workstream Activity and LTM failing to record new activity on macOS and Linux.  One user experienced complete stoppage after 20 minutes. Another user reports missing summaries since mid-July with manual rollup failures.  Ollama detection is also failing on Linux Mint despite the service running.  Suggested troubleshooting includes verifying Pieces OS and Desktop versions, restarting Ollama, and checking logs.
 
 **Related Issues:**
 - [#799](https://github.com/pieces-app/support/issues/799): LTM not recording any new activities/Workstream Activity not updating
@@ -33,23 +33,16 @@ Users on Linux, Windows, and within VS Code report Pieces OS integration issues.
 - [#790](https://github.com/pieces-app/support/issues/790): com.pieces.os does not exist
 - [#797](https://github.com/pieces-app/support/issues/797): Pieces in VS code
 
-### 3. Pieces OS integration issues across multiple applications
-Users are experiencing difficulties integrating Pieces OS with other applications like UltraEdit and VS Code.  Problems include missing com.pieces.os directory, connection errors, and sign-in issues.  Reinstallation of Pieces OS and associated applications has not resolved the problems.  Further investigation into Pieces OS functionality and integration processes is needed.
-
-**Related Issues:**
-- [#790](https://github.com/pieces-app/support/issues/790): com.pieces.os does not exist
-- [#797](https://github.com/pieces-app/support/issues/797): Pieces in VS code
-- [#795](https://github.com/pieces-app/support/issues/795): Unable to open Pieces Copilot Service
-
 
 ## Recommendations
-- Investigate and fix the root cause of Pieces OS integration failures across different platforms (Windows, Linux, macOS, VS Code, UltraEdit). Prioritize the missing com.pieces.os directory issue on Windows and Ollama detection failure on Linux.
-- Address the issue of Workstream/LTM activity not recording or updating. This appears to be affecting multiple users across different operating systems.
-- Improve error messaging and logging related to Pieces OS integration to aid in troubleshooting. The "Application not found" error on macOS and the lack of error messages in dependency logs on Linux are examples where better logging would be helpful.
-- Investigate the VS Code extension sign-in error. Determine if it is related to account types or other authentication issues.
-- Provide clearer documentation or troubleshooting steps for users experiencing integration problems. This could include verifying installation paths, checking system compatibility, or restarting applications.
+- Investigate Workstream/LTM activity recording and Ollama detection failures on macOS and Linux. Prioritize issue #799 with the highest activity level.
+- Address Pieces OS integration issues across Linux, Windows, and VS Code, including broken workstream summaries, Ollama detection failures, missing configuration files, and VS Code extension sign-in errors.
+- Focus on resolving common issues affecting multiple users, such as those reported in tickets #798, #790, and #797.
+- Improve communication with users regarding troubleshooting steps and ongoing investigations.
+- Review logs and gather more data to identify the root cause of integration failures and activity recording issues.
 
 ## Daily Reports
 Here are the daily reports for this week:
 
 - [report_210607](daily/2025-07-15/report_210607.md)
+- [report_131844](daily/2025-07-16/report_131844.md)
