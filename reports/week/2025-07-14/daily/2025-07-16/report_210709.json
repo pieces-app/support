@@ -1,0 +1,60 @@
+{
+  "success": true,
+  "date_range": {
+    "start": "2025-07-16T00:00:00+00:00",
+    "end": "2025-07-16T21:07:09.896682+00:00"
+  },
+  "summary": {
+    "total_tickets": 1,
+    "resolved_tickets": 0,
+    "open_tickets": 1
+  },
+  "ticket_breakdown": [
+    {
+      "category": "bug",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "os:linux",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:triaged",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    }
+  ],
+  "most_active_tickets": [
+    {
+      "number": 798,
+      "title": "[Bug] Workstream summaries broken >1 week & Ollama not detected on Linux Mint",
+      "activity_level": 6.19
+    }
+  ],
+  "common_issues": [
+    {
+      "title": "Workstream summaries broken & Ollama not detected on Linux Mint",
+      "description": "Pieces OS and Desktop on Linux Mint experiencing two issues: 1) Workstream summaries haven't generated since mid-July, manual rollup fails. Logs only present up to July 9th. 2) Ollama not detected despite being installed, running, and accessible via CLI and browser. User has tried refreshing snap/apt, restarting Ollama, and manually configuring paths, but the issue persists for over a week.",
+      "frequency": 1,
+      "related_issues": [
+        {
+          "id": 798,
+          "title": "[Bug] Workstream summaries broken >1 week & Ollama not detected on Linux Mint",
+          "text": "[Bug] Workstream summaries broken >1 week & Ollama not detected on Linux Mint\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nLinux\n\n### Your Pieces OS Version\n\n12.1.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n**Describe the bug**  \n1. No new workstream summaries have been generated since mid\u2011July 2025. Manual roll\u2011up always fails with \u201cunable to find any workstream events.\u201d  \n2. Pieces Desktop reports \u201cOllama needs to be installed\u201d even though `ollama` is in `$PATH` and the service is running on `127.0.0.1:11434`.\n\n---\n\n**To Reproduce**  \n1. **Environment**  \n   - OS: Linux Mint 22.1 \u201cCinnamon\u201d (X11) (64\u2011bit)  \n   - Kernel: 6.8.0\u201162\u2011generic\n   - PiecesOS v12.1.0 (snap)\n   - Pieces Desktop: v4.3.1\n   - Ollama CLI: `/usr/local/bin/ollama` (installed via official script)  \n   - Ollama service: running (`ollama serve` \u2192 `Error: bind: address already in use`; confirmed via browser at http://127.0.0.1:11434)\n\n2. **Workstream summary failure**  \n   - Open Pieces Desktop \u2192 Workstream Activity  \n   - Observe events up through July\u202f9, 2025, but no events or summaries for July\u202f10\u201313.  \n   - Click \u201cGenerate manual Workstream Rollup\u201d for any time window \u2192 error:  \n     ```\n     unable to find any workstream events\n     ```\n\n3. **Ollama detection failure**  \n   - Verify in terminal:  \n     ```bash\n     which ollama\n     \u2192 /usr/local/bin/ollama\n\n     ollama list\n     \u2192 (lists available models)\n\n     curl http://127.0.0.1:11434\n     \u2192 \u201cOllama is running\u201d\n     ```  \n   - In Pieces Desktop, attempt to enable \u201cLocal Models\u201d \u2192 receives error \u201cOllama needs to be installed.\u201d\n\n---\n\n**Expected behavior**  \n- Workstream summaries continue to be generated daily (or allow manual roll\u2011ups to succeed).  \n- Pieces Desktop auto\u2011detects my installed Ollama CLI + service and lists local models.\n\n---\n\n**Screenshots & Logs**  \n- **Pieces log directory**: `~/.local/share/com.pieces.os.dependency_management/` shows logs only up to July\u202f9.\n- **No error messages** appear in those dependency logs.  \n\n---\n\n**Additional context**  \n- I\u2019ve already:  \n  - Verified `snap refresh` and `apt update && apt upgrade` to ensure latest PiecesOS and Desktop.  \n  - Stopped/restarted any existing Ollama service (killed port 11434, rebooted, then `ollama serve`).  \n  - Manually pointed Pieces Desktop at `/usr/local/bin/ollama` and `http://127.0.0.1:11434` in settings, then fully quit & relaunched the app.  \n- Issue has persisted for >1\u202fweek.\n\nPlease let me know what additional details I can provide to help debug. Thank you!  \n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 6.19
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    "Investigate the issue with workstream summaries not generating since mid-July and manual rollup failures. Check logs and identify the root cause.",
+    "Address the problem of Ollama not being detected on Linux Mint despite being installed and accessible. Verify compatibility and configuration.",
+    "Prioritize resolving issue #798, '[Bug] Workstream summaries broken >1 week & Ollama not detected on Linux Mint', due to its high activity level and potential impact on users."
+  ],
+  "message": "Daily support report generated successfully."
+}
