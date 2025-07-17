@@ -2,7 +2,7 @@
   "success": true,
   "date_range": {
     "start": "2025-07-14T00:00:00+00:00",
-    "end": "2025-07-16T21:07:24.541311+00:00"
+    "end": "2025-07-17T05:11:21.194172+00:00"
   },
   "summary": {
     "total_tickets": 5,
@@ -51,7 +51,7 @@
     {
       "number": 799,
       "title": "LTM not recording any new activities/Workstream Activity not updating",
-      "activity_level": 12.27
+      "activity_level": 11.03
     },
     {
       "number": 798,
@@ -71,26 +71,26 @@
     {
       "number": 795,
       "title": "Unable to open Pieces Copilot Service",
-      "activity_level": 2.68
+      "activity_level": 2.56
     }
   ],
   "common_issues": [
     {
       "title": "Workstream/LTM Activity recording and Pieces OS integration issues",
-      "description": "Users are experiencing issues with Workstream/LTM activity not recording or updating, along with Pieces OS integration problems like Ollama detection failures.  The issues appear across macOS and Linux, potentially related to recent installations or updates. Troubleshooting steps include restarting, verifying installation paths, and checking logs. Further investigation is needed to pinpoint the root cause and provide a solution.",
+      "description": "Users are experiencing issues with Workstream/LTM activity not recording or updating, along with Pieces OS integration problems such as Ollama detection failures and application not found errors.  The issues appear across macOS and Linux platforms. Troubleshooting steps include restarting the application, verifying installation paths, and checking for updates, but the problems persist.  Additional logs and device information have been provided for further investigation.",
       "frequency": 3,
       "related_issues": [
         {
           "id": 799,
           "title": "LTM not recording any new activities/Workstream Activity not updating",
           "text": "LTM not recording any new activities/Workstream Activity not updating\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n4.3.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nRecently installed, stopped working completely after recording for about 20 minutes. Tried restarting.\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 12.27
+          "activity_level": 11.03
         },
         {
           "id": 795,
           "title": "Unable to open Pieces Copilot Service",
           "text": "Unable to open Pieces Copilot Service\nError: Instance of 'fp'\n\n**Installation Details**\n\nSucceeded: false\nPath: \n\nError Type: MACOS_APPLICATION_NOT_FOUND\nError Message: Application not found via any available method.\nError Code: -1\nError Stderr: \n\n**PiecesOS Information**\n\nID: D15266CA-B837-4076-BD84-865AECFEB6BA\nUser: Anonymous\nCurrent Version: Unknown\nMin Version Supported: 11.2.2\nMax Version Supported: 12.0.0\nLocal Port: 39300\n\n**Device Information**\n\nOperating System: MacOS\nCurrent Version: Version 16.0 (Build 25A5295e)\nMin Version Supported: 12.0.0 Monterey\nAdditional Device Information: {cpu_list: [{\"architecture\":\"arm64\",\"cores\":8,\"logicalProcessors\":8,\"l1Cache\":{\"value\":65536,\"units\":\"Bytes\"},\"l2Cache\":{\"value\":4194304,\"units\":\"Bytes\"},\"description\":\"Apple M1\"}], gpu_list: [{\"type\":null,\"unifiedMemoryArchitecture\":true,\"cores\":7,\"dedicatedVRam\":null}], memory_info: {\"totalRAM\":{\"value\":8589934592,\"units\":\"Bytes\"}}, display_list: [{\"nativeHeight\":1600,\"nativeWidth\":2560,\"scaledHeight\":900,\"scaledWidth\":1440,\"primary\":true}]}\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 2.68
+          "activity_level": 2.56
         },
         {
           "id": 798,
@@ -102,7 +102,7 @@
     },
     {
       "title": "Pieces OS integration failures across multiple platforms",
-      "description": "Users on Linux, Windows, and within VS Code report Pieces OS integration issues. Problems include broken workstream summaries, failure to detect Ollama on Linux, missing configuration files on Windows preventing UltraEdit integration, and VS Code extension sign-in errors.  Suggested solutions include verifying Ollama installation/path, checking Pieces OS configuration files, and ensuring Pieces OS and Desktop are running and connected.",
+      "description": "Users on Linux, Windows, and within VS Code report Pieces OS integration issues. Problems include broken workstream summaries, failure to detect Ollama on Linux, missing configuration files on Windows preventing UltraEdit integration, and VS Code extension sign-in errors.  Reinstallation and manual configuration attempts have been unsuccessful.  The common thread is Pieces OS failing to communicate or be detected by other applications.",
       "frequency": 3,
       "related_issues": [
         {
@@ -127,11 +127,12 @@
     }
   ],
   "recommendations": [
-    "Prioritize resolving Workstream/LTM activity recording issues impacting macOS and Linux users.",
-    "Investigate Pieces OS integration failures across Linux, Windows, and VS Code, focusing on Ollama detection, configuration files, and VS Code extension sign-in.",
-    "Address the missing com.pieces.os directory issue on Windows affecting UltraEdit integration.",
-    "Improve communication with users regarding Ollama installation and troubleshooting steps.",
-    "Proactively monitor and address Workstream summary generation failures."
+    "Prioritize investigation and resolution of Pieces OS integration failures across different platforms (Linux, Windows, VS Code, UltraEdit) to ensure seamless user experience.",
+    "Focus on resolving the issue of Workstream/LTM activity recording and updating, particularly on macOS and Linux, as it impacts core product functionality.",
+    "Address the Ollama detection failure on Linux Mint to enable local model usage within Pieces Desktop.",
+    "Investigate and fix the missing configuration files on Windows that prevent UltraEdit integration.",
+    "Troubleshoot the VS Code extension sign-in errors on Windows to ensure proper functionality.",
+    "Improve communication with users experiencing these issues, providing updates and workarounds where possible."
   ],
   "message": "Daily support report generated successfully."
 }
