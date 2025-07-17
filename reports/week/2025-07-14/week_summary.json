@@ -2,7 +2,7 @@
   "success": true,
   "date_range": {
     "start": "2025-07-14T00:00:00+00:00",
-    "end": "2025-07-17T05:11:21.194172+00:00"
+    "end": "2025-07-17T13:18:37.745310+00:00"
   },
   "summary": {
     "total_tickets": 5,
@@ -56,7 +56,7 @@
     {
       "number": 798,
       "title": "[Bug] Workstream summaries broken >1 week & Ollama not detected on Linux Mint",
-      "activity_level": 6.19
+      "activity_level": 5.7
     },
     {
       "number": 790,
@@ -66,7 +66,7 @@
     {
       "number": 797,
       "title": "Pieces in VS code",
-      "activity_level": 3.74
+      "activity_level": 3.5
     },
     {
       "number": 795,
@@ -77,7 +77,7 @@
   "common_issues": [
     {
       "title": "Workstream/LTM Activity recording and Pieces OS integration issues",
-      "description": "Users are experiencing issues with Workstream/LTM activity not recording or updating, along with Pieces OS integration problems such as Ollama detection failures and application not found errors.  The issues appear across macOS and Linux platforms. Troubleshooting steps include restarting the application, verifying installation paths, and checking for updates, but the problems persist.  Additional logs and device information have been provided for further investigation.",
+      "description": "Users are experiencing issues with Workstream/LTM activity not recording or updating, along with Pieces OS integration problems such as Ollama detection failures and application not found errors.  The issues appear across different operating systems (macOS, Linux) and Pieces versions. Troubleshooting steps include restarting the application, verifying installation paths, and checking for existing processes.  Additional information may be needed to pinpoint the root cause and provide specific solutions.",
       "frequency": 3,
       "related_issues": [
         {
@@ -96,7 +96,7 @@
           "id": 798,
           "title": "[Bug] Workstream summaries broken >1 week & Ollama not detected on Linux Mint",
           "text": "[Bug] Workstream summaries broken >1 week & Ollama not detected on Linux Mint\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nLinux\n\n### Your Pieces OS Version\n\n12.1.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n**Describe the bug**  \n1. No new workstream summaries have been generated since mid\u2011July 2025. Manual roll\u2011up always fails with \u201cunable to find any workstream events.\u201d  \n2. Pieces Desktop reports \u201cOllama needs to be installed\u201d even though `ollama` is in `$PATH` and the service is running on `127.0.0.1:11434`.\n\n---\n\n**To Reproduce**  \n1. **Environment**  \n   - OS: Linux Mint 22.1 \u201cCinnamon\u201d (X11) (64\u2011bit)  \n   - Kernel: 6.8.0\u201162\u2011generic\n   - PiecesOS v12.1.0 (snap)\n   - Pieces Desktop: v4.3.1\n   - Ollama CLI: `/usr/local/bin/ollama` (installed via official script)  \n   - Ollama service: running (`ollama serve` \u2192 `Error: bind: address already in use`; confirmed via browser at http://127.0.0.1:11434)\n\n2. **Workstream summary failure**  \n   - Open Pieces Desktop \u2192 Workstream Activity  \n   - Observe events up through July\u202f9, 2025, but no events or summaries for July\u202f10\u201313.  \n   - Click \u201cGenerate manual Workstream Rollup\u201d for any time window \u2192 error:  \n     ```\n     unable to find any workstream events\n     ```\n\n3. **Ollama detection failure**  \n   - Verify in terminal:  \n     ```bash\n     which ollama\n     \u2192 /usr/local/bin/ollama\n\n     ollama list\n     \u2192 (lists available models)\n\n     curl http://127.0.0.1:11434\n     \u2192 \u201cOllama is running\u201d\n     ```  \n   - In Pieces Desktop, attempt to enable \u201cLocal Models\u201d \u2192 receives error \u201cOllama needs to be installed.\u201d\n\n---\n\n**Expected behavior**  \n- Workstream summaries continue to be generated daily (or allow manual roll\u2011ups to succeed).  \n- Pieces Desktop auto\u2011detects my installed Ollama CLI + service and lists local models.\n\n---\n\n**Screenshots & Logs**  \n- **Pieces log directory**: `~/.local/share/com.pieces.os.dependency_management/` shows logs only up to July\u202f9.\n- **No error messages** appear in those dependency logs.  \n\n---\n\n**Additional context**  \n- I\u2019ve already:  \n  - Verified `snap refresh` and `apt update && apt upgrade` to ensure latest PiecesOS and Desktop.  \n  - Stopped/restarted any existing Ollama service (killed port 11434, rebooted, then `ollama serve`).  \n  - Manually pointed Pieces Desktop at `/usr/local/bin/ollama` and `http://127.0.0.1:11434` in settings, then fully quit & relaunched the app.  \n- Issue has persisted for >1\u202fweek.\n\nPlease let me know what additional details I can provide to help debug. Thank you!  \n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 6.19
+          "activity_level": 5.7
         }
       ]
     },
@@ -109,7 +109,7 @@
           "id": 798,
           "title": "[Bug] Workstream summaries broken >1 week & Ollama not detected on Linux Mint",
           "text": "[Bug] Workstream summaries broken >1 week & Ollama not detected on Linux Mint\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nLinux\n\n### Your Pieces OS Version\n\n12.1.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n**Describe the bug**  \n1. No new workstream summaries have been generated since mid\u2011July 2025. Manual roll\u2011up always fails with \u201cunable to find any workstream events.\u201d  \n2. Pieces Desktop reports \u201cOllama needs to be installed\u201d even though `ollama` is in `$PATH` and the service is running on `127.0.0.1:11434`.\n\n---\n\n**To Reproduce**  \n1. **Environment**  \n   - OS: Linux Mint 22.1 \u201cCinnamon\u201d (X11) (64\u2011bit)  \n   - Kernel: 6.8.0\u201162\u2011generic\n   - PiecesOS v12.1.0 (snap)\n   - Pieces Desktop: v4.3.1\n   - Ollama CLI: `/usr/local/bin/ollama` (installed via official script)  \n   - Ollama service: running (`ollama serve` \u2192 `Error: bind: address already in use`; confirmed via browser at http://127.0.0.1:11434)\n\n2. **Workstream summary failure**  \n   - Open Pieces Desktop \u2192 Workstream Activity  \n   - Observe events up through July\u202f9, 2025, but no events or summaries for July\u202f10\u201313.  \n   - Click \u201cGenerate manual Workstream Rollup\u201d for any time window \u2192 error:  \n     ```\n     unable to find any workstream events\n     ```\n\n3. **Ollama detection failure**  \n   - Verify in terminal:  \n     ```bash\n     which ollama\n     \u2192 /usr/local/bin/ollama\n\n     ollama list\n     \u2192 (lists available models)\n\n     curl http://127.0.0.1:11434\n     \u2192 \u201cOllama is running\u201d\n     ```  \n   - In Pieces Desktop, attempt to enable \u201cLocal Models\u201d \u2192 receives error \u201cOllama needs to be installed.\u201d\n\n---\n\n**Expected behavior**  \n- Workstream summaries continue to be generated daily (or allow manual roll\u2011ups to succeed).  \n- Pieces Desktop auto\u2011detects my installed Ollama CLI + service and lists local models.\n\n---\n\n**Screenshots & Logs**  \n- **Pieces log directory**: `~/.local/share/com.pieces.os.dependency_management/` shows logs only up to July\u202f9.\n- **No error messages** appear in those dependency logs.  \n\n---\n\n**Additional context**  \n- I\u2019ve already:  \n  - Verified `snap refresh` and `apt update && apt upgrade` to ensure latest PiecesOS and Desktop.  \n  - Stopped/restarted any existing Ollama service (killed port 11434, rebooted, then `ollama serve`).  \n  - Manually pointed Pieces Desktop at `/usr/local/bin/ollama` and `http://127.0.0.1:11434` in settings, then fully quit & relaunched the app.  \n- Issue has persisted for >1\u202fweek.\n\nPlease let me know what additional details I can provide to help debug. Thank you!  \n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 6.19
+          "activity_level": 5.7
         },
         {
           "id": 790,
@@ -121,18 +121,17 @@
           "id": 797,
           "title": "Pieces in VS code",
           "text": "Pieces in VS code\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, VS Code\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n12.1.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nHello,\n\nI have an updated version of Pieces OS 12.1.0, and Pieces Desktop 4.3.1.\n\nI try to use the Pieces extension in VS code, but always asking me to sign in and run Pieces OS (what is running on startup automaticly) I clicked sing in but I only receive an error:\n\n<img width=\"453\" height=\"120\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/67a92d7f-5c94-43b1-8b19-d76dd68906c4\" />\n\nI dont know If this is related to that I have only the standard account or not.\n\nThank you for your help and feedback.\n\nMatthew\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 3.74
+          "activity_level": 3.5
         }
       ]
     }
   ],
   "recommendations": [
-    "Prioritize investigation and resolution of Pieces OS integration failures across different platforms (Linux, Windows, VS Code, UltraEdit) to ensure seamless user experience.",
-    "Focus on resolving the issue of Workstream/LTM activity recording and updating, particularly on macOS and Linux, as it impacts core product functionality.",
-    "Address the Ollama detection failure on Linux Mint to enable local model usage within Pieces Desktop.",
-    "Investigate and fix the missing configuration files on Windows that prevent UltraEdit integration.",
-    "Troubleshoot the VS Code extension sign-in errors on Windows to ensure proper functionality.",
-    "Improve communication with users experiencing these issues, providing updates and workarounds where possible."
+    "Investigate Workstream/LTM activity recording and Pieces OS integration issues across macOS and Linux. Prioritize issue #799 with the highest activity level.",
+    "Address Pieces OS integration failures on Linux, Windows, and VS Code. Focus on Ollama detection on Linux (issue #798), missing configuration files on Windows (issue #790), and VS Code extension sign-in errors (issue #797).",
+    "Improve communication around Pieces OS installation and configuration to preempt issues like missing directories and files.",
+    "Provide clearer documentation or troubleshooting steps for users experiencing application not found errors and Ollama detection failures.",
+    "Consider adding better error handling and messaging within the Pieces Desktop application to guide users towards solutions."
   ],
   "message": "Daily support report generated successfully."
 }

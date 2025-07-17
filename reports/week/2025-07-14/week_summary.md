@@ -1,5 +1,5 @@
 # Support Ticket Report
-- Generated: 2025-07-17 05:11:53
+- Generated: 2025-07-17 13:19:12
 - Period: 2025-07-14 to 2025-07-17
 
 ## Summary
@@ -11,14 +11,14 @@
 | Issue # | Title | Activity Level |
 |---------|-------|----------------|
 | [#799](https://github.com/pieces-app/support/issues/799) | LTM not recording any new activities/Workstream Activity not updating | 11.03 |
-| [#798](https://github.com/pieces-app/support/issues/798) | [Bug] Workstream summaries broken >1 week & Ollama not detected on Linux Mint | 6.19 |
+| [#798](https://github.com/pieces-app/support/issues/798) | [Bug] Workstream summaries broken >1 week & Ollama not detected on Linux Mint | 5.70 |
 | [#790](https://github.com/pieces-app/support/issues/790) | com.pieces.os does not exist | 3.76 |
-| [#797](https://github.com/pieces-app/support/issues/797) | Pieces in VS code | 3.74 |
+| [#797](https://github.com/pieces-app/support/issues/797) | Pieces in VS code | 3.50 |
 | [#795](https://github.com/pieces-app/support/issues/795) | Unable to open Pieces Copilot Service | 2.56 |
 
 ## Common Issues
 ### 1. Workstream/LTM Activity recording and Pieces OS integration issues
-Users are experiencing issues with Workstream/LTM activity not recording or updating, along with Pieces OS integration problems such as Ollama detection failures and application not found errors.  The issues appear across macOS and Linux platforms. Troubleshooting steps include restarting the application, verifying installation paths, and checking for updates, but the problems persist.  Additional logs and device information have been provided for further investigation.
+Users are experiencing issues with Workstream/LTM activity not recording or updating, along with Pieces OS integration problems such as Ollama detection failures and application not found errors.  The issues appear across different operating systems (macOS, Linux) and Pieces versions. Troubleshooting steps include restarting the application, verifying installation paths, and checking for existing processes.  Additional information may be needed to pinpoint the root cause and provide specific solutions.
 
 **Related Issues:**
 - [#799](https://github.com/pieces-app/support/issues/799): LTM not recording any new activities/Workstream Activity not updating
@@ -35,12 +35,11 @@ Users on Linux, Windows, and within VS Code report Pieces OS integration issues.
 
 
 ## Recommendations
-- Prioritize investigation and resolution of Pieces OS integration failures across different platforms (Linux, Windows, VS Code, UltraEdit) to ensure seamless user experience.
-- Focus on resolving the issue of Workstream/LTM activity recording and updating, particularly on macOS and Linux, as it impacts core product functionality.
-- Address the Ollama detection failure on Linux Mint to enable local model usage within Pieces Desktop.
-- Investigate and fix the missing configuration files on Windows that prevent UltraEdit integration.
-- Troubleshoot the VS Code extension sign-in errors on Windows to ensure proper functionality.
-- Improve communication with users experiencing these issues, providing updates and workarounds where possible.
+- Investigate Workstream/LTM activity recording and Pieces OS integration issues across macOS and Linux. Prioritize issue #799 with the highest activity level.
+- Address Pieces OS integration failures on Linux, Windows, and VS Code. Focus on Ollama detection on Linux (issue #798), missing configuration files on Windows (issue #790), and VS Code extension sign-in errors (issue #797).
+- Improve communication around Pieces OS installation and configuration to preempt issues like missing directories and files.
+- Provide clearer documentation or troubleshooting steps for users experiencing application not found errors and Ollama detection failures.
+- Consider adding better error handling and messaging within the Pieces Desktop application to guide users towards solutions.
 
 ## Daily Reports
 Here are the daily reports for this week:
