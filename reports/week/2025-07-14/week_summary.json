@@ -2,31 +2,43 @@
   "success": true,
   "date_range": {
     "start": "2025-07-14T00:00:00+00:00",
-    "end": "2025-07-18T05:12:23.941439+00:00"
+    "end": "2025-07-18T13:18:44.054243+00:00"
   },
   "summary": {
-    "total_tickets": 6,
+    "total_tickets": 7,
     "resolved_tickets": 2,
-    "open_tickets": 4
+    "open_tickets": 5
   },
   "ticket_breakdown": [
     {
       "category": "bug",
-      "received": 5,
+      "received": 6,
       "resolved": 1,
-      "pending": 4
+      "pending": 5
+    },
+    {
+      "category": "status:new",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:desktop application",
+      "received": 3,
+      "resolved": 1,
+      "pending": 2
+    },
+    {
+      "category": "os:macos",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
     },
     {
       "category": "os:windows",
       "received": 3,
       "resolved": 1,
       "pending": 2
-    },
-    {
-      "category": "app:desktop application",
-      "received": 2,
-      "resolved": 1,
-      "pending": 1
     },
     {
       "category": "app:pieces os",
@@ -56,7 +68,12 @@
     {
       "number": 798,
       "title": "[Bug] Workstream summaries broken >1 week & Ollama not detected on Linux Mint",
-      "activity_level": 5.7
+      "activity_level": 5.33
+    },
+    {
+      "number": 801,
+      "title": "Auto Generated Context Always returns to Medium",
+      "activity_level": 4.42
     },
     {
       "number": 792,
@@ -71,7 +88,7 @@
     {
       "number": 797,
       "title": "Pieces in VS code",
-      "activity_level": 2.83
+      "activity_level": 2.68
     },
     {
       "number": 795,
@@ -81,8 +98,8 @@
   ],
   "common_issues": [
     {
-      "title": "Pieces OS and Desktop App Issues",
-      "description": "Users are experiencing issues with the Pieces desktop app and OS, including LTM not recording, Copilot service failing to open, and sign-in problems.  The issues appear across macOS and Windows on Pieces OS 4.3.1.  Troubleshooting steps may include restarting the app, checking installation paths, and verifying network connectivity for sign-in issues.",
+      "title": "Pieces Desktop App on macOS: Functionality and Stability Issues",
+      "description": "Users are experiencing various issues with the Pieces desktop app on macOS, including LTM not recording, Copilot service failing to open, and auto-generated context settings reverting to default.  These issues may involve application crashes, error messages, and unexpected behavior.  Troubleshooting steps may include restarting the app, checking for updates, and verifying system compatibility.",
       "frequency": 3,
       "related_issues": [
         {
@@ -98,23 +115,23 @@
           "activity_level": 2.46
         },
         {
-          "id": 792,
-          "title": "authentification",
-          "text": "authentification\n### Checked for Existing Issues?\n\n- [ ] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n4.3.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n\"sign in to continue\" and doesnt let me sign in to .. anything.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 3.07
+          "id": 801,
+          "title": "Auto Generated Context Always returns to Medium",
+          "text": "Auto Generated Context Always returns to Medium\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\nPlatform MacOS Version 15.5 (Build 24F74)\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nHello!\n\nThis is an issue that I've seen happen in all of the builds since I've started using pieces. When changing the Auto-Generated Context (Saved Material Enrichment) option in Machine Learning from the menu, in my case I want it to be \"High\", but every time I change it, when I check the next day or any time later, or every time the app or os updates, the option selected goes back to \"Medium\". So I don't actually even know if it ever used \"High\", because it always returns the option to \"Medium\".\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 4.42
         }
       ]
     },
     {
-      "title": "Pieces OS integration failures across multiple applications",
-      "description": "Users report Pieces OS not being detected or integrated properly with other applications (UltraEdit, VS Code) on Windows and Linux. Common symptoms include app prompts to install Pieces despite it running, workstream summary generation failures, and Ollama detection issues. Suggested solutions include verifying Pieces installation, checking port configuration files, and ensuring necessary dependencies are met. Reinstallation of Pieces and related apps may also resolve the issue.",
+      "title": "Pieces OS integration failures across multiple platforms",
+      "description": "Users on Linux, Windows, and within VS Code report Pieces OS integration issues. Problems include broken workstream summaries, failure to detect Ollama on Linux, missing configuration files on Windows preventing UltraEdit integration, and VS Code extension sign-in errors.  Reinstallation and manual configuration attempts have been unsuccessful.  The common thread is Pieces OS failing to communicate or be detected by other applications.",
       "frequency": 3,
       "related_issues": [
         {
           "id": 798,
           "title": "[Bug] Workstream summaries broken >1 week & Ollama not detected on Linux Mint",
           "text": "[Bug] Workstream summaries broken >1 week & Ollama not detected on Linux Mint\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nLinux\n\n### Your Pieces OS Version\n\n12.1.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n**Describe the bug**  \n1. No new workstream summaries have been generated since mid\u2011July 2025. Manual roll\u2011up always fails with \u201cunable to find any workstream events.\u201d  \n2. Pieces Desktop reports \u201cOllama needs to be installed\u201d even though `ollama` is in `$PATH` and the service is running on `127.0.0.1:11434`.\n\n---\n\n**To Reproduce**  \n1. **Environment**  \n   - OS: Linux Mint 22.1 \u201cCinnamon\u201d (X11) (64\u2011bit)  \n   - Kernel: 6.8.0\u201162\u2011generic\n   - PiecesOS v12.1.0 (snap)\n   - Pieces Desktop: v4.3.1\n   - Ollama CLI: `/usr/local/bin/ollama` (installed via official script)  \n   - Ollama service: running (`ollama serve` \u2192 `Error: bind: address already in use`; confirmed via browser at http://127.0.0.1:11434)\n\n2. **Workstream summary failure**  \n   - Open Pieces Desktop \u2192 Workstream Activity  \n   - Observe events up through July\u202f9, 2025, but no events or summaries for July\u202f10\u201313.  \n   - Click \u201cGenerate manual Workstream Rollup\u201d for any time window \u2192 error:  \n     ```\n     unable to find any workstream events\n     ```\n\n3. **Ollama detection failure**  \n   - Verify in terminal:  \n     ```bash\n     which ollama\n     \u2192 /usr/local/bin/ollama\n\n     ollama list\n     \u2192 (lists available models)\n\n     curl http://127.0.0.1:11434\n     \u2192 \u201cOllama is running\u201d\n     ```  \n   - In Pieces Desktop, attempt to enable \u201cLocal Models\u201d \u2192 receives error \u201cOllama needs to be installed.\u201d\n\n---\n\n**Expected behavior**  \n- Workstream summaries continue to be generated daily (or allow manual roll\u2011ups to succeed).  \n- Pieces Desktop auto\u2011detects my installed Ollama CLI + service and lists local models.\n\n---\n\n**Screenshots & Logs**  \n- **Pieces log directory**: `~/.local/share/com.pieces.os.dependency_management/` shows logs only up to July\u202f9.\n- **No error messages** appear in those dependency logs.  \n\n---\n\n**Additional context**  \n- I\u2019ve already:  \n  - Verified `snap refresh` and `apt update && apt upgrade` to ensure latest PiecesOS and Desktop.  \n  - Stopped/restarted any existing Ollama service (killed port 11434, rebooted, then `ollama serve`).  \n  - Manually pointed Pieces Desktop at `/usr/local/bin/ollama` and `http://127.0.0.1:11434` in settings, then fully quit & relaunched the app.  \n- Issue has persisted for >1\u202fweek.\n\nPlease let me know what additional details I can provide to help debug. Thank you!  \n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 5.7
+          "activity_level": 5.33
         },
         {
           "id": 790,
@@ -126,13 +143,38 @@
           "id": 797,
           "title": "Pieces in VS code",
           "text": "Pieces in VS code\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, VS Code\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n12.1.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nHello,\n\nI have an updated version of Pieces OS 12.1.0, and Pieces Desktop 4.3.1.\n\nI try to use the Pieces extension in VS code, but always asking me to sign in and run Pieces OS (what is running on startup automaticly) I clicked sing in but I only receive an error:\n\n<img width=\"453\" height=\"120\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/67a92d7f-5c94-43b1-8b19-d76dd68906c4\" />\n\nI dont know If this is related to that I have only the standard account or not.\n\nThank you for your help and feedback.\n\nMatthew\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 2.83
+          "activity_level": 2.68
+        }
+      ]
+    },
+    {
+      "title": "Pieces Integrations and Settings Issues",
+      "description": "Users are experiencing issues with Pieces integrations (VS Code) and persistent settings.  Integrations fail to connect, often prompting repeated login attempts despite the Pieces OS running.  The auto-generated context setting in the desktop app reverts to \"Medium\" even after being changed.  Troubleshooting steps include verifying Pieces OS is running and checking network connectivity for integrations. For the context setting, ensure the app and OS are updated to the latest versions.",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 801,
+          "title": "Auto Generated Context Always returns to Medium",
+          "text": "Auto Generated Context Always returns to Medium\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\nPlatform MacOS Version 15.5 (Build 24F74)\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nHello!\n\nThis is an issue that I've seen happen in all of the builds since I've started using pieces. When changing the Auto-Generated Context (Saved Material Enrichment) option in Machine Learning from the menu, in my case I want it to be \"High\", but every time I change it, when I check the next day or any time later, or every time the app or os updates, the option selected goes back to \"Medium\". So I don't actually even know if it ever used \"High\", because it always returns the option to \"Medium\".\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 4.42
+        },
+        {
+          "id": 795,
+          "title": "Unable to open Pieces Copilot Service",
+          "text": "Unable to open Pieces Copilot Service\nError: Instance of 'fp'\n\n**Installation Details**\n\nSucceeded: false\nPath: \n\nError Type: MACOS_APPLICATION_NOT_FOUND\nError Message: Application not found via any available method.\nError Code: -1\nError Stderr: \n\n**PiecesOS Information**\n\nID: D15266CA-B837-4076-BD84-865AECFEB6BA\nUser: Anonymous\nCurrent Version: Unknown\nMin Version Supported: 11.2.2\nMax Version Supported: 12.0.0\nLocal Port: 39300\n\n**Device Information**\n\nOperating System: MacOS\nCurrent Version: Version 16.0 (Build 25A5295e)\nMin Version Supported: 12.0.0 Monterey\nAdditional Device Information: {cpu_list: [{\"architecture\":\"arm64\",\"cores\":8,\"logicalProcessors\":8,\"l1Cache\":{\"value\":65536,\"units\":\"Bytes\"},\"l2Cache\":{\"value\":4194304,\"units\":\"Bytes\"},\"description\":\"Apple M1\"}], gpu_list: [{\"type\":null,\"unifiedMemoryArchitecture\":true,\"cores\":7,\"dedicatedVRam\":null}], memory_info: {\"totalRAM\":{\"value\":8589934592,\"units\":\"Bytes\"}}, display_list: [{\"nativeHeight\":1600,\"nativeWidth\":2560,\"scaledHeight\":900,\"scaledWidth\":1440,\"primary\":true}]}\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 2.46
+        },
+        {
+          "id": 797,
+          "title": "Pieces in VS code",
+          "text": "Pieces in VS code\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, VS Code\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n12.1.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nHello,\n\nI have an updated version of Pieces OS 12.1.0, and Pieces Desktop 4.3.1.\n\nI try to use the Pieces extension in VS code, but always asking me to sign in and run Pieces OS (what is running on startup automaticly) I clicked sing in but I only receive an error:\n\n<img width=\"453\" height=\"120\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/67a92d7f-5c94-43b1-8b19-d76dd68906c4\" />\n\nI dont know If this is related to that I have only the standard account or not.\n\nThank you for your help and feedback.\n\nMatthew\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 2.68
         }
       ]
     },
     {
       "title": "Users unable to sign in across Pieces OS and VS Code extension",
-      "description": "Multiple users report being unable to sign in to Pieces OS on desktop and the VS Code extension, encountering errors or \"sign in to continue\" prompts despite having Pieces OS running.  Issue appears across Windows and macOS, potentially related to Pieces OS or extension communication problems.  Suggested troubleshooting includes checking network connectivity, reinstalling the extension, and ensuring Pieces OS is updated and running correctly before launching VS Code.",
+      "description": "Multiple users report being unable to sign in to Pieces OS on desktop and the VS Code extension, encountering errors or \"sign in to continue\" prompts despite Pieces OS running.  Issue affects Windows and macOS, across Pieces OS versions 4.3.1, 12.1.0, and potentially others.  Suggested troubleshooting includes verifying Pieces OS is running and checking account status. Further investigation needed into potential authentication issues between Pieces OS and its integrations.",
       "frequency": 3,
       "related_issues": [
         {
@@ -145,7 +187,7 @@
           "id": 797,
           "title": "Pieces in VS code",
           "text": "Pieces in VS code\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, VS Code\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n12.1.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nHello,\n\nI have an updated version of Pieces OS 12.1.0, and Pieces Desktop 4.3.1.\n\nI try to use the Pieces extension in VS code, but always asking me to sign in and run Pieces OS (what is running on startup automaticly) I clicked sing in but I only receive an error:\n\n<img width=\"453\" height=\"120\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/67a92d7f-5c94-43b1-8b19-d76dd68906c4\" />\n\nI dont know If this is related to that I have only the standard account or not.\n\nThank you for your help and feedback.\n\nMatthew\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 2.83
+          "activity_level": 2.68
         },
         {
           "id": 795,
@@ -157,11 +199,13 @@
     }
   ],
   "recommendations": [
-    "Prioritize resolving sign-in issues across Pieces OS and VS Code extension, given their frequency and impact on user experience.",
-    "Investigate and address the root cause of LTM recording failures and workstream summary generation problems, particularly on macOS and Linux.",
-    "Improve Pieces OS integration with other applications like UltraEdit and VS Code by addressing detection and communication issues.",
-    "Develop clearer documentation or troubleshooting guides for users experiencing Pieces OS integration failures, including installation verification and port configuration checks.",
-    "Monitor and address the recurring issue of Pieces Copilot Service failing to open, especially on macOS."
+    "Prioritize resolving the 'Pieces Desktop App on macOS: Functionality and Stability Issues' as it has the highest frequency and significant user impact. Investigate LTM recording failures, Copilot service launch problems, and context settings reverting to default.",
+    "Address the 'Pieces OS integration failures across multiple platforms' impacting Linux, Windows, and VS Code users. Focus on workstream summary generation, Ollama detection on Linux, missing configuration files on Windows, and VS Code extension sign-in errors.",
+    "Investigate the root cause of the 'Users unable to sign in across Pieces OS and VS Code extension' issue affecting both Windows and macOS. This appears to be a critical authentication problem hindering user access.",
+    "Improve the auto-generated context setting persistence in the desktop app to prevent it from reverting to 'Medium'. This recurring issue affects macOS users and requires a code fix.",
+    "Monitor the Pieces OS and desktop application logs for errors and patterns related to the reported issues. This will help identify the underlying causes and potential solutions.",
+    "Consider creating dedicated troubleshooting guides or FAQs for common issues like macOS app instability, Pieces OS integration failures, and sign-in problems. This will empower users to self-resolve and reduce support ticket volume.",
+    "Implement better error handling and reporting within the Pieces OS and desktop app to provide more informative error messages to users and developers. This will aid in faster diagnosis and resolution of issues."
   ],
   "message": "Daily support report generated successfully."
 }
