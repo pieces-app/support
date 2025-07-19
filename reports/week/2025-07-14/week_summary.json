@@ -2,7 +2,7 @@
   "success": true,
   "date_range": {
     "start": "2025-07-14T00:00:00+00:00",
-    "end": "2025-07-19T13:14:51.429282+00:00"
+    "end": "2025-07-19T21:06:48.998304+00:00"
   },
   "summary": {
     "total_tickets": 8,
@@ -78,7 +78,7 @@
     {
       "number": 794,
       "title": "CLI: 1 validation error for Model",
-      "activity_level": 4.18
+      "activity_level": 4.05
     },
     {
       "number": 797,
@@ -86,14 +86,14 @@
       "activity_level": 3.76
     },
     {
-      "number": 792,
-      "title": "authentification",
-      "activity_level": 2.97
-    },
-    {
       "number": 790,
       "title": "com.pieces.os does not exist",
-      "activity_level": 2.97
+      "activity_level": 2.89
+    },
+    {
+      "number": 792,
+      "title": "authentification",
+      "activity_level": 2.43
     },
     {
       "number": 795,
@@ -103,8 +103,8 @@
   ],
   "common_issues": [
     {
-      "title": "LTM/Workstream Activity not updating or Pieces Copilot Service not opening",
-      "description": "Multiple users report issues with LTM/Workstream Activity failing to record new activities or update.  One user experienced complete stoppage after 20 minutes. Another user encountered an error opening the Pieces Copilot Service with an 'Application not found' message on macOS.  Issues involve both Desktop Application and CLI. Further investigation needed to determine root cause and potential solutions.",
+      "title": "Pieces Desktop App and CLI on macOS: LTM/Workstream Activity Not Updating",
+      "description": "Users on macOS are experiencing issues with the Pieces desktop application and CLI where LTM and Workstream Activity are not updating or recording new activities.  Issues range from complete stoppage after a short period of recording to failures in opening the Pieces Copilot service.  Error messages include \"Application not found\" and issues with the Gemini-pro model. Further investigation is needed to pinpoint the root cause and potential solutions.",
       "frequency": 3,
       "related_issues": [
         {
@@ -117,7 +117,7 @@
           "id": 794,
           "title": "CLI: 1 validation error for Model",
           "text": "CLI: 1 validation error for Model\n### Checked for Existing Issues?\n\n- [ ] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces CLI\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\nPiecesOS 12.1.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n<img width=\"1440\" height=\"700\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/3ee1563c-5447-454b-b6d3-f261bd72ecbe\" />\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 4.18
+          "activity_level": 4.05
         },
         {
           "id": 795,
@@ -129,7 +129,7 @@
     },
     {
       "title": "PiecesOS integration failures across platforms",
-      "description": "Users on Linux, macOS, and Windows report PiecesOS integration issues with desktop apps and CLI. Problems include broken workstream summaries, failure to detect Ollama on Linux, CLI model validation errors on macOS, and missing PiecesOS directories on Windows.  Reinstallation and manual configuration attempts have been unsuccessful.  Further investigation into platform-specific installation and dependency management is needed.",
+      "description": "Users on Linux, macOS, and Windows report PiecesOS integration issues with desktop apps and CLI. Problems include broken workstream summaries, failure to detect Ollama on Linux, CLI model validation errors on macOS, and missing PiecesOS directories on Windows. Suggested solutions include verifying Ollama installation/path, checking PiecesOS version compatibility, and reinstalling PiecesOS/desktop apps.",
       "frequency": 3,
       "related_issues": [
         {
@@ -142,19 +142,19 @@
           "id": 794,
           "title": "CLI: 1 validation error for Model",
           "text": "CLI: 1 validation error for Model\n### Checked for Existing Issues?\n\n- [ ] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces CLI\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\nPiecesOS 12.1.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n<img width=\"1440\" height=\"700\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/3ee1563c-5447-454b-b6d3-f261bd72ecbe\" />\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 4.18
+          "activity_level": 4.05
         },
         {
           "id": 790,
           "title": "com.pieces.os does not exist",
           "text": "com.pieces.os does not exist\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nPieces OS: 12.1.0 Pieces for Developers: 4.3.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI installed UltraEdit on my Windows 11 computer (ARM), running Windows Home. After installing, creating an account, etc. I started UltraEdit and was looking forward to the integration. What I was met with was a window that said that Pieces isn't running with an error unable to determine Pieces connection port. After some discussion, UltraEdit team said that I was likely missing the file %USERPROFILE%\\Documents\\com.pieces.os\\production\\Config\\.port.txt\nTurns out I'm missing the directory com.pieces.os. I has not been created. I uninstalled all the Pieces apps and reinstalled from the website, hoping that this directory would be created. Now UltraEdit says Pieces for Developers is not installed and prompts me to Download Pieces. Clicking that link takes me directly to the page I just downloaded from.\nI suggested to UltraEdit support that I could recreate the directory structure and add .port.txt, but they said instead that I should contact you. While you are looking at this, I am going to do a complete uninstall of UltraEdit and Pieces components, deleting any registry keys I can find (as uninstall doesn't remove any), and remove the .pieces_identites folder from Documents, then do a complete reinstall.\nLooking forward to a solution to this.\nRegards,\nIan Hannah\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 2.97
+          "activity_level": 2.89
         }
       ]
     },
     {
       "title": "Auto-Generated Context Resets to Medium",
-      "description": "Users report that the Auto-Generated Context setting in the Pieces desktop app repeatedly reverts to \"Medium\" even after being manually set to \"High\". This occurs across multiple macOS versions and Pieces builds.  The issue persists after app and OS updates. Users are unsure if the \"High\" setting ever takes effect.",
+      "description": "Users report that the Auto-Generated Context setting in the Pieces desktop app (macOS) repeatedly reverts to \"Medium\" even after being manually set to \"High\". This occurs across multiple builds and OS versions.  The issue may persist after app or OS updates.  Users are unsure if the \"High\" setting ever takes effect.",
       "frequency": 3,
       "related_issues": [
         {
@@ -167,7 +167,7 @@
           "id": 794,
           "title": "CLI: 1 validation error for Model",
           "text": "CLI: 1 validation error for Model\n### Checked for Existing Issues?\n\n- [ ] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces CLI\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\nPiecesOS 12.1.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n<img width=\"1440\" height=\"700\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/3ee1563c-5447-454b-b6d3-f261bd72ecbe\" />\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 4.18
+          "activity_level": 4.05
         },
         {
           "id": 795,
@@ -179,14 +179,14 @@
     },
     {
       "title": "Users unable to sign in across multiple Pieces platforms",
-      "description": "Users are reporting issues signing in on Windows and macOS, affecting the Pieces desktop app, VS Code extension, and CLI.  A common error message \"sign in to continue\" appears without successful authentication.  Potential solutions include checking Pieces OS version compatibility, network connectivity, and account credentials. Further investigation needed to pinpoint the root cause and provide targeted fixes.",
+      "description": "Users are reporting issues signing in to Pieces OS, VS Code extension, and CLI.  Error messages vary, but all prevent successful login.  Potential solutions include checking Pieces OS version compatibility, network connectivity, and account status.  Further investigation needed to pinpoint the root cause and provide targeted solutions.",
       "frequency": 3,
       "related_issues": [
         {
           "id": 792,
           "title": "authentification",
           "text": "authentification\n### Checked for Existing Issues?\n\n- [ ] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n4.3.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n\"sign in to continue\" and doesnt let me sign in to .. anything.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 2.97
+          "activity_level": 2.43
         },
         {
           "id": 797,
@@ -198,20 +198,20 @@
           "id": 794,
           "title": "CLI: 1 validation error for Model",
           "text": "CLI: 1 validation error for Model\n### Checked for Existing Issues?\n\n- [ ] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces CLI\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\nPiecesOS 12.1.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n<img width=\"1440\" height=\"700\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/3ee1563c-5447-454b-b6d3-f261bd72ecbe\" />\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 4.18
+          "activity_level": 4.05
         }
       ]
     },
     {
       "title": "Pieces OS and Integrations: Errors and Access Issues",
-      "description": "Users are experiencing various errors across different Pieces integrations (CLI, VS Code) and with the Pieces OS itself.  These include model validation errors in the CLI, application not found errors on macOS, and sign-in issues with the VS Code extension.  Check Pieces OS version compatibility, ensure the application is installed correctly, and verify account credentials.",
+      "description": "Users are experiencing various errors across different Pieces integrations (CLI, VS Code) and with the Pieces OS itself.  These include validation errors, application not found errors, and sign-in issues.  Common symptoms involve error messages related to model access, invalid paths, and Pieces OS version compatibility.  Suggested solutions include verifying Pieces OS version, checking application paths, and ensuring correct sign-in credentials.",
       "frequency": 3,
       "related_issues": [
         {
           "id": 794,
           "title": "CLI: 1 validation error for Model",
           "text": "CLI: 1 validation error for Model\n### Checked for Existing Issues?\n\n- [ ] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces CLI\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\nPiecesOS 12.1.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n<img width=\"1440\" height=\"700\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/3ee1563c-5447-454b-b6d3-f261bd72ecbe\" />\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 4.18
+          "activity_level": 4.05
         },
         {
           "id": 795,
@@ -229,13 +229,11 @@
     }
   ],
   "recommendations": [
-    "Prioritize investigation and resolution of LTM/Workstream Activity issues impacting macOS and CLI users.",
-    "Investigate PiecesOS integration failures across all platforms (Linux, macOS, Windows), focusing on workstream summaries, Ollama detection, CLI model validation, and missing directories.",
-    "Address the Auto-Generated Context setting repeatedly reverting to \"Medium\" in the desktop app across macOS versions.",
-    "Troubleshoot and resolve sign-in issues affecting Windows and macOS users on the desktop app, VS Code extension, and CLI.",
-    "Improve error messaging and guidance for users experiencing \"sign in to continue\" errors and application not found errors.",
-    "Review and update documentation regarding PiecesOS installation, dependency management, and version compatibility across platforms.",
-    "Consider implementing automated tests to catch regression bugs related to settings persistence and platform-specific integrations."
+    "Prioritize resolving the 'Pieces Desktop App and CLI on macOS: LTM/Workstream Activity Not Updating' issue, given its high frequency and activity level.",
+    "Investigate the 'PiecesOS integration failures across platforms' as it impacts all operating systems and has a high frequency.",
+    "Address the 'Auto-Generated Context Resets to Medium' issue on macOS due to its frequent occurrence.",
+    "Look into the recurring sign-in problems affecting Pieces OS, VS Code extension, and CLI ('Users unable to sign in across multiple Pieces platforms').",
+    "Improve error messaging and logging related to model access, invalid paths, and Pieces OS version compatibility to aid in troubleshooting ('Pieces OS and Integrations: Errors and Access Issues')."
   ],
   "message": "Daily support report generated successfully."
 }

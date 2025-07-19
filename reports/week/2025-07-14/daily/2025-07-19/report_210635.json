@@ -1,0 +1,55 @@
+{
+  "success": true,
+  "date_range": {
+    "start": "2025-07-19T00:00:00+00:00",
+    "end": "2025-07-19T21:06:35.452938+00:00"
+  },
+  "summary": {
+    "total_tickets": 1,
+    "resolved_tickets": 1,
+    "open_tickets": 0
+  },
+  "ticket_breakdown": [
+    {
+      "category": "app:pieces cli",
+      "received": 1,
+      "resolved": 1,
+      "pending": 0
+    },
+    {
+      "category": "status:triaged",
+      "received": 1,
+      "resolved": 1,
+      "pending": 0
+    }
+  ],
+  "most_active_tickets": [
+    {
+      "number": 794,
+      "title": "CLI: 1 validation error for Model",
+      "activity_level": 4.05
+    }
+  ],
+  "common_issues": [
+    {
+      "title": "CLI Model Validation Error: Publisher Model Not Found",
+      "description": "Users are encountering a \"404 Publisher Model Not Found\" error when using the CLI.  The error message indicates the specified model cannot be found or the project lacks access.  Users should verify the model version and project access rights. See: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+      "frequency": 1,
+      "related_issues": [
+        {
+          "id": 794,
+          "title": "CLI: 1 validation error for Model",
+          "text": "CLI: 1 validation error for Model\n### Checked for Existing Issues?\n\n- [ ] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces CLI\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\nPiecesOS 12.1.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n<img width=\"1440\" height=\"700\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/3ee1563c-5447-454b-b6d3-f261bd72ecbe\" />\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 4.05
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    "Prioritize resolving 'CLI Model Validation Error: Publisher Model Not Found' as it is the most frequent issue.",
+    "Investigate the root cause of the '404 Publisher Model Not Found' error and improve documentation or CLI prompts to prevent it.",
+    "Monitor the 'app:pieces cli' category closely as all current issues fall under it.",
+    "Continue monitoring support tickets and identify any emerging trends or recurring issues."
+  ],
+  "message": "Daily support report generated successfully."
+}
