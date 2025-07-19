@@ -2,7 +2,7 @@
   "success": true,
   "date_range": {
     "start": "2025-07-14T00:00:00+00:00",
-    "end": "2025-07-18T21:07:35.706215+00:00"
+    "end": "2025-07-19T05:09:26.643691+00:00"
   },
   "summary": {
     "total_tickets": 7,
@@ -57,7 +57,7 @@
     {
       "number": 799,
       "title": "LTM not recording any new activities/Workstream Activity not updating",
-      "activity_level": 10.15
+      "activity_level": 9.5
     },
     {
       "number": 801,
@@ -77,7 +77,7 @@
     {
       "number": 792,
       "title": "authentification",
-      "activity_level": 3.07
+      "activity_level": 2.97
     },
     {
       "number": 790,
@@ -87,26 +87,26 @@
     {
       "number": 795,
       "title": "Unable to open Pieces Copilot Service",
-      "activity_level": 2.46
+      "activity_level": 2.37
     }
   ],
   "common_issues": [
     {
       "title": "Pieces Desktop App on macOS: Functionality and Stability Issues",
-      "description": "Users are experiencing various issues with the Pieces desktop app on macOS, including LTM not recording, Copilot service failing to open, and auto-generated context settings reverting to default.  These issues may involve application crashes, error messages, and unexpected behavior. Further investigation is needed to identify the root causes and potential solutions.",
+      "description": "Users are experiencing various issues with the Pieces desktop app on macOS, including LTM not recording, Copilot service failing to open, and auto-generated context settings reverting to default.  These issues may involve installation problems, application crashes, and unexpected behavior. Further investigation is needed to identify the root causes and potential solutions across these different scenarios.",
       "frequency": 3,
       "related_issues": [
         {
           "id": 799,
           "title": "LTM not recording any new activities/Workstream Activity not updating",
           "text": "LTM not recording any new activities/Workstream Activity not updating\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n4.3.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nRecently installed, stopped working completely after recording for about 20 minutes. Tried restarting.\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 10.15
+          "activity_level": 9.5
         },
         {
           "id": 795,
           "title": "Unable to open Pieces Copilot Service",
           "text": "Unable to open Pieces Copilot Service\nError: Instance of 'fp'\n\n**Installation Details**\n\nSucceeded: false\nPath: \n\nError Type: MACOS_APPLICATION_NOT_FOUND\nError Message: Application not found via any available method.\nError Code: -1\nError Stderr: \n\n**PiecesOS Information**\n\nID: D15266CA-B837-4076-BD84-865AECFEB6BA\nUser: Anonymous\nCurrent Version: Unknown\nMin Version Supported: 11.2.2\nMax Version Supported: 12.0.0\nLocal Port: 39300\n\n**Device Information**\n\nOperating System: MacOS\nCurrent Version: Version 16.0 (Build 25A5295e)\nMin Version Supported: 12.0.0 Monterey\nAdditional Device Information: {cpu_list: [{\"architecture\":\"arm64\",\"cores\":8,\"logicalProcessors\":8,\"l1Cache\":{\"value\":65536,\"units\":\"Bytes\"},\"l2Cache\":{\"value\":4194304,\"units\":\"Bytes\"},\"description\":\"Apple M1\"}], gpu_list: [{\"type\":null,\"unifiedMemoryArchitecture\":true,\"cores\":7,\"dedicatedVRam\":null}], memory_info: {\"totalRAM\":{\"value\":8589934592,\"units\":\"Bytes\"}}, display_list: [{\"nativeHeight\":1600,\"nativeWidth\":2560,\"scaledHeight\":900,\"scaledWidth\":1440,\"primary\":true}]}\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 2.46
+          "activity_level": 2.37
         },
         {
           "id": 801,
@@ -117,8 +117,8 @@
       ]
     },
     {
-      "title": "Pieces settings reset, integrations fail",
-      "description": "Users report settings reverting to default (e.g., Auto-Generated Context in macOS) and integration issues (e.g., VS Code extension login errors on Windows).  Check Pieces OS and app versions, ensure Pieces OS is running before integrating, and review logs for specific errors. Reinstalling may resolve some issues.",
+      "title": "Pieces fails to connect across platforms and maintain settings",
+      "description": "Users report Pieces failing to connect to VS Code and maintain user settings.  The auto-generated context setting reverts to \"Medium\", and the Pieces Copilot service fails to open with a \"Application not found\" error on MacOS.  Users also report VS Code extension login issues on Windows, despite Pieces OS running.  Troubleshooting steps include verifying Pieces OS installation and connectivity, checking login credentials, and ensuring compatibility between Pieces OS and application versions.",
       "frequency": 3,
       "related_issues": [
         {
@@ -131,7 +131,7 @@
           "id": 795,
           "title": "Unable to open Pieces Copilot Service",
           "text": "Unable to open Pieces Copilot Service\nError: Instance of 'fp'\n\n**Installation Details**\n\nSucceeded: false\nPath: \n\nError Type: MACOS_APPLICATION_NOT_FOUND\nError Message: Application not found via any available method.\nError Code: -1\nError Stderr: \n\n**PiecesOS Information**\n\nID: D15266CA-B837-4076-BD84-865AECFEB6BA\nUser: Anonymous\nCurrent Version: Unknown\nMin Version Supported: 11.2.2\nMax Version Supported: 12.0.0\nLocal Port: 39300\n\n**Device Information**\n\nOperating System: MacOS\nCurrent Version: Version 16.0 (Build 25A5295e)\nMin Version Supported: 12.0.0 Monterey\nAdditional Device Information: {cpu_list: [{\"architecture\":\"arm64\",\"cores\":8,\"logicalProcessors\":8,\"l1Cache\":{\"value\":65536,\"units\":\"Bytes\"},\"l2Cache\":{\"value\":4194304,\"units\":\"Bytes\"},\"description\":\"Apple M1\"}], gpu_list: [{\"type\":null,\"unifiedMemoryArchitecture\":true,\"cores\":7,\"dedicatedVRam\":null}], memory_info: {\"totalRAM\":{\"value\":8589934592,\"units\":\"Bytes\"}}, display_list: [{\"nativeHeight\":1600,\"nativeWidth\":2560,\"scaledHeight\":900,\"scaledWidth\":1440,\"primary\":true}]}\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 2.46
+          "activity_level": 2.37
         },
         {
           "id": 797,
@@ -142,8 +142,8 @@
       ]
     },
     {
-      "title": "Pieces OS integration failures across multiple applications",
-      "description": "Users report Pieces OS integration issues with various apps (UltraEdit, VS Code, Pieces Desktop). Symptoms include: missing port file, failure to detect Ollama or generate workstream summaries, and sign-in errors.  Suggested solutions include reinstalling Pieces OS and associated apps, verifying Ollama installation and port, checking Pieces log files, and ensuring Pieces OS is running before launching integrations.",
+      "title": "Pieces OS integration failures across multiple platforms",
+      "description": "Users on Linux, Windows, and within VS Code report Pieces OS integration issues. Problems include broken workstream summaries, failure to detect Ollama on Linux, missing configuration files on Windows, and VS Code sign-in errors.  Reinstallation and manual configuration attempts have been unsuccessful.  The common thread is Pieces OS failing to communicate or initialize correctly with other applications.",
       "frequency": 3,
       "related_issues": [
         {
@@ -168,7 +168,7 @@
     },
     {
       "title": "Users unable to sign in to Pieces OS across platforms",
-      "description": "Multiple users report being unable to sign in to Pieces OS, encountering errors on Windows and MacOS, specifically within VS Code and the desktop application.  Issues include \"sign in to continue\" prompts with failed authentication, and errors related to Pieces Copilot Service and application not found.  Users have confirmed Pieces OS is running. Further investigation into authentication and service initialization is needed.",
+      "description": "Multiple users report being unable to sign in to Pieces OS from VS Code, Desktop app, and potentially other integrations.  Error messages vary, but the common theme is a failure to authenticate.  Potential solutions include checking Pieces OS and extension versions, network connectivity, firewall settings, and account status.",
       "frequency": 3,
       "related_issues": [
         {
@@ -181,24 +181,23 @@
           "id": 792,
           "title": "authentification",
           "text": "authentification\n### Checked for Existing Issues?\n\n- [ ] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n4.3.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n\"sign in to continue\" and doesnt let me sign in to .. anything.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 3.07
+          "activity_level": 2.97
         },
         {
           "id": 795,
           "title": "Unable to open Pieces Copilot Service",
           "text": "Unable to open Pieces Copilot Service\nError: Instance of 'fp'\n\n**Installation Details**\n\nSucceeded: false\nPath: \n\nError Type: MACOS_APPLICATION_NOT_FOUND\nError Message: Application not found via any available method.\nError Code: -1\nError Stderr: \n\n**PiecesOS Information**\n\nID: D15266CA-B837-4076-BD84-865AECFEB6BA\nUser: Anonymous\nCurrent Version: Unknown\nMin Version Supported: 11.2.2\nMax Version Supported: 12.0.0\nLocal Port: 39300\n\n**Device Information**\n\nOperating System: MacOS\nCurrent Version: Version 16.0 (Build 25A5295e)\nMin Version Supported: 12.0.0 Monterey\nAdditional Device Information: {cpu_list: [{\"architecture\":\"arm64\",\"cores\":8,\"logicalProcessors\":8,\"l1Cache\":{\"value\":65536,\"units\":\"Bytes\"},\"l2Cache\":{\"value\":4194304,\"units\":\"Bytes\"},\"description\":\"Apple M1\"}], gpu_list: [{\"type\":null,\"unifiedMemoryArchitecture\":true,\"cores\":7,\"dedicatedVRam\":null}], memory_info: {\"totalRAM\":{\"value\":8589934592,\"units\":\"Bytes\"}}, display_list: [{\"nativeHeight\":1600,\"nativeWidth\":2560,\"scaledHeight\":900,\"scaledWidth\":1440,\"primary\":true}]}\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 2.46
+          "activity_level": 2.37
         }
       ]
     }
   ],
   "recommendations": [
-    "Prioritize resolving the 'Pieces OS integration failures across multiple applications' as it impacts various apps and platforms.",
-    "Investigate the root cause of 'Pieces settings reset, integrations fail' to prevent recurring issues and improve user experience.",
-    "Address the macOS-specific issues highlighted in 'Pieces Desktop App on macOS: Functionality and Stability Issues' to ensure platform compatibility.",
-    "Focus on resolving sign-in issues affecting multiple platforms ('Users unable to sign in to Pieces OS across platforms') to restore access for affected users.",
-    "Improve Ollama detection and workstream summary generation, especially on Linux, based on the feedback in ticket #798.",
-    "Review and update documentation regarding Pieces OS installation and integration with different applications to address common user errors."
+    "Prioritize resolving the macOS desktop application issues, specifically focusing on LTM recording, Copilot service functionality, and auto-generated context settings.",
+    "Investigate and address the Pieces OS integration failures across Linux, Windows, and VS Code, including workstream summaries, Ollama detection, missing configuration files, and VS Code sign-in errors.",
+    "Troubleshoot the sign-in issues affecting VS Code, Desktop app, and other integrations, ensuring consistent authentication across platforms.",
+    "Improve communication with users regarding known issues and their solutions, particularly addressing the recurring problems with auto-generated context settings and VS Code integration.",
+    "Develop more robust error handling and reporting mechanisms within Pieces OS and related applications to facilitate faster diagnosis and resolution of integration problems."
   ],
   "message": "Daily support report generated successfully."
 }
