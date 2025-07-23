@@ -1,5 +1,5 @@
 # Support Ticket Report
-- Generated: 2025-07-23 05:13:18
+- Generated: 2025-07-23 13:19:37
 - Period: 2025-07-21 to 2025-07-23
 
 ## Summary
@@ -10,20 +10,20 @@
 ## 5 Most Active Tickets
 | Issue # | Title | Activity Level |
 |---------|-------|----------------|
-| [#801](https://github.com/pieces-app/support/issues/801) | Auto Generated Context Always returns to Medium | 4.63 |
+| [#801](https://github.com/pieces-app/support/issues/801) | Auto Generated Context Always returns to Medium | 4.33 |
 
 ## Common Issues
 ### 1. Auto-Generated Context Resets to Medium
-Users report that the Auto-Generated Context setting in the desktop app (macOS) repeatedly reverts to "Medium" from "High" after app restarts, OS updates, or simply checking it later.  The user is unsure if the "High" setting ever takes effect. This has persisted across multiple builds.
+Users report that the Auto-Generated Context setting in the Pieces desktop app (macOS) repeatedly reverts to "Medium" from "High" after app restarts, OS updates, or periods of inactivity.  The behavior has persisted across multiple builds. It is unclear whether the "High" setting ever takes effect.
 
 **Related Issues:**
 - [#801](https://github.com/pieces-app/support/issues/801): Auto Generated Context Always returns to Medium
 
 
 ## Recommendations
-- Investigate the persistence issue with the 'Auto-Generated Context' setting in the macOS desktop application.
-- Prioritize resolving the 'Auto-Generated Context' bug as it affects all macOS users and impacts core product functionality.
-- Improve communication with users regarding the status of the 'Auto-Generated Context' bug and provide updates on the fix.
+- Investigate and fix the bug causing the 'Auto-Generated Context' setting to revert to 'Medium'. This appears to be the most frequent issue and source of support tickets.
+- Improve communication with users regarding the 'Auto-Generated Context' setting.  Clarify how it works, when it takes effect, and any potential conflicts with OS updates or app restarts.
+- Monitor the activity level of open tickets and prioritize those with high activity to ensure timely resolution.
 
 ## Daily Reports
 Here are the daily reports for this week:
