@@ -1,5 +1,5 @@
 # Support Ticket Report
-- Generated: 2025-07-24 05:12:25
+- Generated: 2025-07-24 13:19:18
 - Period: 2025-07-21 to 2025-07-24
 
 ## Summary
@@ -10,20 +10,20 @@
 ## 5 Most Active Tickets
 | Issue # | Title | Activity Level |
 |---------|-------|----------------|
-| [#801](https://github.com/pieces-app/support/issues/801) | Auto Generated Context Always returns to Medium | 4.33 |
+| [#801](https://github.com/pieces-app/support/issues/801) | Auto Generated Context Always returns to Medium | 4.10 |
 
 ## Common Issues
 ### 1. Auto-Generated Context Resets to Medium
-Users report that the Auto-Generated Context setting in the Pieces desktop app (macOS) repeatedly reverts to "Medium" from "High" after app restarts, OS updates, or periods of inactivity.  The behavior has persisted across multiple builds. It's unclear whether the "High" setting ever takes effect.
+Users report that the Auto-Generated Context setting in the desktop app (macOS) repeatedly reverts to "Medium" from "High" after app restarts, OS updates, or simply checking it later.  The user is unsure if the "High" setting ever takes effect. This has persisted across multiple builds.
 
 **Related Issues:**
 - [#801](https://github.com/pieces-app/support/issues/801): Auto Generated Context Always returns to Medium
 
 
 ## Recommendations
-- Investigate and address the bug causing the 'Auto-Generated Context' setting to revert to 'Medium'. This appears to be the most frequent issue and source of user frustration.
-- Monitor the fix for the 'Auto-Generated Context' setting to ensure it resolves the issue permanently and doesn't reoccur in future updates.
-- Consider adding a notification or confirmation message within the app when the 'Auto-Generated Context' setting is changed, to confirm the change has been saved and to inform users about any potential conflicts or automatic resets.
+- Investigate and fix the bug causing the 'Auto-Generated Context' setting to revert to 'Medium'. This is the most frequent issue and affects macOS users.
+- Monitor the fix for the 'Auto-Generated Context' setting to ensure it resolves the issue and doesn't reoccur in future releases.
+- Consider adding a notification or confirmation message when the 'Auto-Generated Context' setting is changed, so users are aware of the current setting.
 
 ## Daily Reports
 Here are the daily reports for this week:
