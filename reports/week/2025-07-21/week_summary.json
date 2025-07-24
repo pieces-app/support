@@ -2,22 +2,40 @@
   "success": true,
   "date_range": {
     "start": "2025-07-21T00:00:00+00:00",
-    "end": "2025-07-24T13:19:06.494988+00:00"
+    "end": "2025-07-24T21:07:55.930615+00:00"
   },
   "summary": {
-    "total_tickets": 1,
+    "total_tickets": 2,
     "resolved_tickets": 0,
-    "open_tickets": 1
+    "open_tickets": 2
   },
   "ticket_breakdown": [
     {
       "category": "bug",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "os:windows",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:new",
       "received": 1,
       "resolved": 0,
       "pending": 1
     },
     {
       "category": "app:desktop application",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "app:pieces os",
       "received": 1,
       "resolved": 0,
       "pending": 1
@@ -43,6 +61,11 @@
   ],
   "most_active_tickets": [
     {
+      "number": 803,
+      "title": "it doesnt stop selecting, it seems like \"shift\" or \"mouse 1\" is locked",
+      "activity_level": 8.2
+    },
+    {
       "number": 801,
       "title": "Auto Generated Context Always returns to Medium",
       "activity_level": 4.1
@@ -50,10 +73,16 @@
   ],
   "common_issues": [
     {
-      "title": "Auto-Generated Context Resets to Medium",
-      "description": "Users report that the Auto-Generated Context setting in the desktop app (macOS) repeatedly reverts to \"Medium\" from \"High\" after app restarts, OS updates, or simply checking it later.  The user is unsure if the \"High\" setting ever takes effect. This has persisted across multiple builds.",
-      "frequency": 1,
+      "title": "Pieces OS: Unexpected selection behavior and auto-generated context reset",
+      "description": "Users reported persistent selection issues, possibly due to stuck \"shift\" or \"mouse 1\" keys, primarily on Windows. Additionally, the auto-generated context setting for saved material enrichment frequently resets to \"Medium\" on macOS, despite user changes.  Further investigation is needed to identify the root cause and solutions for both issues.",
+      "frequency": 2,
       "related_issues": [
+        {
+          "id": 803,
+          "title": "it doesnt stop selecting, it seems like \"shift\" or \"mouse 1\" is locked",
+          "text": "it doesnt stop selecting, it seems like \"shift\" or \"mouse 1\" is locked\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n4.3.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI'm not sure how to make it happen but its **extremely** annoying, it seems like it thinks I'm holding \"shift\" or \"mouse 1\", i use the arrow keys a lot but when this bug is active it selects instead of moving, when i try to click when its active it also selects, i cant ctrl + v when its active :(\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 8.2
+        },
         {
           "id": 801,
           "title": "Auto Generated Context Always returns to Medium",
@@ -64,9 +93,9 @@
     }
   ],
   "recommendations": [
-    "Investigate and fix the bug causing the 'Auto-Generated Context' setting to revert to 'Medium'. This is the most frequent issue and affects macOS users.",
-    "Monitor the fix for the 'Auto-Generated Context' setting to ensure it resolves the issue and doesn't reoccur in future releases.",
-    "Consider adding a notification or confirmation message when the 'Auto-Generated Context' setting is changed, so users are aware of the current setting."
+    "Investigate and address the persistent selection issue on Windows (possibly related to stuck 'shift' or 'mouse 1' keys).",
+    "Fix the auto-generated context setting for saved material enrichment on macOS to retain user-selected values.",
+    "Prioritize resolving issue #803 due to its high activity level."
   ],
   "message": "Daily support report generated successfully."
 }
