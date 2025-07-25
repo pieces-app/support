@@ -1,5 +1,5 @@
 # Support Ticket Report
-- Generated: 2025-07-25 05:13:24
+- Generated: 2025-07-25 13:18:33
 - Period: 2025-07-21 to 2025-07-25
 
 ## Summary
@@ -11,11 +11,11 @@
 | Issue # | Title | Activity Level |
 |---------|-------|----------------|
 | [#803](https://github.com/pieces-app/support/issues/803) | it doesnt stop selecting, it seems like "shift" or "mouse 1" is locked | 8.20 |
-| [#801](https://github.com/pieces-app/support/issues/801) | Auto Generated Context Always returns to Medium | 4.10 |
+| [#801](https://github.com/pieces-app/support/issues/801) | Auto Generated Context Always returns to Medium | 3.91 |
 
 ## Common Issues
 ### 1. Persistent Selection/Setting Issues in Pieces OS
-Users report persistent, unintended selection behavior, possibly related to stuck "shift" or "mouse 1" keys on Windows.  Additionally, the Auto-Generated Context setting in Machine Learning consistently reverts to "Medium" on macOS despite user changes.  Troubleshooting steps could include checking for conflicting software, OS updates, and Pieces OS version compatibility.
+Users report persistent, unintended selection behavior, possibly related to stuck "shift" or "mouse 1" keys on Windows.  Additionally, the Auto-Generated Context setting in Machine Learning consistently reverts to "Medium" on macOS despite user changes. Troubleshooting steps could include checking for conflicting software or system settings.
 
 **Related Issues:**
 - [#803](https://github.com/pieces-app/support/issues/803): it doesnt stop selecting, it seems like "shift" or "mouse 1" is locked
@@ -23,10 +23,11 @@ Users report persistent, unintended selection behavior, possibly related to stuc
 
 
 ## Recommendations
-- Investigate and address the persistent selection issue affecting Windows users, possibly related to stuck 'shift' or 'mouse 1' keys.  Prioritize this due to high activity level.
-- Investigate and address why the Auto-Generated Context setting in Machine Learning consistently reverts to 'Medium' on macOS.  While lower activity, ensure consistent user experience.
-- Proactively monitor for new reports related to these issues to gauge impact and track resolution progress.
-- Consider adding troubleshooting steps to the FAQ or documentation regarding selection issues and setting persistence.
+- Investigate and fix the persistent selection bug affecting Windows users. This appears to be a high-impact issue affecting usability.
+- Address the issue with the Auto-Generated Context setting in Machine Learning reverting to "Medium" on macOS. While less frequent, it still impacts user experience.
+- Prioritize bug fixes related to core functionality (selection, settings) to improve overall product stability.
+- Consider improving error handling and messaging within the application. The "404 Publisher Model" error seen in issue descriptions is not user-friendly.
+- Review support workflows and documentation. Ensure there are clear instructions for users to report issues and for support staff to troubleshoot them.
 
 ## Daily Reports
 Here are the daily reports for this week:
