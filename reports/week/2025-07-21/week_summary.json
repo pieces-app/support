@@ -2,7 +2,7 @@
   "success": true,
   "date_range": {
     "start": "2025-07-21T00:00:00+00:00",
-    "end": "2025-07-24T21:07:55.930615+00:00"
+    "end": "2025-07-25T05:13:11.117716+00:00"
   },
   "summary": {
     "total_tickets": 2,
@@ -73,8 +73,8 @@
   ],
   "common_issues": [
     {
-      "title": "Pieces OS: Unexpected selection behavior and auto-generated context reset",
-      "description": "Users reported persistent selection issues, possibly due to stuck \"shift\" or \"mouse 1\" keys, primarily on Windows. Additionally, the auto-generated context setting for saved material enrichment frequently resets to \"Medium\" on macOS, despite user changes.  Further investigation is needed to identify the root cause and solutions for both issues.",
+      "title": "Persistent Selection/Setting Issues in Pieces OS",
+      "description": "Users report persistent, unintended selection behavior, possibly related to stuck \"shift\" or \"mouse 1\" keys on Windows.  Additionally, the Auto-Generated Context setting in Machine Learning consistently reverts to \"Medium\" on macOS despite user changes.  Troubleshooting steps could include checking for conflicting software, OS updates, and Pieces OS version compatibility.",
       "frequency": 2,
       "related_issues": [
         {
@@ -93,9 +93,10 @@
     }
   ],
   "recommendations": [
-    "Investigate and address the persistent selection issue on Windows (possibly related to stuck 'shift' or 'mouse 1' keys).",
-    "Fix the auto-generated context setting for saved material enrichment on macOS to retain user-selected values.",
-    "Prioritize resolving issue #803 due to its high activity level."
+    "Investigate and address the persistent selection issue affecting Windows users, possibly related to stuck 'shift' or 'mouse 1' keys.  Prioritize this due to high activity level.",
+    "Investigate and address why the Auto-Generated Context setting in Machine Learning consistently reverts to 'Medium' on macOS.  While lower activity, ensure consistent user experience.",
+    "Proactively monitor for new reports related to these issues to gauge impact and track resolution progress.",
+    "Consider adding troubleshooting steps to the FAQ or documentation regarding selection issues and setting persistence."
   ],
   "message": "Daily support report generated successfully."
 }
