@@ -2,28 +2,40 @@
   "success": true,
   "date_range": {
     "start": "2025-07-21T00:00:00+00:00",
-    "end": "2025-07-26T13:15:02.869945+00:00"
+    "end": "2025-07-26T21:06:47.975881+00:00"
   },
   "summary": {
-    "total_tickets": 5,
+    "total_tickets": 6,
     "resolved_tickets": 0,
-    "open_tickets": 5
+    "open_tickets": 6
   },
   "ticket_breakdown": [
     {
       "category": "bug",
+      "received": 5,
+      "resolved": 0,
+      "pending": 5
+    },
+    {
+      "category": "status:new",
+      "received": 3,
+      "resolved": 0,
+      "pending": 3
+    },
+    {
+      "category": "app:desktop application",
       "received": 4,
       "resolved": 0,
       "pending": 4
     },
     {
-      "category": "os:windows",
-      "received": 2,
+      "category": "os:macos",
+      "received": 3,
       "resolved": 0,
-      "pending": 2
+      "pending": 3
     },
     {
-      "category": "status:new",
+      "category": "os:windows",
       "received": 2,
       "resolved": 0,
       "pending": 2
@@ -33,18 +45,6 @@
       "received": 3,
       "resolved": 0,
       "pending": 3
-    },
-    {
-      "category": "app:desktop application",
-      "received": 3,
-      "resolved": 0,
-      "pending": 3
-    },
-    {
-      "category": "os:macos",
-      "received": 2,
-      "resolved": 0,
-      "pending": 2
     },
     {
       "category": "status:in_progress",
@@ -81,12 +81,17 @@
     {
       "number": 803,
       "title": "it doesnt stop selecting, it seems like \"shift\" or \"mouse 1\" is locked",
-      "activity_level": 8.5
+      "activity_level": 7.32
     },
     {
       "number": 150,
       "title": "PiecesOS using too much RAM/spike in CPU",
       "activity_level": 6.46
+    },
+    {
+      "number": 805,
+      "title": "LTM gets gunged up over time",
+      "activity_level": 4.42
     },
     {
       "number": 804,
@@ -106,15 +111,15 @@
   ],
   "common_issues": [
     {
-      "title": "Pieces OS Bugs: Selection Lock, High Resource Usage, Context Reset",
-      "description": "Users report persistent selection lock, preventing normal interaction.  High RAM/CPU usage spikes also occur, potentially linked to internet connectivity.  Restarting Pieces OS is a temporary workaround.  Auto-generated context settings revert to \"Medium\" despite user changes.",
+      "title": "Pieces OS Bugs and Unexpected Behaviors",
+      "description": "Users report issues with Pieces OS, including persistent selection mode, high RAM/CPU usage, and auto-generated context resetting to medium.  The selection bug involves unintended selection behavior, possibly related to shift/mouse1 keys. High resource usage may be linked to internet connectivity.  The context setting doesn't retain user preferences. Workarounds include restarting the application and manually adjusting settings.",
       "frequency": 3,
       "related_issues": [
         {
           "id": 803,
           "title": "it doesnt stop selecting, it seems like \"shift\" or \"mouse 1\" is locked",
           "text": "it doesnt stop selecting, it seems like \"shift\" or \"mouse 1\" is locked\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n4.3.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI'm not sure how to make it happen but its **extremely** annoying, it seems like it thinks I'm holding \"shift\" or \"mouse 1\", i use the arrow keys a lot but when this bug is active it selects instead of moving, when i try to click when its active it also selects, i cant ctrl + v when its active :(\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 8.5
+          "activity_level": 7.32
         },
         {
           "id": 150,
@@ -131,8 +136,8 @@
       ]
     },
     {
-      "title": "PiecesOS Errors and Unexpected Behavior",
-      "description": "Users report issues with PiecesOS, including high RAM/CPU usage, failure to generate workstream summaries, and auto-generated context settings reverting to default.  The workstream summary and high resource usage issues appear related to a 404 error accessing the Gemini-Pro model. A temporary solution for high resource usage is restarting PiecesOS.  The auto-generated context setting issue is persistent across macOS platforms and multiple builds.",
+      "title": "PiecesOS Errors and Performance Degradation",
+      "description": "Users report issues with PiecesOS, including high RAM/CPU usage, and LTM query failures after prolonged use.  A potential connection with internet connectivity is suspected in the performance issues.  Restarting PiecesOS offers a temporary fix. LTM issues may require clearing LTM data, although the in-app function is reportedly not working.  A common error message points to a problem with the Gemini-pro model access in the project pi3c3s-cloud-server.",
       "frequency": 3,
       "related_issues": [
         {
@@ -148,16 +153,41 @@
           "activity_level": 6.46
         },
         {
+          "id": 805,
+          "title": "LTM gets gunged up over time",
+          "text": "LTM gets gunged up over time\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n12.1.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nSo when I freshly install Pieces, the LTM works fine.\n\nWhen I've had it running for a few weeks, and I want to query the LTM, the query takes forever, and returns nothing.\n\nThe same happens via the MCP.\n\nI use my machine all day, so there's a lot of context going into the LTM. The only explanation I can come up with is that it's just getting too big. The Workstream is, however, updating fine.\n\nRemoving all my Pieces data gets the LTM working again, but then I end up with this situation later. This is the third time I've been through this loop. It's really frustrating, because when I actually need the LTM, it fails.\n\nThe Clear LTM Data button doesn't work, just returning to Try again, from All Data to even for just clearing an hour of data.\n\nI haven't cleared the LTM (well, I've tried, but the Clear LTM Data button doesn't work) so we have a live broken environment to debug with. I'm more than happy to assist with debugging this - let me know what you need!\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 4.42
+        }
+      ]
+    },
+    {
+      "title": "PiecesOS macOS App Performance Issues",
+      "description": "Users are experiencing performance issues with the Pieces macOS app, including slow LTM queries, failure to clear LTM data, and auto-generated context settings reverting to default.  One user reported LTM issues after extended use, resolved by clearing all Pieces data. Another user noted auto-generated context settings not persisting.  Additionally, high RAM/CPU usage has been reported by multiple users, with restarting PiecesOS as a temporary workaround.",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 805,
+          "title": "LTM gets gunged up over time",
+          "text": "LTM gets gunged up over time\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n12.1.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nSo when I freshly install Pieces, the LTM works fine.\n\nWhen I've had it running for a few weeks, and I want to query the LTM, the query takes forever, and returns nothing.\n\nThe same happens via the MCP.\n\nI use my machine all day, so there's a lot of context going into the LTM. The only explanation I can come up with is that it's just getting too big. The Workstream is, however, updating fine.\n\nRemoving all my Pieces data gets the LTM working again, but then I end up with this situation later. This is the third time I've been through this loop. It's really frustrating, because when I actually need the LTM, it fails.\n\nThe Clear LTM Data button doesn't work, just returning to Try again, from All Data to even for just clearing an hour of data.\n\nI haven't cleared the LTM (well, I've tried, but the Clear LTM Data button doesn't work) so we have a live broken environment to debug with. I'm more than happy to assist with debugging this - let me know what you need!\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 4.42
+        },
+        {
           "id": 801,
           "title": "Auto Generated Context Always returns to Medium",
           "text": "Auto Generated Context Always returns to Medium\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\nPlatform MacOS Version 15.5 (Build 24F74)\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nHello!\n\nThis is an issue that I've seen happen in all of the builds since I've started using pieces. When changing the Auto-Generated Context (Saved Material Enrichment) option in Machine Learning from the menu, in my case I want it to be \"High\", but every time I change it, when I check the next day or any time later, or every time the app or os updates, the option selected goes back to \"Medium\". So I don't actually even know if it ever used \"High\", because it always returns the option to \"Medium\".\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
           "activity_level": 3.18
+        },
+        {
+          "id": 150,
+          "title": "PiecesOS using too much RAM/spike in CPU",
+          "text": "PiecesOS using too much RAM/spike in CPU\nSeveral users have called in recently about Pieces using too much RAM or causing a spike in CPU up to 100%. We are trying to track down this issue, and would appreciate any feedback about your experience with this if you are experiencing it. \r\n\r\nWe have a hunch it has something to do with internet connections, but aren't fully sure yet. \r\n\r\nIf you're experiencing this and wouldn't mind hopping on a call with us to show us, we would really appreciate it to help us troubleshoot! You can schedule a call [here](https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2iaRWpd1kA2k_xg2KrVi_jiTHo0POiMZSI9WAYsxs5jJ9sU2Rd2zKitLuSFd7l3FhatGzy5Vgt\r\n). \r\n\r\nA short-term solution is to restart PiecesOS whenever this occurs. \nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 6.46
         }
       ]
     },
     {
       "title": "Pieces OS and extensions have compatibility issues",
-      "description": "Users report various compatibility issues between Pieces OS, its extensions (like Raycast), and different operating systems (macOS, Windows). Problems include Raycast extension incompatibility with newer Raycast versions, auto-generated context settings reverting to default, and failure to generate workstream summaries.  Check for updates for Pieces OS, the extension, and the OS itself. Ensure compatibility between versions and report issues with details for reproduction.",
+      "description": "Users report various compatibility issues between Pieces OS, its extensions (like Raycast), and the desktop application. Problems include Raycast extension incompatibility with newer Raycast versions, auto-generated context settings reverting to default, and failure to generate workstream summaries.  Check for updates for Pieces, the desktop app, and extensions. Ensure consistent settings configurations.",
       "frequency": 3,
       "related_issues": [
         {
@@ -182,12 +212,12 @@
     }
   ],
   "recommendations": [
-    "Prioritize resolving the \"Pieces OS Bugs: Selection Lock, High Resource Usage, Context Reset\" issue, focusing on the persistent selection lock and high resource usage impacting Windows users.",
-    "Investigate the 404 error related to the Gemini-Pro model affecting workstream summary generation and potentially contributing to high resource usage.",
-    "Address the auto-generated context settings reverting to default across macOS and potentially other platforms.",
-    "Update the Raycast extension for compatibility with the latest Raycast versions.",
-    "Improve communication with users regarding known issues and temporary workarounds, especially concerning high resource usage and selection lock.",
-    "Monitor and address the remaining open tickets, especially those with high activity levels."
+    "Prioritize resolving the \"PiecesOS using too much RAM/spike in CPU\" issue (Ticket #150) due to its high activity level and potential impact on users. Investigate the suspected connection with internet connectivity.",
+    "Address the persistent selection bug in Pieces OS (Ticket #803) as it has the highest activity level and severely impacts usability.  Focus on the potential lock on \"shift\" or \"mouse 1\" keys.",
+    "Investigate and fix the LTM performance issues (Tickets #805) and data clearing functionality.  The inability to clear LTM data necessitates a complete data removal, impacting user experience.",
+    "Resolve the issue with auto-generated context settings reverting to default (Ticket #801). This recurring problem indicates a persistent bug in settings management.",
+    "Address the Raycast extension incompatibility with newer Raycast versions (Ticket #781) to ensure users can leverage the extension's functionalities.",
+    "Investigate the \"Unable to generate Workstream Summary\" error (Ticket #804) and the reported error message related to Gemini-pro model access."
   ],
   "message": "Daily support report generated successfully."
 }
