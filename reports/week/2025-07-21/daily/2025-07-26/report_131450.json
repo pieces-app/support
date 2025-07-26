@@ -1,0 +1,67 @@
+{
+  "success": true,
+  "date_range": {
+    "start": "2025-07-26T00:00:00+00:00",
+    "end": "2025-07-26T13:14:50.607304+00:00"
+  },
+  "summary": {
+    "total_tickets": 1,
+    "resolved_tickets": 0,
+    "open_tickets": 1
+  },
+  "ticket_breakdown": [
+    {
+      "category": "bug",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "os:windows",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:new",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:pieces os",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    }
+  ],
+  "most_active_tickets": [
+    {
+      "number": 804,
+      "title": "Unable to generate Workstream Summary",
+      "activity_level": 4.42
+    }
+  ],
+  "common_issues": [
+    {
+      "title": "Workstream Summary Generation Failure Due to Model Access",
+      "description": "Users are unable to generate Workstream Summaries due to a 404 error indicating the Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` is not found or inaccessible.  Verify project access to the specified Gemini Pro model. Ensure the model version is valid and the project has necessary permissions.",
+      "frequency": 1,
+      "related_issues": [
+        {
+          "id": 804,
+          "title": "Unable to generate Workstream Summary",
+          "text": "Unable to generate Workstream Summary\nError: ApiException 500: WorkstreamSummaries create summary workstreamSummary failed.\n\n**Installation Details**\n\nSucceeded: true\nPath: C:\\Program Files\\WindowsApps\\MeshIntelligentTechnologi.PiecesOS_12.1.1.0_x64__xpmeezj2q5frg/os_server.exe\n\n**PiecesOS Information**\n\nID: 20cd224c-2120-4b05-9f37-659a5a84faa4\nUser: 0cadaaa2-8deb-42cf-9aaa-0c0a130037cf\nCurrent Version: 12.1.1\nMin Version Supported: 12.0.0\nMax Version Supported: 13.0.0\nLocal Port: 39300\n\n**Device Information**\n\nOperating System: Windows\nCurrent Version: \"Windows 10 Enterprise\" 10.0 (Build 26200)\nMin Version Supported: Windows 10 Build 1903\nAdditional Device Information: {cpu_list: [{\"architecture\":\"x64\",\"cores\":8,\"logicalProcessors\":16,\"l2Cache\":{\"value\":4096,\"units\":\"Bytes\"},\"l3Cache\":{\"value\":16384,\"units\":\"Bytes\"},\"description\":\"AMD Ryzen 7 2700X Eight-Core Processor         \"}], gpu_list: [{\"type\":\"Radeon RX 590 Series\",\"unifiedMemoryArchitecture\":null,\"cores\":null,\"dedicatedVRam\":{\"value\":8531038208,\"units\":\"Bytes\"}}, {\"type\":\"Microsoft Basic Render Driver\",\"unifiedMemoryArchitecture\":null,\"cores\":null,\"dedicatedVRam\":{\"value\":0,\"units\":\"Bytes\"}}], npu_list: [], memory_info: {\"totalRAM\":{\"value\":33554432,\"units\":\"KB\"}}, display_list: [{\"nativeHeight\":1080,\"nativeWidth\":1920,\"scaledHeight\":1080,\"scaledWidth\":1920,\"primary\":true}]}\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 4.42
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    "Investigate and resolve the 'Workstream Summary Generation Failure Due to Model Access' error. This appears to be the primary issue affecting users and is related to project access for the Gemini Pro model.",
+    "Verify project permissions and ensure access to the specified Gemini Pro model (`projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro`).",
+    "Check the validity of the Gemini Pro model version being used.",
+    "Provide more detailed error messages to users encountering the Workstream Summary generation issue, including potential troubleshooting steps."
+  ],
+  "message": "Daily support report generated successfully."
+}
