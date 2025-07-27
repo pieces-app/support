@@ -2,7 +2,7 @@
   "success": true,
   "date_range": {
     "start": "2025-07-21T00:00:00+00:00",
-    "end": "2025-07-27T05:12:11.720326+00:00"
+    "end": "2025-07-27T13:15:30.335946+00:00"
   },
   "summary": {
     "total_tickets": 6,
@@ -96,23 +96,23 @@
     {
       "number": 804,
       "title": "Unable to generate Workstream Summary",
-      "activity_level": 4.42
-    },
-    {
-      "number": 801,
-      "title": "Auto Generated Context Always returns to Medium",
-      "activity_level": 3.18
+      "activity_level": 3.5
     },
     {
       "number": 781,
       "title": "Raycast Extension Incompatible with Current Version of Raycast",
       "activity_level": 3.08
+    },
+    {
+      "number": 801,
+      "title": "Auto Generated Context Always returns to Medium",
+      "activity_level": 3.07
     }
   ],
   "common_issues": [
     {
-      "title": "Pieces OS Bugs and Unexpected Behaviors",
-      "description": "Users report issues with Pieces OS, including persistent selection mode, high RAM/CPU usage, and auto-generated context resetting to medium.  The selection bug involves unintended selection behavior, possibly related to shift/mouse click lock. High resource usage may be linked to internet connectivity.  The context setting issue involves the saved material enrichment option reverting to medium. Workarounds include restarting the application and manually adjusting settings.",
+      "title": "Pieces OS Bugs: Selection, Resource Usage, Context Reset",
+      "description": "Users report persistent selection issues on Windows, high RAM/CPU usage potentially linked to internet connectivity, and auto-generated context resetting to \"Medium\" on macOS.  Workarounds include restarting Pieces OS for resource issues. Further investigation needed for selection and context bugs.",
       "frequency": 3,
       "related_issues": [
         {
@@ -131,20 +131,20 @@
           "id": 801,
           "title": "Auto Generated Context Always returns to Medium",
           "text": "Auto Generated Context Always returns to Medium\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\nPlatform MacOS Version 15.5 (Build 24F74)\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nHello!\n\nThis is an issue that I've seen happen in all of the builds since I've started using pieces. When changing the Auto-Generated Context (Saved Material Enrichment) option in Machine Learning from the menu, in my case I want it to be \"High\", but every time I change it, when I check the next day or any time later, or every time the app or os updates, the option selected goes back to \"Medium\". So I don't actually even know if it ever used \"High\", because it always returns the option to \"Medium\".\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 3.18
+          "activity_level": 3.07
         }
       ]
     },
     {
       "title": "PiecesOS Errors and Performance Degradation",
-      "description": "Users report issues with PiecesOS, including high RAM/CPU usage, LTM query failures after prolonged use, and \"Workstream Summary\" generation errors.  A common error message points to a missing Publisher Model in Google Vertex AI.  Short-term solutions include restarting PiecesOS.  Clearing LTM data via the UI is reportedly ineffective. Further investigation is needed to pinpoint the root cause and implement a permanent fix.",
+      "description": "Users report issues with PiecesOS, including high RAM/CPU usage, LTM query failures after prolonged use, and \"Workstream Summary\" generation errors.  A common error message points to a missing Publisher Model in Google Vertex AI.  Short-term solutions include restarting PiecesOS.  The LTM \"Clear Data\" button is also reported as non-functional.",
       "frequency": 3,
       "related_issues": [
         {
           "id": 804,
           "title": "Unable to generate Workstream Summary",
           "text": "Unable to generate Workstream Summary\nError: ApiException 500: WorkstreamSummaries create summary workstreamSummary failed.\n\n**Installation Details**\n\nSucceeded: true\nPath: C:\\Program Files\\WindowsApps\\MeshIntelligentTechnologi.PiecesOS_12.1.1.0_x64__xpmeezj2q5frg/os_server.exe\n\n**PiecesOS Information**\n\nID: 20cd224c-2120-4b05-9f37-659a5a84faa4\nUser: 0cadaaa2-8deb-42cf-9aaa-0c0a130037cf\nCurrent Version: 12.1.1\nMin Version Supported: 12.0.0\nMax Version Supported: 13.0.0\nLocal Port: 39300\n\n**Device Information**\n\nOperating System: Windows\nCurrent Version: \"Windows 10 Enterprise\" 10.0 (Build 26200)\nMin Version Supported: Windows 10 Build 1903\nAdditional Device Information: {cpu_list: [{\"architecture\":\"x64\",\"cores\":8,\"logicalProcessors\":16,\"l2Cache\":{\"value\":4096,\"units\":\"Bytes\"},\"l3Cache\":{\"value\":16384,\"units\":\"Bytes\"},\"description\":\"AMD Ryzen 7 2700X Eight-Core Processor         \"}], gpu_list: [{\"type\":\"Radeon RX 590 Series\",\"unifiedMemoryArchitecture\":null,\"cores\":null,\"dedicatedVRam\":{\"value\":8531038208,\"units\":\"Bytes\"}}, {\"type\":\"Microsoft Basic Render Driver\",\"unifiedMemoryArchitecture\":null,\"cores\":null,\"dedicatedVRam\":{\"value\":0,\"units\":\"Bytes\"}}], npu_list: [], memory_info: {\"totalRAM\":{\"value\":33554432,\"units\":\"KB\"}}, display_list: [{\"nativeHeight\":1080,\"nativeWidth\":1920,\"scaledHeight\":1080,\"scaledWidth\":1920,\"primary\":true}]}\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 4.42
+          "activity_level": 3.5
         },
         {
           "id": 150,
@@ -162,7 +162,7 @@
     },
     {
       "title": "PiecesOS macOS App Performance Issues",
-      "description": "Users are experiencing performance issues with the Pieces macOS app, including slow LTM queries, failure to clear LTM data, and auto-generated context settings reverting to default.  Additionally, high RAM and CPU usage have been reported. Restarting the app or clearing Pieces data may temporarily resolve some issues. Further investigation is needed to determine the root cause and implement a permanent fix. ",
+      "description": "Users are experiencing performance issues with the Pieces macOS app, including slow LTM queries, failure to clear LTM data, and auto-generated context settings reverting to default.  One user reported LTM issues after several weeks of use, resolving temporarily after clearing all Pieces data. Another user noted auto-generated context settings consistently reverting to \"Medium.\" High RAM and CPU usage have also been reported, with restarting PiecesOS as a temporary workaround.",
       "frequency": 3,
       "related_issues": [
         {
@@ -175,7 +175,7 @@
           "id": 801,
           "title": "Auto Generated Context Always returns to Medium",
           "text": "Auto Generated Context Always returns to Medium\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\nPlatform MacOS Version 15.5 (Build 24F74)\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nHello!\n\nThis is an issue that I've seen happen in all of the builds since I've started using pieces. When changing the Auto-Generated Context (Saved Material Enrichment) option in Machine Learning from the menu, in my case I want it to be \"High\", but every time I change it, when I check the next day or any time later, or every time the app or os updates, the option selected goes back to \"Medium\". So I don't actually even know if it ever used \"High\", because it always returns the option to \"Medium\".\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 3.18
+          "activity_level": 3.07
         },
         {
           "id": 150,
@@ -186,8 +186,8 @@
       ]
     },
     {
-      "title": "Pieces OS and extensions compatibility issues",
-      "description": "Users are experiencing compatibility issues between Pieces OS extensions (Raycast) and the Pieces desktop application.  Issues include Raycast extension incompatibility with newer Raycast versions and auto-generated context settings reverting to default.  Additionally, some users report failures generating workstream summaries.  Check for updates to both Pieces and related extensions. Ensure Pieces settings are saving correctly.  If issues persist, contact Pieces support with detailed logs and reproduction steps.",
+      "title": "Pieces OS and extensions have compatibility issues",
+      "description": "Users report various compatibility issues between Pieces OS, its extensions (like Raycast), and the OS itself (macOS, Windows). Problems include Raycast extension incompatibility, auto-generated context settings reverting, and workstream summary generation failures.  Check for updates for Pieces, the extension, and the OS. Ensure sufficient resources for workstream summaries. Review Pieces documentation or contact support if issues persist.",
       "frequency": 3,
       "related_issues": [
         {
@@ -200,24 +200,26 @@
           "id": 801,
           "title": "Auto Generated Context Always returns to Medium",
           "text": "Auto Generated Context Always returns to Medium\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\nPlatform MacOS Version 15.5 (Build 24F74)\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nHello!\n\nThis is an issue that I've seen happen in all of the builds since I've started using pieces. When changing the Auto-Generated Context (Saved Material Enrichment) option in Machine Learning from the menu, in my case I want it to be \"High\", but every time I change it, when I check the next day or any time later, or every time the app or os updates, the option selected goes back to \"Medium\". So I don't actually even know if it ever used \"High\", because it always returns the option to \"Medium\".\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 3.18
+          "activity_level": 3.07
         },
         {
           "id": 804,
           "title": "Unable to generate Workstream Summary",
           "text": "Unable to generate Workstream Summary\nError: ApiException 500: WorkstreamSummaries create summary workstreamSummary failed.\n\n**Installation Details**\n\nSucceeded: true\nPath: C:\\Program Files\\WindowsApps\\MeshIntelligentTechnologi.PiecesOS_12.1.1.0_x64__xpmeezj2q5frg/os_server.exe\n\n**PiecesOS Information**\n\nID: 20cd224c-2120-4b05-9f37-659a5a84faa4\nUser: 0cadaaa2-8deb-42cf-9aaa-0c0a130037cf\nCurrent Version: 12.1.1\nMin Version Supported: 12.0.0\nMax Version Supported: 13.0.0\nLocal Port: 39300\n\n**Device Information**\n\nOperating System: Windows\nCurrent Version: \"Windows 10 Enterprise\" 10.0 (Build 26200)\nMin Version Supported: Windows 10 Build 1903\nAdditional Device Information: {cpu_list: [{\"architecture\":\"x64\",\"cores\":8,\"logicalProcessors\":16,\"l2Cache\":{\"value\":4096,\"units\":\"Bytes\"},\"l3Cache\":{\"value\":16384,\"units\":\"Bytes\"},\"description\":\"AMD Ryzen 7 2700X Eight-Core Processor         \"}], gpu_list: [{\"type\":\"Radeon RX 590 Series\",\"unifiedMemoryArchitecture\":null,\"cores\":null,\"dedicatedVRam\":{\"value\":8531038208,\"units\":\"Bytes\"}}, {\"type\":\"Microsoft Basic Render Driver\",\"unifiedMemoryArchitecture\":null,\"cores\":null,\"dedicatedVRam\":{\"value\":0,\"units\":\"Bytes\"}}], npu_list: [], memory_info: {\"totalRAM\":{\"value\":33554432,\"units\":\"KB\"}}, display_list: [{\"nativeHeight\":1080,\"nativeWidth\":1920,\"scaledHeight\":1080,\"scaledWidth\":1920,\"primary\":true}]}\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 4.42
+          "activity_level": 3.5
         }
       ]
     }
   ],
   "recommendations": [
-    "Investigate and address the \"Publisher Model not found\" error impacting Workstream Summary generation and other features.",
-    "Prioritize resolving the persistent selection mode bug in Pieces OS, as it significantly impacts usability.",
-    "Investigate and fix the high RAM/CPU usage issue affecting both Windows and macOS users.",
-    "Address the LTM query failures and data clearing issues on macOS.",
-    "Ensure the auto-generated context settings are saving correctly across different platforms and after application restarts.",
-    "Update the Raycast extension for compatibility with the latest Raycast versions."
+    "Investigate and address the \"Publisher Model not found\" error impacting Workstream Summary generation and error summaries.",
+    "Prioritize resolving the Pieces OS performance issues related to high RAM/CPU usage, especially on Windows.",
+    "Fix the persistent selection bug on Windows where users experience unintended selection behavior.",
+    "Address the LTM performance degradation and data clearing issues on macOS.",
+    "Investigate and resolve the issue with auto-generated context settings reverting to \"Medium\" on macOS.",
+    "Update the Raycast extension for compatibility with the latest Raycast version.",
+    "Review and improve the functionality of the \"Clear LTM Data\" button.",
+    "Consider adding more detailed logging to Pieces OS to aid in debugging performance and stability issues."
   ],
   "message": "Daily support report generated successfully."
 }

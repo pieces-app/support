@@ -1,5 +1,5 @@
 # Support Ticket Report
-- Generated: 2025-07-27 05:12:48
+- Generated: 2025-07-27 13:16:25
 - Period: 2025-07-21 to 2025-07-27
 
 ## Summary
@@ -13,12 +13,12 @@
 | [#803](https://github.com/pieces-app/support/issues/803) | it doesnt stop selecting, it seems like "shift" or "mouse 1" is locked | 7.32 |
 | [#150](https://github.com/pieces-app/support/issues/150) | PiecesOS using too much RAM/spike in CPU | 6.46 |
 | [#805](https://github.com/pieces-app/support/issues/805) | LTM gets gunged up over time | 4.42 |
-| [#804](https://github.com/pieces-app/support/issues/804) | Unable to generate Workstream Summary | 4.42 |
-| [#801](https://github.com/pieces-app/support/issues/801) | Auto Generated Context Always returns to Medium | 3.18 |
+| [#804](https://github.com/pieces-app/support/issues/804) | Unable to generate Workstream Summary | 3.50 |
+| [#781](https://github.com/pieces-app/support/issues/781) | Raycast Extension Incompatible with Current Version of Raycast | 3.08 |
 
 ## Common Issues
-### 1. Pieces OS Bugs and Unexpected Behaviors
-Users report issues with Pieces OS, including persistent selection mode, high RAM/CPU usage, and auto-generated context resetting to medium.  The selection bug involves unintended selection behavior, possibly related to shift/mouse click lock. High resource usage may be linked to internet connectivity.  The context setting issue involves the saved material enrichment option reverting to medium. Workarounds include restarting the application and manually adjusting settings.
+### 1. Pieces OS Bugs: Selection, Resource Usage, Context Reset
+Users report persistent selection issues on Windows, high RAM/CPU usage potentially linked to internet connectivity, and auto-generated context resetting to "Medium" on macOS.  Workarounds include restarting Pieces OS for resource issues. Further investigation needed for selection and context bugs.
 
 **Related Issues:**
 - [#803](https://github.com/pieces-app/support/issues/803): it doesnt stop selecting, it seems like "shift" or "mouse 1" is locked
@@ -26,7 +26,7 @@ Users report issues with Pieces OS, including persistent selection mode, high RA
 - [#801](https://github.com/pieces-app/support/issues/801): Auto Generated Context Always returns to Medium
 
 ### 2. PiecesOS Errors and Performance Degradation
-Users report issues with PiecesOS, including high RAM/CPU usage, LTM query failures after prolonged use, and "Workstream Summary" generation errors.  A common error message points to a missing Publisher Model in Google Vertex AI.  Short-term solutions include restarting PiecesOS.  Clearing LTM data via the UI is reportedly ineffective. Further investigation is needed to pinpoint the root cause and implement a permanent fix.
+Users report issues with PiecesOS, including high RAM/CPU usage, LTM query failures after prolonged use, and "Workstream Summary" generation errors.  A common error message points to a missing Publisher Model in Google Vertex AI.  Short-term solutions include restarting PiecesOS.  The LTM "Clear Data" button is also reported as non-functional.
 
 **Related Issues:**
 - [#804](https://github.com/pieces-app/support/issues/804): Unable to generate Workstream Summary
@@ -34,15 +34,15 @@ Users report issues with PiecesOS, including high RAM/CPU usage, LTM query failu
 - [#805](https://github.com/pieces-app/support/issues/805): LTM gets gunged up over time
 
 ### 3. PiecesOS macOS App Performance Issues
-Users are experiencing performance issues with the Pieces macOS app, including slow LTM queries, failure to clear LTM data, and auto-generated context settings reverting to default.  Additionally, high RAM and CPU usage have been reported. Restarting the app or clearing Pieces data may temporarily resolve some issues. Further investigation is needed to determine the root cause and implement a permanent fix. 
+Users are experiencing performance issues with the Pieces macOS app, including slow LTM queries, failure to clear LTM data, and auto-generated context settings reverting to default.  One user reported LTM issues after several weeks of use, resolving temporarily after clearing all Pieces data. Another user noted auto-generated context settings consistently reverting to "Medium." High RAM and CPU usage have also been reported, with restarting PiecesOS as a temporary workaround.
 
 **Related Issues:**
 - [#805](https://github.com/pieces-app/support/issues/805): LTM gets gunged up over time
 - [#801](https://github.com/pieces-app/support/issues/801): Auto Generated Context Always returns to Medium
 - [#150](https://github.com/pieces-app/support/issues/150): PiecesOS using too much RAM/spike in CPU
 
-### 4. Pieces OS and extensions compatibility issues
-Users are experiencing compatibility issues between Pieces OS extensions (Raycast) and the Pieces desktop application.  Issues include Raycast extension incompatibility with newer Raycast versions and auto-generated context settings reverting to default.  Additionally, some users report failures generating workstream summaries.  Check for updates to both Pieces and related extensions. Ensure Pieces settings are saving correctly.  If issues persist, contact Pieces support with detailed logs and reproduction steps.
+### 4. Pieces OS and extensions have compatibility issues
+Users report various compatibility issues between Pieces OS, its extensions (like Raycast), and the OS itself (macOS, Windows). Problems include Raycast extension incompatibility, auto-generated context settings reverting, and workstream summary generation failures.  Check for updates for Pieces, the extension, and the OS. Ensure sufficient resources for workstream summaries. Review Pieces documentation or contact support if issues persist.
 
 **Related Issues:**
 - [#781](https://github.com/pieces-app/support/issues/781): Raycast Extension Incompatible with Current Version of Raycast
@@ -51,12 +51,14 @@ Users are experiencing compatibility issues between Pieces OS extensions (Raycas
 
 
 ## Recommendations
-- Investigate and address the "Publisher Model not found" error impacting Workstream Summary generation and other features.
-- Prioritize resolving the persistent selection mode bug in Pieces OS, as it significantly impacts usability.
-- Investigate and fix the high RAM/CPU usage issue affecting both Windows and macOS users.
-- Address the LTM query failures and data clearing issues on macOS.
-- Ensure the auto-generated context settings are saving correctly across different platforms and after application restarts.
-- Update the Raycast extension for compatibility with the latest Raycast versions.
+- Investigate and address the "Publisher Model not found" error impacting Workstream Summary generation and error summaries.
+- Prioritize resolving the Pieces OS performance issues related to high RAM/CPU usage, especially on Windows.
+- Fix the persistent selection bug on Windows where users experience unintended selection behavior.
+- Address the LTM performance degradation and data clearing issues on macOS.
+- Investigate and resolve the issue with auto-generated context settings reverting to "Medium" on macOS.
+- Update the Raycast extension for compatibility with the latest Raycast version.
+- Review and improve the functionality of the "Clear LTM Data" button.
+- Consider adding more detailed logging to Pieces OS to aid in debugging performance and stability issues.
 
 ## Daily Reports
 Here are the daily reports for this week:
