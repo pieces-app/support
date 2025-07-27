@@ -2,7 +2,7 @@
   "success": true,
   "date_range": {
     "start": "2025-07-21T00:00:00+00:00",
-    "end": "2025-07-26T21:06:47.975881+00:00"
+    "end": "2025-07-27T05:12:11.720326+00:00"
   },
   "summary": {
     "total_tickets": 6,
@@ -106,13 +106,13 @@
     {
       "number": 781,
       "title": "Raycast Extension Incompatible with Current Version of Raycast",
-      "activity_level": 3.12
+      "activity_level": 3.08
     }
   ],
   "common_issues": [
     {
       "title": "Pieces OS Bugs and Unexpected Behaviors",
-      "description": "Users report issues with Pieces OS, including persistent selection mode, high RAM/CPU usage, and auto-generated context resetting to medium.  The selection bug involves unintended selection behavior, possibly related to shift/mouse1 keys. High resource usage may be linked to internet connectivity.  The context setting doesn't retain user preferences. Workarounds include restarting the application and manually adjusting settings.",
+      "description": "Users report issues with Pieces OS, including persistent selection mode, high RAM/CPU usage, and auto-generated context resetting to medium.  The selection bug involves unintended selection behavior, possibly related to shift/mouse click lock. High resource usage may be linked to internet connectivity.  The context setting issue involves the saved material enrichment option reverting to medium. Workarounds include restarting the application and manually adjusting settings.",
       "frequency": 3,
       "related_issues": [
         {
@@ -137,7 +137,7 @@
     },
     {
       "title": "PiecesOS Errors and Performance Degradation",
-      "description": "Users report issues with PiecesOS, including high RAM/CPU usage, and LTM query failures after prolonged use.  A potential connection with internet connectivity is suspected in the performance issues.  Restarting PiecesOS offers a temporary fix. LTM issues may require clearing LTM data, although the in-app function is reportedly not working.  A common error message points to a problem with the Gemini-pro model access in the project pi3c3s-cloud-server.",
+      "description": "Users report issues with PiecesOS, including high RAM/CPU usage, LTM query failures after prolonged use, and \"Workstream Summary\" generation errors.  A common error message points to a missing Publisher Model in Google Vertex AI.  Short-term solutions include restarting PiecesOS.  Clearing LTM data via the UI is reportedly ineffective. Further investigation is needed to pinpoint the root cause and implement a permanent fix.",
       "frequency": 3,
       "related_issues": [
         {
@@ -162,7 +162,7 @@
     },
     {
       "title": "PiecesOS macOS App Performance Issues",
-      "description": "Users are experiencing performance issues with the Pieces macOS app, including slow LTM queries, failure to clear LTM data, and auto-generated context settings reverting to default.  One user reported LTM issues after extended use, resolved by clearing all Pieces data. Another user noted auto-generated context settings not persisting.  Additionally, high RAM/CPU usage has been reported by multiple users, with restarting PiecesOS as a temporary workaround.",
+      "description": "Users are experiencing performance issues with the Pieces macOS app, including slow LTM queries, failure to clear LTM data, and auto-generated context settings reverting to default.  Additionally, high RAM and CPU usage have been reported. Restarting the app or clearing Pieces data may temporarily resolve some issues. Further investigation is needed to determine the root cause and implement a permanent fix. ",
       "frequency": 3,
       "related_issues": [
         {
@@ -186,15 +186,15 @@
       ]
     },
     {
-      "title": "Pieces OS and extensions have compatibility issues",
-      "description": "Users report various compatibility issues between Pieces OS, its extensions (like Raycast), and the desktop application. Problems include Raycast extension incompatibility with newer Raycast versions, auto-generated context settings reverting to default, and failure to generate workstream summaries.  Check for updates for Pieces, the desktop app, and extensions. Ensure consistent settings configurations.",
+      "title": "Pieces OS and extensions compatibility issues",
+      "description": "Users are experiencing compatibility issues between Pieces OS extensions (Raycast) and the Pieces desktop application.  Issues include Raycast extension incompatibility with newer Raycast versions and auto-generated context settings reverting to default.  Additionally, some users report failures generating workstream summaries.  Check for updates to both Pieces and related extensions. Ensure Pieces settings are saving correctly.  If issues persist, contact Pieces support with detailed logs and reproduction steps.",
       "frequency": 3,
       "related_issues": [
         {
           "id": 781,
           "title": "Raycast Extension Incompatible with Current Version of Raycast",
           "text": "Raycast Extension Incompatible with Current Version of Raycast\n\n\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Raycast Extension\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n12.1.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nAs mentioned on Discord, it appears that the Raycast needs to be updated to be compatible with (at least) the current version of Raycast 1.100.3. Trying to use any of the extension's functions triggers an error saying:\n\n> Your Pieces Raycast Extension needs to be updated,...\n\n![Image](https://github.com/user-attachments/assets/506778e6-5b13-4811-a21c-82c42384cb41)\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 3.12
+          "activity_level": 3.08
         },
         {
           "id": 801,
@@ -212,12 +212,12 @@
     }
   ],
   "recommendations": [
-    "Prioritize resolving the \"PiecesOS using too much RAM/spike in CPU\" issue (Ticket #150) due to its high activity level and potential impact on users. Investigate the suspected connection with internet connectivity.",
-    "Address the persistent selection bug in Pieces OS (Ticket #803) as it has the highest activity level and severely impacts usability.  Focus on the potential lock on \"shift\" or \"mouse 1\" keys.",
-    "Investigate and fix the LTM performance issues (Tickets #805) and data clearing functionality.  The inability to clear LTM data necessitates a complete data removal, impacting user experience.",
-    "Resolve the issue with auto-generated context settings reverting to default (Ticket #801). This recurring problem indicates a persistent bug in settings management.",
-    "Address the Raycast extension incompatibility with newer Raycast versions (Ticket #781) to ensure users can leverage the extension's functionalities.",
-    "Investigate the \"Unable to generate Workstream Summary\" error (Ticket #804) and the reported error message related to Gemini-pro model access."
+    "Investigate and address the \"Publisher Model not found\" error impacting Workstream Summary generation and other features.",
+    "Prioritize resolving the persistent selection mode bug in Pieces OS, as it significantly impacts usability.",
+    "Investigate and fix the high RAM/CPU usage issue affecting both Windows and macOS users.",
+    "Address the LTM query failures and data clearing issues on macOS.",
+    "Ensure the auto-generated context settings are saving correctly across different platforms and after application restarts.",
+    "Update the Raycast extension for compatibility with the latest Raycast versions."
   ],
   "message": "Daily support report generated successfully."
 }
