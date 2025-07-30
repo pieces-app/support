@@ -1,6 +1,6 @@
 # Support Ticket Report
-- Generated: 2025-07-29 21:08:08
-- Period: 2025-07-28 to 2025-07-29
+- Generated: 2025-07-30 05:14:55
+- Period: 2025-07-28 to 2025-07-30
 
 ## Summary
 - **Total Tickets:** 5
@@ -13,20 +13,20 @@
 | [#803](https://github.com/pieces-app/support/issues/803) | it doesnt stop selecting, it seems like "shift" or "mouse 1" is locked | 5.67 |
 | [#805](https://github.com/pieces-app/support/issues/805) | LTM gets gunged up over time | 4.26 |
 | [#769](https://github.com/pieces-app/support/issues/769) | An error occurred in the authentication flow. | 3.94 |
-| [#781](https://github.com/pieces-app/support/issues/781) | Raycast Extension Incompatible with Current Version of Raycast | 3.85 |
+| [#781](https://github.com/pieces-app/support/issues/781) | Raycast Extension Incompatible with Current Version of Raycast | 3.81 |
 | [#804](https://github.com/pieces-app/support/issues/804) | Unable to generate Workstream Summary | 3.48 |
 
 ## Common Issues
-### 1. Authentication and usability issues in Pieces OS for Windows
-Users are experiencing authentication errors ("An error occurred in the authentication flow") on new installations of Pieces for Windows, primarily when using the desktop application.  Additionally, there are reports of usability issues involving unintended selection behavior, possibly related to stuck shift/mouse click events.  Troubleshooting steps include checking firewall settings, browser extensions, and different browsers. Further investigation is needed to identify the root cause and solutions for both issues.
+### 1. Authentication and Selection Issues in Pieces OS for Windows
+Users are experiencing authentication errors with new Pieces installations on Windows, receiving error ID 00000000000000000000000000000000.  Additionally, there are reports of unintended selection behavior, possibly related to stuck Shift or Mouse 1 input.  Troubleshooting steps include browser changes, reinstallation, and firewall checks. Further investigation is needed to identify the root cause and solutions.
 
 **Related Issues:**
 - [#769](https://github.com/pieces-app/support/issues/769): An error occurred in the authentication flow.
 - [#803](https://github.com/pieces-app/support/issues/803): it doesnt stop selecting, it seems like "shift" or "mouse 1" is locked
 - [#804](https://github.com/pieces-app/support/issues/804): Unable to generate Workstream Summary
 
-### 2. Pieces OS and extensions incompatibility issues
-Users report incompatibility between Pieces OS extensions (Raycast) and the Pieces desktop application.  The Raycast extension triggers errors in recent Raycast versions, while the core Pieces app experiences LTM query failures after prolonged use. Clearing LTM data is ineffective.  Users suggest updating the Raycast extension and addressing LTM performance issues.
+### 2. Pieces OS and Raycast extension incompatibility issues
+Users report the Pieces Raycast extension is incompatible with recent Raycast versions, causing errors.  Additionally, the Pieces LTM becomes unresponsive after extended use, requiring data deletion to function again. The "Clear LTM Data" button is also reported as non-functional.
 
 **Related Issues:**
 - [#781](https://github.com/pieces-app/support/issues/781): Raycast Extension Incompatible with Current Version of Raycast
@@ -35,11 +35,11 @@ Users report incompatibility between Pieces OS extensions (Raycast) and the Piec
 
 
 ## Recommendations
-- Investigate and resolve the authentication flow error on Windows, focusing on new installations and potential conflicts with firewall/browser settings.
-- Address the unintended selection behavior on Windows, possibly related to stuck shift/mouse click events, to improve usability.
-- Update the Raycast extension to ensure compatibility with the latest Raycast versions.
-- Investigate and address the LTM query failures after prolonged use, including exploring performance optimization and data clearing functionality.
-- Prioritize resolving issues affecting core functionality (authentication, selection behavior, LTM queries) to improve user experience and reduce support ticket volume.
+- Investigate authentication error ID 00000000000000000000000000000000 on Windows and unintended selection behavior. Check for stuck Shift/Mouse 1 input.
+- Address Raycast extension incompatibility with recent Raycast versions and the unresponsive LTM issue after extended use.  Fix "Clear LTM Data" button.
+- Prioritize resolution of issues affecting Windows users, given the higher frequency.
+- Improve LTM performance and stability, especially for long-term use. Explore data management strategies to prevent "gunging up."
+- Review logs and gather more data on the "Unable to generate Workstream Summary" error (ApiException 500).
 
 ## Daily Reports
 Here are the daily reports for this week:
