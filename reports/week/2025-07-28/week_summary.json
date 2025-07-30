@@ -2,7 +2,7 @@
   "success": true,
   "date_range": {
     "start": "2025-07-28T00:00:00+00:00",
-    "end": "2025-07-30T13:19:58.889846+00:00"
+    "end": "2025-07-30T21:07:54.237155+00:00"
   },
   "summary": {
     "total_tickets": 5,
@@ -17,28 +17,10 @@
       "pending": 5
     },
     {
-      "category": "os:windows",
-      "received": 3,
-      "resolved": 0,
-      "pending": 3
-    },
-    {
       "category": "app:desktop application",
       "received": 4,
       "resolved": 0,
       "pending": 4
-    },
-    {
-      "category": "app:pieces os",
-      "received": 3,
-      "resolved": 0,
-      "pending": 3
-    },
-    {
-      "category": "status:waiting_on_user_responses",
-      "received": 1,
-      "resolved": 0,
-      "pending": 1
     },
     {
       "category": "os:macos",
@@ -69,28 +51,46 @@
       "received": 1,
       "resolved": 0,
       "pending": 1
+    },
+    {
+      "category": "os:windows",
+      "received": 3,
+      "resolved": 0,
+      "pending": 3
+    },
+    {
+      "category": "app:pieces os",
+      "received": 3,
+      "resolved": 0,
+      "pending": 3
+    },
+    {
+      "category": "status:waiting_on_user_responses",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
     }
   ],
   "most_active_tickets": [
     {
       "number": 803,
       "title": "it doesnt stop selecting, it seems like \"shift\" or \"mouse 1\" is locked",
-      "activity_level": 5.0
-    },
-    {
-      "number": 805,
-      "title": "LTM gets gunged up over time",
-      "activity_level": 4.26
+      "activity_level": 4.73
     },
     {
       "number": 769,
       "title": "An error occurred in the authentication flow.",
-      "activity_level": 3.94
+      "activity_level": 4.29
     },
     {
       "number": 781,
       "title": "Raycast Extension Incompatible with Current Version of Raycast",
-      "activity_level": 3.81
+      "activity_level": 4.22
+    },
+    {
+      "number": 805,
+      "title": "LTM gets gunged up over time",
+      "activity_level": 3.21
     },
     {
       "number": 804,
@@ -100,21 +100,21 @@
   ],
   "common_issues": [
     {
-      "title": "Authentication and Selection Issues in Pieces OS on Windows",
-      "description": "Users are experiencing authentication errors with new Pieces installations on Windows, receiving error ID 00000000000000000000000000000000.  Additionally, there are reports of unintended selection behavior, as if the Shift key or mouse button is stuck.  Troubleshooting steps include checking browser extensions, switching default browsers, and reinstalling Pieces. Further investigation is needed for both issues.",
+      "title": "Authentication and Selection Issues in Pieces OS",
+      "description": "Users reported issues with authentication flows, receiving error messages upon signing in. Another common issue involved unintended selection behavior, possibly due to stuck keys or mouse clicks.  Suggested solutions include checking firewall settings, browser extensions, and Pieces logs. Reinstallation did not resolve the authentication issue for some users.",
       "frequency": 3,
       "related_issues": [
         {
           "id": 769,
           "title": "An error occurred in the authentication flow.",
           "text": "An error occurred in the authentication flow.\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n12.0.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nHello,\nI am receiving this message when attempting to sign-in to Pieces.\n\n```\nAn error occurred in the authentication flow.\nAuthentication Error ID: 00000000000000000000000000000000\n```\n\nThis is a new install. (.appinstaller files)\nI have never used the software before.\nI do not have a pieces account (yet).\nEnvironment: Windows 11\n\nLaunched the authentication by clicking the Sign In button in the Desktop App (4.2.1)\nThe auth link opened Firefox and generated the error.\n\nI tried the following:\nDisabling all extensions in Firefox\nChanging my default browser to Edge and re-launching using Edge.\nRe-installing with the .exe files.\nReviewed the windows firewall config (Pieces added it itself)\nLooked at the Pieces log file but did not see anything obvious enough that I could solve on my own. (See attached)\n\n[log-06252025-copy.txt](https://github.com/user-attachments/files/20907036/log-06252025-copy.txt)\n\nThank you for the help.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 3.94
+          "activity_level": 4.29
         },
         {
           "id": 803,
           "title": "it doesnt stop selecting, it seems like \"shift\" or \"mouse 1\" is locked",
           "text": "it doesnt stop selecting, it seems like \"shift\" or \"mouse 1\" is locked\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n4.3.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI'm not sure how to make it happen but its **extremely** annoying, it seems like it thinks I'm holding \"shift\" or \"mouse 1\", i use the arrow keys a lot but when this bug is active it selects instead of moving, when i try to click when its active it also selects, i cant ctrl + v when its active :(\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 5.0
+          "activity_level": 4.73
         },
         {
           "id": 804,
@@ -126,14 +126,14 @@
     },
     {
       "title": "Pieces OS and extensions incompatibility issues",
-      "description": "Users report incompatibility between Pieces OS extensions (Raycast) and the Pieces desktop application.  The Raycast extension triggers errors in recent Raycast versions.  Additionally, the LTM functionality within Pieces OS becomes unresponsive after prolonged use, requiring data clearing to restore functionality. The \"Clear LTM Data\" button is also reported as non-functional.",
+      "description": "Users report incompatibility between Pieces OS extensions (Raycast) and the Pieces desktop application.  The Raycast extension triggers errors in recent Raycast versions, while the core Pieces app experiences LTM query failures after prolonged use. Clearing LTM data is ineffective.  Users suggest updating the Raycast extension for compatibility and addressing LTM performance issues.",
       "frequency": 3,
       "related_issues": [
         {
           "id": 781,
           "title": "Raycast Extension Incompatible with Current Version of Raycast",
           "text": "Raycast Extension Incompatible with Current Version of Raycast\n\n\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Raycast Extension\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n12.1.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nAs mentioned on Discord, it appears that the Raycast needs to be updated to be compatible with (at least) the current version of Raycast 1.100.3. Trying to use any of the extension's functions triggers an error saying:\n\n> Your Pieces Raycast Extension needs to be updated,...\n\n![Image](https://github.com/user-attachments/assets/506778e6-5b13-4811-a21c-82c42384cb41)\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 3.81
+          "activity_level": 4.22
         },
         {
           "id": 804,
@@ -145,17 +145,17 @@
           "id": 805,
           "title": "LTM gets gunged up over time",
           "text": "LTM gets gunged up over time\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n12.1.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nSo when I freshly install Pieces, the LTM works fine.\n\nWhen I've had it running for a few weeks, and I want to query the LTM, the query takes forever, and returns nothing.\n\nThe same happens via the MCP.\n\nI use my machine all day, so there's a lot of context going into the LTM. The only explanation I can come up with is that it's just getting too big. The Workstream is, however, updating fine.\n\nRemoving all my Pieces data gets the LTM working again, but then I end up with this situation later. This is the third time I've been through this loop. It's really frustrating, because when I actually need the LTM, it fails.\n\nThe Clear LTM Data button doesn't work, just returning to Try again, from All Data to even for just clearing an hour of data.\n\nI haven't cleared the LTM (well, I've tried, but the Clear LTM Data button doesn't work) so we have a live broken environment to debug with. I'm more than happy to assist with debugging this - let me know what you need!\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 4.26
+          "activity_level": 3.21
         }
       ]
     }
   ],
   "recommendations": [
-    "Investigate authentication errors with new Pieces installations on Windows, focusing on error ID 00000000000000000000000000000000 and exploring potential conflicts with browser extensions or system settings.",
-    "Address the unintended selection behavior in Pieces OS on Windows, simulating stuck Shift key or mouse button scenarios to identify the root cause.",
-    "Prioritize updating the Pieces Raycast extension for compatibility with recent Raycast versions, addressing the reported error messages.",
-    "Investigate and resolve the LTM unresponsiveness issue within Pieces OS after prolonged use, including verifying the functionality of the \"Clear LTM Data\" button.",
-    "Improve the authentication flow within Pieces to provide more informative error messages and troubleshooting steps for users."
+    "Prioritize resolving authentication issues on Windows, as reported in ticket #769 and impacting Pieces OS.",
+    "Investigate and fix the selection bug in Pieces OS on Windows (ticket #803) to improve user experience.",
+    "Update the Raycast extension to ensure compatibility with the latest Raycast version (ticket #781).",
+    "Address the LTM performance issues in Pieces OS, especially on macOS (ticket #805), to ensure its functionality.",
+    "Improve error messaging and logging related to authentication and LTM issues to aid in troubleshooting."
   ],
   "message": "Daily support report generated successfully."
 }
