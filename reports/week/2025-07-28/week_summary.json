@@ -2,7 +2,7 @@
   "success": true,
   "date_range": {
     "start": "2025-07-28T00:00:00+00:00",
-    "end": "2025-07-30T21:07:54.237155+00:00"
+    "end": "2025-07-31T05:12:53.856559+00:00"
   },
   "summary": {
     "total_tickets": 5,
@@ -85,7 +85,7 @@
     {
       "number": 781,
       "title": "Raycast Extension Incompatible with Current Version of Raycast",
-      "activity_level": 4.22
+      "activity_level": 4.18
     },
     {
       "number": 805,
@@ -101,7 +101,7 @@
   "common_issues": [
     {
       "title": "Authentication and Selection Issues in Pieces OS",
-      "description": "Users reported issues with authentication flows, receiving error messages upon signing in. Another common issue involved unintended selection behavior, possibly due to stuck keys or mouse clicks.  Suggested solutions include checking firewall settings, browser extensions, and Pieces logs. Reinstallation did not resolve the authentication issue for some users.",
+      "description": "Users reported issues with authentication flows, receiving error messages upon signing in. Another common issue involved unintended selection behavior, possibly due to stuck keys or mouse clicks.  Suggested solutions include checking browser extensions, firewall settings, and Pieces logs. Reinstallation and trying different browsers may also help.",
       "frequency": 3,
       "related_issues": [
         {
@@ -126,14 +126,14 @@
     },
     {
       "title": "Pieces OS and extensions incompatibility issues",
-      "description": "Users report incompatibility between Pieces OS extensions (Raycast) and the Pieces desktop application.  The Raycast extension triggers errors in recent Raycast versions, while the core Pieces app experiences LTM query failures after prolonged use. Clearing LTM data is ineffective.  Users suggest updating the Raycast extension for compatibility and addressing LTM performance issues.",
+      "description": "Users report incompatibility between Pieces OS extensions (Raycast) and the Pieces desktop application.  The Raycast extension triggers errors in recent Raycast versions.  Additionally, the LTM functionality degrades over time, becoming unresponsive and requiring data clearing to function again.  The \"Clear LTM Data\" button is also reported as non-functional.",
       "frequency": 3,
       "related_issues": [
         {
           "id": 781,
           "title": "Raycast Extension Incompatible with Current Version of Raycast",
           "text": "Raycast Extension Incompatible with Current Version of Raycast\n\n\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Raycast Extension\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n12.1.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nAs mentioned on Discord, it appears that the Raycast needs to be updated to be compatible with (at least) the current version of Raycast 1.100.3. Trying to use any of the extension's functions triggers an error saying:\n\n> Your Pieces Raycast Extension needs to be updated,...\n\n![Image](https://github.com/user-attachments/assets/506778e6-5b13-4811-a21c-82c42384cb41)\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 4.22
+          "activity_level": 4.18
         },
         {
           "id": 804,
@@ -151,11 +151,11 @@
     }
   ],
   "recommendations": [
-    "Prioritize resolving authentication issues on Windows, as reported in ticket #769 and impacting Pieces OS.",
-    "Investigate and fix the selection bug in Pieces OS on Windows (ticket #803) to improve user experience.",
-    "Update the Raycast extension to ensure compatibility with the latest Raycast version (ticket #781).",
-    "Address the LTM performance issues in Pieces OS, especially on macOS (ticket #805), to ensure its functionality.",
-    "Improve error messaging and logging related to authentication and LTM issues to aid in troubleshooting."
+    "Prioritize resolving the authentication issue (#769) impacting Windows users on the desktop application and Pieces OS.",
+    "Investigate and fix the selection bug (#803) affecting Windows users on the desktop application and Pieces OS, as it severely hinders usability.",
+    "Address the incompatibility between the Raycast extension and the latest Raycast version (#781) to restore functionality for macOS users.",
+    "Resolve the LTM performance degradation issue (#805) and the non-functional \"Clear LTM Data\" button to ensure long-term usability on macOS.",
+    "Look into the issue regarding Workstream Summary generation failure (#804) on Windows."
   ],
   "message": "Daily support report generated successfully."
 }

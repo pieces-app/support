@@ -1,6 +1,6 @@
 # Support Ticket Report
-- Generated: 2025-07-30 21:08:29
-- Period: 2025-07-28 to 2025-07-30
+- Generated: 2025-07-31 05:13:34
+- Period: 2025-07-28 to 2025-07-31
 
 ## Summary
 - **Total Tickets:** 5
@@ -12,13 +12,13 @@
 |---------|-------|----------------|
 | [#803](https://github.com/pieces-app/support/issues/803) | it doesnt stop selecting, it seems like "shift" or "mouse 1" is locked | 4.73 |
 | [#769](https://github.com/pieces-app/support/issues/769) | An error occurred in the authentication flow. | 4.29 |
-| [#781](https://github.com/pieces-app/support/issues/781) | Raycast Extension Incompatible with Current Version of Raycast | 4.22 |
+| [#781](https://github.com/pieces-app/support/issues/781) | Raycast Extension Incompatible with Current Version of Raycast | 4.18 |
 | [#805](https://github.com/pieces-app/support/issues/805) | LTM gets gunged up over time | 3.21 |
 | [#804](https://github.com/pieces-app/support/issues/804) | Unable to generate Workstream Summary | 2.49 |
 
 ## Common Issues
 ### 1. Authentication and Selection Issues in Pieces OS
-Users reported issues with authentication flows, receiving error messages upon signing in. Another common issue involved unintended selection behavior, possibly due to stuck keys or mouse clicks.  Suggested solutions include checking firewall settings, browser extensions, and Pieces logs. Reinstallation did not resolve the authentication issue for some users.
+Users reported issues with authentication flows, receiving error messages upon signing in. Another common issue involved unintended selection behavior, possibly due to stuck keys or mouse clicks.  Suggested solutions include checking browser extensions, firewall settings, and Pieces logs. Reinstallation and trying different browsers may also help.
 
 **Related Issues:**
 - [#769](https://github.com/pieces-app/support/issues/769): An error occurred in the authentication flow.
@@ -26,7 +26,7 @@ Users reported issues with authentication flows, receiving error messages upon s
 - [#804](https://github.com/pieces-app/support/issues/804): Unable to generate Workstream Summary
 
 ### 2. Pieces OS and extensions incompatibility issues
-Users report incompatibility between Pieces OS extensions (Raycast) and the Pieces desktop application.  The Raycast extension triggers errors in recent Raycast versions, while the core Pieces app experiences LTM query failures after prolonged use. Clearing LTM data is ineffective.  Users suggest updating the Raycast extension for compatibility and addressing LTM performance issues.
+Users report incompatibility between Pieces OS extensions (Raycast) and the Pieces desktop application.  The Raycast extension triggers errors in recent Raycast versions.  Additionally, the LTM functionality degrades over time, becoming unresponsive and requiring data clearing to function again.  The "Clear LTM Data" button is also reported as non-functional.
 
 **Related Issues:**
 - [#781](https://github.com/pieces-app/support/issues/781): Raycast Extension Incompatible with Current Version of Raycast
@@ -35,11 +35,11 @@ Users report incompatibility between Pieces OS extensions (Raycast) and the Piec
 
 
 ## Recommendations
-- Prioritize resolving authentication issues on Windows, as reported in ticket #769 and impacting Pieces OS.
-- Investigate and fix the selection bug in Pieces OS on Windows (ticket #803) to improve user experience.
-- Update the Raycast extension to ensure compatibility with the latest Raycast version (ticket #781).
-- Address the LTM performance issues in Pieces OS, especially on macOS (ticket #805), to ensure its functionality.
-- Improve error messaging and logging related to authentication and LTM issues to aid in troubleshooting.
+- Prioritize resolving the authentication issue (#769) impacting Windows users on the desktop application and Pieces OS.
+- Investigate and fix the selection bug (#803) affecting Windows users on the desktop application and Pieces OS, as it severely hinders usability.
+- Address the incompatibility between the Raycast extension and the latest Raycast version (#781) to restore functionality for macOS users.
+- Resolve the LTM performance degradation issue (#805) and the non-functional "Clear LTM Data" button to ensure long-term usability on macOS.
+- Look into the issue regarding Workstream Summary generation failure (#804) on Windows.
 
 ## Daily Reports
 Here are the daily reports for this week:
