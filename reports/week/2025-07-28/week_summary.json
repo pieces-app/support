@@ -2,49 +2,55 @@
   "success": true,
   "date_range": {
     "start": "2025-07-28T00:00:00+00:00",
-    "end": "2025-08-01T13:18:58.995457+00:00"
+    "end": "2025-08-01T21:07:47.164094+00:00"
   },
   "summary": {
     "total_tickets": 8,
-    "resolved_tickets": 0,
-    "open_tickets": 8
+    "resolved_tickets": 1,
+    "open_tickets": 7
   },
   "ticket_breakdown": [
     {
       "category": "bug",
       "received": 8,
-      "resolved": 0,
-      "pending": 8
-    },
-    {
-      "category": "os:windows",
-      "received": 4,
-      "resolved": 0,
-      "pending": 4
+      "resolved": 1,
+      "pending": 7
     },
     {
       "category": "app:desktop application",
       "received": 7,
-      "resolved": 0,
-      "pending": 7
+      "resolved": 1,
+      "pending": 6
     },
     {
-      "category": "app:pieces os",
-      "received": 5,
-      "resolved": 0,
-      "pending": 5
+      "category": "os:macos",
+      "received": 3,
+      "resolved": 1,
+      "pending": 2
+    },
+    {
+      "category": "status:in_progress",
+      "received": 1,
+      "resolved": 1,
+      "pending": 0
     },
     {
       "category": "status:triaged",
       "received": 6,
-      "resolved": 0,
-      "pending": 6
+      "resolved": 1,
+      "pending": 5
     },
     {
-      "category": "status:waiting_on_user_responses",
-      "received": 3,
-      "resolved": 0,
-      "pending": 3
+      "category": "status:pending_user_confirmation",
+      "received": 1,
+      "resolved": 1,
+      "pending": 0
+    },
+    {
+      "category": "app:raycast plugin",
+      "received": 1,
+      "resolved": 1,
+      "pending": 0
     },
     {
       "category": "os:linux",
@@ -53,40 +59,34 @@
       "pending": 1
     },
     {
-      "category": "os:macos",
+      "category": "app:pieces os",
+      "received": 5,
+      "resolved": 0,
+      "pending": 5
+    },
+    {
+      "category": "status:waiting_on_user_responses",
       "received": 3,
       "resolved": 0,
       "pending": 3
     },
     {
-      "category": "status:in_progress",
-      "received": 1,
+      "category": "os:windows",
+      "received": 4,
       "resolved": 0,
-      "pending": 1
-    },
-    {
-      "category": "status:pending_user_confirmation",
-      "received": 1,
-      "resolved": 0,
-      "pending": 1
-    },
-    {
-      "category": "app:raycast plugin",
-      "received": 1,
-      "resolved": 0,
-      "pending": 1
+      "pending": 4
     }
   ],
   "most_active_tickets": [
     {
       "number": 803,
       "title": "it doesnt stop selecting, it seems like \"shift\" or \"mouse 1\" is locked",
-      "activity_level": 7.53
+      "activity_level": 7.23
     },
     {
       "number": 809,
       "title": "Ensure core dependencies; Retry Step",
-      "activity_level": 5.68
+      "activity_level": 6.5
     },
     {
       "number": 808,
@@ -96,12 +96,7 @@
     {
       "number": 781,
       "title": "Raycast Extension Incompatible with Current Version of Raycast",
-      "activity_level": 4.54
-    },
-    {
-      "number": 769,
-      "title": "An error occurred in the authentication flow.",
-      "activity_level": 4.54
+      "activity_level": 4.95
     },
     {
       "number": 807,
@@ -109,9 +104,14 @@
       "activity_level": 4.5
     },
     {
+      "number": 769,
+      "title": "An error occurred in the authentication flow.",
+      "activity_level": 4.13
+    },
+    {
       "number": 805,
       "title": "LTM gets gunged up over time",
-      "activity_level": 3.0
+      "activity_level": 2.84
     },
     {
       "number": 804,
@@ -121,21 +121,21 @@
   ],
   "common_issues": [
     {
-      "title": "Pieces OS: Issues with Selection, Dependencies, and Authentication",
-      "description": "Users report persistent selection issues, including unintended selection with arrow keys and mouse clicks, preventing copy-pasting.  Additionally, the \"Ensure core dependencies\" step fails during installation on Linux.  Authentication problems also arise, with users unable to access Pro features despite purchasing memberships. Troubleshooting steps include checking system settings, reinstalling the application, and verifying account credentials.",
+      "title": "Pieces OS: Issues with selection, dependencies, and authentication",
+      "description": "Users are experiencing issues with Pieces OS across different operating systems. These include unintended selection behavior (potentially stuck shift/mouse click), failure of the \"Ensure core dependencies\" step during installation on Linux, and authentication problems preventing Pro membership utilization on Windows.  Further investigation is needed to identify the root causes and solutions for each issue.",
       "frequency": 3,
       "related_issues": [
         {
           "id": 803,
           "title": "it doesnt stop selecting, it seems like \"shift\" or \"mouse 1\" is locked",
           "text": "it doesnt stop selecting, it seems like \"shift\" or \"mouse 1\" is locked\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n4.3.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI'm not sure how to make it happen but its **extremely** annoying, it seems like it thinks I'm holding \"shift\" or \"mouse 1\", i use the arrow keys a lot but when this bug is active it selects instead of moving, when i try to click when its active it also selects, i cant ctrl + v when its active :(\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 7.53
+          "activity_level": 7.23
         },
         {
           "id": 809,
           "title": "Ensure core dependencies; Retry Step",
           "text": "Ensure core dependencies; Retry Step\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\n### Pieces OS, Desktop Application\n\n* Operating System / Platform: Linux\n\n* Pieces OS Version 4.3.1\n\n\n\n\n\nAfter installation, the \u201cInitialize Desktop App\u201d step has run successfully. The \u201cEnsure core dependencies\u201d step displays the message \u201cRetry Step\u201d.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 5.68
+          "activity_level": 6.5
         },
         {
           "id": 807,
@@ -147,20 +147,20 @@
     },
     {
       "title": "Pieces software incompatibility issues across platforms",
-      "description": "Users are experiencing incompatibility issues with Pieces software components, including the Raycast extension, across macOS, Linux, and Windows.  The Raycast extension is not compatible with recent Raycast versions, causing errors. On Linux, the \"Ensure core dependencies\" step fails during setup.  Windows users are facing authentication problems, hindering Pro membership access.  Suggested solutions include updating the Raycast extension, troubleshooting dependencies on Linux, and verifying login credentials on Windows.",
+      "description": "Users are experiencing incompatibility issues with Pieces software components, including the Raycast extension on macOS (v1.100.3), core dependencies on Linux (Pieces OS 4.3.1), and authentication problems on Windows (Pieces OS 12.1.1).  The Raycast extension triggers update errors, Linux setup stalls during dependency checks, and Windows users face pro account authentication failures.  Suggested solutions include updating the Raycast extension, verifying core dependencies, and checking login credentials/connectivity.",
       "frequency": 3,
       "related_issues": [
         {
           "id": 781,
           "title": "Raycast Extension Incompatible with Current Version of Raycast",
           "text": "Raycast Extension Incompatible with Current Version of Raycast\n\n\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Raycast Extension\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n12.1.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nAs mentioned on Discord, it appears that the Raycast needs to be updated to be compatible with (at least) the current version of Raycast 1.100.3. Trying to use any of the extension's functions triggers an error saying:\n\n> Your Pieces Raycast Extension needs to be updated,...\n\n![Image](https://github.com/user-attachments/assets/506778e6-5b13-4811-a21c-82c42384cb41)\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 4.54
+          "activity_level": 4.95
         },
         {
           "id": 809,
           "title": "Ensure core dependencies; Retry Step",
           "text": "Ensure core dependencies; Retry Step\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\n### Pieces OS, Desktop Application\n\n* Operating System / Platform: Linux\n\n* Pieces OS Version 4.3.1\n\n\n\n\n\nAfter installation, the \u201cInitialize Desktop App\u201d step has run successfully. The \u201cEnsure core dependencies\u201d step displays the message \u201cRetry Step\u201d.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 5.68
+          "activity_level": 6.5
         },
         {
           "id": 807,
@@ -172,14 +172,14 @@
     },
     {
       "title": "Authentication Errors in Pieces OS Desktop App",
-      "description": "Users are experiencing authentication errors when attempting to sign in to the Pieces OS desktop app across different operating systems (Windows, Linux).  Issues range from new user sign-in failures to problems with existing Pro accounts.  Suggested troubleshooting includes checking firewall settings, trying different browsers, and ensuring core dependencies are met during installation.",
+      "description": "Users are experiencing authentication errors when attempting to sign in to the Pieces OS desktop app across different operating systems (Windows, Linux).  Issues range from new user sign-in failures to existing pro users unable to authenticate.  Suggested troubleshooting includes checking firewall settings, trying different browsers, and ensuring core dependencies are met during installation.",
       "frequency": 3,
       "related_issues": [
         {
           "id": 769,
           "title": "An error occurred in the authentication flow.",
           "text": "An error occurred in the authentication flow.\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n12.0.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nHello,\nI am receiving this message when attempting to sign-in to Pieces.\n\n```\nAn error occurred in the authentication flow.\nAuthentication Error ID: 00000000000000000000000000000000\n```\n\nThis is a new install. (.appinstaller files)\nI have never used the software before.\nI do not have a pieces account (yet).\nEnvironment: Windows 11\n\nLaunched the authentication by clicking the Sign In button in the Desktop App (4.2.1)\nThe auth link opened Firefox and generated the error.\n\nI tried the following:\nDisabling all extensions in Firefox\nChanging my default browser to Edge and re-launching using Edge.\nRe-installing with the .exe files.\nReviewed the windows firewall config (Pieces added it itself)\nLooked at the Pieces log file but did not see anything obvious enough that I could solve on my own. (See attached)\n\n[log-06252025-copy.txt](https://github.com/user-attachments/files/20907036/log-06252025-copy.txt)\n\nThank you for the help.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 4.54
+          "activity_level": 4.13
         },
         {
           "id": 807,
@@ -191,13 +191,13 @@
           "id": 809,
           "title": "Ensure core dependencies; Retry Step",
           "text": "Ensure core dependencies; Retry Step\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\n### Pieces OS, Desktop Application\n\n* Operating System / Platform: Linux\n\n* Pieces OS Version 4.3.1\n\n\n\n\n\nAfter installation, the \u201cInitialize Desktop App\u201d step has run successfully. The \u201cEnsure core dependencies\u201d step displays the message \u201cRetry Step\u201d.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 5.68
+          "activity_level": 6.5
         }
       ]
     },
     {
-      "title": "Users unable to upgrade to Pro or login",
-      "description": "Multiple users report issues with upgrading to the Pro version.  A blank checkout page with zero values appears, then an error. Others cannot authenticate or utilize their Pro membership after purchase.  This affects macOS and Windows users on Pieces OS 12.1.1. Suggested troubleshooting: Check authentication services, verify payment processing, and examine upgrade workflows.",
+      "title": "Users unable to upgrade to Pro or utilize Pro features",
+      "description": "Multiple users report issues with upgrading to Pieces Pro.  Symptoms include blank checkout pages, authentication failures, and workstream summary generation errors.  The issues appear across macOS and Windows on Pieces OS 12.1.1. Further investigation into the upgrade process and Pro authentication is needed.",
       "frequency": 3,
       "related_issues": [
         {
@@ -221,21 +221,21 @@
       ]
     },
     {
-      "title": "LTM performance degrades over time, becomes unresponsive",
-      "description": "Users report LTM queries becoming slow and eventually failing after weeks of use.  Issue occurs on macOS and potentially other platforms. Clearing LTM data via the UI is unsuccessful.  Workaround involves removing all Pieces data, but the problem reoccurs. Potential solutions include LTM optimization or data management strategies.",
+      "title": "LTM performance degrades over time and becomes unusable",
+      "description": "Users report that the Long Term Memory (LTM) functionality in Pieces OS degrades over time.  After a few weeks of use, LTM queries become extremely slow and eventually return no results, both in the desktop application and via MCP.  Clearing LTM data sometimes resolves the issue temporarily. The \"Clear LTM Data\" button is also reported as non-functional. This issue occurs across different operating systems (macOS, Linux, Windows).",
       "frequency": 3,
       "related_issues": [
         {
           "id": 805,
           "title": "LTM gets gunged up over time",
           "text": "LTM gets gunged up over time\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n12.1.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nSo when I freshly install Pieces, the LTM works fine.\n\nWhen I've had it running for a few weeks, and I want to query the LTM, the query takes forever, and returns nothing.\n\nThe same happens via the MCP.\n\nI use my machine all day, so there's a lot of context going into the LTM. The only explanation I can come up with is that it's just getting too big. The Workstream is, however, updating fine.\n\nRemoving all my Pieces data gets the LTM working again, but then I end up with this situation later. This is the third time I've been through this loop. It's really frustrating, because when I actually need the LTM, it fails.\n\nThe Clear LTM Data button doesn't work, just returning to Try again, from All Data to even for just clearing an hour of data.\n\nI haven't cleared the LTM (well, I've tried, but the Clear LTM Data button doesn't work) so we have a live broken environment to debug with. I'm more than happy to assist with debugging this - let me know what you need!\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 3.0
+          "activity_level": 2.84
         },
         {
           "id": 809,
           "title": "Ensure core dependencies; Retry Step",
           "text": "Ensure core dependencies; Retry Step\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\n### Pieces OS, Desktop Application\n\n* Operating System / Platform: Linux\n\n* Pieces OS Version 4.3.1\n\n\n\n\n\nAfter installation, the \u201cInitialize Desktop App\u201d step has run successfully. The \u201cEnsure core dependencies\u201d step displays the message \u201cRetry Step\u201d.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 5.68
+          "activity_level": 6.5
         },
         {
           "id": 804,
@@ -247,13 +247,15 @@
     }
   ],
   "recommendations": [
-    "Prioritize resolving authentication issues across Windows and Linux, focusing on firewall settings, browser compatibility, and core dependency checks during installation.",
-    "Investigate and address the persistent selection bug in Pieces OS on Windows, ensuring proper functionality of arrow keys and mouse clicks.",
-    "Update the Raycast extension for compatibility with the latest Raycast versions.",
-    "Troubleshoot and resolve the \"Ensure core dependencies\" failure during Pieces OS installation on Linux.",
-    "Investigate and fix the blank checkout page issue during Pro upgrade, ensuring correct pricing and transaction processing.",
-    "Address the LTM performance degradation by optimizing queries and implementing data management strategies to prevent unresponsiveness.",
-    "Improve the \"Clear LTM Data\" functionality in the UI to allow users to effectively manage LTM data."
+    "Investigate and resolve the root cause of the \"shift\" or \"mouse 1\" lock issue on Windows.",
+    "Prioritize resolving the \"Ensure core dependencies\" failure during Pieces OS installation on Linux.",
+    "Address the authentication problems preventing Pro membership utilization on Windows.",
+    "Update the Raycast extension to resolve incompatibility issues with Raycast 1.100.3 on macOS.",
+    "Investigate and fix the blank checkout page issue when upgrading to Pieces Pro.",
+    "Troubleshoot and resolve the authentication errors in the Pieces OS desktop app on Windows and Linux.",
+    "Investigate and address the performance degradation of Long Term Memory (LTM) functionality over time.",
+    "Fix the non-functional \"Clear LTM Data\" button in Pieces OS.",
+    "Improve error messaging and logging for authentication and upgrade issues to aid in troubleshooting."
   ],
   "message": "Daily support report generated successfully."
 }

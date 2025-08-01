@@ -1,0 +1,115 @@
+{
+  "success": true,
+  "date_range": {
+    "start": "2025-08-01T00:00:00+00:00",
+    "end": "2025-08-01T21:07:27.300260+00:00"
+  },
+  "summary": {
+    "total_tickets": 2,
+    "resolved_tickets": 1,
+    "open_tickets": 1
+  },
+  "ticket_breakdown": [
+    {
+      "category": "bug",
+      "received": 2,
+      "resolved": 1,
+      "pending": 1
+    },
+    {
+      "category": "app:desktop application",
+      "received": 2,
+      "resolved": 1,
+      "pending": 1
+    },
+    {
+      "category": "os:macos",
+      "received": 1,
+      "resolved": 1,
+      "pending": 0
+    },
+    {
+      "category": "status:in_progress",
+      "received": 1,
+      "resolved": 1,
+      "pending": 0
+    },
+    {
+      "category": "status:triaged",
+      "received": 1,
+      "resolved": 1,
+      "pending": 0
+    },
+    {
+      "category": "status:pending_user_confirmation",
+      "received": 1,
+      "resolved": 1,
+      "pending": 0
+    },
+    {
+      "category": "app:raycast plugin",
+      "received": 1,
+      "resolved": 1,
+      "pending": 0
+    },
+    {
+      "category": "os:linux",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:pieces os",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:waiting_on_user_responses",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    }
+  ],
+  "most_active_tickets": [
+    {
+      "number": 809,
+      "title": "Ensure core dependencies; Retry Step",
+      "activity_level": 6.5
+    },
+    {
+      "number": 781,
+      "title": "Raycast Extension Incompatible with Current Version of Raycast",
+      "activity_level": 4.95
+    }
+  ],
+  "common_issues": [
+    {
+      "title": "Pieces integrations failing due to version incompatibility",
+      "description": "Users are experiencing issues with Pieces integrations (Raycast extension, core dependencies) due to version incompatibility.  The Raycast extension is not compatible with recent Raycast versions (e.g., 1.100.3), and core dependencies are failing to initialize on Linux (Pieces OS 4.3.1). Users are advised to check for updates for both Pieces and the related integrations (Raycast).",
+      "frequency": 2,
+      "related_issues": [
+        {
+          "id": 781,
+          "title": "Raycast Extension Incompatible with Current Version of Raycast",
+          "text": "Raycast Extension Incompatible with Current Version of Raycast\n\n\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Raycast Extension\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n12.1.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nAs mentioned on Discord, it appears that the Raycast needs to be updated to be compatible with (at least) the current version of Raycast 1.100.3. Trying to use any of the extension's functions triggers an error saying:\n\n> Your Pieces Raycast Extension needs to be updated,...\n\n![Image](https://github.com/user-attachments/assets/506778e6-5b13-4811-a21c-82c42384cb41)\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 4.95
+        },
+        {
+          "id": 809,
+          "title": "Ensure core dependencies; Retry Step",
+          "text": "Ensure core dependencies; Retry Step\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\n### Pieces OS, Desktop Application\n\n* Operating System / Platform: Linux\n\n* Pieces OS Version 4.3.1\n\n\n\n\n\nAfter installation, the \u201cInitialize Desktop App\u201d step has run successfully. The \u201cEnsure core dependencies\u201d step displays the message \u201cRetry Step\u201d.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 6.5
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    "Prioritize resolving the version incompatibility issue affecting the Raycast extension and core dependencies on Linux. This appears to be the most frequent problem reported by users.",
+    "Investigate the root cause of the \"Ensure core dependencies; Retry Step\" error on Linux and provide a fix or workaround. Ticket #809 has high activity and indicates a persistent issue.",
+    "Update the Raycast extension to be compatible with the latest Raycast versions (e.g., 1.100.3) to address the reported errors.",
+    "Improve communication with users regarding known issues and workarounds. Consider updating the documentation or providing in-app notifications about compatibility issues.",
+    "Monitor the incoming support tickets for any emerging trends or new issues related to specific operating systems or application versions."
+  ],
+  "message": "Daily support report generated successfully."
+}
