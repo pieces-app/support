@@ -1,6 +1,6 @@
 # Support Ticket Report
-- Generated: 2025-08-01 21:08:43
-- Period: 2025-07-28 to 2025-08-01
+- Generated: 2025-08-02 05:10:39
+- Period: 2025-07-28 to 2025-08-02
 
 ## Summary
 - **Total Tickets:** 8
@@ -13,12 +13,12 @@
 | [#803](https://github.com/pieces-app/support/issues/803) | it doesnt stop selecting, it seems like "shift" or "mouse 1" is locked | 7.23 |
 | [#809](https://github.com/pieces-app/support/issues/809) | Ensure core dependencies; Retry Step | 6.50 |
 | [#808](https://github.com/pieces-app/support/issues/808) | Unable to upgrade subscription | 5.50 |
-| [#781](https://github.com/pieces-app/support/issues/781) | Raycast Extension Incompatible with Current Version of Raycast | 4.95 |
+| [#781](https://github.com/pieces-app/support/issues/781) | Raycast Extension Incompatible with Current Version of Raycast | 4.90 |
 | [#807](https://github.com/pieces-app/support/issues/807) | Authentication via Web Extension | 4.50 |
 
 ## Common Issues
 ### 1. Pieces OS: Issues with selection, dependencies, and authentication
-Users are experiencing issues with Pieces OS across different operating systems. These include unintended selection behavior (potentially stuck shift/mouse click), failure of the "Ensure core dependencies" step during installation on Linux, and authentication problems preventing Pro membership utilization on Windows.  Further investigation is needed to identify the root causes and solutions for each issue.
+Users report persistent selection issues, including unintended selection with arrow keys and mouse clicks, preventing copy-pasting.  Dependency issues arise during installation, with the "Ensure core dependencies" step requiring retries. Authentication problems prevent Pro users from accessing their memberships, despite log-in attempts.  Solutions are pending investigation.
 
 **Related Issues:**
 - [#803](https://github.com/pieces-app/support/issues/803): it doesnt stop selecting, it seems like "shift" or "mouse 1" is locked
@@ -26,7 +26,7 @@ Users are experiencing issues with Pieces OS across different operating systems.
 - [#807](https://github.com/pieces-app/support/issues/807): Authentication via Web Extension
 
 ### 2. Pieces software incompatibility issues across platforms
-Users are experiencing incompatibility issues with Pieces software components, including the Raycast extension on macOS (v1.100.3), core dependencies on Linux (Pieces OS 4.3.1), and authentication problems on Windows (Pieces OS 12.1.1).  The Raycast extension triggers update errors, Linux setup stalls during dependency checks, and Windows users face pro account authentication failures.  Suggested solutions include updating the Raycast extension, verifying core dependencies, and checking login credentials/connectivity.
+Users are experiencing incompatibility issues with Pieces software components, including the Raycast extension on macOS (v1.100.3), core dependencies on Linux (Pieces OS 4.3.1), and authentication problems on Windows (Pieces OS 12.1.1).  The Raycast extension triggers update errors, the Linux setup stalls during dependency checks, and Windows users face authentication failures impacting Pro membership access.  Suggested solutions include updating the Raycast extension, verifying core dependencies on Linux, and troubleshooting authentication issues on Windows, potentially involving account verification or reauthentication.
 
 **Related Issues:**
 - [#781](https://github.com/pieces-app/support/issues/781): Raycast Extension Incompatible with Current Version of Raycast
@@ -41,8 +41,8 @@ Users are experiencing authentication errors when attempting to sign in to the P
 - [#807](https://github.com/pieces-app/support/issues/807): Authentication via Web Extension
 - [#809](https://github.com/pieces-app/support/issues/809): Ensure core dependencies; Retry Step
 
-### 4. Users unable to upgrade to Pro or utilize Pro features
-Multiple users report issues with upgrading to Pieces Pro.  Symptoms include blank checkout pages, authentication failures, and workstream summary generation errors.  The issues appear across macOS and Windows on Pieces OS 12.1.1. Further investigation into the upgrade process and Pro authentication is needed.
+### 4. Users unable to upgrade or authenticate Pro subscriptions
+Multiple users report issues with Pro subscriptions.  Upgrading results in a blank checkout page with zero values, eventually failing.  Authentication attempts also fail, preventing Pro access.  This affects macOS and Windows users on Pieces OS 12.1.1. Further investigation into backend systems and payment gateways is needed.
 
 **Related Issues:**
 - [#808](https://github.com/pieces-app/support/issues/808): Unable to upgrade subscription
@@ -50,7 +50,7 @@ Multiple users report issues with upgrading to Pieces Pro.  Symptoms include bla
 - [#804](https://github.com/pieces-app/support/issues/804): Unable to generate Workstream Summary
 
 ### 5. LTM performance degrades over time and becomes unusable
-Users report that the Long Term Memory (LTM) functionality in Pieces OS degrades over time.  After a few weeks of use, LTM queries become extremely slow and eventually return no results, both in the desktop application and via MCP.  Clearing LTM data sometimes resolves the issue temporarily. The "Clear LTM Data" button is also reported as non-functional. This issue occurs across different operating systems (macOS, Linux, Windows).
+Users report that the Long Term Memory (LTM) functionality in Pieces OS degrades over time, eventually becoming unresponsive to queries.  This occurs on various operating systems (macOS, Linux, Windows) and Pieces versions.  The issue seems related to the LTM accumulating data, as clearing the data (when possible) temporarily resolves the problem.  The "Clear LTM Data" button is also reported as non-functional.  Users experience slow query times and null results, impacting their workflow. Further investigation is needed into LTM data management and clearing mechanisms.
 
 **Related Issues:**
 - [#805](https://github.com/pieces-app/support/issues/805): LTM gets gunged up over time
@@ -59,15 +59,14 @@ Users report that the Long Term Memory (LTM) functionality in Pieces OS degrades
 
 
 ## Recommendations
-- Investigate and resolve the root cause of the "shift" or "mouse 1" lock issue on Windows.
-- Prioritize resolving the "Ensure core dependencies" failure during Pieces OS installation on Linux.
-- Address the authentication problems preventing Pro membership utilization on Windows.
-- Update the Raycast extension to resolve incompatibility issues with Raycast 1.100.3 on macOS.
-- Investigate and fix the blank checkout page issue when upgrading to Pieces Pro.
-- Troubleshoot and resolve the authentication errors in the Pieces OS desktop app on Windows and Linux.
-- Investigate and address the performance degradation of Long Term Memory (LTM) functionality over time.
-- Fix the non-functional "Clear LTM Data" button in Pieces OS.
-- Improve error messaging and logging for authentication and upgrade issues to aid in troubleshooting.
+- Investigate and resolve the persistent selection issue in Pieces OS, focusing on unintended selections with arrow keys and mouse clicks.
+- Address the dependency issues during Pieces OS installation, specifically the "Ensure core dependencies" step requiring retries.
+- Troubleshoot the authentication problems preventing Pro users from accessing their memberships.
+- Update the Raycast extension to ensure compatibility with the latest Raycast version.
+- Investigate and resolve the authentication errors in the Pieces OS desktop app across different operating systems.
+- Address the issues with Pro subscriptions, including the blank checkout page and failed authentication attempts.
+- Investigate and resolve the performance degradation of the Long Term Memory (LTM) functionality, focusing on slow query times and null results.
+- Fix the non-functional "Clear LTM Data" button.
 
 ## Daily Reports
 Here are the daily reports for this week:

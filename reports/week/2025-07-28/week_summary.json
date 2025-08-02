@@ -2,7 +2,7 @@
   "success": true,
   "date_range": {
     "start": "2025-07-28T00:00:00+00:00",
-    "end": "2025-08-01T21:07:47.164094+00:00"
+    "end": "2025-08-02T05:09:50.866243+00:00"
   },
   "summary": {
     "total_tickets": 8,
@@ -96,7 +96,7 @@
     {
       "number": 781,
       "title": "Raycast Extension Incompatible with Current Version of Raycast",
-      "activity_level": 4.95
+      "activity_level": 4.9
     },
     {
       "number": 807,
@@ -122,7 +122,7 @@
   "common_issues": [
     {
       "title": "Pieces OS: Issues with selection, dependencies, and authentication",
-      "description": "Users are experiencing issues with Pieces OS across different operating systems. These include unintended selection behavior (potentially stuck shift/mouse click), failure of the \"Ensure core dependencies\" step during installation on Linux, and authentication problems preventing Pro membership utilization on Windows.  Further investigation is needed to identify the root causes and solutions for each issue.",
+      "description": "Users report persistent selection issues, including unintended selection with arrow keys and mouse clicks, preventing copy-pasting.  Dependency issues arise during installation, with the \"Ensure core dependencies\" step requiring retries. Authentication problems prevent Pro users from accessing their memberships, despite log-in attempts.  Solutions are pending investigation.",
       "frequency": 3,
       "related_issues": [
         {
@@ -147,14 +147,14 @@
     },
     {
       "title": "Pieces software incompatibility issues across platforms",
-      "description": "Users are experiencing incompatibility issues with Pieces software components, including the Raycast extension on macOS (v1.100.3), core dependencies on Linux (Pieces OS 4.3.1), and authentication problems on Windows (Pieces OS 12.1.1).  The Raycast extension triggers update errors, Linux setup stalls during dependency checks, and Windows users face pro account authentication failures.  Suggested solutions include updating the Raycast extension, verifying core dependencies, and checking login credentials/connectivity.",
+      "description": "Users are experiencing incompatibility issues with Pieces software components, including the Raycast extension on macOS (v1.100.3), core dependencies on Linux (Pieces OS 4.3.1), and authentication problems on Windows (Pieces OS 12.1.1).  The Raycast extension triggers update errors, the Linux setup stalls during dependency checks, and Windows users face authentication failures impacting Pro membership access.  Suggested solutions include updating the Raycast extension, verifying core dependencies on Linux, and troubleshooting authentication issues on Windows, potentially involving account verification or reauthentication.",
       "frequency": 3,
       "related_issues": [
         {
           "id": 781,
           "title": "Raycast Extension Incompatible with Current Version of Raycast",
           "text": "Raycast Extension Incompatible with Current Version of Raycast\n\n\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Raycast Extension\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n12.1.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nAs mentioned on Discord, it appears that the Raycast needs to be updated to be compatible with (at least) the current version of Raycast 1.100.3. Trying to use any of the extension's functions triggers an error saying:\n\n> Your Pieces Raycast Extension needs to be updated,...\n\n![Image](https://github.com/user-attachments/assets/506778e6-5b13-4811-a21c-82c42384cb41)\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 4.95
+          "activity_level": 4.9
         },
         {
           "id": 809,
@@ -196,8 +196,8 @@
       ]
     },
     {
-      "title": "Users unable to upgrade to Pro or utilize Pro features",
-      "description": "Multiple users report issues with upgrading to Pieces Pro.  Symptoms include blank checkout pages, authentication failures, and workstream summary generation errors.  The issues appear across macOS and Windows on Pieces OS 12.1.1. Further investigation into the upgrade process and Pro authentication is needed.",
+      "title": "Users unable to upgrade or authenticate Pro subscriptions",
+      "description": "Multiple users report issues with Pro subscriptions.  Upgrading results in a blank checkout page with zero values, eventually failing.  Authentication attempts also fail, preventing Pro access.  This affects macOS and Windows users on Pieces OS 12.1.1. Further investigation into backend systems and payment gateways is needed.",
       "frequency": 3,
       "related_issues": [
         {
@@ -222,7 +222,7 @@
     },
     {
       "title": "LTM performance degrades over time and becomes unusable",
-      "description": "Users report that the Long Term Memory (LTM) functionality in Pieces OS degrades over time.  After a few weeks of use, LTM queries become extremely slow and eventually return no results, both in the desktop application and via MCP.  Clearing LTM data sometimes resolves the issue temporarily. The \"Clear LTM Data\" button is also reported as non-functional. This issue occurs across different operating systems (macOS, Linux, Windows).",
+      "description": "Users report that the Long Term Memory (LTM) functionality in Pieces OS degrades over time, eventually becoming unresponsive to queries.  This occurs on various operating systems (macOS, Linux, Windows) and Pieces versions.  The issue seems related to the LTM accumulating data, as clearing the data (when possible) temporarily resolves the problem.  The \"Clear LTM Data\" button is also reported as non-functional.  Users experience slow query times and null results, impacting their workflow. Further investigation is needed into LTM data management and clearing mechanisms.",
       "frequency": 3,
       "related_issues": [
         {
@@ -247,15 +247,14 @@
     }
   ],
   "recommendations": [
-    "Investigate and resolve the root cause of the \"shift\" or \"mouse 1\" lock issue on Windows.",
-    "Prioritize resolving the \"Ensure core dependencies\" failure during Pieces OS installation on Linux.",
-    "Address the authentication problems preventing Pro membership utilization on Windows.",
-    "Update the Raycast extension to resolve incompatibility issues with Raycast 1.100.3 on macOS.",
-    "Investigate and fix the blank checkout page issue when upgrading to Pieces Pro.",
-    "Troubleshoot and resolve the authentication errors in the Pieces OS desktop app on Windows and Linux.",
-    "Investigate and address the performance degradation of Long Term Memory (LTM) functionality over time.",
-    "Fix the non-functional \"Clear LTM Data\" button in Pieces OS.",
-    "Improve error messaging and logging for authentication and upgrade issues to aid in troubleshooting."
+    "Investigate and resolve the persistent selection issue in Pieces OS, focusing on unintended selections with arrow keys and mouse clicks.",
+    "Address the dependency issues during Pieces OS installation, specifically the \"Ensure core dependencies\" step requiring retries.",
+    "Troubleshoot the authentication problems preventing Pro users from accessing their memberships.",
+    "Update the Raycast extension to ensure compatibility with the latest Raycast version.",
+    "Investigate and resolve the authentication errors in the Pieces OS desktop app across different operating systems.",
+    "Address the issues with Pro subscriptions, including the blank checkout page and failed authentication attempts.",
+    "Investigate and resolve the performance degradation of the Long Term Memory (LTM) functionality, focusing on slow query times and null results.",
+    "Fix the non-functional \"Clear LTM Data\" button."
   ],
   "message": "Daily support report generated successfully."
 }
