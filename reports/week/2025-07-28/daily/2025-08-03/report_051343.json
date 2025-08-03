@@ -1,0 +1,68 @@
+{
+  "success": true,
+  "date_range": {
+    "start": "2025-08-03T00:00:00+00:00",
+    "end": "2025-08-03T05:13:43.396559+00:00"
+  },
+  "summary": {
+    "total_tickets": 1,
+    "resolved_tickets": 0,
+    "open_tickets": 1
+  },
+  "ticket_breakdown": [
+    {
+      "category": "bug",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "os:windows",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:new",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:pieces os",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    }
+  ],
+  "most_active_tickets": [
+    {
+      "number": 812,
+      "title": "Unable to generate Workstream Summary",
+      "activity_level": 4.42
+    }
+  ],
+  "common_issues": [
+    {
+      "title": "Workstream Summary Generation Failure and Model Access Error",
+      "description": "Users are unable to generate Workstream Summaries due to an ApiException 511 related to an application in local mode.  A 404 error indicates the specified Publisher Model (gemini-pro) was not found or the project lacks access.  Verify application mode and model access permissions. Ensure the model version is valid and the project is authorized to use it.",
+      "frequency": 1,
+      "related_issues": [
+        {
+          "id": 812,
+          "title": "Unable to generate Workstream Summary",
+          "text": "Unable to generate Workstream Summary\nError: ApiException 511: Failed to create rollup, because there is an application in local mode...call applications/update/capabilities to update.\n\n**Installation Details**\n\nSucceeded: true\nPath: \n\n**PiecesOS Information**\n\nID: 49a5a6f6-b47b-4695-bb8e-8dee8f25d30c\nUser: 00f4008b-1ea5-4621-9b21-428abc4866b4\nCurrent Version: 12.1.1\nMin Version Supported: 12.1.0\nMax Version Supported: 13.0.0\nLocal Port: 39300\n\n**Device Information**\n\nOperating System: Windows\nCurrent Version: \"Windows 10 Pro\" 10.0 (Build 19045)\nMin Version Supported: Windows 10 Build 1903\nAdditional Device Information: {cpu_list: [{\"architecture\":\"x64\",\"cores\":2,\"logicalProcessors\":4,\"l2Cache\":{\"value\":512,\"units\":\"Bytes\"},\"l3Cache\":{\"value\":3072,\"units\":\"Bytes\"},\"description\":\"Intel(R) Core(TM) i5-3230M CPU @ 2.60GHz\"}], gpu_list: [{\"type\":\"Intel(R) HD Graphics 4000\",\"unifiedMemoryArchitecture\":null,\"cores\":null,\"dedicatedVRam\":{\"value\":234881024,\"units\":\"Bytes\"}}, {\"type\":\"Microsoft Basic Render Driver\",\"unifiedMemoryArchitecture\":null,\"cores\":null,\"dedicatedVRam\":{\"value\":0,\"units\":\"Bytes\"}}], npu_list: [], memory_info: {\"totalRAM\":{\"value\":8388608,\"units\":\"KB\"}}, display_list: [{\"nativeHeight\":1080,\"nativeWidth\":1920,\"scaledHeight\":1080,\"scaledWidth\":1920,\"primary\":true}]}\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 4.42
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    "Investigate the root cause of the \"Workstream Summary Generation Failure and Model Access Error\". The error messages suggest potential issues with application mode, model access permissions, model version validity, or project authorization. Resolving this issue could significantly reduce support tickets.",
+    "Prioritize resolution of issue #812, \"Unable to generate Workstream Summary\", as it has the highest activity level and is likely impacting multiple users.",
+    "Verify the application mode and model access permissions for the affected users. Ensure the model version being used is valid and the project has the necessary authorization.",
+    "Check the PiecesOS installation and device information for any inconsistencies or potential conflicts that might be contributing to the issue.",
+    "Provide users with clear instructions on how to verify their application mode, model access permissions, and model version. This could help prevent future occurrences of this issue."
+  ],
+  "message": "Daily support report generated successfully."
+}
