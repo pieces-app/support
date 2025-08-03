@@ -2,7 +2,7 @@
   "success": true,
   "date_range": {
     "start": "2025-07-28T00:00:00+00:00",
-    "end": "2025-08-03T13:17:01.374731+00:00"
+    "end": "2025-08-03T21:07:05.904416+00:00"
   },
   "summary": {
     "total_tickets": 12,
@@ -93,17 +93,12 @@
     {
       "number": 803,
       "title": "it doesnt stop selecting, it seems like \"shift\" or \"mouse 1\" is locked",
-      "activity_level": 6.42
-    },
-    {
-      "number": 809,
-      "title": "Ensure core dependencies; Retry Step",
-      "activity_level": 5.6
+      "activity_level": 6.22
     },
     {
       "number": 781,
       "title": "Raycast Extension Incompatible with Current Version of Raycast",
-      "activity_level": 4.86
+      "activity_level": 4.46
     },
     {
       "number": 813,
@@ -118,7 +113,12 @@
     {
       "number": 769,
       "title": "An error occurred in the authentication flow.",
-      "activity_level": 4.39
+      "activity_level": 4.36
+    },
+    {
+      "number": 809,
+      "title": "Ensure core dependencies; Retry Step",
+      "activity_level": 4.26
     },
     {
       "number": 811,
@@ -143,7 +143,7 @@
     {
       "number": 805,
       "title": "LTM gets gunged up over time",
-      "activity_level": 3.16
+      "activity_level": 3.04
     },
     {
       "number": 804,
@@ -153,21 +153,21 @@
   ],
   "common_issues": [
     {
-      "title": "Pieces OS: Issues with Selection, Dependencies, and Authentication",
-      "description": "Users report issues with Pieces OS including persistent selection mode, failure to ensure core dependencies during installation, and unsuccessful authentication despite purchasing Pro. The selection bug involves unintended selection behavior, possibly related to stuck Shift/Mouse 1. The dependency issue occurs after successful initialization of the desktop app. The authentication issue prevents Pro users from accessing their membership benefits.  Further investigation is needed to identify the root causes and solutions.",
+      "title": "Pieces OS: Issues with selection, dependencies, and authentication",
+      "description": "Users reported persistent selection issues, including unintended selection with arrow keys and mouse clicks, preventing copy-pasting.  Other reported issues include failure of the \"Ensure core dependencies\" step during installation and unsuccessful authentication despite purchasing Pieces OS Pro.  Suggested solutions include checking system dependencies, reinstalling the application, and verifying account credentials.",
       "frequency": 3,
       "related_issues": [
         {
           "id": 803,
           "title": "it doesnt stop selecting, it seems like \"shift\" or \"mouse 1\" is locked",
           "text": "it doesnt stop selecting, it seems like \"shift\" or \"mouse 1\" is locked\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n4.3.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI'm not sure how to make it happen but its **extremely** annoying, it seems like it thinks I'm holding \"shift\" or \"mouse 1\", i use the arrow keys a lot but when this bug is active it selects instead of moving, when i try to click when its active it also selects, i cant ctrl + v when its active :(\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 6.42
+          "activity_level": 6.22
         },
         {
           "id": 809,
           "title": "Ensure core dependencies; Retry Step",
           "text": "Ensure core dependencies; Retry Step\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\n### Pieces OS, Desktop Application\n\n* Operating System / Platform: Linux\n\n* Pieces OS Version 4.3.1\n\n\n\n\n\nAfter installation, the \u201cInitialize Desktop App\u201d step has run successfully. The \u201cEnsure core dependencies\u201d step displays the message \u201cRetry Step\u201d.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 5.6
+          "activity_level": 4.26
         },
         {
           "id": 807,
@@ -179,7 +179,7 @@
     },
     {
       "title": "Pieces OS fails to initialize due to missing platform directory",
-      "description": "Across Windows and Linux, Pieces OS fails to start due to an inability to determine the application data directory.  Logs show \"MissingPlatformDirectoryException(Unable to get application documents directory)\".  Suggested workarounds include restarting the machine and checking data directory permissions.  If the issue persists, contact support.",
+      "description": "Users on Windows and Linux encounter \"MissingPlatformDirectoryException\" during initialization, specifically when determining the database location.  The \"Ensure core dependencies\" or OS boot process fails.  Suggested solutions include restarting the machine and checking data directory permissions. If the issue persists, contact support.",
       "frequency": 3,
       "related_issues": [
         {
@@ -192,32 +192,32 @@
           "id": 769,
           "title": "An error occurred in the authentication flow.",
           "text": "An error occurred in the authentication flow.\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n12.0.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nHello,\nI am receiving this message when attempting to sign-in to Pieces.\n\n```\nAn error occurred in the authentication flow.\nAuthentication Error ID: 00000000000000000000000000000000\n```\n\nThis is a new install. (.appinstaller files)\nI have never used the software before.\nI do not have a pieces account (yet).\nEnvironment: Windows 11\n\nLaunched the authentication by clicking the Sign In button in the Desktop App (4.2.1)\nThe auth link opened Firefox and generated the error.\n\nI tried the following:\nDisabling all extensions in Firefox\nChanging my default browser to Edge and re-launching using Edge.\nRe-installing with the .exe files.\nReviewed the windows firewall config (Pieces added it itself)\nLooked at the Pieces log file but did not see anything obvious enough that I could solve on my own. (See attached)\n\n[log-06252025-copy.txt](https://github.com/user-attachments/files/20907036/log-06252025-copy.txt)\n\nThank you for the help.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 4.39
+          "activity_level": 4.36
         },
         {
           "id": 809,
           "title": "Ensure core dependencies; Retry Step",
           "text": "Ensure core dependencies; Retry Step\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\n### Pieces OS, Desktop Application\n\n* Operating System / Platform: Linux\n\n* Pieces OS Version 4.3.1\n\n\n\n\n\nAfter installation, the \u201cInitialize Desktop App\u201d step has run successfully. The \u201cEnsure core dependencies\u201d step displays the message \u201cRetry Step\u201d.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 5.6
+          "activity_level": 4.26
         }
       ]
     },
     {
       "title": "Pieces software incompatibility issues across platforms",
-      "description": "Users are experiencing incompatibility issues with Pieces software components, including the Raycast extension on macOS (v1.100.3), core dependencies on Linux (Pieces OS 4.3.1), and authentication problems on Windows (Pieces OS 12.1.1).  The Raycast extension triggers update errors, the Linux setup encounters a \"Retry Step\" message during dependency checks, and Windows users face authentication failures impacting Pro membership access.  Suggested solutions include updating the Raycast extension, troubleshooting dependency issues on Linux, and verifying login credentials/connectivity on Windows.",
+      "description": "Users are experiencing incompatibility issues with Pieces software components, including the Raycast extension on macOS (v1.100.3), core dependencies on Linux (Pieces OS 4.3.1), and authentication problems on Windows (Pieces OS 12.1.1).  The Raycast extension triggers update errors, the Linux setup encounters a \"Retry Step\" message during dependency checks, and Windows users face authentication failures impacting Pro membership access.  Suggested solutions include updating the Raycast extension, verifying core dependencies on Linux, and troubleshooting authentication issues on Windows, potentially involving account re-authentication or support assistance.",
       "frequency": 3,
       "related_issues": [
         {
           "id": 781,
           "title": "Raycast Extension Incompatible with Current Version of Raycast",
           "text": "Raycast Extension Incompatible with Current Version of Raycast\n\n\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Raycast Extension\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n12.1.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nAs mentioned on Discord, it appears that the Raycast needs to be updated to be compatible with (at least) the current version of Raycast 1.100.3. Trying to use any of the extension's functions triggers an error saying:\n\n> Your Pieces Raycast Extension needs to be updated,...\n\n![Image](https://github.com/user-attachments/assets/506778e6-5b13-4811-a21c-82c42384cb41)\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 4.86
+          "activity_level": 4.46
         },
         {
           "id": 809,
           "title": "Ensure core dependencies; Retry Step",
           "text": "Ensure core dependencies; Retry Step\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\n### Pieces OS, Desktop Application\n\n* Operating System / Platform: Linux\n\n* Pieces OS Version 4.3.1\n\n\n\n\n\nAfter installation, the \u201cInitialize Desktop App\u201d step has run successfully. The \u201cEnsure core dependencies\u201d step displays the message \u201cRetry Step\u201d.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 5.6
+          "activity_level": 4.26
         },
         {
           "id": 807,
@@ -228,8 +228,33 @@
       ]
     },
     {
+      "title": "Subscription and Authentication Issues",
+      "description": "Users are experiencing difficulty upgrading subscriptions and authenticating their Pro accounts.  Upgrade attempts result in a blank checkout page with zero values, eventually failing.  Authentication issues prevent Pro users from accessing their memberships.  This affects both macOS and Windows users on Pieces OS 12.1.1. Further investigation into checkout and authentication processes is needed.",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 808,
+          "title": "Unable to upgrade subscription",
+          "text": "Unable to upgrade subscription\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n12.1.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nEvery time I click \"Upgrade\" from ANYWHERE - to upgrade to pro, it leads to a page that is blank except for a minimal table, like the bones of a cart checkout view, with like price, subtotal, total, etc. except there are no words, and all the values are 0.00 (zero dollars).. it stays like this for a minute, then says it isn't working properly and returns to the desktop view or the view I was in before. \n\nbeen happening for weeks\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 3.48
+        },
+        {
+          "id": 807,
+          "title": "Authentication via Web Extension",
+          "text": "Authentication via Web Extension\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nPiecesOS 12.1.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\ni have been trying to authenticate my account . i have purchased pro and have not been successful in utilizing the membership. i have tried to log out and log back in with no success with this issue. \nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 3.29
+        },
+        {
+          "id": 812,
+          "title": "Unable to generate Workstream Summary",
+          "text": "Unable to generate Workstream Summary\nError: ApiException 511: Failed to create rollup, because there is an application in local mode...call applications/update/capabilities to update.\n\n**Installation Details**\n\nSucceeded: true\nPath: \n\n**PiecesOS Information**\n\nID: 49a5a6f6-b47b-4695-bb8e-8dee8f25d30c\nUser: 00f4008b-1ea5-4621-9b21-428abc4866b4\nCurrent Version: 12.1.1\nMin Version Supported: 12.1.0\nMax Version Supported: 13.0.0\nLocal Port: 39300\n\n**Device Information**\n\nOperating System: Windows\nCurrent Version: \"Windows 10 Pro\" 10.0 (Build 19045)\nMin Version Supported: Windows 10 Build 1903\nAdditional Device Information: {cpu_list: [{\"architecture\":\"x64\",\"cores\":2,\"logicalProcessors\":4,\"l2Cache\":{\"value\":512,\"units\":\"Bytes\"},\"l3Cache\":{\"value\":3072,\"units\":\"Bytes\"},\"description\":\"Intel(R) Core(TM) i5-3230M CPU @ 2.60GHz\"}], gpu_list: [{\"type\":\"Intel(R) HD Graphics 4000\",\"unifiedMemoryArchitecture\":null,\"cores\":null,\"dedicatedVRam\":{\"value\":234881024,\"units\":\"Bytes\"}}, {\"type\":\"Microsoft Basic Render Driver\",\"unifiedMemoryArchitecture\":null,\"cores\":null,\"dedicatedVRam\":{\"value\":0,\"units\":\"Bytes\"}}], npu_list: [], memory_info: {\"totalRAM\":{\"value\":8388608,\"units\":\"KB\"}}, display_list: [{\"nativeHeight\":1080,\"nativeWidth\":1920,\"scaledHeight\":1080,\"scaledWidth\":1920,\"primary\":true}]}\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 4.42
+        }
+      ]
+    },
+    {
       "title": "Pieces OS and Desktop App Integration Issues",
-      "description": "Users report problems with Pieces OS integration with other applications, primarily Claude Code and the desktop app. Issues include SSE connection hangs, LTM performance degradation over time, and \"Ensure core dependencies\" step failures.  Suggested solutions include checking MCP server configuration, clearing LTM data (if possible), and reinstalling or updating Pieces OS and related applications. Further investigation is needed to pinpoint the root causes and provide targeted fixes.",
+      "description": "Users report problems with Pieces OS integration with other applications, like Claude Code in VS Code, and general LTM functionality. Issues include SSE connection hangs, LTM performance degradation over time, and \"Ensure core dependencies\" step failing during setup.  Suggested solutions include checking MCP server configuration, clearing LTM data (though the button is reported broken), and reinstalling/reinitializing Pieces OS and the Desktop app.",
       "frequency": 3,
       "related_issues": [
         {
@@ -242,52 +267,23 @@
           "id": 805,
           "title": "LTM gets gunged up over time",
           "text": "LTM gets gunged up over time\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n12.1.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nSo when I freshly install Pieces, the LTM works fine.\n\nWhen I've had it running for a few weeks, and I want to query the LTM, the query takes forever, and returns nothing.\n\nThe same happens via the MCP.\n\nI use my machine all day, so there's a lot of context going into the LTM. The only explanation I can come up with is that it's just getting too big. The Workstream is, however, updating fine.\n\nRemoving all my Pieces data gets the LTM working again, but then I end up with this situation later. This is the third time I've been through this loop. It's really frustrating, because when I actually need the LTM, it fails.\n\nThe Clear LTM Data button doesn't work, just returning to Try again, from All Data to even for just clearing an hour of data.\n\nI haven't cleared the LTM (well, I've tried, but the Clear LTM Data button doesn't work) so we have a live broken environment to debug with. I'm more than happy to assist with debugging this - let me know what you need!\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 3.16
+          "activity_level": 3.04
         },
         {
           "id": 809,
           "title": "Ensure core dependencies; Retry Step",
           "text": "Ensure core dependencies; Retry Step\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\n### Pieces OS, Desktop Application\n\n* Operating System / Platform: Linux\n\n* Pieces OS Version 4.3.1\n\n\n\n\n\nAfter installation, the \u201cInitialize Desktop App\u201d step has run successfully. The \u201cEnsure core dependencies\u201d step displays the message \u201cRetry Step\u201d.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 5.6
-        }
-      ]
-    },
-    {
-      "title": "Workstream Summary Generation Failures & Dependency Issues",
-      "description": "Users are experiencing issues generating Workstream Summaries due to API exceptions (500, 511) and model access errors (404).  A common error message points to a missing or inaccessible Gemini-Pro model.  Additionally, some users encounter \"Ensure core dependencies; Retry Step\" errors during application initialization, particularly on Linux.  Check model access permissions and verify core dependencies are installed.",
-      "frequency": 3,
-      "related_issues": [
-        {
-          "id": 812,
-          "title": "Unable to generate Workstream Summary",
-          "text": "Unable to generate Workstream Summary\nError: ApiException 511: Failed to create rollup, because there is an application in local mode...call applications/update/capabilities to update.\n\n**Installation Details**\n\nSucceeded: true\nPath: \n\n**PiecesOS Information**\n\nID: 49a5a6f6-b47b-4695-bb8e-8dee8f25d30c\nUser: 00f4008b-1ea5-4621-9b21-428abc4866b4\nCurrent Version: 12.1.1\nMin Version Supported: 12.1.0\nMax Version Supported: 13.0.0\nLocal Port: 39300\n\n**Device Information**\n\nOperating System: Windows\nCurrent Version: \"Windows 10 Pro\" 10.0 (Build 19045)\nMin Version Supported: Windows 10 Build 1903\nAdditional Device Information: {cpu_list: [{\"architecture\":\"x64\",\"cores\":2,\"logicalProcessors\":4,\"l2Cache\":{\"value\":512,\"units\":\"Bytes\"},\"l3Cache\":{\"value\":3072,\"units\":\"Bytes\"},\"description\":\"Intel(R) Core(TM) i5-3230M CPU @ 2.60GHz\"}], gpu_list: [{\"type\":\"Intel(R) HD Graphics 4000\",\"unifiedMemoryArchitecture\":null,\"cores\":null,\"dedicatedVRam\":{\"value\":234881024,\"units\":\"Bytes\"}}, {\"type\":\"Microsoft Basic Render Driver\",\"unifiedMemoryArchitecture\":null,\"cores\":null,\"dedicatedVRam\":{\"value\":0,\"units\":\"Bytes\"}}], npu_list: [], memory_info: {\"totalRAM\":{\"value\":8388608,\"units\":\"KB\"}}, display_list: [{\"nativeHeight\":1080,\"nativeWidth\":1920,\"scaledHeight\":1080,\"scaledWidth\":1920,\"primary\":true}]}\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 4.42
-        },
-        {
-          "id": 804,
-          "title": "Unable to generate Workstream Summary",
-          "text": "Unable to generate Workstream Summary\nError: ApiException 500: WorkstreamSummaries create summary workstreamSummary failed.\n\n**Installation Details**\n\nSucceeded: true\nPath: C:\\Program Files\\WindowsApps\\MeshIntelligentTechnologi.PiecesOS_12.1.1.0_x64__xpmeezj2q5frg/os_server.exe\n\n**PiecesOS Information**\n\nID: 20cd224c-2120-4b05-9f37-659a5a84faa4\nUser: 0cadaaa2-8deb-42cf-9aaa-0c0a130037cf\nCurrent Version: 12.1.1\nMin Version Supported: 12.0.0\nMax Version Supported: 13.0.0\nLocal Port: 39300\n\n**Device Information**\n\nOperating System: Windows\nCurrent Version: \"Windows 10 Enterprise\" 10.0 (Build 26200)\nMin Version Supported: Windows 10 Build 1903\nAdditional Device Information: {cpu_list: [{\"architecture\":\"x64\",\"cores\":8,\"logicalProcessors\":16,\"l2Cache\":{\"value\":4096,\"units\":\"Bytes\"},\"l3Cache\":{\"value\":16384,\"units\":\"Bytes\"},\"description\":\"AMD Ryzen 7 2700X Eight-Core Processor         \"}], gpu_list: [{\"type\":\"Radeon RX 590 Series\",\"unifiedMemoryArchitecture\":null,\"cores\":null,\"dedicatedVRam\":{\"value\":8531038208,\"units\":\"Bytes\"}}, {\"type\":\"Microsoft Basic Render Driver\",\"unifiedMemoryArchitecture\":null,\"cores\":null,\"dedicatedVRam\":{\"value\":0,\"units\":\"Bytes\"}}], npu_list: [], memory_info: {\"totalRAM\":{\"value\":33554432,\"units\":\"KB\"}}, display_list: [{\"nativeHeight\":1080,\"nativeWidth\":1920,\"scaledHeight\":1080,\"scaledWidth\":1920,\"primary\":true}]}\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 2.02
-        },
-        {
-          "id": 809,
-          "title": "Ensure core dependencies; Retry Step",
-          "text": "Ensure core dependencies; Retry Step\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\n### Pieces OS, Desktop Application\n\n* Operating System / Platform: Linux\n\n* Pieces OS Version 4.3.1\n\n\n\n\n\nAfter installation, the \u201cInitialize Desktop App\u201d step has run successfully. The \u201cEnsure core dependencies\u201d step displays the message \u201cRetry Step\u201d.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 5.6
+          "activity_level": 4.26
         }
       ]
     }
   ],
   "recommendations": [
-    "Investigate and resolve the root cause of the \"MissingPlatformDirectoryException\" error affecting Pieces OS initialization on Windows and Linux.",
-    "Address the persistent selection bug in Pieces OS, possibly related to stuck Shift/Mouse 1 keys.",
-    "Fix the \"Ensure core dependencies; Retry Step\" error during Pieces OS setup on Linux.",
-    "Resolve the authentication issues preventing Pro users from accessing their membership benefits on Windows.",
-    "Update the Raycast extension to ensure compatibility with Raycast v1.100.3 and later.",
-    "Investigate and fix the SSE connection hangs affecting MCP server integration with Claude Code in VS Code.",
-    "Address the LTM performance degradation issue and the non-functional \"Clear LTM Data\" button.",
-    "Troubleshoot and resolve the API exceptions (500, 511) and model access errors (404) affecting Workstream Summary generation.",
-    "Verify Gemini-Pro model access permissions and ensure core dependencies are installed correctly."
+    "Prioritize resolving the \"Pieces OS: Issues with selection, dependencies, and authentication\" common issue, focusing on selection bugs, dependency installation failures, and authentication problems.",
+    "Address the \"Pieces OS fails to initialize due to missing platform directory\" error on Windows and Linux by investigating data directory permissions and providing clearer instructions for users encountering this issue.",
+    "Investigate and resolve the incompatibility issues between Pieces software components, specifically the Raycast extension update errors on macOS, core dependency issues on Linux, and authentication failures on Windows.",
+    "Resolve the subscription upgrade issue causing a blank checkout page and zero values, and ensure Pro users can successfully authenticate and access their memberships.",
+    "Improve Pieces OS and Desktop App integration, focusing on the SSE connection hangs with Claude Code in VS Code, LTM performance degradation, and the broken \"Clear LTM Data\" button."
   ],
   "message": "Daily support report generated successfully."
 }
