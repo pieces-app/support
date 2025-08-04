@@ -1,0 +1,143 @@
+{
+  "success": true,
+  "date_range": {
+    "start": "2025-08-04T00:00:00+00:00",
+    "end": "2025-08-04T21:07:42.947893+00:00"
+  },
+  "summary": {
+    "total_tickets": 4,
+    "resolved_tickets": 0,
+    "open_tickets": 4
+  },
+  "ticket_breakdown": [
+    {
+      "category": "bug",
+      "received": 4,
+      "resolved": 0,
+      "pending": 4
+    },
+    {
+      "category": "app:desktop application",
+      "received": 3,
+      "resolved": 0,
+      "pending": 3
+    },
+    {
+      "category": "os:macos",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "app:pieces os",
+      "received": 4,
+      "resolved": 0,
+      "pending": 4
+    },
+    {
+      "category": "app:vs code",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:triaged",
+      "received": 4,
+      "resolved": 0,
+      "pending": 4
+    },
+    {
+      "category": "status:waiting_on_user_responses",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "os:windows",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    }
+  ],
+  "most_active_tickets": [
+    {
+      "number": 813,
+      "title": "Ensure Core Dependencies",
+      "activity_level": 4.5
+    },
+    {
+      "number": 812,
+      "title": "Unable to generate Workstream Summary",
+      "activity_level": 4.5
+    },
+    {
+      "number": 810,
+      "title": "MCP Server SSE Connection Hangs - No Tools Available in Claude Code",
+      "activity_level": 3.88
+    },
+    {
+      "number": 811,
+      "title": "I'm sorry. This feature requires Pieces Pro. Please upgrade your plan or change your LLM to continue.",
+      "activity_level": 3.88
+    }
+  ],
+  "common_issues": [
+    {
+      "title": "Pieces OS and App Integration Issues with Claude Code and Pro Features",
+      "description": "Users are experiencing problems with Pieces OS and app integration with Claude Code and Pro features. Issues include SSE connection hangs in Claude Code, \"Pro required\" errors despite having Pro, and Workstream Summary generation failures.  Check Claude Code configuration, ensure Pieces Pro is active, and verify Pieces OS and app are running correctly.  Examine logs for additional details.",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 810,
+          "title": "MCP Server SSE Connection Hangs - No Tools Available in Claude Code",
+          "text": "MCP Server SSE Connection Hangs - No Tools Available in Claude Code\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS, VS Code\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n12.1.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nThe Pieces MCP server fails to properly integrate with Claude Code within VSCode. While the SSE endpoint responds initially, it hangs indefinitely, preventing MCP tools from being registered or used. This affects Claude Code integration both as a standalone CLI and when used within VS Code.\n\n**Steps to Reproduce:**\n1. Install Pieces OS and Pieces app\n2. Login in the app\n3. Configure MCP in Claude Code's ~/.claude.json:\n\n```json\n{\n  \"pieces\": {\n    \"type\": \"sse\",\n    \"url\": \"http://localhost:39300/model_context_protocol/2024-11-05/sse\"\n}\n```\n\n4. Attempt to use Pieces MCP tools (e.g., mcp__pieces__ask_pieces_ltm) in Claude Code\n5. Tools are not available despite server being configured\n6. Same issue occurs whether using Claude Code in terminal or integrated with VS Code\n\n**Technical Details:**\n- SSE endpoint (http://localhost:39300/model_context_protocol/2024-11-05/sse) responds with:\n\n```\nevent: endpoint\ndata: /model_context_protocol/2024-11-05/messages\n```\n\n- Connection then hangs indefinitely (SSE buffering issue)\n- Both Pieces OS and Pieces app processes are running\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 3.88
+        },
+        {
+          "id": 811,
+          "title": "I'm sorry. This feature requires Pieces Pro. Please upgrade your plan or change your LLM to continue.",
+          "text": "I'm sorry. This feature requires Pieces Pro. Please upgrade your plan or change your LLM to continue.\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n12.1.1\n\n### Early Access Program\n\n- [x] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWhen using Pieces I asked, \"what did I work today?\" and I received an error that says `I'm sorry. This feature requires Pieces Pro. Please upgrade your plan or change your LLM to continue.`  When I have paid for pro and am signed in. What I expect is that I can use my paid pro membership to run query and not receive an error.\n\n![Image](https://github.com/user-attachments/assets/846a4e3e-9e24-4e51-81ce-061a22e921ec)\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 3.88
+        },
+        {
+          "id": 812,
+          "title": "Unable to generate Workstream Summary",
+          "text": "Unable to generate Workstream Summary\nError: ApiException 511: Failed to create rollup, because there is an application in local mode...call applications/update/capabilities to update.\n\n**Installation Details**\n\nSucceeded: true\nPath: \n\n**PiecesOS Information**\n\nID: 49a5a6f6-b47b-4695-bb8e-8dee8f25d30c\nUser: 00f4008b-1ea5-4621-9b21-428abc4866b4\nCurrent Version: 12.1.1\nMin Version Supported: 12.1.0\nMax Version Supported: 13.0.0\nLocal Port: 39300\n\n**Device Information**\n\nOperating System: Windows\nCurrent Version: \"Windows 10 Pro\" 10.0 (Build 19045)\nMin Version Supported: Windows 10 Build 1903\nAdditional Device Information: {cpu_list: [{\"architecture\":\"x64\",\"cores\":2,\"logicalProcessors\":4,\"l2Cache\":{\"value\":512,\"units\":\"Bytes\"},\"l3Cache\":{\"value\":3072,\"units\":\"Bytes\"},\"description\":\"Intel(R) Core(TM) i5-3230M CPU @ 2.60GHz\"}], gpu_list: [{\"type\":\"Intel(R) HD Graphics 4000\",\"unifiedMemoryArchitecture\":null,\"cores\":null,\"dedicatedVRam\":{\"value\":234881024,\"units\":\"Bytes\"}}, {\"type\":\"Microsoft Basic Render Driver\",\"unifiedMemoryArchitecture\":null,\"cores\":null,\"dedicatedVRam\":{\"value\":0,\"units\":\"Bytes\"}}], npu_list: [], memory_info: {\"totalRAM\":{\"value\":8388608,\"units\":\"KB\"}}, display_list: [{\"nativeHeight\":1080,\"nativeWidth\":1920,\"scaledHeight\":1080,\"scaledWidth\":1920,\"primary\":true}]}\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 4.5
+        }
+      ]
+    },
+    {
+      "title": "Pieces OS and App Integration Issues",
+      "description": "Users are experiencing difficulties with Pieces OS and app integration across Windows and macOS. Issues include application crashes due to MissingPlatformDirectoryException, MCP server SSE connection hangs in Claude Code integration, and erroneous \"Pieces Pro required\" messages for Pro users.  Check data directory configurations, SSE endpoint stability, and Pro user authentication status.",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 813,
+          "title": "Ensure Core Dependencies",
+          "text": "Ensure Core Dependencies\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n12.1.1.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n[D]  2025-08-02T19:49:16.716796  Starting OS_Server!\n[D]  2025-08-02T19:49:16.716796  Starting EnvConf\n[D]  2025-08-02T19:49:16.716796  Starting DeploymentInfo\n[D]  2025-08-02T19:49:16.718800  Number: 262\n[D]  2025-08-02T19:49:16.718800  Tag: 12.1.1\n[D]  2025-08-02T19:49:16.718800  Branch: 12.1.1\n[D]  2025-08-02T19:49:16.718800  SHA1: 45b04ac0234ca729473fa6313e508d1ed534fbff\n[D]  2025-08-02T19:49:16.718800  WinDeployType: msix\n[D]  2025-08-02T19:49:16.718800  Channel : production\n[D]  2025-08-02T19:49:16.718800  Process ID: 7468\n[D]  2025-08-02T19:49:16.718800  Copying the vocab file to the data directory\n[D]  2025-08-02T19:49:16.718800  Successfully copied the vocab file\n[D]  2025-08-02T19:49:16.718800  Starting OS\n[D]  getData: Error in directory determination: MissingPlatformDirectoryException(Unable to get application documents directory)\n[D]  getData: General error finding database location: MissingPlatformDirectoryException(Unable to get application documents directory)\n[D]  2025-08-02T19:49:16.725824  Starting OS\n[D]  2025-08-02T19:49:16.727801  Starting UI\n[D]  2025-08-02T19:49:16.730803  UI#builder, hasData: false, hasError: false\n[D]  2025-08-02T19:49:16.731811  stateStream#onListen\n[D]  2025-08-02T19:49:16.731811  OS#boot\n[D]  2025-08-02T19:49:16.731811  OS#attach\n\u001b[38;5;12m[I]\u001b[0m  initializeDataSingletons\n[D]  2025-08-02T19:49:16.751802  Logging to file: C:\\Users\\shekh\\AppData\\Local\\Mesh Intelligent Technologies, Inc\\Pieces OS\\com.pieces.os\\production\\Support/logs/log-08022025.txt\n[D]  Sentry Error Event: cb07c6430a95403eade13e8d7688da26\n[D]  getData: Error in directory determination: MissingPlatformDirectoryException(Unable to get application documents directory)\n[D]  getData: General error finding database location: MissingPlatformDirectoryException(Unable to get application documents directory)\n[D]  Sentry Error Event: 67d68099ec224659a742bc6b46bc101f\n[D]  getData: Error in directory determination: MissingPlatformDirectoryException(Unable to get application documents directory)\n[D]  getData: General error finding database location: MissingPlatformDirectoryException(Unable to get application documents directory)\n[D]  Sentry Error Event: 7967de6afa6442f2874570033efa5537\n[D]  Sentry Error Event: c0f03e596a0a41ea8bc696948609aa2c\n[D]  getData: Error in directory determination: MissingPlatformDirectoryException(Unable to get application documents directory)\n[D]  getData: General error finding database location: MissingPlatformDirectoryException(Unable to get application documents directory)\n[D]  Sentry Error Event: bd1fde397655447281d8841200e1471a\n[D]  getData: Error in directory determination: MissingPlatformDirectoryException(Unable to get application documents directory)\n[D]  getData: General error finding database location: MissingPlatformDirectoryException(Unable to get application documents directory)\n\u001b[38;5;12m[I]\u001b[0m  _controller.addError Exception: Failed to Open PiecesOS, unable to find a proper data directory. Please restart your machine, if the problem persists please reach out to support@pieces.app, and we will get you back up and running. package:os_server/directory.dart 679                                      DirectoryFinder.getData.<fn>\npackage:executor/src/executor_impl.dart 62                                _Executor.scheduleTask\npackage:os_server/os.dart 1806                                            OS.databaseVersionPath.<fn>\npackage:os_server/utilities/get_database_version.dart 14                  getDatabaseVersion\npackage:database_facade/couchbase/singletons/internal_databases.dart 416  InternalCouchBaseDatabases.initializeCouchbase\npackage:os_server/os.dart 950                                             OS.initializeDataSingletons\npackage:os_server/os.dart 689                                             OS.boot\npackage:os_server/os.dart 291                                             OS._controller.<fn>.<fn>.<fn>\n===== asynchronous gap ===========================\npackage:os_server/os.dart 1806                                            OS.databaseVersionPath.<fn>\npackage:os_server/utilities/get_database_version.dart 14                  getDatabaseVersion\npackage:database_facade/couchbase/singletons/internal_databases.dart 416  InternalCouchBaseDatabases.initializeCouchbase\npackage:os_server/os.dart 950                                             OS.initializeDataSingletons\npackage:os_server/os.dart 689                                             OS.boot\npackage:os_server/os.dart 291                                             OS._controller.<fn>.<fn>.<fn>\n\n[D]  Sentry Error Event: 1dcb2b6464fa44a096989fbf3f627b00\n[D]  Sentry Error Event: 148b1b561db24dd2b7038eaebf1a604c\n[D]  2025-08-02T19:49:22.838417  UI#builder, hasData: false, hasError: true\n[D]  2025-08-02T21:01:23.182639  ARGS\n[D]  2025-08-02T21:01:23.182639  pieces://launch/\n[D]  2025-08-02T21:01:37.820443  ARGS\n[D]  2025-08-02T21:01:37.820443  pieces://launch/\n[D]  2025-08-02T21:01:41.029379  ARGS\n[D]  2025-08-02T21:01:41.029379  pieces://launch/\n[D]  2025-08-02T21:01:42.833443  ARGS\n[D]  2025-08-02T21:01:42.833443  pieces://launch/\n[D]  2025-08-02T21:04:43.343270  ARGS\n[D]  2025-08-02T21:04:43.343270  -ToastActivated\n[D]  2025-08-02T21:12:36.855961  Starting OS_Server!\n[D]  2025-08-02T21:12:36.856957  Starting EnvConf\n[D]  2025-08-02T21:12:36.856957  Starting DeploymentInfo\n[D]  2025-08-02T21:12:36.858959  Number: 262\n[D]  2025-08-02T21:12:36.858959  Tag: 12.1.1\n[D]  2025-08-02T21:12:36.858959  Branch: 12.1.1\n[D]  2025-08-02T21:12:36.858959  SHA1: 45b04ac0234ca729473fa6313e508d1ed534fbff\n[D]  2025-08-02T21:12:36.858959  WinDeployType: msix\n[D]  2025-08-02T21:12:36.858959  Channel : production\n[D]  2025-08-02T21:12:36.858959  Process ID: 12944\n[D]  2025-08-02T21:12:36.858959  Copying the vocab file to the data directory\n[D]  2025-08-02T21:12:36.858959  Successfully copied the vocab file\n[D]  2025-08-02T21:12:36.858959  Starting OS\n[D]  getData: Error in directory determination: MissingPlatformDirectoryException(Unable to get application documents directory)\n[D]  getData: General error finding database location: MissingPlatformDirectoryException(Unable to get application documents directory)\n[D]  2025-08-02T21:12:36.864960  Starting OS\n[D]  2025-08-02T21:12:36.871962  Starting UI\n[D]  2025-08-02T21:12:36.871962  Logging to file: C:\\Users\\shekh\\AppData\\Local\\Mesh Intelligent Technologies, Inc\\Pieces OS\\com.pieces.os\\production\\Support/logs/log-08022025.txt\n[D]  2025-08-02T21:12:36.874969  UI#builder, hasData: false, hasError: false\n[D]  2025-08-02T21:12:36.874969  stateStream#onListen\n[D]  2025-08-02T21:12:36.874969  OS#boot\n[D]  2025-08-02T21:12:36.874969  OS#attach\n\u001b[38;5;12m[I]\u001b[0m  initializeDataSingletons\n[D]  Sentry Error Event: 8a1e9bd49c1d45978b848efd688ea7c8\n[D]  getData: Error in directory determination: MissingPlatformDirectoryException(Unable to get application documents directory)\n[D]  getData: General error finding database location: MissingPlatformDirectoryException(Unable to get application documents directory)\n[D]  Sentry Error Event: fc2fc033725742679901f1aacb34894d\n[D]  getData: Error in directory determination: MissingPlatformDirectoryException(Unable to get application documents directory)\n[D]  getData: General error finding database location: MissingPlatformDirectoryException(Unable to get application documents directory)\n[D]  Sentry Error Event: 53adc3b7a3604203b85744db55dd3951\n[D]  Sentry Error Event: 124dd0b96bb44ce193c9edb4aede033f\n[D]  getData: Error in directory determination: MissingPlatformDirectoryException(Unable to get application documents directory)\n[D]  getData: General error finding database location: MissingPlatformDirectoryException(Unable to get application documents directory)\n[D]  Sentry Error Event: 03a10e23aa404b6397675296c081dae0\n[D]  getData: Error in directory determination: MissingPlatformDirectoryException(Unable to get application documents directory)\n[D]  getData: General error finding database location: MissingPlatformDirectoryException(Unable to get application documents directory)\n\u001b[38;5;12m[I]\u001b[0m  _controller.addError Exception: Failed to Open PiecesOS, unable to find a proper data directory. Please restart your machine, if the problem persists please reach out to support@pieces.app, and we will get you back up and running. package:os_server/directory.dart 679                                      DirectoryFinder.getData.<fn>\npackage:executor/src/executor_impl.dart 62                                _Executor.scheduleTask\npackage:os_server/os.dart 1806                                            OS.databaseVersionPath.<fn>\npackage:os_server/utilities/get_database_version.dart 14                  getDatabaseVersion\npackage:database_facade/couchbase/singletons/internal_databases.dart 416  InternalCouchBaseDatabases.initializeCouchbase\npackage:os_server/os.dart 950                                             OS.initializeDataSingletons\npackage:os_server/os.dart 689                                             OS.boot\npackage:os_server/os.dart 291                                             OS._controller.<fn>.<fn>.<fn>\n===== asynchronous gap ===========================\npackage:os_server/os.dart 1806                                            OS.databaseVersionPath.<fn>\npackage:os_server/utilities/get_database_version.dart 14                  getDatabaseVersion\npackage:database_facade/couchbase/singletons/internal_databases.dart 416  InternalCouchBaseDatabases.initializeCouchbase\npackage:os_server/os.dart 950                                             OS.initializeDataSingletons\npackage:os_server/os.dart 689                                             OS.boot\npackage:os_server/os.dart 291                                             OS._controller.<fn>.<fn>.<fn>\n\n[D]  Sentry Error Event: 51ac9d401062419d94e541ea3da14e40\n[D]  Sentry Error Event: 04b7c34a5347477f87def9a580ad2bc5\n[D]  2025-08-02T21:12:45.101765  UI#builder, hasData: false, hasError: true\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 4.5
+        },
+        {
+          "id": 810,
+          "title": "MCP Server SSE Connection Hangs - No Tools Available in Claude Code",
+          "text": "MCP Server SSE Connection Hangs - No Tools Available in Claude Code\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS, VS Code\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n12.1.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nThe Pieces MCP server fails to properly integrate with Claude Code within VSCode. While the SSE endpoint responds initially, it hangs indefinitely, preventing MCP tools from being registered or used. This affects Claude Code integration both as a standalone CLI and when used within VS Code.\n\n**Steps to Reproduce:**\n1. Install Pieces OS and Pieces app\n2. Login in the app\n3. Configure MCP in Claude Code's ~/.claude.json:\n\n```json\n{\n  \"pieces\": {\n    \"type\": \"sse\",\n    \"url\": \"http://localhost:39300/model_context_protocol/2024-11-05/sse\"\n}\n```\n\n4. Attempt to use Pieces MCP tools (e.g., mcp__pieces__ask_pieces_ltm) in Claude Code\n5. Tools are not available despite server being configured\n6. Same issue occurs whether using Claude Code in terminal or integrated with VS Code\n\n**Technical Details:**\n- SSE endpoint (http://localhost:39300/model_context_protocol/2024-11-05/sse) responds with:\n\n```\nevent: endpoint\ndata: /model_context_protocol/2024-11-05/messages\n```\n\n- Connection then hangs indefinitely (SSE buffering issue)\n- Both Pieces OS and Pieces app processes are running\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 3.88
+        },
+        {
+          "id": 811,
+          "title": "I'm sorry. This feature requires Pieces Pro. Please upgrade your plan or change your LLM to continue.",
+          "text": "I'm sorry. This feature requires Pieces Pro. Please upgrade your plan or change your LLM to continue.\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n12.1.1\n\n### Early Access Program\n\n- [x] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWhen using Pieces I asked, \"what did I work today?\" and I received an error that says `I'm sorry. This feature requires Pieces Pro. Please upgrade your plan or change your LLM to continue.`  When I have paid for pro and am signed in. What I expect is that I can use my paid pro membership to run query and not receive an error.\n\n![Image](https://github.com/user-attachments/assets/846a4e3e-9e24-4e51-81ce-061a22e921ec)\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 3.88
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    "Investigate and resolve the MissingPlatformDirectoryException on Windows to stabilize application startup.",
+    "Address the MCP Server SSE connection hang issue affecting Claude Code integration on macOS.",
+    "Verify Pieces Pro user authentication and resolve the erroneous \"Pro required\" messages.",
+    "Troubleshoot and fix the Workstream Summary generation failures, possibly related to application mode conflicts or model access."
+  ],
+  "message": "Daily support report generated successfully."
+}
