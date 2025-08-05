@@ -2,7 +2,7 @@
   "success": true,
   "date_range": {
     "start": "2025-08-04T00:00:00+00:00",
-    "end": "2025-08-05T13:20:58.180077+00:00"
+    "end": "2025-08-05T21:07:56.994607+00:00"
   },
   "summary": {
     "total_tickets": 5,
@@ -63,12 +63,12 @@
     {
       "number": 810,
       "title": "MCP Server SSE Connection Hangs - No Tools Available in Claude Code",
-      "activity_level": 4.26
+      "activity_level": 6.58
     },
     {
       "number": 805,
       "title": "LTM gets gunged up over time",
-      "activity_level": 4.04
+      "activity_level": 3.92
     },
     {
       "number": 813,
@@ -88,8 +88,8 @@
   ],
   "common_issues": [
     {
-      "title": "Pieces OS Data Access and Performance Issues",
-      "description": "Users report problems with Pieces OS data access and performance. Symptoms include application crashes due to MissingPlatformDirectoryException, MCP server SSE connection hangs, and slow LTM queries.  Reinstalling or clearing data temporarily resolves issues.  Potential solutions include verifying data directory permissions, investigating SSE connection stability, and optimizing LTM performance for large datasets.",
+      "title": "Pieces OS data access and LTM performance issues",
+      "description": "Users report issues with Pieces OS accessing data directories on Windows and macOS, leading to application errors.  Additionally, LTM performance degrades over time, causing slow queries and empty results.  Clearing LTM data through the UI is unsuccessful.  Reinstalling or clearing all Pieces data temporarily resolves the issues.  One user experiences MCP server connection hanging with Claude Code integration.",
       "frequency": 3,
       "related_issues": [
         {
@@ -102,32 +102,32 @@
           "id": 810,
           "title": "MCP Server SSE Connection Hangs - No Tools Available in Claude Code",
           "text": "MCP Server SSE Connection Hangs - No Tools Available in Claude Code\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS, VS Code\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n12.1.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nThe Pieces MCP server fails to properly integrate with Claude Code within VSCode. While the SSE endpoint responds initially, it hangs indefinitely, preventing MCP tools from being registered or used. This affects Claude Code integration both as a standalone CLI and when used within VS Code.\n\n**Steps to Reproduce:**\n1. Install Pieces OS and Pieces app\n2. Login in the app\n3. Configure MCP in Claude Code's ~/.claude.json:\n\n```json\n{\n  \"pieces\": {\n    \"type\": \"sse\",\n    \"url\": \"http://localhost:39300/model_context_protocol/2024-11-05/sse\"\n}\n```\n\n4. Attempt to use Pieces MCP tools (e.g., mcp__pieces__ask_pieces_ltm) in Claude Code\n5. Tools are not available despite server being configured\n6. Same issue occurs whether using Claude Code in terminal or integrated with VS Code\n\n**Technical Details:**\n- SSE endpoint (http://localhost:39300/model_context_protocol/2024-11-05/sse) responds with:\n\n```\nevent: endpoint\ndata: /model_context_protocol/2024-11-05/messages\n```\n\n- Connection then hangs indefinitely (SSE buffering issue)\n- Both Pieces OS and Pieces app processes are running\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 4.26
+          "activity_level": 6.58
         },
         {
           "id": 805,
           "title": "LTM gets gunged up over time",
           "text": "LTM gets gunged up over time\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n12.1.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nSo when I freshly install Pieces, the LTM works fine.\n\nWhen I've had it running for a few weeks, and I want to query the LTM, the query takes forever, and returns nothing.\n\nThe same happens via the MCP.\n\nI use my machine all day, so there's a lot of context going into the LTM. The only explanation I can come up with is that it's just getting too big. The Workstream is, however, updating fine.\n\nRemoving all my Pieces data gets the LTM working again, but then I end up with this situation later. This is the third time I've been through this loop. It's really frustrating, because when I actually need the LTM, it fails.\n\nThe Clear LTM Data button doesn't work, just returning to Try again, from All Data to even for just clearing an hour of data.\n\nI haven't cleared the LTM (well, I've tried, but the Clear LTM Data button doesn't work) so we have a live broken environment to debug with. I'm more than happy to assist with debugging this - let me know what you need!\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 4.04
+          "activity_level": 3.92
         }
       ]
     },
     {
       "title": "Pieces OS LTM and MCP Issues",
-      "description": "Users report issues with Pieces OS Long Term Memory (LTM) queries failing after extended use, possibly due to data overload.  Additionally,  Model Context Protocol (MCP) integration with Claude Code experiences SSE connection hangs, preventing tool registration. Clearing LTM data and checking MCP server configuration are suggested troubleshooting steps. Some users also encounter \"Pieces Pro required\" errors despite having a Pro subscription.",
+      "description": "Users report problems with Pieces OS Long Term Memory (LTM) queries failing after extended use and MCP integration issues with Claude Code. LTM queries become unresponsive after weeks of use, possibly due to data overload.  Clearing LTM data doesn't resolve the issue.  MCP connections hang when integrating with Claude Code, preventing tool registration. Additionally, some Pro users encounter errors suggesting they need to upgrade despite having a Pro subscription.",
       "frequency": 3,
       "related_issues": [
         {
           "id": 810,
           "title": "MCP Server SSE Connection Hangs - No Tools Available in Claude Code",
           "text": "MCP Server SSE Connection Hangs - No Tools Available in Claude Code\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS, VS Code\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n12.1.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nThe Pieces MCP server fails to properly integrate with Claude Code within VSCode. While the SSE endpoint responds initially, it hangs indefinitely, preventing MCP tools from being registered or used. This affects Claude Code integration both as a standalone CLI and when used within VS Code.\n\n**Steps to Reproduce:**\n1. Install Pieces OS and Pieces app\n2. Login in the app\n3. Configure MCP in Claude Code's ~/.claude.json:\n\n```json\n{\n  \"pieces\": {\n    \"type\": \"sse\",\n    \"url\": \"http://localhost:39300/model_context_protocol/2024-11-05/sse\"\n}\n```\n\n4. Attempt to use Pieces MCP tools (e.g., mcp__pieces__ask_pieces_ltm) in Claude Code\n5. Tools are not available despite server being configured\n6. Same issue occurs whether using Claude Code in terminal or integrated with VS Code\n\n**Technical Details:**\n- SSE endpoint (http://localhost:39300/model_context_protocol/2024-11-05/sse) responds with:\n\n```\nevent: endpoint\ndata: /model_context_protocol/2024-11-05/messages\n```\n\n- Connection then hangs indefinitely (SSE buffering issue)\n- Both Pieces OS and Pieces app processes are running\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 4.26
+          "activity_level": 6.58
         },
         {
           "id": 805,
           "title": "LTM gets gunged up over time",
           "text": "LTM gets gunged up over time\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n12.1.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nSo when I freshly install Pieces, the LTM works fine.\n\nWhen I've had it running for a few weeks, and I want to query the LTM, the query takes forever, and returns nothing.\n\nThe same happens via the MCP.\n\nI use my machine all day, so there's a lot of context going into the LTM. The only explanation I can come up with is that it's just getting too big. The Workstream is, however, updating fine.\n\nRemoving all my Pieces data gets the LTM working again, but then I end up with this situation later. This is the third time I've been through this loop. It's really frustrating, because when I actually need the LTM, it fails.\n\nThe Clear LTM Data button doesn't work, just returning to Try again, from All Data to even for just clearing an hour of data.\n\nI haven't cleared the LTM (well, I've tried, but the Clear LTM Data button doesn't work) so we have a live broken environment to debug with. I'm more than happy to assist with debugging this - let me know what you need!\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 4.04
+          "activity_level": 3.92
         },
         {
           "id": 811,
@@ -138,8 +138,8 @@
       ]
     },
     {
-      "title": "Pieces Pro Features Unavailable or Failing",
-      "description": "Users are experiencing issues with Pieces Pro features like Workstream Summary and LTM queries.  Errors include \"ApiException 511\", \"requires Pieces Pro\" even for paid users, and 404 errors related to the Gemini-Pro model. Potential solutions include verifying Pro subscriptions, checking LLM settings, ensuring sufficient resources for LTM, and clearing LTM data (if functionality is restored).",
+      "title": "PiecesOS 12.1.1: LTM and Workstream Summary Errors",
+      "description": "Users are experiencing issues with LTM queries and Workstream Summary generation in PiecesOS 12.1.1 on macOS and Windows.  LTM queries either time out or return nothing after a few weeks of use. Workstream Summary generation fails with API exception 511 or a message requiring Pieces Pro, even for subscribed users.  A common error message points to a missing Gemini Pro model. Clearing LTM data via the UI is also unsuccessful.",
       "frequency": 3,
       "related_issues": [
         {
@@ -158,20 +158,17 @@
           "id": 805,
           "title": "LTM gets gunged up over time",
           "text": "LTM gets gunged up over time\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n12.1.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nSo when I freshly install Pieces, the LTM works fine.\n\nWhen I've had it running for a few weeks, and I want to query the LTM, the query takes forever, and returns nothing.\n\nThe same happens via the MCP.\n\nI use my machine all day, so there's a lot of context going into the LTM. The only explanation I can come up with is that it's just getting too big. The Workstream is, however, updating fine.\n\nRemoving all my Pieces data gets the LTM working again, but then I end up with this situation later. This is the third time I've been through this loop. It's really frustrating, because when I actually need the LTM, it fails.\n\nThe Clear LTM Data button doesn't work, just returning to Try again, from All Data to even for just clearing an hour of data.\n\nI haven't cleared the LTM (well, I've tried, but the Clear LTM Data button doesn't work) so we have a live broken environment to debug with. I'm more than happy to assist with debugging this - let me know what you need!\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 4.04
+          "activity_level": 3.92
         }
       ]
     }
   ],
   "recommendations": [
-    "Investigate and resolve the MissingPlatformDirectoryException on Windows to address data access issues in Pieces OS.",
-    "Troubleshoot and fix the SSE connection hangs between the MCP server and Claude Code, especially for macOS users.",
-    "Optimize LTM performance for large datasets to prevent query failures and slowdowns after extended use.",
-    "Verify and address the \"Pieces Pro required\" error for users with active Pro subscriptions.",
-    "Investigate the root cause of the ApiException 511 and 404 errors related to Workstream Summary and Gemini-Pro model.",
-    "Prioritize resolution of issues affecting core features like LTM queries and MCP integration with Claude Code.",
-    "Improve error messaging and guidance for users experiencing data access or Pro feature issues.",
-    "Monitor support tickets for recurring patterns and prioritize fixes for common problems."
+    "Investigate and resolve the LTM performance degradation issue.  Focus on why queries fail after extended use and why clearing LTM data is unsuccessful.",
+    "Address the MCP server connection hanging issue with Claude Code integration.  Diagnose the SSE endpoint behavior and ensure tools are registered correctly.",
+    "Investigate reports of Pro users encountering upgrade prompts despite having active subscriptions.",
+    "Improve error messaging and user experience around LTM data clearing and Workstream Summary generation.",
+    "Prioritize bug fixes for data access issues on Windows and macOS, especially the MissingPlatformDirectoryException."
   ],
   "message": "Daily support report generated successfully."
 }

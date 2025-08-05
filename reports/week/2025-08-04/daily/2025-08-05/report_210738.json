@@ -1,0 +1,90 @@
+{
+  "success": true,
+  "date_range": {
+    "start": "2025-08-05T00:00:00+00:00",
+    "end": "2025-08-05T21:07:38.535193+00:00"
+  },
+  "summary": {
+    "total_tickets": 2,
+    "resolved_tickets": 0,
+    "open_tickets": 2
+  },
+  "ticket_breakdown": [
+    {
+      "category": "bug",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "app:desktop application",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "os:macos",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "app:pieces os",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:vs code",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:triaged",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    }
+  ],
+  "most_active_tickets": [
+    {
+      "number": 810,
+      "title": "MCP Server SSE Connection Hangs - No Tools Available in Claude Code",
+      "activity_level": 6.58
+    },
+    {
+      "number": 805,
+      "title": "LTM gets gunged up over time",
+      "activity_level": 3.92
+    }
+  ],
+  "common_issues": [
+    {
+      "title": "Pieces OS LTM and MCP Issues",
+      "description": "Users report issues with Pieces OS Long Term Memory (LTM) queries becoming unresponsive after extended use and the MCP SSE connection hanging, preventing tool registration in Claude Code.  LTM issues may require clearing LTM data, though the in-app clear function is reported as non-functional.  The MCP issue seems related to an SSE buffering problem. Both affect macOS users on Pieces OS 12.1.1.",
+      "frequency": 2,
+      "related_issues": [
+        {
+          "id": 810,
+          "title": "MCP Server SSE Connection Hangs - No Tools Available in Claude Code",
+          "text": "MCP Server SSE Connection Hangs - No Tools Available in Claude Code\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS, VS Code\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n12.1.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nThe Pieces MCP server fails to properly integrate with Claude Code within VSCode. While the SSE endpoint responds initially, it hangs indefinitely, preventing MCP tools from being registered or used. This affects Claude Code integration both as a standalone CLI and when used within VS Code.\n\n**Steps to Reproduce:**\n1. Install Pieces OS and Pieces app\n2. Login in the app\n3. Configure MCP in Claude Code's ~/.claude.json:\n\n```json\n{\n  \"pieces\": {\n    \"type\": \"sse\",\n    \"url\": \"http://localhost:39300/model_context_protocol/2024-11-05/sse\"\n}\n```\n\n4. Attempt to use Pieces MCP tools (e.g., mcp__pieces__ask_pieces_ltm) in Claude Code\n5. Tools are not available despite server being configured\n6. Same issue occurs whether using Claude Code in terminal or integrated with VS Code\n\n**Technical Details:**\n- SSE endpoint (http://localhost:39300/model_context_protocol/2024-11-05/sse) responds with:\n\n```\nevent: endpoint\ndata: /model_context_protocol/2024-11-05/messages\n```\n\n- Connection then hangs indefinitely (SSE buffering issue)\n- Both Pieces OS and Pieces app processes are running\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 6.58
+        },
+        {
+          "id": 805,
+          "title": "LTM gets gunged up over time",
+          "text": "LTM gets gunged up over time\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n12.1.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nSo when I freshly install Pieces, the LTM works fine.\n\nWhen I've had it running for a few weeks, and I want to query the LTM, the query takes forever, and returns nothing.\n\nThe same happens via the MCP.\n\nI use my machine all day, so there's a lot of context going into the LTM. The only explanation I can come up with is that it's just getting too big. The Workstream is, however, updating fine.\n\nRemoving all my Pieces data gets the LTM working again, but then I end up with this situation later. This is the third time I've been through this loop. It's really frustrating, because when I actually need the LTM, it fails.\n\nThe Clear LTM Data button doesn't work, just returning to Try again, from All Data to even for just clearing an hour of data.\n\nI haven't cleared the LTM (well, I've tried, but the Clear LTM Data button doesn't work) so we have a live broken environment to debug with. I'm more than happy to assist with debugging this - let me know what you need!\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 3.92
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    "Investigate and fix the MCP SSE connection issue affecting macOS users on Pieces OS 12.1.1. This appears to be a high-impact issue affecting Claude Code integration.",
+    "Address the LTM performance degradation and data clearing issues reported by macOS users.  The inability to clear LTM data exacerbates the problem.",
+    "Investigate why the \"Clear LTM Data\" button is not functioning. This prevents users from resolving LTM issues themselves.",
+    "Prioritize bug fixes related to core functionalities like LTM and MCP to improve user experience and reduce support tickets."
+  ],
+  "message": "Daily support report generated successfully."
+}
