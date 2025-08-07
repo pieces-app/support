@@ -1,0 +1,144 @@
+{
+  "success": true,
+  "date_range": {
+    "start": "2025-08-07T00:00:00+00:00",
+    "end": "2025-08-07T21:06:14.613056+00:00"
+  },
+  "summary": {
+    "total_tickets": 4,
+    "resolved_tickets": 0,
+    "open_tickets": 4
+  },
+  "ticket_breakdown": [
+    {
+      "category": "bug",
+      "received": 4,
+      "resolved": 0,
+      "pending": 4
+    },
+    {
+      "category": "os:windows",
+      "received": 3,
+      "resolved": 0,
+      "pending": 3
+    },
+    {
+      "category": "status:new",
+      "received": 3,
+      "resolved": 0,
+      "pending": 3
+    },
+    {
+      "category": "app:desktop application",
+      "received": 4,
+      "resolved": 0,
+      "pending": 4
+    },
+    {
+      "category": "app:pieces os",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "app:vs code",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "os:macos",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:triaged",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    }
+  ],
+  "most_active_tickets": [
+    {
+      "number": 817,
+      "title": "Filling out Personal Domain in Pieces OS leads to null.pieces.cloud",
+      "activity_level": 4.42
+    },
+    {
+      "number": 816,
+      "title": "Pieces Desktop Connection Leak",
+      "activity_level": 4.42
+    },
+    {
+      "number": 815,
+      "title": "Failed sharing my snippets using a link or GitHub gist.",
+      "activity_level": 4.42
+    },
+    {
+      "number": 805,
+      "title": "LTM gets gunged up over time",
+      "activity_level": 4.22
+    }
+  ],
+  "common_issues": [
+    {
+      "title": "Pieces Desktop and LTM performance issues",
+      "description": "Users report performance degradation with Pieces Desktop, including connection leaks on Windows and LTM query failures on macOS after prolonged use.  The LTM \"Clear Data\" button is also reported as non-functional.  Workarounds include closing Pieces Desktop to resolve connection leaks and removing all Pieces data to restore LTM functionality, though this is a disruptive solution. Sharing snippets via link/GitHub gist is also failing on Windows.",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 816,
+          "title": "Pieces Desktop Connection Leak",
+          "text": "Pieces Desktop Connection Leak\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nPieces OS, Desktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nPieces for Developers 4.3.1 and Pieces OS 12.1.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI have pieces MCP server installed in my Windows vscode. Snippet below. I had issues with it stopping suddenly. With help of vscode github copilot we determined that it was connections were used up. Investigation yielded that when Pieces Desktop not running only two connections present. When I started Pieces Desktop connections jumped to 50.  Below the MCP config snippet is copy of github copilot working session.\n\n\"pieces\": {\n\t\"url\": \"http://localhost:39300/model_context_protocol/2024-11-05/sse\",\n\t\"type\": \"http\",\n\t\"gallery\": true,\n\t\"autoStart\": false,\n\t\"timeout\": 30000,\n\t\"retryDelay\": 5000,\n\t\"maxRetries\": 3\n}\n\nI have started pieces desktop app. I informed it of our changes which it concurs. Can you check connection status and health of pieces now that I have stared pieces desktop?\n\nI'll check the connection status and health of the Pieces MCP server now that you've started the Pieces desktop app.\n\n\u26a0\ufe0f The connection leak problem is back! Let me check which processes are involved:\n\nProblem Identified! \ud83d\udea8\nThe issue is that starting the Pieces Desktop app (pieces_for_x.exe) has re-created the connection leak problem:\n\nProcess 35956: os_server.exe (Pieces OS) - listening on port 39300\nProcess 29660: Code.exe (VS Code) - 1 connection (good)\nProcess 37316: pieces_for_x.exe (Pieces Desktop) - 50+ connections (bad!)\n\nThe Root Cause:\nThe Pieces Desktop application itself has a connection leak bug - it's creating excessive connections to the Pieces OS server, just like we saw before with VS Code.\n\nSolutions:\nOption 1: Temporary Fix (Close Pieces Desktop)\nOption 2: Keep Pieces Desktop but Monitor\nIf you need the Pieces Desktop app running, you can:\n\nMonitor connections periodically\nRestart Pieces OS periodically to clear leaks\nReport this as a bug to Pieces support\nLet's check if closing the desktop app fixed the connections:\n\nPerfect! Now let's test the MCP connection:\n\npieces (MCP Server)\nConnection Status: \u2705 HEALTHY!\nPerfect! The Pieces MCP server is now working correctly with excellent connection health:\n\nCurrent Status:\n\u2705 2 established connections (down from 50+)\n\u2705 MCP server responding successfully\n\u2705 Clean connection state with minimal overhead\n\u2705 No connection leaks\nRoot Cause Confirmed:\nThe issue was specifically with the Pieces Desktop application (pieces_for_x.exe) creating excessive connections. The Pieces OS (os_server.exe) and VS Code MCP integration work fine together.\n\nCurrent Working Configuration:\nPieces OS: Running and healthy\nVS Code MCP: Connected with proper timeout settings\nPieces Desktop: Stopped (to prevent connection leaks)\nToday's Work Context Retrieved:\nFrom the MCP response, I can see you're actively working on:\n\nDatabase Mapping Projects:\n\nGWM-22316: Map database tables to GWMS UI elements\nGWM-22318: Customer SVP database migration\nCustomer and facility screen analysis\nDevelopment Tools:\n\nVS Code with MCP integration\nOracle SQL Developer for database work\nTime tracking with Toggl and Clockk\nRecent Focus Areas:\n\nVite platform work\nKeycloak maintenance\nResearch flow documentation with LLMs\nRecommendation:\nKeep the current setup as-is:\n\n\u2705 Use Pieces OS for the MCP integration (working perfectly)\n\u26a0\ufe0f Avoid Pieces Desktop until they fix the connection leak bug\n\u2705 Monitor connections occasionally with netstat if needed\nThe MCP integration is now stable and providing excellent work context tracking without the connection leak issues!\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 4.42
+        },
+        {
+          "id": 805,
+          "title": "LTM gets gunged up over time",
+          "text": "LTM gets gunged up over time\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n12.1.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nSo when I freshly install Pieces, the LTM works fine.\n\nWhen I've had it running for a few weeks, and I want to query the LTM, the query takes forever, and returns nothing.\n\nThe same happens via the MCP.\n\nI use my machine all day, so there's a lot of context going into the LTM. The only explanation I can come up with is that it's just getting too big. The Workstream is, however, updating fine.\n\nRemoving all my Pieces data gets the LTM working again, but then I end up with this situation later. This is the third time I've been through this loop. It's really frustrating, because when I actually need the LTM, it fails.\n\nThe Clear LTM Data button doesn't work, just returning to Try again, from All Data to even for just clearing an hour of data.\n\nI haven't cleared the LTM (well, I've tried, but the Clear LTM Data button doesn't work) so we have a live broken environment to debug with. I'm more than happy to assist with debugging this - let me know what you need!\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 4.22
+        },
+        {
+          "id": 815,
+          "title": "Failed sharing my snippets using a link or GitHub gist.",
+          "text": "Failed sharing my snippets using a link or GitHub gist.\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n12.1.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWhen trying to share my code snippets using a link or through GitHub gi\n\n<img width=\"1315\" height=\"735\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/7c3b232b-611d-4b81-94f5-5f0249c98f89\" />\n\nst, it fails.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 4.42
+        }
+      ]
+    },
+    {
+      "title": "Pieces OS 12.1.1 Bugs on Windows and macOS",
+      "description": "Users report issues with Pieces OS 12.1.1 across Windows and macOS. These include personal domain resetting to null.pieces.cloud, failure to share snippets via link or GitHub gist, and LTM performance degradation over time leading to unresponsiveness.  The \"Clear LTM Data\" button is also reported as non-functional.  Further investigation is needed to identify the root causes and solutions.",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 817,
+          "title": "Filling out Personal Domain in Pieces OS leads to null.pieces.cloud",
+          "text": "Filling out Personal Domain in Pieces OS leads to null.pieces.cloud\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n12.1.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nHi,\nIf I edit the username of my personal domain, it takes a couple of minutes before it's named \"null.pieces.cloud.\"\nIt doesn't matter whether the username contains only letters or a combination of letters and numbers. No spaces or uppercase letters are used.\n\nI'm using the Desktop App Version 4.3.1\n\n<img width=\"596\" height=\"484\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/e2bd8443-fd90-4023-b58a-1cbf542f7e9f\" />\n\nRegards\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 4.42
+        },
+        {
+          "id": 815,
+          "title": "Failed sharing my snippets using a link or GitHub gist.",
+          "text": "Failed sharing my snippets using a link or GitHub gist.\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n12.1.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWhen trying to share my code snippets using a link or through GitHub gi\n\n<img width=\"1315\" height=\"735\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/7c3b232b-611d-4b81-94f5-5f0249c98f89\" />\n\nst, it fails.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 4.42
+        },
+        {
+          "id": 805,
+          "title": "LTM gets gunged up over time",
+          "text": "LTM gets gunged up over time\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n12.1.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nSo when I freshly install Pieces, the LTM works fine.\n\nWhen I've had it running for a few weeks, and I want to query the LTM, the query takes forever, and returns nothing.\n\nThe same happens via the MCP.\n\nI use my machine all day, so there's a lot of context going into the LTM. The only explanation I can come up with is that it's just getting too big. The Workstream is, however, updating fine.\n\nRemoving all my Pieces data gets the LTM working again, but then I end up with this situation later. This is the third time I've been through this loop. It's really frustrating, because when I actually need the LTM, it fails.\n\nThe Clear LTM Data button doesn't work, just returning to Try again, from All Data to even for just clearing an hour of data.\n\nI haven't cleared the LTM (well, I've tried, but the Clear LTM Data button doesn't work) so we have a live broken environment to debug with. I'm more than happy to assist with debugging this - let me know what you need!\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 4.22
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    "Investigate and address the Pieces Desktop connection leak issue on Windows.",
+    "Fix the LTM performance degradation and \"Clear Data\" button functionality on macOS.",
+    "Resolve the issue with personal domains resetting to null.pieces.cloud.",
+    "Address the failure to share snippets via link/GitHub gist on Windows.",
+    "Prioritize bug fixes for Pieces OS 12.1.1 and Desktop Application 4.3.1."
+  ],
+  "message": "Daily support report generated successfully."
+}
