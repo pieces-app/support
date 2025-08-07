@@ -1,0 +1,90 @@
+{
+  "success": true,
+  "date_range": {
+    "start": "2025-08-07T00:00:00+00:00",
+    "end": "2025-08-07T13:20:17.791098+00:00"
+  },
+  "summary": {
+    "total_tickets": 2,
+    "resolved_tickets": 0,
+    "open_tickets": 2
+  },
+  "ticket_breakdown": [
+    {
+      "category": "bug",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "os:windows",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:new",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:desktop application",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "os:macos",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:triaged",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    }
+  ],
+  "most_active_tickets": [
+    {
+      "number": 815,
+      "title": "Failed sharing my snippets using a link or GitHub gist.",
+      "activity_level": 4.42
+    },
+    {
+      "number": 805,
+      "title": "LTM gets gunged up over time",
+      "activity_level": 4.33
+    }
+  ],
+  "common_issues": [
+    {
+      "title": "Pieces Desktop App Bugs",
+      "description": "Two bugs reported: 1. Sharing snippets via link/GitHub gist fails on Windows (v12.1.1). Error message: \"404 Publisher Model not found.\" 2. LTM becomes unresponsive on macOS (v12.1.1) after weeks of use, querying returns nothing. Clearing LTM data button is non-functional. Reinstalling app temporarily resolves issue.",
+      "frequency": 2,
+      "related_issues": [
+        {
+          "id": 815,
+          "title": "Failed sharing my snippets using a link or GitHub gist.",
+          "text": "Failed sharing my snippets using a link or GitHub gist.\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n12.1.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWhen trying to share my code snippets using a link or through GitHub gi\n\n<img width=\"1315\" height=\"735\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/7c3b232b-611d-4b81-94f5-5f0249c98f89\" />\n\nst, it fails.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 4.42
+        },
+        {
+          "id": 805,
+          "title": "LTM gets gunged up over time",
+          "text": "LTM gets gunged up over time\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n12.1.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nSo when I freshly install Pieces, the LTM works fine.\n\nWhen I've had it running for a few weeks, and I want to query the LTM, the query takes forever, and returns nothing.\n\nThe same happens via the MCP.\n\nI use my machine all day, so there's a lot of context going into the LTM. The only explanation I can come up with is that it's just getting too big. The Workstream is, however, updating fine.\n\nRemoving all my Pieces data gets the LTM working again, but then I end up with this situation later. This is the third time I've been through this loop. It's really frustrating, because when I actually need the LTM, it fails.\n\nThe Clear LTM Data button doesn't work, just returning to Try again, from All Data to even for just clearing an hour of data.\n\nI haven't cleared the LTM (well, I've tried, but the Clear LTM Data button doesn't work) so we have a live broken environment to debug with. I'm more than happy to assist with debugging this - let me know what you need!\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 4.33
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    "Investigate and fix the bug causing sharing snippets via link/GitHub gist to fail on Windows.",
+    "Investigate and fix the bug causing LTM to become unresponsive on macOS after extended use.",
+    "Ensure the 'Clear LTM Data' button is functional.",
+    "Investigate potential performance issues with LTM when handling large amounts of data."
+  ],
+  "message": "Daily support report generated successfully."
+}
