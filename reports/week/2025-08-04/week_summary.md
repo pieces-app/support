@@ -1,6 +1,6 @@
 # Support Ticket Report
-- Generated: 2025-08-06 21:08:13
-- Period: 2025-08-04 to 2025-08-06
+- Generated: 2025-08-07 05:15:32
+- Period: 2025-08-04 to 2025-08-07
 
 ## Summary
 - **Total Tickets:** 6
@@ -14,11 +14,11 @@
 | [#813](https://github.com/pieces-app/support/issues/813) | Ensure Core Dependencies | 4.26 |
 | [#808](https://github.com/pieces-app/support/issues/808) | Unable to upgrade subscription | 4.10 |
 | [#805](https://github.com/pieces-app/support/issues/805) | LTM gets gunged up over time | 3.81 |
-| [#812](https://github.com/pieces-app/support/issues/812) | Unable to generate Workstream Summary | 2.71 |
+| [#811](https://github.com/pieces-app/support/issues/811) | I'm sorry. This feature requires Pieces Pro. Please upgrade your plan or change your LLM to continue. | 2.49 |
 
 ## Common Issues
-### 1. Pieces OS data access and LTM performance issues
-Users report difficulties accessing Pieces OS data directories on Windows and macOS, leading to application errors and LTM performance degradation over time.  The "Clear LTM Data" button is also reported as non-functional.  Suggested solutions include restarting the machine and checking data directory permissions.  Further investigation is needed into LTM query performance and data clearing functionality.
+### 1. Pieces OS Data Access and Performance Issues
+Users report problems with Pieces OS data access, including MissingPlatformDirectoryException on Windows and macOS, leading to application crashes or unavailability of LTM and MCP features.  The "Clear LTM Data" button is also reported as non-functional.  Reinstalling or clearing Pieces data temporarily resolves issues, suggesting potential database corruption or performance bottlenecks with large datasets.
 
 **Related Issues:**
 - [#813](https://github.com/pieces-app/support/issues/813): Ensure Core Dependencies
@@ -26,7 +26,7 @@ Users report difficulties accessing Pieces OS data directories on Windows and ma
 - [#805](https://github.com/pieces-app/support/issues/805): LTM gets gunged up over time
 
 ### 2. Users unable to upgrade to Pro
-Multiple users report being unable to upgrade to Pieces Pro.  Clicking "Upgrade" leads to a blank checkout page with zero values, eventually returning an error.  One user, already on Pro, encountered a "Pro required" error message. This suggests issues with the upgrade process and Pro access validation.
+Multiple users report being unable to upgrade to Pieces Pro.  Clicking "Upgrade" leads to a blank checkout page with zero values, eventually returning an error.  One user, already on Pro, encountered a "Pro required" error message.  Issue affects macOS and Windows users on version 12.1.1. Further investigation needed into checkout flow and Pro access validation.
 
 **Related Issues:**
 - [#808](https://github.com/pieces-app/support/issues/808): Unable to upgrade subscription
@@ -35,11 +35,12 @@ Multiple users report being unable to upgrade to Pieces Pro.  Clicking "Upgrade"
 
 
 ## Recommendations
-- Investigate and fix the data directory access issue on Windows and macOS to resolve LTM performance degradation and "Clear LTM Data" button functionality.
-- Address the MCP server SSE connection hang issue to enable proper Claude Code integration.
-- Troubleshoot and resolve the Pro upgrade process to ensure users can successfully subscribe.
-- Investigate the reports of Pro-required error messages for existing Pro users.
-- Look into the issue of blank checkout pages during the upgrade process.
+- Investigate and resolve the MissingPlatformDirectoryException on Windows and macOS to address data access issues and application crashes in Pieces OS.
+- Fix the SSE connection hanging issue affecting MCP integration with Claude Code, both as a standalone CLI and within VS Code.
+- Address the problem with the "Clear LTM Data" button being non-functional, as it hinders users' ability to resolve LTM issues.
+- Investigate and resolve the checkout flow issues preventing users from upgrading to Pieces Pro, including blank checkout pages and incorrect error messages.
+- Investigate performance bottlenecks in the LTM with large datasets, as long query times and empty results impact user experience.
+- Verify Pro access validation logic to ensure paid users have proper access to Pro features and avoid "Pro required" errors.
 
 ## Daily Reports
 Here are the daily reports for this week:
