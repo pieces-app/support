@@ -2,7 +2,7 @@
   "success": true,
   "date_range": {
     "start": "2025-08-04T00:00:00+00:00",
-    "end": "2025-08-08T21:07:22.123622+00:00"
+    "end": "2025-08-09T05:07:56.250642+00:00"
   },
   "summary": {
     "total_tickets": 11,
@@ -137,13 +137,13 @@
     {
       "number": 812,
       "title": "Unable to generate Workstream Summary",
-      "activity_level": 2.33
+      "activity_level": 2.21
     }
   ],
   "common_issues": [
     {
-      "title": "Pieces OS Connectivity Issues Across Multiple Clients",
-      "description": "Users are experiencing difficulty connecting various clients (VS Code, Desktop app, Chrome/Edge extensions) to Pieces OS.  Common symptoms include connection hangs, leaks, and inability to register tools.  Suggested solutions include checking Pieces OS and client configurations, restarting Pieces OS or the client, verifying network connectivity (especially VPN for browser extensions), and monitoring connections for leaks.  The Pieces Desktop app may be a source of connection leaks.",
+      "title": "Pieces OS Connectivity Issues Across Multiple Applications",
+      "description": "Users are experiencing difficulty connecting various applications (VS Code, Chrome/Edge extensions, Desktop app) to Pieces OS. Common symptoms include SSE connection hangs, connection leaks attributed to the Pieces Desktop app, and general connectivity failures.  Solutions involve verifying MCP configuration, restarting Pieces OS, closing Pieces Desktop app to mitigate leaks, and checking VPN/network settings for browser extensions. Further investigation into Pieces OS and Desktop app stability is needed.",
       "frequency": 3,
       "related_issues": [
         {
@@ -168,7 +168,7 @@
     },
     {
       "title": "Pieces OS and related software connectivity and sharing issues",
-      "description": "Users are experiencing difficulties with Pieces OS and related software (Desktop App, browser extensions) across Windows. Issues include personal domain names reverting to null.pieces.cloud, browser extensions failing to connect to Pieces OS, and inability to share snippets via links or GitHub gists.  The Pieces OS version is 12.1.1 and Desktop App version 4.3.1 in reported cases. Connectivity problems may be related to VPN usage.",
+      "description": "Users are experiencing problems with Pieces OS and related software (Desktop App, browser extensions) across Windows. Issues include personal domain names reverting to null.pieces.cloud, browser extensions failing to connect to Pieces OS, and inability to share snippets via links or GitHub gists.  The Pieces OS version is 12.1.1 and Desktop App version 4.3.1.  Further investigation into networking, sharing mechanisms, and potential conflicts with VPNs is needed.",
       "frequency": 3,
       "related_issues": [
         {
@@ -193,7 +193,7 @@
     },
     {
       "title": "Pieces OS connection issues across Desktop and Web extensions",
-      "description": "Users are experiencing connection issues with Pieces OS across different platforms, including Desktop and Web extensions.  The Desktop app exhibits a connection leak, creating excessive connections to the OS server. Web extensions, specifically Chrome and Edge, are unable to connect to Pieces OS even with VPN configurations.  Potential solutions include closing the Desktop app to resolve leaks, monitoring connections, restarting the OS server, and checking VPN and proxy settings for web extensions.",
+      "description": "Users are experiencing connection issues between Pieces OS and its Desktop/Web extensions. Desktop app shows excessive connections to OS server, causing leaks. Web extensions (Chrome, Edge) fail to connect even with VPN configurations. Issues involve Pieces OS versions 12.1.1 and Pieces for Developers 4.3.1 on Windows.  Potential solutions include closing/restarting Pieces Desktop, monitoring connections, and checking VPN/proxy settings for web extensions.",
       "frequency": 3,
       "related_issues": [
         {
@@ -218,7 +218,7 @@
     },
     {
       "title": "Pieces Pro Features Unavailable Despite Upgrade",
-      "description": "Users report being unable to access Pieces Pro features after upgrading, encountering errors about needing Pro despite being subscribed. Issues appear across desktop app, VS Code, Sublime plugins, and web extensions.  Problems include LLM not upgrading to latest version (stuck on older versions like Sonnet 3.5) and inability to connect to Pieces OS, especially for users in regions requiring VPNs.  Suggested solutions include checking configuration files, restarting, re-login, and verifying VPN/proxy settings.",
+      "description": "Users are reporting inability to access Pieces Pro features after upgrading. Issues include LLM not upgrading to the latest version, browser extensions failing to connect to Pieces OS, and \"Pro required\" errors for Pro users.  Common factors include recent Pro upgrade, VPN use (especially in China), and using Pieces OS 12.1.1.  Suggested solutions include checking account status, network connectivity, and Pieces configuration files.",
       "frequency": 3,
       "related_issues": [
         {
@@ -242,37 +242,37 @@
       ]
     },
     {
-      "title": "Pieces OS Connectivity Issues Across Desktop and Web Extensions",
-      "description": "Users are experiencing difficulty connecting to Pieces OS from both desktop and web extensions.  Sharing snippets via links or GitHub gists is failing.  The web extensions, even with VPN configurations, cannot connect.  This affects Windows users and may be related to VPN usage or network configurations.",
+      "title": "Pieces LLM and LTM Issues",
+      "description": "Users report issues with Pieces LTM and LLM functionality, including slow or non-responsive queries, \"Pro\" access errors despite subscriptions, and incorrect LLM version reporting.  Troubleshooting includes clearing LTM data (though the button is reported as non-functional), verifying Pro subscriptions, and checking LLM configurations. Some issues may be related to specific platforms (macOS, Windows) or plugins (VS Code, Sublime).",
       "frequency": 3,
       "related_issues": [
         {
-          "id": 815,
-          "title": "Failed sharing my snippets using a link or GitHub gist.",
-          "text": "Failed sharing my snippets using a link or GitHub gist.\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n12.1.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWhen trying to share my code snippets using a link or through GitHub gi\n\n<img width=\"1315\" height=\"735\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/7c3b232b-611d-4b81-94f5-5f0249c98f89\" />\n\nst, it fails.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 4.5
+          "id": 805,
+          "title": "LTM gets gunged up over time",
+          "text": "LTM gets gunged up over time\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n12.1.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nSo when I freshly install Pieces, the LTM works fine.\n\nWhen I've had it running for a few weeks, and I want to query the LTM, the query takes forever, and returns nothing.\n\nThe same happens via the MCP.\n\nI use my machine all day, so there's a lot of context going into the LTM. The only explanation I can come up with is that it's just getting too big. The Workstream is, however, updating fine.\n\nRemoving all my Pieces data gets the LTM working again, but then I end up with this situation later. This is the third time I've been through this loop. It's really frustrating, because when I actually need the LTM, it fails.\n\nThe Clear LTM Data button doesn't work, just returning to Try again, from All Data to even for just clearing an hour of data.\n\nI haven't cleared the LTM (well, I've tried, but the Clear LTM Data button doesn't work) so we have a live broken environment to debug with. I'm more than happy to assist with debugging this - let me know what you need!\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 4.12
         },
         {
-          "id": 812,
-          "title": "Unable to generate Workstream Summary",
-          "text": "Unable to generate Workstream Summary\nError: ApiException 511: Failed to create rollup, because there is an application in local mode...call applications/update/capabilities to update.\n\n**Installation Details**\n\nSucceeded: true\nPath: \n\n**PiecesOS Information**\n\nID: 49a5a6f6-b47b-4695-bb8e-8dee8f25d30c\nUser: 00f4008b-1ea5-4621-9b21-428abc4866b4\nCurrent Version: 12.1.1\nMin Version Supported: 12.1.0\nMax Version Supported: 13.0.0\nLocal Port: 39300\n\n**Device Information**\n\nOperating System: Windows\nCurrent Version: \"Windows 10 Pro\" 10.0 (Build 19045)\nMin Version Supported: Windows 10 Build 1903\nAdditional Device Information: {cpu_list: [{\"architecture\":\"x64\",\"cores\":2,\"logicalProcessors\":4,\"l2Cache\":{\"value\":512,\"units\":\"Bytes\"},\"l3Cache\":{\"value\":3072,\"units\":\"Bytes\"},\"description\":\"Intel(R) Core(TM) i5-3230M CPU @ 2.60GHz\"}], gpu_list: [{\"type\":\"Intel(R) HD Graphics 4000\",\"unifiedMemoryArchitecture\":null,\"cores\":null,\"dedicatedVRam\":{\"value\":234881024,\"units\":\"Bytes\"}}, {\"type\":\"Microsoft Basic Render Driver\",\"unifiedMemoryArchitecture\":null,\"cores\":null,\"dedicatedVRam\":{\"value\":0,\"units\":\"Bytes\"}}], npu_list: [], memory_info: {\"totalRAM\":{\"value\":8388608,\"units\":\"KB\"}}, display_list: [{\"nativeHeight\":1080,\"nativeWidth\":1920,\"scaledHeight\":1080,\"scaledWidth\":1920,\"primary\":true}]}\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 2.33
+          "id": 811,
+          "title": "I'm sorry. This feature requires Pieces Pro. Please upgrade your plan or change your LLM to continue.",
+          "text": "I'm sorry. This feature requires Pieces Pro. Please upgrade your plan or change your LLM to continue.\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n12.1.1\n\n### Early Access Program\n\n- [x] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWhen using Pieces I asked, \"what did I work today?\" and I received an error that says `I'm sorry. This feature requires Pieces Pro. Please upgrade your plan or change your LLM to continue.`  When I have paid for pro and am signed in. What I expect is that I can use my paid pro membership to run query and not receive an error.\n\n![Image](https://github.com/user-attachments/assets/846a4e3e-9e24-4e51-81ce-061a22e921ec)\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 2.68
         },
         {
-          "id": 819,
-          "title": "Pieces extension for Chrome & edge cannot connect to pieces OS",
-          "text": "Pieces extension for Chrome & edge cannot connect to pieces OS\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nWeb Extension, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n12.1.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nEven if the VPN for the browser plugin is turned off, and the virtual network card and global proxy for the desktop VPN are turned on, it is still not possible to connect the browser, including the edge and Chrome pieces plugins, to the pieces OS.\n\nPS: My pieces OS and pieces for developers are both installed in sequence on Microsoft Store. \n- They work well in other aspects.\n- I have been using them for about 7 days. \n- I am in Chinese Mainland, thus a heavy VPN user.\n- Pieces OS has been upgraded to Pro.\n\n<img width=\"1404\" height=\"1406\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/23f50bc4-d3f1-4fb3-ad81-d66b69e41ea5\" />\n\n<img width=\"1200\" height=\"943\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/5fa1129f-01d3-4be4-8a5f-54eb6de4e97c\" />\n\n<img width=\"2987\" height=\"1655\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/3011a7cc-0dba-4ecb-8fa7-9ec7f30798e3\" />\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "id": 818,
+          "title": "Pro user's LLM cannot be upgraded to the latest version, even if they are chosen to",
+          "text": "Pro user's LLM cannot be upgraded to the latest version, even if they are chosen to\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS, Visual Studio, Sublime Plugin, VS Code\n\n### Operating System / Platform\n\nWindows 11\n\n### Your Pieces OS Version\n\n12.1.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI have a small problem now that cannot be solved through LLM: \n\n- I have inquired with LLM in **pieces for developers** and **pieces vscode plugin**, and they all said they are Sonnet 3.5. \n- The pieces LLM in sublime (set claude 3.7 sonnet) keeps silence about this:\n      **Copilot**: I'm an AI assistant created by Anthropic named Claude, and my training data has a cutoff date. While I don't typically specify my exact version details, I can tell you that my knowledge cutoff is around late 2023. This means I don't have information about events, technologies, or developments that occurred after that time.\n\nHowever, \n\n- I just **upgraded to Pieces Pro yesterday** and have switched to Sonnet 4 (for all pieces IDE plugins and Desktop Apps, except for sublime which only support sonnet 3.7 till now). \n- Every test chat was opened in a new Chat after the LLM is switched( to Sonnet 4 or Gemini 2.5 Pro)... \n- I've checked the configuration files and they are all Sonnet 4 without any issues. \n- I have tried restarting my computer or logging in to my account again, but still have this bug\n- I have tried changing my computer and VPN node, including canceling or adding the global system proxy, but none of them worked\n\nPS: My pieces OS and pieces for developers are both installed in sequence on Microsoft Store. \n\n- They work well in other aspects.\n- I have been using them for about 7 days. \n- I am in Chinese Mainland, thus a heavy VPN user.\n\n## Pieces for Deveopers (desktop app) \n\n<img width=\"1901\" height=\"470\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/d492f2e4-d73a-4798-8539-c08d768245d9\" />\n\n<img width=\"2435\" height=\"1569\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/1ac35bd2-7f75-45dc-9e1a-3963f2fea275\" />\n\n## Vscode plugin\n\n<img width=\"714\" height=\"1795\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/367de66a-2b60-429f-884f-67ae238582c9\" />\n\n<img width=\"717\" height=\"1795\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/57f0c4f6-7a13-4491-a07e-682fb4caf422\" />\n\n## Sublime plugin\n\n<img width=\"2081\" height=\"1407\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/f2f60b23-19eb-4bc0-8dd3-5c1c462021b0\" />\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
           "activity_level": 4.42
         }
       ]
     }
   ],
   "recommendations": [
-    "Prioritize resolving connectivity issues between Pieces OS and its various clients (Desktop app, VS Code, browser extensions). Investigate connection leaks and ensure compatibility with different network configurations, including VPNs.",
-    "Address the problem of Pieces Pro features being unavailable despite users upgrading. Verify proper propagation of Pro status and LLM version updates.",
-    "Improve communication regarding personal domain setup in Pieces OS to prevent users from encountering the \"null.pieces.cloud\" issue.",
-    "Investigate and resolve issues with sharing snippets via links and GitHub gists.",
-    "Review and update documentation and support resources to address common connectivity problems and Pro upgrade issues."
+    "Prioritize resolving connectivity issues between Pieces OS and its Desktop/Web extensions, focusing on connection leaks and VPN/proxy compatibility.",
+    "Investigate and address the root cause of LTM performance degradation over time and ensure the \"Clear LTM Data\" button functions correctly.",
+    "Verify the proper functioning of Pieces Pro features after upgrades, addressing LLM version discrepancies and \"Pro required\" errors for subscribed users.",
+    "Improve communication regarding personal domain setup to prevent users from encountering the \"null.pieces.cloud\" issue.",
+    "Investigate and fix the reported issues with sharing snippets via links or GitHub gists."
   ],
   "message": "Daily support report generated successfully."
 }
