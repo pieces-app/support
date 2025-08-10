@@ -2,7 +2,7 @@
   "success": true,
   "date_range": {
     "start": "2025-08-04T00:00:00+00:00",
-    "end": "2025-08-09T21:07:02.542554+00:00"
+    "end": "2025-08-10T05:10:14.188495+00:00"
   },
   "summary": {
     "total_tickets": 15,
@@ -150,20 +150,20 @@
       "activity_level": 2.56
     },
     {
-      "number": 812,
-      "title": "Unable to generate Workstream Summary",
-      "activity_level": 2.21
-    },
-    {
       "number": 817,
       "title": "Filling out Personal Domain in Pieces OS leads to null.pieces.cloud",
       "activity_level": 2.15
+    },
+    {
+      "number": 812,
+      "title": "Unable to generate Workstream Summary",
+      "activity_level": 2.11
     }
   ],
   "common_issues": [
     {
-      "title": "Bugs related to copying, sharing, and dragging files in Pieces OS 12.1.1",
-      "description": "Users are experiencing issues with copying code blocks (inline vs. inter-line discrepancies), sharing snippets via links or GitHub gists, and dragging files into the conversation context.  Additional problems include file picker window behavior and file filtering limitations.  The issues appear specific to the Windows desktop application version 12.1.1.",
+      "title": "Bugs in Pieces OS 12.1.1 on Windows Desktop",
+      "description": "Multiple users report issues with Pieces OS 12.1.1 on Windows. These include problems copying code blocks (inline and inter-line), sharing snippets via links or GitHub gists, and dragging files into the conversation context.  Additional issues involve file choosing window behavior and file filtering limitations. ",
       "frequency": 3,
       "related_issues": [
         {
@@ -188,7 +188,7 @@
     },
     {
       "title": "Pieces OS Connectivity Issues Across Multiple Applications",
-      "description": "Users are experiencing difficulty connecting various applications (VS Code, Desktop app, Chrome/Edge extensions) to Pieces OS.  Common symptoms include connection hangs, leaks, and inability to register MCP tools.  Suggested solutions include checking Pieces OS and app versions, verifying network configurations (VPN, proxy), monitoring connections, restarting Pieces OS or the affected application, and ensuring correct configuration within the application (e.g., .claude.json).",
+      "description": "Users are experiencing difficulty connecting various applications (VS Code, Chrome/Edge extensions, Desktop app) to Pieces OS.  Common symptoms include connection hangs, leaks, and inability to register MCP tools.  Suggested solutions include checking Pieces OS and app versions, verifying network configurations (VPN, proxy), monitoring connections, restarting Pieces OS or the affected application, and ensuring the Pieces Desktop app is closed if causing connection leaks.",
       "frequency": 3,
       "related_issues": [
         {
@@ -213,7 +213,7 @@
     },
     {
       "title": "Pieces Copilot Service and Workstream Summary Errors",
-      "description": "Users are experiencing issues with the Pieces Copilot Service and Workstream Summary generation.  Copilot Service shows \"Instance of 'fp'\" error. Workstream Summary shows API Exception 511 related to an application in local mode. Potential solutions include updating application capabilities and ensuring Pieces OS version compatibility (min 11.2.2 for Copilot, 12.1.0 for Workstream).",
+      "description": "Users are experiencing issues with the Pieces Copilot Service and Workstream Summary generation.  Copilot Service shows \"Instance of 'fp'\" error on macOS. Workstream Summary generation fails on Windows with ApiException 511, indicating a local mode application conflict.  Check Pieces OS version compatibility and ensure applications are not in local mode. Update applications/capabilities if necessary.",
       "frequency": 3,
       "related_issues": [
         {
@@ -232,13 +232,13 @@
           "id": 812,
           "title": "Unable to generate Workstream Summary",
           "text": "Unable to generate Workstream Summary\nError: ApiException 511: Failed to create rollup, because there is an application in local mode...call applications/update/capabilities to update.\n\n**Installation Details**\n\nSucceeded: true\nPath: \n\n**PiecesOS Information**\n\nID: 49a5a6f6-b47b-4695-bb8e-8dee8f25d30c\nUser: 00f4008b-1ea5-4621-9b21-428abc4866b4\nCurrent Version: 12.1.1\nMin Version Supported: 12.1.0\nMax Version Supported: 13.0.0\nLocal Port: 39300\n\n**Device Information**\n\nOperating System: Windows\nCurrent Version: \"Windows 10 Pro\" 10.0 (Build 19045)\nMin Version Supported: Windows 10 Build 1903\nAdditional Device Information: {cpu_list: [{\"architecture\":\"x64\",\"cores\":2,\"logicalProcessors\":4,\"l2Cache\":{\"value\":512,\"units\":\"Bytes\"},\"l3Cache\":{\"value\":3072,\"units\":\"Bytes\"},\"description\":\"Intel(R) Core(TM) i5-3230M CPU @ 2.60GHz\"}], gpu_list: [{\"type\":\"Intel(R) HD Graphics 4000\",\"unifiedMemoryArchitecture\":null,\"cores\":null,\"dedicatedVRam\":{\"value\":234881024,\"units\":\"Bytes\"}}, {\"type\":\"Microsoft Basic Render Driver\",\"unifiedMemoryArchitecture\":null,\"cores\":null,\"dedicatedVRam\":{\"value\":0,\"units\":\"Bytes\"}}], npu_list: [], memory_info: {\"totalRAM\":{\"value\":8388608,\"units\":\"KB\"}}, display_list: [{\"nativeHeight\":1080,\"nativeWidth\":1920,\"scaledHeight\":1080,\"scaledWidth\":1920,\"primary\":true}]}\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 2.21
+          "activity_level": 2.11
         }
       ]
     },
     {
       "title": "LTM performance degrades over time, becomes unresponsive",
-      "description": "Users report that the Long Term Memory (LTM) feature in Pieces for macOS becomes slow and unresponsive after several weeks of use.  Queries take a long time and return nothing. Clearing LTM data sometimes fails.  Reinstalling Pieces temporarily resolves the issue.  This affects both the desktop application and the MCP.",
+      "description": "Users report LTM queries becoming slow and eventually failing after weeks of use.  Clearing LTM data is attempted but unsuccessful.  Reinstalling or removing Pieces data temporarily resolves the issue.  Issue occurs on macOS.  Potential solutions include optimizing LTM data handling, improving data clearing functionality, and investigating resource limitations.",
       "frequency": 3,
       "related_issues": [
         {
@@ -263,7 +263,7 @@
     },
     {
       "title": "Pieces OS and related software connectivity and sharing issues",
-      "description": "Users are experiencing problems with Pieces OS and related software (Desktop App, browser extensions) across Windows. Issues include personal domain names reverting to null.pieces.cloud, browser extensions failing to connect to Pieces OS despite VPN configurations, and inability to share snippets via links or GitHub gists.  The Pieces OS version is 12.1.1 and Desktop App version 4.3.1 in reported cases. Further investigation into network configurations, sharing mechanisms, and potential conflicts with VPNs is required.",
+      "description": "Users are experiencing difficulties with Pieces OS and related software (Desktop App, browser extensions) across Windows. Issues include personal domain names reverting to null.pieces.cloud, browser extensions failing to connect to Pieces OS, and inability to share snippets via links or GitHub gists.  Users report using VPNs and being located in regions with internet restrictions. Further investigation into network connectivity, software compatibility, and sharing functionality is needed.",
       "frequency": 3,
       "related_issues": [
         {
@@ -288,15 +288,14 @@
     }
   ],
   "recommendations": [
-    "Prioritize resolving connectivity issues between Pieces OS and applications (VS Code, Desktop app, Chrome/Edge extensions).  Focus on Windows OS given the higher number of reported issues.",
-    "Investigate and address the connection leak associated with the Pieces Desktop application on Windows.",
-    "Troubleshoot issues related to sharing snippets via links or GitHub gists, specifically on Windows.",
-    "Address the bugs related to copying, dragging, and sharing files within Pieces OS 12.1.1, particularly on Windows.",
-    "Investigate and fix the \"Instance of 'fp'\" error appearing in the Pieces Copilot Service.",
-    "Address the API Exception 511 error encountered when generating Workstream Summaries.",
-    "Investigate and resolve the performance degradation of Long Term Memory (LTM) on macOS over time.",
-    "Ensure personal domain name functionality is working correctly and doesn't revert to null.pieces.cloud.",
-    "Verify Pieces OS version compatibility with Copilot (min 11.2.2) and Workstream (min 12.1.0) and communicate upgrade requirements clearly to users."
+    "Prioritize resolving connectivity issues between Pieces OS and various applications (VS Code, Chrome/Edge extensions, Desktop app).  Focus on connection hangs, leaks, and MCP tool registration failures.",
+    "Investigate and address the \"Instance of 'fp'\" error affecting the Pieces Copilot Service on macOS.",
+    "Troubleshoot the Workstream Summary generation failure on Windows (ApiException 511) and its relation to local mode application conflicts.",
+    "Address the performance degradation and unresponsiveness of LTM queries over time, including improving the LTM data clearing functionality.",
+    "Investigate and resolve issues with sharing snippets via links or GitHub gists, particularly on Windows.",
+    "Examine the problem of personal domain names reverting to null.pieces.cloud on the Desktop App.",
+    "Improve handling of bugs related to Pieces OS 12.1.1 on Windows, especially problems with copying code blocks, sharing snippets, and file handling.",
+    "Ensure consistent functionality of Pieces Pro features for subscribed users."
   ],
   "message": "Daily support report generated successfully."
 }
