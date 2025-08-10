@@ -1,0 +1,74 @@
+{
+  "success": true,
+  "date_range": {
+    "start": "2025-08-10T00:00:00+00:00",
+    "end": "2025-08-10T13:14:45.087591+00:00"
+  },
+  "summary": {
+    "total_tickets": 1,
+    "resolved_tickets": 0,
+    "open_tickets": 1
+  },
+  "ticket_breakdown": [
+    {
+      "category": "bug",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "os:windows",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:new",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:desktop application",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:pieces os",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    }
+  ],
+  "most_active_tickets": [
+    {
+      "number": 825,
+      "title": "Pieces Pro: checkout is not opening",
+      "activity_level": 4.42
+    }
+  ],
+  "common_issues": [
+    {
+      "title": "Checkout Not Opening When Upgrading to Pieces Pro",
+      "description": "Users are unable to upgrade to Pieces Pro. The checkout modal fails to open, and the \"Upgrade Now\" button changes to \"Awaiting checkout...\" without any further action. This issue occurs on both the Desktop Application and the Pieces OS app.  A possible solution is to check the browser or network configuration.",
+      "frequency": 1,
+      "related_issues": [
+        {
+          "id": 825,
+          "title": "Pieces Pro: checkout is not opening",
+          "text": "Pieces Pro: checkout is not opening\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n12.1.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nHi guys!\n\nI want to try a \"Pro\" plan, however the modal with payment is not opening and the button \"Upgrade Now\" turns to \"Awaiting checkout...\" and nothing happens. I've tried through the Desktop App, Pieces OS app - neither helped.\n\nCould you please advice?\n\nDefault Browser: Arc (if it helps)\n\n<img width=\"1023\" height=\"268\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/ed23d88c-a87f-4f87-8fad-9723ee11f6a6\" />\n\nPiecesOs Log Attached\n\n[log-08102025.txt](https://github.com/user-attachments/files/21704376/log-08102025.txt)\n\nPieces for Developers log string:\n\n```\n[D]  Checking PiecesOS Connection and Compatibility\n[D]  Checking PiecesOS Version Number via port: 39300\n[D]  Checking PiecesOS Connection and Compatibility\n[D]  Checking PiecesOS Version Number via port: 39300\n[D]  App Interaction: app_header_searchbar_settings_button_popover_button\n[D]  Checking PiecesOS Connection and Compatibility\n[D]  Checking PiecesOS Version Number via port: 39300\n[D]  Dispatching Route [DIALOG OPEN]: true\n[D]  Dispatching Route [SHEET OPEN]: false\n[D]  Dispatching Route [CURRENT ROUTE]: PiecesProInformationDialog\n[D]  Dispatching Route [ROUTE STACK]: [/workstream, PiecesProInformationDialog]\n[D]  Dispatching Route [ENTRY]: /\n[D]  Dispatching Route [HOME]: /workstream\n[D]  App Interaction: app_header_searchbar_settings_button_popover_upgrade_to_pro_button\n[D]  Dispatching Route [DIALOG OPEN]: false\n[D]  Dispatching Route [SHEET OPEN]: false\n[D]  Dispatching Route [CURRENT ROUTE]: /workstream\n[D]  Dispatching Route [ROUTE STACK]: [/workstream]\n[D]  Dispatching Route [ENTRY]: /\n[D]  Dispatching Route [HOME]: /workstream\n[D]  Checking PiecesOS Connection and Compatibility\n[D]  Checking PiecesOS Version Number via port: 39300\n```\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 4.42
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    "Investigate the issue preventing users from upgrading to Pieces Pro, focusing on why the checkout modal is not opening.",
+    "Check browser and network configurations as a potential solution for the checkout issue.",
+    "Prioritize resolving issue #825, \"Pieces Pro: checkout is not opening,\" due to its high activity level and impact on potential revenue.",
+    "Monitor support tickets for similar upgrade issues and identify any patterns or trends.",
+    "Consider adding more detailed logging or error handling to the checkout process to aid in debugging."
+  ],
+  "message": "Daily support report generated successfully."
+}
