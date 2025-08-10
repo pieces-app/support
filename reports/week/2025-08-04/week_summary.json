@@ -2,7 +2,7 @@
   "success": true,
   "date_range": {
     "start": "2025-08-04T00:00:00+00:00",
-    "end": "2025-08-10T13:14:57.104424+00:00"
+    "end": "2025-08-10T21:06:47.773735+00:00"
   },
   "summary": {
     "total_tickets": 16,
@@ -87,7 +87,7 @@
     {
       "number": 810,
       "title": "MCP Server SSE Connection Hangs - No Tools Available in Claude Code",
-      "activity_level": 6.94
+      "activity_level": 6.36
     },
     {
       "number": 825,
@@ -103,11 +103,6 @@
       "number": 813,
       "title": "Ensure Core Dependencies",
       "activity_level": 3.61
-    },
-    {
-      "number": 805,
-      "title": "LTM gets gunged up over time",
-      "activity_level": 3.55
     },
     {
       "number": 823,
@@ -130,6 +125,11 @@
       "activity_level": 3.5
     },
     {
+      "number": 805,
+      "title": "LTM gets gunged up over time",
+      "activity_level": 3.48
+    },
+    {
       "number": 808,
       "title": "Unable to upgrade subscription",
       "activity_level": 2.97
@@ -142,7 +142,7 @@
     {
       "number": 816,
       "title": "Pieces Desktop Connection Leak",
-      "activity_level": 2.8
+      "activity_level": 2.51
     },
     {
       "number": 811,
@@ -155,33 +155,33 @@
       "activity_level": 2.15
     },
     {
-      "number": 817,
-      "title": "Filling out Personal Domain in Pieces OS leads to null.pieces.cloud",
-      "activity_level": 2.15
-    },
-    {
       "number": 812,
       "title": "Unable to generate Workstream Summary",
       "activity_level": 2.11
+    },
+    {
+      "number": 817,
+      "title": "Filling out Personal Domain in Pieces OS leads to null.pieces.cloud",
+      "activity_level": 1.93
     }
   ],
   "common_issues": [
     {
       "title": "Pieces OS Connectivity Issues Across Multiple Applications",
-      "description": "Users are experiencing difficulty connecting various applications (VS Code, Chrome/Edge extensions, Desktop app) to Pieces OS.  Common symptoms include SSE connection hangs, connection leaks attributed to the Pieces Desktop app, and general connectivity failures.  Suggested solutions include checking Pieces OS and app status, restarting Pieces OS, closing Pieces Desktop app, and verifying network configurations, especially VPN settings for browser extensions.",
+      "description": "Users are experiencing difficulty connecting various applications (VS Code, Desktop app, Chrome/Edge extensions) to Pieces OS.  Common symptoms include connection hangs, leaks, and inability to register MCP tools.  Suggested solutions include checking Pieces OS and app versions, verifying network configurations (VPN, proxy), monitoring connections, restarting Pieces OS or the affected application, and ensuring correct MCP server configuration in affected applications.",
       "frequency": 3,
       "related_issues": [
         {
           "id": 810,
           "title": "MCP Server SSE Connection Hangs - No Tools Available in Claude Code",
           "text": "MCP Server SSE Connection Hangs - No Tools Available in Claude Code\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS, VS Code\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n12.1.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nThe Pieces MCP server fails to properly integrate with Claude Code within VSCode. While the SSE endpoint responds initially, it hangs indefinitely, preventing MCP tools from being registered or used. This affects Claude Code integration both as a standalone CLI and when used within VS Code.\n\n**Steps to Reproduce:**\n1. Install Pieces OS and Pieces app\n2. Login in the app\n3. Configure MCP in Claude Code's ~/.claude.json:\n\n```json\n{\n  \"pieces\": {\n    \"type\": \"sse\",\n    \"url\": \"http://localhost:39300/model_context_protocol/2024-11-05/sse\"\n}\n```\n\n4. Attempt to use Pieces MCP tools (e.g., mcp__pieces__ask_pieces_ltm) in Claude Code\n5. Tools are not available despite server being configured\n6. Same issue occurs whether using Claude Code in terminal or integrated with VS Code\n\n**Technical Details:**\n- SSE endpoint (http://localhost:39300/model_context_protocol/2024-11-05/sse) responds with:\n\n```\nevent: endpoint\ndata: /model_context_protocol/2024-11-05/messages\n```\n\n- Connection then hangs indefinitely (SSE buffering issue)\n- Both Pieces OS and Pieces app processes are running\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 6.94
+          "activity_level": 6.36
         },
         {
           "id": 816,
           "title": "Pieces Desktop Connection Leak",
           "text": "Pieces Desktop Connection Leak\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nPieces OS, Desktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nPieces for Developers 4.3.1 and Pieces OS 12.1.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI have pieces MCP server installed in my Windows vscode. Snippet below. I had issues with it stopping suddenly. With help of vscode github copilot we determined that it was connections were used up. Investigation yielded that when Pieces Desktop not running only two connections present. When I started Pieces Desktop connections jumped to 50.  Below the MCP config snippet is copy of github copilot working session.\n\n\"pieces\": {\n\t\"url\": \"http://localhost:39300/model_context_protocol/2024-11-05/sse\",\n\t\"type\": \"http\",\n\t\"gallery\": true,\n\t\"autoStart\": false,\n\t\"timeout\": 30000,\n\t\"retryDelay\": 5000,\n\t\"maxRetries\": 3\n}\n\nI have started pieces desktop app. I informed it of our changes which it concurs. Can you check connection status and health of pieces now that I have stared pieces desktop?\n\nI'll check the connection status and health of the Pieces MCP server now that you've started the Pieces desktop app.\n\n\u26a0\ufe0f The connection leak problem is back! Let me check which processes are involved:\n\nProblem Identified! \ud83d\udea8\nThe issue is that starting the Pieces Desktop app (pieces_for_x.exe) has re-created the connection leak problem:\n\nProcess 35956: os_server.exe (Pieces OS) - listening on port 39300\nProcess 29660: Code.exe (VS Code) - 1 connection (good)\nProcess 37316: pieces_for_x.exe (Pieces Desktop) - 50+ connections (bad!)\n\nThe Root Cause:\nThe Pieces Desktop application itself has a connection leak bug - it's creating excessive connections to the Pieces OS server, just like we saw before with VS Code.\n\nSolutions:\nOption 1: Temporary Fix (Close Pieces Desktop)\nOption 2: Keep Pieces Desktop but Monitor\nIf you need the Pieces Desktop app running, you can:\n\nMonitor connections periodically\nRestart Pieces OS periodically to clear leaks\nReport this as a bug to Pieces support\nLet's check if closing the desktop app fixed the connections:\n\nPerfect! Now let's test the MCP connection:\n\npieces (MCP Server)\nConnection Status: \u2705 HEALTHY!\nPerfect! The Pieces MCP server is now working correctly with excellent connection health:\n\nCurrent Status:\n\u2705 2 established connections (down from 50+)\n\u2705 MCP server responding successfully\n\u2705 Clean connection state with minimal overhead\n\u2705 No connection leaks\nRoot Cause Confirmed:\nThe issue was specifically with the Pieces Desktop application (pieces_for_x.exe) creating excessive connections. The Pieces OS (os_server.exe) and VS Code MCP integration work fine together.\n\nCurrent Working Configuration:\nPieces OS: Running and healthy\nVS Code MCP: Connected with proper timeout settings\nPieces Desktop: Stopped (to prevent connection leaks)\nToday's Work Context Retrieved:\nFrom the MCP response, I can see you're actively working on:\n\nDatabase Mapping Projects:\n\nGWM-22316: Map database tables to GWMS UI elements\nGWM-22318: Customer SVP database migration\nCustomer and facility screen analysis\nDevelopment Tools:\n\nVS Code with MCP integration\nOracle SQL Developer for database work\nTime tracking with Toggl and Clockk\nRecent Focus Areas:\n\nVite platform work\nKeycloak maintenance\nResearch flow documentation with LLMs\nRecommendation:\nKeep the current setup as-is:\n\n\u2705 Use Pieces OS for the MCP integration (working perfectly)\n\u26a0\ufe0f Avoid Pieces Desktop until they fix the connection leak bug\n\u2705 Monitor connections occasionally with netstat if needed\nThe MCP integration is now stable and providing excellent work context tracking without the connection leak issues!\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 2.8
+          "activity_level": 2.51
         },
         {
           "id": 819,
@@ -192,8 +192,8 @@
       ]
     },
     {
-      "title": "Pieces OS 12.1.1 Desktop App Bugs",
-      "description": "Users report issues with Pieces OS 12.1.1 on Windows. These include problems copying code blocks (inline and inter-line), sharing snippets via links or GitHub gists, and dragging files into conversation contexts. Additional issues involve file choosing window behavior and file filtering limitations. ",
+      "title": "Issues with Copying, Sharing, and Dragging Files in Pieces OS 12.1.1",
+      "description": "Users are experiencing problems with copying code blocks (inline vs. inter-line discrepancies), sharing snippets via links or GitHub gists, and dragging files into the conversation context.  Additional issues include file choosing window behavior and file filtering limitations.  Further investigation is needed to identify the root causes and implement appropriate fixes.",
       "frequency": 3,
       "related_issues": [
         {
@@ -217,8 +217,8 @@
       ]
     },
     {
-      "title": "Pieces Desktop and OS App Fail to Launch or Upgrade Due to Missing Directory",
-      "description": "Multiple users report Pieces Desktop and OS apps failing to launch or upgrade to Pro. Logs reveal \"MissingPlatformDirectoryException(Unable to get application documents directory)\" error.  The application cannot locate the necessary data directory.  Suggested solutions include restarting the machine and contacting support if the issue persists.  One user also reported issues with the Pro upgrade checkout modal not appearing.",
+      "title": "Pieces Desktop and OS: Missing Platform Directory and Connection Leaks",
+      "description": "Users report issues with Pieces Desktop and OS on Windows.  OS logs show \"MissingPlatformDirectoryException(Unable to get application documents directory)\" errors, preventing application startup.  Additionally, Pieces Desktop exhibits a connection leak, creating excessive connections to the OS server.  Suggested workarounds include restarting the machine, monitoring connections, and closing Pieces Desktop. Contact support if issues persist.",
       "frequency": 3,
       "related_issues": [
         {
@@ -237,13 +237,13 @@
           "id": 816,
           "title": "Pieces Desktop Connection Leak",
           "text": "Pieces Desktop Connection Leak\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nPieces OS, Desktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nPieces for Developers 4.3.1 and Pieces OS 12.1.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI have pieces MCP server installed in my Windows vscode. Snippet below. I had issues with it stopping suddenly. With help of vscode github copilot we determined that it was connections were used up. Investigation yielded that when Pieces Desktop not running only two connections present. When I started Pieces Desktop connections jumped to 50.  Below the MCP config snippet is copy of github copilot working session.\n\n\"pieces\": {\n\t\"url\": \"http://localhost:39300/model_context_protocol/2024-11-05/sse\",\n\t\"type\": \"http\",\n\t\"gallery\": true,\n\t\"autoStart\": false,\n\t\"timeout\": 30000,\n\t\"retryDelay\": 5000,\n\t\"maxRetries\": 3\n}\n\nI have started pieces desktop app. I informed it of our changes which it concurs. Can you check connection status and health of pieces now that I have stared pieces desktop?\n\nI'll check the connection status and health of the Pieces MCP server now that you've started the Pieces desktop app.\n\n\u26a0\ufe0f The connection leak problem is back! Let me check which processes are involved:\n\nProblem Identified! \ud83d\udea8\nThe issue is that starting the Pieces Desktop app (pieces_for_x.exe) has re-created the connection leak problem:\n\nProcess 35956: os_server.exe (Pieces OS) - listening on port 39300\nProcess 29660: Code.exe (VS Code) - 1 connection (good)\nProcess 37316: pieces_for_x.exe (Pieces Desktop) - 50+ connections (bad!)\n\nThe Root Cause:\nThe Pieces Desktop application itself has a connection leak bug - it's creating excessive connections to the Pieces OS server, just like we saw before with VS Code.\n\nSolutions:\nOption 1: Temporary Fix (Close Pieces Desktop)\nOption 2: Keep Pieces Desktop but Monitor\nIf you need the Pieces Desktop app running, you can:\n\nMonitor connections periodically\nRestart Pieces OS periodically to clear leaks\nReport this as a bug to Pieces support\nLet's check if closing the desktop app fixed the connections:\n\nPerfect! Now let's test the MCP connection:\n\npieces (MCP Server)\nConnection Status: \u2705 HEALTHY!\nPerfect! The Pieces MCP server is now working correctly with excellent connection health:\n\nCurrent Status:\n\u2705 2 established connections (down from 50+)\n\u2705 MCP server responding successfully\n\u2705 Clean connection state with minimal overhead\n\u2705 No connection leaks\nRoot Cause Confirmed:\nThe issue was specifically with the Pieces Desktop application (pieces_for_x.exe) creating excessive connections. The Pieces OS (os_server.exe) and VS Code MCP integration work fine together.\n\nCurrent Working Configuration:\nPieces OS: Running and healthy\nVS Code MCP: Connected with proper timeout settings\nPieces Desktop: Stopped (to prevent connection leaks)\nToday's Work Context Retrieved:\nFrom the MCP response, I can see you're actively working on:\n\nDatabase Mapping Projects:\n\nGWM-22316: Map database tables to GWMS UI elements\nGWM-22318: Customer SVP database migration\nCustomer and facility screen analysis\nDevelopment Tools:\n\nVS Code with MCP integration\nOracle SQL Developer for database work\nTime tracking with Toggl and Clockk\nRecent Focus Areas:\n\nVite platform work\nKeycloak maintenance\nResearch flow documentation with LLMs\nRecommendation:\nKeep the current setup as-is:\n\n\u2705 Use Pieces OS for the MCP integration (working perfectly)\n\u26a0\ufe0f Avoid Pieces Desktop until they fix the connection leak bug\n\u2705 Monitor connections occasionally with netstat if needed\nThe MCP integration is now stable and providing excellent work context tracking without the connection leak issues!\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 2.8
+          "activity_level": 2.51
         }
       ]
     },
     {
       "title": "Users unable to upgrade to Pieces Pro",
-      "description": "Multiple users on Windows and macOS are reporting issues upgrading to Pieces Pro.  The checkout process fails, resulting in blank checkout pages, infinite loading states (\"Awaiting checkout...\"), or connection errors. This affects the desktop app, Pieces OS app, and browser extensions.  Users have tried various troubleshooting steps, including checking VPN settings and reinstalling Pieces, without success.",
+      "description": "Multiple users on Windows and macOS are reporting issues upgrading to Pieces Pro. The checkout process fails, with the upgrade button displaying \"Awaiting checkout...\" or a blank checkout page with zero values.  This has been ongoing for several weeks for some users.  The Pieces extension for Chrome and Edge also has connectivity issues with Pieces OS, potentially related.",
       "frequency": 3,
       "related_issues": [
         {
@@ -267,15 +267,15 @@
       ]
     },
     {
-      "title": "LTM performance degrades over time, becomes unresponsive",
-      "description": "Users report that the Long Term Memory (LTM) functionality in Pieces for macOS becomes slow and eventually unresponsive after several weeks of use.  Queries take a long time and return nothing. Clearing LTM data via the provided button does not work.  Reinstalling Pieces temporarily resolves the issue.  This affects both the desktop application and the MCP.",
+      "title": "LTM performance degrades over time and becomes unusable",
+      "description": "Users report that the LTM functionality degrades over time, eventually becoming unresponsive to queries.  This occurs on macOS after several weeks of use. Clearing LTM data through the provided button does not resolve the issue.  Reinstalling the application temporarily restores LTM functionality.  Users experience this issue repeatedly.",
       "frequency": 3,
       "related_issues": [
         {
           "id": 805,
           "title": "LTM gets gunged up over time",
           "text": "LTM gets gunged up over time\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n12.1.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nSo when I freshly install Pieces, the LTM works fine.\n\nWhen I've had it running for a few weeks, and I want to query the LTM, the query takes forever, and returns nothing.\n\nThe same happens via the MCP.\n\nI use my machine all day, so there's a lot of context going into the LTM. The only explanation I can come up with is that it's just getting too big. The Workstream is, however, updating fine.\n\nRemoving all my Pieces data gets the LTM working again, but then I end up with this situation later. This is the third time I've been through this loop. It's really frustrating, because when I actually need the LTM, it fails.\n\nThe Clear LTM Data button doesn't work, just returning to Try again, from All Data to even for just clearing an hour of data.\n\nI haven't cleared the LTM (well, I've tried, but the Clear LTM Data button doesn't work) so we have a live broken environment to debug with. I'm more than happy to assist with debugging this - let me know what you need!\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 3.55
+          "activity_level": 3.48
         },
         {
           "id": 811,
@@ -293,11 +293,13 @@
     }
   ],
   "recommendations": [
-    "Prioritize resolving connectivity issues between Pieces OS and applications (VS Code, extensions, Desktop app). Investigate SSE connection hangs, connection leaks, and general connectivity failures.  Consider VPN configurations and network dependencies.",
-    "Address Pieces OS 12.1.1 bugs on Windows, focusing on code copying, snippet sharing, and file dragging.  Improve file choosing window behavior and file filtering.",
-    "Investigate and resolve the \"MissingPlatformDirectoryException\" error preventing app launch/upgrade on Windows.  Ensure data directory accessibility and address Pro upgrade checkout modal issues.",
-    "Fix Pieces Pro upgrade process. Troubleshoot blank checkout pages, infinite loading, and connection errors across platforms (desktop, OS app, extensions). Test with various browsers and VPN setups.",
-    "Address LTM performance degradation on macOS. Investigate slow queries, unresponsiveness, and ineffective clearing of LTM data.  Optimize LTM functionality for large datasets."
+    "Prioritize resolving the 'MCP Server SSE Connection Hangs' issue (ticket #810) due to its high activity level and impact on Claude Code integration.",
+    "Investigate and address the recurring 'Pieces Pro: checkout is not opening' problem (ticket #825) affecting upgrades and potentially impacting revenue.",
+    "Troubleshoot issues with copying, sharing, and dragging files (tickets #821, #815, #822) to improve core user experience.",
+    "Address the 'MissingPlatformDirectoryException' error on Windows (ticket #813) hindering application startup.",
+    "Develop a comprehensive troubleshooting guide for connectivity issues between Pieces OS, Desktop, and extensions (tickets #819, #816).",
+    "Investigate and fix the LTM performance degradation issue (ticket #805) impacting long-term users.",
+    "Monitor and address the recurring inability to upgrade to Pieces Pro (ticket #808) to ensure smooth subscription upgrades."
   ],
   "message": "Daily support report generated successfully."
 }
