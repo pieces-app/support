@@ -2,7 +2,7 @@
   "success": true,
   "date_range": {
     "start": "2025-08-11T00:00:00+00:00",
-    "end": "2025-08-11T21:08:44.428253+00:00"
+    "end": "2025-08-11T21:07:10.341240+00:00"
   },
   "summary": {
     "total_tickets": 15,
@@ -175,7 +175,7 @@
   "common_issues": [
     {
       "title": "Pieces OS LTM and Workstream Functionality Issues",
-      "description": "Users are experiencing problems with the Pieces OS Long Term Memory (LTM) and Workstream features, primarily on macOS.  The LTM fails to return results after extended use, possibly due to data overload.  The \"Clear LTM Data\" button is also malfunctioning.  Additionally, the Workstream has been reported to stop updating.  Reinstalling or clearing Pieces data temporarily resolves the LTM issue, but the problem reoccurs.  Further investigation is needed into LTM data management and Workstream update mechanisms.",
+      "description": "Users are experiencing problems with the Pieces OS Long Term Memory (LTM) and Workstream features, primarily on macOS. Issues include LTM queries failing after extended use, Workstream activity not updating, and the \"Clear LTM Data\" button being unresponsive.  One user reported success after removing all Pieces data, suggesting potential performance issues with large datasets. Additionally, there are reports of the Pieces Copilot Service failing to open.",
       "frequency": 3,
       "related_issues": [
         {
@@ -200,7 +200,7 @@
     },
     {
       "title": "Pieces OS and plugins encounter various bugs",
-      "description": "Users report issues with Pieces OS and its plugins across different operating systems (primarily Windows). These include: 1. Inability to drag files into conversation context. 2. File choosing window appearing behind other windows. 3. Filter rules not applying to all file types. 4. Pieces support opening by default upon launch. 5. LLM not upgrading to the latest version despite user selection and configuration changes.  Further investigation is needed to identify the root causes and solutions.",
+      "description": "Users report issues with Pieces OS and its plugins across different operating systems (primarily Windows). These include: 1. Inability to drag files into conversation context. 2. File choosing window appearing behind other windows. 3. Filter rules not applying to all file types. 4. Pieces support opening by default on launch. 5. LLM not upgrading to the latest version despite user selection and configuration changes.  Further investigation is needed to identify the root causes and solutions.",
       "frequency": 3,
       "related_issues": [
         {
@@ -225,7 +225,7 @@
     },
     {
       "title": "Pieces OS 12.1.1 Bugs and Feature Requests",
-      "description": "Users report issues with copying inline and inter-line code blocks, dragging files into conversation context, and upgrading to the latest LLM version (Sonnet 4) in Pieces for Developers, VS Code plugin, and Sublime plugin.  Additional problems include file choosing window behavior and filter rule limitations. A feature request has been made to allow partial copying of inline code blocks.",
+      "description": "Users report issues with copying code blocks, dragging files into conversation context, and LLM not upgrading to the latest version (Sonnet 4) despite Pro subscription.  Copying inline code blocks and inter-line code blocks produces unexpected behavior.  Dragging files into conversation context fails.  LLM remains at Sonnet 3.5 in Pieces for Developers and VS Code plugin, and silent in Sublime, despite selecting Sonnet 4 in settings.  Users request partial copying for inline code blocks.",
       "frequency": 3,
       "related_issues": [
         {
@@ -250,7 +250,7 @@
     },
     {
       "title": "Pieces Pro Upgrade and Connectivity Issues",
-      "description": "Users are experiencing difficulty upgrading to Pieces Pro, encountering unresponsive upgrade buttons and failure to open payment modals.  Additionally, some users report connectivity problems between Pieces OS, browser extensions, and the desktop application, particularly when using VPNs.  Check VPN settings, Pieces OS version compatibility, and ensure Pieces for Developers is correctly installed.",
+      "description": "Users are experiencing difficulty upgrading to Pieces Pro, with the checkout process failing to complete.  Additionally, some users report connectivity problems between Pieces OS and browser extensions, even with VPNs configured.  Further investigation is needed to determine the root cause and potential solutions.",
       "frequency": 3,
       "related_issues": [
         {
@@ -300,12 +300,12 @@
     }
   ],
   "recommendations": [
-    "Prioritize resolving LTM and Workstream functionality issues on macOS, focusing on data overload and update mechanisms (related to tickets #805, #799, #824).",
-    "Investigate and fix bugs related to Pieces OS and plugins on Windows, including file dragging, window behavior, filter rules, and default support opening (related to tickets #822, #826).",
-    "Address the problem of Pro users not upgrading to the latest LLM version (Sonnet 4) across Pieces for Developers, VS Code, and Sublime plugins (related to ticket #818).",
-    "Resolve Pieces Pro upgrade issues, ensuring payment modals function correctly and upgrade buttons remain responsive (related to ticket #825).",
-    "Troubleshoot and fix connectivity problems between Pieces OS, browser extensions, and the desktop application, especially for users with VPNs (related to tickets #819, #816, #826).",
-    "Investigate and address the reported copy-paste issues with inline and inter-line code blocks, and consider the feature request for partial copying of inline code (related to ticket #821)."
+    "Prioritize resolving issues related to LTM and Workstream functionality on macOS (especially ticket #805 and #799).",
+    "Investigate and address the Pieces OS and plugin bugs on Windows, focusing on file dragging, window behavior, and filter rules (ticket #822).",
+    "Address the LLM upgrade failure for Pro users across different plugins (ticket #818).",
+    "Fix the Pieces Pro checkout process to ensure smooth upgrades (ticket #825).",
+    "Resolve the connection leak issue between Pieces Desktop and Pieces OS, and the connection problems with browser extensions (ticket #816 and #819).",
+    "Improve code block copying functionality in the desktop app and consider partial copying for inline code blocks (ticket #821)."
   ],
   "message": "Daily support report generated successfully."
 }
