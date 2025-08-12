@@ -1,0 +1,314 @@
+{
+  "success": true,
+  "date_range": {
+    "start": "2025-08-12T00:00:00+00:00",
+    "end": "2025-08-12T21:07:06.690912+00:00"
+  },
+  "summary": {
+    "total_tickets": 14,
+    "resolved_tickets": 7,
+    "open_tickets": 7
+  },
+  "ticket_breakdown": [
+    {
+      "category": "bug",
+      "received": 13,
+      "resolved": 7,
+      "pending": 6
+    },
+    {
+      "category": "os:macos",
+      "received": 6,
+      "resolved": 3,
+      "pending": 3
+    },
+    {
+      "category": "app:pieces os",
+      "received": 10,
+      "resolved": 6,
+      "pending": 4
+    },
+    {
+      "category": "status:triaged",
+      "received": 8,
+      "resolved": 2,
+      "pending": 6
+    },
+    {
+      "category": "status:waiting_on_user_responses",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:desktop application",
+      "received": 9,
+      "resolved": 5,
+      "pending": 4
+    },
+    {
+      "category": "status:in_progress",
+      "received": 1,
+      "resolved": 1,
+      "pending": 0
+    },
+    {
+      "category": "status:waiting_on_fix",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "status:resolved",
+      "received": 3,
+      "resolved": 3,
+      "pending": 0
+    },
+    {
+      "category": "os:windows",
+      "received": 6,
+      "resolved": 4,
+      "pending": 2
+    },
+    {
+      "category": "status:pending_user_confirmation",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "status:pending_release",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:new",
+      "received": 2,
+      "resolved": 2,
+      "pending": 0
+    },
+    {
+      "category": "os:linux",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "P2",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    }
+  ],
+  "most_active_tickets": [
+    {
+      "number": 831,
+      "title": "Unable to open Pieces Copilot Service",
+      "activity_level": 9.15
+    },
+    {
+      "number": 829,
+      "title": "Unable to open Pieces Settings Service",
+      "activity_level": 8.83
+    },
+    {
+      "number": 822,
+      "title": "CANNOT drag a file into CONVERSATION CONTEXT",
+      "activity_level": 5.61
+    },
+    {
+      "number": 825,
+      "title": "Pieces Pro: checkout is not opening",
+      "activity_level": 5.38
+    },
+    {
+      "number": 830,
+      "title": "Unable to open Pieces Settings Service",
+      "activity_level": 5.36
+    },
+    {
+      "number": 823,
+      "title": "Unable to open Pieces Copilot Service",
+      "activity_level": 4.84
+    },
+    {
+      "number": 827,
+      "title": "piece",
+      "activity_level": 4.5
+    },
+    {
+      "number": 809,
+      "title": "Ensure core dependencies; Retry Step",
+      "activity_level": 4.22
+    },
+    {
+      "number": 817,
+      "title": "Filling out Personal Domain in Pieces OS leads to null.pieces.cloud",
+      "activity_level": 4.17
+    },
+    {
+      "number": 773,
+      "title": "Unable to open Pieces Core Services",
+      "activity_level": 3.75
+    },
+    {
+      "number": 796,
+      "title": "MCP goes down in Cursor every 5-10 minutes",
+      "activity_level": 3.29
+    },
+    {
+      "number": 793,
+      "title": "No hotkeys work",
+      "activity_level": 3.26
+    },
+    {
+      "number": 785,
+      "title": "Unable to open Pieces Core Services",
+      "activity_level": 1.68
+    },
+    {
+      "number": 786,
+      "title": "Unable to open Pieces Core Services",
+      "activity_level": 1.68
+    }
+  ],
+  "common_issues": [
+    {
+      "title": "PiecesOS services failing to open on MacOS",
+      "description": "Multiple users are unable to open Pieces Settings Service or Pieces Core Services on MacOS.  The Settings Service issue involves a type registration error within GetIt, while the Core Services issue shows a WebSocket connection failure with a 404 error.  Potential solutions include reinstalling Pieces OS, checking firewall settings, and ensuring the correct ports are open.",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 829,
+          "title": "Unable to open Pieces Settings Service",
+          "text": "Unable to open Pieces Settings Service\nError: Invalid argument(s): Type ZJb is already registered inside GetIt. \n\n**Installation Details**\n\nSucceeded: true\nPath: /Applications/Pieces OS.app\n\n**PiecesOS Information**\n\nID: 1CA2E830-F290-4091-8714-B38DE27CABCB\nUser: 32bc4ee9-918c-4562-b3d7-78c22d9dcebe\nCurrent Version: 12.1.1\nMin Version Supported: 12.1.0\nMax Version Supported: 13.0.0\nLocal Port: 39300\n\n**Device Information**\n\nOperating System: MacOS\nCurrent Version: Version 15.7 (Build 24G207)\nMin Version Supported: 12.0.0 Monterey\nAdditional Device Information: {cpu_list: [{\"architecture\":\"arm64\",\"cores\":8,\"logicalProcessors\":8,\"l1Cache\":{\"value\":65536,\"units\":\"Bytes\"},\"l2Cache\":{\"value\":4194304,\"units\":\"Bytes\"},\"description\":\"Apple M2\"}], gpu_list: [{\"type\":null,\"unifiedMemoryArchitecture\":true,\"cores\":10,\"dedicatedVRam\":null}], memory_info: {\"totalRAM\":{\"value\":8589934592,\"units\":\"Bytes\"}}, display_list: [{\"nativeHeight\":1664,\"nativeWidth\":2560,\"scaledHeight\":1112,\"scaledWidth\":1710,\"primary\":true}]}\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 8.83
+        },
+        {
+          "id": 830,
+          "title": "Unable to open Pieces Settings Service",
+          "text": "Unable to open Pieces Settings Service\nError: Invalid argument(s): Type ZJb is already registered inside GetIt. \n\n**Installation Details**\n\nSucceeded: true\nPath: /Applications/Pieces OS.app\n\n**PiecesOS Information**\n\nID: 1CA2E830-F290-4091-8714-B38DE27CABCB\nUser: 32bc4ee9-918c-4562-b3d7-78c22d9dcebe\nCurrent Version: 12.1.1\nMin Version Supported: 12.1.0\nMax Version Supported: 13.0.0\nLocal Port: 39300\n\n**Device Information**\n\nOperating System: MacOS\nCurrent Version: Version 15.7 (Build 24G207)\nMin Version Supported: 12.0.0 Monterey\nAdditional Device Information: {cpu_list: [{\"architecture\":\"arm64\",\"cores\":8,\"logicalProcessors\":8,\"l1Cache\":{\"value\":65536,\"units\":\"Bytes\"},\"l2Cache\":{\"value\":4194304,\"units\":\"Bytes\"},\"description\":\"Apple M2\"}], gpu_list: [{\"type\":null,\"unifiedMemoryArchitecture\":true,\"cores\":10,\"dedicatedVRam\":null}], memory_info: {\"totalRAM\":{\"value\":8589934592,\"units\":\"Bytes\"}}, display_list: [{\"nativeHeight\":1664,\"nativeWidth\":2560,\"scaledHeight\":1112,\"scaledWidth\":1710,\"primary\":true}]}\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 5.36
+        },
+        {
+          "id": 773,
+          "title": "Unable to open Pieces Core Services",
+          "text": "Unable to open Pieces Core Services\nError: WebSocketException: Connection to 'http://127.0.0.1:39300/user/last_checked_in/stream#' was not upgraded to websocket, HTTP status code: 404\n\n**Installation Details**\n\nSucceeded: true\nPath: /Applications/Pieces OS.app\n\n**PiecesOS Information**\n\nID: FB0FAE84-6BAC-4EC2-BBC8-8A15651E0677\nUser: 01ce0083-f75f-41c5-a161-943ada0edc94\nCurrent Version: Unknown\nMin Version Supported: 12.1.0\nMax Version Supported: 13.0.0\nLocal Port: 39300\n\n**Device Information**\n\nOperating System: MacOS\nCurrent Version: Version 15.5 (Build 24F74)\nMin Version Supported: 12.0.0 Monterey\nAdditional Device Information: {cpu_list: [{\"architecture\":\"arm64\",\"cores\":8,\"logicalProcessors\":8,\"l1Cache\":{\"value\":65536,\"units\":\"Bytes\"},\"l2Cache\":{\"value\":4194304,\"units\":\"Bytes\"},\"description\":\"Apple M2\"}], gpu_list: [{\"type\":null,\"unifiedMemoryArchitecture\":true,\"cores\":10,\"dedicatedVRam\":null}], memory_info: {\"totalRAM\":{\"value\":8589934592,\"units\":\"Bytes\"}}, display_list: [{\"nativeHeight\":1864,\"nativeWidth\":2880,\"scaledHeight\":1107,\"scaledWidth\":1710,\"primary\":true}]}\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 3.75
+        }
+      ]
+    },
+    {
+      "title": "Pieces OS users unable to open Copilot or Core Services",
+      "description": "Multiple MacOS users reported inability to open Pieces Copilot or Core Services due to connection issues.  Errors include \"Instance of 'fp'\" and websocket connection failures. Commonalities include Pieces OS installations on MacOS 15.5 or 15.6, and potential port conflicts on local port 39300.  Suggested solutions include checking firewall settings, verifying Pieces OS version compatibility, and restarting the application or the machine.",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 823,
+          "title": "Unable to open Pieces Copilot Service",
+          "text": "Unable to open Pieces Copilot Service\nError: Instance of 'fp'\n\n**Installation Details**\n\nSucceeded: true\nPath: /Applications/Pieces OS.app/Contents/MacOS/Pieces OS\n\n**PiecesOS Information**\n\nID: 7DC7A189-02A0-4345-A961-5E4F6FCCECE9\nUser: Anonymous\nCurrent Version: 11.0.4\nMin Version Supported: 11.2.2\nMax Version Supported: 12.0.0\nLocal Port: 39300\n\n**Device Information**\n\nOperating System: MacOS\nCurrent Version: Version 15.6 (Build 24G84)\nMin Version Supported: 12.0.0 Monterey\nAdditional Device Information: {cpu_list: [{\"architecture\":\"arm64\",\"cores\":8,\"logicalProcessors\":8,\"l1Cache\":{\"value\":65536,\"units\":\"Bytes\"},\"l2Cache\":{\"value\":4194304,\"units\":\"Bytes\"},\"description\":\"Apple M3\"}], gpu_list: [{\"type\":null,\"unifiedMemoryArchitecture\":true,\"cores\":10,\"dedicatedVRam\":null}], memory_info: {\"totalRAM\":{\"value\":17179869184,\"units\":\"Bytes\"}}, display_list: [{\"nativeHeight\":1864,\"nativeWidth\":2880,\"scaledHeight\":1107,\"scaledWidth\":1710,\"primary\":true}]}\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 4.84
+        },
+        {
+          "id": 831,
+          "title": "Unable to open Pieces Copilot Service",
+          "text": "Unable to open Pieces Copilot Service\nError: HttpException: Connection reset by peer, uri = http://127.0.0.1:39300/conversations/stream/identifiers\n\n**Installation Details**\n\nSucceeded: true\nPath: /Applications/Pieces OS.app\n\n**PiecesOS Information**\n\nID: A78CF98A-8E43-42ED-B437-03E02D84C139\nUser: 57aad34c-10f1-4c85-95e0-d7313893ed4f\nCurrent Version: 12.1.1\nMin Version Supported: 12.1.0\nMax Version Supported: 13.0.0\nLocal Port: 39300\n\n**Device Information**\n\nOperating System: MacOS\nCurrent Version: Version 15.5 (Build 24F74)\nMin Version Supported: 12.0.0 Monterey\nAdditional Device Information: {cpu_list: [{\"architecture\":\"arm64\",\"cores\":8,\"logicalProcessors\":8,\"l1Cache\":{\"value\":65536,\"units\":\"Bytes\"},\"l2Cache\":{\"value\":4194304,\"units\":\"Bytes\"},\"description\":\"Apple M3\"}], gpu_list: [{\"type\":null,\"unifiedMemoryArchitecture\":true,\"cores\":8,\"dedicatedVRam\":null}], memory_info: {\"totalRAM\":{\"value\":25769803776,\"units\":\"Bytes\"}}, display_list: [{\"nativeHeight\":2520,\"nativeWidth\":4480,\"scaledHeight\":1440,\"scaledWidth\":2560,\"primary\":true}]}\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 9.15
+        },
+        {
+          "id": 773,
+          "title": "Unable to open Pieces Core Services",
+          "text": "Unable to open Pieces Core Services\nError: WebSocketException: Connection to 'http://127.0.0.1:39300/user/last_checked_in/stream#' was not upgraded to websocket, HTTP status code: 404\n\n**Installation Details**\n\nSucceeded: true\nPath: /Applications/Pieces OS.app\n\n**PiecesOS Information**\n\nID: FB0FAE84-6BAC-4EC2-BBC8-8A15651E0677\nUser: 01ce0083-f75f-41c5-a161-943ada0edc94\nCurrent Version: Unknown\nMin Version Supported: 12.1.0\nMax Version Supported: 13.0.0\nLocal Port: 39300\n\n**Device Information**\n\nOperating System: MacOS\nCurrent Version: Version 15.5 (Build 24F74)\nMin Version Supported: 12.0.0 Monterey\nAdditional Device Information: {cpu_list: [{\"architecture\":\"arm64\",\"cores\":8,\"logicalProcessors\":8,\"l1Cache\":{\"value\":65536,\"units\":\"Bytes\"},\"l2Cache\":{\"value\":4194304,\"units\":\"Bytes\"},\"description\":\"Apple M2\"}], gpu_list: [{\"type\":null,\"unifiedMemoryArchitecture\":true,\"cores\":10,\"dedicatedVRam\":null}], memory_info: {\"totalRAM\":{\"value\":8589934592,\"units\":\"Bytes\"}}, display_list: [{\"nativeHeight\":1864,\"nativeWidth\":2880,\"scaledHeight\":1107,\"scaledWidth\":1710,\"primary\":true}]}\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 3.75
+        }
+      ]
+    },
+    {
+      "title": "Pieces OS 12.1.x macOS issues: Hotkeys, MCP, and Settings Service",
+      "description": "Users on macOS running Pieces OS 12.1.x are experiencing issues with hotkeys not working, MCP in Cursor repeatedly going down, and an \"Invalid argument\" error when opening Pieces Settings Service.  The hotkey issue involves all key combinations producing the macOS error sound. The MCP issue requires toggling the setting in Cursor every 5-10 minutes. The Settings Service error mentions a type registration conflict. Further investigation is needed to determine root causes and solutions.",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 793,
+          "title": "No hotkeys work",
+          "text": "No hotkeys work\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n12.1.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nNone of the hotkeys work at all. Every hotkey combination produces the macos sound and nothing happens. No keys at all do anything, hotkey or not - they all produce that same macos sound and nothing happens.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 3.26
+        },
+        {
+          "id": 796,
+          "title": "MCP goes down in Cursor every 5-10 minutes",
+          "text": "MCP goes down in Cursor every 5-10 minutes\n### Checked for Existing Issues?\n\n- [ ] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n12.1.0\n\n### Early Access Program\n\n- [x] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n<img width=\"659\" height=\"472\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/ee74ed54-6a9e-4f5e-b62f-2313723f09b1\" />\n\n<img width=\"686\" height=\"176\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/669f4d52-f3c7-47ff-a5b6-2d17b1a45df5\" />\n\nWhen i turn MCP in Cursor settings off then on, it goes green and works great, but then red again in 5-10 min\n\n\n<img width=\"1148\" height=\"640\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/ad32d346-cd44-4d73-aac2-2c3997b1c68a\" />\n\n<img width=\"328\" height=\"432\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/6a1b648e-959e-4e90-8148-ce9646cfa8ba\" />\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 3.29
+        },
+        {
+          "id": 829,
+          "title": "Unable to open Pieces Settings Service",
+          "text": "Unable to open Pieces Settings Service\nError: Invalid argument(s): Type ZJb is already registered inside GetIt. \n\n**Installation Details**\n\nSucceeded: true\nPath: /Applications/Pieces OS.app\n\n**PiecesOS Information**\n\nID: 1CA2E830-F290-4091-8714-B38DE27CABCB\nUser: 32bc4ee9-918c-4562-b3d7-78c22d9dcebe\nCurrent Version: 12.1.1\nMin Version Supported: 12.1.0\nMax Version Supported: 13.0.0\nLocal Port: 39300\n\n**Device Information**\n\nOperating System: MacOS\nCurrent Version: Version 15.7 (Build 24G207)\nMin Version Supported: 12.0.0 Monterey\nAdditional Device Information: {cpu_list: [{\"architecture\":\"arm64\",\"cores\":8,\"logicalProcessors\":8,\"l1Cache\":{\"value\":65536,\"units\":\"Bytes\"},\"l2Cache\":{\"value\":4194304,\"units\":\"Bytes\"},\"description\":\"Apple M2\"}], gpu_list: [{\"type\":null,\"unifiedMemoryArchitecture\":true,\"cores\":10,\"dedicatedVRam\":null}], memory_info: {\"totalRAM\":{\"value\":8589934592,\"units\":\"Bytes\"}}, display_list: [{\"nativeHeight\":1664,\"nativeWidth\":2560,\"scaledHeight\":1112,\"scaledWidth\":1710,\"primary\":true}]}\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 8.83
+        }
+      ]
+    },
+    {
+      "title": "Pieces OS and Desktop App Installation and Upgrade Issues",
+      "description": "Users are experiencing problems with Pieces OS and Desktop App installation, upgrades, and Pro checkout. Issues include the \"Ensure core dependencies\" step failing, the checkout modal not opening, and the Pieces Copilot Service failing to open.  Check Pieces OS version compatibility, ensure a stable internet connection, and try reinstalling or restarting the application. Provide logs and device information for further assistance.",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 825,
+          "title": "Pieces Pro: checkout is not opening",
+          "text": "Pieces Pro: checkout is not opening\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n12.1.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nHi guys!\n\nI want to try a \"Pro\" plan, however the modal with payment is not opening and the button \"Upgrade Now\" turns to \"Awaiting checkout...\" and nothing happens. I've tried through the Desktop App, Pieces OS app - neither helped.\n\nCould you please advice?\n\nDefault Browser: Arc (if it helps)\n\n<img width=\"1023\" height=\"268\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/ed23d88c-a87f-4f87-8fad-9723ee11f6a6\" />\n\nPiecesOs Log Attached\n\n[log-08102025.txt](https://github.com/user-attachments/files/21704376/log-08102025.txt)\n\nPieces for Developers log string:\n\n```\n[D]  Checking PiecesOS Connection and Compatibility\n[D]  Checking PiecesOS Version Number via port: 39300\n[D]  Checking PiecesOS Connection and Compatibility\n[D]  Checking PiecesOS Version Number via port: 39300\n[D]  App Interaction: app_header_searchbar_settings_button_popover_button\n[D]  Checking PiecesOS Connection and Compatibility\n[D]  Checking PiecesOS Version Number via port: 39300\n[D]  Dispatching Route [DIALOG OPEN]: true\n[D]  Dispatching Route [SHEET OPEN]: false\n[D]  Dispatching Route [CURRENT ROUTE]: PiecesProInformationDialog\n[D]  Dispatching Route [ROUTE STACK]: [/workstream, PiecesProInformationDialog]\n[D]  Dispatching Route [ENTRY]: /\n[D]  Dispatching Route [HOME]: /workstream\n[D]  App Interaction: app_header_searchbar_settings_button_popover_upgrade_to_pro_button\n[D]  Dispatching Route [DIALOG OPEN]: false\n[D]  Dispatching Route [SHEET OPEN]: false\n[D]  Dispatching Route [CURRENT ROUTE]: /workstream\n[D]  Dispatching Route [ROUTE STACK]: [/workstream]\n[D]  Dispatching Route [ENTRY]: /\n[D]  Dispatching Route [HOME]: /workstream\n[D]  Checking PiecesOS Connection and Compatibility\n[D]  Checking PiecesOS Version Number via port: 39300\n```\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 5.38
+        },
+        {
+          "id": 809,
+          "title": "Ensure core dependencies; Retry Step",
+          "text": "Ensure core dependencies; Retry Step\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\n### Pieces OS, Desktop Application\n\n* Operating System / Platform: Linux\n\n* Pieces OS Version 4.3.1\n\n\n\n\n\nAfter installation, the \u201cInitialize Desktop App\u201d step has run successfully. The \u201cEnsure core dependencies\u201d step displays the message \u201cRetry Step\u201d.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 4.22
+        },
+        {
+          "id": 823,
+          "title": "Unable to open Pieces Copilot Service",
+          "text": "Unable to open Pieces Copilot Service\nError: Instance of 'fp'\n\n**Installation Details**\n\nSucceeded: true\nPath: /Applications/Pieces OS.app/Contents/MacOS/Pieces OS\n\n**PiecesOS Information**\n\nID: 7DC7A189-02A0-4345-A961-5E4F6FCCECE9\nUser: Anonymous\nCurrent Version: 11.0.4\nMin Version Supported: 11.2.2\nMax Version Supported: 12.0.0\nLocal Port: 39300\n\n**Device Information**\n\nOperating System: MacOS\nCurrent Version: Version 15.6 (Build 24G84)\nMin Version Supported: 12.0.0 Monterey\nAdditional Device Information: {cpu_list: [{\"architecture\":\"arm64\",\"cores\":8,\"logicalProcessors\":8,\"l1Cache\":{\"value\":65536,\"units\":\"Bytes\"},\"l2Cache\":{\"value\":4194304,\"units\":\"Bytes\"},\"description\":\"Apple M3\"}], gpu_list: [{\"type\":null,\"unifiedMemoryArchitecture\":true,\"cores\":10,\"dedicatedVRam\":null}], memory_info: {\"totalRAM\":{\"value\":17179869184,\"units\":\"Bytes\"}}, display_list: [{\"nativeHeight\":1864,\"nativeWidth\":2880,\"scaledHeight\":1107,\"scaledWidth\":1710,\"primary\":true}]}\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 4.84
+        }
+      ]
+    },
+    {
+      "title": "Pieces OS and Desktop App Issues",
+      "description": "Users are experiencing issues with Pieces OS and the Desktop App, including personal domain names reverting to null.pieces.cloud, \"Ensure core dependencies\" step failing, and the Pro plan checkout not opening.  The issues appear across Windows and Linux and may involve Pieces OS version 12.1.1 and Desktop App version 4.3.1. Further investigation is needed to identify the root causes and solutions.",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 817,
+          "title": "Filling out Personal Domain in Pieces OS leads to null.pieces.cloud",
+          "text": "Filling out Personal Domain in Pieces OS leads to null.pieces.cloud\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n12.1.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nHi,\nIf I edit the username of my personal domain, it takes a couple of minutes before it's named \"null.pieces.cloud.\"\nIt doesn't matter whether the username contains only letters or a combination of letters and numbers. No spaces or uppercase letters are used.\n\nI'm using the Desktop App Version 4.3.1\n\n<img width=\"596\" height=\"484\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/e2bd8443-fd90-4023-b58a-1cbf542f7e9f\" />\n\nRegards\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 4.17
+        },
+        {
+          "id": 809,
+          "title": "Ensure core dependencies; Retry Step",
+          "text": "Ensure core dependencies; Retry Step\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\n### Pieces OS, Desktop Application\n\n* Operating System / Platform: Linux\n\n* Pieces OS Version 4.3.1\n\n\n\n\n\nAfter installation, the \u201cInitialize Desktop App\u201d step has run successfully. The \u201cEnsure core dependencies\u201d step displays the message \u201cRetry Step\u201d.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 4.22
+        },
+        {
+          "id": 825,
+          "title": "Pieces Pro: checkout is not opening",
+          "text": "Pieces Pro: checkout is not opening\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n12.1.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nHi guys!\n\nI want to try a \"Pro\" plan, however the modal with payment is not opening and the button \"Upgrade Now\" turns to \"Awaiting checkout...\" and nothing happens. I've tried through the Desktop App, Pieces OS app - neither helped.\n\nCould you please advice?\n\nDefault Browser: Arc (if it helps)\n\n<img width=\"1023\" height=\"268\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/ed23d88c-a87f-4f87-8fad-9723ee11f6a6\" />\n\nPiecesOs Log Attached\n\n[log-08102025.txt](https://github.com/user-attachments/files/21704376/log-08102025.txt)\n\nPieces for Developers log string:\n\n```\n[D]  Checking PiecesOS Connection and Compatibility\n[D]  Checking PiecesOS Version Number via port: 39300\n[D]  Checking PiecesOS Connection and Compatibility\n[D]  Checking PiecesOS Version Number via port: 39300\n[D]  App Interaction: app_header_searchbar_settings_button_popover_button\n[D]  Checking PiecesOS Connection and Compatibility\n[D]  Checking PiecesOS Version Number via port: 39300\n[D]  Dispatching Route [DIALOG OPEN]: true\n[D]  Dispatching Route [SHEET OPEN]: false\n[D]  Dispatching Route [CURRENT ROUTE]: PiecesProInformationDialog\n[D]  Dispatching Route [ROUTE STACK]: [/workstream, PiecesProInformationDialog]\n[D]  Dispatching Route [ENTRY]: /\n[D]  Dispatching Route [HOME]: /workstream\n[D]  App Interaction: app_header_searchbar_settings_button_popover_upgrade_to_pro_button\n[D]  Dispatching Route [DIALOG OPEN]: false\n[D]  Dispatching Route [SHEET OPEN]: false\n[D]  Dispatching Route [CURRENT ROUTE]: /workstream\n[D]  Dispatching Route [ROUTE STACK]: [/workstream]\n[D]  Dispatching Route [ENTRY]: /\n[D]  Dispatching Route [HOME]: /workstream\n[D]  Checking PiecesOS Connection and Compatibility\n[D]  Checking PiecesOS Version Number via port: 39300\n```\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 5.38
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    "Prioritize resolving issues related to opening Pieces Copilot and Core Services on MacOS, focusing on potential port conflicts and version compatibility with MacOS 15.5, 15.6, and 15.7.",
+    "Investigate and address the \"Type ZJb is already registered inside GetIt\" error preventing users from opening the Pieces Settings Service on MacOS.",
+    "Address the issue of personal domain names reverting to null.pieces.cloud on Windows.",
+    "Troubleshoot and resolve the \"Ensure core dependencies\" step failure during Pieces OS and Desktop App installation on Linux.",
+    "Fix the Pro plan checkout modal not opening on Windows and MacOS, specifically investigating compatibility with the Arc browser.",
+    "Look into the reports of all hotkeys failing and producing the MacOS error sound for users on MacOS running Pieces OS 12.1.0.",
+    "Investigate the issue with MCP in Cursor repeatedly going down for users on MacOS running Pieces OS 12.1.0.",
+    "Address the inability to drag files into the conversation context."
+  ],
+  "message": "Daily support report generated successfully."
+}
