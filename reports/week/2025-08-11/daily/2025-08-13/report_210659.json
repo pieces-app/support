@@ -1,0 +1,162 @@
+{
+  "success": true,
+  "date_range": {
+    "start": "2025-08-13T00:00:00+00:00",
+    "end": "2025-08-13T21:06:59.211407+00:00"
+  },
+  "summary": {
+    "total_tickets": 4,
+    "resolved_tickets": 0,
+    "open_tickets": 4
+  },
+  "ticket_breakdown": [
+    {
+      "category": "app:desktop application",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "os:macos",
+      "received": 3,
+      "resolved": 0,
+      "pending": 3
+    },
+    {
+      "category": "app:pieces os",
+      "received": 4,
+      "resolved": 0,
+      "pending": 4
+    },
+    {
+      "category": "app:vs code",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "app:visual studio",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:sublime plugin",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:triaged",
+      "received": 4,
+      "resolved": 0,
+      "pending": 4
+    },
+    {
+      "category": "status:waiting_on_fix",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "bug",
+      "received": 3,
+      "resolved": 0,
+      "pending": 3
+    },
+    {
+      "category": "os:windows",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:waiting_on_user_responses",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    }
+  ],
+  "most_active_tickets": [
+    {
+      "number": 829,
+      "title": "Unable to open Pieces Settings Service",
+      "activity_level": 8.0
+    },
+    {
+      "number": 818,
+      "title": "Pro user's LLM cannot be upgraded to the latest version, even if they are chosen to",
+      "activity_level": 6.17
+    },
+    {
+      "number": 816,
+      "title": "Pieces Desktop Connection Leak",
+      "activity_level": 5.21
+    },
+    {
+      "number": 823,
+      "title": "Unable to open Pieces Copilot Service",
+      "activity_level": 5.17
+    }
+  ],
+  "common_issues": [
+    {
+      "title": "LLM Upgrade Failure for Pieces Pro Users",
+      "description": "Pieces Pro users on Windows 11 and MacOS are unable to upgrade their LLM to the latest version (Sonnet 4) despite selecting it in settings. The issue persists across Pieces for Developers, VS Code plugin, and Sublime plugin. Troubleshooting steps like restarting, re-login, changing network settings have been unsuccessful. Sublime plugin specifically reports using older Sonnet versions. Some users encounter errors related to Pieces Copilot or Settings Service.",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 818,
+          "title": "Pro user's LLM cannot be upgraded to the latest version, even if they are chosen to",
+          "text": "Pro user's LLM cannot be upgraded to the latest version, even if they are chosen to\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS, Visual Studio, Sublime Plugin, VS Code\n\n### Operating System / Platform\n\nWindows 11\n\n### Your Pieces OS Version\n\n12.1.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI have a small problem now that cannot be solved through LLM: \n\n- I have inquired with LLM in **pieces for developers** and **pieces vscode plugin**, and they all said they are Sonnet 3.5. \n- The pieces LLM in sublime (set claude 3.7 sonnet) keeps silence about this:\n      **Copilot**: I'm an AI assistant created by Anthropic named Claude, and my training data has a cutoff date. While I don't typically specify my exact version details, I can tell you that my knowledge cutoff is around late 2023. This means I don't have information about events, technologies, or developments that occurred after that time.\n\nHowever, \n\n- I just **upgraded to Pieces Pro yesterday** and have switched to Sonnet 4 (for all pieces IDE plugins and Desktop Apps, except for sublime which only support sonnet 3.7 till now). \n- Every test chat was opened in a new Chat after the LLM is switched( to Sonnet 4 or Gemini 2.5 Pro)... \n- I've checked the configuration files and they are all Sonnet 4 without any issues. \n- I have tried restarting my computer or logging in to my account again, but still have this bug\n- I have tried changing my computer and VPN node, including canceling or adding the global system proxy, but none of them worked\n\nPS: My pieces OS and pieces for developers are both installed in sequence on Microsoft Store. \n\n- They work well in other aspects.\n- I have been using them for about 7 days. \n- I am in Chinese Mainland, thus a heavy VPN user.\n\n## Pieces for Deveopers (desktop app) \n\n<img width=\"1901\" height=\"470\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/d492f2e4-d73a-4798-8539-c08d768245d9\" />\n\n<img width=\"2435\" height=\"1569\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/1ac35bd2-7f75-45dc-9e1a-3963f2fea275\" />\n\n## Vscode plugin\n\n<img width=\"714\" height=\"1795\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/367de66a-2b60-429f-884f-67ae238582c9\" />\n\n<img width=\"717\" height=\"1795\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/57f0c4f6-7a13-4491-a07e-682fb4caf422\" />\n\n## Sublime plugin\n\n<img width=\"2081\" height=\"1407\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/f2f60b23-19eb-4bc0-8dd3-5c1c462021b0\" />\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 6.17
+        },
+        {
+          "id": 823,
+          "title": "Unable to open Pieces Copilot Service",
+          "text": "Unable to open Pieces Copilot Service\nError: Instance of 'fp'\n\n**Installation Details**\n\nSucceeded: true\nPath: /Applications/Pieces OS.app/Contents/MacOS/Pieces OS\n\n**PiecesOS Information**\n\nID: 7DC7A189-02A0-4345-A961-5E4F6FCCECE9\nUser: Anonymous\nCurrent Version: 11.0.4\nMin Version Supported: 11.2.2\nMax Version Supported: 12.0.0\nLocal Port: 39300\n\n**Device Information**\n\nOperating System: MacOS\nCurrent Version: Version 15.6 (Build 24G84)\nMin Version Supported: 12.0.0 Monterey\nAdditional Device Information: {cpu_list: [{\"architecture\":\"arm64\",\"cores\":8,\"logicalProcessors\":8,\"l1Cache\":{\"value\":65536,\"units\":\"Bytes\"},\"l2Cache\":{\"value\":4194304,\"units\":\"Bytes\"},\"description\":\"Apple M3\"}], gpu_list: [{\"type\":null,\"unifiedMemoryArchitecture\":true,\"cores\":10,\"dedicatedVRam\":null}], memory_info: {\"totalRAM\":{\"value\":17179869184,\"units\":\"Bytes\"}}, display_list: [{\"nativeHeight\":1864,\"nativeWidth\":2880,\"scaledHeight\":1107,\"scaledWidth\":1710,\"primary\":true}]}\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 5.17
+        },
+        {
+          "id": 829,
+          "title": "Unable to open Pieces Settings Service",
+          "text": "Unable to open Pieces Settings Service\nError: Invalid argument(s): Type ZJb is already registered inside GetIt. \n\n**Installation Details**\n\nSucceeded: true\nPath: /Applications/Pieces OS.app\n\n**PiecesOS Information**\n\nID: 1CA2E830-F290-4091-8714-B38DE27CABCB\nUser: 32bc4ee9-918c-4562-b3d7-78c22d9dcebe\nCurrent Version: 12.1.1\nMin Version Supported: 12.1.0\nMax Version Supported: 13.0.0\nLocal Port: 39300\n\n**Device Information**\n\nOperating System: MacOS\nCurrent Version: Version 15.7 (Build 24G207)\nMin Version Supported: 12.0.0 Monterey\nAdditional Device Information: {cpu_list: [{\"architecture\":\"arm64\",\"cores\":8,\"logicalProcessors\":8,\"l1Cache\":{\"value\":65536,\"units\":\"Bytes\"},\"l2Cache\":{\"value\":4194304,\"units\":\"Bytes\"},\"description\":\"Apple M2\"}], gpu_list: [{\"type\":null,\"unifiedMemoryArchitecture\":true,\"cores\":10,\"dedicatedVRam\":null}], memory_info: {\"totalRAM\":{\"value\":8589934592,\"units\":\"Bytes\"}}, display_list: [{\"nativeHeight\":1664,\"nativeWidth\":2560,\"scaledHeight\":1112,\"scaledWidth\":1710,\"primary\":true}]}\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 8.0
+        }
+      ]
+    },
+    {
+      "title": "Pieces Desktop App Causes Connection Leaks",
+      "description": "Pieces Desktop app creates excessive connections to Pieces OS server, leading to connection leaks.  Temporary solutions include closing Pieces Desktop or restarting Pieces OS.  The Pieces for Developers and VS Code plugins may report incorrect LLM versions despite upgrades.  Users in China experience issues despite VPN and proxy adjustments.",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 816,
+          "title": "Pieces Desktop Connection Leak",
+          "text": "Pieces Desktop Connection Leak\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nPieces OS, Desktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nPieces for Developers 4.3.1 and Pieces OS 12.1.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI have pieces MCP server installed in my Windows vscode. Snippet below. I had issues with it stopping suddenly. With help of vscode github copilot we determined that it was connections were used up. Investigation yielded that when Pieces Desktop not running only two connections present. When I started Pieces Desktop connections jumped to 50.  Below the MCP config snippet is copy of github copilot working session.\n\n\"pieces\": {\n\t\"url\": \"http://localhost:39300/model_context_protocol/2024-11-05/sse\",\n\t\"type\": \"http\",\n\t\"gallery\": true,\n\t\"autoStart\": false,\n\t\"timeout\": 30000,\n\t\"retryDelay\": 5000,\n\t\"maxRetries\": 3\n}\n\nI have started pieces desktop app. I informed it of our changes which it concurs. Can you check connection status and health of pieces now that I have stared pieces desktop?\n\nI'll check the connection status and health of the Pieces MCP server now that you've started the Pieces desktop app.\n\n\u26a0\ufe0f The connection leak problem is back! Let me check which processes are involved:\n\nProblem Identified! \ud83d\udea8\nThe issue is that starting the Pieces Desktop app (pieces_for_x.exe) has re-created the connection leak problem:\n\nProcess 35956: os_server.exe (Pieces OS) - listening on port 39300\nProcess 29660: Code.exe (VS Code) - 1 connection (good)\nProcess 37316: pieces_for_x.exe (Pieces Desktop) - 50+ connections (bad!)\n\nThe Root Cause:\nThe Pieces Desktop application itself has a connection leak bug - it's creating excessive connections to the Pieces OS server, just like we saw before with VS Code.\n\nSolutions:\nOption 1: Temporary Fix (Close Pieces Desktop)\nOption 2: Keep Pieces Desktop but Monitor\nIf you need the Pieces Desktop app running, you can:\n\nMonitor connections periodically\nRestart Pieces OS periodically to clear leaks\nReport this as a bug to Pieces support\nLet's check if closing the desktop app fixed the connections:\n\nPerfect! Now let's test the MCP connection:\n\npieces (MCP Server)\nConnection Status: \u2705 HEALTHY!\nPerfect! The Pieces MCP server is now working correctly with excellent connection health:\n\nCurrent Status:\n\u2705 2 established connections (down from 50+)\n\u2705 MCP server responding successfully\n\u2705 Clean connection state with minimal overhead\n\u2705 No connection leaks\nRoot Cause Confirmed:\nThe issue was specifically with the Pieces Desktop application (pieces_for_x.exe) creating excessive connections. The Pieces OS (os_server.exe) and VS Code MCP integration work fine together.\n\nCurrent Working Configuration:\nPieces OS: Running and healthy\nVS Code MCP: Connected with proper timeout settings\nPieces Desktop: Stopped (to prevent connection leaks)\nToday's Work Context Retrieved:\nFrom the MCP response, I can see you're actively working on:\n\nDatabase Mapping Projects:\n\nGWM-22316: Map database tables to GWMS UI elements\nGWM-22318: Customer SVP database migration\nCustomer and facility screen analysis\nDevelopment Tools:\n\nVS Code with MCP integration\nOracle SQL Developer for database work\nTime tracking with Toggl and Clockk\nRecent Focus Areas:\n\nVite platform work\nKeycloak maintenance\nResearch flow documentation with LLMs\nRecommendation:\nKeep the current setup as-is:\n\n\u2705 Use Pieces OS for the MCP integration (working perfectly)\n\u26a0\ufe0f Avoid Pieces Desktop until they fix the connection leak bug\n\u2705 Monitor connections occasionally with netstat if needed\nThe MCP integration is now stable and providing excellent work context tracking without the connection leak issues!\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 5.21
+        },
+        {
+          "id": 818,
+          "title": "Pro user's LLM cannot be upgraded to the latest version, even if they are chosen to",
+          "text": "Pro user's LLM cannot be upgraded to the latest version, even if they are chosen to\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS, Visual Studio, Sublime Plugin, VS Code\n\n### Operating System / Platform\n\nWindows 11\n\n### Your Pieces OS Version\n\n12.1.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI have a small problem now that cannot be solved through LLM: \n\n- I have inquired with LLM in **pieces for developers** and **pieces vscode plugin**, and they all said they are Sonnet 3.5. \n- The pieces LLM in sublime (set claude 3.7 sonnet) keeps silence about this:\n      **Copilot**: I'm an AI assistant created by Anthropic named Claude, and my training data has a cutoff date. While I don't typically specify my exact version details, I can tell you that my knowledge cutoff is around late 2023. This means I don't have information about events, technologies, or developments that occurred after that time.\n\nHowever, \n\n- I just **upgraded to Pieces Pro yesterday** and have switched to Sonnet 4 (for all pieces IDE plugins and Desktop Apps, except for sublime which only support sonnet 3.7 till now). \n- Every test chat was opened in a new Chat after the LLM is switched( to Sonnet 4 or Gemini 2.5 Pro)... \n- I've checked the configuration files and they are all Sonnet 4 without any issues. \n- I have tried restarting my computer or logging in to my account again, but still have this bug\n- I have tried changing my computer and VPN node, including canceling or adding the global system proxy, but none of them worked\n\nPS: My pieces OS and pieces for developers are both installed in sequence on Microsoft Store. \n\n- They work well in other aspects.\n- I have been using them for about 7 days. \n- I am in Chinese Mainland, thus a heavy VPN user.\n\n## Pieces for Deveopers (desktop app) \n\n<img width=\"1901\" height=\"470\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/d492f2e4-d73a-4798-8539-c08d768245d9\" />\n\n<img width=\"2435\" height=\"1569\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/1ac35bd2-7f75-45dc-9e1a-3963f2fea275\" />\n\n## Vscode plugin\n\n<img width=\"714\" height=\"1795\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/367de66a-2b60-429f-884f-67ae238582c9\" />\n\n<img width=\"717\" height=\"1795\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/57f0c4f6-7a13-4491-a07e-682fb4caf422\" />\n\n## Sublime plugin\n\n<img width=\"2081\" height=\"1407\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/f2f60b23-19eb-4bc0-8dd3-5c1c462021b0\" />\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 6.17
+        },
+        {
+          "id": 823,
+          "title": "Unable to open Pieces Copilot Service",
+          "text": "Unable to open Pieces Copilot Service\nError: Instance of 'fp'\n\n**Installation Details**\n\nSucceeded: true\nPath: /Applications/Pieces OS.app/Contents/MacOS/Pieces OS\n\n**PiecesOS Information**\n\nID: 7DC7A189-02A0-4345-A961-5E4F6FCCECE9\nUser: Anonymous\nCurrent Version: 11.0.4\nMin Version Supported: 11.2.2\nMax Version Supported: 12.0.0\nLocal Port: 39300\n\n**Device Information**\n\nOperating System: MacOS\nCurrent Version: Version 15.6 (Build 24G84)\nMin Version Supported: 12.0.0 Monterey\nAdditional Device Information: {cpu_list: [{\"architecture\":\"arm64\",\"cores\":8,\"logicalProcessors\":8,\"l1Cache\":{\"value\":65536,\"units\":\"Bytes\"},\"l2Cache\":{\"value\":4194304,\"units\":\"Bytes\"},\"description\":\"Apple M3\"}], gpu_list: [{\"type\":null,\"unifiedMemoryArchitecture\":true,\"cores\":10,\"dedicatedVRam\":null}], memory_info: {\"totalRAM\":{\"value\":17179869184,\"units\":\"Bytes\"}}, display_list: [{\"nativeHeight\":1864,\"nativeWidth\":2880,\"scaledHeight\":1107,\"scaledWidth\":1710,\"primary\":true}]}\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 5.17
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    "Investigate and resolve the LLM upgrade failure for Pieces Pro users. This appears to be affecting multiple operating systems and plugins (Windows 11, MacOS, Pieces for Developers, VS Code, Sublime).",
+    "Address the connection leak issue with the Pieces Desktop app.  This is causing excessive connections to the Pieces OS server and impacting performance.",
+    "Prioritize resolution of issues related to Pieces Copilot and Settings Service, as these are critical components for user experience.",
+    "Improve communication with users in China, ensuring VPN and proxy settings do not interfere with Pieces functionality.",
+    "Investigate why incorrect LLM versions are being reported in Pieces for Developers and VS Code plugins despite upgrades."
+  ],
+  "message": "Daily support report generated successfully."
+}
