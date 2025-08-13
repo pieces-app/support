@@ -1,11 +1,11 @@
 # Support Ticket Report
-- Generated: 2025-08-12 21:11:20
-- Period: 2025-08-11 to 2025-08-12
+- Generated: 2025-08-13 05:11:35
+- Period: 2025-08-11 to 2025-08-13
 
 ## Summary
-- **Total Tickets:** 24
+- **Total Tickets:** 25
 - **Resolved:** 11
-- **Open:** 13
+- **Open:** 14
 
 ## 5 Most Active Tickets
 | Issue # | Title | Activity Level |
@@ -13,20 +13,20 @@
 | [#831](https://github.com/pieces-app/support/issues/831) | Unable to open Pieces Copilot Service | 9.15 |
 | [#829](https://github.com/pieces-app/support/issues/829) | Unable to open Pieces Settings Service | 8.83 |
 | [#805](https://github.com/pieces-app/support/issues/805) | Bug: Subscription is not showing up within the Application(cancelation + resubscription w/ a new plan) | 8.79 |
-| [#799](https://github.com/pieces-app/support/issues/799) | LTM not recording any new activities/Workstream Activity not updating | 7.20 |
+| [#799](https://github.com/pieces-app/support/issues/799) | LTM not recording any new activities/Workstream Activity not updating | 7.14 |
 | [#822](https://github.com/pieces-app/support/issues/822) | CANNOT drag a file into CONVERSATION CONTEXT | 5.61 |
 
 ## Common Issues
-### 1. Pieces OS macOS App LTM and Workstream Issues
-Users are experiencing problems with the Pieces OS macOS app, specifically with the LTM and Workstream functionalities. Issues include LTM queries taking too long or returning nothing, Workstream not updating, and inability to open Pieces Core Services.  Some users report success after clearing Pieces data, but the issue reoccurs.  A potential cause is the LTM becoming too large.  The "Clear LTM Data" button is also reported as not functioning.
+### 1. LTM and Workstream Issues on macOS
+Users on macOS are experiencing issues with LTM and Workstream functionality, including queries not returning results, slow performance, and failure to record new activities.  Some users report that clearing LTM data temporarily resolves the issue.  Additionally, Pro users are encountering errors suggesting they need to upgrade despite having a Pro subscription.  Further investigation is needed to determine the root cause and potential solutions.
 
 **Related Issues:**
 - [#805](https://github.com/pieces-app/support/issues/805): Bug: Subscription is not showing up within the Application(cancelation + resubscription w/ a new plan)
 - [#799](https://github.com/pieces-app/support/issues/799): LTM not recording any new activities/Workstream Activity not updating
-- [#773](https://github.com/pieces-app/support/issues/773): Unable to open Pieces Core Services
+- [#811](https://github.com/pieces-app/support/issues/811): I'm sorry. This feature requires Pieces Pro. Please upgrade your plan or change your LLM to continue.
 
 ### 2. PiecesOS services failing to open on MacOS
-Multiple users reported Pieces Settings and Core Services failing to open on MacOS.  Errors include "Type ZJb already registered" and websocket connection failures with 404 status code. Issues appear on MacOS 15.5 and 15.7 with Pieces OS versions 12.1.1 and Unknown. Check Pieces OS installation and port configuration. Ensure no conflicting applications are using port 39300.
+Multiple users reported Pieces Settings and Core Services failing to open on MacOS.  Errors include "Type ZJb already registered" and websocket connection failures with 404 status code. Issues appear on MacOS 15.5 and 15.7 with Pieces OS versions 12.1.1 and "Unknown". Potential solutions include reinstalling Pieces OS, checking firewall settings, and ensuring the correct local port is being used.
 
 **Related Issues:**
 - [#830](https://github.com/pieces-app/support/issues/830): Unable to open Pieces Settings Service
@@ -34,7 +34,7 @@ Multiple users reported Pieces Settings and Core Services failing to open on Mac
 - [#773](https://github.com/pieces-app/support/issues/773): Unable to open Pieces Core Services
 
 ### 3. Pieces Copilot Service fails to open on MacOS
-Users are unable to open the Pieces Copilot Service on MacOS.  Two distinct errors are observed: "Instance of 'fp'" and "HttpException: Connection reset by peer." Affected users are running MacOS versions 15.5 and 15.6 with Pieces OS versions 11.0.4 and 12.1.1. The issue might be related to Pieces OS version incompatibility or network connectivity problems. Check if Pieces OS is updated to the latest version and ensure a stable network connection. Further investigation is needed to pinpoint the root cause of the 'fp' instance error.
+Users are unable to open the Pieces Copilot Service on MacOS.  Two distinct errors are observed: "Instance of 'fp'" and "HttpException: Connection reset by peer."  The issue appears across different MacOS versions (15.5, 15.6) and Pieces OS versions (11.0.4, 12.1.1), with installations succeeding in all cases.  Potential solutions include checking network connectivity, ensuring the Pieces Copilot Service is running, and verifying compatibility between the Pieces OS and MacOS versions.
 
 **Related Issues:**
 - [#823](https://github.com/pieces-app/support/issues/823): Unable to open Pieces Copilot Service
@@ -42,7 +42,7 @@ Users are unable to open the Pieces Copilot Service on MacOS.  Two distinct erro
 - [#824](https://github.com/pieces-app/support/issues/824): Unable to open Pieces Copilot Service
 
 ### 4. Pieces Pro Upgrade and Connectivity Issues
-Users are experiencing difficulty upgrading to Pieces Pro, encountering unresponsive upgrade buttons and failure to open payment modals.  Additionally, some users report connectivity problems between Pieces OS and browser extensions, even with VPN configurations.  Further investigation into payment gateway integration and network connectivity is needed.
+Users are experiencing difficulty upgrading to Pieces Pro, with the checkout process failing to complete.  Additionally, some users report connectivity problems between Pieces OS and browser extensions, even with VPNs configured.  Further investigation is needed to determine the root cause and potential solutions.
 
 **Related Issues:**
 - [#825](https://github.com/pieces-app/support/issues/825): Pieces Pro: checkout is not opening
@@ -50,7 +50,7 @@ Users are experiencing difficulty upgrading to Pieces Pro, encountering unrespon
 - [#819](https://github.com/pieces-app/support/issues/819): Pieces extension for Chrome & edge cannot connect to pieces OS
 
 ### 5. Pieces Desktop Application Bugs
-Users are experiencing various bugs in the Pieces desktop application, including dragging files into conversation context, hotkeys not working, and automatic redirection to support on launch.  These issues span different operating systems (Windows and macOS) and Pieces OS versions (12.1.0, 12.1.1, 12.2.0).  Further investigation is needed to identify the root causes and solutions.
+Users are experiencing various bugs in the Pieces desktop application, including issues with dragging files into conversation context, non-functional hotkeys, and automatic redirection to support upon launch.  These problems span different operating systems (Windows and macOS) and Pieces OS versions (12.1.0, 12.1.1, 12.2.0). Further investigation is needed to identify the root causes and implement fixes.
 
 **Related Issues:**
 - [#822](https://github.com/pieces-app/support/issues/822): CANNOT drag a file into CONVERSATION CONTEXT
@@ -59,11 +59,12 @@ Users are experiencing various bugs in the Pieces desktop application, including
 
 
 ## Recommendations
-- Prioritize resolving issues related to Pieces OS macOS app's LTM and Workstream functionalities, focusing on improving query performance, ensuring Workstream updates, and fixing the "Clear LTM Data" button.
-- Investigate and address the problems preventing users from opening Pieces Core Services, Settings Service, and Copilot Service on MacOS, focusing on resolving websocket connection failures, port conflicts, and the "Type ZJb already registered" error.
-- Troubleshoot and fix the issues users are facing when upgrading to Pieces Pro, specifically the unresponsive upgrade button and payment modal failures.
-- Address the bugs reported in the Pieces desktop application, including file dragging into conversation context, non-functional hotkeys, and automatic redirection to support on launch.
-- Improve communication with users experiencing connectivity issues between Pieces OS and browser extensions, especially those using VPN configurations.
+- Prioritize resolving MacOS LTM and Workstream issues by investigating the root causes of query failures, slow performance, and Pro upgrade errors.
+- Address Pieces OS service failures on MacOS, focusing on "Type ZJb already registered" and websocket connection errors. Explore solutions like reinstallation, firewall checks, and port verification.
+- Investigate and resolve Pieces Copilot Service startup failures on MacOS, addressing "Instance of 'fp'" and "Connection reset by peer" errors. Check network connectivity and service status.
+- Troubleshoot Pieces Pro upgrade process failures and connectivity issues between Pieces OS and browser extensions, especially for users with VPNs.
+- Fix Pieces desktop application bugs related to file dragging, hotkeys, and automatic redirection to support on launch across Windows and MacOS.
+- Improve error handling and messaging within the Pieces application to provide more specific guidance to users experiencing issues.
 
 ## Daily Reports
 Here are the daily reports for this week:
