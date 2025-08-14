@@ -2,7 +2,7 @@
   "success": true,
   "date_range": {
     "start": "2025-08-11T00:00:00+00:00",
-    "end": "2025-08-13T21:07:38.028987+00:00"
+    "end": "2025-08-14T05:08:48.073443+00:00"
   },
   "summary": {
     "total_tickets": 25,
@@ -156,7 +156,7 @@
     {
       "number": 799,
       "title": "LTM not recording any new activities/Workstream Activity not updating",
-      "activity_level": 6.74
+      "activity_level": 6.68
     },
     {
       "number": 818,
@@ -267,7 +267,7 @@
   "common_issues": [
     {
       "title": "LTM and Workstream Issues on macOS",
-      "description": "Users on macOS are experiencing issues with LTM and Workstream functionality, including queries not returning results, slow performance, and failure to record new activities.  Some users report that clearing LTM data temporarily resolves the issue.  Additionally, Pro users are encountering errors suggesting they need to upgrade despite having a Pro subscription.",
+      "description": "Users on macOS are experiencing issues with LTM and Workstream functionality, including queries not returning results, slow performance, and failure to record new activities.  Some users report that clearing LTM data temporarily resolves the issue.  Additionally, Pro users are encountering errors related to subscription status despite having active subscriptions.",
       "frequency": 3,
       "related_issues": [
         {
@@ -280,7 +280,7 @@
           "id": 799,
           "title": "LTM not recording any new activities/Workstream Activity not updating",
           "text": "LTM not recording any new activities/Workstream Activity not updating\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n4.3.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nRecently installed, stopped working completely after recording for about 20 minutes. Tried restarting.\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 6.74
+          "activity_level": 6.68
         },
         {
           "id": 811,
@@ -342,7 +342,7 @@
     },
     {
       "title": "Pieces Copilot Service fails to open on MacOS",
-      "description": "Users are unable to open the Pieces Copilot Service on MacOS.  Two distinct errors are observed: 'Instance of 'fp'' and 'HttpException: Connection reset by peer'. Affected users are running MacOS versions 15.5 and 15.6 with Pieces OS versions 11.0.4 and 12.1.1. The issue might be related to Pieces OS version compatibility or network connectivity problems. Check for Pieces OS updates or firewall issues.",
+      "description": "Users are unable to open the Pieces Copilot Service on MacOS.  Two distinct errors are observed: \"Instance of 'fp'\" and \"HttpException: Connection reset by peer.\" Affected users are running MacOS versions 15.5 and 15.6 on Apple M3 processors.  Pieces OS versions range from 11.0.4 to 12.1.1.  Check Pieces OS version compatibility and ensure network connectivity.",
       "frequency": 3,
       "related_issues": [
         {
@@ -367,7 +367,7 @@
     },
     {
       "title": "Pieces OS 12.1.1 Bugs and Feature Requests",
-      "description": "Users report issues with copying code blocks, dragging files into conversation context, and upgrading to the latest LLM version (Sonnet 4). Copying inline code blocks behaves unexpectedly, and dragging files into the conversation context is not functioning.  Additionally, despite upgrading to Pieces Pro and selecting Sonnet 4, the LLM remains on Sonnet 3.5 in Pieces for Developers and VS Code plugin. A feature request has been made to allow partial copying of inline code blocks.",
+      "description": "Users report issues with copying inline and inter-line code blocks, dragging files into conversation context, and upgrading to the latest LLM version (Sonnet 4).  Suggested solutions include fixing copy/paste functionality, enabling file drag-and-drop, and ensuring LLM upgrades are applied correctly across all plugins and applications.",
       "frequency": 3,
       "related_issues": [
         {
@@ -392,12 +392,12 @@
     }
   ],
   "recommendations": [
-    "Prioritize resolving issues related to LTM and Workstream functionality on macOS, focusing on data handling and subscription recognition.",
-    "Investigate and address the recurring problems with PiecesOS services failing to open on MacOS, specifically the \"Type ZJb already registered\" and websocket connection errors.",
+    "Prioritize resolving issues related to LTM and Workstream functionality on macOS, focusing on data handling and subscription status errors.",
+    "Investigate and address the root cause of PiecesOS services failing to open on MacOS, including \"Type ZJb already registered\" and websocket connection failures.",
     "Fix the issue with Auto-Generated Context reverting to \"Medium\" in the Pieces desktop app on macOS.",
-    "Troubleshoot and resolve the problems preventing users from opening the Pieces Copilot Service on MacOS, addressing both the 'Instance of 'fp'' and 'Connection reset by peer' errors.",
-    "Address the bugs in Pieces OS 12.1.1 related to code block copying, file dragging into conversation context, and LLM version upgrades.",
-    "Improve communication with Pro users regarding LLM upgrades and ensure the selected LLM version is applied consistently across all platforms."
+    "Troubleshoot and resolve the problems preventing users from opening the Pieces Copilot Service on MacOS, addressing both \"Instance of 'fp'\" and \"Connection reset by peer\" errors.",
+    "Address bugs related to copying code blocks and dragging files into conversation context within Pieces OS 12.1.1.",
+    "Ensure consistent LLM upgrades across all plugins and applications, specifically addressing the issue where Pro users cannot upgrade to the latest Sonnet version."
   ],
   "message": "Daily support report generated successfully."
 }
