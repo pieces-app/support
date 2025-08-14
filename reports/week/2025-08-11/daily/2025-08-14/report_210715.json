@@ -1,0 +1,258 @@
+{
+  "success": true,
+  "date_range": {
+    "start": "2025-08-14T00:00:00+00:00",
+    "end": "2025-08-14T21:07:15.106778+00:00"
+  },
+  "summary": {
+    "total_tickets": 10,
+    "resolved_tickets": 0,
+    "open_tickets": 10
+  },
+  "ticket_breakdown": [
+    {
+      "category": "status:triaged",
+      "received": 10,
+      "resolved": 0,
+      "pending": 10
+    },
+    {
+      "category": "status:pending_user_confirmation",
+      "received": 3,
+      "resolved": 0,
+      "pending": 3
+    },
+    {
+      "category": "update with fix released and available",
+      "received": 4,
+      "resolved": 0,
+      "pending": 4
+    },
+    {
+      "category": "bug",
+      "received": 8,
+      "resolved": 0,
+      "pending": 8
+    },
+    {
+      "category": "os:windows",
+      "received": 4,
+      "resolved": 0,
+      "pending": 4
+    },
+    {
+      "category": "app:desktop application",
+      "received": 8,
+      "resolved": 0,
+      "pending": 8
+    },
+    {
+      "category": "app:pieces os",
+      "received": 6,
+      "resolved": 0,
+      "pending": 6
+    },
+    {
+      "category": "os:macos",
+      "received": 5,
+      "resolved": 0,
+      "pending": 5
+    },
+    {
+      "category": "app:vs code",
+      "received": 3,
+      "resolved": 0,
+      "pending": 3
+    },
+    {
+      "category": "ongoing",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:visual studio",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:sublime plugin",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:waiting_on_user_responses",
+      "received": 3,
+      "resolved": 0,
+      "pending": 3
+    }
+  ],
+  "most_active_tickets": [
+    {
+      "number": 810,
+      "title": "MCP Server SSE Connection Hangs - No Tools Available in Claude Code",
+      "activity_level": 6.65
+    },
+    {
+      "number": 818,
+      "title": "Pro user's LLM cannot be upgraded to the latest version, even if they are chosen to",
+      "activity_level": 5.84
+    },
+    {
+      "number": 816,
+      "title": "Pieces Desktop Connection Leak",
+      "activity_level": 5.57
+    },
+    {
+      "number": 811,
+      "title": "I'm sorry. This feature requires Pieces Pro. Please upgrade your plan or change your LLM to continue.",
+      "activity_level": 4.74
+    },
+    {
+      "number": 817,
+      "title": "Filling out Personal Domain in Pieces OS leads to null.pieces.cloud",
+      "activity_level": 4.36
+    },
+    {
+      "number": 815,
+      "title": "Failed sharing my snippets using a link or GitHub gist.",
+      "activity_level": 3.91
+    },
+    {
+      "number": 808,
+      "title": "Unable to upgrade subscription",
+      "activity_level": 3.67
+    },
+    {
+      "number": 801,
+      "title": "Auto Generated Context Always returns to Medium",
+      "activity_level": 3.46
+    },
+    {
+      "number": 796,
+      "title": "MCP goes down in Cursor every 5-10 minutes",
+      "activity_level": 3.24
+    },
+    {
+      "number": 804,
+      "title": "Unable to generate Workstream Summary",
+      "activity_level": 2.47
+    }
+  ],
+  "common_issues": [
+    {
+      "title": "Pieces Pro LLM Upgrade and Feature Access Issues",
+      "description": "Users are experiencing difficulties upgrading to or accessing features of Pieces Pro LLMs, such as Sonnet 4, across different Pieces IDE plugins (VS Code, Sublime) and Desktop Apps.  Issues include incorrect LLM version reporting, Pro features being unavailable despite subscription, and MCP server connection problems.  Troubleshooting steps include verifying configuration files, restarting applications and systems, checking network connectivity, and ensuring the Pieces Pro subscription is active.",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 818,
+          "title": "Pro user's LLM cannot be upgraded to the latest version, even if they are chosen to",
+          "text": "Pro user's LLM cannot be upgraded to the latest version, even if they are chosen to\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS, Visual Studio, Sublime Plugin, VS Code\n\n### Operating System / Platform\n\nWindows 11\n\n### Your Pieces OS Version\n\n12.1.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI have a small problem now that cannot be solved through LLM: \n\n- I have inquired with LLM in **pieces for developers** and **pieces vscode plugin**, and they all said they are Sonnet 3.5. \n- The pieces LLM in sublime (set claude 3.7 sonnet) keeps silence about this:\n      **Copilot**: I'm an AI assistant created by Anthropic named Claude, and my training data has a cutoff date. While I don't typically specify my exact version details, I can tell you that my knowledge cutoff is around late 2023. This means I don't have information about events, technologies, or developments that occurred after that time.\n\nHowever, \n\n- I just **upgraded to Pieces Pro yesterday** and have switched to Sonnet 4 (for all pieces IDE plugins and Desktop Apps, except for sublime which only support sonnet 3.7 till now). \n- Every test chat was opened in a new Chat after the LLM is switched( to Sonnet 4 or Gemini 2.5 Pro)... \n- I've checked the configuration files and they are all Sonnet 4 without any issues. \n- I have tried restarting my computer or logging in to my account again, but still have this bug\n- I have tried changing my computer and VPN node, including canceling or adding the global system proxy, but none of them worked\n\nPS: My pieces OS and pieces for developers are both installed in sequence on Microsoft Store. \n\n- They work well in other aspects.\n- I have been using them for about 7 days. \n- I am in Chinese Mainland, thus a heavy VPN user.\n\n## Pieces for Deveopers (desktop app) \n\n<img width=\"1901\" height=\"470\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/d492f2e4-d73a-4798-8539-c08d768245d9\" />\n\n<img width=\"2435\" height=\"1569\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/1ac35bd2-7f75-45dc-9e1a-3963f2fea275\" />\n\n## Vscode plugin\n\n<img width=\"714\" height=\"1795\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/367de66a-2b60-429f-884f-67ae238582c9\" />\n\n<img width=\"717\" height=\"1795\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/57f0c4f6-7a13-4491-a07e-682fb4caf422\" />\n\n## Sublime plugin\n\n<img width=\"2081\" height=\"1407\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/f2f60b23-19eb-4bc0-8dd3-5c1c462021b0\" />\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 5.84
+        },
+        {
+          "id": 811,
+          "title": "I'm sorry. This feature requires Pieces Pro. Please upgrade your plan or change your LLM to continue.",
+          "text": "I'm sorry. This feature requires Pieces Pro. Please upgrade your plan or change your LLM to continue.\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n12.1.1\n\n### Early Access Program\n\n- [x] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWhen using Pieces I asked, \"what did I work today?\" and I received an error that says `I'm sorry. This feature requires Pieces Pro. Please upgrade your plan or change your LLM to continue.`  When I have paid for pro and am signed in. What I expect is that I can use my paid pro membership to run query and not receive an error.\n\n![Image](https://github.com/user-attachments/assets/846a4e3e-9e24-4e51-81ce-061a22e921ec)\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 4.74
+        },
+        {
+          "id": 810,
+          "title": "MCP Server SSE Connection Hangs - No Tools Available in Claude Code",
+          "text": "MCP Server SSE Connection Hangs - No Tools Available in Claude Code\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS, VS Code\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n12.1.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nThe Pieces MCP server fails to properly integrate with Claude Code within VSCode. While the SSE endpoint responds initially, it hangs indefinitely, preventing MCP tools from being registered or used. This affects Claude Code integration both as a standalone CLI and when used within VS Code.\n\n**Steps to Reproduce:**\n1. Install Pieces OS and Pieces app\n2. Login in the app\n3. Configure MCP in Claude Code's ~/.claude.json:\n\n```json\n{\n  \"pieces\": {\n    \"type\": \"sse\",\n    \"url\": \"http://localhost:39300/model_context_protocol/2024-11-05/sse\"\n}\n```\n\n4. Attempt to use Pieces MCP tools (e.g., mcp__pieces__ask_pieces_ltm) in Claude Code\n5. Tools are not available despite server being configured\n6. Same issue occurs whether using Claude Code in terminal or integrated with VS Code\n\n**Technical Details:**\n- SSE endpoint (http://localhost:39300/model_context_protocol/2024-11-05/sse) responds with:\n\n```\nevent: endpoint\ndata: /model_context_protocol/2024-11-05/messages\n```\n\n- Connection then hangs indefinitely (SSE buffering issue)\n- Both Pieces OS and Pieces app processes are running\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 6.65
+        }
+      ]
+    },
+    {
+      "title": "Pieces Desktop and OS Intermittently Fail",
+      "description": "Pieces Desktop app on MacOS and Windows experiences MCP connection drops every 5-10 minutes and connection leaks.  A temporary workaround involves toggling MCP in Cursor settings or restarting Pieces OS. Additionally, auto-generated context settings in Machine Learning revert to \"Medium\" after app or OS updates. The root cause appears to be Pieces Desktop, with a potential connection leak bug requiring further investigation.",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 796,
+          "title": "MCP goes down in Cursor every 5-10 minutes",
+          "text": "MCP goes down in Cursor every 5-10 minutes\n### Checked for Existing Issues?\n\n- [ ] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n12.1.0\n\n### Early Access Program\n\n- [x] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n<img width=\"659\" height=\"472\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/ee74ed54-6a9e-4f5e-b62f-2313723f09b1\" />\n\n<img width=\"686\" height=\"176\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/669f4d52-f3c7-47ff-a5b6-2d17b1a45df5\" />\n\nWhen i turn MCP in Cursor settings off then on, it goes green and works great, but then red again in 5-10 min\n\n\n<img width=\"1148\" height=\"640\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/ad32d346-cd44-4d73-aac2-2c3997b1c68a\" />\n\n<img width=\"328\" height=\"432\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/6a1b648e-959e-4e90-8148-ce9646cfa8ba\" />\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 3.24
+        },
+        {
+          "id": 816,
+          "title": "Pieces Desktop Connection Leak",
+          "text": "Pieces Desktop Connection Leak\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nPieces OS, Desktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nPieces for Developers 4.3.1 and Pieces OS 12.1.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI have pieces MCP server installed in my Windows vscode. Snippet below. I had issues with it stopping suddenly. With help of vscode github copilot we determined that it was connections were used up. Investigation yielded that when Pieces Desktop not running only two connections present. When I started Pieces Desktop connections jumped to 50.  Below the MCP config snippet is copy of github copilot working session.\n\n\"pieces\": {\n\t\"url\": \"http://localhost:39300/model_context_protocol/2024-11-05/sse\",\n\t\"type\": \"http\",\n\t\"gallery\": true,\n\t\"autoStart\": false,\n\t\"timeout\": 30000,\n\t\"retryDelay\": 5000,\n\t\"maxRetries\": 3\n}\n\nI have started pieces desktop app. I informed it of our changes which it concurs. Can you check connection status and health of pieces now that I have stared pieces desktop?\n\nI'll check the connection status and health of the Pieces MCP server now that you've started the Pieces desktop app.\n\n\u26a0\ufe0f The connection leak problem is back! Let me check which processes are involved:\n\nProblem Identified! \ud83d\udea8\nThe issue is that starting the Pieces Desktop app (pieces_for_x.exe) has re-created the connection leak problem:\n\nProcess 35956: os_server.exe (Pieces OS) - listening on port 39300\nProcess 29660: Code.exe (VS Code) - 1 connection (good)\nProcess 37316: pieces_for_x.exe (Pieces Desktop) - 50+ connections (bad!)\n\nThe Root Cause:\nThe Pieces Desktop application itself has a connection leak bug - it's creating excessive connections to the Pieces OS server, just like we saw before with VS Code.\n\nSolutions:\nOption 1: Temporary Fix (Close Pieces Desktop)\nOption 2: Keep Pieces Desktop but Monitor\nIf you need the Pieces Desktop app running, you can:\n\nMonitor connections periodically\nRestart Pieces OS periodically to clear leaks\nReport this as a bug to Pieces support\nLet's check if closing the desktop app fixed the connections:\n\nPerfect! Now let's test the MCP connection:\n\npieces (MCP Server)\nConnection Status: \u2705 HEALTHY!\nPerfect! The Pieces MCP server is now working correctly with excellent connection health:\n\nCurrent Status:\n\u2705 2 established connections (down from 50+)\n\u2705 MCP server responding successfully\n\u2705 Clean connection state with minimal overhead\n\u2705 No connection leaks\nRoot Cause Confirmed:\nThe issue was specifically with the Pieces Desktop application (pieces_for_x.exe) creating excessive connections. The Pieces OS (os_server.exe) and VS Code MCP integration work fine together.\n\nCurrent Working Configuration:\nPieces OS: Running and healthy\nVS Code MCP: Connected with proper timeout settings\nPieces Desktop: Stopped (to prevent connection leaks)\nToday's Work Context Retrieved:\nFrom the MCP response, I can see you're actively working on:\n\nDatabase Mapping Projects:\n\nGWM-22316: Map database tables to GWMS UI elements\nGWM-22318: Customer SVP database migration\nCustomer and facility screen analysis\nDevelopment Tools:\n\nVS Code with MCP integration\nOracle SQL Developer for database work\nTime tracking with Toggl and Clockk\nRecent Focus Areas:\n\nVite platform work\nKeycloak maintenance\nResearch flow documentation with LLMs\nRecommendation:\nKeep the current setup as-is:\n\n\u2705 Use Pieces OS for the MCP integration (working perfectly)\n\u26a0\ufe0f Avoid Pieces Desktop until they fix the connection leak bug\n\u2705 Monitor connections occasionally with netstat if needed\nThe MCP integration is now stable and providing excellent work context tracking without the connection leak issues!\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 5.57
+        },
+        {
+          "id": 801,
+          "title": "Auto Generated Context Always returns to Medium",
+          "text": "Auto Generated Context Always returns to Medium\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\nPlatform MacOS Version 15.5 (Build 24F74)\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nHello!\n\nThis is an issue that I've seen happen in all of the builds since I've started using pieces. When changing the Auto-Generated Context (Saved Material Enrichment) option in Machine Learning from the menu, in my case I want it to be \"High\", but every time I change it, when I check the next day or any time later, or every time the app or os updates, the option selected goes back to \"Medium\". So I don't actually even know if it ever used \"High\", because it always returns the option to \"Medium\".\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 3.46
+        }
+      ]
+    },
+    {
+      "title": "Pieces OS and Desktop App Bugs",
+      "description": "Users are experiencing issues with Pieces OS and the Desktop application, including personal domain names reverting to null.pieces.cloud, auto-generated context settings not persisting, and sharing snippets via link or GitHub gist failing.  Further investigation is needed to identify the root causes and solutions for these diverse issues across different operating systems (Windows and macOS).",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 817,
+          "title": "Filling out Personal Domain in Pieces OS leads to null.pieces.cloud",
+          "text": "Filling out Personal Domain in Pieces OS leads to null.pieces.cloud\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n12.1.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nHi,\nIf I edit the username of my personal domain, it takes a couple of minutes before it's named \"null.pieces.cloud.\"\nIt doesn't matter whether the username contains only letters or a combination of letters and numbers. No spaces or uppercase letters are used.\n\nI'm using the Desktop App Version 4.3.1\n\n<img width=\"596\" height=\"484\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/e2bd8443-fd90-4023-b58a-1cbf542f7e9f\" />\n\nRegards\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 4.36
+        },
+        {
+          "id": 801,
+          "title": "Auto Generated Context Always returns to Medium",
+          "text": "Auto Generated Context Always returns to Medium\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\nPlatform MacOS Version 15.5 (Build 24F74)\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nHello!\n\nThis is an issue that I've seen happen in all of the builds since I've started using pieces. When changing the Auto-Generated Context (Saved Material Enrichment) option in Machine Learning from the menu, in my case I want it to be \"High\", but every time I change it, when I check the next day or any time later, or every time the app or os updates, the option selected goes back to \"Medium\". So I don't actually even know if it ever used \"High\", because it always returns the option to \"Medium\".\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 3.46
+        },
+        {
+          "id": 815,
+          "title": "Failed sharing my snippets using a link or GitHub gist.",
+          "text": "Failed sharing my snippets using a link or GitHub gist.\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n12.1.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWhen trying to share my code snippets using a link or through GitHub gi\n\n<img width=\"1315\" height=\"735\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/7c3b232b-611d-4b81-94f5-5f0249c98f89\" />\n\nst, it fails.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 3.91
+        }
+      ]
+    },
+    {
+      "title": "Pieces OS 12.1.1: 404 Error with Gemini-Pro Model",
+      "description": "Users are experiencing issues with Pieces OS 12.1.1 due to a 404 error indicating the Gemini-Pro model is not found or inaccessible. This affects features like Workstream Summary generation, snippet sharing, and subscription upgrades. The error message suggests verifying model version validity and project access.  Users should check their Pieces OS installation and ensure they have the necessary permissions to access the Gemini-Pro model.",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 804,
+          "title": "Unable to generate Workstream Summary",
+          "text": "Unable to generate Workstream Summary\nError: ApiException 500: WorkstreamSummaries create summary workstreamSummary failed.\n\n**Installation Details**\n\nSucceeded: true\nPath: C:\\Program Files\\WindowsApps\\MeshIntelligentTechnologi.PiecesOS_12.1.1.0_x64__xpmeezj2q5frg/os_server.exe\n\n**PiecesOS Information**\n\nID: 20cd224c-2120-4b05-9f37-659a5a84faa4\nUser: 0cadaaa2-8deb-42cf-9aaa-0c0a130037cf\nCurrent Version: 12.1.1\nMin Version Supported: 12.0.0\nMax Version Supported: 13.0.0\nLocal Port: 39300\n\n**Device Information**\n\nOperating System: Windows\nCurrent Version: \"Windows 10 Enterprise\" 10.0 (Build 26200)\nMin Version Supported: Windows 10 Build 1903\nAdditional Device Information: {cpu_list: [{\"architecture\":\"x64\",\"cores\":8,\"logicalProcessors\":16,\"l2Cache\":{\"value\":4096,\"units\":\"Bytes\"},\"l3Cache\":{\"value\":16384,\"units\":\"Bytes\"},\"description\":\"AMD Ryzen 7 2700X Eight-Core Processor         \"}], gpu_list: [{\"type\":\"Radeon RX 590 Series\",\"unifiedMemoryArchitecture\":null,\"cores\":null,\"dedicatedVRam\":{\"value\":8531038208,\"units\":\"Bytes\"}}, {\"type\":\"Microsoft Basic Render Driver\",\"unifiedMemoryArchitecture\":null,\"cores\":null,\"dedicatedVRam\":{\"value\":0,\"units\":\"Bytes\"}}], npu_list: [], memory_info: {\"totalRAM\":{\"value\":33554432,\"units\":\"KB\"}}, display_list: [{\"nativeHeight\":1080,\"nativeWidth\":1920,\"scaledHeight\":1080,\"scaledWidth\":1920,\"primary\":true}]}\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 2.47
+        },
+        {
+          "id": 815,
+          "title": "Failed sharing my snippets using a link or GitHub gist.",
+          "text": "Failed sharing my snippets using a link or GitHub gist.\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n12.1.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWhen trying to share my code snippets using a link or through GitHub gi\n\n<img width=\"1315\" height=\"735\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/7c3b232b-611d-4b81-94f5-5f0249c98f89\" />\n\nst, it fails.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 3.91
+        },
+        {
+          "id": 808,
+          "title": "Unable to upgrade subscription",
+          "text": "Unable to upgrade subscription\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n12.1.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nEvery time I click \"Upgrade\" from ANYWHERE - to upgrade to pro, it leads to a page that is blank except for a minimal table, like the bones of a cart checkout view, with like price, subtotal, total, etc. except there are no words, and all the values are 0.00 (zero dollars).. it stays like this for a minute, then says it isn't working properly and returns to the desktop view or the view I was in before. \n\nbeen happening for weeks\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 3.67
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    "Prioritize resolving the 'Pieces Pro LLM Upgrade and Feature Access Issues' as it impacts paying users and affects multiple Pieces products.",
+    "Investigate and address the 'MCP Server SSE Connection Hangs' issue to ensure proper integration with Claude Code and other tools.",
+    "Fix the 'Pieces Desktop Connection Leak' bug to improve stability and user experience.",
+    "Address the recurring issue of auto-generated context settings reverting to 'Medium' to respect user preferences.",
+    "Resolve the personal domain name bug where it reverts to 'null.pieces.cloud'.",
+    "Troubleshoot and fix the snippet sharing failure via link or GitHub gist.",
+    "Investigate and resolve the subscription upgrade failure to ensure smooth user onboarding for Pieces Pro.",
+    "Address the 404 error related to the Gemini-Pro model in Pieces OS 12.1.1 to restore affected functionalities.",
+    "Improve communication with users regarding ongoing issues and expected resolution timelines."
+  ],
+  "message": "Daily support report generated successfully."
+}
