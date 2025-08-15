@@ -2,7 +2,7 @@
   "success": true,
   "date_range": {
     "start": "2025-08-11T00:00:00+00:00",
-    "end": "2025-08-14T21:08:21.989984+00:00"
+    "end": "2025-08-15T05:08:40.182311+00:00"
   },
   "summary": {
     "total_tickets": 28,
@@ -155,14 +155,14 @@
       "activity_level": 6.89
     },
     {
-      "number": 799,
-      "title": "LTM not recording any new activities/Workstream Activity not updating",
-      "activity_level": 6.68
-    },
-    {
       "number": 810,
       "title": "MCP Server SSE Connection Hangs - No Tools Available in Claude Code",
       "activity_level": 6.65
+    },
+    {
+      "number": 799,
+      "title": "LTM not recording any new activities/Workstream Activity not updating",
+      "activity_level": 6.63
     },
     {
       "number": 818,
@@ -288,7 +288,7 @@
   "common_issues": [
     {
       "title": "LTM and Workstream Issues on macOS",
-      "description": "Users on macOS are experiencing issues with LTM and Workstream functionality, including queries not returning results, slow performance, and failure to record new activities.  Some users encounter \"Pro membership required\" errors despite having a Pro subscription.  Potential solutions include clearing LTM data (although the button is reported as not working), reinstalling the app, and verifying Pro subscription status.",
+      "description": "Users on macOS are experiencing issues with LTM and Workstream functionality, including queries not returning results, slow performance, and failure to record new activities.  Some users report that clearing LTM data temporarily resolves the issue.  Additionally, Pro users are encountering errors suggesting they need to upgrade despite having a Pro subscription.  Further investigation is needed to determine the root cause and potential solutions.",
       "frequency": 3,
       "related_issues": [
         {
@@ -301,7 +301,7 @@
           "id": 799,
           "title": "LTM not recording any new activities/Workstream Activity not updating",
           "text": "LTM not recording any new activities/Workstream Activity not updating\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n4.3.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nRecently installed, stopped working completely after recording for about 20 minutes. Tried restarting.\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 6.68
+          "activity_level": 6.63
         },
         {
           "id": 811,
@@ -313,7 +313,7 @@
     },
     {
       "title": "Pieces MCP connection instability across multiple applications",
-      "description": "Users report Pieces MCP connections becoming unstable or hanging within VS Code, Cursor, and Claude Code.  Common symptoms include tools not appearing, connections dropping after a few minutes, and excessive connections from the Pieces Desktop app.  Suggested workarounds include restarting Pieces OS or the affected application, monitoring connections, and disabling the Pieces Desktop app. The underlying issue appears related to connection management and potential leaks.",
+      "description": "Users report Pieces MCP connections becoming unstable or hanging in VS Code, Cursor, and Claude Code. Issues include connection leaks associated with the Pieces Desktop app, SSE endpoint hangs, and intermittent failures.  Suggested workarounds involve restarting Pieces OS or the Desktop app, monitoring connections, and verifying configuration. The Pieces Desktop app is a recurring factor in connection issues.",
       "frequency": 3,
       "related_issues": [
         {
@@ -338,7 +338,7 @@
     },
     {
       "title": "Pieces Pro Features Inaccessible Despite Upgrade",
-      "description": "Users report being unable to access Pieces Pro features after upgrading. Issues include LLM not upgrading to the latest version, browser extensions failing to connect to Pieces OS, and \"Pro required\" errors for Pro users.  Common factors include recent Pro upgrade, VPN use (especially in China), and use of various Pieces platforms (desktop, VS Code, Sublime).  Troubleshooting steps like restarting, re-login, and proxy adjustments haven't resolved the problems.",
+      "description": "Users are reporting inability to access Pieces Pro features even after upgrading. Issues include LLM not upgrading to the latest version, browser extensions failing to connect to Pieces OS, and \"Pro required\" errors for Pro users.  Common factors include recent Pro upgrade, VPN use (especially in China), and using Pieces OS 12.1.1.  Troubleshooting steps like restarting, re-login, and VPN adjustments haven't resolved the problems. Some users encounter issues across multiple Pieces components (desktop, VS Code, Sublime plugins).",
       "frequency": 3,
       "related_issues": [
         {
@@ -363,7 +363,7 @@
     },
     {
       "title": "Pieces Copilot Service fails to open on MacOS",
-      "description": "Users are unable to open the Pieces Copilot Service on MacOS.  Two distinct errors are observed: \"Instance of 'fp'\" and \"HttpException: Connection reset by peer.\" Affected users are running MacOS versions 15.5 and 15.6 with Pieces OS versions 11.0.4 and 12.1.1. The issue might be related to Pieces OS version compatibility or network connectivity problems. Check for Pieces OS updates and ensure the local port 39300 is accessible.",
+      "description": "Users are unable to open the Pieces Copilot Service on MacOS.  Two distinct errors are observed: \"Instance of 'fp'\" and \"HttpException: Connection reset by peer.\" Affected users are running MacOS versions 15.5 and 15.6 with Pieces OS versions 11.0.4 and 12.1.1. The issue may be related to Pieces OS version compatibility or network connectivity problems. Check for Pieces OS updates and ensure the local port (39300) is accessible.",
       "frequency": 3,
       "related_issues": [
         {
@@ -387,8 +387,8 @@
       ]
     },
     {
-      "title": "Pieces Desktop and OS Intermittently Fail",
-      "description": "Pieces Desktop app on MacOS and Windows experiences MCP connection drops every 5-10 minutes and connection leaks when the desktop app is running.  Additionally, auto-generated context settings in Machine Learning revert to \"Medium\".  Workarounds include toggling MCP, restarting Pieces OS, and manually re-setting context settings. The root cause appears to be Pieces Desktop app's interaction with Pieces OS.",
+      "title": "Pieces Desktop and OS exhibit connection and setting persistence issues",
+      "description": "Users report connection leaks with Pieces Desktop on Windows and macOS, causing MCP to disconnect every 5-10 minutes.  A high number of connections from the Desktop app to the OS server is observed.  Additionally, the Auto-Generated Context setting in Machine Learning resets to \"Medium\" despite user changes.  Workarounds include closing Pieces Desktop, monitoring connections, restarting Pieces OS, and repeatedly changing the setting.",
       "frequency": 3,
       "related_issues": [
         {
@@ -413,11 +413,14 @@
     }
   ],
   "recommendations": [
-    "Prioritize resolving MCP connection instability issues across VS Code, Cursor, and Claude Code to improve user experience with integrations.",
-    "Investigate and address the root cause of LTM and Workstream issues on macOS, focusing on query performance, data clearing functionality, and \"Pro membership required\" errors.",
-    "Address Pieces Pro accessibility issues after upgrade, including LLM version discrepancies, browser extension connectivity, and persistent \"Pro required\" errors, especially for users in China.",
-    "Fix Pieces Copilot Service startup failures on MacOS, addressing both \"Instance of 'fp'\" and \"Connection reset by peer\" errors, potentially by improving version compatibility checks.",
-    "Resolve Pieces Desktop and OS intermittent failures, focusing on MCP connection drops, connection leaks, and auto-generated context settings reverting to default, to ensure stable performance."
+    "Prioritize resolving the 'Pieces MCP connection instability' issue as it impacts multiple applications and has a high frequency.  Focus on identifying the root cause of connection leaks associated with the Pieces Desktop app.",
+    "Address the 'Pieces Pro Features Inaccessible Despite Upgrade' issue, particularly for users on macOS and those using VPNs. Investigate LLM upgrade failures, browser extension connection problems, and \"Pro required\" errors.",
+    "Investigate the two distinct errors preventing users from opening the Pieces Copilot Service on MacOS ('Instance of 'fp'' and 'HttpException: Connection reset by peer'). Check for Pieces OS version compatibility issues.",
+    "Address the 'LTM and Workstream Issues on macOS' to improve core product functionality. Focus on query failures, slow performance, and the non-functional 'Clear LTM Data' button.",
+    "Improve communication with Pro users experiencing issues. Provide clear troubleshooting steps and updates on resolution progress.  Consider offering temporary workarounds while fixes are being developed.",
+    "Review and improve error messaging, particularly around Pro features and LTM issues. Provide more specific error codes and guidance to help users and support staff diagnose problems.",
+    "Monitor the 'Auto-Generated Context' setting issue and determine why it resets to 'Medium'.  This may indicate a broader problem with settings persistence.",
+    "Investigate the high number of open tickets related to Pieces Desktop and Pieces OS.  This suggests underlying stability and usability problems that need to be addressed."
   ],
   "message": "Daily support report generated successfully."
 }
