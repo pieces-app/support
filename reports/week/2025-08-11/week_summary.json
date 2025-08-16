@@ -2,7 +2,7 @@
   "success": true,
   "date_range": {
     "start": "2025-08-11T00:00:00+00:00",
-    "end": "2025-08-15T21:06:54.936874+00:00"
+    "end": "2025-08-16T05:07:29.619808+00:00"
   },
   "summary": {
     "total_tickets": 29,
@@ -152,7 +152,7 @@
     {
       "number": 799,
       "title": "LTM not recording any new activities/Workstream Activity not updating",
-      "activity_level": 6.63
+      "activity_level": 6.58
     },
     {
       "number": 810,
@@ -293,7 +293,7 @@
   "common_issues": [
     {
       "title": "LTM and Workstream Issues on macOS",
-      "description": "Users on macOS are experiencing issues with LTM and Workstream functionality, including queries not returning results, slow performance, and failure to record new activities.  Some users encounter \"Pro membership required\" errors despite having a Pro subscription.  Potential solutions include clearing LTM data (although the button is reported as not working), reinstalling the app, and verifying Pro subscription status.",
+      "description": "Users on macOS are experiencing issues with LTM and Workstream functionality, including queries not returning results, slow performance, and failure to record new activities.  Some users report that clearing LTM data temporarily resolves the issue.  Additionally, Pro users are encountering errors suggesting they need to upgrade despite having a Pro subscription.",
       "frequency": 3,
       "related_issues": [
         {
@@ -306,7 +306,7 @@
           "id": 799,
           "title": "LTM not recording any new activities/Workstream Activity not updating",
           "text": "LTM not recording any new activities/Workstream Activity not updating\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n4.3.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nRecently installed, stopped working completely after recording for about 20 minutes. Tried restarting.\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 6.63
+          "activity_level": 6.58
         },
         {
           "id": 811,
@@ -343,7 +343,7 @@
     },
     {
       "title": "Pieces Pro Features Unavailable Despite Upgrade",
-      "description": "Users report being unable to access Pieces Pro features after upgrading, encountering errors or limitations. Issues include LLM not upgrading to the latest version, browser extensions failing to connect to Pieces OS, and \"Pro required\" messages for features like activity summaries.  Affected software includes desktop app, VS Code, Sublime plugin, and browser extensions. Troubleshooting includes checking configuration files, restarting, and VPN/proxy adjustments. Some users are located in regions with internet restrictions.",
+      "description": "Users report being unable to access Pieces Pro features after upgrading, encountering errors or limitations. Issues include LLM not upgrading, browser extensions failing to connect to Pieces OS, and \"Pro required\" messages for paid users.  Troubleshooting includes verifying Pro status, checking configurations, restarting, and VPN/proxy adjustments. Connectivity issues may be related to network settings or location.",
       "frequency": 3,
       "related_issues": [
         {
@@ -367,8 +367,8 @@
       ]
     },
     {
-      "title": "Pieces Desktop and OS exhibit connection and setting persistence issues",
-      "description": "Users report connection leaks with Pieces Desktop on Windows and macOS, causing MCP to disconnect every 5-10 minutes.  A high number of connections from the Desktop app to the OS server is observed.  Additionally, the Auto-Generated Context setting in Machine Learning resets to \"Medium\" despite user changes. Workarounds include closing Pieces Desktop or restarting Pieces OS. The root cause appears to lie within the Pieces Desktop application.",
+      "title": "Pieces Desktop and OS connection issues and setting persistence",
+      "description": "Users report connection issues with Pieces Desktop and OS, including MCP connections dropping every 5-10 minutes on macOS and connection leaks on Windows when the Desktop app is running.  Additionally, the Auto-Generated Context setting in Machine Learning resets to \"Medium\" despite user changes.  Suggested solutions include checking connection status, restarting Pieces OS or Desktop app, and verifying MCP server health.",
       "frequency": 3,
       "related_issues": [
         {
@@ -392,8 +392,8 @@
       ]
     },
     {
-      "title": "Pieces Desktop App Bugs",
-      "description": "Users report issues with the Pieces desktop app, including file drag-and-drop into conversation context failing on Windows (v12.1.1), sharing snippets via link/GitHub gist failing on Windows (v12.1.1), and hotkeys being completely unresponsive on macOS (v12.1.0).  Further investigation is needed to identify the root causes and solutions.",
+      "title": "Pieces Desktop Application Bugs",
+      "description": "Users are experiencing various bugs in the Pieces desktop application, including issues with dragging files into conversation context, sharing snippets via links or GitHub gists, and hotkeys not functioning.  These problems have been reported on both Windows and macOS platforms, with Pieces OS versions 12.1.0 and 12.1.1. Further investigation is needed to identify the root causes and implement solutions.",
       "frequency": 3,
       "related_issues": [
         {
@@ -418,13 +418,11 @@
     }
   ],
   "recommendations": [
-    "Prioritize resolving the Pieces Desktop connection leak issue to stabilize MCP connections and improve user experience across VS Code, Cursor, and other applications.",
-    "Investigate and address the issue of Pieces Pro features being unavailable despite user upgrades, including LLM version discrepancies and browser extension connectivity problems.",
-    "Address the LTM and Workstream issues on macOS, focusing on query failures, slow performance, and \"Pro membership required\" errors.",
-    "Fix the bug preventing file drag-and-drop into conversation context and sharing snippets via link/GitHub gist in the Pieces Desktop app on Windows.",
-    "Ensure settings persistence in the Pieces Desktop app, specifically the Auto-Generated Context setting under Machine Learning.",
-    "Improve communication with users in regions with internet restrictions to provide tailored support for connection and upgrade issues.",
-    "Monitor and address the recurring \"Unable to open Pieces Core Services\" errors to maintain essential service stability."
+    "Prioritize resolving the \"Pieces MCP connection instability\" issue as it impacts multiple applications and has a high frequency. Investigate connection leaks associated with the Pieces desktop app and SSE endpoint hangs.",
+    "Address the \"Pieces Pro Features Unavailable Despite Upgrade\" issue to ensure paying users have access to the features they've purchased. Focus on LLM upgrade failures, browser extension connection problems, and inaccurate \"Pro required\" messages.",
+    "Investigate and fix the \"LTM and Workstream Issues on macOS\" to improve core product functionality for macOS users. Focus on query failures, slow performance, and data clearing issues.",
+    "Address bugs in the Pieces desktop application, including file dragging, sharing snippets, and hotkey functionality on both Windows and macOS. These impact usability and user experience.",
+    "Improve communication with users regarding known issues and workarounds. Provide clear instructions for troubleshooting connection problems, Pro access, and LTM/Workstream issues."
   ],
   "message": "Daily support report generated successfully."
 }
