@@ -1,6 +1,6 @@
 # Support Ticket Report
-- Generated: 2025-08-16 21:10:10
-- Period: 2025-08-11 to 2025-08-16
+- Generated: 2025-08-17 05:10:52
+- Period: 2025-08-11 to 2025-08-17
 
 ## Summary
 - **Total Tickets:** 30
@@ -11,22 +11,22 @@
 | Issue # | Title | Activity Level |
 |---------|-------|----------------|
 | [#805](https://github.com/pieces-app/support/issues/805) | Bug: Subscription is not showing up within the Application(cancelation + resubscription w/ a new plan) | 7.85 |
-| [#799](https://github.com/pieces-app/support/issues/799) | LTM not recording any new activities/Workstream Activity not updating | 6.58 |
+| [#799](https://github.com/pieces-app/support/issues/799) | LTM not recording any new activities/Workstream Activity not updating | 6.53 |
 | [#810](https://github.com/pieces-app/support/issues/810) | MCP Server SSE Connection Hangs - No Tools Available in Claude Code | 5.87 |
 | [#829](https://github.com/pieces-app/support/issues/829) | Unable to open Pieces Settings Service | 4.99 |
 | [#818](https://github.com/pieces-app/support/issues/818) | Pro user's LLM cannot be upgraded to the latest version, even if they are chosen to | 4.77 |
 
 ## Common Issues
 ### 1. LTM and Workstream Issues on macOS
-Users on macOS are experiencing issues with the LTM and Workstream features in the Pieces desktop application.  The LTM either fails to return results after extended use or stops recording activity altogether.  Workstream updates may also be affected.  One user reported a Pro subscription error despite having a paid account.  Clearing LTM data has proven ineffective. Further investigation is needed to determine the root cause and potential solutions.
+Users on macOS are experiencing issues with LTM and Workstream functionality, including queries not returning results, slow performance, and failure to record new activities.  Some users encounter "Pro membership required" errors despite having a Pro subscription.  Potential solutions include clearing LTM data (although the button is reported as not working), reinstalling the app, and verifying Pro subscription status.
 
 **Related Issues:**
 - [#805](https://github.com/pieces-app/support/issues/805): Bug: Subscription is not showing up within the Application(cancelation + resubscription w/ a new plan)
 - [#799](https://github.com/pieces-app/support/issues/799): LTM not recording any new activities/Workstream Activity not updating
 - [#811](https://github.com/pieces-app/support/issues/811): I'm sorry. This feature requires Pieces Pro. Please upgrade your plan or change your LLM to continue.
 
-### 2. Pieces MCP Server Connection Issues
-Users report Pieces MCP server connection problems across macOS and Windows, including "Failed to extract context" errors with `ask_pieces_ltm` despite functional LTM, SSE endpoint hangs in VS Code/Claude Code integration, and connection leaks caused by the Pieces Desktop app.  Suggested solutions include verifying LTM functionality, checking server logs, restarting Pieces OS, and closing Pieces Desktop to prevent connection leaks. Further investigation of MCP server implementation and data access layer is needed.
+### 2. Pieces MCP and Desktop App Connection Issues
+Multiple reports indicate connection problems between Pieces OS, Desktop app, and MCP tools. Symptoms include tools failing, SSE hanging, and connection leaks attributed to the Desktop app.  Workarounds involve closing the Desktop app, restarting Pieces OS, and monitoring connections.  The core issue seems to be excessive connections originating from the Desktop app hindering MCP functionality.
 
 **Related Issues:**
 - [#747](https://github.com/pieces-app/support/issues/747): MCP `ask_pieces_ltm` tool consistently returns "Failed to extract context" despite functional LTM
@@ -34,7 +34,7 @@ Users report Pieces MCP server connection problems across macOS and Windows, inc
 - [#816](https://github.com/pieces-app/support/issues/816): Pieces Desktop Connection Leak
 
 ### 3. Pieces Pro Features Unavailable Despite Upgrade
-Users are reporting inability to access Pieces Pro features after upgrading. Issues include LLM not upgrading to the latest version, browser extensions failing to connect to Pieces OS, and "Pro required" errors for Pro users.  Common factors include recent Pro upgrade, VPN use, and Pieces OS v12.1.1.  Troubleshooting steps like restarting, re-login, and VPN adjustments haven't resolved the problems.
+Users are reporting inability to access Pieces Pro features after upgrading. Issues include LLM not upgrading to the latest version, browser extensions failing to connect to Pieces OS, and "Pro required" errors for Pro users.  Common factors include recent Pro upgrade, VPN use, and Pieces OS v12.1.1.  Troubleshooting steps like restarting, re-login, and VPN configuration changes haven't resolved the problems.
 
 **Related Issues:**
 - [#818](https://github.com/pieces-app/support/issues/818): Pro user's LLM cannot be upgraded to the latest version, even if they are chosen to
@@ -42,7 +42,7 @@ Users are reporting inability to access Pieces Pro features after upgrading. Iss
 - [#811](https://github.com/pieces-app/support/issues/811): I'm sorry. This feature requires Pieces Pro. Please upgrade your plan or change your LLM to continue.
 
 ### 4. Pieces Desktop Application Bugs
-Users are experiencing various bugs in the Pieces desktop application, including issues with dragging files into conversation context, sharing snippets via links or GitHub gists, and hotkeys not functioning.  These issues appear across different operating systems (Windows and macOS) and Pieces OS versions (12.1.0 and 12.1.1). Further investigation is needed to identify the root causes and implement fixes.
+Users are experiencing various bugs in the Pieces desktop application, including issues with dragging files into conversation context, sharing snippets via links or GitHub gists, and hotkeys not functioning.  The file dragging issue involves the file choosing window appearing behind other windows and filter rules not applying to all file types. The sharing issue results in failure when attempting to share code snippets.  The hotkey issue involves no hotkeys working and producing a macOS sound. These issues have been reported on Windows and macOS with Pieces OS versions 12.1.0 and 12.1.1.
 
 **Related Issues:**
 - [#822](https://github.com/pieces-app/support/issues/822): CANNOT drag a file into CONVERSATION CONTEXT
@@ -50,7 +50,7 @@ Users are experiencing various bugs in the Pieces desktop application, including
 - [#793](https://github.com/pieces-app/support/issues/793): No hotkeys work
 
 ### 5. PiecesOS services failing to open on MacOS
-Multiple users reported Pieces Settings and Core Services failing to open on MacOS.  Errors include "Type ZJb already registered" and websocket connection failures with 404 status code. Issues observed across different MacOS versions (15.5, 15.7) and PiecesOS versions (12.1.1, Unknown). Potential solutions include reinstalling PiecesOS, checking firewall settings, and ensuring correct port configuration.
+Users are unable to open Pieces Settings Service or Pieces Core Services.  Error messages include "Type ZJb is already registered inside GetIt" and websocket connection failures with 404 errors.  This occurs on MacOS versions 15.5 and 15.7 with Pieces OS version 12.1.1. Check for conflicting applications or services, reinstall Pieces OS, and ensure network connectivity.
 
 **Related Issues:**
 - [#829](https://github.com/pieces-app/support/issues/829): Unable to open Pieces Settings Service
@@ -59,11 +59,11 @@ Multiple users reported Pieces Settings and Core Services failing to open on Mac
 
 
 ## Recommendations
-- Prioritize resolving LTM and Workstream issues on macOS (especially impacting Pro users).  This is a recurring problem affecting core functionality and user experience.
-- Investigate and address MCP server connection problems across platforms.  Focus on the "Failed to extract context" error, SSE endpoint hangs, and connection leaks caused by the Pieces Desktop app.
-- Resolve Pieces Pro access issues for users who have recently upgraded.  Ensure LLM upgrades are applied correctly, browser extensions connect reliably, and Pro features are accessible without errors.
-- Fix bugs in the Pieces desktop application related to file dragging, sharing snippets, and hotkey functionality.  These issues impact usability across different operating systems.
-- Address PiecesOS services failing to open on MacOS, including "Type ZJb already registered" and websocket connection failures.  Provide clear troubleshooting steps for users.
+- Prioritize resolving LTM and Workstream issues on macOS (especially impacting Pro users).  This includes investigating the "Pro membership required" error, LTM data clearing functionality, and general performance/data retrieval problems.
+- Address Pieces MCP and Desktop app connection issues. Focus on excessive connections from the Desktop app and ensure MCP tools (like ask_pieces_ltm) function reliably.
+- Investigate why Pro features are unavailable despite user upgrades.  This involves checking LLM version discrepancies, browser extension connectivity, and resolving the "Pro required" error for paying users.
+- Fix reported Pieces desktop application bugs.  This includes file dragging issues (window placement, filter rules), sharing failures for code snippets, and non-functional hotkeys.
+- Resolve PiecesOS service failures on MacOS.  Investigate the "Type ZJb already registered" error and websocket connection problems (404 errors) with Settings and Core Services.
 
 ## Daily Reports
 Here are the daily reports for this week:

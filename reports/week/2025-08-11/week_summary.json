@@ -2,7 +2,7 @@
   "success": true,
   "date_range": {
     "start": "2025-08-11T00:00:00+00:00",
-    "end": "2025-08-16T21:06:30.540745+00:00"
+    "end": "2025-08-17T05:08:05.103739+00:00"
   },
   "summary": {
     "total_tickets": 30,
@@ -158,7 +158,7 @@
     {
       "number": 799,
       "title": "LTM not recording any new activities/Workstream Activity not updating",
-      "activity_level": 6.58
+      "activity_level": 6.53
     },
     {
       "number": 810,
@@ -243,7 +243,7 @@
     {
       "number": 747,
       "title": "MCP `ask_pieces_ltm` tool consistently returns \"Failed to extract context\" despite functional LTM",
-      "activity_level": 2.96
+      "activity_level": 2.95
     },
     {
       "number": 796,
@@ -304,7 +304,7 @@
   "common_issues": [
     {
       "title": "LTM and Workstream Issues on macOS",
-      "description": "Users on macOS are experiencing issues with the LTM and Workstream features in the Pieces desktop application.  The LTM either fails to return results after extended use or stops recording activity altogether.  Workstream updates may also be affected.  One user reported a Pro subscription error despite having a paid account.  Clearing LTM data has proven ineffective. Further investigation is needed to determine the root cause and potential solutions.",
+      "description": "Users on macOS are experiencing issues with LTM and Workstream functionality, including queries not returning results, slow performance, and failure to record new activities.  Some users encounter \"Pro membership required\" errors despite having a Pro subscription.  Potential solutions include clearing LTM data (although the button is reported as not working), reinstalling the app, and verifying Pro subscription status.",
       "frequency": 3,
       "related_issues": [
         {
@@ -317,7 +317,7 @@
           "id": 799,
           "title": "LTM not recording any new activities/Workstream Activity not updating",
           "text": "LTM not recording any new activities/Workstream Activity not updating\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n4.3.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nRecently installed, stopped working completely after recording for about 20 minutes. Tried restarting.\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 6.58
+          "activity_level": 6.53
         },
         {
           "id": 811,
@@ -328,15 +328,15 @@
       ]
     },
     {
-      "title": "Pieces MCP Server Connection Issues",
-      "description": "Users report Pieces MCP server connection problems across macOS and Windows, including \"Failed to extract context\" errors with `ask_pieces_ltm` despite functional LTM, SSE endpoint hangs in VS Code/Claude Code integration, and connection leaks caused by the Pieces Desktop app.  Suggested solutions include verifying LTM functionality, checking server logs, restarting Pieces OS, and closing Pieces Desktop to prevent connection leaks. Further investigation of MCP server implementation and data access layer is needed.",
+      "title": "Pieces MCP and Desktop App Connection Issues",
+      "description": "Multiple reports indicate connection problems between Pieces OS, Desktop app, and MCP tools. Symptoms include tools failing, SSE hanging, and connection leaks attributed to the Desktop app.  Workarounds involve closing the Desktop app, restarting Pieces OS, and monitoring connections.  The core issue seems to be excessive connections originating from the Desktop app hindering MCP functionality.",
       "frequency": 3,
       "related_issues": [
         {
           "id": 747,
           "title": "MCP `ask_pieces_ltm` tool consistently returns \"Failed to extract context\" despite functional LTM",
           "text": "MCP `ask_pieces_ltm` tool consistently returns \"Failed to extract context\" despite functional LTM\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS Sequoia 15.5\n\n### Your Pieces OS Version\n\n11.4.4\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n## Bug Report\n\n**Environment:**\n- OS: macOS Sequoia 15.5\n- Pieces OS: 11.4.4 - Running (PID 699, actively collecting data)\n- Pieces App: 4.1.4 - Active with functional LTM workstream\n- MCP Server: Pieces MCP server on localhost:39300\n- Test Client: Warp Terminal Agent Mode, Claude, direct curl testing\n\n## Problem Description\n\nThe `ask_pieces_ltm` MCP tool consistently returns `\"Failed to extract context\"` with `\"isError\": true`, despite:\n\n1. \u2705 **LTM is working correctly** - User confirmed LTM is collecting data and showing results/summaries in the Pieces workstream\n2. \u2705 **MCP server communication works** - Can successfully call `create_pieces_memory` and list tools\n3. \u2705 **Pieces OS is running and active** - Process running with multiple active connections\n4. \u274c **Only `ask_pieces_ltm` fails** - Every call to this specific tool fails\n\n## Steps to Reproduce\n\n### 1. Verify MCP Server is Running\n```bash\nlsof -i :39300\n# Shows Pieces OS listening on port 39300 with multiple established connections\n```\n\n### 2. Confirm Tools are Available\n```bash\ncurl -N http://localhost:39300/model_context_protocol/2024-11-05/sse \\\n  -H 'Accept: text/event-stream' &\ncurl -X POST http://localhost:39300/model_context_protocol/2024-11-05/messages \\\n  -H 'Content-Type: application/json' \\\n  -d '{\"jsonrpc\":\"2.0\",\"id\":1,\"method\":\"tools/list\"}'\n```\n\n**Result:** \u2705 Successfully returns tools list with `ask_pieces_ltm` tool schema\n\n### 3. Test create_pieces_memory (Working)\n```bash\ncurl -X POST http://localhost:39300/model_context_protocol/2024-11-05/messages \\\n  -H 'Content-Type: application/json' \\\n  -d '{\n    \"jsonrpc\":\"2.0\",\"id\":2,\"method\":\"tools/call\",\n    \"params\":{\n      \"name\":\"create_pieces_memory\",\n      \"arguments\":{\n        \"summary\":\"Test memory\",\n        \"summary_description\":\"Testing connection\"\n      }\n    }\n  }'\n```\n\n**Result:** \u2705 `\"Long term memory successfully created\"`\n\n### 4. Test ask_pieces_ltm (Failing)\n```bash\ncurl -X POST http://localhost:39300/model_context_protocol/2024-11-05/messages \\\n  -H 'Content-Type: application/json' \\\n  -d '{\n    \"jsonrpc\":\"2.0\",\"id\":3,\"method\":\"tools/call\",\n    \"params\":{\n      \"name\":\"ask_pieces_ltm\",\n      \"arguments\":{\n        \"question\":\"What did I work on today?\",\n        \"chat_llm\":\"claude-3-5-sonnet-20241022\"\n      }\n    }\n  }'\n```\n\n**Result:** \u274c `{\"content\":[{\"type\":\"text\",\"text\":\"Failed to extract context\"}],\"isError\":true}`\n\n## Attempted Variations (All Failed)\n\n### Minimal Parameters\n```json\n{\n  \"question\": \"hello\",\n  \"chat_llm\": \"claude-3-5-sonnet-20241022\"\n}\n```\n\n### With Application Sources\n```json\n{\n  \"question\": \"What terminal commands have I run recently?\",\n  \"chat_llm\": \"claude-3-5-sonnet-20241022\",\n  \"application_sources\": [\"Warp\"],\n  \"connected_client\": \"Warp\"\n}\n```\n\n### Comprehensive Parameters\n```json\n{\n  \"question\": \"What did I work on today?\",\n  \"chat_llm\": \"claude-3-5-sonnet-20241022\",\n  \"connected_client\": \"Warp\",\n  \"application_sources\": [\"Warp\", \"Google Chrome\"],\n  \"topics\": [\"terminal\", \"commands\", \"recent\"],\n  \"related_questions\": [\"What was I working on?\", \"What debugging was I doing?\"]\n}\n```\n\n### Different Application Sources Tested\n- `[\"Warp\"]`\n- `[\"Google Chrome\", \"Safari\", \"Obsidian\"]`\n- `[\"Claude\"]`\n- Multiple combinations from the schema list\n\n**All variations return the same error.**\n\n## Troubleshooting Attempted\n\n1. \u2705 **Restarted Pieces MCP server** - Issue persists\n2. \u2705 **Verified Pieces OS permissions** - Has necessary macOS permissions\n3. \u2705 **Confirmed LTM data collection** - User sees active workstream data\n4. \u2705 **Tested different MCP clients** - Same error in Warp Agent Mode, Claude, and direct curl\n5. \u2705 **Used proper SSE endpoint** - `/sse` for responses, `/messages` for requests\n6. \u2705 **Verified JSON-RPC format** - Matches working `create_pieces_memory` calls\n\n## Expected Behavior\n\nThe `ask_pieces_ltm` tool should return contextual information from the user's LTM data, similar to how the main Pieces application shows workstream summaries and context.\n\n## Actual Behavior\n\nEvery call to `ask_pieces_ltm` returns:\n```json\n{\n  \"content\": [\n    {\n      \"type\": \"text\",\n      \"text\": \"Failed to extract context\"\n    }\n  ],\n  \"isError\": true\n}\n```\n\n## Analysis\n\nThis appears to be an **MCP server implementation issue** where:\n\n1. The `ask_pieces_ltm` tool is properly registered and callable\n2. The MCP communication protocol works correctly\n3. The underlying LTM system has data and functions properly\n4. There's a disconnect between the MCP tool implementation and the LTM data access layer\n\n## Potential Root Causes\n\n1. **Authentication/Session Issue**: MCP server process may lack proper authentication to access LTM data\n2. **Data Access Layer Bug**: `ask_pieces_ltm` implementation may be using incorrect API calls to access LTM\n3. **Permissions Issue**: MCP server may not have the same data access permissions as the main Pieces application\n4. **Initialization Problem**: LTM access for MCP tools may require additional setup or initialization\n\n## Request\n\nPlease investigate the `ask_pieces_ltm` tool implementation in the Pieces MCP server to identify why it cannot access the same LTM data that is clearly available to the main Pieces application.\n\n## Additional Context\n\n- Issue occurs consistently across different MCP clients (Warp, Claude)\n- `create_pieces_memory` works perfectly, confirming MCP communication\n- LTM is actively collecting and displaying data in the main Pieces app\n- No relevant error logs found in system logs or Pieces application logs\n- Multiple parameter variations attempted with identical results\n\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 2.96
+          "activity_level": 2.95
         },
         {
           "id": 810,
@@ -354,7 +354,7 @@
     },
     {
       "title": "Pieces Pro Features Unavailable Despite Upgrade",
-      "description": "Users are reporting inability to access Pieces Pro features after upgrading. Issues include LLM not upgrading to the latest version, browser extensions failing to connect to Pieces OS, and \"Pro required\" errors for Pro users.  Common factors include recent Pro upgrade, VPN use, and Pieces OS v12.1.1.  Troubleshooting steps like restarting, re-login, and VPN adjustments haven't resolved the problems.",
+      "description": "Users are reporting inability to access Pieces Pro features after upgrading. Issues include LLM not upgrading to the latest version, browser extensions failing to connect to Pieces OS, and \"Pro required\" errors for Pro users.  Common factors include recent Pro upgrade, VPN use, and Pieces OS v12.1.1.  Troubleshooting steps like restarting, re-login, and VPN configuration changes haven't resolved the problems.",
       "frequency": 3,
       "related_issues": [
         {
@@ -379,7 +379,7 @@
     },
     {
       "title": "Pieces Desktop Application Bugs",
-      "description": "Users are experiencing various bugs in the Pieces desktop application, including issues with dragging files into conversation context, sharing snippets via links or GitHub gists, and hotkeys not functioning.  These issues appear across different operating systems (Windows and macOS) and Pieces OS versions (12.1.0 and 12.1.1). Further investigation is needed to identify the root causes and implement fixes.",
+      "description": "Users are experiencing various bugs in the Pieces desktop application, including issues with dragging files into conversation context, sharing snippets via links or GitHub gists, and hotkeys not functioning.  The file dragging issue involves the file choosing window appearing behind other windows and filter rules not applying to all file types. The sharing issue results in failure when attempting to share code snippets.  The hotkey issue involves no hotkeys working and producing a macOS sound. These issues have been reported on Windows and macOS with Pieces OS versions 12.1.0 and 12.1.1.",
       "frequency": 3,
       "related_issues": [
         {
@@ -404,7 +404,7 @@
     },
     {
       "title": "PiecesOS services failing to open on MacOS",
-      "description": "Multiple users reported Pieces Settings and Core Services failing to open on MacOS.  Errors include \"Type ZJb already registered\" and websocket connection failures with 404 status code. Issues observed across different MacOS versions (15.5, 15.7) and PiecesOS versions (12.1.1, Unknown). Potential solutions include reinstalling PiecesOS, checking firewall settings, and ensuring correct port configuration.",
+      "description": "Users are unable to open Pieces Settings Service or Pieces Core Services.  Error messages include \"Type ZJb is already registered inside GetIt\" and websocket connection failures with 404 errors.  This occurs on MacOS versions 15.5 and 15.7 with Pieces OS version 12.1.1. Check for conflicting applications or services, reinstall Pieces OS, and ensure network connectivity.",
       "frequency": 3,
       "related_issues": [
         {
@@ -429,11 +429,11 @@
     }
   ],
   "recommendations": [
-    "Prioritize resolving LTM and Workstream issues on macOS (especially impacting Pro users).  This is a recurring problem affecting core functionality and user experience.",
-    "Investigate and address MCP server connection problems across platforms.  Focus on the \"Failed to extract context\" error, SSE endpoint hangs, and connection leaks caused by the Pieces Desktop app.",
-    "Resolve Pieces Pro access issues for users who have recently upgraded.  Ensure LLM upgrades are applied correctly, browser extensions connect reliably, and Pro features are accessible without errors.",
-    "Fix bugs in the Pieces desktop application related to file dragging, sharing snippets, and hotkey functionality.  These issues impact usability across different operating systems.",
-    "Address PiecesOS services failing to open on MacOS, including \"Type ZJb already registered\" and websocket connection failures.  Provide clear troubleshooting steps for users."
+    "Prioritize resolving LTM and Workstream issues on macOS (especially impacting Pro users).  This includes investigating the \"Pro membership required\" error, LTM data clearing functionality, and general performance/data retrieval problems.",
+    "Address Pieces MCP and Desktop app connection issues. Focus on excessive connections from the Desktop app and ensure MCP tools (like ask_pieces_ltm) function reliably.",
+    "Investigate why Pro features are unavailable despite user upgrades.  This involves checking LLM version discrepancies, browser extension connectivity, and resolving the \"Pro required\" error for paying users.",
+    "Fix reported Pieces desktop application bugs.  This includes file dragging issues (window placement, filter rules), sharing failures for code snippets, and non-functional hotkeys.",
+    "Resolve PiecesOS service failures on MacOS.  Investigate the \"Type ZJb already registered\" error and websocket connection problems (404 errors) with Settings and Core Services."
   ],
   "message": "Daily support report generated successfully."
 }
