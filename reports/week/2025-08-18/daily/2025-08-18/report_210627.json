@@ -2,7 +2,7 @@
   "success": true,
   "date_range": {
     "start": "2025-08-18T00:00:00+00:00",
-    "end": "2025-08-18T21:06:56.652665+00:00"
+    "end": "2025-08-18T21:06:27.562283+00:00"
   },
   "summary": {
     "total_tickets": 3,
@@ -90,8 +90,8 @@
   ],
   "common_issues": [
     {
-      "title": "Pieces fails to launch or connect, impacting core features",
-      "description": "Users report Pieces for Developers crashing on startup (Ubuntu), failing to connect during installation (Windows, potentially due to firewall), and the ask_pieces_ltm MCP tool failing to extract context despite a functional LTM (macOS). Issues may involve GTK conflicts, authentication failures, or MCP server implementation bugs.  Check system compatibility, firewall settings, and Pieces OS logs for clues. Further investigation into MCP server and LTM interaction is needed.",
+      "title": "Pieces fails to launch or connect to LTM",
+      "description": "Users report Pieces for Developers crashing on startup on Ubuntu 24.04, failing to connect to the authentication site on Windows during install, and the ask_pieces_ltm MCP tool failing to extract context on macOS despite a functional LTM.  Common issues include mismatched GTK versions, network connectivity problems, and potential bugs in the MCP server implementation.  Suggested solutions include checking dependencies, firewall settings, and Pieces OS logs.",
       "frequency": 3,
       "related_issues": [
         {
@@ -116,9 +116,12 @@
     }
   ],
   "recommendations": [
-    "Prioritize debugging the Pieces launch/connection issue across Ubuntu, Windows, and macOS, focusing on GTK conflicts (Ubuntu), firewall interference (Windows), and MCP/LTM interaction (macOS).",
-    "Investigate the authentication process during Pieces installation on Windows, specifically addressing potential conflicts with Cortex XDR security software.",
-    "Address the \"Failed to extract context\" error in the `ask_pieces_ltm` MCP tool, ensuring proper authentication, data access, and initialization within the MCP server implementation."
+    "Prioritize debugging the Pieces launch failure on Ubuntu 24.04 (Issue #835) due to its high activity level and impact on new users.",
+    "Investigate the authentication site connection failure during Pieces installation on Windows (Issue #834) to ensure a smooth onboarding experience.",
+    "Address the MCP `ask_pieces_ltm` tool's failure to extract context (Issue #747) to enable its intended functionality.",
+    "Review network connectivity and firewall settings as potential solutions for the common launch and connection issues.",
+    "Check GTK versions on Ubuntu 24.04 and Pieces OS logs for potential conflicts contributing to the crash.",
+    "Improve documentation and error messages related to installation and launch issues to provide clearer guidance to users."
   ],
   "message": "Daily support report generated successfully."
 }

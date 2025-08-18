@@ -1,35 +1,36 @@
 # Support Ticket Report
-- Generated: 2025-08-18 13:19:03
+- Generated: 2025-08-18 21:07:24
 - Period: 2025-08-18 to 2025-08-18
 
 ## Summary
-- **Total Tickets:** 2
+- **Total Tickets:** 3
 - **Resolved:** 1
-- **Open:** 1
+- **Open:** 2
 
 ## 5 Most Active Tickets
 | Issue # | Title | Activity Level |
 |---------|-------|----------------|
+| [#835](https://github.com/pieces-app/support/issues/835) | pieces-for-developers crashes at startup on ubuntu 24.04 LTS | 5.50 |
 | [#834](https://github.com/pieces-app/support/issues/834) | Cannot connect to Authentication site during install of Pieces | 3.48 |
 | [#747](https://github.com/pieces-app/support/issues/747) | MCP `ask_pieces_ltm` tool consistently returns "Failed to extract context" despite functional LTM | 2.94 |
 
 ## Common Issues
-### 1. Pieces fails to connect to authentication site or LTM
-Users are experiencing connectivity issues with Pieces, either during installation (failing to connect to the authentication site) or when using the `ask_pieces_ltm` tool (failing to extract context from a functional LTM).  The installation issue may be related to security software blocking connections. The LTM issue seems to be an MCP server-side problem, potentially related to authentication, data access, permissions, or initialization. 
+### 1. Pieces fails to launch or connect, impacting core features
+Users report Pieces for Developers crashing on startup (Ubuntu), failing to connect during installation (Windows, potentially due to firewall), and the ask_pieces_ltm MCP tool failing to extract context despite a functional LTM (macOS). Issues may involve GTK conflicts, authentication failures, or MCP server implementation bugs.  Check system compatibility, firewall settings, and Pieces OS logs for clues. Further investigation into MCP server and LTM interaction is needed.
 
 **Related Issues:**
+- [#835](https://github.com/pieces-app/support/issues/835): pieces-for-developers crashes at startup on ubuntu 24.04 LTS
 - [#834](https://github.com/pieces-app/support/issues/834): Cannot connect to Authentication site during install of Pieces
 - [#747](https://github.com/pieces-app/support/issues/747): MCP `ask_pieces_ltm` tool consistently returns "Failed to extract context" despite functional LTM
 
 
 ## Recommendations
-- Investigate the root cause of the "Pieces fails to connect to authentication site or LTM" issue, focusing on potential security software conflicts and MCP server-side problems.
-- Prioritize resolution of ticket #834 and #747 due to high activity levels and potential impact on user experience.
-- Review and update documentation regarding installation troubleshooting, especially concerning security software configurations.
-- Improve error messaging and logging for LTM and authentication issues to facilitate faster diagnosis.
-- Consider implementing a more robust authentication mechanism for the MCP server to ensure reliable access to LTM data.
+- Prioritize debugging the Pieces launch/connection issue across Ubuntu, Windows, and macOS, focusing on GTK conflicts (Ubuntu), firewall interference (Windows), and MCP/LTM interaction (macOS).
+- Investigate the authentication process during Pieces installation on Windows, specifically addressing potential conflicts with Cortex XDR security software.
+- Address the "Failed to extract context" error in the `ask_pieces_ltm` MCP tool, ensuring proper authentication, data access, and initialization within the MCP server implementation.
 
 ## Daily Reports
 Here are the daily reports for this week:
 
+- [report_210627](daily/2025-08-18/report_210627.md)
 - [report_131824](daily/2025-08-18/report_131824.md)
