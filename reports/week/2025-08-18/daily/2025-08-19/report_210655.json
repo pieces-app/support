@@ -1,0 +1,138 @@
+{
+  "success": true,
+  "date_range": {
+    "start": "2025-08-19T00:00:00+00:00",
+    "end": "2025-08-19T21:06:55.568756+00:00"
+  },
+  "summary": {
+    "total_tickets": 3,
+    "resolved_tickets": 0,
+    "open_tickets": 3
+  },
+  "ticket_breakdown": [
+    {
+      "category": "bug",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "app:desktop application",
+      "received": 3,
+      "resolved": 0,
+      "pending": 3
+    },
+    {
+      "category": "os:linux",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:triaged",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "os:macos",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:pieces os",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "app:vs code",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "ongoing",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:visual studio",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:sublime plugin",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "os:windows",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:waiting_on_user_responses",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    }
+  ],
+  "most_active_tickets": [
+    {
+      "number": 835,
+      "title": "pieces-for-developers crashes at startup on ubuntu 24.04 LTS",
+      "activity_level": 7.32
+    },
+    {
+      "number": 818,
+      "title": "Pro user's LLM cannot be upgraded to the latest version, even if they are chosen to",
+      "activity_level": 5.38
+    },
+    {
+      "number": 834,
+      "title": "Cannot connect to Authentication site during install of Pieces",
+      "activity_level": 3.21
+    }
+  ],
+  "common_issues": [
+    {
+      "title": "Pieces for Developers and Pieces OS Startup/Connectivity Issues",
+      "description": "Users report Pieces for Developers crashing on startup on Ubuntu 24.04, failing to connect to authentication site during installation on Windows, and Pro users unable to upgrade to the latest LLM version despite selecting it.  Issues may involve system compatibility conflicts, network connectivity problems, or bugs in Pieces software.  Suggested solutions include checking system requirements, network connectivity, firewall settings, and ensuring the latest Pieces versions are installed.",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 835,
+          "title": "pieces-for-developers crashes at startup on ubuntu 24.04 LTS",
+          "text": "pieces-for-developers crashes at startup on ubuntu 24.04 LTS\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nLinux\n\n### Your Pieces OS Version\n\n12.2.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWhen I launch pieces-for-developers a window briefly appears and then disappears. \n\nThe first time after I reboot a blank window appears and Ubuntu displayed the \"application not responding\" dialog. No matter how many times I clicked \"wait\" it never appeared to start. I've not been able to reproduce however and now the blank window appears and almost immediately disappears\n\nSystem is running Ubuntu 24.04 LTS using X11 with nvidia device drivers\n\npieces-os           12.2.1            (105)   1GB -\npieces-for-developers 4.3.3            (94) 173MB\n\nThe `~/.local/share/com.pieces.os` folder does not appear to have been created\n\nOutput from when starting with debug flag\n\n```\npieces-for-developers --debug\nGtk-Message: 08:24:44.749: Not loading module \"atk-bridge\": The functionality is provided by GTK natively. Please try to not load it.\n\n(pieces_for_x:12556): Gtk-WARNING **: 08:24:44.845: GTK+ module /snap/pieces-for-developers/94/gnome-platform/usr/lib/gtk-2.0/modules/libcanberra-gtk-module.so cannot be loaded.\nGTK+ 2.x symbols detected. Using GTK+ 2.x and GTK+ 3 in the same process is not supported.\nGtk-Message: 08:24:44.845: Failed to load module \"canberra-gtk-module\"\n\n(pieces_for_x:12556): Gtk-WARNING **: 08:24:44.846: GTK+ module /snap/pieces-for-developers/94/gnome-platform/usr/lib/gtk-2.0/modules/libcanberra-gtk-module.so cannot be loaded.\nGTK+ 2.x symbols detected. Using GTK+ 2.x and GTK+ 3 in the same process is not supported.\nGtk-Message: 08:24:44.846: Failed to load module \"canberra-gtk-module\"\nRuntimeFlutterCodeHighlighter initialized with path: /snap/pieces-for-developers/94/lib/libruntime_code_highlighter.so\nDebug: Starting logger initialization...\nDebug: SimpleLogger configured with Level.ALL\nDebug: SimpleLogger formatter configured\nDebug: Sentry initialized\nDebug: Sentry logger configured\nDebug: Log directory initialized at: /home/dns/snap/pieces-for-developers/94/.local/share/com.pieces.os.dependency_management\nDebug: About to complete initialization...\nDebug: Initialization completed\nINFO: [LOGGER::initialized] Logger initialized successfully with updated directory: /home/dns/Documents/com.pieces.pfd/production/logs\n[xcb] Unknown sequence number while processing reply\n[xcb] Most likely this is a multi-threaded client and XInitThreads has not been called\n[xcb] Aborting, sorry about that.\npieces_for_x: ../../src/xcb_io.c:730: _XReply: Assertion `!xcb_xlib_threads_sequence_lost' failed.\nAborted (core dumped)\n```\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 7.32
+        },
+        {
+          "id": 834,
+          "title": "Cannot connect to Authentication site during install of Pieces",
+          "text": "Cannot connect to Authentication site during install of Pieces\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n12.2.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI end up at this url:\n\nhttps://pieces.app/authentication-error?sentry_id=00000000000000000000000000000000&os=917d9227-e6ca-45d6-ae1a-c6b76b70a5c1&platform=windows\n\nPlease note:  This is when I install Pieces as part of the UltraEdit 2025.0 install on my work VDI.\nOur VDIs have Cortex XDR for security so this may be blocking it.  If so, I probably can't use Pieces at work.  I highly doubt they will open any ports for this.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 3.21
+        },
+        {
+          "id": 818,
+          "title": "Pro user's LLM cannot be upgraded to the latest version, even if they are chosen to",
+          "text": "Pro user's LLM cannot be upgraded to the latest version, even if they are chosen to\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS, Visual Studio, Sublime Plugin, VS Code\n\n### Operating System / Platform\n\nWindows 11\n\n### Your Pieces OS Version\n\n12.1.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI have a small problem now that cannot be solved through LLM: \n\n- I have inquired with LLM in **pieces for developers** and **pieces vscode plugin**, and they all said they are Sonnet 3.5. \n- The pieces LLM in sublime (set claude 3.7 sonnet) keeps silence about this:\n      **Copilot**: I'm an AI assistant created by Anthropic named Claude, and my training data has a cutoff date. While I don't typically specify my exact version details, I can tell you that my knowledge cutoff is around late 2023. This means I don't have information about events, technologies, or developments that occurred after that time.\n\nHowever, \n\n- I just **upgraded to Pieces Pro yesterday** and have switched to Sonnet 4 (for all pieces IDE plugins and Desktop Apps, except for sublime which only support sonnet 3.7 till now). \n- Every test chat was opened in a new Chat after the LLM is switched( to Sonnet 4 or Gemini 2.5 Pro)... \n- I've checked the configuration files and they are all Sonnet 4 without any issues. \n- I have tried restarting my computer or logging in to my account again, but still have this bug\n- I have tried changing my computer and VPN node, including canceling or adding the global system proxy, but none of them worked\n\nPS: My pieces OS and pieces for developers are both installed in sequence on Microsoft Store. \n\n- They work well in other aspects.\n- I have been using them for about 7 days. \n- I am in Chinese Mainland, thus a heavy VPN user.\n\n## Pieces for Deveopers (desktop app) \n\n<img width=\"1901\" height=\"470\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/d492f2e4-d73a-4798-8539-c08d768245d9\" />\n\n<img width=\"2435\" height=\"1569\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/1ac35bd2-7f75-45dc-9e1a-3963f2fea275\" />\n\n## Vscode plugin\n\n<img width=\"714\" height=\"1795\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/367de66a-2b60-429f-884f-67ae238582c9\" />\n\n<img width=\"717\" height=\"1795\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/57f0c4f6-7a13-4491-a07e-682fb4caf422\" />\n\n## Sublime plugin\n\n<img width=\"2081\" height=\"1407\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/f2f60b23-19eb-4bc0-8dd3-5c1c462021b0\" />\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 5.38
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    "Investigate startup crashes on Ubuntu 24.04 (Bug 835).  Prioritize debugging the Pieces for Developers application on this platform.",
+    "Address authentication issues during installation on Windows (Bug 834).  Verify compatibility with Cortex XDR and provide clear instructions or workarounds for users encountering this problem.",
+    "Ensure Pro users can upgrade to the latest LLM version (Bug 818).  Investigate why the LLM is not updating correctly across different IDE plugins and desktop applications.",
+    "Improve communication with users regarding LLM versions and capabilities.  Provide clear documentation or in-app messaging about the specific LLM being used and how to upgrade.",
+    "Monitor network connectivity issues.  Gather more data on users experiencing connection problems during installation or usage to identify potential network-related bugs or dependencies."
+  ],
+  "message": "Daily support report generated successfully."
+}
