@@ -1,0 +1,95 @@
+{
+  "success": true,
+  "date_range": {
+    "start": "2025-08-19T00:00:00+00:00",
+    "end": "2025-08-19T13:14:55.836223+00:00"
+  },
+  "summary": {
+    "total_tickets": 2,
+    "resolved_tickets": 0,
+    "open_tickets": 2
+  },
+  "ticket_breakdown": [
+    {
+      "category": "bug",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "os:windows",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:desktop application",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "app:pieces os",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:waiting_on_user_responses",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "os:linux",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:triaged",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    }
+  ],
+  "most_active_tickets": [
+    {
+      "number": 835,
+      "title": "pieces-for-developers crashes at startup on ubuntu 24.04 LTS",
+      "activity_level": 4.74
+    },
+    {
+      "number": 834,
+      "title": "Cannot connect to Authentication site during install of Pieces",
+      "activity_level": 3.21
+    }
+  ],
+  "common_issues": [
+    {
+      "title": "Pieces installation and startup failures across platforms",
+      "description": "Users are encountering issues installing or starting Pieces on Windows and Ubuntu. On Windows, installation fails due to a potential authentication site connection problem, possibly related to security software. On Ubuntu, the application crashes at startup with XCB errors, even after reboots.  Further investigation is needed into network connectivity issues and XCB compatibility on Ubuntu.",
+      "frequency": 2,
+      "related_issues": [
+        {
+          "id": 834,
+          "title": "Cannot connect to Authentication site during install of Pieces",
+          "text": "Cannot connect to Authentication site during install of Pieces\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n12.2.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI end up at this url:\n\nhttps://pieces.app/authentication-error?sentry_id=00000000000000000000000000000000&os=917d9227-e6ca-45d6-ae1a-c6b76b70a5c1&platform=windows\n\nPlease note:  This is when I install Pieces as part of the UltraEdit 2025.0 install on my work VDI.\nOur VDIs have Cortex XDR for security so this may be blocking it.  If so, I probably can't use Pieces at work.  I highly doubt they will open any ports for this.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 3.21
+        },
+        {
+          "id": 835,
+          "title": "pieces-for-developers crashes at startup on ubuntu 24.04 LTS",
+          "text": "pieces-for-developers crashes at startup on ubuntu 24.04 LTS\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nLinux\n\n### Your Pieces OS Version\n\n12.2.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWhen I launch pieces-for-developers a window briefly appears and then disappears. \n\nThe first time after I reboot a blank window appears and Ubuntu displayed the \"application not responding\" dialog. No matter how many times I clicked \"wait\" it never appeared to start. I've not been able to reproduce however and now the blank window appears and almost immediately disappears\n\nSystem is running Ubuntu 24.04 LTS using X11 with nvidia device drivers\n\npieces-os           12.2.1            (105)   1GB -\npieces-for-developers 4.3.3            (94) 173MB\n\nThe `~/.local/share/com.pieces.os` folder does not appear to have been created\n\nOutput from when starting with debug flag\n\n```\npieces-for-developers --debug\nGtk-Message: 08:24:44.749: Not loading module \"atk-bridge\": The functionality is provided by GTK natively. Please try to not load it.\n\n(pieces_for_x:12556): Gtk-WARNING **: 08:24:44.845: GTK+ module /snap/pieces-for-developers/94/gnome-platform/usr/lib/gtk-2.0/modules/libcanberra-gtk-module.so cannot be loaded.\nGTK+ 2.x symbols detected. Using GTK+ 2.x and GTK+ 3 in the same process is not supported.\nGtk-Message: 08:24:44.845: Failed to load module \"canberra-gtk-module\"\n\n(pieces_for_x:12556): Gtk-WARNING **: 08:24:44.846: GTK+ module /snap/pieces-for-developers/94/gnome-platform/usr/lib/gtk-2.0/modules/libcanberra-gtk-module.so cannot be loaded.\nGTK+ 2.x symbols detected. Using GTK+ 2.x and GTK+ 3 in the same process is not supported.\nGtk-Message: 08:24:44.846: Failed to load module \"canberra-gtk-module\"\nRuntimeFlutterCodeHighlighter initialized with path: /snap/pieces-for-developers/94/lib/libruntime_code_highlighter.so\nDebug: Starting logger initialization...\nDebug: SimpleLogger configured with Level.ALL\nDebug: SimpleLogger formatter configured\nDebug: Sentry initialized\nDebug: Sentry logger configured\nDebug: Log directory initialized at: /home/dns/snap/pieces-for-developers/94/.local/share/com.pieces.os.dependency_management\nDebug: About to complete initialization...\nDebug: Initialization completed\nINFO: [LOGGER::initialized] Logger initialized successfully with updated directory: /home/dns/Documents/com.pieces.pfd/production/logs\n[xcb] Unknown sequence number while processing reply\n[xcb] Most likely this is a multi-threaded client and XInitThreads has not been called\n[xcb] Aborting, sorry about that.\npieces_for_x: ../../src/xcb_io.c:730: _XReply: Assertion `!xcb_xlib_threads_sequence_lost' failed.\nAborted (core dumped)\n```\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 4.74
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    "Investigate and resolve the authentication site connection issue during Pieces installation on Windows, potentially addressing conflicts with security software like Cortex XDR.",
+    "Address the Pieces application crash at startup on Ubuntu 24.04 LTS with XCB errors, focusing on XCB compatibility and potential multi-threading issues.",
+    "Improve network connectivity troubleshooting during Pieces installation to handle potential connection problems more effectively."
+  ],
+  "message": "Daily support report generated successfully."
+}
