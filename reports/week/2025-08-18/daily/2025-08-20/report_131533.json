@@ -1,0 +1,126 @@
+{
+  "success": true,
+  "date_range": {
+    "start": "2025-08-20T00:00:00+00:00",
+    "end": "2025-08-20T13:15:33.410212+00:00"
+  },
+  "summary": {
+    "total_tickets": 3,
+    "resolved_tickets": 0,
+    "open_tickets": 3
+  },
+  "ticket_breakdown": [
+    {
+      "category": "bug",
+      "received": 3,
+      "resolved": 0,
+      "pending": 3
+    },
+    {
+      "category": "app:desktop application",
+      "received": 3,
+      "resolved": 0,
+      "pending": 3
+    },
+    {
+      "category": "os:linux",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "app:pieces os",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "P2",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:waiting_on_fix",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:triaged",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "os:macos",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:vs code",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "update with fix released and available",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    }
+  ],
+  "most_active_tickets": [
+    {
+      "number": 835,
+      "title": "pieces-for-developers crashes at startup on ubuntu 24.04 LTS",
+      "activity_level": 7.35
+    },
+    {
+      "number": 810,
+      "title": "MCP Server SSE Connection Hangs - No Tools Available in Claude Code",
+      "activity_level": 7.29
+    },
+    {
+      "number": 809,
+      "title": "Ensure core dependencies; Retry Step",
+      "activity_level": 4.15
+    }
+  ],
+  "common_issues": [
+    {
+      "title": "Pieces OS and Desktop App Integration Issues",
+      "description": "Users report problems with Pieces OS and Desktop App integration across Linux and macOS. Issues include dependency errors (\"Retry Step\"), MCP server connection failures with Claude Code, and application crashes on startup.  Troubleshooting steps include verifying installation, checking logs, and ensuring compatibility between Pieces OS, Desktop App, and other integrations.",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 809,
+          "title": "Ensure core dependencies; Retry Step",
+          "text": "Ensure core dependencies; Retry Step\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\n### Pieces OS, Desktop Application\n\n* Operating System / Platform: Linux\n\n* Pieces OS Version 4.3.1\n\n\n\n\n\nAfter installation, the \u201cInitialize Desktop App\u201d step has run successfully. The \u201cEnsure core dependencies\u201d step displays the message \u201cRetry Step\u201d.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 4.15
+        },
+        {
+          "id": 810,
+          "title": "MCP Server SSE Connection Hangs - No Tools Available in Claude Code",
+          "text": "MCP Server SSE Connection Hangs - No Tools Available in Claude Code\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS, VS Code\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n12.1.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nThe Pieces MCP server fails to properly integrate with Claude Code within VSCode. While the SSE endpoint responds initially, it hangs indefinitely, preventing MCP tools from being registered or used. This affects Claude Code integration both as a standalone CLI and when used within VS Code.\n\n**Steps to Reproduce:**\n1. Install Pieces OS and Pieces app\n2. Login in the app\n3. Configure MCP in Claude Code's ~/.claude.json:\n\n```json\n{\n  \"pieces\": {\n    \"type\": \"sse\",\n    \"url\": \"http://localhost:39300/model_context_protocol/2024-11-05/sse\"\n}\n```\n\n4. Attempt to use Pieces MCP tools (e.g., mcp__pieces__ask_pieces_ltm) in Claude Code\n5. Tools are not available despite server being configured\n6. Same issue occurs whether using Claude Code in terminal or integrated with VS Code\n\n**Technical Details:**\n- SSE endpoint (http://localhost:39300/model_context_protocol/2024-11-05/sse) responds with:\n\n```\nevent: endpoint\ndata: /model_context_protocol/2024-11-05/messages\n```\n\n- Connection then hangs indefinitely (SSE buffering issue)\n- Both Pieces OS and Pieces app processes are running\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 7.29
+        },
+        {
+          "id": 835,
+          "title": "pieces-for-developers crashes at startup on ubuntu 24.04 LTS",
+          "text": "pieces-for-developers crashes at startup on ubuntu 24.04 LTS\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nLinux\n\n### Your Pieces OS Version\n\n12.2.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWhen I launch pieces-for-developers a window briefly appears and then disappears. \n\nThe first time after I reboot a blank window appears and Ubuntu displayed the \"application not responding\" dialog. No matter how many times I clicked \"wait\" it never appeared to start. I've not been able to reproduce however and now the blank window appears and almost immediately disappears\n\nSystem is running Ubuntu 24.04 LTS using X11 with nvidia device drivers\n\npieces-os           12.2.1            (105)   1GB -\npieces-for-developers 4.3.3            (94) 173MB\n\nThe `~/.local/share/com.pieces.os` folder does not appear to have been created\n\nOutput from when starting with debug flag\n\n```\npieces-for-developers --debug\nGtk-Message: 08:24:44.749: Not loading module \"atk-bridge\": The functionality is provided by GTK natively. Please try to not load it.\n\n(pieces_for_x:12556): Gtk-WARNING **: 08:24:44.845: GTK+ module /snap/pieces-for-developers/94/gnome-platform/usr/lib/gtk-2.0/modules/libcanberra-gtk-module.so cannot be loaded.\nGTK+ 2.x symbols detected. Using GTK+ 2.x and GTK+ 3 in the same process is not supported.\nGtk-Message: 08:24:44.845: Failed to load module \"canberra-gtk-module\"\n\n(pieces_for_x:12556): Gtk-WARNING **: 08:24:44.846: GTK+ module /snap/pieces-for-developers/94/gnome-platform/usr/lib/gtk-2.0/modules/libcanberra-gtk-module.so cannot be loaded.\nGTK+ 2.x symbols detected. Using GTK+ 2.x and GTK+ 3 in the same process is not supported.\nGtk-Message: 08:24:44.846: Failed to load module \"canberra-gtk-module\"\nRuntimeFlutterCodeHighlighter initialized with path: /snap/pieces-for-developers/94/lib/libruntime_code_highlighter.so\nDebug: Starting logger initialization...\nDebug: SimpleLogger configured with Level.ALL\nDebug: SimpleLogger formatter configured\nDebug: Sentry initialized\nDebug: Sentry logger configured\nDebug: Log directory initialized at: /home/dns/snap/pieces-for-developers/94/.local/share/com.pieces.os.dependency_management\nDebug: About to complete initialization...\nDebug: Initialization completed\nINFO: [LOGGER::initialized] Logger initialized successfully with updated directory: /home/dns/Documents/com.pieces.pfd/production/logs\n[xcb] Unknown sequence number while processing reply\n[xcb] Most likely this is a multi-threaded client and XInitThreads has not been called\n[xcb] Aborting, sorry about that.\npieces_for_x: ../../src/xcb_io.c:730: _XReply: Assertion `!xcb_xlib_threads_sequence_lost' failed.\nAborted (core dumped)\n```\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 7.35
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    "Prioritize resolving the Pieces OS and Desktop App integration issues affecting Linux and macOS users. Focus on dependency errors (\"Retry Step\"), MCP server connection failures with Claude Code, and application crashes on startup.",
+    "Investigate the high activity levels on tickets 835 (application crashes on Ubuntu 24.04 LTS) and 810 (MCP Server SSE connection hangs). These issues appear to be impacting multiple users and require urgent attention.",
+    "Provide troubleshooting steps to users experiencing integration problems. These steps could include verifying installation, checking logs, and ensuring compatibility between Pieces OS, Desktop App, and other integrations.",
+    "Consider creating dedicated documentation or FAQs for common integration issues to reduce support ticket volume.",
+    "Monitor the 'bug' category closely as it represents all reported issues during this period."
+  ],
+  "message": "Daily support report generated successfully."
+}

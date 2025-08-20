@@ -2,28 +2,46 @@
   "success": true,
   "date_range": {
     "start": "2025-08-18T00:00:00+00:00",
-    "end": "2025-08-20T05:08:05.317268+00:00"
+    "end": "2025-08-20T13:16:01.331072+00:00"
   },
   "summary": {
-    "total_tickets": 5,
+    "total_tickets": 6,
     "resolved_tickets": 1,
-    "open_tickets": 4
+    "open_tickets": 5
   },
   "ticket_breakdown": [
     {
       "category": "bug",
-      "received": 4,
-      "resolved": 1,
-      "pending": 3
-    },
-    {
-      "category": "app:desktop application",
       "received": 5,
       "resolved": 1,
       "pending": 4
     },
     {
+      "category": "app:desktop application",
+      "received": 6,
+      "resolved": 1,
+      "pending": 5
+    },
+    {
       "category": "os:linux",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "app:pieces os",
+      "received": 4,
+      "resolved": 0,
+      "pending": 4
+    },
+    {
+      "category": "P2",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:waiting_on_fix",
       "received": 1,
       "resolved": 0,
       "pending": 1
@@ -39,12 +57,6 @@
       "received": 3,
       "resolved": 1,
       "pending": 2
-    },
-    {
-      "category": "app:pieces os",
-      "received": 3,
-      "resolved": 0,
-      "pending": 3
     },
     {
       "category": "app:vs code",
@@ -105,87 +117,117 @@
     {
       "number": 835,
       "title": "pieces-for-developers crashes at startup on ubuntu 24.04 LTS",
-      "activity_level": 8.18
+      "activity_level": 7.35
     },
     {
       "number": 810,
       "title": "MCP Server SSE Connection Hangs - No Tools Available in Claude Code",
-      "activity_level": 7.4
+      "activity_level": 7.29
     },
     {
       "number": 818,
       "title": "Pro user's LLM cannot be upgraded to the latest version, even if they are chosen to",
-      "activity_level": 5.38
+      "activity_level": 5.25
+    },
+    {
+      "number": 809,
+      "title": "Ensure core dependencies; Retry Step",
+      "activity_level": 4.15
     },
     {
       "number": 834,
       "title": "Cannot connect to Authentication site during install of Pieces",
-      "activity_level": 3.21
+      "activity_level": 3.0
     },
     {
       "number": 747,
       "title": "MCP `ask_pieces_ltm` tool consistently returns \"Failed to extract context\" despite functional LTM",
-      "activity_level": 2.92
+      "activity_level": 2.59
     }
   ],
   "common_issues": [
     {
-      "title": "Pieces for Developers and Pieces OS Startup/Connectivity Issues",
-      "description": "Users report Pieces for Developers crashing on startup on Ubuntu 24.04, failing to connect during installation on Windows, and Pro users unable to upgrade to the latest LLM version despite selecting it.  Issues may involve system compatibility conflicts, network connectivity problems, or bugs in Pieces. Check system requirements, network configuration, firewall settings, and Pieces logs for clues. Reinstalling Pieces or contacting support may be necessary.",
-      "frequency": 3,
-      "related_issues": [
-        {
-          "id": 835,
-          "title": "pieces-for-developers crashes at startup on ubuntu 24.04 LTS",
-          "text": "pieces-for-developers crashes at startup on ubuntu 24.04 LTS\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nLinux\n\n### Your Pieces OS Version\n\n12.2.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWhen I launch pieces-for-developers a window briefly appears and then disappears. \n\nThe first time after I reboot a blank window appears and Ubuntu displayed the \"application not responding\" dialog. No matter how many times I clicked \"wait\" it never appeared to start. I've not been able to reproduce however and now the blank window appears and almost immediately disappears\n\nSystem is running Ubuntu 24.04 LTS using X11 with nvidia device drivers\n\npieces-os           12.2.1            (105)   1GB -\npieces-for-developers 4.3.3            (94) 173MB\n\nThe `~/.local/share/com.pieces.os` folder does not appear to have been created\n\nOutput from when starting with debug flag\n\n```\npieces-for-developers --debug\nGtk-Message: 08:24:44.749: Not loading module \"atk-bridge\": The functionality is provided by GTK natively. Please try to not load it.\n\n(pieces_for_x:12556): Gtk-WARNING **: 08:24:44.845: GTK+ module /snap/pieces-for-developers/94/gnome-platform/usr/lib/gtk-2.0/modules/libcanberra-gtk-module.so cannot be loaded.\nGTK+ 2.x symbols detected. Using GTK+ 2.x and GTK+ 3 in the same process is not supported.\nGtk-Message: 08:24:44.845: Failed to load module \"canberra-gtk-module\"\n\n(pieces_for_x:12556): Gtk-WARNING **: 08:24:44.846: GTK+ module /snap/pieces-for-developers/94/gnome-platform/usr/lib/gtk-2.0/modules/libcanberra-gtk-module.so cannot be loaded.\nGTK+ 2.x symbols detected. Using GTK+ 2.x and GTK+ 3 in the same process is not supported.\nGtk-Message: 08:24:44.846: Failed to load module \"canberra-gtk-module\"\nRuntimeFlutterCodeHighlighter initialized with path: /snap/pieces-for-developers/94/lib/libruntime_code_highlighter.so\nDebug: Starting logger initialization...\nDebug: SimpleLogger configured with Level.ALL\nDebug: SimpleLogger formatter configured\nDebug: Sentry initialized\nDebug: Sentry logger configured\nDebug: Log directory initialized at: /home/dns/snap/pieces-for-developers/94/.local/share/com.pieces.os.dependency_management\nDebug: About to complete initialization...\nDebug: Initialization completed\nINFO: [LOGGER::initialized] Logger initialized successfully with updated directory: /home/dns/Documents/com.pieces.pfd/production/logs\n[xcb] Unknown sequence number while processing reply\n[xcb] Most likely this is a multi-threaded client and XInitThreads has not been called\n[xcb] Aborting, sorry about that.\npieces_for_x: ../../src/xcb_io.c:730: _XReply: Assertion `!xcb_xlib_threads_sequence_lost' failed.\nAborted (core dumped)\n```\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 8.18
-        },
-        {
-          "id": 834,
-          "title": "Cannot connect to Authentication site during install of Pieces",
-          "text": "Cannot connect to Authentication site during install of Pieces\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n12.2.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI end up at this url:\n\nhttps://pieces.app/authentication-error?sentry_id=00000000000000000000000000000000&os=917d9227-e6ca-45d6-ae1a-c6b76b70a5c1&platform=windows\n\nPlease note:  This is when I install Pieces as part of the UltraEdit 2025.0 install on my work VDI.\nOur VDIs have Cortex XDR for security so this may be blocking it.  If so, I probably can't use Pieces at work.  I highly doubt they will open any ports for this.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 3.21
-        },
-        {
-          "id": 818,
-          "title": "Pro user's LLM cannot be upgraded to the latest version, even if they are chosen to",
-          "text": "Pro user's LLM cannot be upgraded to the latest version, even if they are chosen to\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS, Visual Studio, Sublime Plugin, VS Code\n\n### Operating System / Platform\n\nWindows 11\n\n### Your Pieces OS Version\n\n12.1.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI have a small problem now that cannot be solved through LLM: \n\n- I have inquired with LLM in **pieces for developers** and **pieces vscode plugin**, and they all said they are Sonnet 3.5. \n- The pieces LLM in sublime (set claude 3.7 sonnet) keeps silence about this:\n      **Copilot**: I'm an AI assistant created by Anthropic named Claude, and my training data has a cutoff date. While I don't typically specify my exact version details, I can tell you that my knowledge cutoff is around late 2023. This means I don't have information about events, technologies, or developments that occurred after that time.\n\nHowever, \n\n- I just **upgraded to Pieces Pro yesterday** and have switched to Sonnet 4 (for all pieces IDE plugins and Desktop Apps, except for sublime which only support sonnet 3.7 till now). \n- Every test chat was opened in a new Chat after the LLM is switched( to Sonnet 4 or Gemini 2.5 Pro)... \n- I've checked the configuration files and they are all Sonnet 4 without any issues. \n- I have tried restarting my computer or logging in to my account again, but still have this bug\n- I have tried changing my computer and VPN node, including canceling or adding the global system proxy, but none of them worked\n\nPS: My pieces OS and pieces for developers are both installed in sequence on Microsoft Store. \n\n- They work well in other aspects.\n- I have been using them for about 7 days. \n- I am in Chinese Mainland, thus a heavy VPN user.\n\n## Pieces for Deveopers (desktop app) \n\n<img width=\"1901\" height=\"470\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/d492f2e4-d73a-4798-8539-c08d768245d9\" />\n\n<img width=\"2435\" height=\"1569\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/1ac35bd2-7f75-45dc-9e1a-3963f2fea275\" />\n\n## Vscode plugin\n\n<img width=\"714\" height=\"1795\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/367de66a-2b60-429f-884f-67ae238582c9\" />\n\n<img width=\"717\" height=\"1795\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/57f0c4f6-7a13-4491-a07e-682fb4caf422\" />\n\n## Sublime plugin\n\n<img width=\"2081\" height=\"1407\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/f2f60b23-19eb-4bc0-8dd3-5c1c462021b0\" />\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 5.38
-        }
-      ]
-    },
-    {
-      "title": "Pieces OS MCP Integration Failures and LLM Version Discrepancies",
-      "description": "Users report Pieces OS MCP tools failing to integrate with Claude Code and other IDEs.  The `ask_pieces_ltm` tool frequently returns \"Failed to extract context\" despite functional LTM.  Additionally, LLM versions reported within Pieces for Developers and IDE plugins don't always reflect the user's chosen Pro LLM version (Sonnet 4 or Gemini 2.5 Pro).  Troubleshooting steps include verifying server connections, restarting services, and checking configuration files. Further investigation into MCP server implementation and LLM version synchronization is needed.",
+      "title": "Pieces MCP Integration Issues and LLM Upgrade Problems",
+      "description": "Users report Pieces MCP tools failing to connect or retrieve LTM data, specifically `ask_pieces_ltm` returning errors despite functional LTM.  LLM upgrades to Sonnet 4 are not reflected in Pieces for Developers or VS Code plugin.  Issues persist across macOS and Windows, affecting various IDE plugins and the desktop app. Troubleshooting includes verifying server connections, restarting services, and checking configurations, but the root cause remains unclear. Some users experience SSE connection hangs with Claude Code integration.",
       "frequency": 3,
       "related_issues": [
         {
           "id": 810,
           "title": "MCP Server SSE Connection Hangs - No Tools Available in Claude Code",
           "text": "MCP Server SSE Connection Hangs - No Tools Available in Claude Code\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS, VS Code\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n12.1.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nThe Pieces MCP server fails to properly integrate with Claude Code within VSCode. While the SSE endpoint responds initially, it hangs indefinitely, preventing MCP tools from being registered or used. This affects Claude Code integration both as a standalone CLI and when used within VS Code.\n\n**Steps to Reproduce:**\n1. Install Pieces OS and Pieces app\n2. Login in the app\n3. Configure MCP in Claude Code's ~/.claude.json:\n\n```json\n{\n  \"pieces\": {\n    \"type\": \"sse\",\n    \"url\": \"http://localhost:39300/model_context_protocol/2024-11-05/sse\"\n}\n```\n\n4. Attempt to use Pieces MCP tools (e.g., mcp__pieces__ask_pieces_ltm) in Claude Code\n5. Tools are not available despite server being configured\n6. Same issue occurs whether using Claude Code in terminal or integrated with VS Code\n\n**Technical Details:**\n- SSE endpoint (http://localhost:39300/model_context_protocol/2024-11-05/sse) responds with:\n\n```\nevent: endpoint\ndata: /model_context_protocol/2024-11-05/messages\n```\n\n- Connection then hangs indefinitely (SSE buffering issue)\n- Both Pieces OS and Pieces app processes are running\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 7.4
+          "activity_level": 7.29
         },
         {
           "id": 818,
           "title": "Pro user's LLM cannot be upgraded to the latest version, even if they are chosen to",
           "text": "Pro user's LLM cannot be upgraded to the latest version, even if they are chosen to\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS, Visual Studio, Sublime Plugin, VS Code\n\n### Operating System / Platform\n\nWindows 11\n\n### Your Pieces OS Version\n\n12.1.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI have a small problem now that cannot be solved through LLM: \n\n- I have inquired with LLM in **pieces for developers** and **pieces vscode plugin**, and they all said they are Sonnet 3.5. \n- The pieces LLM in sublime (set claude 3.7 sonnet) keeps silence about this:\n      **Copilot**: I'm an AI assistant created by Anthropic named Claude, and my training data has a cutoff date. While I don't typically specify my exact version details, I can tell you that my knowledge cutoff is around late 2023. This means I don't have information about events, technologies, or developments that occurred after that time.\n\nHowever, \n\n- I just **upgraded to Pieces Pro yesterday** and have switched to Sonnet 4 (for all pieces IDE plugins and Desktop Apps, except for sublime which only support sonnet 3.7 till now). \n- Every test chat was opened in a new Chat after the LLM is switched( to Sonnet 4 or Gemini 2.5 Pro)... \n- I've checked the configuration files and they are all Sonnet 4 without any issues. \n- I have tried restarting my computer or logging in to my account again, but still have this bug\n- I have tried changing my computer and VPN node, including canceling or adding the global system proxy, but none of them worked\n\nPS: My pieces OS and pieces for developers are both installed in sequence on Microsoft Store. \n\n- They work well in other aspects.\n- I have been using them for about 7 days. \n- I am in Chinese Mainland, thus a heavy VPN user.\n\n## Pieces for Deveopers (desktop app) \n\n<img width=\"1901\" height=\"470\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/d492f2e4-d73a-4798-8539-c08d768245d9\" />\n\n<img width=\"2435\" height=\"1569\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/1ac35bd2-7f75-45dc-9e1a-3963f2fea275\" />\n\n## Vscode plugin\n\n<img width=\"714\" height=\"1795\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/367de66a-2b60-429f-884f-67ae238582c9\" />\n\n<img width=\"717\" height=\"1795\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/57f0c4f6-7a13-4491-a07e-682fb4caf422\" />\n\n## Sublime plugin\n\n<img width=\"2081\" height=\"1407\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/f2f60b23-19eb-4bc0-8dd3-5c1c462021b0\" />\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 5.38
+          "activity_level": 5.25
         },
         {
           "id": 747,
           "title": "MCP `ask_pieces_ltm` tool consistently returns \"Failed to extract context\" despite functional LTM",
           "text": "MCP `ask_pieces_ltm` tool consistently returns \"Failed to extract context\" despite functional LTM\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS Sequoia 15.5\n\n### Your Pieces OS Version\n\n11.4.4\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n## Bug Report\n\n**Environment:**\n- OS: macOS Sequoia 15.5\n- Pieces OS: 11.4.4 - Running (PID 699, actively collecting data)\n- Pieces App: 4.1.4 - Active with functional LTM workstream\n- MCP Server: Pieces MCP server on localhost:39300\n- Test Client: Warp Terminal Agent Mode, Claude, direct curl testing\n\n## Problem Description\n\nThe `ask_pieces_ltm` MCP tool consistently returns `\"Failed to extract context\"` with `\"isError\": true`, despite:\n\n1. \u2705 **LTM is working correctly** - User confirmed LTM is collecting data and showing results/summaries in the Pieces workstream\n2. \u2705 **MCP server communication works** - Can successfully call `create_pieces_memory` and list tools\n3. \u2705 **Pieces OS is running and active** - Process running with multiple active connections\n4. \u274c **Only `ask_pieces_ltm` fails** - Every call to this specific tool fails\n\n## Steps to Reproduce\n\n### 1. Verify MCP Server is Running\n```bash\nlsof -i :39300\n# Shows Pieces OS listening on port 39300 with multiple established connections\n```\n\n### 2. Confirm Tools are Available\n```bash\ncurl -N http://localhost:39300/model_context_protocol/2024-11-05/sse \\\n  -H 'Accept: text/event-stream' &\ncurl -X POST http://localhost:39300/model_context_protocol/2024-11-05/messages \\\n  -H 'Content-Type: application/json' \\\n  -d '{\"jsonrpc\":\"2.0\",\"id\":1,\"method\":\"tools/list\"}'\n```\n\n**Result:** \u2705 Successfully returns tools list with `ask_pieces_ltm` tool schema\n\n### 3. Test create_pieces_memory (Working)\n```bash\ncurl -X POST http://localhost:39300/model_context_protocol/2024-11-05/messages \\\n  -H 'Content-Type: application/json' \\\n  -d '{\n    \"jsonrpc\":\"2.0\",\"id\":2,\"method\":\"tools/call\",\n    \"params\":{\n      \"name\":\"create_pieces_memory\",\n      \"arguments\":{\n        \"summary\":\"Test memory\",\n        \"summary_description\":\"Testing connection\"\n      }\n    }\n  }'\n```\n\n**Result:** \u2705 `\"Long term memory successfully created\"`\n\n### 4. Test ask_pieces_ltm (Failing)\n```bash\ncurl -X POST http://localhost:39300/model_context_protocol/2024-11-05/messages \\\n  -H 'Content-Type: application/json' \\\n  -d '{\n    \"jsonrpc\":\"2.0\",\"id\":3,\"method\":\"tools/call\",\n    \"params\":{\n      \"name\":\"ask_pieces_ltm\",\n      \"arguments\":{\n        \"question\":\"What did I work on today?\",\n        \"chat_llm\":\"claude-3-5-sonnet-20241022\"\n      }\n    }\n  }'\n```\n\n**Result:** \u274c `{\"content\":[{\"type\":\"text\",\"text\":\"Failed to extract context\"}],\"isError\":true}`\n\n## Attempted Variations (All Failed)\n\n### Minimal Parameters\n```json\n{\n  \"question\": \"hello\",\n  \"chat_llm\": \"claude-3-5-sonnet-20241022\"\n}\n```\n\n### With Application Sources\n```json\n{\n  \"question\": \"What terminal commands have I run recently?\",\n  \"chat_llm\": \"claude-3-5-sonnet-20241022\",\n  \"application_sources\": [\"Warp\"],\n  \"connected_client\": \"Warp\"\n}\n```\n\n### Comprehensive Parameters\n```json\n{\n  \"question\": \"What did I work on today?\",\n  \"chat_llm\": \"claude-3-5-sonnet-20241022\",\n  \"connected_client\": \"Warp\",\n  \"application_sources\": [\"Warp\", \"Google Chrome\"],\n  \"topics\": [\"terminal\", \"commands\", \"recent\"],\n  \"related_questions\": [\"What was I working on?\", \"What debugging was I doing?\"]\n}\n```\n\n### Different Application Sources Tested\n- `[\"Warp\"]`\n- `[\"Google Chrome\", \"Safari\", \"Obsidian\"]`\n- `[\"Claude\"]`\n- Multiple combinations from the schema list\n\n**All variations return the same error.**\n\n## Troubleshooting Attempted\n\n1. \u2705 **Restarted Pieces MCP server** - Issue persists\n2. \u2705 **Verified Pieces OS permissions** - Has necessary macOS permissions\n3. \u2705 **Confirmed LTM data collection** - User sees active workstream data\n4. \u2705 **Tested different MCP clients** - Same error in Warp Agent Mode, Claude, and direct curl\n5. \u2705 **Used proper SSE endpoint** - `/sse` for responses, `/messages` for requests\n6. \u2705 **Verified JSON-RPC format** - Matches working `create_pieces_memory` calls\n\n## Expected Behavior\n\nThe `ask_pieces_ltm` tool should return contextual information from the user's LTM data, similar to how the main Pieces application shows workstream summaries and context.\n\n## Actual Behavior\n\nEvery call to `ask_pieces_ltm` returns:\n```json\n{\n  \"content\": [\n    {\n      \"type\": \"text\",\n      \"text\": \"Failed to extract context\"\n    }\n  ],\n  \"isError\": true\n}\n```\n\n## Analysis\n\nThis appears to be an **MCP server implementation issue** where:\n\n1. The `ask_pieces_ltm` tool is properly registered and callable\n2. The MCP communication protocol works correctly\n3. The underlying LTM system has data and functions properly\n4. There's a disconnect between the MCP tool implementation and the LTM data access layer\n\n## Potential Root Causes\n\n1. **Authentication/Session Issue**: MCP server process may lack proper authentication to access LTM data\n2. **Data Access Layer Bug**: `ask_pieces_ltm` implementation may be using incorrect API calls to access LTM\n3. **Permissions Issue**: MCP server may not have the same data access permissions as the main Pieces application\n4. **Initialization Problem**: LTM access for MCP tools may require additional setup or initialization\n\n## Request\n\nPlease investigate the `ask_pieces_ltm` tool implementation in the Pieces MCP server to identify why it cannot access the same LTM data that is clearly available to the main Pieces application.\n\n## Additional Context\n\n- Issue occurs consistently across different MCP clients (Warp, Claude)\n- `create_pieces_memory` works perfectly, confirming MCP communication\n- LTM is actively collecting and displaying data in the main Pieces app\n- No relevant error logs found in system logs or Pieces application logs\n- Multiple parameter variations attempted with identical results\n\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 2.92
+          "activity_level": 2.59
+        }
+      ]
+    },
+    {
+      "title": "Pieces installation and startup failures across platforms",
+      "description": "Users are experiencing issues with Pieces installation and startup on Linux and Windows. On Linux, the desktop application crashes at startup with XCB errors. On Windows, users encounter authentication errors during installation, possibly due to security software conflicts.  A common solution for Linux is to ensure core dependencies are met. For Windows, verifying network connectivity and firewall settings may resolve authentication issues.",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 835,
+          "title": "pieces-for-developers crashes at startup on ubuntu 24.04 LTS",
+          "text": "pieces-for-developers crashes at startup on ubuntu 24.04 LTS\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nLinux\n\n### Your Pieces OS Version\n\n12.2.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWhen I launch pieces-for-developers a window briefly appears and then disappears. \n\nThe first time after I reboot a blank window appears and Ubuntu displayed the \"application not responding\" dialog. No matter how many times I clicked \"wait\" it never appeared to start. I've not been able to reproduce however and now the blank window appears and almost immediately disappears\n\nSystem is running Ubuntu 24.04 LTS using X11 with nvidia device drivers\n\npieces-os           12.2.1            (105)   1GB -\npieces-for-developers 4.3.3            (94) 173MB\n\nThe `~/.local/share/com.pieces.os` folder does not appear to have been created\n\nOutput from when starting with debug flag\n\n```\npieces-for-developers --debug\nGtk-Message: 08:24:44.749: Not loading module \"atk-bridge\": The functionality is provided by GTK natively. Please try to not load it.\n\n(pieces_for_x:12556): Gtk-WARNING **: 08:24:44.845: GTK+ module /snap/pieces-for-developers/94/gnome-platform/usr/lib/gtk-2.0/modules/libcanberra-gtk-module.so cannot be loaded.\nGTK+ 2.x symbols detected. Using GTK+ 2.x and GTK+ 3 in the same process is not supported.\nGtk-Message: 08:24:44.845: Failed to load module \"canberra-gtk-module\"\n\n(pieces_for_x:12556): Gtk-WARNING **: 08:24:44.846: GTK+ module /snap/pieces-for-developers/94/gnome-platform/usr/lib/gtk-2.0/modules/libcanberra-gtk-module.so cannot be loaded.\nGTK+ 2.x symbols detected. Using GTK+ 2.x and GTK+ 3 in the same process is not supported.\nGtk-Message: 08:24:44.846: Failed to load module \"canberra-gtk-module\"\nRuntimeFlutterCodeHighlighter initialized with path: /snap/pieces-for-developers/94/lib/libruntime_code_highlighter.so\nDebug: Starting logger initialization...\nDebug: SimpleLogger configured with Level.ALL\nDebug: SimpleLogger formatter configured\nDebug: Sentry initialized\nDebug: Sentry logger configured\nDebug: Log directory initialized at: /home/dns/snap/pieces-for-developers/94/.local/share/com.pieces.os.dependency_management\nDebug: About to complete initialization...\nDebug: Initialization completed\nINFO: [LOGGER::initialized] Logger initialized successfully with updated directory: /home/dns/Documents/com.pieces.pfd/production/logs\n[xcb] Unknown sequence number while processing reply\n[xcb] Most likely this is a multi-threaded client and XInitThreads has not been called\n[xcb] Aborting, sorry about that.\npieces_for_x: ../../src/xcb_io.c:730: _XReply: Assertion `!xcb_xlib_threads_sequence_lost' failed.\nAborted (core dumped)\n```\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 7.35
+        },
+        {
+          "id": 809,
+          "title": "Ensure core dependencies; Retry Step",
+          "text": "Ensure core dependencies; Retry Step\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\n### Pieces OS, Desktop Application\n\n* Operating System / Platform: Linux\n\n* Pieces OS Version 4.3.1\n\n\n\n\n\nAfter installation, the \u201cInitialize Desktop App\u201d step has run successfully. The \u201cEnsure core dependencies\u201d step displays the message \u201cRetry Step\u201d.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 4.15
+        },
+        {
+          "id": 834,
+          "title": "Cannot connect to Authentication site during install of Pieces",
+          "text": "Cannot connect to Authentication site during install of Pieces\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n12.2.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI end up at this url:\n\nhttps://pieces.app/authentication-error?sentry_id=00000000000000000000000000000000&os=917d9227-e6ca-45d6-ae1a-c6b76b70a5c1&platform=windows\n\nPlease note:  This is when I install Pieces as part of the UltraEdit 2025.0 install on my work VDI.\nOur VDIs have Cortex XDR for security so this may be blocking it.  If so, I probably can't use Pieces at work.  I highly doubt they will open any ports for this.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 3.0
+        }
+      ]
+    },
+    {
+      "title": "Pieces installation and upgrade issues",
+      "description": "Users are experiencing problems with Pieces installation, dependency setup, and LLM upgrades. Issues include \"Retry Step\" errors during dependency checks, authentication failures during installation, and LLM versions not updating to the selected Pro version.  Suggested solutions include checking network connectivity, firewall settings, and ensuring the Pieces OS and app versions are compatible.",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 809,
+          "title": "Ensure core dependencies; Retry Step",
+          "text": "Ensure core dependencies; Retry Step\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\n### Pieces OS, Desktop Application\n\n* Operating System / Platform: Linux\n\n* Pieces OS Version 4.3.1\n\n\n\n\n\nAfter installation, the \u201cInitialize Desktop App\u201d step has run successfully. The \u201cEnsure core dependencies\u201d step displays the message \u201cRetry Step\u201d.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 4.15
+        },
+        {
+          "id": 834,
+          "title": "Cannot connect to Authentication site during install of Pieces",
+          "text": "Cannot connect to Authentication site during install of Pieces\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n12.2.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI end up at this url:\n\nhttps://pieces.app/authentication-error?sentry_id=00000000000000000000000000000000&os=917d9227-e6ca-45d6-ae1a-c6b76b70a5c1&platform=windows\n\nPlease note:  This is when I install Pieces as part of the UltraEdit 2025.0 install on my work VDI.\nOur VDIs have Cortex XDR for security so this may be blocking it.  If so, I probably can't use Pieces at work.  I highly doubt they will open any ports for this.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 3.0
+        },
+        {
+          "id": 818,
+          "title": "Pro user's LLM cannot be upgraded to the latest version, even if they are chosen to",
+          "text": "Pro user's LLM cannot be upgraded to the latest version, even if they are chosen to\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS, Visual Studio, Sublime Plugin, VS Code\n\n### Operating System / Platform\n\nWindows 11\n\n### Your Pieces OS Version\n\n12.1.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI have a small problem now that cannot be solved through LLM: \n\n- I have inquired with LLM in **pieces for developers** and **pieces vscode plugin**, and they all said they are Sonnet 3.5. \n- The pieces LLM in sublime (set claude 3.7 sonnet) keeps silence about this:\n      **Copilot**: I'm an AI assistant created by Anthropic named Claude, and my training data has a cutoff date. While I don't typically specify my exact version details, I can tell you that my knowledge cutoff is around late 2023. This means I don't have information about events, technologies, or developments that occurred after that time.\n\nHowever, \n\n- I just **upgraded to Pieces Pro yesterday** and have switched to Sonnet 4 (for all pieces IDE plugins and Desktop Apps, except for sublime which only support sonnet 3.7 till now). \n- Every test chat was opened in a new Chat after the LLM is switched( to Sonnet 4 or Gemini 2.5 Pro)... \n- I've checked the configuration files and they are all Sonnet 4 without any issues. \n- I have tried restarting my computer or logging in to my account again, but still have this bug\n- I have tried changing my computer and VPN node, including canceling or adding the global system proxy, but none of them worked\n\nPS: My pieces OS and pieces for developers are both installed in sequence on Microsoft Store. \n\n- They work well in other aspects.\n- I have been using them for about 7 days. \n- I am in Chinese Mainland, thus a heavy VPN user.\n\n## Pieces for Deveopers (desktop app) \n\n<img width=\"1901\" height=\"470\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/d492f2e4-d73a-4798-8539-c08d768245d9\" />\n\n<img width=\"2435\" height=\"1569\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/1ac35bd2-7f75-45dc-9e1a-3963f2fea275\" />\n\n## Vscode plugin\n\n<img width=\"714\" height=\"1795\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/367de66a-2b60-429f-884f-67ae238582c9\" />\n\n<img width=\"717\" height=\"1795\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/57f0c4f6-7a13-4491-a07e-682fb4caf422\" />\n\n## Sublime plugin\n\n<img width=\"2081\" height=\"1407\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/f2f60b23-19eb-4bc0-8dd3-5c1c462021b0\" />\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 5.25
         }
       ]
     }
   ],
   "recommendations": [
-    "Prioritize debugging the 'pieces-for-developers' crash on Ubuntu 24.04 (Issue #835) due to high activity and impact on new users.",
-    "Investigate MCP server issues, specifically the SSE connection hangs (Issue #810) and the 'ask_pieces_ltm' tool failure (Issue #747), to restore MCP functionality.",
-    "Address the LLM version discrepancy between user selection and reported version in Pieces for Developers and IDE plugins (Issue #818) to ensure Pro users receive the correct LLM.",
-    "Troubleshoot the Pieces installation authentication error on Windows (Issue #834), potentially related to security software conflicts, to improve onboarding.",
-    "Review and update documentation regarding system compatibility, network configuration, and troubleshooting steps for common startup/connectivity issues."
+    "Prioritize resolving the MCP integration issues and LLM upgrade problems as they affect multiple users across different platforms.",
+    "Investigate and address the root cause of the XCB errors causing crashes on Linux and the authentication errors during installation on Windows.",
+    "Provide clear documentation or troubleshooting steps for users experiencing installation and startup failures, including verifying dependencies, network connectivity, and firewall settings.",
+    "Ensure compatibility between Pieces OS, app versions, and LLM upgrades to prevent conflicts.",
+    "Monitor the most active tickets (835, 810, 818) closely and provide timely updates to users."
   ],
   "message": "Daily support report generated successfully."
 }
