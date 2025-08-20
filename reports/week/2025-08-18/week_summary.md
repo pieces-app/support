@@ -1,53 +1,56 @@
 # Support Ticket Report
-- Generated: 2025-08-20 13:16:49
+- Generated: 2025-08-20 21:08:20
 - Period: 2025-08-18 to 2025-08-20
 
 ## Summary
-- **Total Tickets:** 6
+- **Total Tickets:** 8
 - **Resolved:** 1
-- **Open:** 5
+- **Open:** 7
 
 ## 5 Most Active Tickets
 | Issue # | Title | Activity Level |
 |---------|-------|----------------|
 | [#835](https://github.com/pieces-app/support/issues/835) | pieces-for-developers crashes at startup on ubuntu 24.04 LTS | 7.35 |
 | [#810](https://github.com/pieces-app/support/issues/810) | MCP Server SSE Connection Hangs - No Tools Available in Claude Code | 7.29 |
+| [#837](https://github.com/pieces-app/support/issues/837) | backup restoration fails | 6.94 |
+| [#838](https://github.com/pieces-app/support/issues/838) | All files greyed out in the file picker | 5.68 |
 | [#818](https://github.com/pieces-app/support/issues/818) | Pro user's LLM cannot be upgraded to the latest version, even if they are chosen to | 5.25 |
-| [#809](https://github.com/pieces-app/support/issues/809) | Ensure core dependencies; Retry Step | 4.15 |
-| [#834](https://github.com/pieces-app/support/issues/834) | Cannot connect to Authentication site during install of Pieces | 3.00 |
 
 ## Common Issues
-### 1. Pieces MCP Integration Issues and LLM Upgrade Problems
-Users report Pieces MCP tools failing to connect or retrieve LTM data, specifically `ask_pieces_ltm` returning errors despite functional LTM.  LLM upgrades to Sonnet 4 are not reflected in Pieces for Developers or VS Code plugin.  Issues persist across macOS and Windows, affecting various IDE plugins and the desktop app. Troubleshooting includes verifying server connections, restarting services, and checking configurations, but the root cause remains unclear. Some users experience SSE connection hangs with Claude Code integration.
+### 1. Pieces Desktop App Installation and Usage Issues
+Users are experiencing problems with Pieces Desktop App across different operating systems (Windows, Linux, macOS). Issues include backup restoration failures, core dependency errors during installation, and file access restrictions within the app.  Further investigation is needed to determine the root cause and potential solutions across these different scenarios. Logs and screenshots have been provided by users.
+
+**Related Issues:**
+- [#837](https://github.com/pieces-app/support/issues/837): backup restoration fails
+- [#809](https://github.com/pieces-app/support/issues/809): Ensure core dependencies; Retry Step
+- [#838](https://github.com/pieces-app/support/issues/838): All files greyed out in the file picker
+
+### 2. Pieces MCP Integration Issues and LLM Upgrade Problems
+Users report Pieces MCP tools failing to connect or retrieve data, specifically `ask_pieces_ltm` returning "Failed to extract context" despite functional LTM.  LLM upgrades to Sonnet 4 are not reflected in Pieces for Developers or VS Code plugin.  SSE connections hang indefinitely in some cases. Troubleshooting includes verifying server status, permissions, and client configurations. Further investigation into MCP server implementation and LTM data access is needed.
 
 **Related Issues:**
 - [#810](https://github.com/pieces-app/support/issues/810): MCP Server SSE Connection Hangs - No Tools Available in Claude Code
 - [#818](https://github.com/pieces-app/support/issues/818): Pro user's LLM cannot be upgraded to the latest version, even if they are chosen to
 - [#747](https://github.com/pieces-app/support/issues/747): MCP `ask_pieces_ltm` tool consistently returns "Failed to extract context" despite functional LTM
 
-### 2. Pieces installation and startup failures across platforms
-Users are experiencing issues with Pieces installation and startup on Linux and Windows. On Linux, the desktop application crashes at startup with XCB errors. On Windows, users encounter authentication errors during installation, possibly due to security software conflicts.  A common solution for Linux is to ensure core dependencies are met. For Windows, verifying network connectivity and firewall settings may resolve authentication issues.
+### 3. Pieces installation and startup failures across platforms
+Users are experiencing issues with Pieces installation and startup on Linux and Windows. On Linux, the desktop application crashes at startup with XCB errors, potentially related to missing dependencies or GTK version conflicts. On Windows, installation fails due to an authentication error, possibly caused by network restrictions or security software conflicts.  Suggested solutions include verifying dependencies, checking GTK versions, and reviewing network/firewall settings.
 
 **Related Issues:**
 - [#835](https://github.com/pieces-app/support/issues/835): pieces-for-developers crashes at startup on ubuntu 24.04 LTS
 - [#809](https://github.com/pieces-app/support/issues/809): Ensure core dependencies; Retry Step
 - [#834](https://github.com/pieces-app/support/issues/834): Cannot connect to Authentication site during install of Pieces
 
-### 3. Pieces installation and upgrade issues
-Users are experiencing problems with Pieces installation, dependency setup, and LLM upgrades. Issues include "Retry Step" errors during dependency checks, authentication failures during installation, and LLM versions not updating to the selected Pro version.  Suggested solutions include checking network connectivity, firewall settings, and ensuring the Pieces OS and app versions are compatible.
-
-**Related Issues:**
-- [#809](https://github.com/pieces-app/support/issues/809): Ensure core dependencies; Retry Step
-- [#834](https://github.com/pieces-app/support/issues/834): Cannot connect to Authentication site during install of Pieces
-- [#818](https://github.com/pieces-app/support/issues/818): Pro user's LLM cannot be upgraded to the latest version, even if they are chosen to
-
 
 ## Recommendations
-- Prioritize resolving the MCP integration issues and LLM upgrade problems as they affect multiple users across different platforms.
-- Investigate and address the root cause of the XCB errors causing crashes on Linux and the authentication errors during installation on Windows.
-- Provide clear documentation or troubleshooting steps for users experiencing installation and startup failures, including verifying dependencies, network connectivity, and firewall settings.
-- Ensure compatibility between Pieces OS, app versions, and LLM upgrades to prevent conflicts.
-- Monitor the most active tickets (835, 810, 818) closely and provide timely updates to users.
+- Investigate XCB errors and GTK version conflicts on Linux to resolve Pieces for Developers startup crashes (Ticket 835).
+- Address MCP server SSE connection hangs and tool registration failures in Claude Code (Ticket 810).
+- Troubleshoot backup restoration failures in the Pieces Desktop App on Windows (Ticket 837).
+- Resolve file access restrictions in the Pieces Desktop App file picker on macOS (Ticket 838).
+- Investigate LLM upgrade issues for Pro users in Pieces for Developers and VS Code plugin (Ticket 818).
+- Address core dependency issues during Pieces installation on Linux (Ticket 809).
+- Troubleshoot authentication errors during Pieces installation on Windows VDIs, possibly related to network restrictions or security software (Ticket 834).
+- Investigate and fix the "Failed to extract context" error in the `ask_pieces_ltm` MCP tool (Ticket 747).
 
 ## Daily Reports
 Here are the daily reports for this week:
@@ -56,3 +59,4 @@ Here are the daily reports for this week:
 - [report_210655](daily/2025-08-19/report_210655.md)
 - [report_131533](daily/2025-08-20/report_131533.md)
 - [report_050747](daily/2025-08-20/report_050747.md)
+- [report_210652](daily/2025-08-20/report_210652.md)
