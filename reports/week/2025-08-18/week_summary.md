@@ -1,6 +1,6 @@
 # Support Ticket Report
-- Generated: 2025-08-22 21:08:23
-- Period: 2025-08-18 to 2025-08-22
+- Generated: 2025-08-23 05:08:21
+- Period: 2025-08-18 to 2025-08-23
 
 ## Summary
 - **Total Tickets:** 12
@@ -13,28 +13,28 @@
 | [#835](https://github.com/pieces-app/support/issues/835) | pieces-for-developers crashes at startup on ubuntu 24.04 LTS | 8.83 |
 | [#810](https://github.com/pieces-app/support/issues/810) | MCP Server SSE Connection Hangs - No Tools Available in Claude Code | 6.63 |
 | [#839](https://github.com/pieces-app/support/issues/839) | Cannot collapse all code block in Pieces Desktop | 5.68 |
-| [#838](https://github.com/pieces-app/support/issues/838) | All files greyed out in the file picker | 5.60 |
 | [#818](https://github.com/pieces-app/support/issues/818) | Pro user's LLM cannot be upgraded to the latest version, even if they are chosen to | 5.50 |
+| [#838](https://github.com/pieces-app/support/issues/838) | All files greyed out in the file picker | 4.74 |
 
 ## Common Issues
-### 1. Pieces for Developers startup crashes or fails to initialize
-Users on Linux and Windows experience Pieces for Developers crashing on startup or failing during initialization steps like "Ensure core dependencies." Issues include a blank window briefly appearing then disappearing on Linux, and code collapse issues on Windows.  Further investigation into logs and dependency management is needed. On Linux, potential X11/GTK conflicts are observed. Ensure Pieces OS and Pieces for Developers are compatible versions.
+### 1. Pieces for Developers startup crashes or dependency issues
+Users report Pieces for Developers crashing on startup on Ubuntu 24.04 LTS, often with an XCB error.  A core dump is generated. Other users experience "Ensure core dependencies" step failing.  One user reports an inability to collapse code blocks on Windows.  Suggested solutions include checking system dependencies, reinstalling the application, and verifying Pieces OS version compatibility.
 
 **Related Issues:**
 - [#835](https://github.com/pieces-app/support/issues/835): pieces-for-developers crashes at startup on ubuntu 24.04 LTS
 - [#839](https://github.com/pieces-app/support/issues/839): Cannot collapse all code block in Pieces Desktop
 - [#809](https://github.com/pieces-app/support/issues/809): Ensure core dependencies; Retry Step
 
-### 2. Users unable to access Pieces Pro features despite upgrade
-Multiple Pro users report being unable to access features like LLM upgrades and activity summaries, receiving messages like "requires Pieces Pro" or encountering LLM version discrepancies.  Issue appears across Windows and macOS, various Pieces versions, and different IDE plugins.  Suggested solutions include verifying Pro status, re-login, restarting, checking configuration files, and ensuring Pieces OS and app versions are compatible.
+### 2. Users unable to upgrade or access Pro LLM features
+Multiple users report issues with upgrading or accessing Pieces Pro LLM features, such as Sonnet 4 and activity summaries. Problems include incorrect LLM versions displayed, Pro features unavailable despite subscription, and errors related to Pieces OS version compatibility.  Troubleshooting steps like restarting, re-logging, and VPN adjustments haven't resolved the issues. Further investigation into LLM integration and Pro access mechanisms is needed.
 
 **Related Issues:**
 - [#818](https://github.com/pieces-app/support/issues/818): Pro user's LLM cannot be upgraded to the latest version, even if they are chosen to
 - [#839](https://github.com/pieces-app/support/issues/839): Cannot collapse all code block in Pieces Desktop
 - [#811](https://github.com/pieces-app/support/issues/811): I'm sorry. This feature requires Pieces Pro. Please upgrade your plan or change your LLM to continue.
 
-### 3. Pieces MCP Integration Failures
-Users report Pieces MCP tools, specifically `ask_pieces_ltm`, failing with "Failed to extract context" or tool unavailability.  Issues arise across various IDE plugins (VS Code, Sublime) and desktop applications.  LLM model version discrepancies and SSE connection hangs are also observed.  Suggested solutions include verifying MCP server configuration, checking LTM functionality, and ensuring proper Pieces OS and application versions.
+### 3. Pieces MCP Integration Issues and LLM Upgrade Failures
+Users report problems with Pieces MCP tools, primarily `ask_pieces_ltm` failing to extract context despite functional LTM.  SSE connections hang, preventing tool registration in Claude Code.  Additionally, Pro users experience difficulty upgrading their LLMs to the latest version, with IDE plugins reporting older versions despite account upgrades. Troubleshooting steps include verifying server connections, restarting services, and checking configurations, but issues persist across various platforms (macOS, Windows 11).
 
 **Related Issues:**
 - [#810](https://github.com/pieces-app/support/issues/810): MCP Server SSE Connection Hangs - No Tools Available in Claude Code
@@ -50,7 +50,7 @@ Users are experiencing issues with the MacOS desktop application, including pixe
 - [#838](https://github.com/pieces-app/support/issues/838): All files greyed out in the file picker
 
 ### 5. Pieces Desktop App and OS Issues
-Users are experiencing various issues with the Pieces Desktop application and OS, including backup restoration failures, dependency issues, and UI bugs like the inability to collapse code blocks.  The issues appear across different OS versions (Windows, Linux) and Pieces versions (4.3.1, 4.3.4, 12.2.1, 12.2.2).  Logs and screenshots have been provided. Further investigation is needed to identify the root causes and solutions.
+Users are experiencing issues with the Pieces Desktop application and OS across different operating systems (Windows and Linux). Problems include backup restoration failures, issues with the "Ensure core dependencies" step during installation, and inability to collapse code blocks.  Further investigation is needed to identify the root causes and solutions.
 
 **Related Issues:**
 - [#837](https://github.com/pieces-app/support/issues/837): backup restoration fails
@@ -59,11 +59,12 @@ Users are experiencing various issues with the Pieces Desktop application and OS
 
 
 ## Recommendations
-- Prioritize resolution of startup crashes on Linux and Windows to ensure basic functionality. Investigate logs, dependency conflicts (X11/GTK on Linux), and version compatibility between Pieces OS and Pieces for Developers.
-- Address the issue of Pro users unable to access paid features. Verify Pro status checks, re-login mechanisms, and configuration file handling. Ensure compatibility between Pieces OS, app versions, and IDE plugins.
-- Investigate and resolve MCP integration failures, particularly the 'Failed to extract context' error and SSE connection hangs. Focus on MCP server configuration, LTM functionality, and version compatibility.
-- Fix MacOS desktop app issues: pixelated tray icon, blank checkout page during subscription upgrade, and greyed-out files in the file picker.  Check rendering processes, payment gateway integration, and file system access handling.
-- Address backup restoration failures on Windows, dependency issues on Linux, and UI bugs like code block collapse. Review logs and screenshots provided by users.
+- Prioritize resolution of the 'pieces-for-developers crashes at startup on ubuntu 24.04 LTS' issue (835) due to its high activity level and impact on Ubuntu users.
+- Investigate and address the MCP integration issues, particularly the SSE connection hangs (810) and the `ask_pieces_ltm` tool failures (747), to ensure proper functionality of the Model Context Protocol.
+- Address the LLM upgrade failures for Pro users (818) to ensure they can access the latest features they have subscribed to.
+- Resolve the MacOS desktop application issues, including pixelated tray icons (840), subscription upgrade failures (808), and file picker access problems (838), to improve user experience on MacOS.
+- Investigate and fix the reported issues with backup restoration (837), 'Ensure core dependencies' step (809), and code block collapsing (839) in the Pieces Desktop application across different operating systems.
+- Improve communication with users regarding Pieces OS version compatibility issues and provide clear guidance on upgrading or troubleshooting related problems.
 
 ## Daily Reports
 Here are the daily reports for this week:
