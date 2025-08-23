@@ -2,37 +2,43 @@
   "success": true,
   "date_range": {
     "start": "2025-08-18T00:00:00+00:00",
-    "end": "2025-08-23T13:11:21.307301+00:00"
+    "end": "2025-08-23T21:06:48.520759+00:00"
   },
   "summary": {
-    "total_tickets": 12,
-    "resolved_tickets": 2,
+    "total_tickets": 13,
+    "resolved_tickets": 3,
     "open_tickets": 10
   },
   "ticket_breakdown": [
     {
       "category": "bug",
-      "received": 11,
-      "resolved": 2,
+      "received": 12,
+      "resolved": 3,
       "pending": 9
+    },
+    {
+      "category": "app:desktop application",
+      "received": 13,
+      "resolved": 3,
+      "pending": 10
+    },
+    {
+      "category": "os:macos",
+      "received": 8,
+      "resolved": 3,
+      "pending": 5
+    },
+    {
+      "category": "status:triaged",
+      "received": 8,
+      "resolved": 2,
+      "pending": 6
     },
     {
       "category": "status:new",
       "received": 2,
       "resolved": 0,
       "pending": 2
-    },
-    {
-      "category": "app:desktop application",
-      "received": 12,
-      "resolved": 2,
-      "pending": 10
-    },
-    {
-      "category": "os:macos",
-      "received": 7,
-      "resolved": 2,
-      "pending": 5
     },
     {
       "category": "os:windows",
@@ -69,12 +75,6 @@
       "received": 1,
       "resolved": 0,
       "pending": 1
-    },
-    {
-      "category": "status:triaged",
-      "received": 7,
-      "resolved": 1,
-      "pending": 6
     },
     {
       "category": "os:linux",
@@ -126,14 +126,14 @@
       "activity_level": 8.36
     },
     {
+      "number": 805,
+      "title": "Bug: Subscription is not showing up within the Application(cancelation + resubscription w/ a new plan)",
+      "activity_level": 8.07
+    },
+    {
       "number": 810,
       "title": "MCP Server SSE Connection Hangs - No Tools Available in Claude Code",
       "activity_level": 6.54
-    },
-    {
-      "number": 839,
-      "title": "Cannot collapse all code block in Pieces Desktop",
-      "activity_level": 5.68
     },
     {
       "number": 818,
@@ -141,9 +141,9 @@
       "activity_level": 5.4
     },
     {
-      "number": 838,
-      "title": "All files greyed out in the file picker",
-      "activity_level": 4.74
+      "number": 839,
+      "title": "Cannot collapse all code block in Pieces Desktop",
+      "activity_level": 4.5
     },
     {
       "number": 808,
@@ -151,9 +151,9 @@
       "activity_level": 4.47
     },
     {
-      "number": 840,
-      "title": "Mac icon is pixelated",
-      "activity_level": 4.42
+      "number": 838,
+      "title": "All files greyed out in the file picker",
+      "activity_level": 4.26
     },
     {
       "number": 811,
@@ -163,12 +163,17 @@
     {
       "number": 809,
       "title": "Ensure core dependencies; Retry Step",
-      "activity_level": 3.98
+      "activity_level": 3.94
+    },
+    {
+      "number": 840,
+      "title": "Mac icon is pixelated",
+      "activity_level": 3.5
     },
     {
       "number": 837,
       "title": "backup restoration fails",
-      "activity_level": 3.88
+      "activity_level": 3.48
     },
     {
       "number": 747,
@@ -183,8 +188,8 @@
   ],
   "common_issues": [
     {
-      "title": "Pieces for Developers startup crashes or dependency issues",
-      "description": "Users report Pieces for Developers crashing on startup on Ubuntu 24.04 LTS, often with an XCB error.  A core dump is generated. Other issues include failure to collapse code blocks on Windows and \"Ensure core dependencies\" step failing on Linux.  Suggested solutions include checking system dependencies, reinstalling the application, and verifying Pieces OS version compatibility.",
+      "title": "Pieces for Developers startup crashes or fails to initialize",
+      "description": "Users report Pieces for Developers crashing on startup or failing to initialize on Linux and Windows. On Linux, crashes occur after a brief window appearance, with logs indicating potential XCB/GTK issues. On Windows, the \"Ensure core dependencies\" step may require retrying.  One user also reported an issue with code block collapsing.  Further investigation is needed to pinpoint the root cause and provide solutions.",
       "frequency": 3,
       "related_issues": [
         {
@@ -197,44 +202,44 @@
           "id": 839,
           "title": "Cannot collapse all code block in Pieces Desktop",
           "text": "Cannot collapse all code block in Pieces Desktop\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n12.2.2\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nDesktop 4.3.4 + Pieces OS 12.2.1~12.2.2 have this problem\n\nhttps://github.com/user-attachments/assets/08ebfc5d-1e12-4bae-bd0d-26d504157e8a\n\nDesktop 4.3.4 reminds me to upgrade Pieces OS in MS store, but... MS store has not provided the latest Pieces OS version > 12.2.1\n\n(Previously I do @ 12.2.2, I temporarly switch back to 12.2.1, they all, together with Desktop 4.3.4 have this problem)\n\n<img width=\"1691\" height=\"1061\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/a8cb62a0-e6a1-43d1-8c41-a2a7f4734c35\" />\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 5.68
+          "activity_level": 4.5
         },
         {
           "id": 809,
           "title": "Ensure core dependencies; Retry Step",
           "text": "Ensure core dependencies; Retry Step\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\n### Pieces OS, Desktop Application\n\n* Operating System / Platform: Linux\n\n* Pieces OS Version 4.3.1\n\n\n\n\n\nAfter installation, the \u201cInitialize Desktop App\u201d step has run successfully. The \u201cEnsure core dependencies\u201d step displays the message \u201cRetry Step\u201d.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 3.98
+          "activity_level": 3.94
         }
       ]
     },
     {
-      "title": "Users unable to access Pro features despite subscription",
-      "description": "Multiple Pro users report being unable to access features like specific LLMs or activity summaries, receiving messages prompting them to upgrade. Issues span different operating systems (Windows, macOS) and involve various Pieces components (desktop app, VS Code plugin, Sublime plugin).  Users confirm Pro subscriptions and attempt troubleshooting steps like restarts and configuration checks. Some instances suggest incorrect LLM version detection or outdated Pieces OS installations.",
+      "title": "Subscription and Upgrade Issues on macOS",
+      "description": "Users on macOS 12.1.1 are experiencing issues with subscriptions not showing up after cancellation and resubscription, LTM queries failing after a few weeks, and upgrade attempts leading to a blank checkout page.  Potential solutions include clearing LTM data (although the button is currently not working), checking subscription status, and ensuring the upgrade process functions correctly.",
       "frequency": 3,
       "related_issues": [
         {
-          "id": 818,
-          "title": "Pro user's LLM cannot be upgraded to the latest version, even if they are chosen to",
-          "text": "Pro user's LLM cannot be upgraded to the latest version, even if they are chosen to\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS, Visual Studio, Sublime Plugin, VS Code\n\n### Operating System / Platform\n\nWindows 11\n\n### Your Pieces OS Version\n\n12.1.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI have a small problem now that cannot be solved through LLM: \n\n- I have inquired with LLM in **pieces for developers** and **pieces vscode plugin**, and they all said they are Sonnet 3.5. \n- The pieces LLM in sublime (set claude 3.7 sonnet) keeps silence about this:\n      **Copilot**: I'm an AI assistant created by Anthropic named Claude, and my training data has a cutoff date. While I don't typically specify my exact version details, I can tell you that my knowledge cutoff is around late 2023. This means I don't have information about events, technologies, or developments that occurred after that time.\n\nHowever, \n\n- I just **upgraded to Pieces Pro yesterday** and have switched to Sonnet 4 (for all pieces IDE plugins and Desktop Apps, except for sublime which only support sonnet 3.7 till now). \n- Every test chat was opened in a new Chat after the LLM is switched( to Sonnet 4 or Gemini 2.5 Pro)... \n- I've checked the configuration files and they are all Sonnet 4 without any issues. \n- I have tried restarting my computer or logging in to my account again, but still have this bug\n- I have tried changing my computer and VPN node, including canceling or adding the global system proxy, but none of them worked\n\nPS: My pieces OS and pieces for developers are both installed in sequence on Microsoft Store. \n\n- They work well in other aspects.\n- I have been using them for about 7 days. \n- I am in Chinese Mainland, thus a heavy VPN user.\n\n## Pieces for Deveopers (desktop app) \n\n<img width=\"1901\" height=\"470\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/d492f2e4-d73a-4798-8539-c08d768245d9\" />\n\n<img width=\"2435\" height=\"1569\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/1ac35bd2-7f75-45dc-9e1a-3963f2fea275\" />\n\n## Vscode plugin\n\n<img width=\"714\" height=\"1795\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/367de66a-2b60-429f-884f-67ae238582c9\" />\n\n<img width=\"717\" height=\"1795\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/57f0c4f6-7a13-4491-a07e-682fb4caf422\" />\n\n## Sublime plugin\n\n<img width=\"2081\" height=\"1407\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/f2f60b23-19eb-4bc0-8dd3-5c1c462021b0\" />\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 5.4
-        },
-        {
-          "id": 839,
-          "title": "Cannot collapse all code block in Pieces Desktop",
-          "text": "Cannot collapse all code block in Pieces Desktop\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n12.2.2\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nDesktop 4.3.4 + Pieces OS 12.2.1~12.2.2 have this problem\n\nhttps://github.com/user-attachments/assets/08ebfc5d-1e12-4bae-bd0d-26d504157e8a\n\nDesktop 4.3.4 reminds me to upgrade Pieces OS in MS store, but... MS store has not provided the latest Pieces OS version > 12.2.1\n\n(Previously I do @ 12.2.2, I temporarly switch back to 12.2.1, they all, together with Desktop 4.3.4 have this problem)\n\n<img width=\"1691\" height=\"1061\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/a8cb62a0-e6a1-43d1-8c41-a2a7f4734c35\" />\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 5.68
+          "id": 805,
+          "title": "Bug: Subscription is not showing up within the Application(cancelation + resubscription w/ a new plan)",
+          "text": "Bug: Subscription is not showing up within the Application(cancelation + resubscription w/ a new plan)\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n12.1.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nSo when I freshly install Pieces, the LTM works fine.\n\nWhen I've had it running for a few weeks, and I want to query the LTM, the query takes forever, and returns nothing.\n\nThe same happens via the MCP.\n\nI use my machine all day, so there's a lot of context going into the LTM. The only explanation I can come up with is that it's just getting too big. The Workstream is, however, updating fine.\n\nRemoving all my Pieces data gets the LTM working again, but then I end up with this situation later. This is the third time I've been through this loop. It's really frustrating, because when I actually need the LTM, it fails.\n\nThe Clear LTM Data button doesn't work, just returning to Try again, from All Data to even for just clearing an hour of data.\n\nI haven't cleared the LTM (well, I've tried, but the Clear LTM Data button doesn't work) so we have a live broken environment to debug with. I'm more than happy to assist with debugging this - let me know what you need!\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 8.07
         },
         {
           "id": 811,
           "title": "I'm sorry. This feature requires Pieces Pro. Please upgrade your plan or change your LLM to continue.",
           "text": "I'm sorry. This feature requires Pieces Pro. Please upgrade your plan or change your LLM to continue.\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n12.1.1\n\n### Early Access Program\n\n- [x] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWhen using Pieces I asked, \"what did I work today?\" and I received an error that says `I'm sorry. This feature requires Pieces Pro. Please upgrade your plan or change your LLM to continue.`  When I have paid for pro and am signed in. What I expect is that I can use my paid pro membership to run query and not receive an error.\n\n![Image](https://github.com/user-attachments/assets/846a4e3e-9e24-4e51-81ce-061a22e921ec)\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
           "activity_level": 4.03
+        },
+        {
+          "id": 808,
+          "title": "Unable to upgrade subscription",
+          "text": "Unable to upgrade subscription\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n12.1.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nEvery time I click \"Upgrade\" from ANYWHERE - to upgrade to pro, it leads to a page that is blank except for a minimal table, like the bones of a cart checkout view, with like price, subtotal, total, etc. except there are no words, and all the values are 0.00 (zero dollars).. it stays like this for a minute, then says it isn't working properly and returns to the desktop view or the view I was in before. \n\nbeen happening for weeks\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 4.47
         }
       ]
     },
     {
-      "title": "Pieces OS MCP Integration Failures and LLM Version Discrepancies",
-      "description": "Users report Pieces OS MCP tools failing to integrate with Claude Code and other IDEs.  The `ask_pieces_ltm` tool frequently returns \"Failed to extract context\" despite functional LTM.  Additionally, users experience LLM version discrepancies between Pieces for Developers, VS Code plugin, and Sublime plugin, even after upgrading to Pieces Pro and selecting a newer LLM version.  Suggested solutions include verifying server connections, checking configuration files, and ensuring proper authentication and permissions for MCP server processes.",
+      "title": "Pieces MCP Integration Issues and LLM Upgrade Failures",
+      "description": "Users report problems with Pieces MCP tools, primarily `ask_pieces_ltm` failing to extract context despite functional LTM.  SSE connections hang, preventing tool registration in Claude Code.  Additionally, Pro users experience difficulty upgrading their LLMs to the latest version (Sonnet 4), with IDE plugins reporting older versions. Troubleshooting includes verifying server connections, restarting services, and checking configurations.",
       "frequency": 3,
       "related_issues": [
         {
@@ -258,15 +263,40 @@
       ]
     },
     {
+      "title": "Users unable to access Pro features despite upgrades",
+      "description": "Multiple Pro users report being unable to access features like specific LLMs or activity summaries, receiving messages prompting them to upgrade. Issues span different platforms (Windows, macOS) and Pieces versions.  Users confirm Pro subscriptions and attempts to resolve by restarting, re-logging, and changing network configurations. Some report LLM versions not updating as expected.",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 818,
+          "title": "Pro user's LLM cannot be upgraded to the latest version, even if they are chosen to",
+          "text": "Pro user's LLM cannot be upgraded to the latest version, even if they are chosen to\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS, Visual Studio, Sublime Plugin, VS Code\n\n### Operating System / Platform\n\nWindows 11\n\n### Your Pieces OS Version\n\n12.1.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI have a small problem now that cannot be solved through LLM: \n\n- I have inquired with LLM in **pieces for developers** and **pieces vscode plugin**, and they all said they are Sonnet 3.5. \n- The pieces LLM in sublime (set claude 3.7 sonnet) keeps silence about this:\n      **Copilot**: I'm an AI assistant created by Anthropic named Claude, and my training data has a cutoff date. While I don't typically specify my exact version details, I can tell you that my knowledge cutoff is around late 2023. This means I don't have information about events, technologies, or developments that occurred after that time.\n\nHowever, \n\n- I just **upgraded to Pieces Pro yesterday** and have switched to Sonnet 4 (for all pieces IDE plugins and Desktop Apps, except for sublime which only support sonnet 3.7 till now). \n- Every test chat was opened in a new Chat after the LLM is switched( to Sonnet 4 or Gemini 2.5 Pro)... \n- I've checked the configuration files and they are all Sonnet 4 without any issues. \n- I have tried restarting my computer or logging in to my account again, but still have this bug\n- I have tried changing my computer and VPN node, including canceling or adding the global system proxy, but none of them worked\n\nPS: My pieces OS and pieces for developers are both installed in sequence on Microsoft Store. \n\n- They work well in other aspects.\n- I have been using them for about 7 days. \n- I am in Chinese Mainland, thus a heavy VPN user.\n\n## Pieces for Deveopers (desktop app) \n\n<img width=\"1901\" height=\"470\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/d492f2e4-d73a-4798-8539-c08d768245d9\" />\n\n<img width=\"2435\" height=\"1569\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/1ac35bd2-7f75-45dc-9e1a-3963f2fea275\" />\n\n## Vscode plugin\n\n<img width=\"714\" height=\"1795\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/367de66a-2b60-429f-884f-67ae238582c9\" />\n\n<img width=\"717\" height=\"1795\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/57f0c4f6-7a13-4491-a07e-682fb4caf422\" />\n\n## Sublime plugin\n\n<img width=\"2081\" height=\"1407\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/f2f60b23-19eb-4bc0-8dd3-5c1c462021b0\" />\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 5.4
+        },
+        {
+          "id": 839,
+          "title": "Cannot collapse all code block in Pieces Desktop",
+          "text": "Cannot collapse all code block in Pieces Desktop\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n12.2.2\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nDesktop 4.3.4 + Pieces OS 12.2.1~12.2.2 have this problem\n\nhttps://github.com/user-attachments/assets/08ebfc5d-1e12-4bae-bd0d-26d504157e8a\n\nDesktop 4.3.4 reminds me to upgrade Pieces OS in MS store, but... MS store has not provided the latest Pieces OS version > 12.2.1\n\n(Previously I do @ 12.2.2, I temporarly switch back to 12.2.1, they all, together with Desktop 4.3.4 have this problem)\n\n<img width=\"1691\" height=\"1061\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/a8cb62a0-e6a1-43d1-8c41-a2a7f4734c35\" />\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 4.5
+        },
+        {
+          "id": 811,
+          "title": "I'm sorry. This feature requires Pieces Pro. Please upgrade your plan or change your LLM to continue.",
+          "text": "I'm sorry. This feature requires Pieces Pro. Please upgrade your plan or change your LLM to continue.\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n12.1.1\n\n### Early Access Program\n\n- [x] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWhen using Pieces I asked, \"what did I work today?\" and I received an error that says `I'm sorry. This feature requires Pieces Pro. Please upgrade your plan or change your LLM to continue.`  When I have paid for pro and am signed in. What I expect is that I can use my paid pro membership to run query and not receive an error.\n\n![Image](https://github.com/user-attachments/assets/846a4e3e-9e24-4e51-81ce-061a22e921ec)\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 4.03
+        }
+      ]
+    },
+    {
       "title": "MacOS Desktop App Issues",
-      "description": "Multiple users on MacOS are experiencing issues with the Pieces desktop app, including pixelated tray icons (v12.2.1), failed subscription upgrades resulting in blank checkout pages (v12.1.1), and all files appearing greyed out in the file picker (v12.2.1) despite having necessary permissions.  Reinstallation did not resolve the file picker issue.",
+      "description": "Users are experiencing issues with the MacOS desktop application, including a pixelated tray icon, subscription upgrade failures leading to a blank checkout page, and all files appearing greyed out in the file picker despite having proper permissions.  These issues persist across different MacOS versions (12.1.1 and 12.2.1) and reinstalling the app does not resolve the file picker problem.",
       "frequency": 3,
       "related_issues": [
         {
           "id": 840,
           "title": "Mac icon is pixelated",
           "text": "Mac icon is pixelated\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n12.2.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nThe mac tray icon is pixelated. \n\n<img width=\"508\" height=\"109\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/be0233ec-78d6-496f-a90c-82ceec3d9e52\" />\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 4.42
+          "activity_level": 3.5
         },
         {
           "id": 808,
@@ -278,43 +308,18 @@
           "id": 838,
           "title": "All files greyed out in the file picker",
           "text": "All files greyed out in the file picker\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n12.2.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nIn the Desktop App, when I open the file picker and try to open any file, all the files aer greyed out. I've checked that Pieces has access to Documents, yet files in that folder are all greyed out. \nThis issue persists  through reinstallation. \n\n---\n\n<img width=\"1430\" height=\"786\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/d4cae628-7dee-431b-abb4-ba0d3f792d04\" />\n\n<img width=\"1386\" height=\"1674\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/baa5298f-f0f0-4552-a229-e37a28c7478b\" />\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 4.74
-        }
-      ]
-    },
-    {
-      "title": "Pieces Desktop App and OS Issues",
-      "description": "Users are experiencing issues with the Pieces Desktop App and OS across different operating systems (Windows, Linux). Problems include backup restoration failures, issues with the \"Ensure core dependencies\" step during installation, and inability to collapse code blocks.  Further investigation is needed to determine the root cause and potential solutions across these seemingly disparate issues.",
-      "frequency": 3,
-      "related_issues": [
-        {
-          "id": 837,
-          "title": "backup restoration fails",
-          "text": "backup restoration fails\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nPieces 4.3.4\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nchoosing a bakup to restore begins as normal but the loading progress stops, resets and is stuck on the restore screen \n\n<img width=\"681\" height=\"146\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/676df879-dd42-4e36-91cc-070e2f710d94\" />\n\n[log-08202025.txt](https://github.com/user-attachments/files/21900374/log-08202025.txt)\n\n[log-08202025.txt](https://github.com/user-attachments/files/21900381/log-08202025.txt)\n\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 3.88
-        },
-        {
-          "id": 809,
-          "title": "Ensure core dependencies; Retry Step",
-          "text": "Ensure core dependencies; Retry Step\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\n### Pieces OS, Desktop Application\n\n* Operating System / Platform: Linux\n\n* Pieces OS Version 4.3.1\n\n\n\n\n\nAfter installation, the \u201cInitialize Desktop App\u201d step has run successfully. The \u201cEnsure core dependencies\u201d step displays the message \u201cRetry Step\u201d.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 3.98
-        },
-        {
-          "id": 839,
-          "title": "Cannot collapse all code block in Pieces Desktop",
-          "text": "Cannot collapse all code block in Pieces Desktop\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n12.2.2\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nDesktop 4.3.4 + Pieces OS 12.2.1~12.2.2 have this problem\n\nhttps://github.com/user-attachments/assets/08ebfc5d-1e12-4bae-bd0d-26d504157e8a\n\nDesktop 4.3.4 reminds me to upgrade Pieces OS in MS store, but... MS store has not provided the latest Pieces OS version > 12.2.1\n\n(Previously I do @ 12.2.2, I temporarly switch back to 12.2.1, they all, together with Desktop 4.3.4 have this problem)\n\n<img width=\"1691\" height=\"1061\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/a8cb62a0-e6a1-43d1-8c41-a2a7f4734c35\" />\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 5.68
+          "activity_level": 4.26
         }
       ]
     }
   ],
   "recommendations": [
-    "Prioritize resolution of the 'pieces-for-developers crashes at startup on ubuntu 24.04 LTS' issue (ID 835) due to its high activity level and impact on Ubuntu users.",
-    "Investigate and address the MCP server issues, particularly the SSE connection hangs (ID 810) and the consistent failure of the `ask_pieces_ltm` tool (ID 747), as these impact core functionality and integration with other tools.",
-    "Address the recurring issue of Pro users being unable to access Pro features (ID 818, 811) to ensure paying customers have a smooth experience.",
-    "Focus on resolving MacOS-specific issues, including pixelated tray icons (ID 840), subscription upgrade failures (ID 808), and file picker issues (ID 838), to improve the MacOS user experience.",
-    "Investigate and fix the 'Cannot collapse all code block in Pieces Desktop' issue (ID 839) affecting Windows users, as it hinders code organization and readability.",
-    "Develop more robust error handling and messaging for backup restoration failures (ID 837) and the 'Ensure core dependencies' step (ID 809) to provide clearer guidance to users during installation and troubleshooting."
+    "Prioritize resolving the startup crashes on Linux and Windows to ensure basic functionality. Investigate XCB/GTK issues on Linux and the \"Ensure core dependencies\" step on Windows.",
+    "Address the macOS subscription issues to ensure users can access Pro features. Investigate why subscriptions don't show up after cancellation and resubscription, and why the upgrade process leads to a blank checkout page.",
+    "Fix the MCP integration issues, particularly the hanging SSE connection, to enable tool registration in Claude Code and restore `ask_pieces_ltm` functionality.",
+    "Investigate why Pro users are unable to access features despite upgrades. Verify LLM version updates and ensure consistent access across platforms.",
+    "Address the pixelated tray icon and file picker issues on macOS to improve user experience.",
+    "Improve the Clear LTM Data button functionality to allow users to manage their LTM data effectively."
   ],
   "message": "Daily support report generated successfully."
 }

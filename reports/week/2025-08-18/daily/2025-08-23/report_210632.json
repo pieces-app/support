@@ -1,0 +1,66 @@
+{
+  "success": true,
+  "date_range": {
+    "start": "2025-08-23T00:00:00+00:00",
+    "end": "2025-08-23T21:06:32.690807+00:00"
+  },
+  "summary": {
+    "total_tickets": 1,
+    "resolved_tickets": 1,
+    "open_tickets": 0
+  },
+  "ticket_breakdown": [
+    {
+      "category": "bug",
+      "received": 1,
+      "resolved": 1,
+      "pending": 0
+    },
+    {
+      "category": "app:desktop application",
+      "received": 1,
+      "resolved": 1,
+      "pending": 0
+    },
+    {
+      "category": "os:macos",
+      "received": 1,
+      "resolved": 1,
+      "pending": 0
+    },
+    {
+      "category": "status:triaged",
+      "received": 1,
+      "resolved": 1,
+      "pending": 0
+    }
+  ],
+  "most_active_tickets": [
+    {
+      "number": 805,
+      "title": "Bug: Subscription is not showing up within the Application(cancelation + resubscription w/ a new plan)",
+      "activity_level": 8.07
+    }
+  ],
+  "common_issues": [
+    {
+      "title": "LTM query fails after extended use",
+      "description": "Users report LTM queries failing after several weeks of use, returning nothing despite Workstream functionality remaining unaffected.  Clearing LTM data via the provided button does not resolve the issue. Reinstalling the application temporarily restores LTM functionality.  Issue potentially related to LTM size exceeding capacity.",
+      "frequency": 1,
+      "related_issues": [
+        {
+          "id": 805,
+          "title": "Bug: Subscription is not showing up within the Application(cancelation + resubscription w/ a new plan)",
+          "text": "Bug: Subscription is not showing up within the Application(cancelation + resubscription w/ a new plan)\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n12.1.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nSo when I freshly install Pieces, the LTM works fine.\n\nWhen I've had it running for a few weeks, and I want to query the LTM, the query takes forever, and returns nothing.\n\nThe same happens via the MCP.\n\nI use my machine all day, so there's a lot of context going into the LTM. The only explanation I can come up with is that it's just getting too big. The Workstream is, however, updating fine.\n\nRemoving all my Pieces data gets the LTM working again, but then I end up with this situation later. This is the third time I've been through this loop. It's really frustrating, because when I actually need the LTM, it fails.\n\nThe Clear LTM Data button doesn't work, just returning to Try again, from All Data to even for just clearing an hour of data.\n\nI haven't cleared the LTM (well, I've tried, but the Clear LTM Data button doesn't work) so we have a live broken environment to debug with. I'm more than happy to assist with debugging this - let me know what you need!\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 8.07
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    "Investigate and address the root cause of LTM query failures after extended use.  Prioritize this issue due to high frequency and impact on user experience.",
+    "Explore potential solutions for LTM size limitations, such as increasing capacity or implementing data management strategies.",
+    "Verify the functionality of the \"Clear LTM Data\" button and fix any issues to allow users to manage LTM data effectively."
+  ],
+  "message": "Daily support report generated successfully."
+}
