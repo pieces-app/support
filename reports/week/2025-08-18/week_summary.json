@@ -2,7 +2,7 @@
   "success": true,
   "date_range": {
     "start": "2025-08-18T00:00:00+00:00",
-    "end": "2025-08-23T21:06:48.520759+00:00"
+    "end": "2025-08-24T05:07:10.653959+00:00"
   },
   "summary": {
     "total_tickets": 13,
@@ -156,14 +156,14 @@
       "activity_level": 4.26
     },
     {
-      "number": 811,
-      "title": "I'm sorry. This feature requires Pieces Pro. Please upgrade your plan or change your LLM to continue.",
-      "activity_level": 4.03
-    },
-    {
       "number": 809,
       "title": "Ensure core dependencies; Retry Step",
       "activity_level": 3.94
+    },
+    {
+      "number": 811,
+      "title": "I'm sorry. This feature requires Pieces Pro. Please upgrade your plan or change your LLM to continue.",
+      "activity_level": 3.6
     },
     {
       "number": 840,
@@ -178,7 +178,7 @@
     {
       "number": 747,
       "title": "MCP `ask_pieces_ltm` tool consistently returns \"Failed to extract context\" despite functional LTM",
-      "activity_level": 2.57
+      "activity_level": 2.56
     },
     {
       "number": 834,
@@ -189,7 +189,7 @@
   "common_issues": [
     {
       "title": "Pieces for Developers startup crashes or fails to initialize",
-      "description": "Users report Pieces for Developers crashing on startup or failing to initialize on Linux and Windows. On Linux, crashes occur after a brief window appearance, with logs indicating potential XCB/GTK issues. On Windows, the \"Ensure core dependencies\" step may require retrying.  One user also reported an issue with code block collapsing.  Further investigation is needed to pinpoint the root cause and provide solutions.",
+      "description": "Users report Pieces for Developers crashing on startup or failing to initialize on Linux and Windows. On Linux, crashes occur after a brief window appearance, with logs indicating potential XCB and GTK issues. On Windows, the \"Ensure core dependencies\" step fails.  A potential solution involves checking system dependencies and compatibility with Pieces OS and Desktop versions.",
       "frequency": 3,
       "related_issues": [
         {
@@ -214,7 +214,7 @@
     },
     {
       "title": "Subscription and Upgrade Issues on macOS",
-      "description": "Users on macOS 12.1.1 are experiencing issues with subscriptions not showing up after cancellation and resubscription, LTM queries failing after a few weeks, and upgrade attempts leading to a blank checkout page.  Potential solutions include clearing LTM data (although the button is currently not working), checking subscription status, and ensuring the upgrade process functions correctly.",
+      "description": "Users on macOS 12.1.1 are experiencing issues with subscriptions not showing up after cancellation and resubscription, LTM queries failing after a few weeks, and upgrade attempts leading to a blank checkout page.  Potential solutions include clearing LTM data (although the button is currently not working), checking subscription status, and ensuring network connectivity during the upgrade process.",
       "frequency": 3,
       "related_issues": [
         {
@@ -227,7 +227,7 @@
           "id": 811,
           "title": "I'm sorry. This feature requires Pieces Pro. Please upgrade your plan or change your LLM to continue.",
           "text": "I'm sorry. This feature requires Pieces Pro. Please upgrade your plan or change your LLM to continue.\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n12.1.1\n\n### Early Access Program\n\n- [x] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWhen using Pieces I asked, \"what did I work today?\" and I received an error that says `I'm sorry. This feature requires Pieces Pro. Please upgrade your plan or change your LLM to continue.`  When I have paid for pro and am signed in. What I expect is that I can use my paid pro membership to run query and not receive an error.\n\n![Image](https://github.com/user-attachments/assets/846a4e3e-9e24-4e51-81ce-061a22e921ec)\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 4.03
+          "activity_level": 3.6
         },
         {
           "id": 808,
@@ -239,7 +239,7 @@
     },
     {
       "title": "Pieces MCP Integration Issues and LLM Upgrade Failures",
-      "description": "Users report problems with Pieces MCP tools, primarily `ask_pieces_ltm` failing to extract context despite functional LTM.  SSE connections hang, preventing tool registration in Claude Code.  Additionally, Pro users experience difficulty upgrading their LLMs to the latest version (Sonnet 4), with IDE plugins reporting older versions. Troubleshooting includes verifying server connections, restarting services, and checking configurations.",
+      "description": "Users report problems with Pieces MCP tools, primarily `ask_pieces_ltm` failing to extract context despite functional LTM.  SSE connections hang, preventing tool registration in Claude Code.  Additionally, Pro users experience difficulty upgrading their LLMs to the latest version, with IDE plugins reporting older versions despite successful upgrades. Troubleshooting steps include verifying server connections, restarting services, and checking configurations, but issues persist across various platforms (macOS, Windows 11).",
       "frequency": 3,
       "related_issues": [
         {
@@ -258,13 +258,13 @@
           "id": 747,
           "title": "MCP `ask_pieces_ltm` tool consistently returns \"Failed to extract context\" despite functional LTM",
           "text": "MCP `ask_pieces_ltm` tool consistently returns \"Failed to extract context\" despite functional LTM\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS Sequoia 15.5\n\n### Your Pieces OS Version\n\n11.4.4\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n## Bug Report\n\n**Environment:**\n- OS: macOS Sequoia 15.5\n- Pieces OS: 11.4.4 - Running (PID 699, actively collecting data)\n- Pieces App: 4.1.4 - Active with functional LTM workstream\n- MCP Server: Pieces MCP server on localhost:39300\n- Test Client: Warp Terminal Agent Mode, Claude, direct curl testing\n\n## Problem Description\n\nThe `ask_pieces_ltm` MCP tool consistently returns `\"Failed to extract context\"` with `\"isError\": true`, despite:\n\n1. \u2705 **LTM is working correctly** - User confirmed LTM is collecting data and showing results/summaries in the Pieces workstream\n2. \u2705 **MCP server communication works** - Can successfully call `create_pieces_memory` and list tools\n3. \u2705 **Pieces OS is running and active** - Process running with multiple active connections\n4. \u274c **Only `ask_pieces_ltm` fails** - Every call to this specific tool fails\n\n## Steps to Reproduce\n\n### 1. Verify MCP Server is Running\n```bash\nlsof -i :39300\n# Shows Pieces OS listening on port 39300 with multiple established connections\n```\n\n### 2. Confirm Tools are Available\n```bash\ncurl -N http://localhost:39300/model_context_protocol/2024-11-05/sse \\\n  -H 'Accept: text/event-stream' &\ncurl -X POST http://localhost:39300/model_context_protocol/2024-11-05/messages \\\n  -H 'Content-Type: application/json' \\\n  -d '{\"jsonrpc\":\"2.0\",\"id\":1,\"method\":\"tools/list\"}'\n```\n\n**Result:** \u2705 Successfully returns tools list with `ask_pieces_ltm` tool schema\n\n### 3. Test create_pieces_memory (Working)\n```bash\ncurl -X POST http://localhost:39300/model_context_protocol/2024-11-05/messages \\\n  -H 'Content-Type: application/json' \\\n  -d '{\n    \"jsonrpc\":\"2.0\",\"id\":2,\"method\":\"tools/call\",\n    \"params\":{\n      \"name\":\"create_pieces_memory\",\n      \"arguments\":{\n        \"summary\":\"Test memory\",\n        \"summary_description\":\"Testing connection\"\n      }\n    }\n  }'\n```\n\n**Result:** \u2705 `\"Long term memory successfully created\"`\n\n### 4. Test ask_pieces_ltm (Failing)\n```bash\ncurl -X POST http://localhost:39300/model_context_protocol/2024-11-05/messages \\\n  -H 'Content-Type: application/json' \\\n  -d '{\n    \"jsonrpc\":\"2.0\",\"id\":3,\"method\":\"tools/call\",\n    \"params\":{\n      \"name\":\"ask_pieces_ltm\",\n      \"arguments\":{\n        \"question\":\"What did I work on today?\",\n        \"chat_llm\":\"claude-3-5-sonnet-20241022\"\n      }\n    }\n  }'\n```\n\n**Result:** \u274c `{\"content\":[{\"type\":\"text\",\"text\":\"Failed to extract context\"}],\"isError\":true}`\n\n## Attempted Variations (All Failed)\n\n### Minimal Parameters\n```json\n{\n  \"question\": \"hello\",\n  \"chat_llm\": \"claude-3-5-sonnet-20241022\"\n}\n```\n\n### With Application Sources\n```json\n{\n  \"question\": \"What terminal commands have I run recently?\",\n  \"chat_llm\": \"claude-3-5-sonnet-20241022\",\n  \"application_sources\": [\"Warp\"],\n  \"connected_client\": \"Warp\"\n}\n```\n\n### Comprehensive Parameters\n```json\n{\n  \"question\": \"What did I work on today?\",\n  \"chat_llm\": \"claude-3-5-sonnet-20241022\",\n  \"connected_client\": \"Warp\",\n  \"application_sources\": [\"Warp\", \"Google Chrome\"],\n  \"topics\": [\"terminal\", \"commands\", \"recent\"],\n  \"related_questions\": [\"What was I working on?\", \"What debugging was I doing?\"]\n}\n```\n\n### Different Application Sources Tested\n- `[\"Warp\"]`\n- `[\"Google Chrome\", \"Safari\", \"Obsidian\"]`\n- `[\"Claude\"]`\n- Multiple combinations from the schema list\n\n**All variations return the same error.**\n\n## Troubleshooting Attempted\n\n1. \u2705 **Restarted Pieces MCP server** - Issue persists\n2. \u2705 **Verified Pieces OS permissions** - Has necessary macOS permissions\n3. \u2705 **Confirmed LTM data collection** - User sees active workstream data\n4. \u2705 **Tested different MCP clients** - Same error in Warp Agent Mode, Claude, and direct curl\n5. \u2705 **Used proper SSE endpoint** - `/sse` for responses, `/messages` for requests\n6. \u2705 **Verified JSON-RPC format** - Matches working `create_pieces_memory` calls\n\n## Expected Behavior\n\nThe `ask_pieces_ltm` tool should return contextual information from the user's LTM data, similar to how the main Pieces application shows workstream summaries and context.\n\n## Actual Behavior\n\nEvery call to `ask_pieces_ltm` returns:\n```json\n{\n  \"content\": [\n    {\n      \"type\": \"text\",\n      \"text\": \"Failed to extract context\"\n    }\n  ],\n  \"isError\": true\n}\n```\n\n## Analysis\n\nThis appears to be an **MCP server implementation issue** where:\n\n1. The `ask_pieces_ltm` tool is properly registered and callable\n2. The MCP communication protocol works correctly\n3. The underlying LTM system has data and functions properly\n4. There's a disconnect between the MCP tool implementation and the LTM data access layer\n\n## Potential Root Causes\n\n1. **Authentication/Session Issue**: MCP server process may lack proper authentication to access LTM data\n2. **Data Access Layer Bug**: `ask_pieces_ltm` implementation may be using incorrect API calls to access LTM\n3. **Permissions Issue**: MCP server may not have the same data access permissions as the main Pieces application\n4. **Initialization Problem**: LTM access for MCP tools may require additional setup or initialization\n\n## Request\n\nPlease investigate the `ask_pieces_ltm` tool implementation in the Pieces MCP server to identify why it cannot access the same LTM data that is clearly available to the main Pieces application.\n\n## Additional Context\n\n- Issue occurs consistently across different MCP clients (Warp, Claude)\n- `create_pieces_memory` works perfectly, confirming MCP communication\n- LTM is actively collecting and displaying data in the main Pieces app\n- No relevant error logs found in system logs or Pieces application logs\n- Multiple parameter variations attempted with identical results\n\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 2.57
+          "activity_level": 2.56
         }
       ]
     },
     {
       "title": "Users unable to access Pro features despite upgrades",
-      "description": "Multiple Pro users report being unable to access features like specific LLMs or activity summaries, receiving messages prompting them to upgrade. Issues span different platforms (Windows, macOS) and Pieces versions.  Users confirm Pro subscriptions and attempts to resolve by restarting, re-logging, and changing network configurations. Some report LLM versions not updating as expected.",
+      "description": "Multiple Pro users report being unable to access features like specific LLMs or activity summaries, receiving messages like \"requires Pieces Pro\" despite having upgraded. Issues span different plugins (VS Code, Sublime) and operating systems (Windows, macOS).  Users have tried restarting, re-logging, and changing network configurations. Some report LLM versions not updating as expected.",
       "frequency": 3,
       "related_issues": [
         {
@@ -283,7 +283,7 @@
           "id": 811,
           "title": "I'm sorry. This feature requires Pieces Pro. Please upgrade your plan or change your LLM to continue.",
           "text": "I'm sorry. This feature requires Pieces Pro. Please upgrade your plan or change your LLM to continue.\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n12.1.1\n\n### Early Access Program\n\n- [x] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWhen using Pieces I asked, \"what did I work today?\" and I received an error that says `I'm sorry. This feature requires Pieces Pro. Please upgrade your plan or change your LLM to continue.`  When I have paid for pro and am signed in. What I expect is that I can use my paid pro membership to run query and not receive an error.\n\n![Image](https://github.com/user-attachments/assets/846a4e3e-9e24-4e51-81ce-061a22e921ec)\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 4.03
+          "activity_level": 3.6
         }
       ]
     },
@@ -314,12 +314,11 @@
     }
   ],
   "recommendations": [
-    "Prioritize resolving the startup crashes on Linux and Windows to ensure basic functionality. Investigate XCB/GTK issues on Linux and the \"Ensure core dependencies\" step on Windows.",
-    "Address the macOS subscription issues to ensure users can access Pro features. Investigate why subscriptions don't show up after cancellation and resubscription, and why the upgrade process leads to a blank checkout page.",
-    "Fix the MCP integration issues, particularly the hanging SSE connection, to enable tool registration in Claude Code and restore `ask_pieces_ltm` functionality.",
-    "Investigate why Pro users are unable to access features despite upgrades. Verify LLM version updates and ensure consistent access across platforms.",
-    "Address the pixelated tray icon and file picker issues on macOS to improve user experience.",
-    "Improve the Clear LTM Data button functionality to allow users to manage their LTM data effectively."
+    "Prioritize resolving the startup crashes on Linux and Windows by addressing XCB/GTK and dependency issues (linked to ticket #835, #839, #809).",
+    "Investigate and fix the subscription issues on macOS, focusing on subscription status synchronization and checkout page functionality (linked to ticket #805, #811, #808).",
+    "Address the MCP integration problems, specifically the SSE connection hangs and the `ask_pieces_ltm` tool failure (linked to ticket #810, #747).",
+    "Resolve the issue of Pro users not accessing upgraded features and LLM versions not updating correctly (linked to ticket #818).",
+    "Fix the pixelated tray icon and file picker issues on macOS (linked to ticket #840, #838)."
   ],
   "message": "Daily support report generated successfully."
 }
