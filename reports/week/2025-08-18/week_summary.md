@@ -1,5 +1,5 @@
 # Support Ticket Report
-- Generated: 2025-08-24 05:08:29
+- Generated: 2025-08-24 13:13:36
 - Period: 2025-08-18 to 2025-08-24
 
 ## Summary
@@ -10,39 +10,39 @@
 ## 5 Most Active Tickets
 | Issue # | Title | Activity Level |
 |---------|-------|----------------|
-| [#835](https://github.com/pieces-app/support/issues/835) | pieces-for-developers crashes at startup on ubuntu 24.04 LTS | 8.36 |
 | [#805](https://github.com/pieces-app/support/issues/805) | Bug: Subscription is not showing up within the Application(cancelation + resubscription w/ a new plan) | 8.07 |
-| [#810](https://github.com/pieces-app/support/issues/810) | MCP Server SSE Connection Hangs - No Tools Available in Claude Code | 6.54 |
-| [#818](https://github.com/pieces-app/support/issues/818) | Pro user's LLM cannot be upgraded to the latest version, even if they are chosen to | 5.40 |
+| [#835](https://github.com/pieces-app/support/issues/835) | pieces-for-developers crashes at startup on ubuntu 24.04 LTS | 7.38 |
+| [#810](https://github.com/pieces-app/support/issues/810) | MCP Server SSE Connection Hangs - No Tools Available in Claude Code | 6.46 |
+| [#818](https://github.com/pieces-app/support/issues/818) | Pro user's LLM cannot be upgraded to the latest version, even if they are chosen to | 6.24 |
 | [#839](https://github.com/pieces-app/support/issues/839) | Cannot collapse all code block in Pieces Desktop | 4.50 |
 
 ## Common Issues
-### 1. Pieces for Developers startup crashes or fails to initialize
-Users report Pieces for Developers crashing on startup or failing to initialize on Linux and Windows. On Linux, crashes occur after a brief window appearance, with logs indicating potential XCB and GTK issues. On Windows, the "Ensure core dependencies" step fails.  A potential solution involves checking system dependencies and compatibility with Pieces OS and Desktop versions.
-
-**Related Issues:**
-- [#835](https://github.com/pieces-app/support/issues/835): pieces-for-developers crashes at startup on ubuntu 24.04 LTS
-- [#839](https://github.com/pieces-app/support/issues/839): Cannot collapse all code block in Pieces Desktop
-- [#809](https://github.com/pieces-app/support/issues/809): Ensure core dependencies; Retry Step
-
-### 2. Subscription and Upgrade Issues on macOS
-Users on macOS 12.1.1 are experiencing issues with subscriptions not showing up after cancellation and resubscription, LTM queries failing after a few weeks, and upgrade attempts leading to a blank checkout page.  Potential solutions include clearing LTM data (although the button is currently not working), checking subscription status, and ensuring network connectivity during the upgrade process.
+### 1. Subscription and Upgrade Issues on macOS
+Users on macOS 12.1.1 are experiencing issues with subscriptions not showing up in the app after cancellation and resubscription, LTM queries failing after a few weeks of use (clearing LTM data doesn't work), and Pro upgrade attempts leading to a blank checkout page with zero values.  Reinstalling the app temporarily resolves LTM issues.  The upgrade issue may be related to backend service errors.
 
 **Related Issues:**
 - [#805](https://github.com/pieces-app/support/issues/805): Bug: Subscription is not showing up within the Application(cancelation + resubscription w/ a new plan)
 - [#811](https://github.com/pieces-app/support/issues/811): I'm sorry. This feature requires Pieces Pro. Please upgrade your plan or change your LLM to continue.
 - [#808](https://github.com/pieces-app/support/issues/808): Unable to upgrade subscription
 
+### 2. Pieces for Developers startup crashes or dependency issues
+Users report Pieces for Developers crashing on startup on Ubuntu 24.04 LTS, often with a blank window briefly appearing.  Dependency issues and GTK-related errors are observed in the logs.  Additionally, some users experience issues with the "Ensure core dependencies" step during installation on Linux, requiring step retry.  On Windows, there are reports of incompatibility between Pieces OS and Desktop versions.
+
+**Related Issues:**
+- [#835](https://github.com/pieces-app/support/issues/835): pieces-for-developers crashes at startup on ubuntu 24.04 LTS
+- [#839](https://github.com/pieces-app/support/issues/839): Cannot collapse all code block in Pieces Desktop
+- [#809](https://github.com/pieces-app/support/issues/809): Ensure core dependencies; Retry Step
+
 ### 3. Pieces MCP Integration Issues and LLM Upgrade Failures
-Users report problems with Pieces MCP tools, primarily `ask_pieces_ltm` failing to extract context despite functional LTM.  SSE connections hang, preventing tool registration in Claude Code.  Additionally, Pro users experience difficulty upgrading their LLMs to the latest version, with IDE plugins reporting older versions despite successful upgrades. Troubleshooting steps include verifying server connections, restarting services, and checking configurations, but issues persist across various platforms (macOS, Windows 11).
+Users report problems with Pieces MCP tools, primarily `ask_pieces_ltm` failing to retrieve LTM data despite a functional LTM workstream.  Other issues include SSE connection hangs in VS Code integration and outdated LLM versions despite Pro upgrades.  Suggested solutions include verifying server configurations, checking data access permissions, and ensuring proper LTM initialization for MCP tools. Network connectivity, especially for VPN users, should also be investigated.
 
 **Related Issues:**
 - [#810](https://github.com/pieces-app/support/issues/810): MCP Server SSE Connection Hangs - No Tools Available in Claude Code
 - [#818](https://github.com/pieces-app/support/issues/818): Pro user's LLM cannot be upgraded to the latest version, even if they are chosen to
 - [#747](https://github.com/pieces-app/support/issues/747): MCP `ask_pieces_ltm` tool consistently returns "Failed to extract context" despite functional LTM
 
-### 4. Users unable to access Pro features despite upgrades
-Multiple Pro users report being unable to access features like specific LLMs or activity summaries, receiving messages like "requires Pieces Pro" despite having upgraded. Issues span different plugins (VS Code, Sublime) and operating systems (Windows, macOS).  Users have tried restarting, re-logging, and changing network configurations. Some report LLM versions not updating as expected.
+### 4. Users unable to access Pieces Pro features despite upgrades
+Multiple users report being unable to use Pro features after upgrading. Issues include LLM not upgrading to the latest version, code block collapse failures, and "Pro required" error messages.  Troubleshooting steps like restarting, re-login, and VPN changes haven't resolved the problems. Some users encounter issues with Pieces OS and Desktop app version compatibility.
 
 **Related Issues:**
 - [#818](https://github.com/pieces-app/support/issues/818): Pro user's LLM cannot be upgraded to the latest version, even if they are chosen to
@@ -59,11 +59,14 @@ Users are experiencing issues with the MacOS desktop application, including a pi
 
 
 ## Recommendations
-- Prioritize resolving the startup crashes on Linux and Windows by addressing XCB/GTK and dependency issues (linked to ticket #835, #839, #809).
-- Investigate and fix the subscription issues on macOS, focusing on subscription status synchronization and checkout page functionality (linked to ticket #805, #811, #808).
-- Address the MCP integration problems, specifically the SSE connection hangs and the `ask_pieces_ltm` tool failure (linked to ticket #810, #747).
-- Resolve the issue of Pro users not accessing upgraded features and LLM versions not updating correctly (linked to ticket #818).
-- Fix the pixelated tray icon and file picker issues on macOS (linked to ticket #840, #838).
+- Prioritize resolving the top three most active tickets (805, 835, 810) to address critical issues affecting users.
+- Investigate the recurring problems with macOS, including subscription upgrades, pixelated icons, and file picker issues.
+- Address the issues related to Pieces Pro upgrades, ensuring users can access the features they paid for.
+- Focus on resolving MCP integration problems, particularly the `ask_pieces_ltm` tool failure and SSE connection hangs.
+- Improve the installation process on Linux by addressing the dependency issues and retry step failures.
+- Review and update documentation related to LTM usage, MCP configuration, and subscription upgrades.
+- Consider implementing better error handling and logging for MCP tools to aid in debugging.
+- Monitor VPN-related issues and provide support for users experiencing connectivity problems.
 
 ## Daily Reports
 Here are the daily reports for this week:
@@ -78,3 +81,4 @@ Here are the daily reports for this week:
 - [report_131419](daily/2025-08-22/report_131419.md)
 - [report_210630](daily/2025-08-22/report_210630.md)
 - [report_210632](daily/2025-08-23/report_210632.md)
+- [report_131150](daily/2025-08-24/report_131150.md)
