@@ -1,38 +1,38 @@
 {
   "success": true,
   "date_range": {
-    "start": "2025-08-25T00:00:00+00:00",
-    "end": "2025-08-26T21:08:22.831275+00:00"
+    "start": "2025-08-26T00:00:00+00:00",
+    "end": "2025-08-26T21:06:31.211254+00:00"
   },
   "summary": {
-    "total_tickets": 19,
+    "total_tickets": 17,
     "resolved_tickets": 0,
-    "open_tickets": 19
+    "open_tickets": 17
   },
   "ticket_breakdown": [
     {
       "category": "bug",
-      "received": 17,
-      "resolved": 0,
-      "pending": 17
-    },
-    {
-      "category": "os:windows",
-      "received": 11,
-      "resolved": 0,
-      "pending": 11
-    },
-    {
-      "category": "app:vs code",
-      "received": 2,
-      "resolved": 0,
-      "pending": 2
-    },
-    {
-      "category": "status:triaged",
       "received": 16,
       "resolved": 0,
       "pending": 16
+    },
+    {
+      "category": "os:windows",
+      "received": 10,
+      "resolved": 0,
+      "pending": 10
+    },
+    {
+      "category": "app:vs code",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:triaged",
+      "received": 15,
+      "resolved": 0,
+      "pending": 15
     },
     {
       "category": "status:new",
@@ -42,9 +42,9 @@
     },
     {
       "category": "app:desktop application",
-      "received": 15,
+      "received": 13,
       "resolved": 0,
-      "pending": 15
+      "pending": 13
     },
     {
       "category": "app:obsidian",
@@ -54,27 +54,27 @@
     },
     {
       "category": "status:waiting_on_user_responses",
-      "received": 6,
+      "received": 5,
       "resolved": 0,
-      "pending": 6
+      "pending": 5
     },
     {
       "category": "os:macos",
+      "received": 5,
+      "resolved": 0,
+      "pending": 5
+    },
+    {
+      "category": "app:pieces os",
       "received": 6,
       "resolved": 0,
       "pending": 6
     },
     {
-      "category": "app:pieces os",
-      "received": 8,
-      "resolved": 0,
-      "pending": 8
-    },
-    {
       "category": "ongoing",
-      "received": 2,
+      "received": 1,
       "resolved": 0,
-      "pending": 2
+      "pending": 1
     },
     {
       "category": "os:linux",
@@ -108,18 +108,6 @@
     },
     {
       "category": "app:pieces copilot module",
-      "received": 1,
-      "resolved": 0,
-      "pending": 1
-    },
-    {
-      "category": "app:visual studio",
-      "received": 1,
-      "resolved": 0,
-      "pending": 1
-    },
-    {
-      "category": "app:sublime plugin",
       "received": 1,
       "resolved": 0,
       "pending": 1
@@ -157,11 +145,6 @@
       "activity_level": 6.5
     },
     {
-      "number": 818,
-      "title": "Pro user's LLM cannot be upgraded to the latest version, even if they are chosen to",
-      "activity_level": 6.49
-    },
-    {
       "number": 803,
       "title": "it doesnt stop selecting, it seems like \"shift\" or \"mouse 1\" is locked",
       "activity_level": 5.22
@@ -185,11 +168,6 @@
       "number": 819,
       "title": "Pieces extension for Chrome & edge cannot connect to pieces OS",
       "activity_level": 3.53
-    },
-    {
-      "number": 834,
-      "title": "Cannot connect to Authentication site during install of Pieces",
-      "activity_level": 3.41
     },
     {
       "number": 793,
@@ -224,8 +202,8 @@
   ],
   "common_issues": [
     {
-      "title": "Pieces connectivity and installation issues across platforms",
-      "description": "Users are experiencing difficulty installing and connecting Pieces extensions and applications, primarily on Windows. Issues include the VS Code extension failing to install or load, browser extensions (Chrome, Edge) unable to connect to Pieces OS, and the Pieces sidebar not saving error logs or reflecting Pro account upgrades.  Connectivity problems may be related to VPN usage. Further investigation into installation processes and network configurations is needed.",
+      "title": "Pieces connectivity and login issues across platforms",
+      "description": "Users are experiencing difficulty connecting Pieces extensions and plugins (VS Code, Chrome, Edge) to the Pieces OS.  Issues include continuous installation requests for the VS Code extension, inability to log in, and failure to connect even with VPN configurations.  Additionally, some users report Pro features not activating despite upgrading and logging in.  Troubleshooting steps include reinstalling dependencies, verifying network settings, and checking login credentials.",
       "frequency": 3,
       "related_issues": [
         {
@@ -250,7 +228,7 @@
     },
     {
       "title": "Pieces Desktop App Issues",
-      "description": "Users report issues with the Pieces desktop app, including large markdown blocks in Copilot responses making scrolling difficult, inability to collapse code blocks, and problems with the Pieces sidebar.  Some users experience issues with the upgrade process and Pro settings not applying. Troubleshooting steps include checking for updates, reinstalling the app, and verifying login status.",
+      "description": "Users report issues with the Pieces desktop app, primarily on Windows, including large markdown blocks in Copilot responses making scrolling difficult, inability to collapse code blocks, and problems with the Pieces sidebar.  Some users experience issues with the upgrade process and Pro settings not applying. Troubleshooting steps include checking for updates, reinstalling the app, and verifying login status.",
       "frequency": 3,
       "related_issues": [
         {
@@ -274,8 +252,8 @@
       ]
     },
     {
-      "title": "Pieces OS connection issues across multiple platforms",
-      "description": "Users are experiencing difficulty connecting Pieces extensions and plugins (Obsidian, Chrome, Edge) to Pieces OS.  Problems include undetected ports, failed logins, and pro features not activating. This affects Windows users, some using VPNs.  Check Pieces OS version, port configuration (default port changed to 39300), and ensure the Pieces desktop app is running and connected.",
+      "title": "Pieces OS and extension connection issues",
+      "description": "Users are reporting difficulties connecting Pieces extensions (Obsidian, Chrome, Edge) to Pieces OS.  Problems include Obsidian extension not detecting the Pieces port, browser extensions failing to connect even with VPN configurations, and sidebar login/pro feature issues.  Check Pieces OS version, port settings (default changed from 1000 to 39300), firewall/VPN settings, and ensure Pieces OS and extensions are on the same network and logged into the same account.",
       "frequency": 3,
       "related_issues": [
         {
@@ -300,7 +278,7 @@
     },
     {
       "title": "Pieces Desktop Application Bugs and UI Issues",
-      "description": "Users report issues with the Pieces desktop application, including persistent selection mode, inability to collapse code blocks, and sidebar display problems.  Additional issues include error logs not saving and pro settings not applying despite being logged in.  These issues span different Pieces OS versions (12.2.1, 12.2.2) and Desktop application versions (4.3.1, 4.3.4).",
+      "description": "Users report issues with the Pieces desktop application on Windows, including unintended selection behavior (potentially related to shift/mouse click lock), inability to collapse code blocks, and sidebar issues such as error logs not saving and pro settings not applying despite being logged in.  The reported Pieces OS versions range from 12.2.1 to 12.2.2, and the desktop application version is 4.3.1 or 4.3.4.  Further investigation is needed to identify the root causes and solutions.",
       "frequency": 3,
       "related_issues": [
         {
@@ -324,8 +302,8 @@
       ]
     },
     {
-      "title": "Pieces desktop and OS issues",
-      "description": "Users report issues with Pieces desktop and OS across versions 4.3.4 and 12.2.1/12.2.2 on Windows. Backup restoration fails, sidebar has display issues, and code blocks cannot collapse. Pro version login issues also reported.  Logs and screenshots provided. Check for software updates and compatibility.",
+      "title": "Pieces Desktop and OS Issues",
+      "description": "Users report issues with Pieces Desktop and OS across versions 4.3.4 and 12.2.1/12.2.2 on Windows. Backup restoration fails, sidebar has display issues, and code blocks cannot be collapsed. Pro version login issues also reported.  Check logs, reinstall app/OS, and ensure compatibility.",
       "frequency": 3,
       "related_issues": [
         {
@@ -350,11 +328,11 @@
     }
   ],
   "recommendations": [
-    "Prioritize resolving connectivity issues between Pieces OS and extensions/plugins (VS Code, Chrome, Edge, Obsidian) on Windows, investigating VPN-related conflicts and port configurations.",
-    "Address Pieces desktop application issues, including large markdown blocks in Copilot responses, inability to collapse code blocks, sidebar problems, and Pro settings not applying.",
-    "Investigate and resolve the persistent selection mode bug in the Pieces desktop application.",
-    "Improve the backup restoration process in the Pieces desktop application.",
-    "Ensure consistent Pro version login and feature activation across all platforms."
+    "Prioritize resolving connectivity issues between Pieces OS and extensions (VS Code, Obsidian, Chrome, Edge). Focus on port configuration, VPN compatibility, and installation processes.",
+    "Investigate and address issues with the Pieces Desktop app on Windows, including markdown rendering in Copilot, code block collapsing, sidebar functionality, and Pro settings application.",
+    "Improve the upgrade process for Pieces OS and Desktop app to ensure users can access Pro features after upgrading and logging in.",
+    "Address the reported backup restoration failure in the Pieces Desktop app on Windows.",
+    "Investigate and fix the unintended selection behavior in the Pieces Desktop app on Windows, possibly related to shift/mouse click lock."
   ],
   "message": "Daily support report generated successfully."
 }
