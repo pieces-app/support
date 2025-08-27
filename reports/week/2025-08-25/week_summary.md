@@ -1,6 +1,6 @@
 # Support Ticket Report
-- Generated: 2025-08-26 21:10:23
-- Period: 2025-08-25 to 2025-08-26
+- Generated: 2025-08-27 05:09:29
+- Period: 2025-08-25 to 2025-08-27
 
 ## Summary
 - **Total Tickets:** 19
@@ -17,8 +17,8 @@
 | [#150](https://github.com/pieces-app/support/issues/150) | PiecesOS using too much RAM/spike in CPU | 6.84 |
 
 ## Common Issues
-### 1. Pieces connectivity and installation issues across platforms
-Users are experiencing difficulty installing and connecting Pieces extensions and applications, primarily on Windows. Issues include the VS Code extension failing to install or load, browser extensions (Chrome, Edge) unable to connect to Pieces OS, and the Pieces sidebar not saving error logs or reflecting Pro account upgrades.  Connectivity problems may be related to VPN usage. Further investigation into installation processes and network configurations is needed.
+### 1. Pieces connectivity and login issues across platforms
+Users are experiencing difficulty connecting Pieces extensions and plugins (VS Code, Chrome, Edge) to the Pieces OS.  Issues include continuous installation requests for the VS Code extension, inability to log in, and failure to connect even with VPN configurations.  Additionally, some users report Pro features not activating despite upgrading and logging in successfully.  Troubleshooting steps include reinstalling dependencies, checking VPN settings, and ensuring Pieces OS is running.
 
 **Related Issues:**
 - [#842](https://github.com/pieces-app/support/issues/842): VScode extension continuously requesting installation, never installs unable to load extension
@@ -26,7 +26,7 @@ Users are experiencing difficulty installing and connecting Pieces extensions an
 - [#843](https://github.com/pieces-app/support/issues/843): Pieces Side Bar issues
 
 ### 2. Pieces Desktop App Issues
-Users report issues with the Pieces desktop app, including large markdown blocks in Copilot responses making scrolling difficult, inability to collapse code blocks, and problems with the Pieces sidebar.  Some users experience issues with the upgrade process and Pro settings not applying. Troubleshooting steps include checking for updates, reinstalling the app, and verifying login status.
+Users report issues with the Pieces desktop app, primarily on Windows, with versions 12.2.1 and 12.2.2.  Problems include large, uncollapsible markdown blocks in Copilot responses, preventing scrolling, and difficulty upgrading Pieces OS from the Microsoft Store.  Additionally, some users experience login issues and inability to access Pro features despite being subscribed.
 
 **Related Issues:**
 - [#846](https://github.com/pieces-app/support/issues/846): Showing very big markdown in copilot
@@ -34,23 +34,23 @@ Users report issues with the Pieces desktop app, including large markdown blocks
 - [#843](https://github.com/pieces-app/support/issues/843): Pieces Side Bar issues
 
 ### 3. Pieces OS connection issues across multiple platforms
-Users are experiencing difficulty connecting Pieces extensions and plugins (Obsidian, Chrome, Edge) to Pieces OS.  Problems include undetected ports, failed logins, and pro features not activating. This affects Windows users, some using VPNs.  Check Pieces OS version, port configuration (default port changed to 39300), and ensure the Pieces desktop app is running and connected.
+Users are experiencing difficulty connecting Pieces extensions and plugins (Obsidian, Chrome, Edge) to Pieces OS.  Problems include port detection failures, inability to send data to Pieces OS, and general connection problems even with VPN configurations.  Some users report Pro features not working despite being logged in.  Issues persist across Pieces OS versions 12.1.1 and 12.2.1.
 
 **Related Issues:**
 - [#841](https://github.com/pieces-app/support/issues/841): Pieces extension for Obsidian using port 1000 but Pieces OS now listening port 39300
 - [#819](https://github.com/pieces-app/support/issues/819): Pieces extension for Chrome & edge cannot connect to pieces OS
 - [#843](https://github.com/pieces-app/support/issues/843): Pieces Side Bar issues
 
-### 4. Pieces Desktop Application Bugs and UI Issues
-Users report issues with the Pieces desktop application, including persistent selection mode, inability to collapse code blocks, and sidebar display problems.  Additional issues include error logs not saving and pro settings not applying despite being logged in.  These issues span different Pieces OS versions (12.2.1, 12.2.2) and Desktop application versions (4.3.1, 4.3.4).
+### 4. Pieces Desktop Application Bugs
+Users are experiencing various issues with the Pieces desktop application, including unintended selection behavior (potentially related to stuck shift/mouse click), inability to collapse code blocks, and problems with the sidebar (saving error logs, pro settings not applying despite login). These issues span different Pieces OS versions (12.2.1, 12.2.2) and Desktop versions (4.3.1, 4.3.4).
 
 **Related Issues:**
 - [#803](https://github.com/pieces-app/support/issues/803): it doesnt stop selecting, it seems like "shift" or "mouse 1" is locked
 - [#839](https://github.com/pieces-app/support/issues/839): Cannot collapse all code block in Pieces Desktop
 - [#843](https://github.com/pieces-app/support/issues/843): Pieces Side Bar issues
 
-### 5. Pieces desktop and OS issues
-Users report issues with Pieces desktop and OS across versions 4.3.4 and 12.2.1/12.2.2 on Windows. Backup restoration fails, sidebar has display issues, and code blocks cannot collapse. Pro version login issues also reported.  Logs and screenshots provided. Check for software updates and compatibility.
+### 5. Pieces desktop application and OS bugs
+Users report issues with Pieces desktop app and OS across versions 4.3.4 and 12.2.1/12.2.2 on Windows. Backup restoration fails, sidebar has display issues, and code blocks cannot collapse. Pro version login issues also reported.  Logs and screenshots provided. Check for OS updates and compatibility.
 
 **Related Issues:**
 - [#837](https://github.com/pieces-app/support/issues/837): backup restoration fails
@@ -59,11 +59,12 @@ Users report issues with Pieces desktop and OS across versions 4.3.4 and 12.2.1/
 
 
 ## Recommendations
-- Prioritize resolving connectivity issues between Pieces OS and extensions/plugins (VS Code, Chrome, Edge, Obsidian) on Windows, investigating VPN-related conflicts and port configurations.
-- Address Pieces desktop application issues, including large markdown blocks in Copilot responses, inability to collapse code blocks, sidebar problems, and Pro settings not applying.
-- Investigate and resolve the persistent selection mode bug in the Pieces desktop application.
-- Improve the backup restoration process in the Pieces desktop application.
-- Ensure consistent Pro version login and feature activation across all platforms.
+- Prioritize resolving connectivity issues between Pieces OS and extensions/plugins (VS Code, Chrome, Edge, Obsidian). Investigate port detection failures, login problems, and Pro feature activation.
+- Address Pieces desktop app issues on Windows, including large markdown blocks in Copilot responses, Microsoft Store upgrade problems, and login/Pro feature access.
+- Investigate and fix the unintended selection behavior in the Pieces desktop app, possibly related to stuck shift/mouse click.
+- Improve backup restoration functionality in the Pieces desktop app on Windows.
+- Ensure code blocks can be collapsed reliably in the Pieces desktop app.
+- Address sidebar issues in the Pieces desktop app, including saving error logs and applying Pro settings.
 
 ## Daily Reports
 Here are the daily reports for this week:
