@@ -1,6 +1,6 @@
 # Support Ticket Report
-- Generated: 2025-08-28 21:10:03
-- Period: 2025-08-25 to 2025-08-28
+- Generated: 2025-08-29 05:09:45
+- Period: 2025-08-25 to 2025-08-29
 
 ## Summary
 - **Total Tickets:** 22
@@ -25,8 +25,8 @@ Users are experiencing difficulty connecting Pieces extensions and plugins (VS C
 - [#819](https://github.com/pieces-app/support/issues/819): Pieces extension for Chrome & edge cannot connect to pieces OS
 - [#843](https://github.com/pieces-app/support/issues/843): Pieces Side Bar issues
 
-### 2. Pieces Desktop App Display Issues
-Users report difficulties viewing large markdown responses in the Pieces Copilot on the Windows desktop application.  Issues include oversized code blocks hindering scrolling and problems collapsing code blocks.  This affects Pieces OS versions 12.2.1 and 12.2.2.  Additionally, some users experience sidebar issues and pro account features not activating despite being logged in.
+### 2. Pieces Desktop App Issues
+Users report issues with the Pieces desktop app, primarily on Windows, including large markdown blocks in Copilot responses making scrolling difficult, inability to collapse code blocks, and problems with the Pieces sidebar.  Some issues involve Pieces OS version compatibility.  Troubleshooting steps include checking for OS updates and ensuring app compatibility.
 
 **Related Issues:**
 - [#846](https://github.com/pieces-app/support/issues/846): Showing very big markdown in copilot
@@ -34,7 +34,7 @@ Users report difficulties viewing large markdown responses in the Pieces Copilot
 - [#843](https://github.com/pieces-app/support/issues/843): Pieces Side Bar issues
 
 ### 3. Pieces Desktop Application Bugs and UI Issues
-Users report issues with the Pieces desktop application on Windows, including unintended selection behavior (potentially related to shift/mouse click lock), inability to collapse code blocks, and sidebar issues such as error logs not saving and pro settings not applying despite being logged in.  The reported Pieces OS versions range from 12.2.1 to 12.2.2, and the desktop application version is 4.3.1 or 4.3.4.  Further investigation is needed to determine the root causes and solutions.
+Users report issues with the Pieces desktop application on Windows, including unintended selection behavior (potentially related to shift/mouse click lock), inability to collapse code blocks, and sidebar display problems.  Additional issues involve error logging failures and pro account features not activating despite login.  Troubleshooting may involve checking for software updates, verifying account status, and reviewing logs.
 
 **Related Issues:**
 - [#803](https://github.com/pieces-app/support/issues/803): it doesnt stop selecting, it seems like "shift" or "mouse 1" is locked
@@ -42,7 +42,7 @@ Users report issues with the Pieces desktop application on Windows, including un
 - [#843](https://github.com/pieces-app/support/issues/843): Pieces Side Bar issues
 
 ### 4. Pieces Desktop App Issues on macOS and Windows
-Users are experiencing issues with the Pieces desktop app on macOS and Windows. On macOS, the app update function gets stuck in a loop.  On Windows, users report issues with the sidebar, error logs not saving, and Pro account features not working despite being logged in.  Additional details regarding email address management and newsletter subscriptions are also mentioned.
+Users are experiencing issues with the Pieces desktop app on macOS and Windows. On macOS, the app update function gets stuck in a loop, repeatedly prompting users to update without success.  On Windows, users report issues with the sidebar, including errors not saving and Pro features not activating despite being logged in.  Additionally, a user on macOS reported issues with email addresses not updating correctly after changing their GitHub email.
 
 **Related Issues:**
 - [#848](https://github.com/pieces-app/support/issues/848): Email Addresses Management
@@ -50,7 +50,7 @@ Users are experiencing issues with the Pieces desktop app on macOS and Windows. 
 - [#843](https://github.com/pieces-app/support/issues/843): Pieces Side Bar issues
 
 ### 5. Pieces OS connection issues across multiple platforms
-Users are experiencing difficulty connecting Pieces extensions and plugins (Obsidian, Chrome, Edge) to Pieces OS.  Problems include undetected ports, failed logins, and pro features not activating. This occurs across Windows, potentially related to VPN usage or port conflicts.  Users should check Pieces OS port settings, ensure VPN configurations are compatible, and verify login credentials.
+Users are experiencing difficulty connecting Pieces extensions and plugins (Obsidian, Chrome, Edge) to Pieces OS.  Issues include port detection failures, inability to send data to Pieces OS, and general connection problems. Some users report this occurs even with VPNs.  Troubleshooting steps might include checking Pieces OS version, network connectivity, firewall settings, and ensuring the correct port is configured in the extension/plugin settings.
 
 **Related Issues:**
 - [#841](https://github.com/pieces-app/support/issues/841): Pieces extension for Obsidian using port 1000 but Pieces OS now listening port 39300
@@ -60,12 +60,12 @@ Users are experiencing difficulty connecting Pieces extensions and plugins (Obsi
 
 ## Recommendations
 - Prioritize resolving connectivity issues between Pieces OS and extensions/plugins (VS Code, Chrome, Edge, Obsidian).  This appears to be the most common problem area.
-- Investigate and address the reported UI/UX issues with the Pieces desktop application, particularly on Windows (oversized markdown responses, code block collapse, sidebar issues, unintended selection behavior).
-- Improve the update mechanism for the Pieces desktop app on macOS to prevent infinite loops.
-- Review and clarify the email address management system to ensure proper handling of GitHub account changes and newsletter subscriptions.
-- Investigate high RAM/CPU usage reported in ticket #150.
-- Address the authentication loop and 500 internal server errors reported in ticket #845.
-- Look into the issue of Pro features not activating despite users being logged in.
+- Investigate and address the issues with the Pieces desktop app, particularly on Windows (sidebar problems, unintended selection behavior, code block collapse).
+- Improve the update process for the Pieces desktop app on macOS to prevent the infinite update loop.
+- Address the issue of Pro features not activating despite users being logged in.
+- Look into the large markdown blocks in Copilot responses on Windows and improve scrolling/display.
+- Review and refine the Pieces OS port detection and configuration process for extensions/plugins to ensure smooth connections.
+- Investigate and resolve the reported RAM/CPU usage spikes in Pieces OS.
 
 ## Daily Reports
 Here are the daily reports for this week:
