@@ -2,7 +2,7 @@
   "success": true,
   "date_range": {
     "start": "2025-08-25T00:00:00+00:00",
-    "end": "2025-08-29T05:07:24.291525+00:00"
+    "end": "2025-08-29T13:13:21.027750+00:00"
   },
   "summary": {
     "total_tickets": 22,
@@ -17,10 +17,22 @@
       "pending": 19
     },
     {
+      "category": "os:windows",
+      "received": 12,
+      "resolved": 1,
+      "pending": 11
+    },
+    {
       "category": "app:desktop application",
       "received": 18,
       "resolved": 1,
       "pending": 17
+    },
+    {
+      "category": "status:triaged",
+      "received": 17,
+      "resolved": 1,
+      "pending": 16
     },
     {
       "category": "os:macos",
@@ -33,18 +45,6 @@
       "received": 7,
       "resolved": 0,
       "pending": 7
-    },
-    {
-      "category": "status:triaged",
-      "received": 17,
-      "resolved": 1,
-      "pending": 16
-    },
-    {
-      "category": "os:windows",
-      "received": 12,
-      "resolved": 1,
-      "pending": 11
     },
     {
       "category": "app:pieces os",
@@ -155,11 +155,6 @@
       "activity_level": 7.93
     },
     {
-      "number": 848,
-      "title": "Email Addresses Management",
-      "activity_level": 6.94
-    },
-    {
       "number": 150,
       "title": "PiecesOS using too much RAM/spike in CPU",
       "activity_level": 6.62
@@ -170,19 +165,9 @@
       "activity_level": 6.46
     },
     {
-      "number": 845,
-      "title": "Authentication Loop and 500 Internal Server Error on Sign In",
-      "activity_level": 6.46
-    },
-    {
       "number": 769,
       "title": "An error occurred in the authentication flow.",
       "activity_level": 6.02
-    },
-    {
-      "number": 818,
-      "title": "Pro user's LLM cannot be upgraded to the latest version, even if they are chosen to",
-      "activity_level": 5.86
     },
     {
       "number": 841,
@@ -190,9 +175,29 @@
       "activity_level": 5.8
     },
     {
+      "number": 845,
+      "title": "Authentication Loop and 500 Internal Server Error on Sign In",
+      "activity_level": 5.8
+    },
+    {
+      "number": 818,
+      "title": "Pro user's LLM cannot be upgraded to the latest version, even if they are chosen to",
+      "activity_level": 5.78
+    },
+    {
       "number": 803,
       "title": "it doesnt stop selecting, it seems like \"shift\" or \"mouse 1\" is locked",
       "activity_level": 5.53
+    },
+    {
+      "number": 848,
+      "title": "Email Addresses Management",
+      "activity_level": 5.5
+    },
+    {
+      "number": 837,
+      "title": "backup restoration fails",
+      "activity_level": 4.91
     },
     {
       "number": 809,
@@ -210,29 +215,24 @@
       "activity_level": 3.31
     },
     {
-      "number": 837,
-      "title": "backup restoration fails",
-      "activity_level": 3.18
-    },
-    {
-      "number": 819,
-      "title": "Pieces extension for Chrome & edge cannot connect to pieces OS",
-      "activity_level": 2.98
-    },
-    {
       "number": 793,
       "title": "No hotkeys work",
       "activity_level": 2.97
     },
     {
+      "number": 819,
+      "title": "Pieces extension for Chrome & edge cannot connect to pieces OS",
+      "activity_level": 2.94
+    },
+    {
       "number": 801,
       "title": "Auto Generated Context Always returns to Medium",
-      "activity_level": 2.75
+      "activity_level": 2.73
     },
     {
       "number": 834,
       "title": "Cannot connect to Authentication site during install of Pieces",
-      "activity_level": 2.75
+      "activity_level": 2.69
     },
     {
       "number": 752,
@@ -242,7 +242,7 @@
     {
       "number": 750,
       "title": "Delete chat bubbles breaks the onhover chat menu's appearance",
-      "activity_level": 1.99
+      "activity_level": 1.98
     },
     {
       "number": 784,
@@ -258,7 +258,7 @@
   "common_issues": [
     {
       "title": "Pieces connectivity and login issues across platforms",
-      "description": "Users are experiencing difficulty connecting Pieces extensions and plugins (VS Code, Chrome, Edge) to the Pieces OS.  Issues include continuous installation requests for the VS Code extension, inability to log in, and failure to connect even with VPN configurations.  Additionally, some users report Pro features not activating despite upgrading and logging in.  Troubleshooting steps include reinstalling dependencies, verifying network settings, and checking login credentials.",
+      "description": "Users are experiencing difficulty connecting Pieces extensions and plugins (VS Code, Chrome, Edge) to the Pieces OS.  Issues include continuous installation requests for the VS Code extension, inability to log in, and failure to connect even with VPN configurations.  Additionally, some users report Pro features not activating despite upgrading and logging in.  Troubleshooting steps include reinstalling dependencies, checking VPN settings, and verifying login status.",
       "frequency": 3,
       "related_issues": [
         {
@@ -271,7 +271,7 @@
           "id": 819,
           "title": "Pieces extension for Chrome & edge cannot connect to pieces OS",
           "text": "Pieces extension for Chrome & edge cannot connect to pieces OS\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nWeb Extension, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n12.1.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nEven if the VPN for the browser plugin is turned off, and the virtual network card and global proxy for the desktop VPN are turned on, it is still not possible to connect the browser, including the edge and Chrome pieces plugins, to the pieces OS.\n\nPS: My pieces OS and pieces for developers are both installed in sequence on Microsoft Store. \n- They work well in other aspects.\n- I have been using them for about 7 days. \n- I am in Chinese Mainland, thus a heavy VPN user.\n- Pieces OS has been upgraded to Pro.\n\n<img width=\"1404\" height=\"1406\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/23f50bc4-d3f1-4fb3-ad81-d66b69e41ea5\" />\n\n<img width=\"1200\" height=\"943\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/5fa1129f-01d3-4be4-8a5f-54eb6de4e97c\" />\n\n<img width=\"2987\" height=\"1655\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/3011a7cc-0dba-4ecb-8fa7-9ec7f30798e3\" />\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 2.98
+          "activity_level": 2.94
         },
         {
           "id": 843,
@@ -283,7 +283,7 @@
     },
     {
       "title": "Pieces Desktop App Issues",
-      "description": "Users report issues with the Pieces desktop app, primarily on Windows, including large markdown blocks in Copilot responses making scrolling difficult, inability to collapse code blocks, and problems with the Pieces sidebar.  Some issues involve Pieces OS version compatibility.  Troubleshooting steps include checking for OS updates and ensuring app compatibility.",
+      "description": "Users report issues with the Pieces desktop app, including large markdown blocks in Copilot responses making scrolling difficult, inability to collapse code blocks, and problems with the Pieces sidebar.  Additionally, some users are experiencing issues with Pro settings not applying despite being logged in. Troubleshooting steps may include checking for updates, reinstalling the app, and ensuring account synchronization.",
       "frequency": 3,
       "related_issues": [
         {
@@ -307,8 +307,33 @@
       ]
     },
     {
+      "title": "Pieces OS and Desktop Application Issues",
+      "description": "Users are experiencing problems with backup restoration, dependency installation, and sidebar functionality in the Pieces OS desktop and web applications. Backup restoration fails midway, dependency installation gets stuck on \"Retry Step\", and the sidebar has display issues.  Additionally, some Pro users are unable to access their upgraded features despite being logged in.  Further investigation is needed to pinpoint the root causes and provide solutions.",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 837,
+          "title": "backup restoration fails",
+          "text": "backup restoration fails\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\nPieces 4.3.4\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nchoosing a bakup to restore begins as normal but the loading progress stops, resets and is stuck on the restore screen \n\n<img width=\"681\" height=\"146\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/676df879-dd42-4e36-91cc-070e2f710d94\" />\n\n[log-08202025.txt](https://github.com/user-attachments/files/21900374/log-08202025.txt)\n\n[log-08202025.txt](https://github.com/user-attachments/files/21900381/log-08202025.txt)\n\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 4.91
+        },
+        {
+          "id": 809,
+          "title": "Ensure core dependencies; Retry Step",
+          "text": "Ensure core dependencies; Retry Step\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\n### Pieces OS, Desktop Application\n\n* Operating System / Platform: Linux\n\n* Pieces OS Version 4.3.1\n\n\n\n\n\nAfter installation, the \u201cInitialize Desktop App\u201d step has run successfully. The \u201cEnsure core dependencies\u201d step displays the message \u201cRetry Step\u201d.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 4.54
+        },
+        {
+          "id": 843,
+          "title": "Pieces Side Bar issues",
+          "text": "Pieces Side Bar issues\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Web Extension\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n12.2.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nThe screenshot below.\n\n<img width=\"319\" height=\"1278\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/027f3068-4347-4110-98b8-17011e46e86d\" />\nAfter reviewing the errors on GitHub, the error log notes will not save to the pieces os or the desktop.\n\nThe app for the browser is logged in. This comes to the second issue. I have upgraded my account to the pro version however, even though i am logged in on the same account, i am unable to use the pro settings.\n\n<img width=\"319\" height=\"1278\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/f78ebf21-83e5-4f91-a908-d0dfa034def5\" />\n\nAs you can see from the image, I am correctly logged in.\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 11.8
+        }
+      ]
+    },
+    {
       "title": "Pieces Desktop Application Bugs and UI Issues",
-      "description": "Users report issues with the Pieces desktop application on Windows, including unintended selection behavior (potentially related to shift/mouse click lock), inability to collapse code blocks, and sidebar display problems.  Additional issues involve error logging failures and pro account features not activating despite login.  Troubleshooting may involve checking for software updates, verifying account status, and reviewing logs.",
+      "description": "Users report issues with the Pieces desktop application, including unintended selection behavior (potentially related to shift/mouse click lock), inability to collapse code blocks, and sidebar display problems.  Additionally, some users experience issues with Pro settings not applying despite being logged in. Troubleshooting steps may include checking for software updates, verifying login status, and reviewing error logs.",
       "frequency": 3,
       "related_issues": [
         {
@@ -332,33 +357,8 @@
       ]
     },
     {
-      "title": "Pieces Desktop App Issues on macOS and Windows",
-      "description": "Users are experiencing issues with the Pieces desktop app on macOS and Windows. On macOS, the app update function gets stuck in a loop, repeatedly prompting users to update without success.  On Windows, users report issues with the sidebar, including errors not saving and Pro features not activating despite being logged in.  Additionally, a user on macOS reported issues with email addresses not updating correctly after changing their GitHub email.",
-      "frequency": 3,
-      "related_issues": [
-        {
-          "id": 848,
-          "title": "Email Addresses Management",
-          "text": "Email Addresses Management\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n12.2.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n\nFirst, I signed in with my GitHub account. Then, I changed my GitHub email address and logged in with GitHub again. However, it turns out that the old email address is still associated with my account and is still subscribed to the Pieces Newsletter.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 6.94
-        },
-        {
-          "id": 784,
-          "title": "Pieces desktop (MacOS) won't update",
-          "text": "Pieces desktop (MacOS) won't update\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n12.1.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nIf I start Pieces Desktop, it tells me it's out of date.\n\nWhen I click on \"check for Desktop App updates\" the loader loads to about 40% on the icon and then restarts the app and I get the exact same message.\nSo it seems your updater is stuck in a loop.\n\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 1.89
-        },
-        {
-          "id": 843,
-          "title": "Pieces Side Bar issues",
-          "text": "Pieces Side Bar issues\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Web Extension\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n12.2.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nThe screenshot below.\n\n<img width=\"319\" height=\"1278\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/027f3068-4347-4110-98b8-17011e46e86d\" />\nAfter reviewing the errors on GitHub, the error log notes will not save to the pieces os or the desktop.\n\nThe app for the browser is logged in. This comes to the second issue. I have upgraded my account to the pro version however, even though i am logged in on the same account, i am unable to use the pro settings.\n\n<img width=\"319\" height=\"1278\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/f78ebf21-83e5-4f91-a908-d0dfa034def5\" />\n\nAs you can see from the image, I am correctly logged in.\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 11.8
-        }
-      ]
-    },
-    {
       "title": "Pieces OS connection issues across multiple platforms",
-      "description": "Users are experiencing difficulty connecting Pieces extensions and plugins (Obsidian, Chrome, Edge) to Pieces OS.  Issues include port detection failures, inability to send data to Pieces OS, and general connection problems. Some users report this occurs even with VPNs.  Troubleshooting steps might include checking Pieces OS version, network connectivity, firewall settings, and ensuring the correct port is configured in the extension/plugin settings.",
+      "description": "Users are experiencing difficulty connecting Pieces extensions and plugins (Obsidian, Chrome, Edge) to Pieces OS.  Problems include undetected ports, failed logins, and pro features not activating. This affects Windows users, some using VPNs.  Check Pieces OS version, port settings (default changed to 39300), and ensure the Pieces desktop app is running.",
       "frequency": 3,
       "related_issues": [
         {
@@ -371,7 +371,7 @@
           "id": 819,
           "title": "Pieces extension for Chrome & edge cannot connect to pieces OS",
           "text": "Pieces extension for Chrome & edge cannot connect to pieces OS\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nWeb Extension, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n12.1.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nEven if the VPN for the browser plugin is turned off, and the virtual network card and global proxy for the desktop VPN are turned on, it is still not possible to connect the browser, including the edge and Chrome pieces plugins, to the pieces OS.\n\nPS: My pieces OS and pieces for developers are both installed in sequence on Microsoft Store. \n- They work well in other aspects.\n- I have been using them for about 7 days. \n- I am in Chinese Mainland, thus a heavy VPN user.\n- Pieces OS has been upgraded to Pro.\n\n<img width=\"1404\" height=\"1406\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/23f50bc4-d3f1-4fb3-ad81-d66b69e41ea5\" />\n\n<img width=\"1200\" height=\"943\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/5fa1129f-01d3-4be4-8a5f-54eb6de4e97c\" />\n\n<img width=\"2987\" height=\"1655\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/3011a7cc-0dba-4ecb-8fa7-9ec7f30798e3\" />\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 2.98
+          "activity_level": 2.94
         },
         {
           "id": 843,
@@ -383,13 +383,11 @@
     }
   ],
   "recommendations": [
-    "Prioritize resolving connectivity issues between Pieces OS and extensions/plugins (VS Code, Chrome, Edge, Obsidian).  This appears to be the most common problem area.",
-    "Investigate and address the issues with the Pieces desktop app, particularly on Windows (sidebar problems, unintended selection behavior, code block collapse).",
-    "Improve the update process for the Pieces desktop app on macOS to prevent the infinite update loop.",
-    "Address the issue of Pro features not activating despite users being logged in.",
-    "Look into the large markdown blocks in Copilot responses on Windows and improve scrolling/display.",
-    "Review and refine the Pieces OS port detection and configuration process for extensions/plugins to ensure smooth connections.",
-    "Investigate and resolve the reported RAM/CPU usage spikes in Pieces OS."
+    "Prioritize resolving connectivity issues between Pieces extensions/plugins and Pieces OS across all platforms (Windows, macOS, Chrome, Edge, VS Code, Obsidian).  This includes addressing login failures, port detection problems, and Pro feature activation.",
+    "Investigate and fix issues with the Pieces desktop application, including the oversized markdown blocks in Copilot responses, code block collapsing, sidebar display problems, and unintended selection behavior.",
+    "Address problems with Pieces OS and desktop application core functionalities, such as backup restoration failures, dependency installation issues (\"Retry Step\"), and Pro settings not applying.",
+    "Improve communication with users regarding the change in default port to 39300 and provide clear troubleshooting steps for connection problems.",
+    "Investigate and resolve the high RAM/CPU usage issue reported in ticket #150."
   ],
   "message": "Daily support report generated successfully."
 }
