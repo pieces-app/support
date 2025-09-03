@@ -1,5 +1,5 @@
 # Support Ticket Report
-- Generated: 2025-09-03 05:08:02
+- Generated: 2025-09-03 13:13:59
 - Period: 2025-09-01 to 2025-09-03
 
 ## Summary
@@ -26,7 +26,7 @@ Users are experiencing issues with Pieces OS and the Desktop application across 
 - [#769](https://github.com/pieces-app/support/issues/769): An error occurred in the authentication flow.
 
 ### 2. Pieces plugin/extension installation and initialization issues
-Users are experiencing difficulty installing or initializing Pieces plugins/extensions across various IDEs (JetBrains, VS Code) and platforms (macOS, Windows, Linux). Issues include plugin not found in marketplace, continuous installation requests, and failure to load or initialize after installation.  Suggested solutions involve verifying plugin availability, checking dependencies, and ensuring compatibility between Pieces OS version and IDE/platform.
+Users are experiencing difficulty installing or initializing Pieces plugins/extensions across various IDEs (JetBrains, VS Code) and platforms (macOS, Windows, Linux). Issues include plugin not found in marketplace, continuous installation requests, and failure to load or initialize after installation.  Potential solutions involve verifying plugin availability, checking dependencies, and ensuring compatibility between Pieces OS version and IDE/platform.
 
 **Related Issues:**
 - [#849](https://github.com/pieces-app/support/issues/849): pieces Jetbrains plugin
@@ -36,10 +36,10 @@ Users are experiencing difficulty installing or initializing Pieces plugins/exte
 
 ## Recommendations
 - Prioritize resolving issues related to Pieces OS and the Desktop application, focusing on login problems, sidebar issues, and "Ensure core dependencies" failures across Windows and Linux.
-- Improve the plugin/extension installation and initialization process for various IDEs (JetBrains, VS Code) and platforms (macOS, Windows, Linux). Address issues such as plugin discovery, installation loops, and load failures.
-- Investigate the root cause of the "An error occurred in the authentication flow" message and provide clearer guidance to users on troubleshooting steps.
-- Provide more detailed documentation or troubleshooting guides for common issues, including checking logs, verifying firewall settings, and reinstallation procedures.
-- Consider implementing a more robust plugin/extension update mechanism to ensure compatibility between Pieces OS, IDEs, and platforms.
+- Investigate and address the root cause of the "An error occurred in the authentication flow" error message.
+- Improve the installation and initialization process for Pieces plugins/extensions, ensuring compatibility with various IDEs (JetBrains, VS Code) and platforms (macOS, Windows, Linux). Address issues such as plugin discovery in marketplaces and continuous installation requests.
+- Provide clearer documentation and troubleshooting steps for plugin/extension installation and address the "Ensure core dependencies" step failure in Pieces OS installation.
+- Consider improving the onboarding experience for new users, especially regarding login and initial setup of Pieces OS and the Desktop application.
 
 ## Daily Reports
 Here are the daily reports for this week:
