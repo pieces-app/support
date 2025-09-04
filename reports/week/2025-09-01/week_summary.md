@@ -1,6 +1,6 @@
 # Support Ticket Report
-- Generated: 2025-09-03 21:07:05
-- Period: 2025-09-01 to 2025-09-03
+- Generated: 2025-09-04 05:07:50
+- Period: 2025-09-01 to 2025-09-04
 
 ## Summary
 - **Total Tickets:** 5
@@ -18,15 +18,15 @@
 
 ## Common Issues
 ### 1. Pieces OS and Desktop App Issues
-Users are experiencing issues with Pieces OS and the Desktop application across different operating systems (Windows, Linux). Problems include the "Ensure core dependencies" step failing, the sidebar not working correctly, and authentication errors during sign-in.  Further investigation is needed to pinpoint the root causes and provide solutions. Sharing logs and relevant error messages will be helpful in troubleshooting.
+Users are experiencing issues with Pieces OS and the Desktop application across different operating systems (Windows, Linux). Problems include the "Ensure core dependencies" step failing, the sidebar not working correctly, pro accounts not being recognized after login, and authentication flow errors during the initial sign-in process.  Further investigation is needed to pinpoint the root causes and provide solutions.
 
 **Related Issues:**
 - [#809](https://github.com/pieces-app/support/issues/809): Ensure core dependencies; Retry Step
 - [#843](https://github.com/pieces-app/support/issues/843): Pieces Side Bar issues
 - [#769](https://github.com/pieces-app/support/issues/769): An error occurred in the authentication flow.
 
-### 2. Pieces plugin/extension installation and initialization issues
-Users are experiencing difficulty installing or initializing Pieces plugins/extensions across various IDEs (JetBrains, VS Code) and platforms (macOS, Windows, Linux). Issues include plugin not found in marketplace, continuous installation requests, and failure to load or initialize after installation.  Potential solutions involve verifying plugin compatibility, checking dependencies, and ensuring the Pieces desktop app is running and initialized.
+### 2. Pieces plugin/extension installation and dependency issues
+Users are experiencing difficulty installing Pieces plugins/extensions for JetBrains, VS Code, and the Pieces desktop app itself. Issues include plugin unavailability, continuous installation requests, and dependency errors.  Troubleshooting steps include verifying plugin existence, reinstalling dependencies, and ensuring the desktop app is initialized. Further investigation is needed into plugin compatibility and dependency management.
 
 **Related Issues:**
 - [#849](https://github.com/pieces-app/support/issues/849): pieces Jetbrains plugin
@@ -35,11 +35,14 @@ Users are experiencing difficulty installing or initializing Pieces plugins/exte
 
 
 ## Recommendations
-- Prioritize resolving issues related to Pieces OS and the Desktop application, focusing on "Ensure core dependencies" failures, sidebar malfunctions, and authentication errors. Investigate logs and error messages from affected users (Issues #809, #843, #769).
-- Address plugin/extension installation and initialization problems across IDEs and platforms. Verify plugin compatibility, check dependencies, and ensure the Pieces desktop app is running and initialized (Issues #849, #842, #809).
-- Improve communication with users experiencing plugin/extension issues, providing clear instructions and troubleshooting steps.
-- Proactively monitor and address emerging issues to prevent widespread impact.
-- Consider creating dedicated troubleshooting guides or FAQs for common issues like installation problems and authentication errors.
+- Prioritize resolving issues related to Pieces OS and the Desktop application, focusing on Windows and Linux compatibility.
+- Investigate and address the "Ensure core dependencies" failure during Pieces OS and Desktop app installation.
+- Fix the Pieces sidebar functionality and ensure pro account recognition after login.
+- Troubleshoot and resolve the authentication flow errors during initial sign-in.
+- Improve the installation process for Pieces plugins/extensions, addressing issues with JetBrains, VS Code, and the desktop app.
+- Ensure plugin availability and resolve continuous installation requests and dependency errors.
+- Verify plugin compatibility and improve dependency management.
+- Provide clear documentation and troubleshooting steps for plugin installation.
 
 ## Daily Reports
 Here are the daily reports for this week:
