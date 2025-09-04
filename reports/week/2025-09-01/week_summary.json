@@ -2,7 +2,7 @@
   "success": true,
   "date_range": {
     "start": "2025-09-01T00:00:00+00:00",
-    "end": "2025-09-04T05:07:10.392395+00:00"
+    "end": "2025-09-04T13:12:55.365760+00:00"
   },
   "summary": {
     "total_tickets": 5,
@@ -105,90 +105,87 @@
     {
       "number": 843,
       "title": "Pieces Side Bar issues",
-      "activity_level": 9.07
-    },
-    {
-      "number": 842,
-      "title": "VScode extension continuously requesting installation, never installs unable to load extension",
-      "activity_level": 6.69
-    },
-    {
-      "number": 769,
-      "title": "An error occurred in the authentication flow.",
-      "activity_level": 6.22
+      "activity_level": 8.51
     },
     {
       "number": 809,
       "title": "Ensure core dependencies; Retry Step",
-      "activity_level": 5.85
+      "activity_level": 6.24
+    },
+    {
+      "number": 842,
+      "title": "VScode extension continuously requesting installation, never installs unable to load extension",
+      "activity_level": 6.14
+    },
+    {
+      "number": 769,
+      "title": "An error occurred in the authentication flow.",
+      "activity_level": 5.9
     },
     {
       "number": 849,
       "title": "pieces Jetbrains plugin",
-      "activity_level": 5.6
+      "activity_level": 4.74
     }
   ],
   "common_issues": [
     {
       "title": "Pieces OS and Desktop App Issues",
-      "description": "Users are experiencing issues with Pieces OS and the Desktop application across different operating systems (Windows, Linux). Problems include the \"Ensure core dependencies\" step failing, the sidebar not working correctly, pro accounts not being recognized after login, and authentication flow errors during the initial sign-in process.  Further investigation is needed to pinpoint the root causes and provide solutions.",
+      "description": "Users are experiencing issues with Pieces OS and the Desktop application across different operating systems (Windows, Linux). Problems include the \"Ensure core dependencies\" step failing, the sidebar not working correctly, and authentication errors during sign-in.  Further investigation is needed to identify the root cause and solutions. Suggested checks include verifying installation integrity, checking network connectivity, and reviewing logs for specific error messages.",
       "frequency": 3,
       "related_issues": [
         {
           "id": 809,
           "title": "Ensure core dependencies; Retry Step",
           "text": "Ensure core dependencies; Retry Step\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\n### Pieces OS, Desktop Application\n\n* Operating System / Platform: Linux\n\n* Pieces OS Version 4.3.1\n\n\n\n\n\nAfter installation, the \u201cInitialize Desktop App\u201d step has run successfully. The \u201cEnsure core dependencies\u201d step displays the message \u201cRetry Step\u201d.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 5.85
+          "activity_level": 6.24
         },
         {
           "id": 843,
           "title": "Pieces Side Bar issues",
           "text": "Pieces Side Bar issues\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Web Extension\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n12.2.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nThe screenshot below.\n\n<img width=\"319\" height=\"1278\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/027f3068-4347-4110-98b8-17011e46e86d\" />\nAfter reviewing the errors on GitHub, the error log notes will not save to the pieces os or the desktop.\n\nThe app for the browser is logged in. This comes to the second issue. I have upgraded my account to the pro version however, even though i am logged in on the same account, i am unable to use the pro settings.\n\n<img width=\"319\" height=\"1278\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/f78ebf21-83e5-4f91-a908-d0dfa034def5\" />\n\nAs you can see from the image, I am correctly logged in.\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 9.07
+          "activity_level": 8.51
         },
         {
           "id": 769,
           "title": "An error occurred in the authentication flow.",
           "text": "An error occurred in the authentication flow.\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n12.0.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nHello,\nI am receiving this message when attempting to sign-in to Pieces.\n\n```\nAn error occurred in the authentication flow.\nAuthentication Error ID: 00000000000000000000000000000000\n```\n\nThis is a new install. (.appinstaller files)\nI have never used the software before.\nI do not have a pieces account (yet).\nEnvironment: Windows 11\n\nLaunched the authentication by clicking the Sign In button in the Desktop App (4.2.1)\nThe auth link opened Firefox and generated the error.\n\nI tried the following:\nDisabling all extensions in Firefox\nChanging my default browser to Edge and re-launching using Edge.\nRe-installing with the .exe files.\nReviewed the windows firewall config (Pieces added it itself)\nLooked at the Pieces log file but did not see anything obvious enough that I could solve on my own. (See attached)\n\n[log-06252025-copy.txt](https://github.com/user-attachments/files/20907036/log-06252025-copy.txt)\n\nThank you for the help.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 6.22
+          "activity_level": 5.9
         }
       ]
     },
     {
-      "title": "Pieces plugin/extension installation and dependency issues",
-      "description": "Users are experiencing difficulty installing Pieces plugins/extensions for JetBrains, VS Code, and the Pieces desktop app itself. Issues include plugin unavailability, continuous installation requests, and dependency errors.  Troubleshooting steps include verifying plugin existence, reinstalling dependencies, and ensuring the desktop app is initialized. Further investigation is needed into plugin compatibility and dependency management.",
+      "title": "Pieces plugin and extension installation issues",
+      "description": "Users are experiencing difficulty installing Pieces plugins and extensions across various IDEs (JetBrains, VS Code) and operating systems (macOS, Windows, Linux).  Issues include plugin unavailability, continuous installation requests, and dependency errors.  Suggested solutions involve verifying plugin existence in marketplaces, checking dependencies, and ensuring compatibility between Pieces OS version and IDE/OS.",
       "frequency": 3,
       "related_issues": [
         {
           "id": 849,
           "title": "pieces Jetbrains plugin",
           "text": "pieces Jetbrains plugin\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, JetBrains\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n12.2.1\n\n### Early Access Program\n\n- [x] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI'd like to install a JetBrains plugin, but it doesn't exist in the JetBrains Marketplace.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 5.6
+          "activity_level": 4.74
         },
         {
           "id": 842,
           "title": "VScode extension continuously requesting installation, never installs unable to load extension",
           "text": "VScode extension continuously requesting installation, never installs unable to load extension\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, VS Code\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n12.2.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nVScode extension continuously requesting installation, never installs unable to load extension. \n\nI have installed the extension from VSC, installed all the dependencies multiple times and never able to sign in, never able to launch Pieces from within VSC. I have the desktop running and installed and initialised every time, it makes no difference. I have even added the extension to web browsers and both work flawlessly.\n\nSee screen shot below.\n\n<img width=\"475\" height=\"144\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/2751b032-ce37-4cd8-81b5-704734e428b0\" />\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 6.69
+          "activity_level": 6.14
         },
         {
           "id": 809,
           "title": "Ensure core dependencies; Retry Step",
           "text": "Ensure core dependencies; Retry Step\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\n### Pieces OS, Desktop Application\n\n* Operating System / Platform: Linux\n\n* Pieces OS Version 4.3.1\n\n\n\n\n\nAfter installation, the \u201cInitialize Desktop App\u201d step has run successfully. The \u201cEnsure core dependencies\u201d step displays the message \u201cRetry Step\u201d.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 5.85
+          "activity_level": 6.24
         }
       ]
     }
   ],
   "recommendations": [
-    "Prioritize resolving issues related to Pieces OS and the Desktop application, focusing on Windows and Linux compatibility.",
-    "Investigate and address the \"Ensure core dependencies\" failure during Pieces OS and Desktop app installation.",
-    "Fix the Pieces sidebar functionality and ensure pro account recognition after login.",
-    "Troubleshoot and resolve the authentication flow errors during initial sign-in.",
-    "Improve the installation process for Pieces plugins/extensions, addressing issues with JetBrains, VS Code, and the desktop app.",
-    "Ensure plugin availability and resolve continuous installation requests and dependency errors.",
-    "Verify plugin compatibility and improve dependency management.",
-    "Provide clear documentation and troubleshooting steps for plugin installation."
+    "Investigate and resolve the 'Ensure core dependencies' error to improve the Pieces OS and Desktop application installation experience.",
+    "Address the Pieces sidebar issues affecting Windows users to enhance application usability.",
+    "Improve plugin and extension installation processes across various IDEs and operating systems.",
+    "Resolve the authentication flow error to ensure seamless user login.",
+    "Investigate and address the issue of the VS Code extension continuously requesting installation."
   ],
   "message": "Daily support report generated successfully."
 }
