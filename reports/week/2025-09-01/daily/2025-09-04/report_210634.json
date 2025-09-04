@@ -1,0 +1,162 @@
+{
+  "success": true,
+  "date_range": {
+    "start": "2025-09-04T00:00:00+00:00",
+    "end": "2025-09-04T21:06:34.935137+00:00"
+  },
+  "summary": {
+    "total_tickets": 4,
+    "resolved_tickets": 0,
+    "open_tickets": 4
+  },
+  "ticket_breakdown": [
+    {
+      "category": "bug",
+      "received": 4,
+      "resolved": 0,
+      "pending": 4
+    },
+    {
+      "category": "os:windows",
+      "received": 3,
+      "resolved": 0,
+      "pending": 3
+    },
+    {
+      "category": "app:desktop application",
+      "received": 4,
+      "resolved": 0,
+      "pending": 4
+    },
+    {
+      "category": "app:pieces os",
+      "received": 3,
+      "resolved": 0,
+      "pending": 3
+    },
+    {
+      "category": "status:waiting_on_user_responses",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:triaged",
+      "received": 3,
+      "resolved": 0,
+      "pending": 3
+    },
+    {
+      "category": "os:linux",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "P2",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:waiting_on_fix",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:pieces copilot module",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:pending_release",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    }
+  ],
+  "most_active_tickets": [
+    {
+      "number": 852,
+      "title": "Pieces OS & Pieces Desktop fail to start after last update.  stucks at loading",
+      "activity_level": 6.94
+    },
+    {
+      "number": 809,
+      "title": "Ensure core dependencies; Retry Step",
+      "activity_level": 6.86
+    },
+    {
+      "number": 813,
+      "title": "Ensure Core Dependencies",
+      "activity_level": 6.04
+    },
+    {
+      "number": 846,
+      "title": "Showing very big markdown in copilot",
+      "activity_level": 4.74
+    }
+  ],
+  "common_issues": [
+    {
+      "title": "Pieces OS & Desktop Startup Failure After Update",
+      "description": "Users are unable to launch Pieces Desktop after updating Pieces OS. The app gets stuck on \"Ensure Core Dependencies - Retry Step\".  The issue seems related to Pieces OS failing to start properly, potentially due to data directory issues on Windows. Reinstalling doesn't resolve the problem.  Logs indicate database initialization failure.  A potential fix involves deleting local Pieces data, but this risks data loss.",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 852,
+          "title": "Pieces OS & Pieces Desktop fail to start after last update.  stucks at loading",
+          "text": "Pieces OS & Pieces Desktop fail to start after last update.  stucks at loading\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n 12.2.1.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n\n\n\nFor over a month I have been unable to use **Pieces OS** or **Pieces Desktop**. The Pieces OS service stopped working (I assume after the last update), and since then the desktop app no longer starts properly.\n\nWhenever I try to launch, the `Pieces` process starts but never progresses further. In **Pieces Desktop** I only see the message:\n\n_Ensure Core Dependencies\nRetry Step_\n\n<img width=\"1232\" height=\"1036\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/03bca5c8-1c0c-47d5-89fd-bf041ce2ba90\" />\n\nI\u2019ve seen another user reporting a similar issue, but my case seems different (I\u2019m attaching logs below).  \n\nUnfortunately, this is not the first time I\u2019ve faced problems with Pieces.... I\u2019ve already lost all my history/snippets about three times in the past (distinct bugs). This situation is quite frustrating.\n\n### Steps to Reproduce\n1. Install/update to the latest version of Pieces OS on Windows 11.  \n2. Launch Pieces Desktop.  \n3. Observe that the app does not open and gets stuck with the \u201cEnsure Core Dependencies\u201d message.  \n\n### Expected Behavior\nPieces OS should start normally and allow Pieces Desktop to connect and function.\n\n### Actual Behavior\n- Pieces OS process starts but hangs.  \n- Pieces Desktop shows \u201cEnsure Core Dependencies \u2013 Retry Step\u201d.  \n- Reinstalling from scratch does not solve the issue.  \n\n### System Information\n- **OS**: Windows 11  \n- **Processor**: Intel x64-based  \n- **Pieces OS**: 12.2.1.0\n- **Pieces Desktop**: 4.34  \n\n### Troubleshooting Attempted\n- Tried reinstalling Pieces OS and Pieces Desktop from scratch \u2192 issue persists. \n- I noticed a similar issue has been reported, but I\u2019m not sure it is directly related to what I\u2019m experiencing.\n- I suspect that completely deleting all local data/configuration files could be a final solution, but this would cause me to lose all my snippets/history (which has already happened before). I\u2019d prefer to avoid this unless it\u2019s confirmed as the only fix.\n\n### Logs\n\n[Support logs.zip](https://github.com/user-attachments/files/22142467/Support.zip)\n\n\n### Additional...\n\nIf this issue is already being tracked, that\u2019s fine. If not, I\u2019ll attempt to wipe all Pieces data and retry, though I suspect some leftover files/data may be blocking the reinstall.\n\nThanks in advance for your support!\n\n\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 6.94
+        },
+        {
+          "id": 809,
+          "title": "Ensure core dependencies; Retry Step",
+          "text": "Ensure core dependencies; Retry Step\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\n### Pieces OS, Desktop Application\n\n* Operating System / Platform: Linux\n\n* Pieces OS Version 4.3.1\n\n\n\n\n\nAfter installation, the \u201cInitialize Desktop App\u201d step has run successfully. The \u201cEnsure core dependencies\u201d step displays the message \u201cRetry Step\u201d.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 6.86
+        },
+        {
+          "id": 813,
+          "title": "Ensure Core Dependencies",
+          "text": "Ensure Core Dependencies\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n12.1.1.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n[D]  2025-08-02T19:49:16.716796  Starting OS_Server!\n[D]  2025-08-02T19:49:16.716796  Starting EnvConf\n[D]  2025-08-02T19:49:16.716796  Starting DeploymentInfo\n[D]  2025-08-02T19:49:16.718800  Number: 262\n[D]  2025-08-02T19:49:16.718800  Tag: 12.1.1\n[D]  2025-08-02T19:49:16.718800  Branch: 12.1.1\n[D]  2025-08-02T19:49:16.718800  SHA1: 45b04ac0234ca729473fa6313e508d1ed534fbff\n[D]  2025-08-02T19:49:16.718800  WinDeployType: msix\n[D]  2025-08-02T19:49:16.718800  Channel : production\n[D]  2025-08-02T19:49:16.718800  Process ID: 7468\n[D]  2025-08-02T19:49:16.718800  Copying the vocab file to the data directory\n[D]  2025-08-02T19:49:16.718800  Successfully copied the vocab file\n[D]  2025-08-02T19:49:16.718800  Starting OS\n[D]  getData: Error in directory determination: MissingPlatformDirectoryException(Unable to get application documents directory)\n[D]  getData: General error finding database location: MissingPlatformDirectoryException(Unable to get application documents directory)\n[D]  2025-08-02T19:49:16.725824  Starting OS\n[D]  2025-08-02T19:49:16.727801  Starting UI\n[D]  2025-08-02T19:49:16.730803  UI#builder, hasData: false, hasError: false\n[D]  2025-08-02T19:49:16.731811  stateStream#onListen\n[D]  2025-08-02T19:49:16.731811  OS#boot\n[D]  2025-08-02T19:49:16.731811  OS#attach\n\u001b[38;5;12m[I]\u001b[0m  initializeDataSingletons\n[D]  2025-08-02T19:49:16.751802  Logging to file: C:\\Users\\shekh\\AppData\\Local\\Mesh Intelligent Technologies, Inc\\Pieces OS\\com.pieces.os\\production\\Support/logs/log-08022025.txt\n[D]  Sentry Error Event: cb07c6430a95403eade13e8d7688da26\n[D]  getData: Error in directory determination: MissingPlatformDirectoryException(Unable to get application documents directory)\n[D]  getData: General error finding database location: MissingPlatformDirectoryException(Unable to get application documents directory)\n[D]  Sentry Error Event: 67d68099ec224659a742bc6b46bc101f\n[D]  getData: Error in directory determination: MissingPlatformDirectoryException(Unable to get application documents directory)\n[D]  getData: General error finding database location: MissingPlatformDirectoryException(Unable to get application documents directory)\n[D]  Sentry Error Event: 7967de6afa6442f2874570033efa5537\n[D]  Sentry Error Event: c0f03e596a0a41ea8bc696948609aa2c\n[D]  getData: Error in directory determination: MissingPlatformDirectoryException(Unable to get application documents directory)\n[D]  getData: General error finding database location: MissingPlatformDirectoryException(Unable to get application documents directory)\n[D]  Sentry Error Event: bd1fde397655447281d8841200e1471a\n[D]  getData: Error in directory determination: MissingPlatformDirectoryException(Unable to get application documents directory)\n[D]  getData: General error finding database location: MissingPlatformDirectoryException(Unable to get application documents directory)\n\u001b[38;5;12m[I]\u001b[0m  _controller.addError Exception: Failed to Open PiecesOS, unable to find a proper data directory. Please restart your machine, if the problem persists please reach out to support@pieces.app, and we will get you back up and running. package:os_server/directory.dart 679                                      DirectoryFinder.getData.<fn>\npackage:executor/src/executor_impl.dart 62                                _Executor.scheduleTask\npackage:os_server/os.dart 1806                                            OS.databaseVersionPath.<fn>\npackage:os_server/utilities/get_database_version.dart 14                  getDatabaseVersion\npackage:database_facade/couchbase/singletons/internal_databases.dart 416  InternalCouchBaseDatabases.initializeCouchbase\npackage:os_server/os.dart 950                                             OS.initializeDataSingletons\npackage:os_server/os.dart 689                                             OS.boot\npackage:os_server/os.dart 291                                             OS._controller.<fn>.<fn>.<fn>\n===== asynchronous gap ===========================\npackage:os_server/os.dart 1806                                            OS.databaseVersionPath.<fn>\npackage:os_server/utilities/get_database_version.dart 14                  getDatabaseVersion\npackage:database_facade/couchbase/singletons/internal_databases.dart 416  InternalCouchBaseDatabases.initializeCouchbase\npackage:os_server/os.dart 950                                             OS.initializeDataSingletons\npackage:os_server/os.dart 689                                             OS.boot\npackage:os_server/os.dart 291                                             OS._controller.<fn>.<fn>.<fn>\n\n[D]  Sentry Error Event: 1dcb2b6464fa44a096989fbf3f627b00\n[D]  Sentry Error Event: 148b1b561db24dd2b7038eaebf1a604c\n[D]  2025-08-02T19:49:22.838417  UI#builder, hasData: false, hasError: true\n[D]  2025-08-02T21:01:23.182639  ARGS\n[D]  2025-08-02T21:01:23.182639  pieces://launch/\n[D]  2025-08-02T21:01:37.820443  ARGS\n[D]  2025-08-02T21:01:37.820443  pieces://launch/\n[D]  2025-08-02T21:01:41.029379  ARGS\n[D]  2025-08-02T21:01:41.029379  pieces://launch/\n[D]  2025-08-02T21:01:42.833443  ARGS\n[D]  2025-08-02T21:01:42.833443  pieces://launch/\n[D]  2025-08-02T21:04:43.343270  ARGS\n[D]  2025-08-02T21:04:43.343270  -ToastActivated\n[D]  2025-08-02T21:12:36.855961  Starting OS_Server!\n[D]  2025-08-02T21:12:36.856957  Starting EnvConf\n[D]  2025-08-02T21:12:36.856957  Starting DeploymentInfo\n[D]  2025-08-02T21:12:36.858959  Number: 262\n[D]  2025-08-02T21:12:36.858959  Tag: 12.1.1\n[D]  2025-08-02T21:12:36.858959  Branch: 12.1.1\n[D]  2025-08-02T21:12:36.858959  SHA1: 45b04ac0234ca729473fa6313e508d1ed534fbff\n[D]  2025-08-02T21:12:36.858959  WinDeployType: msix\n[D]  2025-08-02T21:12:36.858959  Channel : production\n[D]  2025-08-02T21:12:36.858959  Process ID: 12944\n[D]  2025-08-02T21:12:36.858959  Copying the vocab file to the data directory\n[D]  2025-08-02T21:12:36.858959  Successfully copied the vocab file\n[D]  2025-08-02T21:12:36.858959  Starting OS\n[D]  getData: Error in directory determination: MissingPlatformDirectoryException(Unable to get application documents directory)\n[D]  getData: General error finding database location: MissingPlatformDirectoryException(Unable to get application documents directory)\n[D]  2025-08-02T21:12:36.864960  Starting OS\n[D]  2025-08-02T21:12:36.871962  Starting UI\n[D]  2025-08-02T21:12:36.871962  Logging to file: C:\\Users\\shekh\\AppData\\Local\\Mesh Intelligent Technologies, Inc\\Pieces OS\\com.pieces.os\\production\\Support/logs/log-08022025.txt\n[D]  2025-08-02T21:12:36.874969  UI#builder, hasData: false, hasError: false\n[D]  2025-08-02T21:12:36.874969  stateStream#onListen\n[D]  2025-08-02T21:12:36.874969  OS#boot\n[D]  2025-08-02T21:12:36.874969  OS#attach\n\u001b[38;5;12m[I]\u001b[0m  initializeDataSingletons\n[D]  Sentry Error Event: 8a1e9bd49c1d45978b848efd688ea7c8\n[D]  getData: Error in directory determination: MissingPlatformDirectoryException(Unable to get application documents directory)\n[D]  getData: General error finding database location: MissingPlatformDirectoryException(Unable to get application documents directory)\n[D]  Sentry Error Event: fc2fc033725742679901f1aacb34894d\n[D]  getData: Error in directory determination: MissingPlatformDirectoryException(Unable to get application documents directory)\n[D]  getData: General error finding database location: MissingPlatformDirectoryException(Unable to get application documents directory)\n[D]  Sentry Error Event: 53adc3b7a3604203b85744db55dd3951\n[D]  Sentry Error Event: 124dd0b96bb44ce193c9edb4aede033f\n[D]  getData: Error in directory determination: MissingPlatformDirectoryException(Unable to get application documents directory)\n[D]  getData: General error finding database location: MissingPlatformDirectoryException(Unable to get application documents directory)\n[D]  Sentry Error Event: 03a10e23aa404b6397675296c081dae0\n[D]  getData: Error in directory determination: MissingPlatformDirectoryException(Unable to get application documents directory)\n[D]  getData: General error finding database location: MissingPlatformDirectoryException(Unable to get application documents directory)\n\u001b[38;5;12m[I]\u001b[0m  _controller.addError Exception: Failed to Open PiecesOS, unable to find a proper data directory. Please restart your machine, if the problem persists please reach out to support@pieces.app, and we will get you back up and running. package:os_server/directory.dart 679                                      DirectoryFinder.getData.<fn>\npackage:executor/src/executor_impl.dart 62                                _Executor.scheduleTask\npackage:os_server/os.dart 1806                                            OS.databaseVersionPath.<fn>\npackage:os_server/utilities/get_database_version.dart 14                  getDatabaseVersion\npackage:database_facade/couchbase/singletons/internal_databases.dart 416  InternalCouchBaseDatabases.initializeCouchbase\npackage:os_server/os.dart 950                                             OS.initializeDataSingletons\npackage:os_server/os.dart 689                                             OS.boot\npackage:os_server/os.dart 291                                             OS._controller.<fn>.<fn>.<fn>\n===== asynchronous gap ===========================\npackage:os_server/os.dart 1806                                            OS.databaseVersionPath.<fn>\npackage:os_server/utilities/get_database_version.dart 14                  getDatabaseVersion\npackage:database_facade/couchbase/singletons/internal_databases.dart 416  InternalCouchBaseDatabases.initializeCouchbase\npackage:os_server/os.dart 950                                             OS.initializeDataSingletons\npackage:os_server/os.dart 689                                             OS.boot\npackage:os_server/os.dart 291                                             OS._controller.<fn>.<fn>.<fn>\n\n[D]  Sentry Error Event: 51ac9d401062419d94e541ea3da14e40\n[D]  Sentry Error Event: 04b7c34a5347477f87def9a580ad2bc5\n[D]  2025-08-02T21:12:45.101765  UI#builder, hasData: false, hasError: true\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 6.04
+        }
+      ]
+    },
+    {
+      "title": "Pieces OS and Desktop App Startup Failures",
+      "description": "Users are experiencing issues with Pieces OS and Desktop App failing to start after updates, primarily on Windows but also reported on Linux.  Symptoms include the app getting stuck on \"Ensure Core Dependencies\" step.  Reinstallation has not resolved the issue for some users.  One user reports large markdown blocks in Copilot responses making scrolling difficult.",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 846,
+          "title": "Showing very big markdown in copilot",
+          "text": "Showing very big markdown in copilot\n\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n12.2.1\n\nWhen I am sending questions to the Pieces copilot and it should respond with a block of code or a command to use the first one is very big and making it hard to scroll down to see the rest of the response. \n\n<img width=\"1905\" height=\"1193\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/0ad0796d-72f1-41bd-b51b-ad0449b5f263\" />\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 4.74
+        },
+        {
+          "id": 809,
+          "title": "Ensure core dependencies; Retry Step",
+          "text": "Ensure core dependencies; Retry Step\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\n### Pieces OS, Desktop Application\n\n* Operating System / Platform: Linux\n\n* Pieces OS Version 4.3.1\n\n\n\n\n\nAfter installation, the \u201cInitialize Desktop App\u201d step has run successfully. The \u201cEnsure core dependencies\u201d step displays the message \u201cRetry Step\u201d.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 6.86
+        },
+        {
+          "id": 852,
+          "title": "Pieces OS & Pieces Desktop fail to start after last update.  stucks at loading",
+          "text": "Pieces OS & Pieces Desktop fail to start after last update.  stucks at loading\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n 12.2.1.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n\n\n\nFor over a month I have been unable to use **Pieces OS** or **Pieces Desktop**. The Pieces OS service stopped working (I assume after the last update), and since then the desktop app no longer starts properly.\n\nWhenever I try to launch, the `Pieces` process starts but never progresses further. In **Pieces Desktop** I only see the message:\n\n_Ensure Core Dependencies\nRetry Step_\n\n<img width=\"1232\" height=\"1036\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/03bca5c8-1c0c-47d5-89fd-bf041ce2ba90\" />\n\nI\u2019ve seen another user reporting a similar issue, but my case seems different (I\u2019m attaching logs below).  \n\nUnfortunately, this is not the first time I\u2019ve faced problems with Pieces.... I\u2019ve already lost all my history/snippets about three times in the past (distinct bugs). This situation is quite frustrating.\n\n### Steps to Reproduce\n1. Install/update to the latest version of Pieces OS on Windows 11.  \n2. Launch Pieces Desktop.  \n3. Observe that the app does not open and gets stuck with the \u201cEnsure Core Dependencies\u201d message.  \n\n### Expected Behavior\nPieces OS should start normally and allow Pieces Desktop to connect and function.\n\n### Actual Behavior\n- Pieces OS process starts but hangs.  \n- Pieces Desktop shows \u201cEnsure Core Dependencies \u2013 Retry Step\u201d.  \n- Reinstalling from scratch does not solve the issue.  \n\n### System Information\n- **OS**: Windows 11  \n- **Processor**: Intel x64-based  \n- **Pieces OS**: 12.2.1.0\n- **Pieces Desktop**: 4.34  \n\n### Troubleshooting Attempted\n- Tried reinstalling Pieces OS and Pieces Desktop from scratch \u2192 issue persists. \n- I noticed a similar issue has been reported, but I\u2019m not sure it is directly related to what I\u2019m experiencing.\n- I suspect that completely deleting all local data/configuration files could be a final solution, but this would cause me to lose all my snippets/history (which has already happened before). I\u2019d prefer to avoid this unless it\u2019s confirmed as the only fix.\n\n### Logs\n\n[Support logs.zip](https://github.com/user-attachments/files/22142467/Support.zip)\n\n\n### Additional...\n\nIf this issue is already being tracked, that\u2019s fine. If not, I\u2019ll attempt to wipe all Pieces data and retry, though I suspect some leftover files/data may be blocking the reinstall.\n\nThanks in advance for your support!\n\n\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 6.94
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    "Prioritize resolving the \"Pieces OS & Desktop Startup Failure After Update\" issue, given its high frequency and impact on users.",
+    "Investigate the root cause of the startup failures, focusing on data directory issues on Windows and database initialization problems.",
+    "Provide clear instructions or a troubleshooter for users experiencing startup issues, including steps to check data directories and potentially reset local data (with data loss warnings).",
+    "Improve communication with users experiencing startup issues, acknowledging the problem and providing updates on progress towards a fix.",
+    "Address the issue of large markdown blocks in Copilot responses to improve user experience."
+  ],
+  "message": "Daily support report generated successfully."
+}
