@@ -1,0 +1,109 @@
+{
+  "success": true,
+  "date_range": {
+    "start": "2025-09-05T00:00:00+00:00",
+    "end": "2025-09-05T21:06:08.622475+00:00"
+  },
+  "summary": {
+    "total_tickets": 3,
+    "resolved_tickets": 0,
+    "open_tickets": 3
+  },
+  "ticket_breakdown": [
+    {
+      "category": "bug",
+      "received": 3,
+      "resolved": 0,
+      "pending": 3
+    },
+    {
+      "category": "app:desktop application",
+      "received": 3,
+      "resolved": 0,
+      "pending": 3
+    },
+    {
+      "category": "os:macos",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:triaged",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "os:windows",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "app:pieces os",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "status:waiting_on_user_responses",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    }
+  ],
+  "most_active_tickets": [
+    {
+      "number": 805,
+      "title": "Bug: Subscription is not showing up within the Application(cancelation + resubscription w/ a new plan)",
+      "activity_level": 9.52
+    },
+    {
+      "number": 769,
+      "title": "An error occurred in the authentication flow.",
+      "activity_level": 6.5
+    },
+    {
+      "number": 852,
+      "title": "Pieces OS & Pieces Desktop fail to start after last update.  stucks at loading",
+      "activity_level": 6.5
+    }
+  ],
+  "common_issues": [
+    {
+      "title": "Pieces OS and Desktop App Installation and Functionality Issues",
+      "description": "Users are experiencing problems with Pieces OS and Desktop App installation, startup, and functionality. Issues include application crashes, LTM query failures, and authentication errors.  Suggested solutions include reinstalling the software, clearing LTM data, and checking firewall settings.  Users report data loss in some cases. Further investigation is needed to identify the root cause and provide a permanent fix.",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 805,
+          "title": "Bug: Subscription is not showing up within the Application(cancelation + resubscription w/ a new plan)",
+          "text": "Bug: Subscription is not showing up within the Application(cancelation + resubscription w/ a new plan)\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n12.1.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nSo when I freshly install Pieces, the LTM works fine.\n\nWhen I've had it running for a few weeks, and I want to query the LTM, the query takes forever, and returns nothing.\n\nThe same happens via the MCP.\n\nI use my machine all day, so there's a lot of context going into the LTM. The only explanation I can come up with is that it's just getting too big. The Workstream is, however, updating fine.\n\nRemoving all my Pieces data gets the LTM working again, but then I end up with this situation later. This is the third time I've been through this loop. It's really frustrating, because when I actually need the LTM, it fails.\n\nThe Clear LTM Data button doesn't work, just returning to Try again, from All Data to even for just clearing an hour of data.\n\nI haven't cleared the LTM (well, I've tried, but the Clear LTM Data button doesn't work) so we have a live broken environment to debug with. I'm more than happy to assist with debugging this - let me know what you need!\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 9.52
+        },
+        {
+          "id": 852,
+          "title": "Pieces OS & Pieces Desktop fail to start after last update.  stucks at loading",
+          "text": "Pieces OS & Pieces Desktop fail to start after last update.  stucks at loading\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n 12.2.1.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n\n\n\nFor over a month I have been unable to use **Pieces OS** or **Pieces Desktop**. The Pieces OS service stopped working (I assume after the last update), and since then the desktop app no longer starts properly.\n\nWhenever I try to launch, the `Pieces` process starts but never progresses further. In **Pieces Desktop** I only see the message:\n\n_Ensure Core Dependencies\nRetry Step_\n\n<img width=\"1232\" height=\"1036\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/03bca5c8-1c0c-47d5-89fd-bf041ce2ba90\" />\n\nI\u2019ve seen another user reporting a similar issue, but my case seems different (I\u2019m attaching logs below).  \n\nUnfortunately, this is not the first time I\u2019ve faced problems with Pieces.... I\u2019ve already lost all my history/snippets about three times in the past (distinct bugs). This situation is quite frustrating.\n\n### Steps to Reproduce\n1. Install/update to the latest version of Pieces OS on Windows 11.  \n2. Launch Pieces Desktop.  \n3. Observe that the app does not open and gets stuck with the \u201cEnsure Core Dependencies\u201d message.  \n\n### Expected Behavior\nPieces OS should start normally and allow Pieces Desktop to connect and function.\n\n### Actual Behavior\n- Pieces OS process starts but hangs.  \n- Pieces Desktop shows \u201cEnsure Core Dependencies \u2013 Retry Step\u201d.  \n- Reinstalling from scratch does not solve the issue.  \n\n### System Information\n- **OS**: Windows 11  \n- **Processor**: Intel x64-based  \n- **Pieces OS**: 12.2.1.0\n- **Pieces Desktop**: 4.34  \n\n### Troubleshooting Attempted\n- Tried reinstalling Pieces OS and Pieces Desktop from scratch \u2192 issue persists. \n- I noticed a similar issue has been reported, but I\u2019m not sure it is directly related to what I\u2019m experiencing.\n- I suspect that completely deleting all local data/configuration files could be a final solution, but this would cause me to lose all my snippets/history (which has already happened before). I\u2019d prefer to avoid this unless it\u2019s confirmed as the only fix.\n\n### Logs\n\n[Support logs.zip](https://github.com/user-attachments/files/22142467/Support.zip)\n\n\n### Additional...\n\nIf this issue is already being tracked, that\u2019s fine. If not, I\u2019ll attempt to wipe all Pieces data and retry, though I suspect some leftover files/data may be blocking the reinstall.\n\nThanks in advance for your support!\n\n\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 6.5
+        },
+        {
+          "id": 769,
+          "title": "An error occurred in the authentication flow.",
+          "text": "An error occurred in the authentication flow.\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n12.0.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nHello,\nI am receiving this message when attempting to sign-in to Pieces.\n\n```\nAn error occurred in the authentication flow.\nAuthentication Error ID: 00000000000000000000000000000000\n```\n\nThis is a new install. (.appinstaller files)\nI have never used the software before.\nI do not have a pieces account (yet).\nEnvironment: Windows 11\n\nLaunched the authentication by clicking the Sign In button in the Desktop App (4.2.1)\nThe auth link opened Firefox and generated the error.\n\nI tried the following:\nDisabling all extensions in Firefox\nChanging my default browser to Edge and re-launching using Edge.\nRe-installing with the .exe files.\nReviewed the windows firewall config (Pieces added it itself)\nLooked at the Pieces log file but did not see anything obvious enough that I could solve on my own. (See attached)\n\n[log-06252025-copy.txt](https://github.com/user-attachments/files/20907036/log-06252025-copy.txt)\n\nThank you for the help.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 6.5
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    "Investigate LTM query failures and application crashes reported by users, focusing on potential data loss issues.",
+    "Address Pieces OS and Desktop App installation and startup problems on Windows and macOS.",
+    "Troubleshoot authentication flow errors encountered by new users on Windows 11.",
+    "Prioritize resolution of high-activity tickets related to subscription display and LTM functionality.",
+    "Improve 'Clear LTM Data' functionality to prevent recurring issues.",
+    "Consider optimizing LTM performance for large datasets to avoid query failures."
+  ],
+  "message": "Daily support report generated successfully."
+}

@@ -2,30 +2,42 @@
   "success": true,
   "date_range": {
     "start": "2025-09-01T00:00:00+00:00",
-    "end": "2025-09-05T13:12:54.540841+00:00"
+    "end": "2025-09-05T21:06:42.161883+00:00"
   },
   "summary": {
-    "total_tickets": 8,
+    "total_tickets": 9,
     "resolved_tickets": 2,
-    "open_tickets": 6
+    "open_tickets": 7
   },
   "ticket_breakdown": [
     {
       "category": "bug",
-      "received": 7,
+      "received": 8,
       "resolved": 1,
+      "pending": 7
+    },
+    {
+      "category": "app:desktop application",
+      "received": 8,
+      "resolved": 2,
       "pending": 6
+    },
+    {
+      "category": "os:macos",
+      "received": 2,
+      "resolved": 1,
+      "pending": 1
+    },
+    {
+      "category": "status:triaged",
+      "received": 5,
+      "resolved": 0,
+      "pending": 5
     },
     {
       "category": "os:windows",
       "received": 6,
       "resolved": 1,
-      "pending": 5
-    },
-    {
-      "category": "app:desktop application",
-      "received": 7,
-      "resolved": 2,
       "pending": 5
     },
     {
@@ -39,12 +51,6 @@
       "received": 2,
       "resolved": 0,
       "pending": 2
-    },
-    {
-      "category": "status:triaged",
-      "received": 4,
-      "resolved": 0,
-      "pending": 4
     },
     {
       "category": "os:linux",
@@ -75,12 +81,6 @@
       "received": 1,
       "resolved": 0,
       "pending": 1
-    },
-    {
-      "category": "os:macos",
-      "received": 1,
-      "resolved": 1,
-      "pending": 0
     },
     {
       "category": "app:jetbrains",
@@ -115,19 +115,29 @@
   ],
   "most_active_tickets": [
     {
-      "number": 843,
-      "title": "Pieces Side Bar issues",
-      "activity_level": 8.24
+      "number": 805,
+      "title": "Bug: Subscription is not showing up within the Application(cancelation + resubscription w/ a new plan)",
+      "activity_level": 9.52
     },
     {
-      "number": 852,
-      "title": "Pieces OS & Pieces Desktop fail to start after last update.  stucks at loading",
-      "activity_level": 6.94
+      "number": 843,
+      "title": "Pieces Side Bar issues",
+      "activity_level": 8.01
     },
     {
       "number": 809,
       "title": "Ensure core dependencies; Retry Step",
-      "activity_level": 6.86
+      "activity_level": 6.81
+    },
+    {
+      "number": 769,
+      "title": "An error occurred in the authentication flow.",
+      "activity_level": 6.5
+    },
+    {
+      "number": 852,
+      "title": "Pieces OS & Pieces Desktop fail to start after last update.  stucks at loading",
+      "activity_level": 6.5
     },
     {
       "number": 813,
@@ -137,78 +147,73 @@
     {
       "number": 842,
       "title": "VScode extension continuously requesting installation, never installs unable to load extension",
-      "activity_level": 5.95
-    },
-    {
-      "number": 769,
-      "title": "An error occurred in the authentication flow.",
-      "activity_level": 5.88
+      "activity_level": 5.78
     },
     {
       "number": 846,
       "title": "Showing very big markdown in copilot",
-      "activity_level": 4.74
+      "activity_level": 4.59
     },
     {
       "number": 849,
       "title": "pieces Jetbrains plugin",
-      "activity_level": 4.26
+      "activity_level": 3.92
     }
   ],
   "common_issues": [
     {
-      "title": "Pieces OS/Desktop Startup Failure After Update",
-      "description": "Users are unable to launch Pieces Desktop after updating Pieces OS. The app gets stuck on \"Ensure Core Dependencies\" screen.  Reinstalling doesn't resolve the problem.  Issue affects Windows 11 and potentially other OS. Logs indicate potential OS service failure. Further investigation needed to pinpoint root cause and provide a fix. This also impacts new users attempting to sign in.",
+      "title": "Pieces OS and Desktop Application Issues",
+      "description": "Users are experiencing various issues with the Pieces OS and Desktop Application, including LTM query failures on macOS after prolonged use, sidebar display problems and pro subscription recognition failures on Windows, and \"Ensure core dependencies\" step issues during installation on Linux.  Further investigation is needed to identify the root causes and solutions for each platform-specific problem.",
       "frequency": 3,
       "related_issues": [
         {
-          "id": 852,
-          "title": "Pieces OS & Pieces Desktop fail to start after last update.  stucks at loading",
-          "text": "Pieces OS & Pieces Desktop fail to start after last update.  stucks at loading\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n 12.2.1.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n\n\n\nFor over a month I have been unable to use **Pieces OS** or **Pieces Desktop**. The Pieces OS service stopped working (I assume after the last update), and since then the desktop app no longer starts properly.\n\nWhenever I try to launch, the `Pieces` process starts but never progresses further. In **Pieces Desktop** I only see the message:\n\n_Ensure Core Dependencies\nRetry Step_\n\n<img width=\"1232\" height=\"1036\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/03bca5c8-1c0c-47d5-89fd-bf041ce2ba90\" />\n\nI\u2019ve seen another user reporting a similar issue, but my case seems different (I\u2019m attaching logs below).  \n\nUnfortunately, this is not the first time I\u2019ve faced problems with Pieces.... I\u2019ve already lost all my history/snippets about three times in the past (distinct bugs). This situation is quite frustrating.\n\n### Steps to Reproduce\n1. Install/update to the latest version of Pieces OS on Windows 11.  \n2. Launch Pieces Desktop.  \n3. Observe that the app does not open and gets stuck with the \u201cEnsure Core Dependencies\u201d message.  \n\n### Expected Behavior\nPieces OS should start normally and allow Pieces Desktop to connect and function.\n\n### Actual Behavior\n- Pieces OS process starts but hangs.  \n- Pieces Desktop shows \u201cEnsure Core Dependencies \u2013 Retry Step\u201d.  \n- Reinstalling from scratch does not solve the issue.  \n\n### System Information\n- **OS**: Windows 11  \n- **Processor**: Intel x64-based  \n- **Pieces OS**: 12.2.1.0\n- **Pieces Desktop**: 4.34  \n\n### Troubleshooting Attempted\n- Tried reinstalling Pieces OS and Pieces Desktop from scratch \u2192 issue persists. \n- I noticed a similar issue has been reported, but I\u2019m not sure it is directly related to what I\u2019m experiencing.\n- I suspect that completely deleting all local data/configuration files could be a final solution, but this would cause me to lose all my snippets/history (which has already happened before). I\u2019d prefer to avoid this unless it\u2019s confirmed as the only fix.\n\n### Logs\n\n[Support logs.zip](https://github.com/user-attachments/files/22142467/Support.zip)\n\n\n### Additional...\n\nIf this issue is already being tracked, that\u2019s fine. If not, I\u2019ll attempt to wipe all Pieces data and retry, though I suspect some leftover files/data may be blocking the reinstall.\n\nThanks in advance for your support!\n\n\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 6.94
-        },
-        {
-          "id": 809,
-          "title": "Ensure core dependencies; Retry Step",
-          "text": "Ensure core dependencies; Retry Step\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\n### Pieces OS, Desktop Application\n\n* Operating System / Platform: Linux\n\n* Pieces OS Version 4.3.1\n\n\n\n\n\nAfter installation, the \u201cInitialize Desktop App\u201d step has run successfully. The \u201cEnsure core dependencies\u201d step displays the message \u201cRetry Step\u201d.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 6.86
-        },
-        {
-          "id": 769,
-          "title": "An error occurred in the authentication flow.",
-          "text": "An error occurred in the authentication flow.\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n12.0.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nHello,\nI am receiving this message when attempting to sign-in to Pieces.\n\n```\nAn error occurred in the authentication flow.\nAuthentication Error ID: 00000000000000000000000000000000\n```\n\nThis is a new install. (.appinstaller files)\nI have never used the software before.\nI do not have a pieces account (yet).\nEnvironment: Windows 11\n\nLaunched the authentication by clicking the Sign In button in the Desktop App (4.2.1)\nThe auth link opened Firefox and generated the error.\n\nI tried the following:\nDisabling all extensions in Firefox\nChanging my default browser to Edge and re-launching using Edge.\nRe-installing with the .exe files.\nReviewed the windows firewall config (Pieces added it itself)\nLooked at the Pieces log file but did not see anything obvious enough that I could solve on my own. (See attached)\n\n[log-06252025-copy.txt](https://github.com/user-attachments/files/20907036/log-06252025-copy.txt)\n\nThank you for the help.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 5.88
-        }
-      ]
-    },
-    {
-      "title": "Pieces OS 12.2.1: Issues with Integrations and Display",
-      "description": "Users report problems with Pieces OS 12.2.1 across desktop, VS Code, and web extensions. Issues include large markdown blocks in Copilot hindering scrolling, errors saving logs, Pro version access despite login, and VS Code extension installation failures.  Check logs, reinstall extensions, and ensure Pieces OS and extension versions are compatible. Contact support if issues persist.",
-      "frequency": 3,
-      "related_issues": [
-        {
-          "id": 846,
-          "title": "Showing very big markdown in copilot",
-          "text": "Showing very big markdown in copilot\n\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n12.2.1\n\nWhen I am sending questions to the Pieces copilot and it should respond with a block of code or a command to use the first one is very big and making it hard to scroll down to see the rest of the response. \n\n<img width=\"1905\" height=\"1193\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/0ad0796d-72f1-41bd-b51b-ad0449b5f263\" />\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 4.74
+          "id": 805,
+          "title": "Bug: Subscription is not showing up within the Application(cancelation + resubscription w/ a new plan)",
+          "text": "Bug: Subscription is not showing up within the Application(cancelation + resubscription w/ a new plan)\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n12.1.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nSo when I freshly install Pieces, the LTM works fine.\n\nWhen I've had it running for a few weeks, and I want to query the LTM, the query takes forever, and returns nothing.\n\nThe same happens via the MCP.\n\nI use my machine all day, so there's a lot of context going into the LTM. The only explanation I can come up with is that it's just getting too big. The Workstream is, however, updating fine.\n\nRemoving all my Pieces data gets the LTM working again, but then I end up with this situation later. This is the third time I've been through this loop. It's really frustrating, because when I actually need the LTM, it fails.\n\nThe Clear LTM Data button doesn't work, just returning to Try again, from All Data to even for just clearing an hour of data.\n\nI haven't cleared the LTM (well, I've tried, but the Clear LTM Data button doesn't work) so we have a live broken environment to debug with. I'm more than happy to assist with debugging this - let me know what you need!\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 9.52
         },
         {
           "id": 843,
           "title": "Pieces Side Bar issues",
           "text": "Pieces Side Bar issues\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Web Extension\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n12.2.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nThe screenshot below.\n\n<img width=\"319\" height=\"1278\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/027f3068-4347-4110-98b8-17011e46e86d\" />\nAfter reviewing the errors on GitHub, the error log notes will not save to the pieces os or the desktop.\n\nThe app for the browser is logged in. This comes to the second issue. I have upgraded my account to the pro version however, even though i am logged in on the same account, i am unable to use the pro settings.\n\n<img width=\"319\" height=\"1278\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/f78ebf21-83e5-4f91-a908-d0dfa034def5\" />\n\nAs you can see from the image, I am correctly logged in.\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 8.24
+          "activity_level": 8.01
         },
         {
-          "id": 842,
-          "title": "VScode extension continuously requesting installation, never installs unable to load extension",
-          "text": "VScode extension continuously requesting installation, never installs unable to load extension\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, VS Code\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n12.2.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nVScode extension continuously requesting installation, never installs unable to load extension. \n\nI have installed the extension from VSC, installed all the dependencies multiple times and never able to sign in, never able to launch Pieces from within VSC. I have the desktop running and installed and initialised every time, it makes no difference. I have even added the extension to web browsers and both work flawlessly.\n\nSee screen shot below.\n\n<img width=\"475\" height=\"144\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/2751b032-ce37-4cd8-81b5-704734e428b0\" />\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 5.95
+          "id": 809,
+          "title": "Ensure core dependencies; Retry Step",
+          "text": "Ensure core dependencies; Retry Step\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\n### Pieces OS, Desktop Application\n\n* Operating System / Platform: Linux\n\n* Pieces OS Version 4.3.1\n\n\n\n\n\nAfter installation, the \u201cInitialize Desktop App\u201d step has run successfully. The \u201cEnsure core dependencies\u201d step displays the message \u201cRetry Step\u201d.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 6.81
+        }
+      ]
+    },
+    {
+      "title": "Pieces fails to start or authenticate on Windows and Linux",
+      "description": "Users are experiencing issues with Pieces OS and Desktop failing to start or authenticate after updates on Windows and Linux.  Symptoms include authentication errors, \"Ensure Core Dependencies\" message, and application hangs.  Troubleshooting steps include reinstalling, checking firewall, and reviewing logs.  Potential solutions involve clearing local data/configuration files or further investigation of Pieces OS service and dependencies.",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 769,
+          "title": "An error occurred in the authentication flow.",
+          "text": "An error occurred in the authentication flow.\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n12.0.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nHello,\nI am receiving this message when attempting to sign-in to Pieces.\n\n```\nAn error occurred in the authentication flow.\nAuthentication Error ID: 00000000000000000000000000000000\n```\n\nThis is a new install. (.appinstaller files)\nI have never used the software before.\nI do not have a pieces account (yet).\nEnvironment: Windows 11\n\nLaunched the authentication by clicking the Sign In button in the Desktop App (4.2.1)\nThe auth link opened Firefox and generated the error.\n\nI tried the following:\nDisabling all extensions in Firefox\nChanging my default browser to Edge and re-launching using Edge.\nRe-installing with the .exe files.\nReviewed the windows firewall config (Pieces added it itself)\nLooked at the Pieces log file but did not see anything obvious enough that I could solve on my own. (See attached)\n\n[log-06252025-copy.txt](https://github.com/user-attachments/files/20907036/log-06252025-copy.txt)\n\nThank you for the help.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 6.5
+        },
+        {
+          "id": 852,
+          "title": "Pieces OS & Pieces Desktop fail to start after last update.  stucks at loading",
+          "text": "Pieces OS & Pieces Desktop fail to start after last update.  stucks at loading\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n 12.2.1.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n\n\n\nFor over a month I have been unable to use **Pieces OS** or **Pieces Desktop**. The Pieces OS service stopped working (I assume after the last update), and since then the desktop app no longer starts properly.\n\nWhenever I try to launch, the `Pieces` process starts but never progresses further. In **Pieces Desktop** I only see the message:\n\n_Ensure Core Dependencies\nRetry Step_\n\n<img width=\"1232\" height=\"1036\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/03bca5c8-1c0c-47d5-89fd-bf041ce2ba90\" />\n\nI\u2019ve seen another user reporting a similar issue, but my case seems different (I\u2019m attaching logs below).  \n\nUnfortunately, this is not the first time I\u2019ve faced problems with Pieces.... I\u2019ve already lost all my history/snippets about three times in the past (distinct bugs). This situation is quite frustrating.\n\n### Steps to Reproduce\n1. Install/update to the latest version of Pieces OS on Windows 11.  \n2. Launch Pieces Desktop.  \n3. Observe that the app does not open and gets stuck with the \u201cEnsure Core Dependencies\u201d message.  \n\n### Expected Behavior\nPieces OS should start normally and allow Pieces Desktop to connect and function.\n\n### Actual Behavior\n- Pieces OS process starts but hangs.  \n- Pieces Desktop shows \u201cEnsure Core Dependencies \u2013 Retry Step\u201d.  \n- Reinstalling from scratch does not solve the issue.  \n\n### System Information\n- **OS**: Windows 11  \n- **Processor**: Intel x64-based  \n- **Pieces OS**: 12.2.1.0\n- **Pieces Desktop**: 4.34  \n\n### Troubleshooting Attempted\n- Tried reinstalling Pieces OS and Pieces Desktop from scratch \u2192 issue persists. \n- I noticed a similar issue has been reported, but I\u2019m not sure it is directly related to what I\u2019m experiencing.\n- I suspect that completely deleting all local data/configuration files could be a final solution, but this would cause me to lose all my snippets/history (which has already happened before). I\u2019d prefer to avoid this unless it\u2019s confirmed as the only fix.\n\n### Logs\n\n[Support logs.zip](https://github.com/user-attachments/files/22142467/Support.zip)\n\n\n### Additional...\n\nIf this issue is already being tracked, that\u2019s fine. If not, I\u2019ll attempt to wipe all Pieces data and retry, though I suspect some leftover files/data may be blocking the reinstall.\n\nThanks in advance for your support!\n\n\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 6.5
+        },
+        {
+          "id": 809,
+          "title": "Ensure core dependencies; Retry Step",
+          "text": "Ensure core dependencies; Retry Step\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\n### Pieces OS, Desktop Application\n\n* Operating System / Platform: Linux\n\n* Pieces OS Version 4.3.1\n\n\n\n\n\nAfter installation, the \u201cInitialize Desktop App\u201d step has run successfully. The \u201cEnsure core dependencies\u201d step displays the message \u201cRetry Step\u201d.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 6.81
         }
       ]
     },
     {
       "title": "Pieces OS and Desktop App Failing to Start on Windows",
-      "description": "Users are reporting Pieces OS and Desktop App failing to start after updates on Windows.  Logs show \"MissingPlatformDirectoryException(Unable to get application documents directory)\" error.  Suggested solutions include checking data directory permissions, reinstalling, and as a last resort, deleting local Pieces data/configuration files (with the caveat of potential data loss).",
+      "description": "Users are reporting Pieces OS and Desktop App failing to start after updates on Windows.  Logs show \"MissingPlatformDirectoryException(Unable to get application documents directory)\" error.  Suggested solutions include checking data directory permissions, reinstalling, and as a last resort, deleting local Pieces data.",
       "frequency": 3,
       "related_issues": [
         {
@@ -221,51 +226,73 @@
           "id": 852,
           "title": "Pieces OS & Pieces Desktop fail to start after last update.  stucks at loading",
           "text": "Pieces OS & Pieces Desktop fail to start after last update.  stucks at loading\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n 12.2.1.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n\n\n\nFor over a month I have been unable to use **Pieces OS** or **Pieces Desktop**. The Pieces OS service stopped working (I assume after the last update), and since then the desktop app no longer starts properly.\n\nWhenever I try to launch, the `Pieces` process starts but never progresses further. In **Pieces Desktop** I only see the message:\n\n_Ensure Core Dependencies\nRetry Step_\n\n<img width=\"1232\" height=\"1036\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/03bca5c8-1c0c-47d5-89fd-bf041ce2ba90\" />\n\nI\u2019ve seen another user reporting a similar issue, but my case seems different (I\u2019m attaching logs below).  \n\nUnfortunately, this is not the first time I\u2019ve faced problems with Pieces.... I\u2019ve already lost all my history/snippets about three times in the past (distinct bugs). This situation is quite frustrating.\n\n### Steps to Reproduce\n1. Install/update to the latest version of Pieces OS on Windows 11.  \n2. Launch Pieces Desktop.  \n3. Observe that the app does not open and gets stuck with the \u201cEnsure Core Dependencies\u201d message.  \n\n### Expected Behavior\nPieces OS should start normally and allow Pieces Desktop to connect and function.\n\n### Actual Behavior\n- Pieces OS process starts but hangs.  \n- Pieces Desktop shows \u201cEnsure Core Dependencies \u2013 Retry Step\u201d.  \n- Reinstalling from scratch does not solve the issue.  \n\n### System Information\n- **OS**: Windows 11  \n- **Processor**: Intel x64-based  \n- **Pieces OS**: 12.2.1.0\n- **Pieces Desktop**: 4.34  \n\n### Troubleshooting Attempted\n- Tried reinstalling Pieces OS and Pieces Desktop from scratch \u2192 issue persists. \n- I noticed a similar issue has been reported, but I\u2019m not sure it is directly related to what I\u2019m experiencing.\n- I suspect that completely deleting all local data/configuration files could be a final solution, but this would cause me to lose all my snippets/history (which has already happened before). I\u2019d prefer to avoid this unless it\u2019s confirmed as the only fix.\n\n### Logs\n\n[Support logs.zip](https://github.com/user-attachments/files/22142467/Support.zip)\n\n\n### Additional...\n\nIf this issue is already being tracked, that\u2019s fine. If not, I\u2019ll attempt to wipe all Pieces data and retry, though I suspect some leftover files/data may be blocking the reinstall.\n\nThanks in advance for your support!\n\n\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 6.94
+          "activity_level": 6.5
         },
         {
           "id": 769,
           "title": "An error occurred in the authentication flow.",
           "text": "An error occurred in the authentication flow.\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n12.0.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nHello,\nI am receiving this message when attempting to sign-in to Pieces.\n\n```\nAn error occurred in the authentication flow.\nAuthentication Error ID: 00000000000000000000000000000000\n```\n\nThis is a new install. (.appinstaller files)\nI have never used the software before.\nI do not have a pieces account (yet).\nEnvironment: Windows 11\n\nLaunched the authentication by clicking the Sign In button in the Desktop App (4.2.1)\nThe auth link opened Firefox and generated the error.\n\nI tried the following:\nDisabling all extensions in Firefox\nChanging my default browser to Edge and re-launching using Edge.\nRe-installing with the .exe files.\nReviewed the windows firewall config (Pieces added it itself)\nLooked at the Pieces log file but did not see anything obvious enough that I could solve on my own. (See attached)\n\n[log-06252025-copy.txt](https://github.com/user-attachments/files/20907036/log-06252025-copy.txt)\n\nThank you for the help.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 5.88
+          "activity_level": 6.5
         }
       ]
     },
     {
-      "title": "Pieces plugin/extension installation and initialization issues",
-      "description": "Users are experiencing difficulty installing or initializing Pieces plugins/extensions across various IDEs (JetBrains, VS Code) and platforms (macOS, Windows, Linux). Issues include plugin not found in marketplace, continuous installation requests, and failure to load or initialize.  Potential solutions involve verifying plugin compatibility, ensuring dependencies are met, and checking network connectivity.",
+      "title": "Pieces OS and Integrations Issues",
+      "description": "Users report issues with Pieces OS and its integrations with VS Code and web browsers. Problems include large markdown in Copilot responses, errors saving logs, login issues despite pro upgrade, and continuous VS Code extension installation requests.  Users have attempted reinstalling dependencies and logging in/out without success. Further investigation is needed to identify the root causes and solutions.",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 846,
+          "title": "Showing very big markdown in copilot",
+          "text": "Showing very big markdown in copilot\n\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n12.2.1\n\nWhen I am sending questions to the Pieces copilot and it should respond with a block of code or a command to use the first one is very big and making it hard to scroll down to see the rest of the response. \n\n<img width=\"1905\" height=\"1193\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/0ad0796d-72f1-41bd-b51b-ad0449b5f263\" />\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 4.59
+        },
+        {
+          "id": 843,
+          "title": "Pieces Side Bar issues",
+          "text": "Pieces Side Bar issues\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Web Extension\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n12.2.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nThe screenshot below.\n\n<img width=\"319\" height=\"1278\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/027f3068-4347-4110-98b8-17011e46e86d\" />\nAfter reviewing the errors on GitHub, the error log notes will not save to the pieces os or the desktop.\n\nThe app for the browser is logged in. This comes to the second issue. I have upgraded my account to the pro version however, even though i am logged in on the same account, i am unable to use the pro settings.\n\n<img width=\"319\" height=\"1278\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/f78ebf21-83e5-4f91-a908-d0dfa034def5\" />\n\nAs you can see from the image, I am correctly logged in.\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 8.01
+        },
+        {
+          "id": 842,
+          "title": "VScode extension continuously requesting installation, never installs unable to load extension",
+          "text": "VScode extension continuously requesting installation, never installs unable to load extension\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, VS Code\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n12.2.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nVScode extension continuously requesting installation, never installs unable to load extension. \n\nI have installed the extension from VSC, installed all the dependencies multiple times and never able to sign in, never able to launch Pieces from within VSC. I have the desktop running and installed and initialised every time, it makes no difference. I have even added the extension to web browsers and both work flawlessly.\n\nSee screen shot below.\n\n<img width=\"475\" height=\"144\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/2751b032-ce37-4cd8-81b5-704734e428b0\" />\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 5.78
+        }
+      ]
+    },
+    {
+      "title": "Pieces plugin and extension installation issues",
+      "description": "Users are experiencing difficulty installing Pieces plugins and extensions across various IDEs (JetBrains, VS Code) and operating systems (macOS, Windows, Linux). Issues include plugin unavailability, continuous installation requests, and dependency errors.  Check plugin marketplace compatibility, ensure dependencies are met, and retry installation steps. Verify Pieces desktop app is initialized.",
       "frequency": 3,
       "related_issues": [
         {
           "id": 849,
           "title": "pieces Jetbrains plugin",
           "text": "pieces Jetbrains plugin\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, JetBrains\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n12.2.1\n\n### Early Access Program\n\n- [x] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI'd like to install a JetBrains plugin, but it doesn't exist in the JetBrains Marketplace.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 4.26
+          "activity_level": 3.92
         },
         {
           "id": 842,
           "title": "VScode extension continuously requesting installation, never installs unable to load extension",
           "text": "VScode extension continuously requesting installation, never installs unable to load extension\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, VS Code\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n12.2.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nVScode extension continuously requesting installation, never installs unable to load extension. \n\nI have installed the extension from VSC, installed all the dependencies multiple times and never able to sign in, never able to launch Pieces from within VSC. I have the desktop running and installed and initialised every time, it makes no difference. I have even added the extension to web browsers and both work flawlessly.\n\nSee screen shot below.\n\n<img width=\"475\" height=\"144\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/2751b032-ce37-4cd8-81b5-704734e428b0\" />\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 5.95
+          "activity_level": 5.78
         },
         {
           "id": 809,
           "title": "Ensure core dependencies; Retry Step",
           "text": "Ensure core dependencies; Retry Step\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\n### Pieces OS, Desktop Application\n\n* Operating System / Platform: Linux\n\n* Pieces OS Version 4.3.1\n\n\n\n\n\nAfter installation, the \u201cInitialize Desktop App\u201d step has run successfully. The \u201cEnsure core dependencies\u201d step displays the message \u201cRetry Step\u201d.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 6.86
+          "activity_level": 6.81
         }
       ]
     }
   ],
   "recommendations": [
-    "Prioritize resolving the \"Pieces OS/Desktop Startup Failure After Update\" issue as it blocks core functionality and affects new users. Investigate logs and OS service failures to identify the root cause and deploy a fix.",
-    "Address the \"Pieces OS 12.2.1: Issues with Integrations and Display\" problems affecting Copilot, logging, Pro access, and VS Code extension. Review logs, ensure version compatibility, and guide users through reinstallation steps.",
-    "Investigate the \"Pieces OS and Desktop App Failing to Start on Windows\" error related to data directory permissions. Provide clear instructions for checking permissions and offer reinstallation or data deletion (with data loss warning) as last resorts.",
-    "Improve plugin/extension installation and initialization experience by addressing issues in the marketplace, dependency management, and network handling. Provide troubleshooting steps for IDEs (JetBrains, VS Code) and platforms (macOS, Windows, Linux).",
-    "Proactively monitor and address issues related to Pieces OS and Desktop App startup failures, especially after updates. Enhance logging and error reporting to facilitate faster diagnosis and resolution.",
-    "Improve communication with users experiencing authentication flow errors. Provide more specific error messages and troubleshooting steps for different browsers and platforms.",
-    "Address the Copilot issue with large markdown blocks affecting scrolling. Optimize markdown rendering and provide alternative display options.",
-    "Ensure the Pieces JetBrains plugin is available in the marketplace and provide clear installation instructions."
+    "Prioritize resolving the \"Pieces OS and Desktop Application Issues\" as they impact core functionality across multiple operating systems.",
+    "Investigate the root cause of Pieces OS and Desktop App failing to start on Windows, focusing on the \"MissingPlatformDirectoryException\" error.",
+    "Address the authentication flow issues on Windows to ensure new users can access the platform.",
+    "Improve plugin and extension installation experience by addressing compatibility and dependency issues across different IDEs.",
+    "Optimize Copilot responses to handle large markdown outputs effectively."
   ],
   "message": "Daily support report generated successfully."
 }
