@@ -1,5 +1,5 @@
 # Support Ticket Report
-- Generated: 2025-09-06 05:08:12
+- Generated: 2025-09-06 13:10:42
 - Period: 2025-09-01 to 2025-09-06
 
 ## Summary
@@ -18,7 +18,7 @@
 
 ## Common Issues
 ### 1. Pieces OS and Desktop Application Issues
-Users are experiencing various issues with the Pieces OS and Desktop Application, including LTM query failures on macOS after prolonged use, sidebar display problems and pro subscription recognition failures on Windows, and "Ensure core dependencies" step issues during installation on Linux.  Further investigation is needed to identify the root causes and solutions for each platform-specific problem.
+Users are experiencing various issues with the Pieces OS and Desktop Application, including LTM query failures on macOS after prolonged use, sidebar display problems and pro subscription recognition failures on Windows, and "Ensure core dependencies" step failing on Linux.  Suggested solutions include clearing LTM data (although the button is reported as not working), checking login status and subscription details, and retrying or reinstalling the application.
 
 **Related Issues:**
 - [#805](https://github.com/pieces-app/support/issues/805): Bug: Subscription is not showing up within the Application(cancelation + resubscription w/ a new plan)
@@ -26,7 +26,7 @@ Users are experiencing various issues with the Pieces OS and Desktop Application
 - [#809](https://github.com/pieces-app/support/issues/809): Ensure core dependencies; Retry Step
 
 ### 2. Pieces OS/Desktop Startup Failure After Update
-Users are unable to start Pieces OS or Desktop after updating, encountering an "Ensure Core Dependencies" error.  The application hangs at the loading screen.  Reinstallation does not resolve the problem.  This issue affects Windows 11 and potentially other operating systems.  Logs indicate potential conflicts with OS services or dependencies.  A potential solution involves deleting all local Pieces data, but this results in data loss.
+Users are unable to start Pieces OS and Desktop after updates, stuck at "Ensure Core Dependencies" screen.  Issue affects Windows 11 and potentially other OS. Reinstallation doesn't resolve the problem. Logs indicate potential OS service failure.  Possible solutions include clearing all local Pieces data or investigating conflicting software/services.
 
 **Related Issues:**
 - [#852](https://github.com/pieces-app/support/issues/852): Pieces OS & Pieces Desktop fail to start after last update.  stucks at loading
@@ -34,7 +34,7 @@ Users are unable to start Pieces OS or Desktop after updating, encountering an "
 - [#769](https://github.com/pieces-app/support/issues/769): An error occurred in the authentication flow.
 
 ### 3. Pieces OS and Desktop App Failing to Start on Windows
-Users are reporting Pieces OS and Desktop App failing to start after updates on Windows.  Logs show "MissingPlatformDirectoryException(Unable to get application documents directory)" error.  Suggested solutions include checking data directory permissions, reinstalling, and as a last resort, deleting local Pieces data (with the caveat of potential data loss).
+Users are reporting Pieces OS and Desktop App failing to start after updates on Windows.  Logs show "MissingPlatformDirectoryException(Unable to get application documents directory)" error.  Suggested solutions include checking data directory permissions, reinstalling, and as a last resort, deleting local Pieces data.
 
 **Related Issues:**
 - [#813](https://github.com/pieces-app/support/issues/813): Ensure Core Dependencies
@@ -42,7 +42,7 @@ Users are reporting Pieces OS and Desktop App failing to start after updates on 
 - [#769](https://github.com/pieces-app/support/issues/769): An error occurred in the authentication flow.
 
 ### 4. Pieces OS 12.2.1: Issues with Integrations and Display
-Users report problems with Pieces OS 12.2.1 across desktop, VS Code, and web extensions. Issues include large markdown blocks in Copilot hindering scrolling, errors saving logs, Pro version access despite login, and continuous VS Code extension installation requests.  Check logs, reinstall extensions, and ensure Pieces OS and desktop app are running to troubleshoot.
+Users report problems with Pieces OS 12.2.1 across desktop, VS Code, and web extensions. Issues include large markdown blocks in Copilot hindering scrolling, errors saving logs, Pro version access despite login, and VS Code extension installation failures.  Check logs, reinstall extensions, and ensure Pieces OS and extension versions are compatible. Contact support if issues persist.
 
 **Related Issues:**
 - [#846](https://github.com/pieces-app/support/issues/846): Showing very big markdown in copilot
@@ -50,7 +50,7 @@ Users report problems with Pieces OS 12.2.1 across desktop, VS Code, and web ext
 - [#842](https://github.com/pieces-app/support/issues/842): VScode extension continuously requesting installation, never installs unable to load extension
 
 ### 5. Pieces plugin/extension installation and initialization issues
-Users are experiencing difficulty installing or initializing Pieces plugins/extensions across various IDEs (JetBrains, VS Code) and platforms (macOS, Windows, Linux).  Issues include plugin not found in marketplace, continuous installation requests, and failure to load.  Potential solutions involve verifying plugin availability, checking dependencies, and ensuring compatibility between Pieces OS version and IDE/platform.
+Users are experiencing difficulties installing or initializing Pieces plugins/extensions across various platforms (macOS, Windows, Linux) and IDEs (JetBrains, VS Code). Issues include plugin unavailability, continuous installation requests, and failure to load or initialize.  Potential solutions involve verifying plugin availability, checking dependencies, and ensuring proper installation steps are followed. Further investigation is needed to pinpoint the root causes and provide targeted solutions.
 
 **Related Issues:**
 - [#849](https://github.com/pieces-app/support/issues/849): pieces Jetbrains plugin
@@ -59,11 +59,17 @@ Users are experiencing difficulty installing or initializing Pieces plugins/exte
 
 
 ## Recommendations
-- Prioritize resolving the "Ensure Core Dependencies" error impacting Pieces OS and Desktop App startup, especially on Windows, as this blocks basic functionality.  Investigate data directory permissions, OS service conflicts, and potential solutions beyond data-deleting reinstalls.
-- Address the LTM query failures on macOS after prolonged use. Investigate potential performance bottlenecks or data limits within the LTM.
-- Investigate and resolve the issues related to Pieces integrations with VS Code and JetBrains IDEs, focusing on installation, initialization, and continuous installation requests.
-- Address the sidebar display problems and Pro subscription recognition failures on Windows to ensure a consistent user experience.
-- Look into the large markdown blocks issue in Copilot affecting scrolling and the problem of saving error logs to enhance usability.
+- Prioritize resolving the "Pieces OS and Desktop Application Issues" as it has the highest frequency and significant impact on users across different operating systems.
+- Investigate the root cause of the "Pieces OS/Desktop Startup Failure After Update" issue, focusing on Windows 11 initially, and provide clear steps for users to resolve it without data loss.
+- Address the "Pieces OS and Desktop App Failing to Start on Windows" error by checking data directory permissions and providing solutions beyond reinstallation.
+- Improve the Pieces OS 12.2.1 integrations with Copilot, VS Code, and web extensions, focusing on display issues and Pro version access.
+- Provide support documentation and troubleshooting steps for plugin/extension installation issues across different IDEs and platforms.
+- Investigate and fix the LTM query failures on macOS after prolonged use.
+- Address the sidebar display problems and pro subscription recognition failures on Windows.
+- Fix the "Ensure core dependencies" step failure on Linux.
+- Resolve the issue with large markdown blocks in Copilot hindering scrolling.
+- Ensure the VS Code extension installs and initializes correctly.
+- Develop a JetBrains plugin if there is sufficient demand.
 
 ## Daily Reports
 Here are the daily reports for this week:
