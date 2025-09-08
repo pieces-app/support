@@ -1,0 +1,80 @@
+{
+  "success": true,
+  "date_range": {
+    "start": "2025-09-08T00:00:00+00:00",
+    "end": "2025-09-08T13:15:12.727347+00:00"
+  },
+  "summary": {
+    "total_tickets": 1,
+    "resolved_tickets": 0,
+    "open_tickets": 1
+  },
+  "ticket_breakdown": [
+    {
+      "category": "bug",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "os:windows",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:desktop application",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:pieces os",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:waiting_on_user_responses",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:triaged",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    }
+  ],
+  "most_active_tickets": [
+    {
+      "number": 852,
+      "title": "Pieces OS & Pieces Desktop fail to start after last update.  stucks at loading",
+      "activity_level": 10.45
+    }
+  ],
+  "common_issues": [
+    {
+      "title": "Pieces OS & Desktop Fail to Start After Update",
+      "description": "Users report Pieces OS and Desktop failing to launch after an update, stuck at \"Ensure Core Dependencies\" screen.  Reinstallation doesn't resolve the issue.  Logs provided.  Potentially related to Pieces OS service failing. Similar reports exist, but user believes their issue is unique.  Workaround of deleting all local data is undesirable due to data loss.",
+      "frequency": 1,
+      "related_issues": [
+        {
+          "id": 852,
+          "title": "Pieces OS & Pieces Desktop fail to start after last update.  stucks at loading",
+          "text": "Pieces OS & Pieces Desktop fail to start after last update.  stucks at loading\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n 12.2.1.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n\n\n\nFor over a month I have been unable to use **Pieces OS** or **Pieces Desktop**. The Pieces OS service stopped working (I assume after the last update), and since then the desktop app no longer starts properly.\n\nWhenever I try to launch, the `Pieces` process starts but never progresses further. In **Pieces Desktop** I only see the message:\n\n_Ensure Core Dependencies\nRetry Step_\n\n<img width=\"1232\" height=\"1036\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/03bca5c8-1c0c-47d5-89fd-bf041ce2ba90\" />\n\nI\u2019ve seen another user reporting a similar issue, but my case seems different (I\u2019m attaching logs below).  \n\nUnfortunately, this is not the first time I\u2019ve faced problems with Pieces.... I\u2019ve already lost all my history/snippets about three times in the past (distinct bugs). This situation is quite frustrating.\n\n### Steps to Reproduce\n1. Install/update to the latest version of Pieces OS on Windows 11.  \n2. Launch Pieces Desktop.  \n3. Observe that the app does not open and gets stuck with the \u201cEnsure Core Dependencies\u201d message.  \n\n### Expected Behavior\nPieces OS should start normally and allow Pieces Desktop to connect and function.\n\n### Actual Behavior\n- Pieces OS process starts but hangs.  \n- Pieces Desktop shows \u201cEnsure Core Dependencies \u2013 Retry Step\u201d.  \n- Reinstalling from scratch does not solve the issue.  \n\n### System Information\n- **OS**: Windows 11  \n- **Processor**: Intel x64-based  \n- **Pieces OS**: 12.2.1.0\n- **Pieces Desktop**: 4.34  \n\n### Troubleshooting Attempted\n- Tried reinstalling Pieces OS and Pieces Desktop from scratch \u2192 issue persists. \n- I noticed a similar issue has been reported, but I\u2019m not sure it is directly related to what I\u2019m experiencing.\n- I suspect that completely deleting all local data/configuration files could be a final solution, but this would cause me to lose all my snippets/history (which has already happened before). I\u2019d prefer to avoid this unless it\u2019s confirmed as the only fix.\n\n### Logs\n\n[Support logs.zip](https://github.com/user-attachments/files/22142467/Support.zip)\n\n\n### Additional...\n\nIf this issue is already being tracked, that\u2019s fine. If not, I\u2019ll attempt to wipe all Pieces data and retry, though I suspect some leftover files/data may be blocking the reinstall.\n\nThanks in advance for your support!\n\n\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 10.45
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    "Prioritize resolution of the 'Pieces OS & Desktop Fail to Start After Update' issue, given its frequency and user impact.",
+    "Investigate the root cause of the startup failure, focusing on the 'Ensure Core Dependencies' step and potential conflicts with the Pieces OS service.",
+    "Develop a troubleshooting guide or FAQ entry for the startup issue, including workarounds that avoid data loss.",
+    "Improve communication with affected users, acknowledging the issue and providing updates on progress towards a resolution.",
+    "Review and update the update process for Pieces OS and Desktop to prevent similar issues from occurring in the future."
+  ],
+  "message": "Daily support report generated successfully."
+}
