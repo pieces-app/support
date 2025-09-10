@@ -2,19 +2,43 @@
   "success": true,
   "date_range": {
     "start": "2025-09-08T00:00:00+00:00",
-    "end": "2025-09-10T05:07:45.638359+00:00"
+    "end": "2025-09-10T13:13:11.196441+00:00"
   },
   "summary": {
-    "total_tickets": 1,
+    "total_tickets": 2,
     "resolved_tickets": 0,
-    "open_tickets": 1
+    "open_tickets": 2
   },
   "ticket_breakdown": [
     {
       "category": "bug",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "app:desktop application",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "os:macos",
       "received": 1,
       "resolved": 0,
       "pending": 1
+    },
+    {
+      "category": "app:pieces os",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "status:triaged",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
     },
     {
       "category": "os:windows",
@@ -23,25 +47,7 @@
       "pending": 1
     },
     {
-      "category": "app:desktop application",
-      "received": 1,
-      "resolved": 0,
-      "pending": 1
-    },
-    {
-      "category": "app:pieces os",
-      "received": 1,
-      "resolved": 0,
-      "pending": 1
-    },
-    {
       "category": "status:waiting_on_user_responses",
-      "received": 1,
-      "resolved": 0,
-      "pending": 1
-    },
-    {
-      "category": "status:triaged",
       "received": 1,
       "resolved": 0,
       "pending": 1
@@ -52,14 +58,25 @@
       "number": 852,
       "title": "Pieces OS & Pieces Desktop fail to start after last update.  stucks at loading",
       "activity_level": 11.67
+    },
+    {
+      "number": 854,
+      "title": "Suspicious Connections",
+      "activity_level": 4.42
     }
   ],
   "common_issues": [
     {
-      "title": "Pieces OS & Desktop Startup Failure After Update",
-      "description": "Users report Pieces OS and Desktop failing to start after an update, stuck at \"Ensure Core Dependencies\" screen.  Issue persists across reinstalls.  Potentially related to Pieces OS service failing.  Logs provided. User seeks solution without losing data.",
-      "frequency": 1,
+      "title": "Pieces OS and Desktop App Startup Failures",
+      "description": "Users are experiencing issues with Pieces OS and Desktop app failing to start after updates.  Symptoms include the desktop app hanging on \"Ensure Core Dependencies\" and Pieces OS service not running.  Troubleshooting steps like reinstalling have not resolved the issue.  One user on macOS reported suspicious connections and frequent attacks, while a Windows user noted repeated data loss. Logs and system information have been provided.",
+      "frequency": 2,
       "related_issues": [
+        {
+          "id": 854,
+          "title": "Suspicious Connections",
+          "text": "Suspicious Connections\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n4.3.4\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI\u2019m experiencing frequent and sophisticated attacks on my machine. I\u2019ve reported the issues to Apple using Warp Bot reports, but the device detects \u201csuspicious connections.\u201d I\u2019d like to exclude your software since it\u2019s beneficial for developers, but the attacks are persistent.\n\nI\u2019ve included Warp Bot\u2019s findings and sent them to Apple\u2019s security team. \n\nThe bot has also prepared a report for the suspicious connections utilizing your software\n\n[PIECES_OS_GITHUB_ISSUE_PUBLIC.md](https://github.com/user-attachments/files/22247971/PIECES_OS_GITHUB_ISSUE_PUBLIC.md)\n\nI should mention the kernel on my machine is compromised and this is after a factory restore and wiping of the hard drives. It's an ongoing issue, but wanted to alert you as best I could\n\n. I suspect attackers exploited vulnerabilities in the past, leading to frequent factory restores every two to three months for the past four years. As an IT professional, I know what to look for, but these attacks have made me rethink my defenses. Despite this, I\u2019m doing my best to protect my home network from such attacks.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 4.42
+        },
         {
           "id": 852,
           "title": "Pieces OS & Pieces Desktop fail to start after last update.  stucks at loading",
@@ -70,11 +87,11 @@
     }
   ],
   "recommendations": [
-    "Prioritize resolution of the \"Pieces OS & Desktop Startup Failure After Update\" issue, given its frequency and potential data loss implications for users.",
-    "Investigate the root cause of the startup failure, focusing on the \"Ensure Core Dependencies\" step and potential conflicts with the Pieces OS service.",
-    "Develop a troubleshooting guide or FAQ for users experiencing the startup issue, including steps to resolve it without data loss if possible.",
-    "Improve communication with affected users, providing updates on the investigation and estimated resolution time.",
-    "Consider implementing more robust error handling and recovery mechanisms in Pieces OS and Desktop to prevent similar issues in the future."
+    "Prioritize resolving the startup failures in Pieces OS and Desktop App, given its high frequency and impact on users.",
+    "Investigate the reported suspicious connections on macOS and data loss on Windows to determine if they are related to the startup issue or separate security vulnerabilities.",
+    "Improve the update process to prevent future startup failures and data loss.",
+    "Develop more robust troubleshooting steps for users experiencing startup issues, including clear instructions for data recovery if necessary.",
+    "Proactively monitor system logs and user reports to identify and address potential issues before they become widespread."
   ],
   "message": "Daily support report generated successfully."
 }
