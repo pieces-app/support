@@ -1,6 +1,6 @@
 # Support Ticket Report
-- Generated: 2025-09-10 21:07:14
-- Period: 2025-09-08 to 2025-09-10
+- Generated: 2025-09-11 05:08:20
+- Period: 2025-09-08 to 2025-09-11
 
 ## Summary
 - **Total Tickets:** 2
@@ -15,7 +15,7 @@
 
 ## Common Issues
 ### 1. Pieces OS and Desktop App Startup Failures
-Users are experiencing issues with Pieces OS and Desktop app failing to start after updates.  Symptoms include the desktop app getting stuck on "Ensure Core Dependencies" message and Pieces OS service not running.  Troubleshooting steps like reinstalling have not resolved the issue. One user on macOS reported suspicious connections and kernel compromise, while another on Windows experienced repeated data loss.
+Users are experiencing issues with Pieces OS and Desktop app failing to start after updates.  Symptoms include the desktop app getting stuck on "Ensure Core Dependencies" message and Pieces OS service not running.  Troubleshooting steps like reinstalling have not resolved the issue. One user on macOS reported suspicious connections and frequent attacks, while a Windows user noted repeated data loss. Logs and system information have been provided by the Windows user.
 
 **Related Issues:**
 - [#854](https://github.com/pieces-app/support/issues/854): Suspicious Connections
@@ -23,11 +23,11 @@ Users are experiencing issues with Pieces OS and Desktop app failing to start af
 
 
 ## Recommendations
-- Prioritize resolving the startup failures in Pieces OS and Desktop App, given its impact on users across macOS and Windows.
-- Investigate the reported suspicious connections and kernel compromise on macOS to determine if there's a security vulnerability.
-- Address the repeated data loss issue on Windows to prevent further user frustration and data integrity concerns.
-- Improve the update process to prevent issues that lead to startup failures and data loss.
-- Provide clearer guidance on troubleshooting startup issues, including steps to avoid data loss during reinstallation.
+- Prioritize resolving the startup failures in Pieces OS and Desktop App, given its high frequency and impact on users.
+- Investigate the data loss issue reported by the Windows user and ensure data integrity.
+- Address the suspicious connections issue on macOS to enhance security and user trust.
+- Improve the update process to prevent future startup failures and data loss scenarios.
+- Proactively monitor system logs and user reports to identify and address potential issues early on.
 
 ## Daily Reports
 Here are the daily reports for this week:
