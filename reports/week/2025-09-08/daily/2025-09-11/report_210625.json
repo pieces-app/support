@@ -1,0 +1,84 @@
+{
+  "success": true,
+  "date_range": {
+    "start": "2025-09-11T00:00:00+00:00",
+    "end": "2025-09-11T21:06:25.879567+00:00"
+  },
+  "summary": {
+    "total_tickets": 1,
+    "resolved_tickets": 0,
+    "open_tickets": 1
+  },
+  "ticket_breakdown": [
+    {
+      "category": "bug",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:desktop application",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "os:macos",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:pieces os",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:vs code",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:triaged",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "update with fix released and available",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    }
+  ],
+  "most_active_tickets": [
+    {
+      "number": 810,
+      "title": "MCP Server SSE Connection Hangs - No Tools Available in Claude Code",
+      "activity_level": 6.27
+    }
+  ],
+  "common_issues": [
+    {
+      "title": "MCP SSE Connection Hangs, Preventing Tool Registration",
+      "description": "Pieces MCP server SSE connection hangs indefinitely after initial response, preventing Claude Code integration in VS Code and CLI.  Tools fail to register. Issue observed on macOS with Pieces OS 12.1.1.  Problem likely related to SSE buffering on the endpoint http://localhost:39300/model_context_protocol/2024-11-05/sse.",
+      "frequency": 1,
+      "related_issues": [
+        {
+          "id": 810,
+          "title": "MCP Server SSE Connection Hangs - No Tools Available in Claude Code",
+          "text": "MCP Server SSE Connection Hangs - No Tools Available in Claude Code\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS, VS Code\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n12.1.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nThe Pieces MCP server fails to properly integrate with Claude Code within VSCode. While the SSE endpoint responds initially, it hangs indefinitely, preventing MCP tools from being registered or used. This affects Claude Code integration both as a standalone CLI and when used within VS Code.\n\n**Steps to Reproduce:**\n1. Install Pieces OS and Pieces app\n2. Login in the app\n3. Configure MCP in Claude Code's ~/.claude.json:\n\n```json\n{\n  \"pieces\": {\n    \"type\": \"sse\",\n    \"url\": \"http://localhost:39300/model_context_protocol/2024-11-05/sse\"\n}\n```\n\n4. Attempt to use Pieces MCP tools (e.g., mcp__pieces__ask_pieces_ltm) in Claude Code\n5. Tools are not available despite server being configured\n6. Same issue occurs whether using Claude Code in terminal or integrated with VS Code\n\n**Technical Details:**\n- SSE endpoint (http://localhost:39300/model_context_protocol/2024-11-05/sse) responds with:\n\n```\nevent: endpoint\ndata: /model_context_protocol/2024-11-05/messages\n```\n\n- Connection then hangs indefinitely (SSE buffering issue)\n- Both Pieces OS and Pieces app processes are running\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 6.27
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    "Investigate the root cause of the MCP SSE connection issue described in issue #810. This appears to be the primary support issue at the moment and is affecting macOS users with Pieces OS 12.1.1.  Focus on the SSE buffering problem on the endpoint `http://localhost:39300/model_context_protocol/2024-11-05/sse`.",
+    "Once the MCP SSE connection issue is resolved, release a fix and update the support documentation and release notes.  Ensure users are aware of the fix and how to update.",
+    "Monitor the incoming support tickets for any recurring issues or trends. This will help identify and address any systemic problems proactively."
+  ],
+  "message": "Daily support report generated successfully."
+}
