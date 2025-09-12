@@ -1,6 +1,6 @@
 # Support Ticket Report
-- Generated: 2025-09-11 21:07:03
-- Period: 2025-09-08 to 2025-09-11
+- Generated: 2025-09-12 05:08:02
+- Period: 2025-09-08 to 2025-09-12
 
 ## Summary
 - **Total Tickets:** 3
@@ -16,7 +16,7 @@
 
 ## Common Issues
 ### 1. Pieces OS and Desktop App Integration and Startup Issues
-Users report problems with Pieces OS integration with other tools, like Claude Code, due to SSE connection hangs.  Also, the Pieces Desktop app fails to start on Windows and macOS, often displaying an "Ensure Core Dependencies" error.  Suggested solutions include checking logs, reinstalling, and ensuring Pieces OS is running correctly. Some users suspect data corruption or software conflicts.
+Users report issues with Pieces OS integration with other tools, like Claude Code, due to SSE connection hangs.  Additionally, the Pieces Desktop app fails to start on Windows and macOS, often displaying an "Ensure Core Dependencies" error.  Suggested troubleshooting includes reinstalling Pieces OS and Desktop, checking logs, and verifying system compatibility.
 
 **Related Issues:**
 - [#810](https://github.com/pieces-app/support/issues/810): MCP Server SSE Connection Hangs - No Tools Available in Claude Code
@@ -25,11 +25,11 @@ Users report problems with Pieces OS integration with other tools, like Claude C
 
 
 ## Recommendations
-- Prioritize resolving the Pieces OS and Desktop app startup issue (Ensure Core Dependencies error) affecting Windows and macOS users.
-- Investigate and address the MCP Server SSE connection hangs impacting Pieces OS integration with tools like Claude Code.
-- Develop more robust troubleshooting steps for startup issues, including clear instructions for checking logs, reinstalling, and verifying Pieces OS functionality.
-- Consider implementing data recovery or backup mechanisms to mitigate the impact of potential data corruption or loss during troubleshooting.
-- Improve communication with users experiencing startup issues, providing updates on progress and estimated resolution timelines.
+- Prioritize resolving the Pieces OS and Desktop app startup issue affecting Windows and macOS users. This appears to be the most common and impactful problem.
+- Investigate and address the MCP Server SSE connection hangs to restore integration with tools like Claude Code.
+- Develop more robust troubleshooting steps for startup issues, including clear instructions for checking logs, verifying system compatibility, and potentially a recovery process to avoid data loss.
+- Follow up with users experiencing "Suspicious Connections" to gather more details and determine if there are any security vulnerabilities in Pieces OS or Desktop.
+- Improve communication with users about known issues and their progress. Provide updates on fixes and workarounds.
 
 ## Daily Reports
 Here are the daily reports for this week:
