@@ -2,7 +2,7 @@
   "success": true,
   "date_range": {
     "start": "2025-09-08T00:00:00+00:00",
-    "end": "2025-09-13T13:08:51.961055+00:00"
+    "end": "2025-09-13T21:06:31.671889+00:00"
   },
   "summary": {
     "total_tickets": 4,
@@ -69,17 +69,17 @@
     {
       "number": 852,
       "title": "Pieces OS & Pieces Desktop fail to start after last update.  stucks at loading",
-      "activity_level": 10.7
+      "activity_level": 10.32
     },
     {
       "number": 810,
       "title": "MCP Server SSE Connection Hangs - No Tools Available in Claude Code",
-      "activity_level": 6.19
+      "activity_level": 5.83
     },
     {
       "number": 829,
       "title": "Unable to open Pieces Settings Service",
-      "activity_level": 3.14
+      "activity_level": 3.12
     },
     {
       "number": 854,
@@ -90,32 +90,32 @@
   "common_issues": [
     {
       "title": "Pieces OS/Desktop Startup Failure After Update",
-      "description": "Users are unable to launch Pieces Desktop after updating Pieces OS. The app gets stuck on \"Ensure Core Dependencies\" screen.  Pieces OS service appears to hang. Reinstalling doesn't resolve the problem.  Issue affects both Windows and macOS.  Potential solutions include clearing all local Pieces data or investigating Pieces OS service logs.",
+      "description": "Pieces OS and Desktop fail to start after an update, stuck at \"Ensure Core Dependencies\" screen on Windows and macOS.  Issue likely related to Pieces OS service failing to start.  Reinstallation doesn't resolve the problem.  Possible solutions include clearing all Pieces data/config files (with data loss risk) or investigating Pieces OS service logs for errors.",
       "frequency": 3,
       "related_issues": [
         {
           "id": 852,
           "title": "Pieces OS & Pieces Desktop fail to start after last update.  stucks at loading",
           "text": "Pieces OS & Pieces Desktop fail to start after last update.  stucks at loading\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n 12.2.1.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n\n\n\nFor over a month I have been unable to use **Pieces OS** or **Pieces Desktop**. The Pieces OS service stopped working (I assume after the last update), and since then the desktop app no longer starts properly.\n\nWhenever I try to launch, the `Pieces` process starts but never progresses further. In **Pieces Desktop** I only see the message:\n\n_Ensure Core Dependencies\nRetry Step_\n\n<img width=\"1232\" height=\"1036\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/03bca5c8-1c0c-47d5-89fd-bf041ce2ba90\" />\n\nI\u2019ve seen another user reporting a similar issue, but my case seems different (I\u2019m attaching logs below).  \n\nUnfortunately, this is not the first time I\u2019ve faced problems with Pieces.... I\u2019ve already lost all my history/snippets about three times in the past (distinct bugs). This situation is quite frustrating.\n\n### Steps to Reproduce\n1. Install/update to the latest version of Pieces OS on Windows 11.  \n2. Launch Pieces Desktop.  \n3. Observe that the app does not open and gets stuck with the \u201cEnsure Core Dependencies\u201d message.  \n\n### Expected Behavior\nPieces OS should start normally and allow Pieces Desktop to connect and function.\n\n### Actual Behavior\n- Pieces OS process starts but hangs.  \n- Pieces Desktop shows \u201cEnsure Core Dependencies \u2013 Retry Step\u201d.  \n- Reinstalling from scratch does not solve the issue.  \n\n### System Information\n- **OS**: Windows 11  \n- **Processor**: Intel x64-based  \n- **Pieces OS**: 12.2.1.0\n- **Pieces Desktop**: 4.34  \n\n### Troubleshooting Attempted\n- Tried reinstalling Pieces OS and Pieces Desktop from scratch \u2192 issue persists. \n- I noticed a similar issue has been reported, but I\u2019m not sure it is directly related to what I\u2019m experiencing.\n- I suspect that completely deleting all local data/configuration files could be a final solution, but this would cause me to lose all my snippets/history (which has already happened before). I\u2019d prefer to avoid this unless it\u2019s confirmed as the only fix.\n\n### Logs\n\n[Support logs.zip](https://github.com/user-attachments/files/22142467/Support.zip)\n\n\n### Additional...\n\nIf this issue is already being tracked, that\u2019s fine. If not, I\u2019ll attempt to wipe all Pieces data and retry, though I suspect some leftover files/data may be blocking the reinstall.\n\nThanks in advance for your support!\n\n\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 10.7
+          "activity_level": 10.32
         },
         {
           "id": 829,
           "title": "Unable to open Pieces Settings Service",
           "text": "Unable to open Pieces Settings Service\nError: Invalid argument(s): Type ZJb is already registered inside GetIt. \n\n**Installation Details**\n\nSucceeded: true\nPath: /Applications/Pieces OS.app\n\n**PiecesOS Information**\n\nID: 1CA2E830-F290-4091-8714-B38DE27CABCB\nUser: 32bc4ee9-918c-4562-b3d7-78c22d9dcebe\nCurrent Version: 12.1.1\nMin Version Supported: 12.1.0\nMax Version Supported: 13.0.0\nLocal Port: 39300\n\n**Device Information**\n\nOperating System: MacOS\nCurrent Version: Version 15.7 (Build 24G207)\nMin Version Supported: 12.0.0 Monterey\nAdditional Device Information: {cpu_list: [{\"architecture\":\"arm64\",\"cores\":8,\"logicalProcessors\":8,\"l1Cache\":{\"value\":65536,\"units\":\"Bytes\"},\"l2Cache\":{\"value\":4194304,\"units\":\"Bytes\"},\"description\":\"Apple M2\"}], gpu_list: [{\"type\":null,\"unifiedMemoryArchitecture\":true,\"cores\":10,\"dedicatedVRam\":null}], memory_info: {\"totalRAM\":{\"value\":8589934592,\"units\":\"Bytes\"}}, display_list: [{\"nativeHeight\":1664,\"nativeWidth\":2560,\"scaledHeight\":1112,\"scaledWidth\":1710,\"primary\":true}]}\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 3.14
+          "activity_level": 3.12
         },
         {
           "id": 810,
           "title": "MCP Server SSE Connection Hangs - No Tools Available in Claude Code",
           "text": "MCP Server SSE Connection Hangs - No Tools Available in Claude Code\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS, VS Code\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n12.1.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nThe Pieces MCP server fails to properly integrate with Claude Code within VSCode. While the SSE endpoint responds initially, it hangs indefinitely, preventing MCP tools from being registered or used. This affects Claude Code integration both as a standalone CLI and when used within VS Code.\n\n**Steps to Reproduce:**\n1. Install Pieces OS and Pieces app\n2. Login in the app\n3. Configure MCP in Claude Code's ~/.claude.json:\n\n```json\n{\n  \"pieces\": {\n    \"type\": \"sse\",\n    \"url\": \"http://localhost:39300/model_context_protocol/2024-11-05/sse\"\n}\n```\n\n4. Attempt to use Pieces MCP tools (e.g., mcp__pieces__ask_pieces_ltm) in Claude Code\n5. Tools are not available despite server being configured\n6. Same issue occurs whether using Claude Code in terminal or integrated with VS Code\n\n**Technical Details:**\n- SSE endpoint (http://localhost:39300/model_context_protocol/2024-11-05/sse) responds with:\n\n```\nevent: endpoint\ndata: /model_context_protocol/2024-11-05/messages\n```\n\n- Connection then hangs indefinitely (SSE buffering issue)\n- Both Pieces OS and Pieces app processes are running\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 6.19
+          "activity_level": 5.83
         }
       ]
     },
     {
       "title": "Pieces OS and Desktop App Startup Failures",
-      "description": "Users are experiencing issues with Pieces OS and Desktop app failing to start after updates.  Symptoms include the app getting stuck on loading screen with \"Ensure Core Dependencies\" message, and Pieces OS service failing to run.  Troubleshooting steps include reinstalling both Pieces OS and Desktop app.  Potential solutions involve checking for conflicting software or corrupted installations and ensuring Pieces OS service is running correctly. One user reported suspicious connections and attacks, but this appears unrelated.",
+      "description": "Users are experiencing issues with Pieces OS and Desktop app failing to start after updates.  Symptoms include the app getting stuck on loading screen with \"Ensure Core Dependencies\" message, and Pieces OS service failing to run.  Troubleshooting steps include reinstalling both Pieces OS and Desktop app, checking logs, and as a last resort, wiping all Pieces data and reinstalling. Potential solutions involve ensuring Pieces OS service is running correctly and addressing any conflicting software or corrupted installations.",
       "frequency": 3,
       "related_issues": [
         {
@@ -128,23 +128,23 @@
           "id": 852,
           "title": "Pieces OS & Pieces Desktop fail to start after last update.  stucks at loading",
           "text": "Pieces OS & Pieces Desktop fail to start after last update.  stucks at loading\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n 12.2.1.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n\n\n\nFor over a month I have been unable to use **Pieces OS** or **Pieces Desktop**. The Pieces OS service stopped working (I assume after the last update), and since then the desktop app no longer starts properly.\n\nWhenever I try to launch, the `Pieces` process starts but never progresses further. In **Pieces Desktop** I only see the message:\n\n_Ensure Core Dependencies\nRetry Step_\n\n<img width=\"1232\" height=\"1036\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/03bca5c8-1c0c-47d5-89fd-bf041ce2ba90\" />\n\nI\u2019ve seen another user reporting a similar issue, but my case seems different (I\u2019m attaching logs below).  \n\nUnfortunately, this is not the first time I\u2019ve faced problems with Pieces.... I\u2019ve already lost all my history/snippets about three times in the past (distinct bugs). This situation is quite frustrating.\n\n### Steps to Reproduce\n1. Install/update to the latest version of Pieces OS on Windows 11.  \n2. Launch Pieces Desktop.  \n3. Observe that the app does not open and gets stuck with the \u201cEnsure Core Dependencies\u201d message.  \n\n### Expected Behavior\nPieces OS should start normally and allow Pieces Desktop to connect and function.\n\n### Actual Behavior\n- Pieces OS process starts but hangs.  \n- Pieces Desktop shows \u201cEnsure Core Dependencies \u2013 Retry Step\u201d.  \n- Reinstalling from scratch does not solve the issue.  \n\n### System Information\n- **OS**: Windows 11  \n- **Processor**: Intel x64-based  \n- **Pieces OS**: 12.2.1.0\n- **Pieces Desktop**: 4.34  \n\n### Troubleshooting Attempted\n- Tried reinstalling Pieces OS and Pieces Desktop from scratch \u2192 issue persists. \n- I noticed a similar issue has been reported, but I\u2019m not sure it is directly related to what I\u2019m experiencing.\n- I suspect that completely deleting all local data/configuration files could be a final solution, but this would cause me to lose all my snippets/history (which has already happened before). I\u2019d prefer to avoid this unless it\u2019s confirmed as the only fix.\n\n### Logs\n\n[Support logs.zip](https://github.com/user-attachments/files/22142467/Support.zip)\n\n\n### Additional...\n\nIf this issue is already being tracked, that\u2019s fine. If not, I\u2019ll attempt to wipe all Pieces data and retry, though I suspect some leftover files/data may be blocking the reinstall.\n\nThanks in advance for your support!\n\n\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 10.7
+          "activity_level": 10.32
         },
         {
           "id": 829,
           "title": "Unable to open Pieces Settings Service",
           "text": "Unable to open Pieces Settings Service\nError: Invalid argument(s): Type ZJb is already registered inside GetIt. \n\n**Installation Details**\n\nSucceeded: true\nPath: /Applications/Pieces OS.app\n\n**PiecesOS Information**\n\nID: 1CA2E830-F290-4091-8714-B38DE27CABCB\nUser: 32bc4ee9-918c-4562-b3d7-78c22d9dcebe\nCurrent Version: 12.1.1\nMin Version Supported: 12.1.0\nMax Version Supported: 13.0.0\nLocal Port: 39300\n\n**Device Information**\n\nOperating System: MacOS\nCurrent Version: Version 15.7 (Build 24G207)\nMin Version Supported: 12.0.0 Monterey\nAdditional Device Information: {cpu_list: [{\"architecture\":\"arm64\",\"cores\":8,\"logicalProcessors\":8,\"l1Cache\":{\"value\":65536,\"units\":\"Bytes\"},\"l2Cache\":{\"value\":4194304,\"units\":\"Bytes\"},\"description\":\"Apple M2\"}], gpu_list: [{\"type\":null,\"unifiedMemoryArchitecture\":true,\"cores\":10,\"dedicatedVRam\":null}], memory_info: {\"totalRAM\":{\"value\":8589934592,\"units\":\"Bytes\"}}, display_list: [{\"nativeHeight\":1664,\"nativeWidth\":2560,\"scaledHeight\":1112,\"scaledWidth\":1710,\"primary\":true}]}\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 3.14
+          "activity_level": 3.12
         }
       ]
     }
   ],
   "recommendations": [
-    "Prioritize resolving the Pieces OS and Desktop app startup failures as this is the most common issue and affects both Windows and macOS users.",
-    "Investigate the MCP Server SSE connection issue to ensure proper integration with Claude Code in VS Code.",
-    "Develop clear troubleshooting steps for startup failures, including checking Pieces OS service status, reinstalling apps, and verifying installation integrity.",
-    "Consider adding a knowledge base article or FAQ entry addressing startup issues and their solutions.",
-    "Monitor the 'Ensure Core Dependencies' error message to identify the root cause and implement a permanent fix."
+    "Prioritize resolving the Pieces OS and Desktop app startup failures, focusing on Windows and macOS compatibility.",
+    "Investigate the \"Ensure Core Dependencies\" error and Pieces OS service failures as a root cause.",
+    "Improve communication with users experiencing startup issues, providing clear troubleshooting steps and updates on progress.",
+    "Address the MCP server SSE connection issue to ensure Claude Code integration works as expected.",
+    "Monitor and analyze support logs to identify patterns and potential solutions for recurring issues."
   ],
   "message": "Daily support report generated successfully."
 }
