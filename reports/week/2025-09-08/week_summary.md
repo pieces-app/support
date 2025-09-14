@@ -1,5 +1,5 @@
 # Support Ticket Report
-- Generated: 2025-09-14 13:09:05
+- Generated: 2025-09-14 21:06:41
 - Period: 2025-09-08 to 2025-09-14
 
 ## Summary
@@ -10,14 +10,14 @@
 ## 5 Most Active Tickets
 | Issue # | Title | Activity Level |
 |---------|-------|----------------|
-| [#852](https://github.com/pieces-app/support/issues/852) | Pieces OS & Pieces Desktop fail to start after last update.  stucks at loading | 10.32 |
+| [#852](https://github.com/pieces-app/support/issues/852) | Pieces OS & Pieces Desktop fail to start after last update.  stucks at loading | 10.00 |
 | [#810](https://github.com/pieces-app/support/issues/810) | MCP Server SSE Connection Hangs - No Tools Available in Claude Code | 5.79 |
-| [#829](https://github.com/pieces-app/support/issues/829) | Unable to open Pieces Settings Service | 3.12 |
+| [#829](https://github.com/pieces-app/support/issues/829) | Unable to open Pieces Settings Service | 3.09 |
 | [#854](https://github.com/pieces-app/support/issues/854) | Suspicious Connections | 2.49 |
 
 ## Common Issues
 ### 1. Pieces OS/Desktop Startup Failure After Update
-Users are unable to launch Pieces Desktop after updating Pieces OS. The app gets stuck on "Ensure Core Dependencies" screen.  Pieces OS service appears to hang. Reinstalling doesn't resolve the problem.  Issue affects both Windows and macOS and may involve data corruption or leftover files from previous installations.  Logs indicate potential issues with Pieces OS service initialization and MCP server SSE connection problems on macOS.
+Users are unable to launch Pieces Desktop after a Pieces OS update. The app gets stuck on "Ensure Core Dependencies" screen.  Pieces OS service appears to hang. Reinstalling doesn't resolve the problem.  Issue affects both Windows and macOS.  Potential solutions include clearing all Pieces data/config files (with data loss risk) or investigating Pieces OS service issues.
 
 **Related Issues:**
 - [#852](https://github.com/pieces-app/support/issues/852): Pieces OS & Pieces Desktop fail to start after last update.  stucks at loading
@@ -25,7 +25,7 @@ Users are unable to launch Pieces Desktop after updating Pieces OS. The app gets
 - [#810](https://github.com/pieces-app/support/issues/810): MCP Server SSE Connection Hangs - No Tools Available in Claude Code
 
 ### 2. Pieces OS and Desktop App Startup Failures
-Users are experiencing issues with Pieces OS and Desktop app failing to start after updates.  Symptoms include the app getting stuck on loading screens, "Ensure Core Dependencies" errors, and Pieces OS service failures.  Troubleshooting steps include reinstalling the software and checking logs. Potential solutions involve ensuring OS compatibility and investigating conflicting software or corrupted installations. The issue has been reported across macOS and Windows platforms.
+Users are experiencing issues with Pieces OS and Desktop app failing to start after updates.  Symptoms include the app getting stuck on loading screen with "Ensure Core Dependencies" message on Windows, and suspicious connection alerts on macOS.  Suggested troubleshooting includes checking logs, reinstalling the software, and ensuring OS compatibility.
 
 **Related Issues:**
 - [#854](https://github.com/pieces-app/support/issues/854): Suspicious Connections
@@ -34,11 +34,11 @@ Users are experiencing issues with Pieces OS and Desktop app failing to start af
 
 
 ## Recommendations
-- Prioritize resolving the Pieces OS and Desktop app startup failures as this is the most common issue and blocks basic functionality.
-- Investigate the "Ensure Core Dependencies" error and MCP server SSE connection issues as they contribute to startup problems.
-- Provide clear troubleshooting steps for startup issues in the documentation or knowledge base.
-- Improve logging and error messages to help diagnose the root cause of startup failures more effectively.
-- Consider automated tests to catch startup issues before releases.
+- Prioritize resolving the Pieces OS and Desktop app startup failures as they affect both Windows and macOS users and prevent core functionality.
+- Investigate the "Ensure Core Dependencies" error message during startup to identify the root cause and provide a fix.
+- Address the MCP Server SSE connection issue to enable Claude Code integration and improve developer experience.
+- Develop clearer documentation or troubleshooting steps for startup issues, including checking logs, reinstalling, and OS compatibility checks.
+- Communicate proactively with affected users about the ongoing issues and provide updates on progress towards resolution.
 
 ## Daily Reports
 Here are the daily reports for this week:
