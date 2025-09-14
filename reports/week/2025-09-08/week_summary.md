@@ -1,6 +1,6 @@
 # Support Ticket Report
-- Generated: 2025-09-13 21:07:04
-- Period: 2025-09-08 to 2025-09-13
+- Generated: 2025-09-14 05:07:29
+- Period: 2025-09-08 to 2025-09-14
 
 ## Summary
 - **Total Tickets:** 4
@@ -17,7 +17,7 @@
 
 ## Common Issues
 ### 1. Pieces OS/Desktop Startup Failure After Update
-Pieces OS and Desktop fail to start after an update, stuck at "Ensure Core Dependencies" screen on Windows and macOS.  Issue likely related to Pieces OS service failing to start.  Reinstallation doesn't resolve the problem.  Possible solutions include clearing all Pieces data/config files (with data loss risk) or investigating Pieces OS service logs for errors.
+Users are unable to launch Pieces Desktop after updating Pieces OS. The app gets stuck on "Ensure Core Dependencies" screen.  Pieces OS service appears to hang. Reinstalling doesn't resolve the problem.  Issue affects both Windows and macOS.  Potential solutions include clearing all Pieces data/config files (with data loss risk) or investigating Pieces OS service issues.
 
 **Related Issues:**
 - [#852](https://github.com/pieces-app/support/issues/852): Pieces OS & Pieces Desktop fail to start after last update.  stucks at loading
@@ -25,7 +25,7 @@ Pieces OS and Desktop fail to start after an update, stuck at "Ensure Core Depen
 - [#810](https://github.com/pieces-app/support/issues/810): MCP Server SSE Connection Hangs - No Tools Available in Claude Code
 
 ### 2. Pieces OS and Desktop App Startup Failures
-Users are experiencing issues with Pieces OS and Desktop app failing to start after updates.  Symptoms include the app getting stuck on loading screen with "Ensure Core Dependencies" message, and Pieces OS service failing to run.  Troubleshooting steps include reinstalling both Pieces OS and Desktop app, checking logs, and as a last resort, wiping all Pieces data and reinstalling. Potential solutions involve ensuring Pieces OS service is running correctly and addressing any conflicting software or corrupted installations.
+Users are experiencing issues with Pieces OS and Desktop app failing to start after updates.  Symptoms include the app getting stuck on loading screen with "Ensure Core Dependencies" message on Windows, and suspicious connection alerts on macOS.  Potential solutions include checking logs, reinstalling the software, and ensuring OS compatibility.
 
 **Related Issues:**
 - [#854](https://github.com/pieces-app/support/issues/854): Suspicious Connections
@@ -34,11 +34,14 @@ Users are experiencing issues with Pieces OS and Desktop app failing to start af
 
 
 ## Recommendations
-- Prioritize resolving the Pieces OS and Desktop app startup failures, focusing on Windows and macOS compatibility.
-- Investigate the "Ensure Core Dependencies" error and Pieces OS service failures as a root cause.
-- Improve communication with users experiencing startup issues, providing clear troubleshooting steps and updates on progress.
-- Address the MCP server SSE connection issue to ensure Claude Code integration works as expected.
-- Monitor and analyze support logs to identify patterns and potential solutions for recurring issues.
+- Prioritize resolving the Pieces OS and Desktop app startup failures as they are impacting multiple users on both Windows and macOS.
+- Investigate the "Ensure Core Dependencies" error message during startup to identify the root cause and provide a fix.
+- Check Pieces OS service stability and address any hanging issues.
+- Provide clear instructions to users on how to collect logs and report startup problems.
+- Improve error messaging and logging to aid in faster diagnosis.
+- Consider adding a troubleshooting guide for startup issues to the documentation.
+- Investigate the MCP Server SSE connection issues with Claude Code to ensure proper integration.
+- Review and address the suspicious connection alerts on macOS to ensure security and user trust.
 
 ## Daily Reports
 Here are the daily reports for this week:
