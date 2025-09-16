@@ -1,0 +1,69 @@
+{
+  "success": true,
+  "date_range": {
+    "start": "2025-09-16T00:00:00+00:00",
+    "end": "2025-09-16T13:13:51.691406+00:00"
+  },
+  "summary": {
+    "total_tickets": 1,
+    "resolved_tickets": 0,
+    "open_tickets": 1
+  },
+  "ticket_breakdown": [
+    {
+      "category": "bug",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:new",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "os:macos",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:pieces os",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    }
+  ],
+  "most_active_tickets": [
+    {
+      "number": 855,
+      "title": "Unable to open Pieces Core Services",
+      "activity_level": 4.42
+    }
+  ],
+  "common_issues": [
+    {
+      "title": "Pieces Core Services Unauthenticated User Exception",
+      "description": "Users are unable to open Pieces Core Services due to an UnauthenticatedUserException.  This might be related to PiecesOS version incompatibility (current: 12.2.1, supported: 12.1.0 - 13.0.0) or issues with user authentication. Check login credentials, ensure the PiecesOS version is within the supported range, and verify network connectivity.",
+      "frequency": 1,
+      "related_issues": [
+        {
+          "id": 855,
+          "title": "Unable to open Pieces Core Services",
+          "text": "Unable to open Pieces Core Services\nError: UnauthenticatedUserException\n\n**Installation Details**\n\nSucceeded: true\nPath: /Applications/Pieces OS.app\n\n**PiecesOS Information**\n\nID: A5EDBDBC-BF76-455C-8924-D257D29E1031\nUser: Anonymous\nCurrent Version: 12.2.1\nMin Version Supported: 12.1.0\nMax Version Supported: 13.0.0\nLocal Port: 39300\n\n**Device Information**\n\nOperating System: MacOS\nCurrent Version: Version 15.6.1 (Build 24G90)\nMin Version Supported: 12.0.0 Monterey\nAdditional Device Information: {cpu_list: [{\"architecture\":\"arm64\",\"cores\":8,\"logicalProcessors\":8,\"l1Cache\":{\"value\":65536,\"units\":\"Bytes\"},\"l2Cache\":{\"value\":4194304,\"units\":\"Bytes\"},\"description\":\"Apple M2\"}], gpu_list: [{\"type\":null,\"unifiedMemoryArchitecture\":true,\"cores\":10,\"dedicatedVRam\":null}], memory_info: {\"totalRAM\":{\"value\":17179869184,\"units\":\"Bytes\"}}, display_list: [{\"nativeHeight\":1600,\"nativeWidth\":2560,\"scaledHeight\":900,\"scaledWidth\":1440,\"primary\":true}, {\"nativeHeight\":1440,\"nativeWidth\":3440,\"scaledHeight\":1440,\"scaledWidth\":3440,\"primary\":false}]}\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 4.42
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    "Investigate the root cause of the \"Pieces Core Services Unauthenticated User Exception\". It appears to be affecting macOS users on Pieces OS version 12.2.1.",
+    "Prioritize resolution of issue #855, \"Unable to open Pieces Core Services\", as it has the highest activity level and represents the current top user complaint.",
+    "Check the compatibility matrix between Pieces OS versions and macOS versions to ensure they align and address any discrepancies.",
+    "Verify user authentication mechanisms and ensure they function correctly. This includes checking login credentials, network connectivity, and any potential conflicts with other software.",
+    "Improve error messaging and troubleshooting documentation for the \"UnauthenticatedUserException\" to help users self-diagnose and resolve the issue.",
+    "Consider adding more detailed logging to Pieces Core Services to capture more information about the exception and facilitate faster debugging."
+  ],
+  "message": "Daily support report generated successfully."
+}
