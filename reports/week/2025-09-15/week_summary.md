@@ -1,6 +1,6 @@
 # Support Ticket Report
-- Generated: 2025-09-17 21:07:04
-- Period: 2025-09-15 to 2025-09-17
+- Generated: 2025-09-18 05:08:09
+- Period: 2025-09-15 to 2025-09-18
 
 ## Summary
 - **Total Tickets:** 2
@@ -14,8 +14,8 @@
 | [#834](https://github.com/pieces-app/support/issues/834) | Cannot connect to Authentication site during install of Pieces | 3.29 |
 
 ## Common Issues
-### 1. Users unable to connect to Authentication site during Pieces install
-Users on Windows and MacOS are encountering authentication errors during Pieces installation, potentially due to security software like Cortex XDR blocking connections.  The error manifests as an UnauthenticatedUserException with a redirect to an authentication error URL.  Users should check their firewall/security software settings and allowlist Pieces domains if necessary.
+### 1. Users unable to connect to authentication site during Pieces install
+Users on Windows and MacOS are encountering authentication errors during Pieces installation, potentially due to security software like Cortex XDR blocking connections.  The error manifests as an UnauthenticatedUserException and redirects to an authentication error URL.  Users may need to configure their security software or firewalls to allow Pieces to connect.
 
 **Related Issues:**
 - [#834](https://github.com/pieces-app/support/issues/834): Cannot connect to Authentication site during install of Pieces
@@ -23,11 +23,10 @@ Users on Windows and MacOS are encountering authentication errors during Pieces 
 
 
 ## Recommendations
-- Investigate the authentication error during Pieces installation, focusing on compatibility with security software like Cortex XDR.
-- Prioritize resolution of issue #855 ('Unable to open Pieces Core Services') due to its high activity level.
-- Address the root cause of the 'UnauthenticatedUserException' error affecting both Windows and MacOS users.
-- Provide clear instructions or documentation for users on how to configure their firewall/security software to allowlist Pieces domains.
-- Monitor and track the frequency of authentication-related issues to identify any trends or patterns.
+- Investigate and resolve the authentication issue during Pieces installation, focusing on compatibility with security software like Cortex XDR.
+- Prioritize support for Windows and MacOS users experiencing the authentication issue.
+- Improve documentation or in-app guidance regarding configuration of security software for Pieces installation.
+- Consider adding diagnostics to the Pieces installer to identify and troubleshoot connection issues.
 
 ## Daily Reports
 Here are the daily reports for this week:
