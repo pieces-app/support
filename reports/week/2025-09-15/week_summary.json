@@ -2,25 +2,49 @@
   "success": true,
   "date_range": {
     "start": "2025-09-15T00:00:00+00:00",
-    "end": "2025-09-18T13:13:44.622578+00:00"
+    "end": "2025-09-18T21:07:18.775581+00:00"
   },
   "summary": {
-    "total_tickets": 3,
+    "total_tickets": 4,
     "resolved_tickets": 0,
-    "open_tickets": 3
+    "open_tickets": 4
   },
   "ticket_breakdown": [
     {
       "category": "bug",
+      "received": 4,
+      "resolved": 0,
+      "pending": 4
+    },
+    {
+      "category": "os:windows",
+      "received": 2,
+      "resolved": 0,
+      "pending": 2
+    },
+    {
+      "category": "app:desktop application",
       "received": 3,
       "resolved": 0,
       "pending": 3
     },
     {
-      "category": "app:desktop application",
-      "received": 2,
+      "category": "app:pieces os",
+      "received": 4,
       "resolved": 0,
-      "pending": 2
+      "pending": 4
+    },
+    {
+      "category": "status:waiting_on_user_responses",
+      "received": 3,
+      "resolved": 0,
+      "pending": 3
+    },
+    {
+      "category": "status:triaged",
+      "received": 3,
+      "resolved": 0,
+      "pending": 3
     },
     {
       "category": "os:macos",
@@ -29,37 +53,18 @@
       "pending": 2
     },
     {
-      "category": "app:pieces os",
-      "received": 3,
-      "resolved": 0,
-      "pending": 3
-    },
-    {
       "category": "app:web extension",
-      "received": 1,
-      "resolved": 0,
-      "pending": 1
-    },
-    {
-      "category": "status:waiting_on_user_responses",
-      "received": 2,
-      "resolved": 0,
-      "pending": 2
-    },
-    {
-      "category": "status:triaged",
-      "received": 2,
-      "resolved": 0,
-      "pending": 2
-    },
-    {
-      "category": "os:windows",
       "received": 1,
       "resolved": 0,
       "pending": 1
     }
   ],
   "most_active_tickets": [
+    {
+      "number": 852,
+      "title": "Pieces OS & Pieces Desktop fail to start after last update.  stucks at loading",
+      "activity_level": 9.91
+    },
     {
       "number": 857,
       "title": "pieces personal cloud - never been able to connect. always a json page saying \"unauthorized request\"",
@@ -68,7 +73,7 @@
     {
       "number": 855,
       "title": "Unable to open Pieces Core Services",
-      "activity_level": 4.52
+      "activity_level": 3.66
     },
     {
       "number": 834,
@@ -77,6 +82,31 @@
     }
   ],
   "common_issues": [
+    {
+      "title": "Pieces OS and Desktop App Fail to Start After Update",
+      "description": "Users are unable to launch Pieces Desktop after updating Pieces OS. The app gets stuck on \"Ensure Core Dependencies\" screen.  Reinstalling doesn't resolve the issue.  Problem may stem from Pieces OS service failing to start, potentially due to update conflicts or corrupted data.  Logs indicate authentication issues.  Workarounds include checking firewall/antivirus settings and ensuring network connectivity.  As a last resort, clearing all local Pieces data might help, but data loss is possible.",
+      "frequency": 3,
+      "related_issues": [
+        {
+          "id": 852,
+          "title": "Pieces OS & Pieces Desktop fail to start after last update.  stucks at loading",
+          "text": "Pieces OS & Pieces Desktop fail to start after last update.  stucks at loading\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n 12.2.1.0\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\n\n\n\nFor over a month I have been unable to use **Pieces OS** or **Pieces Desktop**. The Pieces OS service stopped working (I assume after the last update), and since then the desktop app no longer starts properly.\n\nWhenever I try to launch, the `Pieces` process starts but never progresses further. In **Pieces Desktop** I only see the message:\n\n_Ensure Core Dependencies\nRetry Step_\n\n<img width=\"1232\" height=\"1036\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/03bca5c8-1c0c-47d5-89fd-bf041ce2ba90\" />\n\nI\u2019ve seen another user reporting a similar issue, but my case seems different (I\u2019m attaching logs below).  \n\nUnfortunately, this is not the first time I\u2019ve faced problems with Pieces.... I\u2019ve already lost all my history/snippets about three times in the past (distinct bugs). This situation is quite frustrating.\n\n### Steps to Reproduce\n1. Install/update to the latest version of Pieces OS on Windows 11.  \n2. Launch Pieces Desktop.  \n3. Observe that the app does not open and gets stuck with the \u201cEnsure Core Dependencies\u201d message.  \n\n### Expected Behavior\nPieces OS should start normally and allow Pieces Desktop to connect and function.\n\n### Actual Behavior\n- Pieces OS process starts but hangs.  \n- Pieces Desktop shows \u201cEnsure Core Dependencies \u2013 Retry Step\u201d.  \n- Reinstalling from scratch does not solve the issue.  \n\n### System Information\n- **OS**: Windows 11  \n- **Processor**: Intel x64-based  \n- **Pieces OS**: 12.2.1.0\n- **Pieces Desktop**: 4.34  \n\n### Troubleshooting Attempted\n- Tried reinstalling Pieces OS and Pieces Desktop from scratch \u2192 issue persists. \n- I noticed a similar issue has been reported, but I\u2019m not sure it is directly related to what I\u2019m experiencing.\n- I suspect that completely deleting all local data/configuration files could be a final solution, but this would cause me to lose all my snippets/history (which has already happened before). I\u2019d prefer to avoid this unless it\u2019s confirmed as the only fix.\n\n### Logs\n\n[Support logs.zip](https://github.com/user-attachments/files/22142467/Support.zip)\n\n\n### Additional...\n\nIf this issue is already being tracked, that\u2019s fine. If not, I\u2019ll attempt to wipe all Pieces data and retry, though I suspect some leftover files/data may be blocking the reinstall.\n\nThanks in advance for your support!\n\n\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 9.91
+        },
+        {
+          "id": 855,
+          "title": "Unable to open Pieces Core Services",
+          "text": "Unable to open Pieces Core Services\nError: UnauthenticatedUserException\n\n**Installation Details**\n\nSucceeded: true\nPath: /Applications/Pieces OS.app\n\n**PiecesOS Information**\n\nID: A5EDBDBC-BF76-455C-8924-D257D29E1031\nUser: Anonymous\nCurrent Version: 12.2.1\nMin Version Supported: 12.1.0\nMax Version Supported: 13.0.0\nLocal Port: 39300\n\n**Device Information**\n\nOperating System: MacOS\nCurrent Version: Version 15.6.1 (Build 24G90)\nMin Version Supported: 12.0.0 Monterey\nAdditional Device Information: {cpu_list: [{\"architecture\":\"arm64\",\"cores\":8,\"logicalProcessors\":8,\"l1Cache\":{\"value\":65536,\"units\":\"Bytes\"},\"l2Cache\":{\"value\":4194304,\"units\":\"Bytes\"},\"description\":\"Apple M2\"}], gpu_list: [{\"type\":null,\"unifiedMemoryArchitecture\":true,\"cores\":10,\"dedicatedVRam\":null}], memory_info: {\"totalRAM\":{\"value\":17179869184,\"units\":\"Bytes\"}}, display_list: [{\"nativeHeight\":1600,\"nativeWidth\":2560,\"scaledHeight\":900,\"scaledWidth\":1440,\"primary\":true}, {\"nativeHeight\":1440,\"nativeWidth\":3440,\"scaledHeight\":1440,\"scaledWidth\":3440,\"primary\":false}]}\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 3.66
+        },
+        {
+          "id": 834,
+          "title": "Cannot connect to Authentication site during install of Pieces",
+          "text": "Cannot connect to Authentication site during install of Pieces\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n12.2.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI end up at this url:\n\nhttps://pieces.app/authentication-error?sentry_id=00000000000000000000000000000000&os=917d9227-e6ca-45d6-ae1a-c6b76b70a5c1&platform=windows\n\nPlease note:  This is when I install Pieces as part of the UltraEdit 2025.0 install on my work VDI.\nOur VDIs have Cortex XDR for security so this may be blocking it.  If so, I probably can't use Pieces at work.  I highly doubt they will open any ports for this.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 3.26
+        }
+      ]
+    },
     {
       "title": "Users unable to connect to Pieces Cloud due to unauthorized requests",
       "description": "Multiple users report \"unauthorized request\" errors when accessing Pieces Cloud across different platforms (macOS, Windows). Issues range from initial connection failures during installation to persistent cloud access problems for paid users.  Browser extensions are also affected. Potential causes include network security software (e.g., Cortex XDR) and authentication issues with Pieces Core Services.",
@@ -92,7 +122,7 @@
           "id": 855,
           "title": "Unable to open Pieces Core Services",
           "text": "Unable to open Pieces Core Services\nError: UnauthenticatedUserException\n\n**Installation Details**\n\nSucceeded: true\nPath: /Applications/Pieces OS.app\n\n**PiecesOS Information**\n\nID: A5EDBDBC-BF76-455C-8924-D257D29E1031\nUser: Anonymous\nCurrent Version: 12.2.1\nMin Version Supported: 12.1.0\nMax Version Supported: 13.0.0\nLocal Port: 39300\n\n**Device Information**\n\nOperating System: MacOS\nCurrent Version: Version 15.6.1 (Build 24G90)\nMin Version Supported: 12.0.0 Monterey\nAdditional Device Information: {cpu_list: [{\"architecture\":\"arm64\",\"cores\":8,\"logicalProcessors\":8,\"l1Cache\":{\"value\":65536,\"units\":\"Bytes\"},\"l2Cache\":{\"value\":4194304,\"units\":\"Bytes\"},\"description\":\"Apple M2\"}], gpu_list: [{\"type\":null,\"unifiedMemoryArchitecture\":true,\"cores\":10,\"dedicatedVRam\":null}], memory_info: {\"totalRAM\":{\"value\":17179869184,\"units\":\"Bytes\"}}, display_list: [{\"nativeHeight\":1600,\"nativeWidth\":2560,\"scaledHeight\":900,\"scaledWidth\":1440,\"primary\":true}, {\"nativeHeight\":1440,\"nativeWidth\":3440,\"scaledHeight\":1440,\"scaledWidth\":3440,\"primary\":false}]}\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 4.52
+          "activity_level": 3.66
         },
         {
           "id": 834,
@@ -104,11 +134,11 @@
     }
   ],
   "recommendations": [
-    "Investigate and resolve the root cause of the \"unauthorized request\" errors affecting Pieces Cloud access. This appears to be the most frequent and impactful issue across multiple platforms.",
-    "Check for potential conflicts with network security software like Cortex XDR, which has been identified as a possible factor in connectivity problems.",
-    "Review and improve the authentication process for Pieces Core Services, especially for initial setup and browser extension integration.",
-    "Provide more detailed troubleshooting steps or documentation for users experiencing cloud connectivity issues, including specific instructions for different operating systems and network configurations.",
-    "Prioritize communication with affected users, especially paid users, to acknowledge the issue and provide updates on progress towards a resolution."
+    "Prioritize resolving the 'Pieces OS and Desktop App Fail to Start After Update' issue, given its high frequency and activity level.",
+    "Investigate the root cause of the 'unauthorized request' errors preventing users from accessing Pieces Cloud, focusing on potential conflicts with network security software and authentication issues.",
+    "Improve the installation process to address the authentication site connection failures, particularly for users on secure networks (e.g., VDIs with Cortex XDR).",
+    "Provide clear and accessible documentation or troubleshooting guides for users experiencing cloud connectivity and application startup issues.",
+    "Consider implementing more robust error handling and logging within Pieces OS and Desktop to facilitate faster diagnosis and resolution of issues."
   ],
   "message": "Daily support report generated successfully."
 }
