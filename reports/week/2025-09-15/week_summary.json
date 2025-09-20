@@ -2,16 +2,34 @@
   "success": true,
   "date_range": {
     "start": "2025-09-15T00:00:00+00:00",
-    "end": "2025-09-20T05:07:22.349244+00:00"
+    "end": "2025-09-20T13:10:16.204845+00:00"
   },
   "summary": {
-    "total_tickets": 4,
+    "total_tickets": 5,
     "resolved_tickets": 1,
-    "open_tickets": 3
+    "open_tickets": 4
   },
   "ticket_breakdown": [
     {
       "category": "bug",
+      "received": 5,
+      "resolved": 1,
+      "pending": 4
+    },
+    {
+      "category": "app:desktop application",
+      "received": 4,
+      "resolved": 1,
+      "pending": 3
+    },
+    {
+      "category": "os:linux",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:triaged",
       "received": 4,
       "resolved": 1,
       "pending": 3
@@ -23,12 +41,6 @@
       "pending": 1
     },
     {
-      "category": "app:desktop application",
-      "received": 3,
-      "resolved": 1,
-      "pending": 2
-    },
-    {
       "category": "app:pieces os",
       "received": 4,
       "resolved": 1,
@@ -36,12 +48,6 @@
     },
     {
       "category": "status:waiting_on_user_responses",
-      "received": 3,
-      "resolved": 1,
-      "pending": 2
-    },
-    {
-      "category": "status:triaged",
       "received": 3,
       "resolved": 1,
       "pending": 2
@@ -66,27 +72,38 @@
       "activity_level": 10.67
     },
     {
-      "number": 857,
-      "title": "pieces personal cloud - never been able to connect. always a json page saying \"unauthorized request\"",
-      "activity_level": 4.5
+      "number": 835,
+      "title": "pieces-for-developers crashes at startup on ubuntu 24.04 LTS",
+      "activity_level": 5.47
     },
     {
       "number": 855,
       "title": "Unable to open Pieces Core Services",
-      "activity_level": 3.29
+      "activity_level": 3.03
+    },
+    {
+      "number": 857,
+      "title": "pieces personal cloud - never been able to connect. always a json page saying \"unauthorized request\"",
+      "activity_level": 3.01
     },
     {
       "number": 834,
       "title": "Cannot connect to Authentication site during install of Pieces",
-      "activity_level": 2.86
+      "activity_level": 2.84
     }
   ],
   "common_issues": [
     {
-      "title": "Pieces OS and Desktop App Fail to Start After Update",
-      "description": "Users are unable to launch Pieces Desktop after updating Pieces OS. The app gets stuck on \"Ensure Core Dependencies\" screen.  Reinstalling doesn't resolve the problem.  Issue seems related to Pieces OS service failing to start. Logs indicate authentication issues or core service failures.  Potential solutions include checking firewall/antivirus, ensuring network connectivity, and as a last resort, wiping local Pieces data.",
+      "title": "Pieces OS and Desktop app startup failures",
+      "description": "Users are experiencing issues with Pieces OS and Desktop app failing to start on Ubuntu, Windows, after update to 12.2.1.  Symptoms include application crashes, \"application not responding\" dialogs on Ubuntu, and \"Ensure Core Dependencies\" errors on Windows.  Potential solutions include checking logs, reinstalling, and ensuring network connectivity for authentication.",
       "frequency": 3,
       "related_issues": [
+        {
+          "id": 835,
+          "title": "pieces-for-developers crashes at startup on ubuntu 24.04 LTS",
+          "text": "pieces-for-developers crashes at startup on ubuntu 24.04 LTS\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application\n\n### Operating System / Platform\n\nLinux\n\n### Your Pieces OS Version\n\n12.2.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nWhen I launch pieces-for-developers a window briefly appears and then disappears. \n\nThe first time after I reboot a blank window appears and Ubuntu displayed the \"application not responding\" dialog. No matter how many times I clicked \"wait\" it never appeared to start. I've not been able to reproduce however and now the blank window appears and almost immediately disappears\n\nSystem is running Ubuntu 24.04 LTS using X11 with nvidia device drivers\n\npieces-os           12.2.1            (105)   1GB -\npieces-for-developers 4.3.3            (94) 173MB\n\nThe `~/.local/share/com.pieces.os` folder does not appear to have been created\n\nOutput from when starting with debug flag\n\n```\npieces-for-developers --debug\nGtk-Message: 08:24:44.749: Not loading module \"atk-bridge\": The functionality is provided by GTK natively. Please try to not load it.\n\n(pieces_for_x:12556): Gtk-WARNING **: 08:24:44.845: GTK+ module /snap/pieces-for-developers/94/gnome-platform/usr/lib/gtk-2.0/modules/libcanberra-gtk-module.so cannot be loaded.\nGTK+ 2.x symbols detected. Using GTK+ 2.x and GTK+ 3 in the same process is not supported.\nGtk-Message: 08:24:44.845: Failed to load module \"canberra-gtk-module\"\n\n(pieces_for_x:12556): Gtk-WARNING **: 08:24:44.846: GTK+ module /snap/pieces-for-developers/94/gnome-platform/usr/lib/gtk-2.0/modules/libcanberra-gtk-module.so cannot be loaded.\nGTK+ 2.x symbols detected. Using GTK+ 2.x and GTK+ 3 in the same process is not supported.\nGtk-Message: 08:24:44.846: Failed to load module \"canberra-gtk-module\"\nRuntimeFlutterCodeHighlighter initialized with path: /snap/pieces-for-developers/94/lib/libruntime_code_highlighter.so\nDebug: Starting logger initialization...\nDebug: SimpleLogger configured with Level.ALL\nDebug: SimpleLogger formatter configured\nDebug: Sentry initialized\nDebug: Sentry logger configured\nDebug: Log directory initialized at: /home/dns/snap/pieces-for-developers/94/.local/share/com.pieces.os.dependency_management\nDebug: About to complete initialization...\nDebug: Initialization completed\nINFO: [LOGGER::initialized] Logger initialized successfully with updated directory: /home/dns/Documents/com.pieces.pfd/production/logs\n[xcb] Unknown sequence number while processing reply\n[xcb] Most likely this is a multi-threaded client and XInitThreads has not been called\n[xcb] Aborting, sorry about that.\npieces_for_x: ../../src/xcb_io.c:730: _XReply: Assertion `!xcb_xlib_threads_sequence_lost' failed.\nAborted (core dumped)\n```\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 5.47
+        },
         {
           "id": 852,
           "title": "Pieces OS & Pieces Desktop fail to start after last update.  stucks at loading",
@@ -94,51 +111,45 @@
           "activity_level": 10.67
         },
         {
-          "id": 855,
-          "title": "Unable to open Pieces Core Services",
-          "text": "Unable to open Pieces Core Services\nError: UnauthenticatedUserException\n\n**Installation Details**\n\nSucceeded: true\nPath: /Applications/Pieces OS.app\n\n**PiecesOS Information**\n\nID: A5EDBDBC-BF76-455C-8924-D257D29E1031\nUser: Anonymous\nCurrent Version: 12.2.1\nMin Version Supported: 12.1.0\nMax Version Supported: 13.0.0\nLocal Port: 39300\n\n**Device Information**\n\nOperating System: MacOS\nCurrent Version: Version 15.6.1 (Build 24G90)\nMin Version Supported: 12.0.0 Monterey\nAdditional Device Information: {cpu_list: [{\"architecture\":\"arm64\",\"cores\":8,\"logicalProcessors\":8,\"l1Cache\":{\"value\":65536,\"units\":\"Bytes\"},\"l2Cache\":{\"value\":4194304,\"units\":\"Bytes\"},\"description\":\"Apple M2\"}], gpu_list: [{\"type\":null,\"unifiedMemoryArchitecture\":true,\"cores\":10,\"dedicatedVRam\":null}], memory_info: {\"totalRAM\":{\"value\":17179869184,\"units\":\"Bytes\"}}, display_list: [{\"nativeHeight\":1600,\"nativeWidth\":2560,\"scaledHeight\":900,\"scaledWidth\":1440,\"primary\":true}, {\"nativeHeight\":1440,\"nativeWidth\":3440,\"scaledHeight\":1440,\"scaledWidth\":3440,\"primary\":false}]}\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 3.29
-        },
-        {
           "id": 834,
           "title": "Cannot connect to Authentication site during install of Pieces",
           "text": "Cannot connect to Authentication site during install of Pieces\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n12.2.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI end up at this url:\n\nhttps://pieces.app/authentication-error?sentry_id=00000000000000000000000000000000&os=917d9227-e6ca-45d6-ae1a-c6b76b70a5c1&platform=windows\n\nPlease note:  This is when I install Pieces as part of the UltraEdit 2025.0 install on my work VDI.\nOur VDIs have Cortex XDR for security so this may be blocking it.  If so, I probably can't use Pieces at work.  I highly doubt they will open any ports for this.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 2.86
+          "activity_level": 2.84
         }
       ]
     },
     {
       "title": "Users unable to connect to Pieces Cloud due to unauthorized requests",
-      "description": "Multiple users report \"unauthorized request\" errors when accessing Pieces Cloud across different platforms (macOS, Windows). Issues range from initial setup to browser extensions.  Potential causes include authentication problems, network restrictions (firewalls, security software), and browser compatibility.  Suggested solutions include checking network connectivity, disabling security software temporarily, and ensuring the latest Pieces OS version.",
+      "description": "Multiple users report \"unauthorized request\" errors when attempting to connect to Pieces Cloud across different platforms (macOS, Windows). Issues arise during initial setup and ongoing usage, affecting both desktop and browser extensions.  Potential causes include authentication issues, network restrictions (firewalls, security software), and browser extension conflicts.  Suggested solutions include verifying account status, checking network connectivity, disabling security software temporarily, and reinstalling/updating Pieces OS and browser extensions.",
       "frequency": 3,
       "related_issues": [
         {
           "id": 857,
           "title": "pieces personal cloud - never been able to connect. always a json page saying \"unauthorized request\"",
           "text": "pieces personal cloud - never been able to connect. always a json page saying \"unauthorized request\"\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS, Web Extension\n\n### Operating System / Platform\n\nmacOS\n\n### Your Pieces OS Version\n\n12.2.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nas per title. I am a paid user. I cannot use my cloud. everytime with any browser it gives an unauthorized request. \n\nalso no browser extension for pieces works like, none of them \n\n\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 4.5
+          "activity_level": 3.01
         },
         {
           "id": 855,
           "title": "Unable to open Pieces Core Services",
           "text": "Unable to open Pieces Core Services\nError: UnauthenticatedUserException\n\n**Installation Details**\n\nSucceeded: true\nPath: /Applications/Pieces OS.app\n\n**PiecesOS Information**\n\nID: A5EDBDBC-BF76-455C-8924-D257D29E1031\nUser: Anonymous\nCurrent Version: 12.2.1\nMin Version Supported: 12.1.0\nMax Version Supported: 13.0.0\nLocal Port: 39300\n\n**Device Information**\n\nOperating System: MacOS\nCurrent Version: Version 15.6.1 (Build 24G90)\nMin Version Supported: 12.0.0 Monterey\nAdditional Device Information: {cpu_list: [{\"architecture\":\"arm64\",\"cores\":8,\"logicalProcessors\":8,\"l1Cache\":{\"value\":65536,\"units\":\"Bytes\"},\"l2Cache\":{\"value\":4194304,\"units\":\"Bytes\"},\"description\":\"Apple M2\"}], gpu_list: [{\"type\":null,\"unifiedMemoryArchitecture\":true,\"cores\":10,\"dedicatedVRam\":null}], memory_info: {\"totalRAM\":{\"value\":17179869184,\"units\":\"Bytes\"}}, display_list: [{\"nativeHeight\":1600,\"nativeWidth\":2560,\"scaledHeight\":900,\"scaledWidth\":1440,\"primary\":true}, {\"nativeHeight\":1440,\"nativeWidth\":3440,\"scaledHeight\":1440,\"scaledWidth\":3440,\"primary\":false}]}\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 3.29
+          "activity_level": 3.03
         },
         {
           "id": 834,
           "title": "Cannot connect to Authentication site during install of Pieces",
           "text": "Cannot connect to Authentication site during install of Pieces\n### Checked for Existing Issues?\n\n- [x] Yes, I have checked existing issues and cannot find one related to this.\n\n### Software\n\nDesktop Application, Pieces OS\n\n### Operating System / Platform\n\nWindows\n\n### Your Pieces OS Version\n\n12.2.1\n\n### Early Access Program\n\n- [ ] Yes, this is related to an Early Access Program feature.\n\n### Kindly describe the bug and include as much detail as possible on what you were doing so we can reproduce the bug.\n\nI end up at this url:\n\nhttps://pieces.app/authentication-error?sentry_id=00000000000000000000000000000000&os=917d9227-e6ca-45d6-ae1a-c6b76b70a5c1&platform=windows\n\nPlease note:  This is when I install Pieces as part of the UltraEdit 2025.0 install on my work VDI.\nOur VDIs have Cortex XDR for security so this may be blocking it.  If so, I probably can't use Pieces at work.  I highly doubt they will open any ports for this.\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 2.86
+          "activity_level": 2.84
         }
       ]
     }
   ],
   "recommendations": [
-    "Prioritize resolving the 'Pieces OS and Desktop App Fail to Start After Update' issue, given its high frequency and activity level.",
-    "Investigate the root cause of the authentication issues preventing users from connecting to Pieces Cloud and accessing core services.",
-    "Improve installation and update processes to address issues related to core dependencies and authentication failures.",
-    "Develop more robust troubleshooting documentation and self-service resources for common issues, including network connectivity, firewall/antivirus conflicts, and browser compatibility.",
-    "Enhance communication with users regarding ongoing issues and their resolution status."
+    "Prioritize resolving the \"Pieces OS and Desktop app startup failures\" issue affecting Ubuntu and Windows users after the 12.2.1 update. This appears to be the most common and impactful issue based on ticket frequency and activity levels.",
+    "Investigate and address the \"Users unable to connect to Pieces Cloud due to unauthorized requests\" issue. This affects multiple platforms and has implications for both initial setup and ongoing usage.",
+    "Improve error messaging and troubleshooting guidance for cloud connectivity issues. Provide clearer instructions on verifying account status, checking network connectivity, and resolving potential conflicts with security software or browser extensions.",
+    "Review logs and error reports for startup failures to identify the root cause and implement a fix. Consider providing a workaround or temporary solution while a permanent fix is being developed.",
+    "Enhance communication with affected users. Provide updates on the progress of investigations and estimated resolution timelines. Proactively reach out to users experiencing similar issues to gather additional information and offer support."
   ],
   "message": "Daily support report generated successfully."
 }
