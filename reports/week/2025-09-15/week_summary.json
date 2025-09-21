@@ -2,7 +2,7 @@
   "success": true,
   "date_range": {
     "start": "2025-09-15T00:00:00+00:00",
-    "end": "2025-09-20T21:06:22.120596+00:00"
+    "end": "2025-09-21T05:07:14.172422+00:00"
   },
   "summary": {
     "total_tickets": 6,
@@ -106,7 +106,7 @@
   "common_issues": [
     {
       "title": "Pieces fails to start on Windows and Ubuntu",
-      "description": "Users report Pieces OS and Desktop app failing to launch after update to 12.2.1 on Windows 11 and Ubuntu 24.04. Windows users encounter \"Ensure Core Dependencies\" error, while Ubuntu users experience crashes.  Logs indicate potential XCB and GTK issues on Ubuntu. Suggested troubleshooting includes reinstalling and checking logs. Connectivity issues during installation have also been reported.",
+      "description": "Users report Pieces OS and Desktop app failing to launch after updates on Windows 11 and Ubuntu 24.04. Windows users encounter \"Ensure Core Dependencies\" error, while Ubuntu users experience crashes. Logs indicate potential XCB and GTK issues on Ubuntu. Reinstallation doesn't resolve the problem.  Windows users have attached logs. A potential connection issue during installation has also been reported.",
       "frequency": 3,
       "related_issues": [
         {
@@ -131,7 +131,7 @@
     },
     {
       "title": "PiecesOS and Pieces Desktop Startup Failures",
-      "description": "Multiple users report PiecesOS and Pieces Desktop failing to start after updates.  Symptoms include \"Ensure Core Dependencies\" errors, PiecesOS service hanging, and app failing to launch.  Reinstallation often doesn't resolve the issue.  One user had multiple PiecesOS installations, another an authentication error. Windows and MacOS affected.  Suggested solutions include checking for multiple PiecesOS installations and ensuring proper authentication.",
+      "description": "Multiple users report PiecesOS and Pieces Desktop failing to start after updates.  Symptoms include \"Ensure Core Dependencies\" errors, PiecesOS service hanging, and app failing to launch.  Reinstallation often doesn't resolve the issue.  One user had multiple PiecesOS installations, another an UnauthenticatedUserException. Windows and MacOS affected.  Suggested solutions include checking for multiple PiecesOS installations and ensuring user authentication.",
       "frequency": 3,
       "related_issues": [
         {
@@ -156,7 +156,7 @@
     },
     {
       "title": "Users unable to connect to Pieces Cloud due to unauthorized requests",
-      "description": "Multiple users report \"unauthorized request\" errors when accessing Pieces Cloud across different platforms (macOS, Windows). Issues arise during initial setup and ongoing usage, affecting desktop app, Pieces OS, and browser extensions.  Potential causes include authentication issues, network restrictions (firewalls, security software), and browser extension conflicts.  Suggested solutions include verifying account status, checking network connectivity, disabling security software temporarily, and reinstalling/updating Pieces OS and extensions.",
+      "description": "Multiple users report \"unauthorized request\" errors when accessing Pieces Cloud across different platforms (macOS, Windows). Issues range from initial setup to ongoing access, with browser extensions also affected.  Users suspect potential conflicts with security software or network restrictions. Further investigation needed to pinpoint the cause and provide targeted solutions.",
       "frequency": 3,
       "related_issues": [
         {
@@ -181,11 +181,10 @@
     }
   ],
   "recommendations": [
-    "Prioritize resolving startup failures in Pieces OS and Desktop applications, focusing on 'Ensure Core Dependencies' errors and authentication issues.",
-    "Investigate compatibility issues with Windows 11, Ubuntu 24.04, and macOS, particularly regarding XCB, GTK, and multiple PiecesOS installations.",
-    "Improve communication around cloud connectivity problems, focusing on authentication errors and potential conflicts with security software or browser extensions.",
-    "Develop more robust troubleshooting steps for startup issues, including clear instructions for checking logs, verifying authentication, and managing multiple installations.",
-    "Consider adding in-app diagnostics or self-help resources to guide users through common troubleshooting steps for startup and connectivity issues."
+    "Investigate and address the root cause of Pieces OS and Desktop startup failures. Prioritize solutions for 'Ensure Core Dependencies' errors, service hangs, and launch failures across Windows, MacOS, and Ubuntu.",
+    "Develop clear troubleshooting steps for users experiencing cloud connectivity issues, including 'unauthorized request' errors.  Address potential conflicts with security software and network restrictions.",
+    "Improve installation process to prevent multiple PiecesOS installations and ensure user authentication is handled correctly.",
+    "Review logs and user reports for issues related to XCB and GTK on Ubuntu and explore potential solutions."
   ],
   "message": "Daily support report generated successfully."
 }
