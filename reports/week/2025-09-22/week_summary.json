@@ -1,0 +1,66 @@
+{
+  "success": true,
+  "date_range": {
+    "start": "2025-09-22T00:00:00+00:00",
+    "end": "2025-09-22T05:08:25.228489+00:00"
+  },
+  "summary": {
+    "total_tickets": 1,
+    "resolved_tickets": 0,
+    "open_tickets": 1
+  },
+  "ticket_breakdown": [
+    {
+      "category": "bug",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "os:windows",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:new",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:pieces os",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    }
+  ],
+  "most_active_tickets": [
+    {
+      "number": 860,
+      "title": "Detected multiple PiecesOS installations",
+      "activity_level": 6.94
+    }
+  ],
+  "common_issues": [
+    {
+      "title": "Multiple PiecesOS Installations Detected",
+      "description": "Users are encountering an error during installation due to multiple PiecesOS instances present on their systems.  The error message suggests uninstalling all but one installation via 'Add or Remove Programs' to resolve the issue. This is crucial to prevent data corruption or unexpected errors.",
+      "frequency": 1,
+      "related_issues": [
+        {
+          "id": 860,
+          "title": "Detected multiple PiecesOS installations",
+          "text": "Detected multiple PiecesOS installations\n**Installation Details**\n\nSucceeded: false\nPath: \n\nError Type: INVALID_PREREQUISITES_ERROR\nError Message: Running multiple installations of PiecesOS may cause data corruption or unexpected errors. Please uninstall all but one installation via `Add or Remove Programs`, then try again.\nError Code: null\nError Stderr: null\n\n**PiecesOS Information**\n\nID: 538f6da9-9d7a-4810-b415-640e983a1308\nUser: Anonymous\nCurrent Version: Unknown\nMin Version Supported: 12.3.0\nMax Version Supported: 13.0.0\nLocal Port: 39300\n\n**Device Information**\n\nOperating System: Windows\nCurrent Version: \"Windows 10 Home\" 10.0 (Build 26100)\nMin Version Supported: Windows 10 Build 1903\nAdditional Device Information: {cpu_list: [{\"architecture\":\"x64\",\"cores\":12,\"logicalProcessors\":16,\"l2Cache\":{\"value\":9216,\"units\":\"Bytes\"},\"l3Cache\":{\"value\":18432,\"units\":\"Bytes\"},\"description\":\"12th Gen Intel(R) Core(TM) i7-1260P\"}], gpu_list: [{\"type\":\"Intel(R) Iris(R) Xe Graphics\",\"unifiedMemoryArchitecture\":null,\"cores\":null,\"dedicatedVRam\":{\"value\":134217728,\"units\":\"Bytes\"}}, {\"type\":\"Microsoft Basic Render Driver\",\"unifiedMemoryArchitecture\":null,\"cores\":null,\"dedicatedVRam\":{\"value\":0,\"units\":\"Bytes\"}}], npu_list: [], memory_info: {\"totalRAM\":{\"value\":16777216,\"units\":\"KB\"}}, display_list: [{\"nativeHeight\":1080,\"nativeWidth\":1920,\"scaledHeight\":1080,\"scaledWidth\":1920,\"primary\":true}]}\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 6.94
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    "Investigate the \"Multiple PiecesOS Installations Detected\" error and improve installation instructions or installer logic to prevent this issue.",
+    "Provide users with clear guidance on resolving the multiple installations error, potentially including automated cleanup tools.",
+    "Monitor the incoming tickets related to the \"Multiple PiecesOS Installations Detected\" error to identify any trends or patterns that may reveal underlying issues."
+  ],
+  "message": "Daily support report generated successfully."
+}
