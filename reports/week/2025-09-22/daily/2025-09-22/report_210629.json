@@ -2,7 +2,7 @@
   "success": true,
   "date_range": {
     "start": "2025-09-22T00:00:00+00:00",
-    "end": "2025-09-22T21:06:57.470536+00:00"
+    "end": "2025-09-22T21:06:29.677902+00:00"
   },
   "summary": {
     "total_tickets": 3,
@@ -73,7 +73,7 @@
   "common_issues": [
     {
       "title": "Pieces OS/Desktop Startup Failure After Update",
-      "description": "Users report Pieces OS and Desktop failing to start after an update, stuck at \"Ensure Core Dependencies\" screen.  Logs indicate multiple Pieces OS installations. Uninstalling all but one Pieces OS installation through \"Add or Remove Programs\" is the recommended solution. Reinstalling from scratch does not resolve the issue. Data loss may occur during troubleshooting.",
+      "description": "Users report Pieces OS and Desktop failing to start after an update, stuck at \"Ensure Core Dependencies\" screen.  Logs indicate multiple Pieces OS installations. Uninstalling all but one installation through \"Add or Remove Programs\" is recommended.  Reinstalling from scratch does not resolve the issue. Further investigation into conflicting installations or data corruption may be needed if the issue persists after uninstalling duplicate installations.",
       "frequency": 3,
       "related_issues": [
         {
@@ -98,9 +98,9 @@
     }
   ],
   "recommendations": [
-    "Investigate the \"Pieces OS/Desktop Startup Failure After Update\" issue. Root cause appears to be multiple Pieces OS installations.  A solution involving uninstalling extra installations via \"Add or Remove Programs\" is effective, but reinstalling from scratch is not.  Focus on why reinstallation fails and potential data loss during troubleshooting.",
-    "Improve messaging around multiple Pieces OS installations. Error messages should clearly guide users to \"Add or Remove Programs\" to resolve the conflict.",
-    "Develop a method to prevent or automatically resolve multiple Pieces OS installations. This could involve checks during installation or an automated cleanup process."
+    "Investigate the \"Pieces OS/Desktop Startup Failure After Update\" issue. Root cause appears to be multiple Pieces OS installations.  A solution involving uninstalling duplicates is available, but a more robust fix is needed to prevent this.",
+    "Improve the update process to prevent multiple Pieces OS installations or provide an automated cleanup mechanism.",
+    "Consider adding a check for multiple installations during startup and prompting the user with clear instructions on how to resolve the conflict."
   ],
   "message": "Daily support report generated successfully."
 }
