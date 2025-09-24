@@ -1,0 +1,74 @@
+{
+  "success": true,
+  "date_range": {
+    "start": "2025-09-24T00:00:00+00:00",
+    "end": "2025-09-24T21:06:40.504705+00:00"
+  },
+  "summary": {
+    "total_tickets": 1,
+    "resolved_tickets": 0,
+    "open_tickets": 1
+  },
+  "ticket_breakdown": [
+    {
+      "category": "bug",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "os:macos",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "app:pieces os",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:waiting_on_user_responses",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    },
+    {
+      "category": "status:triaged",
+      "received": 1,
+      "resolved": 0,
+      "pending": 1
+    }
+  ],
+  "most_active_tickets": [
+    {
+      "number": 863,
+      "title": "Unable to open Pieces Core Services",
+      "activity_level": 5.68
+    }
+  ],
+  "common_issues": [
+    {
+      "title": "Pieces Core Services Fails to Connect to Pieces OS",
+      "description": "Users are unable to open Pieces Core Services due to a failure to connect to Pieces OS. The error message indicates an Internal Server Error (500) from Pieces OS.  The issue appears on macOS and may be related to Pieces OS version compatibility or network connectivity problems. Check Pieces OS logs for more details and ensure network connectivity.",
+      "frequency": 1,
+      "related_issues": [
+        {
+          "id": 863,
+          "title": "Unable to open Pieces Core Services",
+          "text": "Unable to open Pieces Core Services\nError: Exception: Failed to connect to Pieces OS: egb(message: {\"error\":\"Internal Server Error\",\"eventId\":\"a15f7d493d8240e49814ec0911735b49\"}, code: 500)\n\n**Installation Details**\n\nSucceeded: true\nPath: /Applications/Pieces OS.app\n\n**PiecesOS Information**\n\nID: 0E0DEC52-37A2-48F1-A9D4-60777810D59B\nUser: 7a4866bc-84fb-4c6c-a339-8cb5ea80d479\nCurrent Version: 12.3.0\nMin Version Supported: 12.3.0\nMax Version Supported: 13.0.0\nLocal Port: 39300\n\n**Device Information**\n\nOperating System: MacOS\nCurrent Version: Version 15.3.1 (Build 24D70)\nMin Version Supported: 12.0.0 Monterey\nAdditional Device Information: {cpu_list: [{\"architecture\":\"arm64\",\"cores\":14,\"logicalProcessors\":14,\"l1Cache\":{\"value\":65536,\"units\":\"Bytes\"},\"l2Cache\":{\"value\":4194304,\"units\":\"Bytes\"},\"description\":\"Apple M4 Max\"}], gpu_list: [{\"type\":\"Apple M4 Max\",\"unifiedMemoryArchitecture\":true,\"cores\":32,\"dedicatedVRam\":null}], memory_info: {\"totalRAM\":{\"value\":38654705664,\"units\":\"Bytes\"}}, display_list: [{\"nativeHeight\":2234,\"nativeWidth\":3456,\"scaledHeight\":1117,\"scaledWidth\":1728,\"primary\":true}]}\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "activity_level": 5.68
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    "Investigate the root cause of the \"Pieces Core Services Fails to Connect to Pieces OS\" issue, focusing on Pieces OS version compatibility and network connectivity.",
+    "Prioritize resolution of ticket #863, \"Unable to open Pieces Core Services\", as it has the highest activity level.",
+    "Proactively monitor Pieces OS logs for errors related to connection failures and Internal Server Errors (500).",
+    "Improve error messaging to provide more specific information to users and support staff.",
+    "Consider implementing a system to automatically detect and diagnose common issues, such as the one described."
+  ],
+  "message": "Daily support report generated successfully."
+}
