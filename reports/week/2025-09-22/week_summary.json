@@ -2,7 +2,7 @@
   "success": true,
   "date_range": {
     "start": "2025-09-22T00:00:00+00:00",
-    "end": "2025-09-24T21:06:54.995623+00:00"
+    "end": "2025-09-25T05:07:59.768897+00:00"
   },
   "summary": {
     "total_tickets": 8,
@@ -95,11 +95,6 @@
       "activity_level": 6.49
     },
     {
-      "number": 860,
-      "title": "Detected multiple PiecesOS installations",
-      "activity_level": 6.24
-    },
-    {
       "number": 835,
       "title": "pieces-for-developers crashes at startup on ubuntu 24.04 LTS",
       "activity_level": 5.69
@@ -108,6 +103,11 @@
       "number": 863,
       "title": "Unable to open Pieces Core Services",
       "activity_level": 5.68
+    },
+    {
+      "number": 860,
+      "title": "Detected multiple PiecesOS installations",
+      "activity_level": 5.61
     },
     {
       "number": 859,
@@ -127,8 +127,8 @@
   ],
   "common_issues": [
     {
-      "title": "Pieces fails to start on Linux and Windows after update",
-      "description": "Users report Pieces OS and Desktop app failing to start after recent updates. On Windows, users encounter \"Ensure Core Dependencies\" error. On Linux, the app crashes at startup.  Reinstallation doesn't resolve the issue. Logs indicate potential conflicts with GTK+ versions on Linux and issues with Pieces OS service on Windows. Further investigation needed into dependency management and service stability.",
+      "title": "Pieces fails to start on various platforms",
+      "description": "Users report Pieces OS and Desktop app failing to start after updates on Windows, Linux, and Ubuntu. Symptoms include application crashes, \"Ensure Core Dependencies\" errors, and blank windows.  Suggested solutions include reinstalling, checking logs, and ensuring Pieces OS is running. Some users experience repeated data loss.",
       "frequency": 3,
       "related_issues": [
         {
@@ -153,7 +153,7 @@
     },
     {
       "title": "Pieces OS fails to initialize or connect to core services",
-      "description": "Users on Linux and MacOS encounter issues with Pieces OS after installation.  \"Ensure core dependencies\" step fails on Linux, while MacOS users experience \"Unable to open Pieces Core Services\" errors with messages like \"Internal Server Error\" or \"UnauthenticatedUserException\". Check Pieces OS logs, connectivity, and user authentication status. Reinstallation or updating Pieces OS might be necessary.",
+      "description": "Users on Linux and MacOS encounter issues with Pieces OS after installation.  Problems include \"Ensure core dependencies\" step failing with \"Retry Step\" message, and \"Unable to open Pieces Core Services\" errors with codes 500 (Internal Server Error) and UnauthenticatedUserException.  Check Pieces OS logs, ensure network connectivity, and verify user authentication.",
       "frequency": 3,
       "related_issues": [
         {
@@ -197,20 +197,20 @@
           "id": 860,
           "title": "Detected multiple PiecesOS installations",
           "text": "Detected multiple PiecesOS installations\n**Installation Details**\n\nSucceeded: false\nPath: \n\nError Type: INVALID_PREREQUISITES_ERROR\nError Message: Running multiple installations of PiecesOS may cause data corruption or unexpected errors. Please uninstall all but one installation via `Add or Remove Programs`, then try again.\nError Code: null\nError Stderr: null\n\n**PiecesOS Information**\n\nID: 538f6da9-9d7a-4810-b415-640e983a1308\nUser: Anonymous\nCurrent Version: Unknown\nMin Version Supported: 12.3.0\nMax Version Supported: 13.0.0\nLocal Port: 39300\n\n**Device Information**\n\nOperating System: Windows\nCurrent Version: \"Windows 10 Home\" 10.0 (Build 26100)\nMin Version Supported: Windows 10 Build 1903\nAdditional Device Information: {cpu_list: [{\"architecture\":\"x64\",\"cores\":12,\"logicalProcessors\":16,\"l2Cache\":{\"value\":9216,\"units\":\"Bytes\"},\"l3Cache\":{\"value\":18432,\"units\":\"Bytes\"},\"description\":\"12th Gen Intel(R) Core(TM) i7-1260P\"}], gpu_list: [{\"type\":\"Intel(R) Iris(R) Xe Graphics\",\"unifiedMemoryArchitecture\":null,\"cores\":null,\"dedicatedVRam\":{\"value\":134217728,\"units\":\"Bytes\"}}, {\"type\":\"Microsoft Basic Render Driver\",\"unifiedMemoryArchitecture\":null,\"cores\":null,\"dedicatedVRam\":{\"value\":0,\"units\":\"Bytes\"}}], npu_list: [], memory_info: {\"totalRAM\":{\"value\":16777216,\"units\":\"KB\"}}, display_list: [{\"nativeHeight\":1080,\"nativeWidth\":1920,\"scaledHeight\":1080,\"scaledWidth\":1920,\"primary\":true}]}\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 6.24
+          "activity_level": 5.61
         }
       ]
     },
     {
       "title": "Multiple PiecesOS Installations Detected",
-      "description": "Multiple PiecesOS installations detected on Windows 10 systems, causing installation failures.  Users need to uninstall all but one PiecesOS installation via \"Add or Remove Programs\" to resolve the issue. Affected users are running different Windows 10 builds and hardware configurations.",
+      "description": "Three support tickets report failed PiecesOS installations due to multiple existing installations.  The error message suggests uninstalling extra installations via \"Add or Remove Programs\" before retrying. Affected users are on Windows 10 (various builds) with different hardware configurations.  PiecesOS versions are unknown but require a minimum of 12.3.0 and a maximum of 13.0.0.",
       "frequency": 3,
       "related_issues": [
         {
           "id": 860,
           "title": "Detected multiple PiecesOS installations",
           "text": "Detected multiple PiecesOS installations\n**Installation Details**\n\nSucceeded: false\nPath: \n\nError Type: INVALID_PREREQUISITES_ERROR\nError Message: Running multiple installations of PiecesOS may cause data corruption or unexpected errors. Please uninstall all but one installation via `Add or Remove Programs`, then try again.\nError Code: null\nError Stderr: null\n\n**PiecesOS Information**\n\nID: 538f6da9-9d7a-4810-b415-640e983a1308\nUser: Anonymous\nCurrent Version: Unknown\nMin Version Supported: 12.3.0\nMax Version Supported: 13.0.0\nLocal Port: 39300\n\n**Device Information**\n\nOperating System: Windows\nCurrent Version: \"Windows 10 Home\" 10.0 (Build 26100)\nMin Version Supported: Windows 10 Build 1903\nAdditional Device Information: {cpu_list: [{\"architecture\":\"x64\",\"cores\":12,\"logicalProcessors\":16,\"l2Cache\":{\"value\":9216,\"units\":\"Bytes\"},\"l3Cache\":{\"value\":18432,\"units\":\"Bytes\"},\"description\":\"12th Gen Intel(R) Core(TM) i7-1260P\"}], gpu_list: [{\"type\":\"Intel(R) Iris(R) Xe Graphics\",\"unifiedMemoryArchitecture\":null,\"cores\":null,\"dedicatedVRam\":{\"value\":134217728,\"units\":\"Bytes\"}}, {\"type\":\"Microsoft Basic Render Driver\",\"unifiedMemoryArchitecture\":null,\"cores\":null,\"dedicatedVRam\":{\"value\":0,\"units\":\"Bytes\"}}], npu_list: [], memory_info: {\"totalRAM\":{\"value\":16777216,\"units\":\"KB\"}}, display_list: [{\"nativeHeight\":1080,\"nativeWidth\":1920,\"scaledHeight\":1080,\"scaledWidth\":1920,\"primary\":true}]}\nError generating summary: 404 Publisher Model `projects/pi3c3s-cloud-server/locations/us-east1/publishers/google/models/gemini-pro` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
-          "activity_level": 6.24
+          "activity_level": 5.61
         },
         {
           "id": 859,
@@ -228,10 +228,11 @@
     }
   ],
   "recommendations": [
-    "Prioritize resolving the \"Pieces fails to start\" issue on Linux and Windows, focusing on dependency conflicts (GTK+ on Linux, Pieces OS service on Windows).",
-    "Investigate \"Pieces OS fails to initialize/connect\" issue on Linux/MacOS, checking logs, connectivity, and authentication. Consider reinstallation/update solutions.",
-    "Address multiple PiecesOS installations on Windows by improving installer logic or providing clearer uninstallation instructions.",
-    "Review support tickets related to Pieces Core Services failing to open, especially the Internal Server Error (500) and UnauthenticatedUserException on macOS."
+    "Prioritize resolving the \"Pieces fails to start\" issue across platforms (Windows, Linux, Ubuntu) by investigating application crashes, \"Ensure Core Dependencies\" errors, and blank windows. Address the repeated data loss problem reported by some users.",
+    "Investigate and resolve the \"Pieces OS fails to initialize or connect to core services\" issue on Linux and MacOS, focusing on the \"Ensure core dependencies\" failure and \"Unable to open Pieces Core Services\" errors (500, UnauthenticatedUserException).",
+    "Develop a troubleshooting guide or FAQ for users experiencing multiple PiecesOS installations on Windows, guiding them through the uninstallation process via \"Add or Remove Programs\".",
+    "Improve error messaging and logging for Pieces OS and Desktop applications to provide more specific information for faster diagnosis and resolution.",
+    "Consider implementing automated checks during installation to detect and prevent multiple PiecesOS installations."
   ],
   "message": "Daily support report generated successfully."
 }
