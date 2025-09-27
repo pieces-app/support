@@ -1,5 +1,5 @@
 # Support Ticket Report
-- Generated: 2025-09-27 13:10:51
+- Generated: 2025-09-27 21:07:37
 - Period: 2025-09-22 to 2025-09-27
 
 ## Summary
@@ -10,11 +10,11 @@
 ## 5 Most Active Tickets
 | Issue # | Title | Activity Level |
 |---------|-------|----------------|
-| [#852](https://github.com/pieces-app/support/issues/852) | Pieces OS & Pieces Desktop fail to start after last update.  stucks at loading | 11.09 |
-| [#860](https://github.com/pieces-app/support/issues/860) | Detected multiple PiecesOS installations | 6.67 |
-| [#809](https://github.com/pieces-app/support/issues/809) | Ensure core dependencies; Retry Step | 6.09 |
-| [#865](https://github.com/pieces-app/support/issues/865) | Unable to open Pieces Core Services | 5.68 |
+| [#852](https://github.com/pieces-app/support/issues/852) | Pieces OS & Pieces Desktop fail to start after last update.  stucks at loading | 10.96 |
+| [#809](https://github.com/pieces-app/support/issues/809) | Ensure core dependencies; Retry Step | 6.07 |
+| [#860](https://github.com/pieces-app/support/issues/860) | Detected multiple PiecesOS installations | 6.00 |
 | [#835](https://github.com/pieces-app/support/issues/835) | pieces-for-developers crashes at startup on ubuntu 24.04 LTS | 5.22 |
+| [#859](https://github.com/pieces-app/support/issues/859) | Detected multiple PiecesOS installations | 4.52 |
 
 ## Daily Reports
 Here are the daily reports for this week:
@@ -27,4 +27,5 @@ Here are the daily reports for this week:
 - [report_131428](daily/2025-09-25/report_131428.md)
 - [report_131346](daily/2025-09-26/report_131346.md)
 - [report_210623](daily/2025-09-26/report_210623.md)
+- [report_210616](daily/2025-09-27/report_210616.md)
 - [report_130927](daily/2025-09-27/report_130927.md)
