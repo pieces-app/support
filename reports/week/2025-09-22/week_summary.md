@@ -1,6 +1,6 @@
 # Support Ticket Report
-- Generated: 2025-09-26 21:07:19
-- Period: 2025-09-22 to 2025-09-26
+- Generated: 2025-09-27 05:07:48
+- Period: 2025-09-22 to 2025-09-27
 
 ## Summary
 - **Total Tickets:** 10
@@ -11,7 +11,7 @@
 | Issue # | Title | Activity Level |
 |---------|-------|----------------|
 | [#852](https://github.com/pieces-app/support/issues/852) | Pieces OS & Pieces Desktop fail to start after last update.  stucks at loading | 11.09 |
-| [#860](https://github.com/pieces-app/support/issues/860) | Detected multiple PiecesOS installations | 6.59 |
+| [#860](https://github.com/pieces-app/support/issues/860) | Detected multiple PiecesOS installations | 6.17 |
 | [#809](https://github.com/pieces-app/support/issues/809) | Ensure core dependencies; Retry Step | 6.09 |
 | [#865](https://github.com/pieces-app/support/issues/865) | Unable to open Pieces Core Services | 5.68 |
 | [#835](https://github.com/pieces-app/support/issues/835) | pieces-for-developers crashes at startup on ubuntu 24.04 LTS | 5.25 |
