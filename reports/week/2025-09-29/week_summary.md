@@ -1,6 +1,6 @@
 # Support Ticket Report
-- Generated: 2025-10-01 21:08:09
-- Period: 2025-09-29 to 2025-10-01
+- Generated: 2025-10-02 05:22:32
+- Period: 2025-09-29 to 2025-10-02
 
 ## Summary
 - **Total Tickets:** 14
@@ -12,9 +12,9 @@
 |---------|-------|----------------|
 | [#852](https://github.com/pieces-app/support/issues/852) | Pieces OS & Pieces Desktop fail to start after last update.  stucks at loading | 12.84 |
 | [#876](https://github.com/pieces-app/support/issues/876) | Unable to open Pieces Core Services | 6.94 |
-| [#874](https://github.com/pieces-app/support/issues/874) | C:\Users\<username>\AppData\Local\Mesh Intelligent Technologies, Inc\Pieces OS\com.pieces.os | 5.68 |
 | [#875](https://github.com/pieces-app/support/issues/875) | Pieces OS memory exhaustion | 5.68 |
 | [#877](https://github.com/pieces-app/support/issues/877) | LTM Permissions | 5.68 |
+| [#873](https://github.com/pieces-app/support/issues/873) | Detected multiple PiecesOS installations | 5.50 |
 
 ## Daily Reports
 Here are the daily reports for this week:
