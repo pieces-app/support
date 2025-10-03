@@ -1,6 +1,6 @@
 # Support Ticket Report
-- Generated: 2025-10-02 21:20:50
-- Period: 2025-09-29 to 2025-10-02
+- Generated: 2025-10-03 05:09:08
+- Period: 2025-09-29 to 2025-10-03
 
 ## Summary
 - **Total Tickets:** 14
@@ -10,11 +10,11 @@
 ## 5 Most Active Tickets
 | Issue # | Title | Activity Level |
 |---------|-------|----------------|
-| [#852](https://github.com/pieces-app/support/issues/852) | Pieces OS & Pieces Desktop fail to start after last update.  stucks at loading | 12.72 |
+| [#852](https://github.com/pieces-app/support/issues/852) | Pieces OS & Pieces Desktop fail to start after last update.  stucks at loading | 12.31 |
 | [#875](https://github.com/pieces-app/support/issues/875) | Pieces OS memory exhaustion | 6.50 |
 | [#876](https://github.com/pieces-app/support/issues/876) | Unable to open Pieces Core Services | 5.50 |
 | [#537](https://github.com/pieces-app/support/issues/537) | Ollama Fails to Install on Linux | 5.19 |
-| [#874](https://github.com/pieces-app/support/issues/874) | C:\Users\<username>\AppData\Local\Mesh Intelligent Technologies, Inc\Pieces OS\com.pieces.os | 4.50 |
+| [#877](https://github.com/pieces-app/support/issues/877) | LTM Permissions | 4.50 |
 
 ## Daily Reports
 Here are the daily reports for this week:
