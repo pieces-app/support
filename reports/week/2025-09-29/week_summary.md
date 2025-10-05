@@ -1,5 +1,5 @@
 # Support Ticket Report
-- Generated: 2025-10-05 05:08:20
+- Generated: 2025-10-05 13:10:47
 - Period: 2025-09-29 to 2025-10-05
 
 ## Summary
@@ -12,9 +12,9 @@
 |---------|-------|----------------|
 | [#852](https://github.com/pieces-app/support/issues/852) | Pieces OS & Pieces Desktop fail to start after last update.  stucks at loading | 12.39 |
 | [#537](https://github.com/pieces-app/support/issues/537) | Ollama Fails to Install on Linux | 5.19 |
-| [#882](https://github.com/pieces-app/support/issues/882) | Unable to open Pieces Core Services | 4.42 |
-| [#875](https://github.com/pieces-app/support/issues/875) | Pieces OS memory exhaustion | 4.26 |
-| [#876](https://github.com/pieces-app/support/issues/876) | Unable to open Pieces Core Services | 3.48 |
+| [#875](https://github.com/pieces-app/support/issues/875) | Pieces OS memory exhaustion | 3.92 |
+| [#882](https://github.com/pieces-app/support/issues/882) | Unable to open Pieces Core Services | 3.50 |
+| [#876](https://github.com/pieces-app/support/issues/876) | Unable to open Pieces Core Services | 3.21 |
 
 ## Daily Reports
 Here are the daily reports for this week:
