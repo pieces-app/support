@@ -1,6 +1,6 @@
 # Support Ticket Report
-- Generated: 2025-10-09 21:07:55
-- Period: 2025-10-06 to 2025-10-09
+- Generated: 2025-10-10 05:08:55
+- Period: 2025-10-06 to 2025-10-10
 
 ## Summary
 - **Total Tickets:** 10
@@ -11,7 +11,7 @@
 | Issue # | Title | Activity Level |
 |---------|-------|----------------|
 | [#805](https://github.com/pieces-app/support/issues/805) | Bug: Subscription is not showing up within the Application(cancelation + resubscription w/ a new plan) | 12.73 |
-| [#886](https://github.com/pieces-app/support/issues/886) | Error: Installation script at C:\Users\Samantha\AppData\Local\Temp\installation_powershell_exe.ps1 failed with exit code 1: installation failed Code: 1 | 6.50 |
+| [#886](https://github.com/pieces-app/support/issues/886) | Error: Installation script at C:\Users\Samantha\AppData\Local\Temp\installation_powershell_exe.ps1 failed with exit code 1: installation failed Code: 1 | 5.60 |
 | [#888](https://github.com/pieces-app/support/issues/888) | Unable to open Pieces Core Services | 5.50 |
 | [#887](https://github.com/pieces-app/support/issues/887) | Detected multiple PiecesOS installations | 4.50 |
 | [#885](https://github.com/pieces-app/support/issues/885) | Pieces OS : Still Running Slowly  , as well as Desktop Copilot Is as well . And VS Studio Code | 3.88 |
