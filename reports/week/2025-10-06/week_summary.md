@@ -1,6 +1,6 @@
 # Support Ticket Report
-- Generated: 2025-10-11 21:07:00
-- Period: 2025-10-06 to 2025-10-11
+- Generated: 2025-10-12 05:08:16
+- Period: 2025-10-06 to 2025-10-12
 
 ## Summary
 - **Total Tickets:** 10
@@ -12,8 +12,8 @@
 |---------|-------|----------------|
 | [#805](https://github.com/pieces-app/support/issues/805) | Bug: Subscription is not showing up within the Application(cancelation + resubscription w/ a new plan) | 12.34 |
 | [#888](https://github.com/pieces-app/support/issues/888) | Unable to open Pieces Core Services | 5.80 |
-| [#886](https://github.com/pieces-app/support/issues/886) | Error: Installation script at C:\Users\Samantha\AppData\Local\Temp\installation_powershell_exe.ps1 failed with exit code 1: installation failed Code: 1 | 5.03 |
-| [#883](https://github.com/pieces-app/support/issues/883) | Unable to open Pieces Core Services | 3.21 |
+| [#886](https://github.com/pieces-app/support/issues/886) | Error: Installation script at C:\Users\Samantha\AppData\Local\Temp\installation_powershell_exe.ps1 failed with exit code 1: installation failed Code: 1 | 4.63 |
+| [#883](https://github.com/pieces-app/support/issues/883) | Unable to open Pieces Core Services | 3.00 |
 | [#875](https://github.com/pieces-app/support/issues/875) | Pieces OS memory exhaustion | 2.97 |
 
 ## Daily Reports
