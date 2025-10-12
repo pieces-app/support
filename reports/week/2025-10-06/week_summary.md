@@ -1,20 +1,20 @@
 # Support Ticket Report
-- Generated: 2025-10-12 05:08:16
+- Generated: 2025-10-12 13:10:35
 - Period: 2025-10-06 to 2025-10-12
 
 ## Summary
-- **Total Tickets:** 10
-- **Resolved:** 0
+- **Total Tickets:** 11
+- **Resolved:** 1
 - **Open:** 10
 
 ## 5 Most Active Tickets
 | Issue # | Title | Activity Level |
 |---------|-------|----------------|
 | [#805](https://github.com/pieces-app/support/issues/805) | Bug: Subscription is not showing up within the Application(cancelation + resubscription w/ a new plan) | 12.34 |
+| [#835](https://github.com/pieces-app/support/issues/835) | pieces-for-developers crashes at startup on ubuntu 24.04 LTS | 6.03 |
 | [#888](https://github.com/pieces-app/support/issues/888) | Unable to open Pieces Core Services | 5.80 |
 | [#886](https://github.com/pieces-app/support/issues/886) | Error: Installation script at C:\Users\Samantha\AppData\Local\Temp\installation_powershell_exe.ps1 failed with exit code 1: installation failed Code: 1 | 4.63 |
 | [#883](https://github.com/pieces-app/support/issues/883) | Unable to open Pieces Core Services | 3.00 |
-| [#875](https://github.com/pieces-app/support/issues/875) | Pieces OS memory exhaustion | 2.97 |
 
 ## Daily Reports
 Here are the daily reports for this week:
@@ -29,3 +29,4 @@ Here are the daily reports for this week:
 - [report_050758](daily/2025-10-09/report_050758.md)
 - [report_131541](daily/2025-10-09/report_131541.md)
 - [report_210617](daily/2025-10-10/report_210617.md)
+- [report_130938](daily/2025-10-12/report_130938.md)
