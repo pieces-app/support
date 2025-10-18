@@ -1,22 +1,23 @@
 # Support Ticket Report
-- Generated: 2025-10-18 05:07:42
+- Generated: 2025-10-18 13:10:55
 - Period: 2025-10-13 to 2025-10-18
 
 ## Summary
-- **Total Tickets:** 6
-- **Resolved:** 1
+- **Total Tickets:** 7
+- **Resolved:** 2
 - **Open:** 5
 
 ## 5 Most Active Tickets
 | Issue # | Title | Activity Level |
 |---------|-------|----------------|
 | [#805](https://github.com/pieces-app/support/issues/805) | Bug: Subscription is not showing up within the Application(cancelation + resubscription w/ a new plan) | 13.38 |
-| [#894](https://github.com/pieces-app/support/issues/894) | OS running status check fails even though OS is running manually - Redirects to web page | 4.42 |
+| [#894](https://github.com/pieces-app/support/issues/894) | OS running status check fails even though OS is running manually - Redirects to web page | 5.36 |
+| [#896](https://github.com/pieces-app/support/issues/896) | OS not running | 4.42 |
 | [#864](https://github.com/pieces-app/support/issues/864) | Summaries not created consistently | 4.31 |
 | [#812](https://github.com/pieces-app/support/issues/812) | Unable to generate Workstream Summary | 2.93 |
-| [#892](https://github.com/pieces-app/support/issues/892) | Detected multiple PiecesOS installations | 1.78 |
 
 ## Daily Reports
 Here are the daily reports for this week:
 
 - [report_210630](daily/2025-10-17/report_210630.md)
+- [report_131012](daily/2025-10-18/report_131012.md)
