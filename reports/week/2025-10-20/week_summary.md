@@ -1,6 +1,6 @@
 # Support Ticket Report
-- Generated: 2025-10-23 21:07:25
-- Period: 2025-10-20 to 2025-10-23
+- Generated: 2025-10-24 05:08:24
+- Period: 2025-10-20 to 2025-10-24
 
 ## Summary
 - **Total Tickets:** 5
@@ -11,8 +11,8 @@
 | Issue # | Title | Activity Level |
 |---------|-------|----------------|
 | [#150](https://github.com/pieces-app/support/issues/150) | PiecesOS using too much RAM/spike in CPU | 7.55 |
-| [#900](https://github.com/pieces-app/support/issues/900) | Not accessing Context Folder | 6.94 |
 | [#896](https://github.com/pieces-app/support/issues/896) | OS not running | 6.83 |
+| [#900](https://github.com/pieces-app/support/issues/900) | Not accessing Context Folder | 5.50 |
 | [#875](https://github.com/pieces-app/support/issues/875) | Pieces OS memory exhaustion | 3.66 |
 | [#898](https://github.com/pieces-app/support/issues/898) | Detected multiple PiecesOS installations | 1.93 |
 
