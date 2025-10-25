@@ -1,20 +1,20 @@
 # Support Ticket Report
-- Generated: 2025-10-24 21:07:26
-- Period: 2025-10-20 to 2025-10-24
+- Generated: 2025-10-25 05:08:19
+- Period: 2025-10-20 to 2025-10-25
 
 ## Summary
-- **Total Tickets:** 7
+- **Total Tickets:** 8
 - **Resolved:** 2
-- **Open:** 5
+- **Open:** 6
 
 ## 5 Most Active Tickets
 | Issue # | Title | Activity Level |
 |---------|-------|----------------|
-| [#150](https://github.com/pieces-app/support/issues/150) | PiecesOS using too much RAM/spike in CPU | 7.55 |
+| [#150](https://github.com/pieces-app/support/issues/150) | PiecesOS using too much RAM/spike in CPU | 7.54 |
+| [#901](https://github.com/pieces-app/support/issues/901) | Pieces OS not working? | 6.62 |
 | [#896](https://github.com/pieces-app/support/issues/896) | OS not running | 6.47 |
-| [#901](https://github.com/pieces-app/support/issues/901) | Pieces OS not working? | 5.68 |
-| [#900](https://github.com/pieces-app/support/issues/900) | Not accessing Context Folder | 5.50 |
-| [#875](https://github.com/pieces-app/support/issues/875) | Pieces OS memory exhaustion | 3.19 |
+| [#903](https://github.com/pieces-app/support/issues/903) | PiecesOS not starting up on boot | 5.68 |
+| [#900](https://github.com/pieces-app/support/issues/900) | Not accessing Context Folder | 4.74 |
 
 ## Daily Reports
 Here are the daily reports for this week:
@@ -25,3 +25,4 @@ Here are the daily reports for this week:
 - [report_131725](daily/2025-10-23/report_131725.md)
 - [report_210646](daily/2025-10-24/report_210646.md)
 - [report_131552](daily/2025-10-24/report_131552.md)
+- [report_050741](daily/2025-10-25/report_050741.md)
