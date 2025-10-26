@@ -1,6 +1,6 @@
 # Support Ticket Report
-- Generated: 2025-10-25 21:07:20
-- Period: 2025-10-20 to 2025-10-25
+- Generated: 2025-10-26 05:08:10
+- Period: 2025-10-20 to 2025-10-26
 
 ## Summary
 - **Total Tickets:** 10
@@ -13,8 +13,8 @@
 | [#150](https://github.com/pieces-app/support/issues/150) | PiecesOS using too much RAM/spike in CPU | 7.54 |
 | [#896](https://github.com/pieces-app/support/issues/896) | OS not running | 6.17 |
 | [#904](https://github.com/pieces-app/support/issues/904) | Copilot Not Responding | 5.68 |
-| [#903](https://github.com/pieces-app/support/issues/903) | PiecesOS not starting up on boot | 5.68 |
 | [#901](https://github.com/pieces-app/support/issues/901) | Pieces OS not working? | 5.25 |
+| [#903](https://github.com/pieces-app/support/issues/903) | PiecesOS not starting up on boot | 4.50 |
 
 ## Daily Reports
 Here are the daily reports for this week:
