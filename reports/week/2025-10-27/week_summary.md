@@ -1,20 +1,20 @@
 # Support Ticket Report
-- Generated: 2025-10-31 05:09:18
+- Generated: 2025-10-31 13:16:45
 - Period: 2025-10-27 to 2025-10-31
 
 ## Summary
-- **Total Tickets:** 11
-- **Resolved:** 3
-- **Open:** 8
+- **Total Tickets:** 14
+- **Resolved:** 5
+- **Open:** 9
 
 ## 5 Most Active Tickets
 | Issue # | Title | Activity Level |
 |---------|-------|----------------|
 | [#903](https://github.com/pieces-app/support/issues/903) | PiecesOS not starting up on boot | 11.67 |
-| [#912](https://github.com/pieces-app/support/issues/912) | Detected multiple PiecesOS installations | 4.42 |
-| [#911](https://github.com/pieces-app/support/issues/911) | Detected multiple PiecesOS installations | 4.42 |
-| [#910](https://github.com/pieces-app/support/issues/910) | Unable to open Pieces Core Services | 4.42 |
-| [#904](https://github.com/pieces-app/support/issues/904) | Copilot Not Responding | 4.33 |
+| [#913](https://github.com/pieces-app/support/issues/913) | An unknown error occurred in the Desktop App | 6.94 |
+| [#912](https://github.com/pieces-app/support/issues/912) | Detected multiple PiecesOS installations | 5.68 |
+| [#910](https://github.com/pieces-app/support/issues/910) | Unable to open Pieces Core Services | 4.50 |
+| [#911](https://github.com/pieces-app/support/issues/911) | Detected multiple PiecesOS installations | 4.50 |
 
 ## Daily Reports
 Here are the daily reports for this week:
@@ -27,3 +27,4 @@ Here are the daily reports for this week:
 - [report_210702](daily/2025-10-30/report_210702.md)
 - [report_131619](daily/2025-10-30/report_131619.md)
 - [report_050820](daily/2025-10-31/report_050820.md)
+- [report_131520](daily/2025-10-31/report_131520.md)
