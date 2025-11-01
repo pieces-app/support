@@ -1,6 +1,6 @@
 # Support Ticket Report
-- Generated: 2025-10-31 21:08:18
-- Period: 2025-10-27 to 2025-10-31
+- Generated: 2025-11-01 05:08:18
+- Period: 2025-10-27 to 2025-11-01
 
 ## Summary
 - **Total Tickets:** 14
@@ -10,10 +10,10 @@
 ## 5 Most Active Tickets
 | Issue # | Title | Activity Level |
 |---------|-------|----------------|
-| [#903](https://github.com/pieces-app/support/issues/903) | PiecesOS not starting up on boot | 11.04 |
+| [#903](https://github.com/pieces-app/support/issues/903) | PiecesOS not starting up on boot | 10.54 |
 | [#913](https://github.com/pieces-app/support/issues/913) | An unknown error occurred in the Desktop App | 6.94 |
-| [#912](https://github.com/pieces-app/support/issues/912) | Detected multiple PiecesOS installations | 5.68 |
 | [#910](https://github.com/pieces-app/support/issues/910) | Unable to open Pieces Core Services | 4.50 |
+| [#912](https://github.com/pieces-app/support/issues/912) | Detected multiple PiecesOS installations | 4.50 |
 | [#911](https://github.com/pieces-app/support/issues/911) | Detected multiple PiecesOS installations | 4.50 |
 
 ## Daily Reports
