@@ -1,20 +1,20 @@
 # Support Ticket Report
-- Generated: 2025-11-09 05:09:02
+- Generated: 2025-11-09 13:13:00
 - Period: 2025-11-03 to 2025-11-09
 
 ## Summary
-- **Total Tickets:** 20
-- **Resolved:** 13
-- **Open:** 7
+- **Total Tickets:** 24
+- **Resolved:** 14
+- **Open:** 10
 
 ## 5 Most Active Tickets
 | Issue # | Title | Activity Level |
 |---------|-------|----------------|
 | [#923](https://github.com/pieces-app/support/issues/923) | Detected multiple PiecesOS installations | 9.75 |
 | [#930](https://github.com/pieces-app/support/issues/930) | ss | 6.00 |
-| [#921](https://github.com/pieces-app/support/issues/921) | Unable to open Pieces Core Services | 5.50 |
 | [#925](https://github.com/pieces-app/support/issues/925) | 01 | 5.25 |
 | [#927](https://github.com/pieces-app/support/issues/927) | 0001 | 5.25 |
+| [#928](https://github.com/pieces-app/support/issues/928) | 0002 | 5.25 |
 
 ## Daily Reports
 Here are the daily reports for this week:
@@ -27,3 +27,4 @@ Here are the daily reports for this week:
 - [report_210610](daily/2025-11-08/report_210610.md)
 - [report_131116](daily/2025-11-08/report_131116.md)
 - [report_050740](daily/2025-11-09/report_050740.md)
+- [report_131109](daily/2025-11-09/report_131109.md)
