@@ -1,5 +1,5 @@
 # Support Ticket Report
-- Generated: 2025-11-14 13:17:46
+- Generated: 2025-11-14 21:09:04
 - Period: 2025-11-10 to 2025-11-14
 
 ## Summary
@@ -11,10 +11,10 @@
 | Issue # | Title | Activity Level |
 |---------|-------|----------------|
 | [#870](https://github.com/pieces-app/support/issues/870) | Detected Multiple Installations (Parent Issue) | 8.55 |
-| [#952](https://github.com/pieces-app/support/issues/952) | Docs: Chrome Extension - Local network Access Perission | 5.60 |
-| [#950](https://github.com/pieces-app/support/issues/950) | Detected multiple PiecesOS installations | 4.52 |
+| [#952](https://github.com/pieces-app/support/issues/952) | Docs: Chrome Extension - Local network Access Perission | 6.46 |
 | [#875](https://github.com/pieces-app/support/issues/875) | Pieces OS memory exhaustion | 4.41 |
-| [#941](https://github.com/pieces-app/support/issues/941) | Detected multiple PiecesOS installations | 3.92 |
+| [#942](https://github.com/pieces-app/support/issues/942) | pieces won't install on surface pro 12 snapdragon | 3.92 |
+| [#941](https://github.com/pieces-app/support/issues/941) | Detected multiple PiecesOS installations | 3.67 |
 
 ## Daily Reports
 Here are the daily reports for this week:
@@ -26,3 +26,4 @@ Here are the daily reports for this week:
 - [report_210712](daily/2025-11-12/report_210712.md)
 - [report_210737](daily/2025-11-13/report_210737.md)
 - [report_131713](daily/2025-11-13/report_131713.md)
+- [report_210641](daily/2025-11-14/report_210641.md)
