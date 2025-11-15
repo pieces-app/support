@@ -1,5 +1,5 @@
 # Support Ticket Report
-- Generated: 2025-11-15 05:09:47
+- Generated: 2025-11-15 13:13:44
 - Period: 2025-11-10 to 2025-11-15
 
 ## Summary
@@ -10,9 +10,9 @@
 ## 5 Most Active Tickets
 | Issue # | Title | Activity Level |
 |---------|-------|----------------|
-| [#870](https://github.com/pieces-app/support/issues/870) | Detected Multiple Installations (Parent Issue) | 8.55 |
+| [#870](https://github.com/pieces-app/support/issues/870) | Detected Multiple Installations (Parent Issue) | 8.50 |
 | [#952](https://github.com/pieces-app/support/issues/952) | Docs: Chrome Extension - Local network Access Perission | 5.80 |
-| [#875](https://github.com/pieces-app/support/issues/875) | Pieces OS memory exhaustion | 4.41 |
+| [#875](https://github.com/pieces-app/support/issues/875) | Pieces OS memory exhaustion | 4.39 |
 | [#941](https://github.com/pieces-app/support/issues/941) | Detected multiple PiecesOS installations | 3.67 |
 | [#942](https://github.com/pieces-app/support/issues/942) | pieces won't install on surface pro 12 snapdragon | 3.67 |
 
