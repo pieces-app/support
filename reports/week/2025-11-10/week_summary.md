@@ -1,5 +1,5 @@
 # Support Ticket Report
-- Generated: 2025-11-16 05:09:59
+- Generated: 2025-11-16 13:13:15
 - Period: 2025-11-10 to 2025-11-16
 
 ## Summary
@@ -10,10 +10,10 @@
 ## 5 Most Active Tickets
 | Issue # | Title | Activity Level |
 |---------|-------|----------------|
-| [#870](https://github.com/pieces-app/support/issues/870) | Detected Multiple Installations (Parent Issue) | 8.77 |
+| [#870](https://github.com/pieces-app/support/issues/870) | Detected Multiple Installations (Parent Issue) | 8.73 |
 | [#953](https://github.com/pieces-app/support/issues/953) | Pieces OS memory exhaustion | 6.62 |
 | [#952](https://github.com/pieces-app/support/issues/952) | Docs: Chrome Extension - Local network Access Perission | 5.34 |
-| [#875](https://github.com/pieces-app/support/issues/875) | Pieces OS memory exhaustion | 5.01 |
+| [#875](https://github.com/pieces-app/support/issues/875) | Pieces OS memory exhaustion | 4.99 |
 | [#954](https://github.com/pieces-app/support/issues/954) | Detected multiple PiecesOS installations | 4.42 |
 
 ## Daily Reports
