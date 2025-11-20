@@ -1,6 +1,6 @@
 # Support Ticket Report
-- Generated: 2025-11-19 21:10:46
-- Period: 2025-11-17 to 2025-11-19
+- Generated: 2025-11-20 05:11:49
+- Period: 2025-11-17 to 2025-11-20
 
 ## Summary
 - **Total Tickets:** 36
@@ -14,7 +14,7 @@
 | [#537](https://github.com/pieces-app/support/issues/537) | Ollama Fails to Install on Linux | 5.53 |
 | [#923](https://github.com/pieces-app/support/issues/923) | Detected multiple PiecesOS installations | 5.50 |
 | [#875](https://github.com/pieces-app/support/issues/875) | Pieces OS memory exhaustion | 4.56 |
-| [#952](https://github.com/pieces-app/support/issues/952) | Docs: Chrome Extension - Local network Access Perission | 4.52 |
+| [#953](https://github.com/pieces-app/support/issues/953) | Pieces OS memory exhaustion | 4.45 |
 
 ## Daily Reports
 Here are the daily reports for this week:
