@@ -1,5 +1,5 @@
 # Support Ticket Report
-- Generated: 2025-11-22 05:11:30
+- Generated: 2025-11-22 13:14:38
 - Period: 2025-11-17 to 2025-11-22
 
 ## Summary
@@ -10,11 +10,11 @@
 ## 5 Most Active Tickets
 | Issue # | Title | Activity Level |
 |---------|-------|----------------|
-| [#870](https://github.com/pieces-app/support/issues/870) | Detected Multiple Installations (Parent Issue) | 9.30 |
+| [#870](https://github.com/pieces-app/support/issues/870) | Detected Multiple Installations (Parent Issue) | 9.26 |
 | [#537](https://github.com/pieces-app/support/issues/537) | Ollama Fails to Install on Linux | 5.29 |
 | [#923](https://github.com/pieces-app/support/issues/923) | Detected multiple PiecesOS installations | 4.77 |
-| [#875](https://github.com/pieces-app/support/issues/875) | Pieces OS memory exhaustion | 4.52 |
-| [#959](https://github.com/pieces-app/support/issues/959) | Cannot update | 4.50 |
+| [#875](https://github.com/pieces-app/support/issues/875) | Pieces OS memory exhaustion | 4.50 |
+| [#860](https://github.com/pieces-app/support/issues/860) | Detected multiple PiecesOS installations | 4.08 |
 
 ## Daily Reports
 Here are the daily reports for this week:
