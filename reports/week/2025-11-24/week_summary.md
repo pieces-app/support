@@ -1,0 +1,18 @@
+# Support Ticket Report
+- Generated: 2025-11-24 05:09:14
+- Period: 2025-11-24 to 2025-11-24
+
+## Summary
+- **Total Tickets:** 1
+- **Resolved:** 0
+- **Open:** 1
+
+## 5 Most Active Tickets
+| Issue # | Title | Activity Level |
+|---------|-------|----------------|
+| [#961](https://github.com/pieces-app/support/issues/961) | [macOS] Pieces OS 12.3.1 causes system crashes - CBLDart AsyncCallback deletion failure | 5.68 |
+
+## Daily Reports
+Here are the daily reports for this week:
+
+- [report_050859](daily/2025-11-24/report_050859.md)
