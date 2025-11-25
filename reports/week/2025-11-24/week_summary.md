@@ -1,5 +1,5 @@
 # Support Ticket Report
-- Generated: 2025-11-25 13:17:23
+- Generated: 2025-11-25 21:07:23
 - Period: 2025-11-24 to 2025-11-25
 
 ## Summary
@@ -11,7 +11,7 @@
 | Issue # | Title | Activity Level |
 |---------|-------|----------------|
 | [#961](https://github.com/pieces-app/support/issues/961) | [macOS] Pieces OS 12.3.1 causes system crashes - CBLDart AsyncCallback deletion failure | 8.50 |
-| [#953](https://github.com/pieces-app/support/issues/953) | Pieces OS memory exhaustion | 5.02 |
+| [#953](https://github.com/pieces-app/support/issues/953) | Pieces OS memory exhaustion | 4.86 |
 | [#962](https://github.com/pieces-app/support/issues/962) | An unknown error occurred in Windows 11 the Desktop App | 4.50 |
 
 ## Daily Reports
