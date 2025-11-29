@@ -1,5 +1,5 @@
 # Support Ticket Report
-- Generated: 2025-11-29 13:13:21
+- Generated: 2025-11-29 21:07:02
 - Period: 2025-11-24 to 2025-11-29
 
 ## Summary
@@ -10,11 +10,11 @@
 ## 5 Most Active Tickets
 | Issue # | Title | Activity Level |
 |---------|-------|----------------|
-| [#537](https://github.com/pieces-app/support/issues/537) | Ollama Fails to Install on Linux | 5.51 |
+| [#537](https://github.com/pieces-app/support/issues/537) | Ollama Fails to Install on Linux | 5.50 |
 | [#961](https://github.com/pieces-app/support/issues/961) | [macOS] Pieces OS 12.3.1 causes system crashes - CBLDart AsyncCallback deletion failure | 5.00 |
-| [#965](https://github.com/pieces-app/support/issues/965) | Can't install Pieces Desktop | 4.42 |
-| [#953](https://github.com/pieces-app/support/issues/953) | Pieces OS memory exhaustion | 4.00 |
-| [#964](https://github.com/pieces-app/support/issues/964) | Unable to open Pieces Core Services | 3.50 |
+| [#953](https://github.com/pieces-app/support/issues/953) | Pieces OS memory exhaustion | 3.91 |
+| [#965](https://github.com/pieces-app/support/issues/965) | Can't install Pieces Desktop | 3.50 |
+| [#868](https://github.com/pieces-app/support/issues/868) | Detected multiple PiecesOS installations(due to vsCode) | 2.74 |
 
 ## Daily Reports
 Here are the daily reports for this week:
