@@ -1,6 +1,6 @@
 # Support Ticket Report
-- Generated: 2025-11-28 21:07:29
-- Period: 2025-11-24 to 2025-11-28
+- Generated: 2025-11-29 05:08:12
+- Period: 2025-11-24 to 2025-11-29
 
 ## Summary
 - **Total Tickets:** 7
@@ -10,8 +10,8 @@
 ## 5 Most Active Tickets
 | Issue # | Title | Activity Level |
 |---------|-------|----------------|
-| [#537](https://github.com/pieces-app/support/issues/537) | Ollama Fails to Install on Linux | 5.74 |
-| [#961](https://github.com/pieces-app/support/issues/961) | [macOS] Pieces OS 12.3.1 causes system crashes - CBLDart AsyncCallback deletion failure | 5.34 |
+| [#537](https://github.com/pieces-app/support/issues/537) | Ollama Fails to Install on Linux | 5.51 |
+| [#961](https://github.com/pieces-app/support/issues/961) | [macOS] Pieces OS 12.3.1 causes system crashes - CBLDart AsyncCallback deletion failure | 5.00 |
 | [#965](https://github.com/pieces-app/support/issues/965) | Can't install Pieces Desktop | 4.42 |
 | [#953](https://github.com/pieces-app/support/issues/953) | Pieces OS memory exhaustion | 4.00 |
 | [#964](https://github.com/pieces-app/support/issues/964) | Unable to open Pieces Core Services | 3.50 |
