@@ -1,5 +1,5 @@
 # Support Ticket Report
-- Generated: 2025-12-04 05:08:39
+- Generated: 2025-12-04 13:19:19
 - Period: 2025-12-01 to 2025-12-04
 
 ## Summary
@@ -12,7 +12,7 @@
 |---------|-------|----------------|
 | [#471](https://github.com/pieces-app/support/issues/471) | I´m sorry. Something went wrong with processing. Please wait a few seconds and try again, or contact support@pieces.app | 11.15 |
 | [#967](https://github.com/pieces-app/support/issues/967) | Unable to prompt any of the AI models. "Something went wrong with processing" error | 10.41 |
-| [#960](https://github.com/pieces-app/support/issues/960) | Unable to open Pieces Core Services on MacOS 15.6.1 | 5.50 |
+| [#960](https://github.com/pieces-app/support/issues/960) | Unable to open Pieces Core Services on MacOS 15.6.1 | 4.89 |
 | [#965](https://github.com/pieces-app/support/issues/965) | Can't install Pieces Desktop | 2.83 |
 | [#964](https://github.com/pieces-app/support/issues/964) | Unable to open Pieces Core Services | 2.21 |
 
