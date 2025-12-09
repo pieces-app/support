@@ -1,19 +1,19 @@
 # Support Ticket Report
-- Generated: 2025-12-09 13:19:10
+- Generated: 2025-12-09 21:07:35
 - Period: 2025-12-08 to 2025-12-09
 
 ## Summary
 - **Total Tickets:** 5
-- **Resolved:** 1
-- **Open:** 4
+- **Resolved:** 2
+- **Open:** 3
 
 ## 5 Most Active Tickets
 | Issue # | Title | Activity Level |
 |---------|-------|----------------|
-| [#967](https://github.com/pieces-app/support/issues/967) | Unable to prompt any of the AI models. "Something went wrong with processing" error | 10.00 |
-| [#969](https://github.com/pieces-app/support/issues/969) | Claude haiku 4.5 issue | 6.94 |
+| [#967](https://github.com/pieces-app/support/issues/967) | Unable to prompt any of the AI models. "Something went wrong with processing" error | 9.46 |
+| [#968](https://github.com/pieces-app/support/issues/968) | Authentication | 6.50 |
+| [#969](https://github.com/pieces-app/support/issues/969) | Claude haiku 4.5 issue | 5.50 |
 | [#633](https://github.com/pieces-app/support/issues/633) | PiecesOS was unable to launch | 4.51 |
-| [#968](https://github.com/pieces-app/support/issues/968) | Authentication | 4.50 |
 | [#904](https://github.com/pieces-app/support/issues/904) | Copilot Not Responding | 2.69 |
 
 ## Daily Reports
@@ -21,3 +21,4 @@ Here are the daily reports for this week:
 
 - [report_131835](daily/2025-12-09/report_131835.md)
 - [report_050821](daily/2025-12-09/report_050821.md)
+- [report_210658](daily/2025-12-09/report_210658.md)
