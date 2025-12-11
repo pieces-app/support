@@ -1,6 +1,6 @@
 # Support Ticket Report
-- Generated: 2025-12-10 21:08:41
-- Period: 2025-12-08 to 2025-12-10
+- Generated: 2025-12-11 05:10:30
+- Period: 2025-12-08 to 2025-12-11
 
 ## Summary
 - **Total Tickets:** 5
@@ -10,10 +10,10 @@
 ## 5 Most Active Tickets
 | Issue # | Title | Activity Level |
 |---------|-------|----------------|
-| [#967](https://github.com/pieces-app/support/issues/967) | Unable to prompt any of the AI models. "Something went wrong with processing" error | 9.03 |
+| [#967](https://github.com/pieces-app/support/issues/967) | Unable to prompt any of the AI models. "Something went wrong with processing" error | 8.43 |
 | [#968](https://github.com/pieces-app/support/issues/968) | Authentication | 5.60 |
-| [#969](https://github.com/pieces-app/support/issues/969) | Claude haiku 4.5 issue | 4.74 |
 | [#633](https://github.com/pieces-app/support/issues/633) | PiecesOS was unable to launch | 4.26 |
+| [#969](https://github.com/pieces-app/support/issues/969) | Claude haiku 4.5 issue | 3.88 |
 | [#904](https://github.com/pieces-app/support/issues/904) | Copilot Not Responding | 2.32 |
 
 ## Daily Reports
