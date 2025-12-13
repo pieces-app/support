@@ -1,5 +1,5 @@
 # Support Ticket Report
-- Generated: 2025-12-13 05:08:55
+- Generated: 2025-12-13 13:14:03
 - Period: 2025-12-08 to 2025-12-13
 
 ## Summary
@@ -12,7 +12,7 @@
 |---------|-------|----------------|
 | [#967](https://github.com/pieces-app/support/issues/967) | Unable to prompt any of the AI models. "Something went wrong with processing" error | 7.81 |
 | [#633](https://github.com/pieces-app/support/issues/633) | PiecesOS was unable to launch | 4.26 |
-| [#968](https://github.com/pieces-app/support/issues/968) | Authentication | 3.92 |
+| [#968](https://github.com/pieces-app/support/issues/968) | Authentication | 3.67 |
 | [#971](https://github.com/pieces-app/support/issues/971) | bug | 3.50 |
 | [#969](https://github.com/pieces-app/support/issues/969) | Claude haiku 4.5 issue | 3.21 |
 
