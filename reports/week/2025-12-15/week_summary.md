@@ -1,6 +1,6 @@
 # Support Ticket Report
-- Generated: 2025-12-18 21:08:51
-- Period: 2025-12-15 to 2025-12-18
+- Generated: 2025-12-19 05:10:08
+- Period: 2025-12-15 to 2025-12-19
 
 ## Summary
 - **Total Tickets:** 7
@@ -10,11 +10,11 @@
 ## 5 Most Active Tickets
 | Issue # | Title | Activity Level |
 |---------|-------|----------------|
+| [#978](https://github.com/pieces-app/support/issues/978) | Logs directory taking 155+ gb | 9.46 |
 | [#967](https://github.com/pieces-app/support/issues/967) | Unable to prompt any of the AI models. "Something went wrong with processing" error | 8.15 |
-| [#978](https://github.com/pieces-app/support/issues/978) | Logs directory taking 155+ gb | 6.94 |
-| [#976](https://github.com/pieces-app/support/issues/976) | bug | 5.68 |
-| [#977](https://github.com/pieces-app/support/issues/977) | desmos integration | 5.68 |
 | [#974](https://github.com/pieces-app/support/issues/974) | Incorrect Visual Studio Extension URL in documentation | 5.61 |
+| [#976](https://github.com/pieces-app/support/issues/976) | bug | 4.50 |
+| [#977](https://github.com/pieces-app/support/issues/977) | desmos integration | 4.50 |
 
 ## Daily Reports
 Here are the daily reports for this week:
