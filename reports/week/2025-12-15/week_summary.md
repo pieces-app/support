@@ -1,6 +1,6 @@
 # Support Ticket Report
-- Generated: 2025-12-20 21:07:42
-- Period: 2025-12-15 to 2025-12-20
+- Generated: 2025-12-21 05:10:07
+- Period: 2025-12-15 to 2025-12-21
 
 ## Summary
 - **Total Tickets:** 11
@@ -11,10 +11,10 @@
 | Issue # | Title | Activity Level |
 |---------|-------|----------------|
 | [#967](https://github.com/pieces-app/support/issues/967) | Unable to prompt any of the AI models. "Something went wrong with processing" error | 7.75 |
-| [#978](https://github.com/pieces-app/support/issues/978) | Logs directory taking 155+ gb | 6.46 |
-| [#979](https://github.com/pieces-app/support/issues/979) | Pieces breaks clipboard in Windows 11 | 5.36 |
-| [#980](https://github.com/pieces-app/support/issues/980) | Cannot launch Desktop | 4.42 |
+| [#978](https://github.com/pieces-app/support/issues/978) | Logs directory taking 155+ gb | 5.60 |
+| [#979](https://github.com/pieces-app/support/issues/979) | Pieces breaks clipboard in Windows 11 | 4.25 |
 | [#974](https://github.com/pieces-app/support/issues/974) | Incorrect Visual Studio Extension URL in documentation | 4.17 |
+| [#131](https://github.com/pieces-app/support/issues/131) | Unable to Launch Pieces Windows Desktop Version | 4.02 |
 
 ## Daily Reports
 Here are the daily reports for this week:
