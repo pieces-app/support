@@ -1,18 +1,19 @@
 # Support Ticket Report
-- Generated: 2025-12-25 13:16:58
+- Generated: 2025-12-25 21:07:40
 - Period: 2025-12-22 to 2025-12-25
 
 ## Summary
-- **Total Tickets:** 3
+- **Total Tickets:** 4
 - **Resolved:** 0
-- **Open:** 3
+- **Open:** 4
 
 ## 5 Most Active Tickets
 | Issue # | Title | Activity Level |
 |---------|-------|----------------|
-| [#981](https://github.com/pieces-app/support/issues/981) | Summaries Stopped Being Created | 4.26 |
+| [#986](https://github.com/pieces-app/support/issues/986) | Attaching files and folders to the conversation context | 4.42 |
 | [#984](https://github.com/pieces-app/support/issues/984) | When using cli with --ltm I cant continue with the same chat thread | 4.25 |
 | [#985](https://github.com/pieces-app/support/issues/985) | If I dont explicitaly say to use workstream activities, pieces ask give me generic llm answer | 3.50 |
+| [#981](https://github.com/pieces-app/support/issues/981) | Summaries Stopped Being Created | 3.21 |
 
 ## Daily Reports
 Here are the daily reports for this week:
@@ -20,3 +21,4 @@ Here are the daily reports for this week:
 - [report_210731](daily/2025-12-23/report_210731.md)
 - [report_131630](daily/2025-12-24/report_131630.md)
 - [report_210653](daily/2025-12-24/report_210653.md)
+- [report_210716](daily/2025-12-25/report_210716.md)
