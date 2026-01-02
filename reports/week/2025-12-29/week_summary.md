@@ -1,6 +1,6 @@
 # Support Ticket Report
-- Generated: 2026-01-01 21:08:09
-- Period: 2025-12-29 to 2026-01-01
+- Generated: 2026-01-02 05:12:22
+- Period: 2025-12-29 to 2026-01-02
 
 ## Summary
 - **Total Tickets:** 6
@@ -13,7 +13,7 @@
 | [#990](https://github.com/pieces-app/support/issues/990) | DeepStudy fails after 30 minutes or more with only a generic error; no output from 30 min wait. | 4.50 |
 | [#978](https://github.com/pieces-app/support/issues/978) | Logs directory taking 155+ gb | 4.16 |
 | [#981](https://github.com/pieces-app/support/issues/981) | Summaries Stopped Being Created | 3.94 |
-| [#979](https://github.com/pieces-app/support/issues/979) | Pieces breaks clipboard in Windows 11 | 3.20 |
+| [#979](https://github.com/pieces-app/support/issues/979) | Pieces breaks clipboard in Windows 11 | 3.62 |
 | [#986](https://github.com/pieces-app/support/issues/986) | Attaching files and folders to the conversation context | 2.56 |
 
 ## Daily Reports
