@@ -1,0 +1,21 @@
+# Support Ticket Report
+- Generated: 2026-01-06 05:11:53
+- Period: 2026-01-05 to 2026-01-06
+
+## Summary
+- **Total Tickets:** 11
+- **Resolved:** 0
+- **Open:** 11
+
+## 5 Most Active Tickets
+| Issue # | Title | Activity Level |
+|---------|-------|----------------|
+| [#990](https://github.com/pieces-app/support/issues/990) | DeepStudy fails after 30 minutes or more with only a generic error; no output from 30 min wait. | 6.83 |
+| [#994](https://github.com/pieces-app/support/issues/994) | The C drive snapshot size is excessive ~ 50 GB | 6.46 |
+| [#993](https://github.com/pieces-app/support/issues/993) | Advice Overall On Roadmap | 5.60 |
+| [#986](https://github.com/pieces-app/support/issues/986) | Attaching files and folders to the conversation context | 5.25 |
+| [#979](https://github.com/pieces-app/support/issues/979) | Pieces breaks clipboard in Windows 11 | 5.21 |
+
+## Daily Reports
+Here are the daily reports for this week:
+
